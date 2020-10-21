@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Talk_Neuchatel.aux
+The style file: alpha.bst
+Database file #1: Neuchatel.bib
+You've used 18 entries,
+            2543 wiz_defined-function locations,
+            703 strings with 6901 characters,
+and the built_in function-call counts, 6822 in all, are:
+= -- 705
+> -- 233
+< -- 15
++ -- 70
+- -- 70
+* -- 523
+:= -- 1105
+add.period$ -- 55
+call.type$ -- 18
+change.case$ -- 97
+chr.to.int$ -- 18
+cite$ -- 18
+duplicate$ -- 280
+empty$ -- 537
+format.name$ -- 99
+if$ -- 1378
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 21
+newline$ -- 93
+num.names$ -- 54
+pop$ -- 75
+preamble$ -- 1
+purify$ -- 117
+quote$ -- 0
+skip$ -- 213
+stack$ -- 0
+substring$ -- 503
+swap$ -- 31
+text.length$ -- 15
+text.prefix$ -- 11
+top$ -- 0
+type$ -- 132
+warning$ -- 0
+while$ -- 74
+width$ -- 22
+write$ -- 238
