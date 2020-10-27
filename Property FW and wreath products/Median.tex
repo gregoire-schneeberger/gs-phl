@@ -1,3 +1,4 @@
+%!TEX root = Property_FW_and_wreath_products.tex
 \todo[inline,color=green]{Remarque générale : la plupart des énoncés ci-dessous se généralise bien au cadre abstrait suivant. Soit (Q) un type d'espace (par ex : graphe médian) et (P) la propriété ``Toute action de $G$ sur un espace $X$ de type (Q) a orbites bornées.'' Lorsqu'une telle généralisation est valide, je l'indique dans la marge en vert}
 \begin{lem}\label{Lemma:Semidirect}\todo[color=green]{Valable pour (P)}
 Let $G=N\rtimes H$ be a semidirect product.
@@ -45,9 +46,9 @@ By contradiction, suppose that $G$ has not FW.
 Then there exists a connected median graph $Y$ such that the action of $G$ on $Y$ has unbounded orbits.
 But then $G\wr_X H$ acts on the connected median graph $Y\times X$ by
 \[
-	\bigl((g_x)_{x\in X},h\bigr).(y.x)=(g_x.y,h.x).
+	(\phi,h)(y,x) = (\phi(h.x).y, h.x)
 \]
-\todo[inline]{Check that the above is indeed an action}
+\todo[inline]{Normalement c'est une action comme ça}
 \todo[inline]{Attention, en général l'action ci-dessus ne respecte pas la structure de graphe de $Y\times X$ !!! ;(}
 But then the orbit of $(y,x_0)$ is unbounded.
 Indeed, it contains $(g_{x_0},1).(y,x_0)=(g.y,x_0)$ for every $g\in G$. And since all the $(g.y,x_0)_{g\in G}$ are in the same slice, the distance between them in the same as the distance between the $(g.y)_{g\in G}$.
