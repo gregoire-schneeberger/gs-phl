@@ -1,0 +1,40 @@
+\begin{lem}\label{Lemma:Semidirect}
+Let $G=N\rtimes H$ be a semidirect product.
+If both $N$ and $H$ have FW, then $G$ also has FW.
+\end{lem}
+\begin{proof}
+Let $X$ be a non-empty connected median graph on which $G$ acts.
+Then both $N$ and $H$ acts on $X$, with orbits bounded respectively by $d_N$ and $d_H$.
+Now, for every $x\in X$ and $g\in G$, there is $n\in N$ and $h\in H$ such that $g=nh$ ans thus $g.x=n.(h.x)$ is at distance at most $d_N+d_H$ from $x$.
+\end{proof}
+\begin{cor}\label{Cor:Wreath}
+If $G$ and $H$ have FW and $H$ acts on a finite set $X$, then $G\wr_X H$ has FW.
+\end{cor}
+\begin{proof}
+Since $X$ is finite, this directly follows from multiple application of Lemma~\ref{Lemma:Semidirect} to $G\wr_X H=(\bigoplus_X G)\rtimes H$.
+\end{proof}
+\begin{lem}
+Let $G=N\rtimes H$ be a semidirect product.
+If $G$ has FW, then so does $H$.
+\end{lem}
+\begin{proof}
+Let $X$ be a non-empty connected median graph on which $H$ acts.
+Then $G$ acts on $X$ by $g.x\coloneqq h.x$ where $g=nh$ with $n\in N$ and $h\in H$.
+By assumption, the action of $G$ on $X$ has bounded orbits and so does the action of $H$.
+\end{proof}
+\begin{cor}\label{Cor:Wreath2}
+If $G\wr_X H$ has FW, then so does $H$.
+\end{cor}
+\begin{prop}[Cornullier]\label{Prop:Cornullier}
+If $X$ is infinite, then $G\wr_X H$ does not have FW.\todo[inline]{Cornullier l'énonce pour des groupes topologiques. Regarder que ça correspond bien et éventuellement donner une preuve utilisant les graphes médians.}
+\end{prop}
+\begin{thm}[L-S]
+The group $G\wr_X H$ has FW if and only if both $G$ and $H$ have FW and $X$ is finite.
+\end{thm}
+\begin{proof}
+The ``only if'' part is Corollary~\ref{Cor:Wreath}.
+On the other hand, if $G\wr_X H$ has FW, then $H$ has FW by Corollary~\ref{Cor:Wreath2} and $X$ is finite by Proposition~\ref{Prop:Cornullier}.
+It remains to show that if $G\wr_X H$ has FW, then so does $G$.
+
+Suppose that both $G$ and $H$ are finitely generated and that $G\wr_X H$ has FW. Then by [stuff about ends], $G$ has FW.\todo[inline]{Est-ce qu'on peut dire qqch en général, en utilisant une autre méthode ?}
+\end{proof}
