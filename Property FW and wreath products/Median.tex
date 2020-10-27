@@ -1,4 +1,5 @@
-\begin{lem}\label{Lemma:Semidirect}
+\todo[inline,color=green]{Remarque générale : la plupart des énoncés ci-dessous se généralise bien au cadre abstrait suivant. Soit (Q) un type d'espace (par ex : graphe médian) et (P) la propriété ``Toute action de $G$ sur un espace $X$ de type (Q) a orbites bornées.'' Lorsqu'une telle généralisation est valide, je l'indique dans la marge en vert}
+\begin{lem}\label{Lemma:Semidirect}\todo[color=green]{Valable pour (P)}
 Let $G=N\rtimes H$ be a semidirect product.
 If both $N$ and $H$ have FW, then $G$ also has FW.
 \end{lem}
@@ -7,13 +8,13 @@ Let $X$ be a non-empty connected median graph on which $G$ acts.
 Then both $N$ and $H$ acts on $X$, with orbits bounded respectively by $d_N$ and $d_H$.
 Now, for every $x\in X$ and $g\in G$, there is $n\in N$ and $h\in H$ such that $g=nh$ ans thus $g.x=n.(h.x)$ is at distance at most $d_N+d_H$ from $x$.
 \end{proof}
-\begin{cor}\label{Cor:Wreath}
+\begin{cor}\label{Cor:Wreath}\todo[color=green]{Valable pour (P)}
 If $G$ and $H$ have FW and $H$ acts on a finite set $X$, then $G\wr_X H$ has FW.
 \end{cor}
 \begin{proof}
 Since $X$ is finite, this directly follows from multiple application of Lemma~\ref{Lemma:Semidirect} to $G\wr_X H=(\bigoplus_X G)\rtimes H$.
 \end{proof}
-\begin{lem}
+\begin{lem}\todo[color=green]{Valable pour (P)}
 Let $G=N\rtimes H$ be a semidirect product.
 If $G$ has FW, then so does $H$.
 \end{lem}
@@ -22,7 +23,7 @@ Let $X$ be a non-empty connected median graph on which $H$ acts.
 Then $G$ acts on $X$ by $g.x\coloneqq h.x$ where $g=nh$ with $n\in N$ and $h\in H$.
 By assumption, the action of $G$ on $X$ has bounded orbits and so does the action of $H$.
 \end{proof}
-\begin{cor}\label{Cor:Wreath2}
+\begin{cor}\label{Cor:Wreath2}\todo[color=green]{Valable pour (P)}
 If $G\wr_X H$ has FW, then so does $H$.
 \end{cor}
 \begin{prop}[Cornullier]\label{Prop:Cornullier}
@@ -37,4 +38,17 @@ On the other hand, if $G\wr_X H$ has FW, then $H$ has FW by Corollary~\ref{Cor:W
 It remains to show that if $G\wr_X H$ has FW, then so does $G$.
 
 Suppose that both $G$ and $H$ are finitely generated and that $G\wr_X H$ has FW. Then by [stuff about ends], $G$ has FW.\todo[inline]{Est-ce qu'on peut dire qqch en général, en utilisant une autre méthode ?}
+Tentative (combler les trous).\todo[color=green]{Valable pour (P) si on peut mettre une (Q) structure sur $Y\times X$ (telle que l'action soit toujours du bon type)}
+
+By Proposition~\ref{Prop:Cornullier}, $X$ is finite. Therefore by adding edges to $X$ it is isomorphic to a finite line graph $x_0,x_1,\dots, x_n$. This implies that $X$ is a connected median graph.
+By contradiction, suppose that $G$ has not FW.
+Then there exists a connected median graph $Y$ such that the action of $G$ on $Y$ has unbounded orbits.
+But then $G\wr_X H$ acts on the connected median graph $Y\times X$ by
+\[
+	\bigl((g_x)_{x\in X},h\bigr).(y.x)=(g_x.y,h.x).
+\]
+\todo[inline]{Check that the above is indeed an action}
+But then the orbit of $(y,x_0)$ is unbounded.
+Indeed, it contains $(g_{x_0},1).(y,x_0)=(g.y,x_0)$ for every $g\in G$. And since all the $(g.y,x_0)_{g\in G}$ are in the same slice, the distance between them in the same as the distance between the $(g.y)_{g\in G}$.
+
 \end{proof}
