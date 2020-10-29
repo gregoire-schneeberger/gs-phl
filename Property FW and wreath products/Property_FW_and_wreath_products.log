@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  27 OCT 2020 16:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  29 OCT 2020 14:17
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -987,7 +987,7 @@ LaTeX Warning: Reference `C:SS_FW' on page 2 undefined on input line 159.
 [2]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 206.
- [3] (./median.tex [4]) (./Property_FW_and_wreath_products.bbl) [5]
+ [3] (./median.tex [4] [5]) (./Property_FW_and_wreath_products.bbl) [6]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
 
@@ -996,7 +996,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
 Package rerunfilecheck Info: File `Property_FW_and_wreath_products.out' has not
  changed.
-(rerunfilecheck)             Checksum: 2813BF26732294EB53FE190845CF1DFF;794.
+(rerunfilecheck)             Checksum: EC061A1776C1F3299350DE577CF321A6;837.
 
 
 LaTeX Warning: There were undefined references.
@@ -1004,35 +1004,36 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
  ) 
 Here is how much of TeX's memory you used:
- 23883 strings out of 480893
- 420663 string characters out of 5908067
- 694831 words of memory out of 5000000
- 38941 multiletter control sequences out of 15000+600000
+ 23795 strings out of 480893
+ 418786 string characters out of 5908067
+ 687916 words of memory out of 5000000
+ 38855 multiletter control sequences out of 15000+600000
  616944 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,9n,83p,1077b,1059s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/lo
-cal/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
-20/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2020/texmf-d
-ist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2020/texmf-dist/fonts/
+ 68i,7n,83p,1077b,931s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
+cal/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texliv
+e/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2020/texmf-d
+ist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2020/texmf-dist/fonts/
 enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/l
 m/lmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.p
 fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/l
 ocal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2020/tex
-mf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2020/texmf-dist/fon
-ts/type1/public/lm/lmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
-blic/lm/lmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr
-5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/
-local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texliv
-e/2020/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2020/tex
-mf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2020/texmf-dist/fo
-nts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/p
-ublic/amsfonts/symbols/msbm10.pfb>
-Output written on Property_FW_and_wreath_products.pdf (5 pages, 264380 bytes).
+ve/2020/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2020/texmf-dist/fon
+ts/type1/public/lm/lmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
+blic/lm/lmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr
+17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2020/texm
+f-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2020/texmf-dist/fon
+ts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/p
+ublic/lm/lmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfo
+nts/symbols/msbm10.pfb>
+Output written on Property_FW_and_wreath_products.pdf (6 pages, 274311 bytes).
 PDF statistics:
- 217 PDF objects out of 1000 (max. 8388607)
- 177 compressed objects within 2 object streams
- 52 named destinations out of 1000 (max. 500000)
+ 222 PDF objects out of 1000 (max. 8388607)
+ 180 compressed objects within 2 object streams
+ 50 named destinations out of 1000 (max. 500000)
  165 words of extra memory for PDF output out of 10000 (max. 10000000)
 

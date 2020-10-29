@@ -1,55 +1,107 @@
-\todo[inline,color=green]{Remarque générale : la plupart des énoncés ci-dessous se généralise bien au cadre abstrait suivant. Soit (Q) un type d'espace (par ex : graphe médian) et (P) la propriété ``Toute action de $G$ sur un espace $X$ de type (Q) a orbites bornées.'' Lorsqu'une telle généralisation est valide, je l'indique dans la marge en vert}
-\begin{lem}\label{Lemma:Semidirect}\todo[color=green]{Valable pour (P)}
-Let $G=N\rtimes H$ be a semidirect product.
-If both $N$ and $H$ have FW, then $G$ also has FW.
+In this section, we will investigate the FW property via the action of groups on median graphs.
+
+For $u$ and $v$ two vertices of a connected graph $\mathcal G$, we define the total interval $[u,v]$ as the set of vertices that lies on some shortest path between $u$ and $v$.
+A connected graph $\mathcal G$ is \emph{median} if for triple of distinct vertices $u$, $v$, $w$, the intersection $[u,v]\cap[v,w]\cap[u,w]$ consist of a unique vertex, denoted $m(u,v,w)$.
+A graph is median if each of its connected components is median.
+
+A simple verification shows that if $\mathcal G$ and $\mathcal H$ are both median graph, then their cartesian product is also median.
+
+\begin{exmp}
+Let $X$ be a subset and $\mathcal P_f(X)$ the set of all its finite subsets.
+Define a graph structure on $\mathcal P_f(X)$ by putting an edge between $E$ and $F$ if and only if $\#(E\Delta F)=1$, where $\Delta$ is the symmetric difference.
+Therefore, the distance between two subsets $E$ and $F$ is $E\Delta F$, while $[E,F]$ consist of all subsets of $X$ that both contain $E\cap F$ and are contained in $E\cup F$.
+In particular $\mathcal P_f(X)$ is a connected median, with $m(D,E;F)$ being the set of all elements belonging to at least two of $D$, $E$ and $F$. In other words,
+$m(D,E;F)=(D\cap E)\cup(D\cap F)\cup(E\cap F)$.
+
+The same construction endows $\mathcal P(X)$ the set of all subsets of $X$ with a structure of median graph, where the connected component of $E$ consists of all $F$ such that $E\Delta F$ is finite.
+
+Any action of a group $G$ on a set $X$ naturally extend to an action of $G$ on $\mathcal P_f(X)$ by graph homomorphisms: $g.\{x_1,\dots,x_n\}=\{g.x_1,\dots,g.x_n\}$.
+\end{exmp}
+
+Building on this example, we obtain that no infinite sum of groups has the property FW.
+\begin{lem}\label{Lemma:Sum}
+An infinite sum of non-trivial groups $G=\bigoplus_{i=1}^\infty G_i$ does not have FW.
 \end{lem}
 \begin{proof}
-Let $X$ be a non-empty connected median graph on which $G$ acts.
+Let $X=\bigsqcup_{i=1}^\infty G_i$.
+There is a natural action of $G$ on $X$: $G_i$ acts by left multiplication on $G_i$ and trivially on $G_j$ for $j\neq i$.
+Therefore, we have an action of $G$ on the connected median graph $\mathcal P_f(X)$.
+For every $i$, choose a non-trivial $g_i\in G_i$.
+Then the orbit of the vertex $\{1_{G_1},\dots, 1_{G_n}\}$ contains the point $\{g_1,\dots, g_n\}$ which is at distance $2n$ of $\{1_{G_1},\dots, 1_{G_n}\}$.
+That is the action of $G$ on $\mathcal P_f(X)$ has unbounded orbits.
+\end{proof}
+
+We also have the following easy result on semi-direct products:
+\begin{lem}\label{Lemma:Semidirect}
+Let $G=N\rtimes H$ be a semidirect product. Then
+\begin{enumerate}
+\item
+If $G$ has FW, then so does $H$.
+\item
+If both $N$ and $H$ have FW, then $G$ also has FW.
+\end{enumerate}
+\end{lem}
+\begin{proof}
+Suppose that $G$ has FW and let $X$ be a non-empty connected median graph on which $H$ acts.
+Then $G$ acts on $X$ by $g.x\coloneqq h.x$ where $g=nh$ with $n\in N$ and $h\in H$.
+By assumption, the action of $G$ on $X$ has bounded orbits and so does the action of $H$.
+
+On the other hand, suppose that $G$ does not have FW and let $X$ be a non-empty connected median graph on which $G$ acts.
 Then both $N$ and $H$ acts on $X$, with orbits bounded respectively by $d_N$ and $d_H$.
 Now, for every $x\in X$ and $g\in G$, there is $n\in N$ and $h\in H$ such that $g=nh$ ans thus $g.x=n.(h.x)$ is at distance at most $d_N+d_H$ from $x$.
 \end{proof}
-\begin{cor}\label{Cor:Wreath}\todo[color=green]{Valable pour (P)}
-If $G$ and $H$ have FW and $H$ acts on a finite set $X$, then $G\wr_X H$ has FW.
-\end{cor}
-\begin{proof}
-Since $X$ is finite, this directly follows from multiple application of Lemma~\ref{Lemma:Semidirect} to $G\wr_X H=(\bigoplus_X G)\rtimes H$.
-\end{proof}
-\begin{lem}\todo[color=green]{Valable pour (P)}
-Let $G=N\rtimes H$ be a semidirect product.
-If $G$ has FW, then so does $H$.
-\end{lem}
-\begin{proof}
-Let $X$ be a non-empty connected median graph on which $H$ acts.
-Then $G$ acts on $X$ by $g.x\coloneqq h.x$ where $g=nh$ with $n\in N$ and $h\in H$.
-By assumption, the action of $G$ on $X$ has bounded orbits and so does the action of $H$.
-\end{proof}
-\begin{cor}\label{Cor:Wreath2}\todo[color=green]{Valable pour (P)}
+Multiple applications of the above Lemma give us
+\begin{cor}\label{Cor:Wreath}
+Let $G\wr_X H$ be the wreath product of $G$ and $H\curvearrowright X$.
+Then
+\begin{enumerate}
+\item
 If $G\wr_X H$ has FW, then so does $H$.
+\item
+If $G$ and $H$ have FW and $H$ acts on a finite set $X$, then $G\wr_X H$ has FW.
+\end{enumerate}
 \end{cor}
-\begin{prop}[Cornullier]\label{Prop:Cornullier}
-If $X$ is infinite, then $G\wr_X H$ does not have FW.\todo[inline]{Cornullier l'énonce pour des groupes topologiques. Regarder que ça correspond bien et éventuellement donner une preuve utilisant les graphes médians.}
+
+
+It also follow from Lemmas \ref{Lemma:Sum} and \ref{Lemma:Semidirect} that
+\begin{cor}
+The group $\otimes_X G$ has FW if and only if $X$ is finite and $G$ has FW.
+\end{cor}
+
+We finally characterize which wreath products do have FW.
+\begin{prop}
+Let $G$ be a non-trivial group.
+Then the group $G\wr_X H$ has FW if and only if both $G$ and $H$ have FW and $X$ is finite.
 \end{prop}
-\begin{thm}[L-S]
-The group $G\wr_X H$ has FW if and only if both $G$ and $H$ have FW and $X$ is finite.
-\end{thm}
 \begin{proof}
-The ``only if'' part is Corollary~\ref{Cor:Wreath}.
-On the other hand, if $G\wr_X H$ has FW, then $H$ has FW by Corollary~\ref{Cor:Wreath2} and $X$ is finite by Proposition~\ref{Prop:Cornullier}.
-It remains to show that if $G\wr_X H$ has FW, then so does $G$.
+In view of Corollary~\ref{Cor:Wreath} it remains to show that if $G\wr_X H$ has FW, then $G$ has FW and $X$ is finite.
 
-Suppose that both $G$ and $H$ are finitely generated and that $G\wr_X H$ has FW. Then by [stuff about ends], $G$ has FW.\todo[inline]{Est-ce qu'on peut dire qqch en général, en utilisant une autre méthode ?}
-Tentative (combler les trous).\todo[color=green]{Valable pour (P) si on peut mettre une (Q) structure sur $Y\times X$ (telle que l'action soit toujours du bon type)}
-
-By Proposition~\ref{Prop:Cornullier}, $X$ is finite. Therefore by adding edges to $X$ it is isomorphic to a finite line graph $x_0,x_1,\dots, x_n$. This implies that $X$ is a connected median graph.
-By contradiction, suppose that $G$ has not FW.
-Then there exists a connected median graph $Y$ such that the action of $G$ on $Y$ has unbounded orbits.
-But then $G\wr_X H$ acts on the connected median graph $Y\times X$ by
+First, suppose that $G$ does not have FW and let $Y$ be a connected median graph on which $G$ acts with unbounded orbits.
+Then $G\wr_X H$ acts on the connected median graph $Y\times \mathcal P_f(X)$ by
 \[
-	\bigl((g_x)_{x\in X},h\bigr).(y.x)=(g_x.y,h.x).
+	\bigl((g_x)_{x\in X},h\bigr).(y,E)=(g_x.y,h.E).
 \]
 \todo[inline]{Check that the above is indeed an action}
-\todo[inline]{Attention, en général l'action ci-dessus ne respecte pas la structure de graphe de $Y\times X$ !!! ;(}
-But then the orbit of $(y,x_0)$ is unbounded.
-Indeed, it contains $(g_{x_0},1).(y,x_0)=(g.y,x_0)$ for every $g\in G$. And since all the $(g.y,x_0)_{g\in G}$ are in the same slice, the distance between them in the same as the distance between the $(g.y)_{g\in G}$.
+But then the orbit of $(y,\{x\})$ is unbounded for every $x\in X$, which implies that $G\wr_X H$ does not have FW.
+Indeed, it contains
+\[
+	\{(g_{x_0},1).(y,\{x\})=(g.y,\{x\})\,|\,g\in G\}.
+\]
+And since all the $\{g.y,\{x\}\}_{g\in G}$ are in the same slice, the distance between them in the same as the distance between the $\{g.y\}_{g\in G}$.
 
+Finally, suppose that $X$ is infinite and let $g$ be a non-trivial element of $G$.
+Then $G\wr_X H$ acts naturally on the connected median graph $\mathcal P_f(\bigsqcup_XG)\times \mathcal P_f(X)$.
+Let $v$ be the the vertex $(\{1_1,\dots, 1_n\},\emptyset)$, where $\{1_1,\dots, 1_n\}$ consist of $n$ copies of $1_G\in G$ living in distinct copies of $G$.
+The orbit of $v$ contains the point $(\{g_1,\dots, g_n\},\emptyset)$ which is at distance $2n$ of $v$.
+That is the action of $G\wr_X H$ on $\mathcal P_f(\bigsqcup_XG)\times \mathcal P_f(X)$ has unbounded orbits and $G\wr_X H$ has not FW.
 \end{proof}
+
+We conclude this section by the following important remark that some of the above result applies in a more generality.
+\begin{rem}
+Let Q be a property of metric spaces (for example \emph{be a connected median graph}) and P be the group property: \emph{Every $G$-action on a space with Q has bounded orbits.}
+Then both Lemma \ref{Lemma:Semidirect} and Corollary \ref{Cor:Wreath} are true for groups with P.
+
+Example of such properties P are: property FW, property FA (every action on a tree has bounded orbits) or property FH (every isometric action on a real Hilbert space has bounded orbits) which for countable group is equivalent to Kazdhan's property (T).
+\end{rem}
+
+\todo[inline]{Regarder le cas PW, Haagerup,... i.e. action propre. Rappel: une action isométrique de $G$ est propre si pour tout $x$ (de manière équivalente il existe $x$), pour tout $r\in \mathbf R$ l'ensemble $\{g\in G\,|\,d(x,g.x)\}$ est fini.}
