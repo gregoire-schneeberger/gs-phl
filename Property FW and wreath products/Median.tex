@@ -80,22 +80,23 @@ In view of Corollary~\ref{Cor:Wreath} it remains to show that if $G\wr_X H$ has 
 First, suppose that $G$ does not have FW and let $Y$ be a connected median graph on which $G$ acts with unbounded orbits.
 Then $G\wr_X H$ acts on the connected median graph $Y\times \mathcal P_f(X)$ by
 \[
-	\bigl((g_x)_{x\in X},h\bigr).(y,E)=(g_x.y,h.E).
+	\bigl(\phi,h\bigr).(y,E)=
+	\begin{cases}
+	(\phi(h.t).y,h.\{t\})&\textnormal{if $E=\{t\}$}\\
+	(y,h.E)&\textnormal{if $E$ is not a singleton}
+	\end{cases}
 \]
-\todo[inline]{Check that the above is indeed an action}
-\[(\phi,h)(y,x) = (\phi(h.x).y, h.x)
-\]
-\todo[inline]{Normalement c'est une action comme ça}
 But then the orbit of $(y,\{x\})$ is unbounded for every $x\in X$, which implies that $G\wr_X H$ does not have FW.
 Indeed, it contains
 \[
-	\{(g_{x_0},1).(y,\{x\})=(g.y,\{x\})\,|\,g\in G\}.
+	\{(\delta_{x}^g,1).(y,\{x\})=(g.y,\{x\})\,|\,g\in G\},
 \]
+where $\delta_{x}^g(x)=g$ and $\delta_{x}^g(z)=1$ if $z\neq x$. 
 And since all the $\{g.y,\{x\}\}_{g\in G}$ are in the same slice, the distance between them in the same as the distance between the $\{g.y\}_{g\in G}$.
 
 Finally, suppose that $X$ is infinite and let $g$ be a non-trivial element of $G$.
-Then $G\wr_X H$ acts naturally on the connected median graph $\mathcal P_f(\bigsqcup_XG)\times \mathcal P_f(X)$.
-Let $v$ be the the vertex $(\{1_1,\dots, 1_n\},\emptyset)$, where $\{1_1,\dots, 1_n\}$ consist of $n$ copies of $1_G\in G$ living in distinct copies of $G$.
+Then $G$ acts naturally on the connected median graph $P_f(\bigsqcup_XG)$ and therefore $G\wr_X H$ acts on $\mathcal P_f(\bigsqcup_XG)\times \mathcal P_f(X)$.
+Let $v$ be the the vertex $(\{1_1,\dots, 1_n\},\emptyset)$, where $\{1_1,\dots, 1_n\}$ consists of $n$ times the element $1_G\in G$ but living in distinct copies of $G$.
 The orbit of $v$ contains the point $(\{g_1,\dots, g_n\},\emptyset)$ which is at distance $2n$ of $v$.
 That is the action of $G\wr_X H$ on $\mathcal P_f(\bigsqcup_XG)\times \mathcal P_f(X)$ has unbounded orbits and $G\wr_X H$ has not FW.
 \end{proof}
