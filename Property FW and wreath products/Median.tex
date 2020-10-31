@@ -18,7 +18,7 @@ $m(D,E;F)=(D\cap E)\cup(D\cap F)\cup(E\cap F)$.
 The same construction endows $\mathcal P(X)$ the set of all subsets of $X$ with a structure of median graph, where the connected component of $E$ consists of all $F$ such that $E\Delta F$ is finite.
 \end{exmp}
 
-The graphs $\mathcal P_f(X)$ are exactly the hypercube and it turns out \cite{}\todo{Put refs} that every connected median graph is a retract of some $\mathcal P_f(X)$.
+The graphs $\mathcal P_f(X)$ are exactly the hypercube and it turns out that every connected median graph is a retract of some $\mathcal P_f(X)$, see \cite{Bandelt1984}.
 
 These graphs will be fundamental for us due to the following fact.
 Any action of a group $G$ on a set $X$ naturally extends to an action of $G$ on $\mathcal P_f(X)$ by graph homomorphisms: $g.\{x_1,\dots,x_n\}=\{g.x_1,\dots,g.x_n\}$.
@@ -122,6 +122,16 @@ Then Lemmas \ref{Lemma:Subgroup} and \ref{Lemma:Semidirect} as well as Corollary
 
 Example of such properties P are: property FW, property FA (every action on a tree has bounded orbits) or property FH (every isometric action on a real Hilbert space has bounded orbits) which for countable group is equivalent to Kazdhan's property (T).
 \end{rem}
-\todo[inline]{Dire qqch (même juste références) sur l'équivalent de la proposition \ref{Prop:Median} pour FA et FH}
+For other such properties, we have the following results in the same spirit as the Proposition \ref{Prop:Median}.
+\begin{prop}
+Let $G,H$ be discret groups and $X$ a $H$-set. Then the wreath product $G \wr_X H$ has the property (FH) if and only if $G$ and $H$ have the property (FH) and if $X$ is finite
+\end{prop}
+\todo[inline]{Regarder si on peut enlever groupe discret et ne pas passer par le résultat pour (T)}
+The proof is a direct application of the equivalence of the properties (FH) and (T) for discrete groups (see \cite{Bekka2008}) and of the Theorem \ref{T:Wreath_prop_T} .
+%
+\begin{thm}[\cite{Cornulier2011}]
+Let $G,H$ be two groups and $X$ be a non-empty $H$ set which only a finite number of orbits and without fixed point. Then the wreath product $G \wr_X H$ has the property (FA) if and only if $H$ has the property (FA) and if $G$ is a group with a finite abelianization which cannot be expressed as an union of proper increasing sequence of subgroups.
+\end{thm}
+\todo[inline]{regarder si c'est plus fort que $H$ possède la propriété (FA) et le lien avec le cardinal de $X$}
 
 \todo[inline]{Regarder le cas PW, Haagerup,... i.e. action propre. Rappel: une action isométrique de $G$ est propre si pour tout $x$ (de manière équivalente il existe $x$), pour tout $r\in \mathbf R$ l'ensemble $\{g\in G\,|\,d(x,g.x)\}$ est fini.}
