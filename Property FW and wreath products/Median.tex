@@ -7,7 +7,8 @@ A graph is median if each of its connected components is median.
 
 A simple verification shows that if $\mathcal G$ and $\mathcal H$ are both median graphs, then their cartesian product is also median.
 
-The following example will be fundamental for us. Indeed
+\todo[inline]{Réfléchir à comment écrire la section. 2 possibilités. 1) Grouper par type de résultat (semi-direct, etc.) ou 2) grouper par ce que se généralise à la propriété P et ce qui est propre au graphe médian.}
+The following example will be fundamental for us.
 \begin{exmp}
 Let $X$ be a set and let  $\mathcal P_f(X)$ be the set of all its finite subsets.
 Define a graph structure on $\mathcal P_f(X)$ by putting an edge between $E$ and $F$ if and only if $\#(E\Delta F)=1$, where $\Delta$ is the symmetric difference.
@@ -44,6 +45,14 @@ If $H$ has FW, then so does~$G$.
 \begin{proof}
 Suppose that $G$ does not have FW and let $X$ be a connected median graph on which $G$ acts with unbounded orbits.
 Then $H$ acts on $X$ and every $G$-orbit is a union of at most $[G:H]$ orbit. This directly implies that $H$ acts on $X$ with unbounded orbit and that $H$ does not have FW.
+\end{proof}
+\begin{lem}
+Let $G$ be a group and $H$ be a finite index subgroup.
+If $G$ has FW, then so does~$H$.
+\end{lem}
+\begin{proof}
+Suppose that $H$ does not have FW and let $X$ be a connected median space on which $H$ acts with unbounded orbits.
+Then $G$ acts on $X^{G/H}$ by 
 \end{proof}
 
 We also have the following easy result on semi-direct products:
