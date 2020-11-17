@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.4)  11 NOV 2020 18:44
 =======
 This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  4 NOV 2020 15:12
 >>>>>>> Stashed changes
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.4)  16 NOV 2020 12:54
+>>>>>>> 11458d32b9d18392efad2579e7904c3ca54d701f
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -855,7 +859,7 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
+* modes:
 * h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
 * v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
 * \paperwidth=597.50787pt
@@ -940,13 +944,13 @@ LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line
 90.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line
 90.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omxlmex.fd
@@ -1006,20 +1010,16 @@ Package rerunfilecheck Info: File `Property_FW_and_wreath_products.out' has not
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
- ) 
+ )
 Here is how much of TeX's memory you used:
-<<<<<<< Updated upstream
  23602 strings out of 492616
  413594 string characters out of 6129481
  498963 words of memory out of 5000000
  26990 multiletter control sequences out of 15000+600000
  85496 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,81p,1077b,1108s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,12n,81p,1077b,1063s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
 cal/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
 19/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2019/texmf-d
@@ -1039,44 +1039,9 @@ f-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2019/texmf-dist/fon
 ts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/p
 ublic/lm/lmsy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on Property_FW_and_wreath_products.pdf (8 pages, 291429 bytes).
+Output written on Property_FW_and_wreath_products.pdf (8 pages, 291460 bytes).
 PDF statistics:
- 267 PDF objects out of 1000 (max. 8388607)
- 222 compressed objects within 3 object streams
+ 266 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
  76 named destinations out of 1000 (max. 500000)
  149 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
- 23864 strings out of 480893
- 420060 string characters out of 5908067
- 689355 words of memory out of 5000000
- 38913 multiletter control sequences out of 15000+600000
- 616944 words of font info for 96 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 68i,12n,83p,1077b,1051s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
-cal/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texliv
-e/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2020/texmf-d
-ist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2020/texmf-dist/fonts/
-enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/l
-m/lmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.p
-fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2020/tex
-mf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2020/texmf-dist/fon
-ts/type1/public/lm/lmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
-blic/lm/lmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr
-17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2020/texm
-f-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2020/texmf-dist/fon
-ts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/p
-ublic/lm/lmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfo
-nts/symbols/msbm10.pfb>
-Output written on Property_FW_and_wreath_products.pdf (7 pages, 282878 bytes).
-PDF statistics:
- 247 PDF objects out of 1000 (max. 8388607)
- 203 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 500000)
- 165 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> Stashed changes
-
