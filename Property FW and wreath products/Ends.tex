@@ -10,20 +10,38 @@ Let $G$ be a finitely generated group, $H$ a subgroup of $G$ and $S$ a finite ge
 %
 If a group $G$ acts on a set $X$, we can define the graph of the action of $G$ on the orbit of an element $x$ as the graph where the vertex are the element of the orbit of $x$ and two vertices are adjacent if they are linked by the action of a generator. The Schreier graphs are intimitely linked with group actions by the classical following lemma.
 %
-\begin{lem}
+%
+\begin{lem}\label{L:gen_wreath}
 Let $G$ be a finitely generated groups, $S$ be a finite generating set and $X$ be a $G$-set. Then for each element $x$ of $X$, the graph of the action of $G$ on the orbit of $x$ is isomorphic to the Schreier graph $\Sch(G,\stab(x),S)$.
 \end{lem}
+%
 %
 In fact all the Schreier graph can be viewed as graphs of actions, by considering the action of $G$ on this Schreier graph.
 
 As we want to work with finitely generated groupm the folowing lemma is useful.
+%
+%
 \begin{lem}\label{L:wreath_fg}
 Let $G$ and $H$ be groups and $X$ be a $H$-set. The wreath product $G \wr_X H$ is finitely generated if and only if $G$ and $H$ are finitely generated and if the number of orbits of the action $H \actsGroup X$ is finite.
 \end{lem}
+%
 \begin{proof}
-\todo[inline]{A faire+ Définir les $\delta_x^s$ pour la suite}
-\end{proof}
+Suppose that $G$ and $H$ are finitely generated and that the number of orbits is finite. Let $S$ be a finite generating set of $G$, $S'$ a finite generating set of $H$ and $\{x_0, \ldots, x_n \}$ a representative system of the orbits. For $s$ in $S$ and $x$ in $X$, we define $\delta_x^s$ as
+%
+\begin{equation*}
+\delta_{x}^s (y) = \begin{cases} e_G & y \neq x \\ s 	& y = x \end{cases}.
+\end{equation*}
+%
+It is straightforward to prove that the set 
+\begin{equation*}
+\left\{(\delta_x^s,e_H) : s \in S, x \in \{x_0,\ldots,x_n\} \right\} \cup \left\{ (0,s') : s' \in S' \right\}
+\end{equation*}
+is a finite generating set of $G \wr_X H$, where $0(x) = e_g$ for all $x$ in $X$.
 
+If $G$ or $H$ are not finitely generated, it is clear that $G \wr_X H$ is not either. Suppose that there are infinitely many orbits. If $\phi$ is a function of $\bigoplus_X G$ whose support is include in $X_1 \sqcup \ldots X_n$, then for every $h$ in $H$, the support of $h.\phi$ is also contain in  $X_1 \sqcup \ldots X_n$, where $X = X_1 \sqcup X_2 \sqcup \ldots$ is a decomposition on disjoint orbits. As all the elements of $\bigoplus_X G$ have finite support, it is necessary to have infintely many such element to generate the whole group $G \wr_X H$.
+\end{proof}
+%
+%
 \begin{lem}\label{Lemma:Semidirect_ends}
 Let $G = N \rtimes H$ be a finitely generated semidirect product. Then
 \begin{enumerate}
@@ -54,11 +72,15 @@ Let $x$ and $y$ be two vertices of an infinite component of $X \setminus K$. The
 \begin{equation*}
 (0,hh'^{-1}) z' = (0,hh'^{-1})(h'h^{-1}.n,0)(0,h')x = (n,h)x = y.
 \end{equation*}
-%
 
 We will construct a path on $X \setminus K$ between $x$ and $y$ as follows. The subgraph $X_x^H$ is one-ended, then there exists a path between $x$ and $z$. In the same way, $X_z^N$ has one end or has no vertex in $K$, then there is a path which join $z$ and $z'$. There exists a path between $z'$ and $y$ in $X_y^H$ which is one-ended. Then $x$ and $y$ are path-connected and then $X$ has one end. We proved that all the Schreier graph of $G$
-\end{proof}
-%
+\begin{figure}[H]\centering
+\scalebox{0.7}{
+\input{graphes/path_semidirect_ends.tex}}
+\caption{The path between $x$ and $y$.}
+\end{figure}\end{proof}
+%geo
+
 %
 \begin{cor}\label{Cor:Wreath_ends}
 Let $G$ and $H$ be two finitely generated groups and $X$ a $H$-set such that the number of orbits is finite. Then,
@@ -72,6 +94,8 @@ If $G$ and $H$ have the property FW and $X$ is finite, then $G\wr_X H$ has FW.
 %
 %
 The proof is an iterated application of the previous lemma.
+%
+%
 \begin{lem}\label{Lem:Wreath_groups_ends}
 Let $\Gamma = G \wr_X H$ be a finitely generated wreath product and $G$ be a non-trivial group. If $\Gamma$ has the property FW, then 
 \begin{enumerate}
@@ -80,16 +104,7 @@ Let $\Gamma = G \wr_X H$ be a finitely generated wreath product and $G$ be a non
 \end{enumerate}
 %
 \begin{proof}
-We denote by $S$ (and respectively by $S'$) a finite generating set of $G$ (and respectively of $H$) and ee choose an arbitrary point $x_0$ of $X$. Recall that 
-\begin{equation*}
-\S = \{(\delta_{x_0}^s, e_h) : s \in S \} \cup \{ (0, s') : s' \in S' \} 
-\end{equation*}
-%where 
-%\begin{equation*}
-%\delta_{x_0}^s = \begin{cases} e_g & x \neq x_0 \\ s 	& x = x_0 \end{cases} \quad \text{and}\quad 0(x) = e_g \quad \forall x \in X.
-%\end{equation*}
-is a generating set of $\Gamma$.
-We will prove the contrapositives. The idea is to construct, for each of the three cases, a Schreier graph of $\Gamma$ with more than one end by using actions of $\Gamma$.
+We will prove the contrapositives. The idea is to construct, for each of the three cases, a Schreier graph of $\Gamma$ with more than one end by using actions of $\Gamma$. We will suppose, as in the Lemma~\ref{L:gen_wreath} that $G = \gen{S}$, $H = \gen{S'}$ and if there is no more condition $x_0$ is an arbitrary point of $X$.
 
 Suppose that $X$ is an infinite set. There exsits an infinite orbit. Ideed, as the $\Gamma$ is finitely generated, we know by the Lemma \ref{L:wreath_fg} that the number of orbits of the action $H \actsGroup X$ is finite. Let $X'$ be such an infinite orbit and $x_0$ an element of $X'$. We define $Y = G \times X'$. The group $\Gamma$ acts on $Y$ via
 \begin{equation*}
@@ -111,7 +126,13 @@ The second one, of the form $(\delta_{x_0}^s,0)$, give us loops everywhere excep
 (sg, x) & x = x_0
 \end{cases}
 \end{equation*}
-\missingfigure{Structure du Schreier et des feuilles}.
+%
+\begin{figure}[H]\centering
+\scalebox{0.7}{
+\input{graphes/leaves_structure_schreier.tex}}
+\caption{The leaf structure of the graph of the action $\Gamma \actsGroup Y$.}
+\end{figure}
+%
 If we remove a vertex $(g,x_0)$ we disconnect the leaf $Y_g$ to the graph. As $X'$ is infinite, the number of ends is strictly greater than 1.
 
 Suppose that $G$ does not have the property FW. There exists a subgroup $K$ of $G$ such that $\Sch(G,K,S)$ has more than one end. The choice of $x_0$ is arbitrary in this case. The group $\Gamma$ acts on $G/K \times X'$ via  
@@ -119,21 +140,15 @@ Suppose that $G$ does not have the property FW. There exists a subgroup $K$ of $
 (\phi,h)(gK,x) = (\phi(hx) gK, hx).
 \end{equation*}
 where $X'$ is the orbit of $x_0$. As above, the action is transitive and the graph of this action is isomorphic to a Schreier graph. We decompose this graph into leaves in the same way. Now we look at the subgraph made up of vertices $(g,x_0)$ and edges $(\delta_{x_0}^s,0)$ and we remark that it is isomorphic the Schreier graph $\Sch(G,K,S)$ which has more than one end. Then our graph has also more than one end.
-\missingfigure{Même image mais avec les sous-Schreier en évidence}.
-
-%Suppose that $H$ does not have the property FW. By the Lemma 
-
-%There is a subgroup $K$ of $H$ such that $\Sch(H,K,S')$ has more than one end. We consider the action of $\Gamma$ on $H/K$ defined as
-%\begin{equation*}
-% (\phi,h)h'K = hh'K.
-%\end{equation*}
-%This is a transitive action. All the edges of type $(\delta_{x_0}^s, 0)$ are loops and the edges $(0, s')$ are the edges of $\Sch(H,K,S')$ which has more than one end. Then this Schreier graph has also more than one end.
 \end{proof}
 \end{lem}
 %
 %
 The following proposition is a direct application of Corollary \ref{Cor:Wreath_ends} and Lemma \ref{Lem:Wreath_groups_ends}.
+%
+%
 \begin{prop}
 Let $G$ be a non trivial finitely generated group, $H$ be a finitely generated group and $X$ a set on which $H$ acts with a finite number of orbit. The wreath product $G \wr_X H$ has the property FW if and only if $G$ and $H$ have the property FW and $X$ is finite.
 \end{prop}
+%
 %
