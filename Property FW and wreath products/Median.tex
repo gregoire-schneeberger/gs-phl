@@ -9,45 +9,9 @@ A graph is median if each of its connected components is median.
 
 Recall that a group $G$ has property FW if and only if every $G$ action on a connected median graph has bounded orbits.
 
-<<<<<<< HEAD
 We now prove a series of results that will be generalized to a broader context in Section~\ref{Section:Generalizations}.
 The following easy result is folklore, and we provide a proof only for the sake of completeness.
 \begin{lem}\label{Lemma:Subgroup}
-=======
-\todo[inline]{Réfléchir à comment écrire la section. 2 possibilités. 1) Grouper par type de résultat (semi-direct, etc.) ou 2) grouper par ce que se généralise à la propriété P et ce qui est propre au graphe médian.}
-The following example will be fundamental for us.
-\begin{exmp}
-Let $X$ be a set and let  $\mathcal P_f(X)$ be the set of all its finite subsets.
-Define a graph structure on $\mathcal P_f(X)$ by putting an edge between $E$ and $F$ if and only if $\#(E\Delta F)=1$, where $\Delta$ is the symmetric difference.
-Therefore, the distance between two subsets $E$ and $F$ is $E\Delta F$, while $[E,F]$ consist of all subsets of $X$ that both contain $E\cap F$ and are contained in $E\cup F$.
-In particular $\mathcal P_f(X)$ is a connected median graph, with $m(D,E;F)$ being the set of all elements belonging to at least two of $D$, $E$ and $F$. In other words,
-$m(D,E;F)=(D\cap E)\cup(D\cap F)\cup(E\cap F)$.
-
-The same construction endows $\mathcal P(X)$ the set of all subsets of $X$ with a structure of median graph, where the connected component of $E$ consists of all $F$ such that $E\Delta F$ is finite.
-\end{exmp}
-
-The graphs $\mathcal P_f(X)$ are exactly the hypercube and it turns out that every connected median graph is a retract of some $\mathcal P_f(X)$, see \cite{Bandelt1984}.
-
-These graphs will be fundamental for us due to the following fact.
-Any action of a group $G$ on a set $X$ naturally extends to an action of $G$ on $\mathcal P_f(X)$ by graph homomorphisms: $g.\{x_1,\dots,x_n\}=\{g.x_1,\dots,g.x_n\}$.
-
-
-Building on this, we obtain that no infinite sum of groups has the property FW.
-\begin{lem}\label{Lemma:Sum}
-An infinite sum of non-trivial groups $G=\bigoplus_{i=1}^\infty G_i$ does not have FW.
-\end{lem}
-\begin{proof}
-Let $X=\bigsqcup_{i=1}^\infty G_i$.
-There is a natural action of $G$ on $X$: $G_i$ acts by left multiplication on $G_i$ and trivially on $G_j$ for $j\neq i$.
-Therefore, we have an action of $G$ on the connected median graph $\mathcal P_f(X)$.
-For every $i$, choose a non-trivial $g_i\in G_i$.
-Then the orbit of the vertex $\{1_{G_1},\dots, 1_{G_n}\}$ contains the point $\{g_1,\dots, g_n\}$ which is at distance $2n$ of $\{1_{G_1},\dots, 1_{G_n}\}$.
-That is the action of $G$ on $\mathcal P_f(X)$ has unbounded orbits.
-\end{proof}
-
-\begin{lem}\label{Lemma:Subgroup}
-\todo{Mettre une phrase d'intro; ce n'est pas nouveau}
->>>>>>> 912baa5df21993bca3a5beeeabb78f1ff44b55c5
 Let $G$ be a group and $H$ be a finite index subgroup.
 If $H$ has FW, then so does~$G$.
 \end{lem}
