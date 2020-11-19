@@ -8,20 +8,20 @@
 \usepackage{textcomp}% améliore certains symboles de bases
 \usepackage{lmodern}% remplace la police ComputerModern par LatinModern (+ mieux bien)
 %
-\usepackage[a4paper]{geometry} % Pour avoir les marges pour du papier A4
+%\usepackage[a4paper]{geometry} % Pour avoir les marges pour du papier A4
 %
 \usepackage[intlimits, leqno]{amsmath}% ams-mathh ! avec numérotation des équations à gauche et intégrales avec limites dessous
 \usepackage{mathtools}% compléments à amsmath
 \usepackage{amssymb,amsfonts}% symboles mathématiques supplémentaires
-\usepackage{bm}% symbole math gras
+%\usepackage{bm}% symbole math gras
 \usepackage{amsthm}% environnement ams-theorem
-\usepackage{array}% ajoute des options aux environnements tabular et arrray, permet de centrer
+%\usepackage{array}% ajoute des options aux environnements tabular et arrray, permet de centrer
 \usepackage{mathrsfs}% permet d'utiliser matcal
 \usepackage[colorlinks,breaklinks,bookmarks,plainpages=false,unicode=true]{hyperref}%
 \usepackage{todonotes} %ajouter des commentaires
 %\usepackage[disable]{todonotes}%cache les commentaires
 \usepackage{datetime} %ajoute la date et l'heure
-\usepackage{here} % permet d'utilser H, h pour place les figures
+%\usepackage{here} % permet d'utilser H, h pour place les figures
 %
 %
 %
@@ -33,9 +33,10 @@
 \newtheorem{prop}[lem]{Proposition}
 \newtheorem{question}[lem]{Question}
 \newtheorem{thm}[lem]{Theorem}
+\theoremstyle{definition}
+\newtheorem{defn}[lem]{Definition}
 \theoremstyle{remark}% texte en roman
 \newtheorem{claim}[lem]{Affirmation}
-\newtheorem{defn}[lem]{Definition}
 \newtheorem{exmp}[lem]{Example}
 \newtheorem{fact}[lem]{Fact}
 \newtheorem{notation}[lem]{Notation}
@@ -90,21 +91,15 @@
 
 \section{Introduction}
 %
-The property FW was introduced by de Cornullier. It is a fixed point property for the action on wall spaces (for a detailed treatment of this property see \cite{Cornulier2013}). For discrete groups, this property is implied by the Kazhdan property (T). The behavior of the Kazhdan Property (T) with the wreath product is well known: 
+The property FW was introduced by Barnhill and Chatterji\todo{Give ref (cf article de Cornullier)}. It is a fixed point property for the action on wall spaces (for a detailed treatment of this property see \cite{Cornulier2013}). For discrete groups, this property is implied by the Kazhdan property (T). The behavior of the Kazhdan Property (T) with the wreath product is well known: 
 \begin{thm}[\cite{Cherix2004,Neuhauser2005a}] \label{T:Wreath_prop_T}
-Let $G,H$ be two discrete groups and $X$ a set on which $H$ acts. The wreath product $G \wr_X H$ has the property (T) if and only if $G$ and $H$ have the property (T) and if $X$ is finite.
+Let $G,H$ be two discrete groups with $G$ non-trivial and $X$ a set on which $H$ acts. The wreath product $G \wr_X H$ has the property (T) if and only if $G$ and $H$ have the property (T) and $X$ is finite.
 \end{thm}
 %
 %
 The same kind of result is true for the property FW
-\begin{thm}
-Let $G,H$ be two discrete groups and $X$ a set on which $H$ acts transitively. The wreath product $G \wr_X H$ does not have the property FW if at least one of the following conditions is satisfied: 
-\begin{enumerate}
-\item The group $G$ does not have the property FW.
-\item The group $H$ does not have the property FW.
-\item The set $X$ is infinite.
-\end{enumerate}
-\end{thm}
+\begin{thm}\label{Thm:Main}
+Let $G,H$ be two discrete groups with $G$ non-trivial and $X$ a set on which $H$ acts. The wreath product $G \wr_X H$ has the property FW if and only if $G$ and $H$ have the property FW and $X$ is finite.\end{thm}
 %
 %
 An action of a group on a CAT(0) cube complex is \emph{essential} if all the orbits of vertices are unbounded and the action is transitive on the set of hyperplanes.
@@ -149,7 +144,7 @@ The following are equivalent:
 \item\label{C:FW_Cat(0)} every cellular action on a CAT(0) cube complex has bounded orbits for the $\ell^1$-metric (the complexes can be infinite dimensional);
 \item every cellular action on a CAT(0) cube complex has a fixed point;
 \item \label{C_FW_MedianGRaph}every action on a connected median graph has bounded orbits;
-\item every action on a nonempty connected median graph has a fixes point;
+\item every action on a nonempty connected median graph has a finite orbit;
 \item \label{C:FW_Schrei} (if $G$ is finitely generated) every Schreier graph of $G$ has at most 1 end;
 \item \label{C:FW_Wallings}For every set $Y$ endowed with a walling structure and compatible action on $Y$ and on the index of the walling, the action on $Y$ has bounded orbits for the wall distance;
 \item \label{C:FW_Hilbert} every isometric action on an "integral Hilbert space" $\ell^2(X,\Z)$ (X any discrete set), or equivalently on $\ell^2(X,\R)$ preserving the integral points, has bounded orbits;
