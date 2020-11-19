@@ -24,6 +24,18 @@
 %\usepackage{here} % permet d'utilser H, h pour place les figures
 %
 %
+\usepackage{tikz}
+\usetikzlibrary{external}
+\tikzexternalize[prefix=Images/]% On externalise. Les images sont stockées dans le dossier Images
+\makeatletter %pour ne pas prendre en compte les todo dans l'externalisation
+\renewcommand{\todo}[2][]{\tikzexternaldisable\@todo[#1]{#2}\tikzexternalenable}
+\makeatother
+\makeatletter %pour ne pas prendre en compte les missingfigures dans l'externalisation
+\renewcommand{\missingfigure}[2][]{\tikzexternaldisable\@missingfigure[#1]{#2}\tikzexternalenable}
+\makeatother
+
+\tikzset{myloop above/.style={loop, out=130, in = 50,min distance =8mm}}
+\tikzset{blacknode/.style={shape= circle, fill = black, inner sep = 0pt, outer sep = 0pt, minimum size = 3pt,draw}}
 %
 \newtheorem{lem}{Lemma}[section]
 %\newtheorem{AFaire}[lemma]{A faire}% peut enlever à la fin
@@ -78,7 +90,7 @@
 \newcommand*{\R}{\field{R}}
 \renewcommand*{\C}{\field{C}}
 %
-%
+%!TEX encoding = UTF-8 Unicode
 %
 \title{The Property FW for the wreath products}
 \author{Paul-Henry Leemann, Grégoire Schneeberger}
