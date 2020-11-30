@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  27 NOV 2020 15:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  30 NOV 2020 17:10
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -922,30 +922,10 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 LaTeX Warning: Reference `C:SS_FW' on page 2 undefined on input line 169.
 
-(./median.tex [2] [3] [4] [5]
-
-LaTeX Warning: Citation `MR2415834' on page 6 undefined on input line 192.
-
-
-LaTeX Warning: Citation `MR2240370' on page 6 undefined on input line 192.
-
-
-LaTeX Warning: Citation `MR1432323' on page 6 undefined on input line 197.
-
-
-LaTeX Warning: Citation `MR0476875 ' on page 6 undefined on input line 197.
-
-
-LaTeX Warning: Citation `MR3299841' on page 6 undefined on input line 197.
-
-
-LaTeX Warning: Citation `2013arXiv1302.5982C' on page 6 undefined on input line
- 197.
-
-[6]) (./ends.tex [7] [8] (./graphes/path_semidirect_ends.tex
+(./ends.tex [2] [3] (./graphes/path_semidirect_ends.tex
 ===== Image 'Images/Property_FW_and_wreath_products-figure0' is up-to-date. ===
 ===
-) [9]
+) [4]
 Overfull \hbox (50.3498pt too wide) in paragraph at lines 116--118
 \T1/lmr/m/n/10 The graph of the ac-tion of $\OT1/lmr/m/n/10 ^^@$ \T1/lmr/m/n/10
  on $\OML/lmm/m/it/10 Y$ \T1/lmr/m/n/10 is iso-mor-phic to the Schreier graph $
@@ -954,8 +934,8 @@ Overfull \hbox (50.3498pt too wide) in paragraph at lines 116--118
 T1/lmr/m/n/10 .
  []
 
-[10pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
- has been already used, duplicate ignored
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -969,14 +949,39 @@ Overfull \hbox (18.16963pt too wide) in paragraph at lines 132--133
  [][] 
  []
 
-[11pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
- has been already used, duplicate ignored
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
+has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.152 \end{prop}
                  <./Images/Property_FW_and_wreath_products-figure1.pdf>])
-(./Property_FW_and_wreath_products.bbl) [12]
+(./median.tex [7] [8] [9]
+
+LaTeX Warning: Citation `MR2415834' on page 10 undefined on input line 225.
+
+
+LaTeX Warning: Citation `MR2240370' on page 10 undefined on input line 225.
+
+[10]
+
+LaTeX Warning: Citation `MR1432323' on page 11 undefined on input line 230.
+
+
+LaTeX Warning: Citation `MR0476875 ' on page 11 undefined on input line 230.
+
+
+LaTeX Warning: Citation `MR3299841' on page 11 undefined on input line 230.
+
+
+LaTeX Warning: Citation `2013arXiv1302.5982C' on page 11 undefined on input lin
+e 230.
+
+[11] [12]
+
+LaTeX Warning: Citation `MR0476875' on page 13 undefined on input line 385.
+
+) (./Property_FW_and_wreath_products.bbl [13]) [14]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
 
@@ -985,7 +990,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 192.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
 Package rerunfilecheck Info: File `Property_FW_and_wreath_products.out' has not
  changed.
-(rerunfilecheck)             Checksum: AB2918D6A1C5339F80C3A524344711B0;844.
+(rerunfilecheck)             Checksum: 8AEB4AFF1E466BBDA67431A229C95346;844.
 
 
 LaTeX Warning: There were undefined references.
@@ -993,38 +998,40 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
  ) 
 Here is how much of TeX's memory you used:
- 23677 strings out of 480893
- 424379 string characters out of 5908067
- 695602 words of memory out of 5000000
- 38698 multiletter control sequences out of 15000+600000
- 612710 words of font info for 83 fonts, out of 8000000 for 9000
+ 23696 strings out of 480893
+ 424505 string characters out of 5908067
+ 690967 words of memory out of 5000000
+ 38703 multiletter control sequences out of 15000+600000
+ 625844 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,12n,83p,1077b,1040s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/20
-20/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2020/texmf-dist/
-fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/
+20/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2020/texmf-d
+ist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/
 dvips/lm/lm-mathex.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/l
 m/lmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.p
 fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/l
 ocal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texli
 ve/2020/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2020/tex
 mf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2020/texmf-dist/fon
-ts/type1/public/lm/lmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
-blic/lm/lmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr
-17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2020/texm
-f-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2020/texmf-dist/fon
-ts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/p
-ublic/lm/lmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lm
-sy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols
-/msbm10.pfb>
-Output written on Property_FW_and_wreath_products.pdf (12 pages, 321580 bytes).
+ts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
+blic/lm/lmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr
+12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr17.pfb></us
+r/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2020/texmf-dist/font
+s/type1/public/lm/lmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
+ic/lm/lmri10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmri
+8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></us
+r/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2020/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Property_FW_and_wreath_products.pdf (14 pages, 372325 bytes).
 
 PDF statistics:
- 358 PDF objects out of 1000 (max. 8388607)
- 305 compressed objects within 4 object streams
- 86 named destinations out of 1000 (max. 500000)
+ 400 PDF objects out of 1000 (max. 8388607)
+ 342 compressed objects within 4 object streams
+ 96 named destinations out of 1000 (max. 500000)
  167 words of extra memory for PDF output out of 10000 (max. 10000000)
 
