@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  30 NOV 2020 17:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  8 DEC 2020 14:11
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -958,30 +958,42 @@ l.152 \end{prop}
                  <./Images/Property_FW_and_wreath_products-figure1.pdf>])
 (./median.tex [7] [8] [9]
 
-LaTeX Warning: Citation `MR2415834' on page 10 undefined on input line 225.
+LaTeX Warning: Citation `MR2415834' on page 10 undefined on input line 238.
 
 
-LaTeX Warning: Citation `MR2240370' on page 10 undefined on input line 225.
+LaTeX Warning: Citation `MR2240370' on page 10 undefined on input line 238.
 
 [10]
 
-LaTeX Warning: Citation `MR1432323' on page 11 undefined on input line 230.
+LaTeX Warning: Citation `MR1432323' on page 11 undefined on input line 244.
 
 
-LaTeX Warning: Citation `MR0476875 ' on page 11 undefined on input line 230.
+LaTeX Warning: Citation `MR0476875 ' on page 11 undefined on input line 244.
 
 
-LaTeX Warning: Citation `MR3299841' on page 11 undefined on input line 230.
+LaTeX Warning: Citation `MR3299841' on page 11 undefined on input line 244.
 
 
 LaTeX Warning: Citation `2013arXiv1302.5982C' on page 11 undefined on input lin
-e 230.
+e 244.
 
-[11] [12]
+[11]
+Overfull \hbox (0.72174pt too wide) detected at line 308
+\OML/lmm/m/it/10 F \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 F\OT1/lmr/m/n/10 ((\OML/l
+mm/m/it/10 G[]\OT1/lmr/m/n/10 )[]) [][]= \OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 f \
+OT1/lmr/m/n/10 = (\OML/lmm/m/it/10 f[]; f[]; [] \OT1/lmr/m/n/10 ) \OMS/lmsy/m/n
+/10 j 9\OML/lmm/m/it/10 n\OMS/lmsy/m/n/10 8\OML/lmm/m/it/10 j < n \OT1/lmr/m/n/
+10 : \OML/lmm/m/it/10 f[] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 "[]\OMS/lmsy/m/n/1
+0 8\OML/lmm/m/it/10 k \OMS/lmsy/m/n/10 ^^U \OML/lmm/m/it/10 n \OT1/lmr/m/n/10 :
+ \OML/lmm/m/it/10 f[] \OMS/lmsy/m/n/10 2 \OML/lmm/m/it/10 G[]\OMS/lmsy/m/n/10 g
+\OML/lmm/m/it/10 :
+ []
 
-LaTeX Warning: Citation `MR0476875' on page 13 undefined on input line 385.
+[12] [13]
 
-) (./Property_FW_and_wreath_products.bbl [13]) [14]
+LaTeX Warning: Citation `MR0476875' on page 14 undefined on input line 570.
+
+) (./Property_FW_and_wreath_products.bbl [14]) [15]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
 
@@ -995,43 +1007,50 @@ Package rerunfilecheck Info: File `Property_FW_and_wreath_products.out' has not
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
  ) 
 Here is how much of TeX's memory you used:
- 23696 strings out of 480893
- 424505 string characters out of 5908067
- 690967 words of memory out of 5000000
- 38703 multiletter control sequences out of 15000+600000
- 625844 words of font info for 87 fonts, out of 8000000 for 9000
+ 23718 strings out of 480893
+ 424731 string characters out of 5908067
+ 691204 words of memory out of 5000000
+ 38711 multiletter control sequences out of 15000+600000
+ 621576 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,83p,1077b,1040s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
-texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/20
-20/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2020/texmf-d
-ist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/
+ 68i,9n,83p,1077b,806s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
+cal/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texliv
+e/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2020/texmf-d
+ist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/
 dvips/lm/lm-mathex.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/l
 m/lmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.p
 fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/l
 ocal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texli
 ve/2020/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2020/tex
-mf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2020/texmf-dist/fon
-ts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
-blic/lm/lmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr
-12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr17.pfb></us
-r/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texl
-ive/2020/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2020/tex
-mf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2020/texmf-dist/font
-s/type1/public/lm/lmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
-ic/lm/lmri10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmri
-8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></us
-r/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/tex
-live/2020/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2020/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Property_FW_and_wreath_products.pdf (14 pages, 372325 bytes).
+mf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2020/texmf-dist/fon
+ts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
+blic/lm/lmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr
+10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr12.pfb></us
+r/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2020/texmf-dist/fon
+ts/type1/public/lm/lmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pub
+lic/lm/lmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmri1
+0.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmri7.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2020/t
+exmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2020/texmf-dist/f
+onts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/
+public/lm/lmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/l
+msy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbol
+s/msbm10.pfb>
+Output written on Property_FW_and_wreath_products.pdf (15 pages, 405791 bytes).
 
 PDF statistics:
- 400 PDF objects out of 1000 (max. 8388607)
- 342 compressed objects within 4 object streams
- 96 named destinations out of 1000 (max. 500000)
+ 444 PDF objects out of 1000 (max. 8388607)
+ 381 compressed objects within 4 object streams
+ 110 named destinations out of 1000 (max. 500000)
  167 words of extra memory for PDF output out of 10000 (max. 10000000)
 
