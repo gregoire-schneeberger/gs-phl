@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+\fill[color = gray!20] (-4,0) -- (2,0) --(4,2) -- (-2,2) --cycle;
+\fill[color = gray!40] (0,0) -- (2,2) --(2,6) -- (0,4) --cycle;
+\fill[color = gray!20] (-4,4) -- (2,4) --(4,6) -- (-2,6) --cycle;
+\draw [dotted] (0,4) -- (2,6) --(2,4);
+\draw (3,1.5) node {$X_x^H$};
+\draw (0.8,3) node {$X_z^K$};
+\draw (3,5.5) node {$X_y^H$};
+\node[style=blacknode, label={below:$x$}] (x) at (-2,1) {};
+\node[style=blacknode, label={below:$z$}]  (z) at (1.5,1.5) {};
+\node[style=blacknode, label={below:$z'$}]  (z') at (1.5,5.5) {};
+\node[style=blacknode, label={below:$y$}]  (y) at (-2,5) {};
+\draw [dashed] (x) to [out=90,in=210] (z) to [out=170,in=-40] (z') to [out=200,in=90] (y) ;
+\end{tikzpicture}

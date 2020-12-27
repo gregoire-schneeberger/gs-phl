@@ -1,0 +1,230 @@
+%!TEX root = Property_FW_and_wreath_products.tex
+\todo[inline]{Ajouter les petits lemmes sur les sous-groupes}
+For finitely generated groups, the point \ref{C:FW_Schrei} of the Proposition \ref{P:charact_FW} gives us a nice geometrical characteriation of property FW. We will present more explicit and constructive proofs of the Proposition \ref{Prop:Median} in this context. 
+
+We will begin by a short recall on Schreier graph. \todo{Utile de redéfinir les Schreier ? Oui !}.
+\todo[inline]{Def de bouts, mettre au moins deux versions}
+%
+\begin{defn}
+Let $G$ be a group, $H$ a subgroup of $G$ and $S$ a symmetric\footnote{That is, $s\in S$ if and only if $s^{-1}\in S$.} generating set. The \emph{(left) Schreier graph} $\Sch(G,H;S)$ is the graph with vertices the left cosets $gH=\setst{gh}{h\in H}$ and where two vertices $gH$ and $g'H$ are adjacent if there exists a generator $s$ such that $g'H = sgH$.
+\end{defn}
+%
+Observe that with the above definition, a Schreier graph may have loops, but never has multiple edges. While, depending on the situation, some authors allow multiple edges, when studying end of graphs we only need to know if two vertices are adjacent and the exact number of edges between them does not matter.
+
+If $X$ is a set with a left action $G\actsGroup X$ and $S$ is a symmetric generating set for $G$, the corresponding (left) \emph{orbital graph} $\Sch_{\mathcal O}(G,X;S)$ is the graph with vertex set $X$ and with an edge between $x$ and $y$ if there exists $s$ in $S$ such that $s.x=y$.
+As the notation suggest, these two definitions are the two faces of the same coin. Indeed, we have $\Sch(G,H;S)=\Sch_{\mathcal O}(G,G/H;S)$, while   for every $x\in X$, the graph $\Sch(G,\stab_G(x);S)$ is equal to the connected component of $x$ in $\Sch_{\mathcal O}(G,X;S)$.
+
+Schreier graphs are generalizations of the well-known \emph{Cayley graphs}, whith $\Cayley(G;S)=\Sch(G,\{1\};S)$.
+
+\todo[inline]{Examples of Schreier graphs with number of ends.}
+
+%If a group $G$ acts on a set $X$, we can define the graph of the action of $G$ on the orbit of an element $x$ as the graph where the vertex are the element of the orbit of $x$ and two vertices are adjacent if they are linked by the action of a generator. The Schreier graphs are intimitely linked with group actions by the classical following lemma.
+%%
+%%
+%\begin{lem}\label{L:gen_wreath}
+%Let $G$ be a finitely generated groups, $S$ be a finite generating set and $X$ be a $G$-set. Then for each element $x$ of $X$, the graph of the action of $G$ on the orbit of $x$ is isomorphic to the Schreier graph $\Sch(G,\stab(x),S)$.
+%\end{lem}
+%%
+%%
+%In fact all the Schreier graph can be viewed as graphs of actions, by considering the action of $G$ on this Schreier graph.
+
+Let $X$ be a set and $G$ a group. We view 
+$\bigoplus_XG$ as the set of functions from $X$ to $G$ with finite support :
+\[
+\bigoplus_XG=\setst{\varphi\colon X\to G}{\varphi(x)=1 \textnormal{ for all but finitely many }x}.\]
+This is naturally a group, where multiplication is taken componentwise.
+If $H$ is a group acting on $X$, then it naturally acts on $\bigoplus_XG$
+by $(h.\varphi)(x)=\varphi(h^{-1}.x)$.
+This leads to the following definition
+\begin{defn}
+Let $G$ and $H$ be groups and $X$ be a set on which $H$ acts.
+The \emph{(retricted) wreath product} $G\wr_XH$ is the group $(\bigoplus_XG)\rtimes H$.
+\end{defn}
+Let $S$ be a generating set of $G$ and $T$ a generating set of $H$.
+Suppose that $H$ acts transitively on $X$ and let $x\in X$ be any point.
+Finally, let $\delta_x^s$ be the element of $\bigoplus_XG$ defined by $\delta_x^s(x)=s$ and $\delta_x^s(y)=1_G$ if $y\neq x$ and let $\mathbf 1$ be the constant function with value $1$.
+It is then standard that 
+\[\setst{(\delta_x^s,1_H)}{s \in S} \cup \setst{(\mathbf 1,t}{t \in T}\]
+is a generating set for $G\wr_XH$.
+
+On the other hand, it follows from the definition of the wreath product that we have
+\[
+G\wr_XH=\bigoplus_{Y\textnormal{ is an $H$-orbit}}\bigl(G\wr_YH\bigr).
+\]
+We hence have as a corollary
+\begin{lem}
+The group $G\wr_XH$ is finitely generated if and only if both $G$ and $H$ are finitely generated and $H$ acts on $X$ with finitely many orbits.
+\end{lem}
+%As we want to work with finitely generated groupm the folowing lemma is useful.
+%
+%
+%\begin{lem}\label{L:wreath_fg}
+%Let $G$ and $H$ be groups and $X$ be a $H$-set. The wreath product $G \wr_X H$ is finitely generated if and only if $G$ and $H$ are finitely generated and if the number of orbits of the action $H \actsGroup X$ is finite.
+%\end{lem}
+%%
+%\begin{proof}
+%Suppose that $G$ and $H$ are finitely generated and that the number of orbits is finite. Let $S$ be a finite generating set of $G$, $S'$ a finite generating set of $H$ and $\{x_0, \ldots, x_n \}$ a representative system of the orbits. For $s$ in $S$ and $x$ in $X$, we define $\delta_x^s$ as
+%%
+%\begin{equation*}
+%\delta_{x}^s (y) = \begin{cases} e_G & y \neq x \\ s 	& y = x. \end{cases}
+%\end{equation*}
+%%
+%It is straightforward to prove that the set 
+%\begin{equation*}
+%\left\{(\delta_x^s,e_H) : s \in S, x \in \{x_0,\ldots,x_n\} \right\} \cup \left\{ (0,s') : s' \in S' \right\}
+%\end{equation*}
+%is a finite generating set of $G \wr_X H$, where $0(x) = e_g$ for all $x$ in $X$.
+%
+%If $G$ or $H$ are not finitely generated, it is clear that $G \wr_X H$ is not either. Suppose that there are infinitely many orbits. If $\phi$ is a function of $\bigoplus_X G$ whose support is include in $X_1 \sqcup \ldots X_n$, then for every $h$ in $H$, the support of $h.\phi$ is also contain in  $X_1 \sqcup \ldots X_n$, where $X = X_1 \sqcup X_2 \sqcup \ldots$ is a decomposition on disjoint orbits. As all the elements of $\bigoplus_X G$ have finite support, it is necessary to have infintely many such element to generate the whole group $G \wr_X H$.
+%\end{proof}
+%
+%
+We know begin our result on the number of ends of Schreier graphs.
+\begin{lem}\label{Lemma:Semidirect_ends}
+Let $N$ and $H$ be two finitely generated groups and $N\rtimes H$ a semi-direct product.
+Then
+\begin{enumerate}
+\item If $N\rtimes H$ has FW, then so does $H$,
+\item If both $N$ and $H$ have FW, then $G$ also has FW.
+\end{enumerate}
+\end{lem}
+%
+\begin{proof}
+Let $S$, respectively $T$, denotes a finite generating set of $N$, respectively $H$.
+It is well known that $G=N\rtimes H$ is finitely generated by $U=(S\times\{1\}) \cup(\{1\}\times T)$.
+
+Suppose that $H$ does not have property FW. Then there exists a Schreier graph $X=\Sch(H,K;T)$ of $H$ with more than one end. The group $G=N\rtimes H$ acts on $X$ via $(n,h).x \coloneqq h.x$.
+Since $H$ acts transitively on $X$, so does $G$.
+In fact, the graph of the action $G \actsGroup X$ is isomorphic to the graph $X$ with some additional loops for generators in $S\times\{1\}$. As adding loops does not change the number of ends, this Schreier graph has more than one end and therefore $G$ does not have property FW.
+
+Suppose now that both $N$ and $H$ have property FW. We want to show that every Schreier graphs of $G$ have at most one end. If they are all finite, then there is nothing to prove (and $G$ is finite). So let $X$ be an infinite Schreier graph of $G$ with respect to the generating set $U$. The groups $N$ and $H$ acts on $X$ by restriction of the action of $G$. That is, $n.x = (n,1).x$ and $h.x = (1,h).x$.
+For each vertex $x$ we define $X_x^H$ (and respectively $X_x^N$) as the Schreier graph obtained from the action of $H$ (respectively $N$) on the $H$-orbit (respectively $N$-orbit) of $x$. These are subgraphs of $X$. As $N$ and $H$ have property FW, the graphs $X_x^H$ and $X_x^N$ are either finite or one-ended. We want to prove that in this case $X$ has exactly one end. 
+
+Let $K$ be a finite set of vertices of $X$.
+If $x$ is in $K$ and $X_x^H$ is finite, add all vertices of $X_x^H$ to $K$.
+By doing so for every $x$ in $K$, we obtain a new finite set $K\subset K'$ of vertices of $X$.
+We will show that $X\setminus K'$ has only one infinite connected component.
+By definition of $K'$, if $x$ is not in $K'$, then either $X_x^H$ has one end or $X_x^H$ does not contains vertices in $K'$. 
+
+Let $x$ and $y$ be two vertices, each of them lying in some infinite connected component of $X\setminus K'$.
+We will construct a path from $x$ to $y$ in $X\setminus K'$ as a concatenation of three smaller paths as follow, see Figure~\ref{Figure:PathSemiDirect}.
+First, a path in $X_x^H\setminus K'$ from $x$ to some $z$, then a path in $X_z^N\setminus K'$ from $z$ to some $z'\in (X_z^N\cap X_y^H)\setminus K'$, and finally a path in $X_y^H\setminus K'$ from $z'$ to $y$.
+In order to finish the proof, it remains to exhibit elements $z$ and $z'$ and the three desired paths.
+\begin{figure}[H]\centering
+\scalebox{0.7}{
+\input{graphes/path_semidirect_ends.tex}}
+\caption{The path between $x$ and $y$.}
+\label{Figure:PathSemiDirect}
+\end{figure}
+
+The action of $G$ on $X$ being transitive, there exists an element $(n_0,h_0)$ of $N \rtimes H$ such that $(n_0,h_0).x = y$.
+Since $K'$ is finite, the set $X_x^H\setminus K'$ is infinite.
+Moreover, there is infinitely many $z$ in $X_x^H\setminus K'$ such that either $X_z^N$ is one-ended or $X_z^N$ does not intersect $K'$.
+For such a $z$ there exists $h$ such that $(1,h).x=z$.
+Now, the vertex $z'\coloneqq(hh_0^{-1}n_0,h).x$ is both equal to $(hh_0^{-1}.n_0,1)(1,h_0).x=(hh_0^{-1}.n_0,1).z$ and to $(1,hh_0^{-1})(n_0,h_0).x=(1,hh_0^{-1}).y$. That is, $z'$ is in $X_z^N\cap X_y^H$.
+A simple computation show us that the map $z\mapsto z'$ is injective: $z_1'=z_2'$ if and only if $z_1=z_2$.
+Since $K'$ is finite, there is only finitely many $z'$ in $K'$ and hence there is infinitely many $z\in X_x^H$ such that both $z$ and $z'$ are not in $K'$ and either $X_z^N$ is one-ended or $X_z^N$ does not intersect $K'$.
+
+In order to finish the proof, observe that the three graphs $X_x^H$, $X_y^H$ and $X_z^N$ are all either one-ended or do not intersect $K'$.
+Therefore, there is a path in $X_x^H\setminus K'$ from $x$ to $z$ as desired, and so on for the paths from $z$ to $z'$ and $z'$ to $y$.
+We just have proved that for any finite $K$ the graph $X\setminus K$ has only one infinite connected component and therefore that $X$ is one-ended.
+%
+%
+%
+%
+%We claim that there exists a vertex $z$ of $X_x^H$ such that $X_z^N$ does not contain an element of $K'$ or is one-ended and such that $z'=(h'h^{-1}.n,0)z$ is not in $K'$, where $h'$ is an element of $H$ and $h'.x = z$. Indeed, such an element exists as $X_x^H$ and $X_y^H$ are infinite and $K$ is finite. The vertex $z'$ is in $X_y^H$ because
+%\begin{equation*}
+%(0,hh'^{-1}) z' = (0,hh'^{-1})(h'h^{-1}.n,0)(0,h')x = (n,h)x = y.
+%\end{equation*}
+%
+%We will construct a path on $X \setminus K$ between $x$ and $y$ as follows. The subgraph $X_x^H$ is one-ended, then there exists a path between $x$ and $z$. In the same way, $X_z^N$ has one end or has no vertex in $K$, then there is a path which join $z$ and $z'$. There exists a path between $z'$ and $y$ in $X_y^H$ which is one-ended. Then $x$ and $y$ are path-connected and then $X$ has one end. We proved that all the Schreier graph of $G$
+\end{proof}
+%geo
+
+By iterating the last lemma, we obtain
+%
+%
+\begin{cor}\label{Cor:Wreath_ends}
+Let $G$ and $H$ be two finitely generated groups and $X$ a $H$-set such that the number of orbits is finite. Then,
+\begin{enumerate}
+\item
+If $G\wr_X H$ has property FW, then so does $H$,
+\item
+If both $G$ and $H$ have property FW and $X$ is finite, then $G\wr_X H$ has property~FW.
+\end{enumerate}
+\end{cor}
+%
+%
+
+%
+%
+\begin{lem}\label{Lem:Wreath_groups_ends}
+Let $G$ and $H$ be two finitely generated groups such that $G\neq \{1\}$ and $H$ acts on some set $X$ with finitely many orbits.
+If $G\wr_XH$ has property FW, then 
+\begin{enumerate}
+\item $G$ has property FW,
+\item $X$ is finite.
+\end{enumerate}
+%
+\begin{proof}
+We will prove the contrapositives. The idea is to construct, for each of the two cases, a Schreier graph of $G\wr_XH$ with more than one end by exhibiting some well-chosen action of $G\wr_XH$.
+We fix some finite generating sets $S$ and $T$ of $G$ and $H$ and let 
+\[U\coloneqq\setst{(\delta_x^s,1_H)}{s \in S} \cup \setst{(\mathbf 1,t}{t \in T}\]
+be the standard generating set of $G\wr_XH$.
+%We will suppose, as in  Lemma~\ref{Lemma:Semidirect_ends} that $G = \gen{S}$ and $H = \gen{T}$ and $G_.
+
+\paragraph{Suppose that $X$ is an infinite set.}
+Since $H$ acts on $X$ with finitely many orbits, there exists an infinite orbit $X'$.
+Let $x_0$ be an arbitrary vertex of $X'$.
+%Let $x_0$ be an arbitrary vertex of $X'$ and let $Y$ be the set $Y = G \times X'$. The group $G\wr_XH$ acts on $Y$ via
+The group $G$ acting on itself by left multiplications, we have the so-called \emph{imprimitive action} of the wreath-product $G\wr_XH$ on $Y\coloneqq G\times X'$:
+\begin{equation*}
+(\phi,h). (g,x) \coloneqq (\phi(h.x)g, h.x).
+\end{equation*}
+Since both $G\actsGroup G$ and $H\actsGroup X'$ are transitive, the action $G\wr_XH\actsGroup Y$ is also transitive. 
+%The action is transitive. Indeed, let $(g_1,x_1)$ and $(g_2,x_2)$ be two elements of $Y$. By transitivity of the action of $H$ on $X'$, there exists $h$ in $H$ such that $hx_1 = x_2$ and $\phi$ in $\bigoplus_X G$ such that $\phi(hx_1) = g_2g_1^{-1}$. Then, 
+%\begin{equation*}
+%(\phi,h) (g_1,x_1) = (\phi(h x_1) g, h x_1) = (g_2,x_2).
+%\end{equation*}
+Therefore, the orbital Schreier graph of $G\wr_XH\actsGroup Y$ is isomorphic to the Schreier graph $\Gamma\coloneqq\Sch(G\wr_XH, \stab(1_G,x_0), U)$. We decompose this graph into leaves of the form $Y_g = \{ g \} \times X'$. There are two types of edges in $\Gamma$, which are coming from the two sets of generators, see Figure~\ref{Figure:Leaves}. The first ones, of the form $(\mathbf 1,t)$, give us on each leaf a copy of the orbital Schreier graph of $H \actsGroup X'$. Indeed,
+\begin{equation*}
+(\mathbf 1,t).(g,x) = (g, t.x).
+\end{equation*}
+The second ones, of the form $(\delta_{x_0}^s,1)$, give us loops everywhere except on vertices of the form $(g,x_0)$. By direct computation, we see that the vertices $(g,x_0)$ and $(sg,x_0)$ connect the leaves $Y_g$ and $Y_{sg}$, 
+\begin{equation*}
+(\delta_{x_0}^s,1)(g,x) = 
+\begin{cases}
+(g,x) & \textnormal{if }x \neq x_0, \\
+(sg, x) & \textnormal{if }x = x_0.
+\end{cases}
+\end{equation*}
+%
+\begin{figure}[H]\centering
+\scalebox{0.7}{
+\input{graphes/leaves_structure_schreier.tex}}
+\caption{The leaf structure of the orbital Schreier graph of $G\wr_XH \actsGroup Y$. Plain edges correspond to generators of the form $(\mathbf 1,t)$ while dotted edges correspond to generators of the form $(\delta_{x_0}^s,1)$.}
+\label{Figure:Leaves}
+\end{figure}
+%
+If we remove a vertex $(g,x_0)$ we disconnect the leaf $Y_g$ from the rest of $\Gamma$. As $X'$ is infinite each leave is infinite and the number of ends of $\Gamma$ is then at least $\abs{G}\geq 2$. We just proved that if $X$ is infinite the group $G\wr_XH$ does not have property FW.
+
+\paragraph{Suppose now that $G$ does not have property FW.} There exists a subgroup $K$ of $G$ such that $\Sch(G,K,S)$ has more than one end.
+Let $x_0$ be any point of $X$ and $X'$ be its orbit under the action of $H$.
+%The choice of $x_0$ is arbitrary in this case.
+We have the imprimitive action of $G\wr_XH$ on $G/K\times X$, which we could restrict to an action on $G/K\times X'$:
+\begin{equation*}
+(\phi,h)(gK,x) = (\phi(h.x) gK, h.x).
+\end{equation*}
+As above, the action is transitive and the orbital Schreier graph of this action is isomorphic to a Schreier graph $\Gamma$. We decompose this graph into leaves in the same way. Now we look at the subgraph made up of vertices $(g,x_0)$ and edges $(\delta_{x_0}^s,1)$ and we remark that it is isomorphic to the Schreier graph $\Sch(G,K,S)$ which has more than one end. Then $\Gamma$ has also more than one end, which finishes the proof.
+\end{proof}
+\end{lem}
+%
+%
+The following proposition is a direct application of Corollary \ref{Cor:Wreath_ends} and Lemma \ref{Lem:Wreath_groups_ends}.
+%
+%
+\begin{prop}
+Let $G$ be a non trivial finitely generated group, $H$ be a finitely generated group and $X$ a set on which $H$ acts with a finite number of orbit. The wreath product $G \wr_X H$ has property FW if and only if $G$ and $H$ have property FW and $X$ is finite.
+\end{prop}
+%
+%
