@@ -1,16 +1,5 @@
 \begin{thebibliography}{1}
 
-\bibitem{Bandelt1984}
-H.~J. Bandelt.
-\newblock {Retracts of hypercubes}.
-\newblock {\em J. Graph Theory}, 8(4):501--510, 1984.
-
-\bibitem{Bekka2008}
-B.~Bekka, P.~de~la Harpe, and A.~Valette.
-\newblock {\em {Kazhdan's property ({\{}T{\}})}}, volume~11 of {\em New
-  Mathematical Monographs}.
-\newblock Cambridge University Press, Cambridge, 2008.
-
 \bibitem{Cherix2004}
 P.~A. Cherix, F.~Martin, and A.~Valette.
 \newblock {Spaces with measured walls, the Haagerup property and property (T)}.
@@ -20,11 +9,6 @@ P.~A. Cherix, F.~Martin, and A.~Valette.
 Y.~Cornulier.
 \newblock {Group actions with commensurated subsets, wallings and cubings}.
 \newblock page~58, 2013.
-
-\bibitem{Cornulier2011}
-Y.~Cornulier and A.~Kar.
-\newblock {On Property (FA) for wreath products}.
-\newblock {\em J. Gr. Theory}, 14(1):165--174, jan 2011.
 
 \bibitem{Neuhauser2005a}
 M.~Neuhauser.
