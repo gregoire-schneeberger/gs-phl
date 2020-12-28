@@ -1,0 +1,73 @@
+%!TEX root = ends.tex
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%    Section : Introduction    %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+%
+%
+%
+%
+%
+Property FW is a group property that is (for discrete groups) a weakening of the celebrated Kazdhan's property (T). It was introduced by Barnhill and Chatterji in \cite{}\todo{Give ref (cf article de Cornulier)} and studied extensively by Cornulier in \cite{Cornulier2013}. It is a fixed point property for actions on wall spaces and hence stands between property FH (fixed points on Hilbert spaces, equivalent to property (T) for discrete groups) and property FA (fixed points on \emph{arbres}\footnote{\emph{Arbres} being the french word for trees.}), see \cite{Cornulier2013} for more details.
+
+When working with group properties, it is natural to ask if they are stable under ``natural'' group operations. For example, one may wonder when a property is stable by subgroups, quotients, direct products or semi-direct products.
+A slightly less common operation, but still of great use in geometric group theory, is the wreath product, see Definition~\ref{Def:WreathProd}.
+
+In the context of properties defined by fixed points of actions, the first result concerning wreath products was due to Cherix, Martin and Valette and latter refined by Neuhauser and concern property (T).
+%
+%
+\begin{thm}[\cite{Cherix2004,Neuhauser2005a}] \label{T:Wreath_prop_T}
+Let $G,H$ be two discrete groups with $G$ non-trivial and $X$ a set on which $H$ acts. The wreath product $G \wr_X H$ has property (T) if and only if $G$ and $H$ have property (T) and $X$ is finite.
+\end{thm}
+%
+%
+A somewhat similar result for property FA was obtained by Cornulier and Kar in \cite{Cornulier2011}.
+Cornulier also obtained partial results on wreath products and property FW in \cite{Cornulier2013}.
+
+The aim of this note is to give an elementary proof of the analogous of Theorem~\ref{T:Wreath_prop_T} for property FW:
+%
+%
+\begin{thm}\label{Thm:Main}
+Let $G,H$ be two finitely generated groups with $G$ non-trivial and $X$ a set on which $H$ acts with finitely many orbits. The wreath product $G \wr_X H$ has property FW if and only if $G$ and $H$ have property FW and $X$ is finite.
+\end{thm}
+%
+%
+Our proof will rely on a characterization of property FW via ends of Schreier graphs \cite{Cornulier2013}, see Subsection \ref{Subsection:FW} for the relevant definitions.
+
+At his point, the curious reader might have two questions. First, is it possible to extend Theorem \ref{Thm:Main} beyond the realms of finitely generated groups and of actions with finitely many orbits? And secondly, is there a link between Theorems \ref{T:Wreath_prop_T} and \ref{Thm:Main}?
+In both cases, the answer is yes.
+This is the subject of the forthcoming and more technical \cite{LS2021}, which gives an unified proof of Theorems \ref{T:Wreath_prop_T} and \ref{Thm:Main} as well as of similar results for the Bergman property and more.
+%
+%
+%
+%
+\paragraph{Organization of the paper}
+The next section contains all the definitions as well as some examples, while Section \ref{Section:Proof} is devoted to the proof of Theorem~\ref{Thm:Main}.
+%
+%
+%
+\todo[inline]{Mettre ici les remerciements. Tu dois possiblement remercier la NSF. J'ai mis Alain en remerciement, je ne sais pas ce que tu en penses et si tu veux être plus spécifique.}
+\paragraph{Acknowledgment}
+The author are thankful to A. Valette for comments on a previous version of this note.
+The first author was supported by NSF Grant No. 200021\textunderscore188578.
+%
+%
+%
+\todo[inline]{J'ai mis en commentaire la partie sur les actions essentielles ne sachant pas comment l'introduire. Je pense que si on veut la garder, le mieux est de la mettre un peu en apparté soit à la fin de l'intro soit à la fin de l'article. Cela permet de garder quelque chose de simple et d'auto-contenu pour le reste.}
+
+%An action of a group on a CAT(0) cube complex is \emph{essential} if all the orbits of vertices are unbounded and the action is transitive on the set of hyperplanes.
+%\begin{cor}
+%Let $G,H$ be two discrete groups and $X$ a set on which $H$ acts transitively. If there exists an essential action of $G$ or $H$ on a CAT(0) cube complex  or if $X$ is infinite, then there exists an essential action of $G \wr_X H$ on a CAT(0) cube complex. 
+%\end{cor}

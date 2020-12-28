@@ -1,0 +1,167 @@
+%!TEX root = ends.tex
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%    Section : Definitions and examples    %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Definitions and examples}
+This section contains all the definitions, as well as some useful preliminaries facts and some examples.
+All the results cited in this section are standard and can be found in any good book about geometric group theory, see for example~\cite{}.\todo{Mettre ref et peut-être retravailler l'intro.} 
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%    Subsection : Ends of Schreier graphs and property FW    %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ends of Schreier graphs and property FW}
+\label{Subsection:FW}
+%
+%
+%
+%
+%
+In what follows, we will always assume that a generating sets of groups are \emph{symmetric}, that is we will look at $S\subset G$ such that $s\in S$ if and only if $s^{-1}\in S$.
+%
+%
+\begin{defn}
+Let $G$ be a group, $H$ a subgroup of $G$ and $S$ a symmetric\footnote{That is, $s\in S$ if and only if $s^{-1}\in S$.} generating set. The \emph{(left) Schreier graph} $\Sch(G,H;S)$ is the graph with vertices the left cosets $gH=\setst{gh}{h\in H}$ and with an edge between $gH$ and $sgH$ for every $s$ in $S$.
+\end{defn}
+%
+%
+Observe that with the above definition, a Schreier graph may have loops as well as multiple edges. Moreover, in $\Sch(G,H;S)$ every vertex has degree $\abs S$.
+
+If $X$ is a set with a left action $G\curvearrowright X$ and $S$ is a symmetric generating set for $G$, the corresponding (left) \emph{orbital graph} $\Sch_{\mathcal O}(G,X;S)$ is the graph with vertex set $X$ and with an edge between $x$ and $y$ for every $s$ in $S$ such that $s.x=y$.
+As the notation suggest, these two definitions are the two faces of the same coin. Indeed, we have $\Sch(G,H;S)=\Sch_{\mathcal O}(G,G/H;S)$ for the  action by left multiplication of $G$ on $G/H$, while   for every $x\in X$, the graph $\Sch(G,\stab_G(x);S)$ is equal to the connected component of $x$ in $\Sch_{\mathcal O}(G,X;S)$.
+
+Schreier graphs are generalizations of the well-known \emph{Cayley graphs}, with $\Cayley(G;S)=\Sch(G,\{1\};S)$.
+
+If $S$ and $T$ are two generating sets of $G$, the graphs $\Sch(G,H;S)$ and $\Sch(G,H;T)$ need not to be isomorphic. However, if both $S$ and $T$ are finite, then $\Sch(G,H;S)$ and $\Sch(G,H;T)$ are quasi-isometric\todo{Put ref ?}, see Figure~\ref{Figure:CayleyOfZ} for some examples. The only fact we will use about quasi-isometries is that these preserve ``large-scale properties'' of the graph, as for examples the number of ends.
+Observe that the requirement that both $S$ and $T$ are finite is crucial for the existence of a quasi-isometry between the corresponding Schreier graphs. Indeed, for every group  $\Cayley(G;G\setminus\{1\})=\Sch(G,\{1\};G\setminus\{1\})$ is always a complete graph on $\abs{G}$ vertices, in particular  $\Cayley(\Z;\{1\})$ and $\Cayley(\Z;\Z\setminus\{0\})$ are not quasi-isometric.
+
+%
+%
+\begin{figure}[htbp]\centering
+\input{graphes/CayleyZ.tex}
+\caption{Fragments of two Cayley graphs of $\Z$, for the standard generating set $\{\pm1\}$ and for the generating set $\{\textcolor{red}{\pm2},\textcolor{blue}{\pm3\}}$.}
+\label{Figure:CayleyOfZ}
+\end{figure}
+\begin{figure}[htbp]\centering
+\input{graphes/SchreierF2.tex}
+\caption{A fragment of a Schreier graph (with $4$ ends) of the free group $F_2=\langle \textcolor{red}{x^{\pm1}},\textcolor{blue}{y^{\pm1}}\rangle$.}
+\label{Figure:SchreierOfF2}
+\end{figure}
+\begin{figure}[htbp]\centering
+\input{graphes/CayleyZ2.tex}
+\caption{A fragment of the Cayley graph of $\Z^2$ with standard generating set.}
+\label{Figure:CayleyOfZ2}
+\end{figure}
+%
+%
+
+Let $\Gamma$ be a graph and $K$ a finite subset of vertices. The graph $\Gamma\setminus K$ is the subgraph of $\Gamma$ obtained by deleting all vertices in $K$ and all edges adjacent to them. It is not necessarily connected.
+\begin{defn}\label{Def:Ends}
+Let $\Gamma$ be a graph. The \emph{number of ends} of $\Gamma$ is the supremum, taken over all finite $K$, of the number of infinite connected components of $\Gamma\setminus K$.
+\end{defn}
+There exists other characterization of the number of ends in graphs, notably in terms of equivalence classes of rays see \cite{},\todo{put some reference} but Definition \ref{Def:Ends} is the one that best suits our purpose.
+A locally finite graph (i.e. every vertex has finite degree) is finite if and only if it has $0$ ends.
+
+An important fact about the number of ends of a graph, is that it is an invariant of quasi-isometry. In particular, if $G$ is a finitely generated group it is possible to speak about the number of ends of the Schreier graph $\Sch(G,H;S)$ without specifying a particular finite generating set $S$.
+While the number of ends of Cayley graphs of finitely generated groups can only be $0$, $1$, $2$ or infinite (in which case it is uncountable) \cite{}\todo{put ref}, Schreier graphs may have any number of ends in $\mathbf N\cup\{\infty\}$, see Figure \ref{Figure:SchreierOfF2}.\todo{Est-ce qu'on dit que tout graphe de degré pair est isomorphique à un Schreier ?}
+
+We are now finally able to introduce property FW.
+%
+%
+\begin{defn}
+A finitely generated group $G$ has \emph{property FW} if all its Schreier graphs have at most one end.
+\end{defn}
+%
+%
+It directly follows from the definition that all finite groups have property FW, but that $\Z$ does not have it.
+In fact, if $G$ is a finitely generated group with an homomorphism onto $\Z$, then it does not have FW. Indeed, in this case $G=H\rtimes Z$ and the Schreier graph $\Sch(G,H;S)$ will be isomorphic to a Cayley graph of $\Z\cong G/H$ and hence has $2$ ends.
+
+Property FW admits many distinct characterizations that allow to define it for groups that are non-necessarily finitely generated and even for topological groups. We refer the reader to \cite{Cornulier2013} for a survey of these characterizations.
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%    Subsection : Wreath products    %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Wreath products}
+%
+%
+%
+%
+%
+Let $X$ be a set and $G$ a group. We view 
+$\bigoplus_XG$ as the set of functions from $X$ to $G$ with finite support:
+\[
+	\bigoplus_XG=\setst{\varphi\colon X\to G}{\varphi(x)=1 \textnormal{ for all but finitely many }x}.
+\]
+This is naturally a group, where multiplication is taken componentwise.
+
+If $H$ is a group acting on $X$, then it naturally acts on $\bigoplus_XG$
+by $(h.\varphi)(x)=\varphi(h^{-1}.x)$.
+This leads to the following definition
+\begin{defn}\label{Def:WreathProd}
+Let $G$ and $H$ be groups and $X$ be a set on which $H$ acts.
+The \emph{(retricted) wreath product} $G\wr_XH$ is the group $(\bigoplus_XG)\rtimes H$.
+\end{defn}
+A prominent  source of examples of wreath products are the one of the form $G\wr_HH$, where $H$ acts on itself by left multiplication.
+In particular, the group $(\Z/2\Z)\wr_\Z\Z$ has become well-known under the name of the \emph{lamplighter group}.
+Another (trivial) examples of wreath products are direct products $G\times H$ which corresponds to wreath products over a singleton $G\wr_{\{*\}}H$.
+
+Let $S$ be a generating set of $G$ and $T$ a generating set of $H$.
+Suppose that $H$ acts transitively on $X$ and let $x\in X$ be any point.
+Finally, let $\delta_x^s$ be the element of $\bigoplus_XG$ defined by $\delta_x^s(x)=s$ and $\delta_x^s(y)=1_G$ if $y\neq x$ and let $\mathbf 1$ be the constant function with value $1$.
+It is then standard that 
+\[
+	\setst{(\delta_x^s,1_H)}{s \in S} \cup \setst{(\mathbf 1,t}{t \in T}
+\]
+is a generating set for $G\wr_XH$.
+
+On the other hand, it follows from the definition of the wreath product that we have
+\[
+	G\wr_XH=\bigoplus_{Y\textnormal{ is an $H$-orbit}}\bigl(G\wr_YH\bigr).
+\]
+We hence obtain
+%
+%
+\begin{lem}
+The group $G\wr_XH$ is finitely generated if and only if both $G$ and $H$ are finitely generated and $H$ acts on $X$ with finitely many orbits.
+\end{lem}
+%
+%
+Using the above lemma, we could reformulate Theorem~\ref{Thm:Main} in the following way:
+%
+%
+\begin{prop}
+Let $G$, $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts. Suppose that all three of $G$, $H$ and $G\wr_XH$ are finitely generated. Then the wreath product $G\wr_XH$ has property FW if and only if $G$ and $H$ have property FW and $X$ is finite.
+\end{prop}
