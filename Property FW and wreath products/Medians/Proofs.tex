@@ -1,0 +1,575 @@
+%!TEX root = Median.tex
+\label{Section:Median}
+In this section, we will investigate property FW via the action of groups on median graphs.
+In order to ease readability, we will always assume our connected graphs to be non-empty.\footnote{This is coherent with the definition that a connected graph is a graph with exactly one connected component.}
+
+For $u$ and $v$ two vertices of a connected graph $\mathcal G$, we define the total interval $[u,v]$ as the set of vertices that lie on some shortest path between $u$ and $v$.
+A connected graph $\mathcal G$ is \emph{median} if for any three vertices $u$, $v$, $w$, the intersection $[u,v]\cap[v,w]\cap[u,w]$ consists of a unique vertex, denoted $m(u,v,w)$.
+A graph is \emph{median} if each of its connected components is median.
+
+Recall that a group $G$ has property FW if and only if every $G$ action on a connected median graph has bounded orbits.
+
+\todo[inline]{Dire quelque part qu'un groupe $G$ est non-trivial ssi tout action sur un espace métrique (resp, un Hilbert, un arbre, un graphe médian connexe, un espace ultra-métrique) est uniformément bornée.
+
+Pour un Hilbert (et donc un espace métrique), il suffit de prendre $l^2(G)$ est de regarder l'orbite de $n\cdot \delta_g$ qui a diamètre $n\sqrt2$. Pour un arbre (et donc graphe médian connexe), on prend une racine $r$ sur laquelle on colle un rayon infini pour chaque $g\in G$. On obtient un arbre $T$ sur lequel $G$ agit par permutations des rayons. Les orbites sont les $\mathcal L_n=\setst{v}{\textnormal{à distance $n$ de la racine}}$ qui ont diamètre $2n$. Finalement, on peut mettre une ultradistance sur les sommets de $T$ par $d(x,y)=\max(\mathcal L(x),\mathcal L(y),)$. Les orbites sont toujours les $\mathcal L_n$ avec diamètre $n$.}
+
+We begin this section by proving a series of results that will be generalized to a broader context in Section~\ref{Section:Generalizations}.
+The following easy lemma is folklore, and we provide a proof of it only for the sake of completeness.
+\begin{lem}\label{Lemma:Subgroup}
+Let $G$ be a group and $H$ be a finite index subgroup.
+If $H$ has property FW, then so does~$G$.
+\end{lem}
+\begin{proof}
+Suppose that $G$ does not have FW and let $X$ be a connected median graph on which $G$ acts with an unbounded orbit $\orbite$.
+Then $H$ acts on $X$ and $\orbite$ is a union of at most $[G:H]$ orbits. This directly implies that $H$ has an unbounded orbit and therefore does not have FW.
+\end{proof}
+
+We also have the following lemma on semi-direct products:
+\begin{lem}\label{Lemma:Semidirect}
+Let $G=N\rtimes H$ be a semidirect product. Then
+\begin{enumerate}
+\item
+If $G$ has property FW, then so does $H$.
+\item
+If both $N$ and $H$ have property FW, then $G$ also has property FW.
+\end{enumerate}
+\end{lem}
+\begin{proof}
+Suppose that $G$ has FW and let $X$ be a non-empty connected median graph on which $H$ acts.
+Then $G$ acts on $X$ by $g.x\coloneqq h.x$ where $g=nh$ with $n\in N$ and $h\in H$.
+By assumption, the action of $G$ on $X$ has bounded orbits and so does the action of $H$.
+
+On the other hand, suppose that $N$ and $H$ have FW and let $X$ be a non-empty connected median graph on which $G$ acts.
+Then both $N$ and $H$ acts on $X$ with bounded orbits.
+Let $x$ be an element of $X$, $d_1$ the diameter of $H.x$ and $d_2$ the diameter of $N.x$.
+Since $G$ acts by isometries, for every $h$ in $H$ the set $N.(h.x)=Nh.x=hN.x=h.(N.x)$ has also diameter $d_2$.
+Therefore, every element of $G.x=NH.x$ is at distance at most $d_1+d_2$ of $x$, which implies that the orbit $G.x$ is bounded. %, with diameter at most $d_1+2\cdot d_2$.
+\end{proof}
+Multiple applications of Lemma~\ref{Lemma:Semidirect} give us
+\begin{cor}\label{Cor:Wreath}
+Let $G\wr_X H$ be the wreath product of $G$ and $H\curvearrowright X$.
+Then
+\begin{enumerate}
+\item
+If $G\wr_X H$ has property FW, then so does $H$.
+\item
+If $X$ is finite and both $G$ and $H$ have property FW, then $G\wr_X H$ has property FW.
+\end{enumerate}
+\end{cor}
+
+
+
+
+
+
+
+We now turn our attention on results that will rely more on the median structure.
+
+Trees are the simplest examples of median graphs and a simple verification shows that if $X$ and $Y$ are both (connected) median graphs, then their cartesian product is also a (connected) median graph.
+On the other hand, the following example will be fundamental for us.
+%
+%
+\begin{exmp}\label{Ex:MainMedian}
+Let $X$ be a set and let  $\powerset{X}=2^X$ be the set of all subsets of~$X$.
+Define a graph structure on $\powerset{X}$ by putting an edge between $E$ and $F$ if and only if $\#(E\Delta F)=1$, where $\Delta$ is the symmetric difference.
+Therefore, the distance between two subsets $E$ and $F$ is $E\Delta F$ and
+the connected component of $E$ is the set of all subsets $F$ with $E\Delta F$ finite.
+For $E$ and $F$ in the same connected component, $[E,F]$ consist of all subsets of $X$ that both contain $E\cap F$ and are contained in $E\cup F$.
+In particular, $\powerset{X}$ is a median graph, with $m(D,E,F)$ being the set of all elements belonging to at least two of $D$, $E$ and $F$. In other words, $m(D,E,F)=(D\cap E)\cup(D\cap F)\cup(E\cap F)$.
+\end{exmp}
+%
+%
+We denote by $\powersetf{X}$, respectively $\powersetcof{X}$ the set of all finite, respectively cofinite, subsets of $X$.
+They are connected components of $\powerset{X}$, which coincide if and only if $X$ is finite
+
+More generally, the connected components of $\powerset{X}$ are hypercubes and it turns out that every connected median graph is a retract of a connected component of some $\powerset{X}$, see \cite{Bandelt1984}.
+
+These graphs will be fundamental for us due to the following fact.
+Any action of a group $G$ on a set $X$ naturally extends to an action of $G$ on $\powerset{X}$ by graph homomorphisms: $g.\{x_1,\dots,x_n\}=\{g.x_1,\dots,g.x_n\}$.
+Be careful that the action of $G$ on $\powerset{X}$ may exchange the connected components.
+In fact, the connected component of $E\subset X$ is stabilized by $G$ if and only if $E$ is \emph{commensurated} by~$G$, that is if for every $g\in G$ the set $E\Delta gE$ is finite.
+For example, both $\powersetf{X}$ and $\powersetcof{X}$ are always preserved by the action of $G$.
+
+Building on Example~\ref{Ex:MainMedian}, we obtain that no infinite sum of groups has the property FW.
+\begin{lem}\label{Lemma:Sum}
+An infinite direct sum of non-trivial groups does not have FW.
+\end{lem}
+\begin{proof}
+By Lemma~\ref{Lemma:Semidirect} is is enough to prove the assertion for countable sums of groups.
+Let $(G_i)_{i\geq1}$ be non-trivial groups and $G=\bigoplus_{i\geq 1} G_i$.
+Let $X\coloneqq\bigsqcup_{i\geq 1} G_i$.
+There is a natural action of $G$ on $X$: $G_i$ acts by left multiplication on $G_i$ and trivially on $G_j$ for $j\neq i$.
+Therefore, we have an action of $G$ on the median graph $\powerset{X}$.
+Let $\mathbf 1\coloneqq\bigcup_{i\geq 1} 1_{G_i}$ be the subset of $X$ consisting of the identity elements of all the $G_i$.
+Since every element of $G$ has only a finite number of non-trivial coordinates, the action of $G$ preserves the connected components of $\mathbf 1$ (and in fact every connected component of $\powerset{X}$).
+
+For every $i\in \N$, choose a non-trivial $g_i\in G_{i}$.
+Then the orbit of the vertex $\mathbf 1$ contains the point $\{g_1,\dots, g_n\}\cup\bigcup_{i>n} 1_{G_{i}}$ which is at distance $2n$ of~$\mathbf 1$.
+That is the action of $G$ on the connected component of~$\mathbf 1$ has an unbounded orbit.
+%
+%
+%
+%Let $I$ be an infinite set of indices, $(G_i)_{i\in I}$ be non-trivial groups and $G=\bigoplus_{i\in I} G_i$.
+%%We can always suppose that $I$ is countable.
+%Since $I$ is infinite, there exists a countable infinite subset $J\cong\{1,2,\dots\}$ of $I$ and we have $G=\bigoplus_{j\geq 1} G_j\oplus\bigoplus_{i\in I\setminus J} G_i$.
+%Let $X\coloneqq\bigsqcup_{j\geq 1} G_i$.
+%There is a natural action of $G=\bigoplus_{j\geq 1} G_j$ on $X$: the subgroup $G_j$ acts by left multiplication on $G_j$ and trivially on $G_k$ for $k\neq j$. This action naturally extends to an action of $G$, where $\bigoplus_{i\in I\setminus J} G_i$ acts trivially.
+%
+%Therefore, we have an action of $G$ on the median graph $\powerset{X}$.
+%Let $\mathbf 1\coloneqq\bigcup_{j\geq 1} 1_{G_1}$ be the subset of $X$ consisting of the identity elements of all the $G_j$ with $j\in J$.
+%Since every element of $G$ has only a finite number of non-trivial coordinates, the action of $G$ preserves the connected components of $\mathbf 1$ (and in fact every connected component of $\powerset{X}$).
+%
+%%Since $I$ is infinite, it contains an infinite countable subset $I_c=\{i_1,i_2,\dots\}$.
+%For every $j\in \N$, choose a non-trivial $g_j\in G_{j}$.
+%Then the orbit of the vertex $\mathbf 1$ contains the point $\{g_1,\dots, g_n\}\cup\bigcup_{i\notin\{i_1,\dots,i_n\}} 1_{G_{i}}$ which is at distance $2n$ of $\mathbf 1$.
+%That is the action of $G$ on $\powerset{X}$ has an unbounded orbit.
+\end{proof}
+
+As a direct corollary of Lemmas \ref{Lemma:Sum} and \ref{Lemma:Semidirect}, we obtain
+\begin{cor}\label{Cor:Sum}
+Let $G$ be a non-trivial group.
+The group $\otimes_X G$ has property FW if and only if $X$ is finite and $G$ has property FW.
+\end{cor}
+
+
+We also have a converse of Lemma~\ref{Lemma:Subgroup}.
+\begin{lem}\label{Lemma:Subgroup2}
+Let $G$ be a group and $H$ be a finite index subgroup.
+If $G$ has property FW, then so does~$H$.
+\end{lem}
+\begin{proof}
+Suppose that $H$ does not have FW and let $\alpha\colon H\curvearrowright X$ be an action of $H$ on a connected median space such that there is an unbounded orbit $\orbite$.
+Similarly to the classical theory of representation of finite groups, we have the induced  action $\Ind_H^G(\alpha)\colon G \curvearrowright X^{G/H}$ on the connected graph $X^{G/H}$. Since $H$ has finite index, the graph $X^{G/H}$ is median. On the other hand, the subgroup $H\leq G$ acts diagonaly on $X^{G/H}$, which gives us a $H$-equivariant isometric embedding from $H\curvearrowright X$ to $H\curvearrowright X^{G/H}$.
+This embedding sends $\orbite$ to an unbounded $H$-orbit on $X^{G/H}$, which implies that $G$ does not have FW.
+
+For readers that are not familiar with representations of finite groups, here is the above argument in more details.
+Let $(f_i)_{i=1}^n$ be a transversal for $G/H$.
+The natural action of $G$ on $G/H$ gives rise to an action of $G$ on $\{1,\dots,n\}$.
+Hence, for any $g$ in $G$ and $i$ in $\{1,\dots,n\}$ there exists a unique $h_{g,i}$ in $H$ such that $gf_i=f_{g.i}h_{g,i}$. That is, $h_{g,i}=gf_if_{g.i}^{-1}$.
+We then define $g.(x_1,\dots,x_n)\coloneqq(h_{g,g^{-1}.1}.x_{g^{-1}.1},\dots,h_{g,g^{-1}.n}.x_{g^{-1}.n})$. This is indeed an action, which preserves the graph structure of $X^{G/H}$ and such that every element $h\in H$ acts diagonally by $h.(x_1,\dots,x_n)=(h.x_1,\dots,h.x_n)$.
+In particular, this $G$ action has an unbounded orbit.
+\end{proof}
+
+
+
+
+
+
+
+We finally characterize which wreath products do have property FW, and hence provide a proof of Theorem~\ref{Thm:Main}.
+\begin{prop}\label{Prop:Median}
+Let $G$, $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts. The wreath product $G \wr_X H$ has property FW if and only if $G$ and $H$ have property FW and $X$ is finite.
+\end{prop}
+\begin{proof}
+In view of Corollary~\ref{Cor:Wreath} it remains to show that if $G\wr_X H$ has FW, then $G$ has FW and $X$ is finite.
+
+Firstly, suppose that $X$ is infinite.
+As in Lemma~\ref{Lemma:Sum}, the group $\bigoplus_XG$ acts coordinatewise on  $\bigsqcup_XG$. On the other hand, $H$ acts on $\bigsqcup_XG$ by permutation of the factors.
+Altogether we have an action of $G\wr_XH$ on $\bigsqcup_XG$ and hence on the median graph $\powerset{\bigsqcup_XG}$.
+Let $\mathbf 1\coloneqq\bigcup_{x\in X} 1_{G}$ be the subset of $\powerset{\bigsqcup_XG}$ consisting of the identity elements of all the copies of $G$.
+As in Lemma~\ref{Lemma:Sum} we have that the action of $G\wr_XH$ on $\powerset{\bigsqcup_XG}$ preserves the connected component of $\mathbf 1$
+and that the orbit of $\mathbf 1$ is unbounded.
+
+It remains to treat the case of $X$ finite and such that $G$ does not have FW.
+Let $Y$ be a connected median graph on which $G$ acts with an unbounded orbit $G.y$.
+Then $Y^X$ is also a connected median graph, on which $G\wr_XH$ acts by
+\[
+((\varphi,h).\psi)(x)=\varphi(h^{-1}.x)\psi(h^{-1}.x),
+\]
+which is known as the \emph{primitive wreath action} of $G\wr_XH$.
+On the other hand, $G.y$ embeds diagonally into $Y^X$.
+Indeed, let $\varphi_g$ be the constant function equal to $g$ and $\psi_y$ the constant function equal to $y$. Then $(\varphi_g,h).\psi_y=\psi_{g.y}$ for any $h\in H$.
+By definition of the graph distance, we have $d_{Y^X}(\psi_y,\psi_{g.y})=d_Y(y,g.y)^{\abs X}$, which is unbounded.
+
+%Then $G\wr_X H$ acts on the connected median graph $Y\times \powersetf{X}$ by
+%\todo[inline]{This is NOT a graph action. Indeed, the edge $(y,\{t\})-(y,\emptyset)$ is send by $(\varphi,h)$ to the two non connected vertices $(\varphi(h.t).y,h.t)$ and $(y,\emptyset)$.}
+%\[
+%	\bigl(\phi,h\bigr).(y,E)=
+%	\begin{cases}
+%	(\phi(h.t).y,h.\{t\})&\textnormal{if $E=\{t\}$}\\
+%	(y,h.E)&\textnormal{if $E$ is not a singleton.}
+%	\end{cases}
+%\]
+%Since $\{g.y\}_{g\in G}$ is unbounded, so is $\{g.y,\{x\}\}_{g\in G}$.
+%In particular, the orbit of $(y,\{x\})$, which contains
+%\[
+%	\{(\delta_{x}^g,1).(y,\{x\})=(g.y,\{x\})\,|\,g\in G\},
+%\]
+%is unbounded and $G\wr_X H$ does not have FW.
+%
+%The orbit of $(y,\{x\})$ is unbounded for every $x\in X$, which implies that $G\wr_X H$ does not have FW.
+%Indeed, this orbit contains
+%\[
+%	\{(\delta_{x}^g,1).(y,\{x\})=(g.y,\{x\})\,|\,g\in G\},
+%\]
+%where $\delta_{x}^g(x)=g$ and $\delta_{x}^g(z)=1$ if $z\neq x$.
+%Since $\{g.y\}_{g\in G}$ is unbounded, so is $\{g.y,\{x\}\}_{g\in G}$.
+\end{proof}
+
+\begin{rem}\label{Rem:Actions}
+A reader familiar with wreath products might have recognized that we also used the primitive wreath action in the proof of the first part of Proposition~\ref{Prop:Median}.
+
+%On one hand, since $H$ acts on $X$, it acts on $\powersetf{X}$.
+%Hence, for every $G$ action on $Y$ we have the imprimitive action of $G\wr_{\powersetf{X}} H$ on $Y\times \powersetf{X}$, which can be restricted to an action of the subgroup $G\wr_{X} H\leq G\wr_{\powersetf{X}} H$.
+
+Indeed, $G$ acts on itself by left multiplication.
+It hence acts on the set $G'\coloneqq G\sqcup\{\varepsilon\}$ by fixing $\varepsilon$.
+We hence have the primitive action of $G\wr_{X} H$ on $G'^X$.
+Now, the set $\bigsqcup_XG$ naturally embeds as the subset of $G'^X$ consisting of all functions $\phi\colon X\to G'$ such that $\phi(x)=\varepsilon$ for all but one $x\in X$.
+This subset is $G\wr_{X} H$ invariant, which gives us the desired action of $G\wr_{X} H$ on $\bigsqcup_XG$.
+\end{rem}
+
+
+
+
+\section{Related concepts and generalizations}\label{Section:Generalizations}
+%This short section is devoted to generalize some of the results of Section~\ref{Section:Median}, as well as to present some properties related to property FW. Indeed, property FW does not stand alone and there are other similar properties that are of great interest, see Definition~\ref{Def:FHFA}.
+
+The aim of this section is to give a glimpse of some properties related to the FW property as well as to provide a general framework to study them.
+We will sometimes only sketch the arguments and let the reader verify all the details for its favorite property.
+In all such places, the assertions will be preceded by the prefix ``meta''.
+
+Property FW is not isolated in the realm of group properties and other similar properties of great interest can also be defined in terms of action with bounded orbits.
+\todo[inline]{Add refs}
+\begin{defn}\label{Def:FHFA}
+Let $G$ be a group.
+It is said to have \emph{property SB} if any action on a metric space has bounded orbits.
+It has \emph{property FH} if any action on a real Hilbert space has bounded orbits and \emph{property FA} if any action on a tree has bounded orbits.
+Finally, $G$ is said to have (cofinality $\neq\omega$) if any action on an ultrametric space has bounded orbits.
+\end{defn}
+For countable groups (and more generally for $\sigma$-compact locally compact groups), property FH is equivalent to the celebrated Kazdhan's property (T) by the Delorme-Guichardet theorem, see for example \cite{MR2415834}, but this is not true in general \cite{MR2240370}.
+\todo[inline]{Maybe expand a little more.}
+The names\todo{Give refs} FH, FW and FA come from the fact that these properties admit a description in terms of existence of a Fixed point for actions on Hilbert spaces, on spaces with Walls and on trees (\emph{Arbres} in french).
+On the other hand, SB stands for Strongly Bounded and is sometimes called the Bergman property.
+Finally, a group has cofinality $\neq\omega$ if and only if it cannot be written has an increasing union of proper subgroups.
+
+We have the following strict implications \cite{MR1432323,MR0476875 ,MR3299841,2013arXiv1302.5982C}
+\[
+\textnormal{SB}\implies \textnormal{FH}\implies \textnormal{FW}\implies \textnormal{FA}\implies(\textnormal{cofinality}\neq\omega).
+\]
+
+It is possible to define other properties in the spirit of Definition~\ref{Def:FHFA}.
+\begin{defn}
+Let P be a property of metric spaces (for example \emph{be a connected median graph}) and BP be the group property: \emph{Every $G$-action on a space with P has bounded orbits}, where a $G$-action is supposed to ``preserve the P-structure''.
+\end{defn}
+The proofs of Lemmas \ref{Lemma:Subgroup} and \ref{Lemma:Semidirect} and Corollary \ref{Cor:Wreath} remain true for groups with property BP and we obtain.
+\begin{prop}\label{Prop:BP}
+Let P be a property of metric spaces.
+\begin{enumerate}
+\item 
+If a group $G$ has a finite index subgroup with property BP, then $G$ has property BP.
+\item
+If $N\rtimes H$ has property BP, then so does $H$.\label{item:2}
+\item
+If both $N$ and $H$ have property BP, then $N\rtimes H$ also has property BP.
+\item
+If $G\wr_X H$ has property BP, then so does $H$.
+\item
+If $X$ is finite and both $G$ and $H$ have property BP, then $G\wr_X H$ has property~BP.
+\end{enumerate}
+\end{prop}
+
+
+%Moreover, Lemma~\ref{Lemma:Sum}, Corollary~\ref{Cor:Sum}, as well as the part of Proposition~\ref{Prop:Median} saying that $G\wr_XH$ does not have $BP$ if $X$ is infinite, hold for properties that are stronger than property FW.
+
+
+
+On the other hand, the other results of Section~\ref{Section:Median} require a specific construction and do not generalize straightforward to groups with property BP.
+Nevertheless, it is possible to extract the main ingredients of the proofs given in Section~\ref{Section:Median} and to adapt them to some specific cases.
+We will now give a raw outline of this process, but let the details to the interested reader.
+
+In order to generalize Example~\ref{Ex:MainMedian}, we will need to construct from a $G$ action on a set $X$ a $G$ action on a P-space $K(X)$,
+such that $X$ embeds $G$-equivariently into $K(X)$.
+%This will usually be done via a functor $F$ from the category of $G$-spaces to the category of $G$-$P$-spaces.
+%More precisely, we say that it is \emph{possible to extend $G$ actions to P-spaces} if there is a $G$-equivariant map $i$ that associate to every $G$-set $X$ a P-space $Y$ endowed with a $G$ action and a $G$-equivariant map $\iota\colon X\hookrightarrow Y$.
+For median graphs we took $K(X)=\powerset{X}$ in Example~\ref{Ex:MainMedian}, and then carefully choose some connected component of it.
+Since median graphs are example of metric spaces, it is also possible to take $K(X)=\powerset{X}$ for property SB.
+For Hilbert spaces, one can take $K(X)=\ell^2(X)$ to be the real Hilbert space generated by $X$, see Example~\ref{Expl:Hilbert}.
+%For real Hilbert spaces it is possible to take $F(X)$ to be the real Hilbert space generated by $X$. That is, 
+%\[F(X)=\ell^2(X)=\bigg\{f\colon X\to \mathbf R\,\bigg|\, \sum_{x\in X}f(x)^2<\infty\bigg\},\]
+%where $G$ acts by permutation and $X$ embeds into $\ell^2(X)$ by mapping $x$ to the Dirac function $\delta_x$.
+%For property SB\todo{Rewrite ?}, we can take $F(X)$ to be  $\powerset{X}$ or $\ell^2(X)$, as well as many other possibilities.
+In the context of trees and ultrametric spaces, we do not know any interesting\footnote{An example of an \emph{unintersting} construction is the discret metric which turns any set $X$ into an ultrametric space, but of diameter $1$.} general constructions.
+However, for direct sums of groups $G=\bigoplus_i G_i$ they are canonical trees and ultrametric spaces on which $G$ acts, see Examples~\ref{Expl:Forest} and~\ref{Expl:Ultra}.
+%Finally, for ultrametric spaces it is always possible to take $F(X)=X$ with the discrete metric, however this will not be useful in practice as any action on it has bounded orbits.
+\begin{exmp}\label{Expl:Hilbert}
+Let $G$ be a group acting on a set $X$.
+Let $\ell^2(X)$ be the real Hilbert space generated by $X$. That is,
+\[\ell^2(X)=\bigg\{f\colon X\to \mathbf R\,\bigg|\, \sum_{x\in X}f(x)^2<\infty\bigg\}.\]
+Then $G$ acts on $\ell^2(X)$ by permutations of the element of the basis: $g.\delta_x=\delta_{g.x}$, where $\delta_x$ is the Dirac mass at $x$.
+Moreover, the map $x\mapsto \delta_x$ is a  $G$-equivariant embedding of $X$ into $\ell^2(X)$.
+\end{exmp}
+
+
+
+%We will prove the analogous of Lemma~\ref{Lemma:Sum} and Corollary~\ref{Cor:Sum} for property FA.
+%In order to do that we will rely on the following example.
+\begin{exmp}\label{Expl:Forest}
+Let $(G_i)_{i\geq 1}$ be non-trivial groups and let $\varepsilon$ denotes an element not in any of the $G_i$.
+Define 
+\[F=F((G_i)_{i\geq 1})\coloneqq\{f=(f_1,f_2,\dots)\ |\ \exists n\forall j<n: f_j=\varepsilon\textnormal{ and }\forall k\geq n: f_k\in G_k \}.\]
+The integer $n$ in the above definition is called the \emph{level} of the sequence $f$.
+We now define a graph structure on the set $F$, viewed as the set of vertices.
+We put an edge between  two vertices $f$ and $g$ if one of them is of level $n$, the other is of level $n+1$ and $f_i=g_i$ for $i>n$.
+If $f\in F$ has level $n$, then it has one neighbourhood of level $n+1$, $\abs{G_{n-1}}$ neighbourhoods of level $n-1$ and no neighbourhoods of other levels.
+This implies that $F$ is a forest.
+The group $G\coloneqq\bigoplus_{i\geq 1}G_i$ acts on $F$ by $(g_1,g_2,\dots).(f_1,f_2,\dots)=(g_1f_1,g_2f_2,\dots)$ with the convention that $G_i.\varepsilon=\varepsilon$ for any $i$.
+It is trivial that this action preserves the graph structure on $Y$.
+\end{exmp}
+The space $F=F((G_i)_{i\geq 1})$ is not new to us. Indeed, it can naturally be seen as a subset of $\powerset{\bigsqcup_{i\geq i}G_i}$ by %sending the sequence $(f_1,f_2,\dots)$ to the set $\{f_i\ |\ f_i\neq\varepsilon\}$.
+$\alpha\colon (f_1,f_2,\dots)\mapsto \{f_i\ |\ f_i\neq\varepsilon\}$.
+Under this identification, which is $G$-equivariant, $F$ is a subgraph of $\powerset{\bigsqcup_{i\geq i}G_i}$ and we have $d(\alpha(f),\alpha(g))\leq d(f,g)$.
+% However, the description of $Y$ in term of ordered sequences is easier to deal with and we will stick to it in what follow.
+%Observe that the above example can be generalized to direct sums $\bigoplus_{i\in I}G_i$ over any infinite set $I$ endowed with a total order.
+
+\begin{exmp}\label{Expl:Ultra}
+Let $(G_i)_{i\geq 1}$ be non-trivial groups and let $G\coloneqq\bigoplus_{i\geq 1}G_i$.
+%define 
+%\[Z=Z((G_i)_{i\geq 1})\coloneqq\{f=(f_1,f_2,\dots)\ |\forall i: f_i\in G_i,\forall^\infty j:f_j=1_{G_1} \},\]
+%where the quantifier $\forall^\infty j$ means ``for all but finitely many $j$''.
+Define a distance $d_\infty$ on $G$ by $d_\infty(f,g)\coloneqq\max\{i\ |\ f(i)\neq g(i)\}$.
+%\[
+%d_\infty(f,g)\coloneqq\sum_{i:f_i\neq g_i}i.
+%\]
+Since the elements $f$ and $g$ agree on all but finitely many indices, the maximum is attained. On the other hand it is trivial that $d_\infty(f,g)=0$ if and only if $f=g$ and that $d$ is symmetric.
+Finally, if $f,g,k$ are in $G$ we have $d_\infty(f,g)\leq\max\{d_\infty(f,k),d_\infty(k,g)\}$ and hence $(G,d_\infty)$ is an ultrametric space.
+The action by left translation of the group $G$  on itself preserves the distance $d_\infty$.
+%$Y=Y((G_i)_{i\geq 1})$ be the forest constructed in Example~\ref{Expl:Forest}.
+%Let $Z=Z((G_i)_{i\geq 1})$ consists of the vertices of level $1$ that are in the same connected components of $\mathbf 1=(1_{G_1},1_{G_2},\dots)$ and let $d_Z$ denotes the distance in .
+\end{exmp}
+Once again, the space $(G,d_\infty)$ is not new.
+Indeed, the map $\beta\colon f\mapsto \{f(i)\ |\ i\in\N\}$ is a $G$-equivariant embedding of $G$ into the set of vertices of level $1$ of $F((G_i)_{i\geq 1})$ and we have $d(\beta(f),\beta(g))=2d_\infty(f,g)$.
+
+We obtains the following ``meta''-result\todo{Maybe rename ``Lemma'' into ``Meta-lemma'' and so on.}
+\begin{lem}\label{lem:SumFA}
+Let $P$ be a property of spaces such that a group with property BP has cofinality $\neq \omega$.
+Then
+\begin{enumerate}
+\item
+An infinite direct sum of non-trivial groups does not have property BP.
+\item
+If  $G$ is a non-trivial group, then 
+the group $\otimes_X G$ has property BP if and only if $X$ is finite and $G$ has property BP.
+\item
+If $G\wr_XH$ has property BP, then $H$ acts on $X$ with finitely many orbits.
+\end{enumerate}
+\end{lem}
+\begin{proof}
+%The analogous of Lemma~\ref{Lemma:Semidirect} holds for property P.
+1. By the second assertion of Proposition~\ref{Prop:BP}, it only remains to show that a countable sum of non-trivial groups does not have BP.
+But this directly follows from the fact that a countable sum of non-trivial groups does not have cofinality $\neq \omega$.
+Let $G=\bigoplus_{i\geq 1} G_i$ be a direct sum of non-trivial groups.
+It is trivial that $G$ can be written as an increasing union of propers subgroups and hence has countable cofinality.
+However, we find enlightening to give another proof of this fact using action on ultrametric spaces.
+Let $1_G=(1_{G_1},1_{G_2},\dots)$ be the identity element of $G$.
+%Since every element of $G$ has only a finite number of non-trivial coordinates, the action of $G$ preserves the connected components of $\mathbf 1$ (and in fact every connected component of $Y$).
+For every $i\in \N$, choose a non-trivial $g_i\in G_i$.
+Then for every $n$, the orbit of the vertex $1_G$ contains the point $\{g_1,\dots, g_n,1_{G_{n+1}},\dots\}$, which is at distance $n$ of~$1_G$, and is hence unbounded.
+
+2. This is a direct consequence of 1. and of the third assertion of Proposition~\ref{Prop:BP}.
+
+3. This follows from 1. and from the fact that 
+\[G\wr_XH=\bigoplus_{Y \textnormal{ is an $H$-orbit}}G\wr_YH.\]
+\end{proof}
+As a direct consequence of  Proposition \ref{Prop:Median}, we have
+%We also obtain the following ``meta-proposition''
+\begin{lem}\label{Lemma:Tree}
+Let $P$ be a property of spaces such that property BP implies property FW and let $G$ be a non-trivial group.
+%Let $G\wr_X H$ be the wreath product of $G$ and $H\curvearrowright X$ with $G$ non-trivial.
+If $G\wr_X H$ has property BP, then $X$ is finite.
+%Then
+%\begin{enumerate}
+%\item
+%If $G\wr_X H$ has property BP, then $H$ has property BP and $X$ is finite.
+%\item
+%If $X$ is finite and both $G$ and $H$ have property BP, then $G\wr_X H$ has property~BP.
+%\end{enumerate}
+\end{lem}
+%\begin{proof}
+%The second assertion and half of the first assertion are the analogous of Corollary~\ref{Cor:Wreath}, which holds for any property P.
+%
+%It remains to show that if $G\wr_X H$ has property BP then $X$ is finite.
+%This is a direct consequence of  Proposition \ref{Prop:Median}.%Which is equivalent to prove that for infinite $X$ the group $G\wr_X H$ does not have FA.
+%The proof is similar to the proof of the second part of Proposition \ref{Prop:Median} and rely on the fact that $G\wr_X H$ acts on $Y=(G_{x\in X})$.
+%The action of $\bigoplus_{x\in X}G$ is as in Example~\ref{Expl:Forest}, while $H$ acts by permutation.
+%\end{proof}
+
+In the above lemma, it is not possible to replace property FW by property FA, as demonstrated by Theorem \ref{Thm:CornulierKar}.
+%It would be nice to have the same kind of results, but with property FA or cofinality $\neq \omega$ in place of property FW.
+The reason for this fact is that even if, for countable $X$, the group $G\wr_X H$ naturally acts on the ultrametric space $(\bigoplus_X G, d_\infty)$ and on connected components of the forest $F((G_x)_{x\in X})$, these actions are not by isometries.
+
+%\begin{prop}\label{Prop:Tree}
+%Let $P$ be a property of spaces such that a group with property BP has cofinality $\neq \omega$.
+%Let $G\wr_X H$ be the wreath product of $G$ and $H\curvearrowright X$ with $G$ non-trivial.
+%Then
+%\begin{enumerate}
+%\item
+%If $G\wr_X H$ has property BP, then $H$ has property BP.
+%\item
+%If $X$ is finite and both $G$ and $H$ have property BP, then $G\wr_X H$ has property~BP.
+%\item
+%If $G\wr_X H$ has property BP, then $X$ does not have a countably infinite $H$-invariant subset. In particular, $X$ is either finite or uncountable.
+%\end{enumerate}
+%\end{prop}
+%\begin{proof}
+%The first and the second assertions are the analogous of Corollary~\ref{Cor:Wreath}, which holds for any property P.
+%
+%It remains to show the last assertion for the property cofinilaty $\neq\omega$.
+%Suppose that $Y\subset X$ is a countably infinite invariant subset.
+%Then $\bigoplus_{x\in Y}G$ is an ultrametric space on which $G$ acts by left multiplication and $H$ by permutation of the indices.
+%That is, $G\wr_Y H$ acts on $G=\bigoplus_{x\in Y}G$ and the orbit of $1_G$ is unbounded.
+%This implies that $G\wr_Y H$ has countable cofinality and that the sameis true of $G\wr_X H$ by Lemma~\ref{Lemma:Semidirect}.
+%%While the proof is similar to the proof of the second part of Proposition~\ref{Prop:Median}, there is a small subtility on the the size of the orbits.
+%%Since the analogous of Lemma~\ref{Lemma:Semidirect} holds, if $G\wr_X H$ has property BP, then $G\wr_Y H$ has property BP for any $H$-orbit $Y\subset X$.
+%%For $Y$ a
+%%
+%% and rely on the fact that $G\wr_X H$ acts on $\bigoplus_{x\in X}G$.
+%%The action of $\bigoplus_{x\in X}G$ is by left multiplication, while $H$ acts by permutation.
+%\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In order to generalize Lemma~\ref{Lemma:Subgroup2}, we only need that given a P-space $(X,d_X)$, the square $(X\times X,d_{X\times X})$ is a P-space such that for any unbounded set $\orbite\subset X$ the set $\{(x,x)\ |\ x\in\orbite\}$ is unbounded.
+
+Observe that the distance that we put on $X\times Y$ depend on the property~P.
+For example, for graphs we take $d_1((x,y),(x',y'))=d_X(x,x')+d_Y(y,y')$, for Hilbert spaces we take $d_2((x,y),(x',y'))=(d_X(x,x')^2+d_Y(y,y')^2)^{\frac12}$ while for ultrametric spaces we take $d_\infty((x,y),(x',y'))=\max\{d_X(x,x'),d_Y(y,y')\}$.
+However, all these distances (and more generally the distance $d_p=(d_X^p+d_Y^p)^{\frac1p}$ for $p\in[1,\infty]$) satisfy the fact that if $\orbite \subset X$ is unbounded so %are $\orbite\times \{y\}\subset X\times Y$ and 
+is $\{(x,x)\ |\ x\in\orbite\}\subset X\times X$. We will say that such a distance on $X\times Y$ \emph{preserves unboundedness}.
+
+%a product of two P-spaces is still a P-space.
+%More precisely, given two actions $G_i\curvearrowright P_i$, $i=1,2$, of groups on P-spaces we would like to have a natural action of $G_1\times G_2$ on some P-space $P_3$ containing $G_.
+On one hand, we have that metric spaces, ultra-metric spaces and Hilbert spaces are closed under products (the direct sum $\mathcal H_1\oplus\mathcal H_2$ for Hilbert spaces) and hence Lemma~\ref{Lemma:Subgroup2} apply to them.
+On the other hand, for trees there is two natural candidats on which $G_1\times G_2$ acts: the cartesian product $T_1\times T_2$ or the tensor product $T_1\otimes T_2$\footnote{The distance on $T_1\otimes T_2$ is given by $d_\otimes((x,y),(x',y'))=d_{T_1}(x,x')=d_{T_2}(y,y')$ if the distances are equal and $\infty$ (that is $(x,y)$ and $(x',y')$ are not in the same connected component) otherwise. }, but none of them are trees ($T_1\times T_2$ has cycles while $T_1\otimes T_2$ is not connected).
+
+\begin{lem}\label{Lemma:Product}
+Let $P$ be a property of spaces.
+Suppose that for every $P$ space $(X,d_X)$, the $n$\textsuperscript{th} power $(X^n,d_{X^n})$ is a P-space such that $d_{X^n}$ preserves unboundedness. 
+
+Let $G\wr_X H$ be the wreath product of $G$ and $H\curvearrowright X$.
+If $X$ is finite and $G\wr_X H$ has property BP, then so does $G$.
+\end{lem}
+\begin{proof}
+The proof is similar to the second part of the proof of Propostion~\ref{Prop:Median} and is let to the reader.
+\end{proof}
+
+
+
+
+
+%and that in the class of P-spaces the following hold: for any $G$-space $Y$ and any $H$-space $X$ we have a natural action of $G\wr_XH$ on $Y\times K(X)$. Then if $G\wr_X H$ has BP, so does $G$. This is the first part of Proposition~\ref{Prop:Median} and the same argument works.
+%We now explicit for Hilbert spaces the action of $G\wr_XH$ on $Y\times\ell^2(X)$.
+%\begin{lem}
+%Let $\mathcal H$ be an Hilbert space with an isometric $G$-action and $X$ be a set with an $H$-action.
+%Then $G\wr_XH$ acts isometrically on the Hilbert space $\mathcal H\oplus \ell^2(X)$ by\todo{Check this}
+%\todo[inline]{Does not preserve the scalar product!}
+%\[
+%	\bigl(\phi,h\bigr).(y,f)=
+%	\begin{cases}
+%	(\phi(h.x).y,\delta_{h.x})&\textnormal{if $f=\delta_x$}\\
+%	(y,h.f)&\textnormal{if $f\neq\delta_x$.}
+%	\end{cases}
+%\]
+%In particular, if $G\curvearrowright \mathcal H$ has an unbounded orbit, so does $G\wr_XH\curvearrowright\mathcal H\oplus \ell^2(X)$.
+%\end{lem}
+
+By combining Proposition~\ref{Prop:BP} and Lemmas~\ref{Lemma:Tree} and~\ref{Lemma:Product} we recover the analogous of Propostion~\ref{Prop:Median} for properties FH and SB.\todo{Check si on peut enlever discret, + mettre réfs.}
+\begin{prop}
+Let $G$, $H$ be two discrete groups with $G$ non-trivial and $X$ a set on which $H$ acts. The wreath product $G \wr_X H$ has the property FH if and only if $G$ and $H$ have the property FH and $X$ is finite.
+\end{prop}
+%\todo[inline]{Regarder si on peut enlever groupe discret et ne pas passer par le résultat pour (T)}
+%The proof is a direct application of the equivalence of the properties (FH) and (T) for discrete groups (see \cite{Bekka2008}) and of the Theorem \ref{T:Wreath_prop_T} .
+%
+%It also follows from the above discussion that we have
+\begin{prop}
+Let $G$, $H$ be two discrete groups with $G$ non-trivial and $X$ a set on which $H$ acts. The wreath product $G \wr_X H$ has the property SB if and only if $G$ and $H$ have the property SB and $X$ is finite.
+\end{prop}
+%
+%
+With a little more work, we obtain
+\begin{thm}\label{Thm:Cof}
+Let $G$, $H$ be two discrete groups with $G$ non-trivial and $X$ a set on which $H$ acts.
+Then $G\wr_X H$ has cofinality $\neq\omega$, if and only if $G$ and $H$ have cofinality $\neq\omega$ and $H$ acts on $X$ with finitely many orbits.
+\end{thm}
+\begin{proof}
+In only remains to prove two things. First, that if $G\wr_X H$ has cofinality $\neq\omega$, then so does $G$. And secondly, that if both $G$ and $H$ have cofinality $\neq\omega$ and $H$ acts transitively on $X$, then $G\wr_X H$ has cofinality $\neq\omega$.
+
+Firstly, let us suppose that $G$ has countable cofinality. We will prove that $G\wr_X H$ also has countable cofinality.
+Since $G$ has countable cofinality, there exists a $G$-invariant ultrametric $d$ on $G$.
+We have the primitive action of $G\wr_XH$ on $G^X\cong \prod_XG$ which preserves the subgroup $K\coloneqq\bigotimes_XG$.
+Define $d_\infty$ on $K\times K$ by putting $d_\infty(\varphi_1,\varphi_2)\coloneqq\max\{d(\varphi_1(x),\varphi_2(x))\ |\ x\in X\}$.
+Using that $d$ is a $G$-invariant ultrametric on $G$, we obtain that $d_\infty$ is an ultrametric on $K$, which is $G\wr_XH$ invariant.
+Let $x_0$ be an element of $X$. Then we have a $G$-equivariant isometric embedding of $G$ into $K$ by sending $g$ to $\delta_{x_0}^g$.
+%\[
+%y\mapsto
+%\begin{cases}
+%g& \textnormal{if } y=x_0,\\
+%1& \textnormal{otherwise.}
+%\end{cases}
+%\]
+
+Now, suppose that both $G$ and $H$ have cofinality $\neq\omega$ and that $H$ acts transitively on $X$.
+Suppose that $G\wr_XH$ can be written as an increasing union $\bigcup_{i\geq 1} K_i$ of subgroups. We have to prove that for $i$ big enough $K_i=G\wr_XH$.
+Let $H_i\coloneqq H\cap K_i$. Then $H=\bigcup_{i\geq 1} H_i$ and there exists $N$ such that for $i\geq N$ we have $H=H_i$.
+Similarly, for $x_0\in X$ let $F_i\coloneqq G_{x_0}\cap K_i$, where $G_{x_0}$ is the copy of $G$ in position $x_0$.
+Then there exists $M$ such that for $i\geq M$ we have $F_i=G_{x_0}$.
+Hence, for $i\geq \max\{M,N\}$ we have $K_i\geq G\wr_{H.x_0}H=G\wr_XH$.
+%Let $(Y,d)$ be an ultrametric space on which $G\wr_XH$ acts and let $x_0$ be an element of $X$.
+%We hence have an action of $H$ and of $G_{x_0}$ (the copy of $G$ in position $x_0$ in $\bigoplus_XG$) on $Y$, both with bounded orbits.
+%Let $y$ be an element of $Y$ and denote by $K$ the direct sum $\bigoplus_XG$. We will show that the $G\wr_XH$ orbit of $y$ is bounded.
+%First of all, we have
+%\begin{align*}
+%d(y,(\varphi,h).y)&\leq\max\{d(y,(\varphi,1).y), d((\varphi,1).y,(\varphi,h).y)\}\\
+%&=\max\{d(y,(\varphi,1).y), d(y,(1,h).y)\}.
+%\end{align*}
+%Since the orbit of $y$ under the action of $H$ is bounded, it remains to show that it is bounded under the action of $K$.
+%Any element $\varphi$ of $K$ can be decomposed into a finite product of functions $\delta_x^{\varphi(x)}$.
+%Since $H$ acts transitively on $X$, for any $x$ there exists $h_x$ sending $x_0$ to $x$. Hence, we have $(\delta_x^{\varphi(x)},1)=(1,h_x)(\delta_{x_0}^{\varphi(x)},1)(1,h_x^{-1})$.
+%
+%????
+\end{proof}
+
+
+Finally, we also have the following partial result
+\begin{prop}\label{Prop:WRTree}
+Let $G$, $H$ be two discrete groups with $G$ non-trivial and $X$ a set on which $H$ acts.
+Then
+\begin{enumerate}
+\item
+If $G\wr_X H$ has property FA, then $H$ has property FA and acts on $X$ with finitely many orbits.
+%\item
+%If $G\wr_X H$ has property FA and $X$ is finite, then $G$ has Property FA.
+\item
+If $X$ is finite and both $G$ and $H$ have property FA, then $G\wr_X H$ has property~FA.
+\end{enumerate}
+\end{prop}
+
+
+The following more precise version of Proposition~\ref{Prop:WRTree}  was obtained by Cornulier and Kar.
+\begin{thm}[\cite{Cornulier2011}]\label{Thm:CornulierKar}
+Let $G$, $H$ be two discrete groups with $G$ non-trivial and $X$ a set on which $H$ acts with a finite number of orbits and no fixed point. Then the wreath product $G \wr_X H$ has the property FA if and only if $H$ has the property FA and if $G$ is a group with a finite abelianization, which cannot be expressed as an union of a proper increasing sequence of subgroups.
+\end{thm}
+Observe that, by the characterization of Serre~\cite{MR0476875}, a finitely generated group with property FA has finite abelianization and cannot be expressed as an union of a proper increasing sequence of subgroups.
+%\todo[inline]{regarder si c'est plus fort que $H$ possède la propriété (FA) et le lien avec le cardinal de $X$}
+
+\todo[inline]{Regarder le cas PW, Haagerup,... i.e. action propre. Rappel: une action isométrique de $G$ est propre si pour tout $x$ (de manière équivalente il existe $x$), pour tout $r\in \mathbf R$ l'ensemble $\{g\in G\,|\,d(x,g.x)\}$ est fini.}
