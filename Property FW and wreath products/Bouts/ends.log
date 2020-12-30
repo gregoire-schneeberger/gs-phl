@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  30 DEC 2020 15:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  30 DEC 2020 15:56
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -926,20 +926,7 @@ LaTeX Warning: Marginpar on page 4 moved.
 
 [4 <./Images/ends-figure2.pdf>]) (./Proof.tex [5]
 (./graphes/path_semidirect_ends.tex
-\openout3 = `Images/ends-figure3.md5'.
-
-\openout3 = `ends.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "Images/ends-figure3" "\def\tikzexterna
-lrealjob{ends}\input{ends}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "Images/ends-figure3" "\def\tikzexternalrealjob{ends}\input{ends}")...executed
-.
-
-\openout3 = `ends.auxlock'.
-
+===== Image 'Images/ends-figure3' is up-to-date. ======
 ) [6 <./Images/ends-figure3.pdf>] (./graphes/leaves_structure_schreier.tex
 ===== Image 'Images/ends-figure4' is up-to-date. ======
 )
@@ -962,18 +949,18 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
  ) 
 Here is how much of TeX's memory you used:
- 24198 strings out of 480893
- 442330 string characters out of 5908067
- 721488 words of memory out of 5000000
- 39241 multiletter control sequences out of 15000+600000
+ 24203 strings out of 480893
+ 442427 string characters out of 5908067
+ 721589 words of memory out of 5000000
+ 39245 multiletter control sequences out of 15000+600000
  620444 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,9n,83p,1003b,807s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,9n,83p,1003b,945s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
 texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/20
 20/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2020/texmf-d
-ist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2020/texmf-dist/fonts/
-enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/l
+ist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/
+dvips/lm/lm-mathit.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/l
 m/lmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.p
 fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/lo
 cal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive
@@ -981,26 +968,24 @@ cal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive
 f-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2020/texmf-dist/fon
 ts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
 blic/lm/lmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmm
-i8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></us
-r/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/tex
-live/2020/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2020/t
-exmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2020/texmf-dist/f
-onts/type1/public/lm/lmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/p
-ublic/lm/lmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr
-7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/
-local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texliv
-e/2020/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2020/tex
-mf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2020/texmf-dist/fon
-ts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/p
-ublic/lm/lmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lm
-sy6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></u
-sr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/te
-xlive/2020/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2020/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ends.pdf (9 pages, 414562 bytes).
+i9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr10.pfb></us
+r/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2020/t
+exmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2020/texmf-dist/fo
+nts/type1/public/lm/lmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
+blic/lm/lmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr8
+.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2020/texmf-dist/fo
+nts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/p
+ublic/lm/lmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lm
+sy9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols
+/msbm10.pfb>
+Output written on ends.pdf (9 pages, 407998 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
- 288 compressed objects within 3 object streams
- 57 named destinations out of 1000 (max. 500000)
+ 336 PDF objects out of 1000 (max. 8388607)
+ 277 compressed objects within 3 object streams
+ 58 named destinations out of 1000 (max. 500000)
  174 words of extra memory for PDF output out of 10000 (max. 10000000)
 

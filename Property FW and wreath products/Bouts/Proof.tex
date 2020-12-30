@@ -177,8 +177,16 @@ Let $G$ be a finitely generated subgroup and let $H\leq G$ be a finite index sub
 %
 \begin{proof}
 Since $H$ is a finite index subgroup of the finitely generated group $H$, it is itself finitely generated.
-So let $S$ be a finite symmetric generating set for $H$ and let $\{g_1,\dots, g_n\}$ be a set of representatives of $G/H$.
-Then $T=S\cup\{g_1^\pm,\dots, g_n^\pm\}$ is a finite symmetric generating set for $G$.
+So let $S$ be a finite symmetric generating set for $H$ and let $\{g_1=1,\dots, g_n\}$ be a set of representatives of $G/H$.
+Then $T=S\cup\{g_2^\pm,\dots, g_n^\pm\}$ is a finite symmetric generating set for $G$.
 
 Suppose that $H$ has property FW and let $\Gamma$ be a Schreier graph of $G$ with respect to $T$.
+For each vertex $x$ we define $\Gamma_x^H$ as the Schreier graph obtained from the action of $H$ on the $H$-orbit of $x$. Since $G$ acts transitively on the vertices of $\Gamma$, the number of $H$-orbits, and hence of graphs $\Gamma_x^H$, is bounded by $[G:H]$ and hence finite.
+Moreover, $\Gamma$ is the union of the $\Gamma_x^H$ together with extra-edges coming from generators in $T\setminus S$.
+\todo[inline]{Idée de la preuve: montrer que si $\Gamma_x^H$ et $\Gamma_y^H$ sont tous les deux infinis, alors dans $\Gamma$ on ne peut pas les déconnecter en enlevant un nombre finis de sommets. Le résultat suit de cela et du fait que les $\Gamma_x^H$ ont au plus $1$ bouts.}
+%We claim that if $\Gamma_x^H$ and $\Gamma_y^H$ are infinite, they 
+%Let $K$ be a finite set of vertices of $\Gamma$. By assumption, we know that for each vertex $x$, the graph  $\Gamma_x^H$ has at most one infinite connected component. We claim
+
+Now, suppose that $H$ does not have property FW and let $\Delta=\Sch(H,L;S)$ be a Schreier graph of $H$ with at least two ends.
+\todo[inline]{Idée de la preuve: regarder l'action induite de $G$ sur $\Delta^{G/H}$. On montre que c'est transitif et on a donc un graphe $\Gamma=\Sch(G,L';T)$. Ensuite, on prend $K$ qui sépare $\Delta$ en deux bouts et on montre que $K^{G/H}$ sépare $\Gamma$ en deux bouts. }
 \end{proof}
