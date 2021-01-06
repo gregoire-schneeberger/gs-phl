@@ -1,18 +1,62 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{Barnhill2008}
+Angela Barnhill and INDIRA Chatterji.
+\newblock {\em {Property (T) versus Property FW}}, volume~40 of {\em
+  Monographies de L'Enseignement Math{\'{e}}matique [Monographs of
+  L'Enseignement Math{\'{e}}matique]}.
+\newblock L'Enseignement Math{\'{e}}matique, Geneva, 2008.
 
 \bibitem{Cherix2004}
-P.~A. Cherix, F.~Martin, and A.~Valette.
+Pierre~Alain Cherix, Florian Martin, and Alain Valette.
 \newblock {Spaces with measured walls, the Haagerup property and property (T)}.
 \newblock {\em Ergod. Theory Dyn. Syst.}, 24(6):1895--1908, dec 2004.
 
 \bibitem{Cornulier2013}
-Y.~Cornulier.
+Yves Cornulier.
 \newblock {Group actions with commensurated subsets, wallings and cubings}.
 \newblock page~58, 2013.
 
+\bibitem{Cornulier2011}
+Yves Cornulier and Aditi Kar.
+\newblock {On Property (FA) for wreath products}.
+\newblock {\em J. Gr. Theory}, 14(1):165--174, jan 2011.
+
+\bibitem{DelaHarpe2000}
+Pierre de~la Harpe.
+\newblock {\em {Topics in geometric group theory}}.
+\newblock Chicago Lectures in Mathematics. University of Chicago Press,
+  Chicago, IL, 2000.
+
+\bibitem{Leemann2020}
+Paul-Henry Leemann.
+\newblock {Up to a double cover, every regular connected graph is isomorphic to
+  a Schreier graph. (arXiv:2010.06431v1 [math.CO])}.
+\newblock oct 2020.
+
+\bibitem{Lubotzky2010}
+Alexander Lubotzky.
+\newblock {\em {Discrete groups, expanding graphs and invariant measures}}.
+\newblock Modern Birkh{\"{a}}user Classics. Birkh{\"{a}}user Verlag, Basel,
+  2010.
+
+\bibitem{Moller1995}
+R{\"{o}}gnvaldur~G M{\"{o}}ller.
+\newblock {Groups acting on locally finite graphs---a survey of the infinitely
+  ended case}.
+\newblock In {\em Groups '93 {\{}G{\}}alway/{\{}S{\}}t. {\{}A{\}}ndrews,
+  {\{}V{\}}ol. 2}, volume 212 of {\em London Math. Soc. Lecture Note Ser.},
+  pages 426--456. Cambridge Univ. Press, Cambridge, 1995.
+
 \bibitem{Neuhauser2005a}
-M.~Neuhauser.
+Markus Neuhauser.
 \newblock {Relative property (T) and related properties of wreath products}.
 \newblock {\em Math. Zeitschrift}, 251(1):167--177, sep 2005.
+
+\bibitem{Stallings1971}
+John Stallings.
+\newblock {\em {Group theory and three-dimensional manifolds}}.
+\newblock Yale University Press, New Haven, Conn.-London, yale mathe edition,
+  1971.
 
 \end{thebibliography}
