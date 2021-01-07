@@ -1,0 +1,122 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}      
+\usepackage[english]{babel} %utilisation du package français
+%
+%
+%
+\usepackage{textcomp}% améliore certains symboles de bases
+\usepackage{lmodern}% remplace la police ComputerModern par LatinModern (+ mieux bien)
+%
+%
+%
+\usepackage{mathtools}% compléments à amsmath
+\usepackage{amssymb,amsfonts}% symboles mathématiques supplémentaires
+\usepackage{amsthm}% environnement ams-theorem
+\usepackage[colorlinks,breaklinks,bookmarks,plainpages=false,unicode=true]{hyperref}%
+\usepackage{todonotes} %ajouter des commentaires
+%\usepackage[disable]{todonotes}%cache les commentaires
+\usepackage{datetime} %ajoute la date et l'heure
+%
+%
+\usepackage{tikz}
+\usetikzlibrary{external,graphs}
+\tikzexternalize[prefix=Images/]% On externalise. Les images sont stockées dans le dossier Images
+\makeatletter %pour ne pas prendre en compte les todo dans l'externalisation
+\renewcommand{\todo}[2][]{\tikzexternaldisable\@todo[#1]{#2}\tikzexternalenable}
+\makeatother
+\makeatletter %pour ne pas prendre en compte les missingfigures dans l'externalisation
+\renewcommand{\missingfigure}[2][]{\tikzexternaldisable\@missingfigure[#1]{#2}\tikzexternalenable}
+\makeatother
+
+\tikzset{myloop above/.style={loop, out=130, in = 50,min distance =8mm}}
+\tikzset{myloop below/.style={loop, out=-130, in = -50,min distance =8mm}}
+\tikzset{blacknode/.style={shape= circle, fill = black, inner sep = 0pt, outer sep = 0pt, minimum size = 3pt,draw}}
+%
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{conjecture}[lem]{Conjecture}
+\newtheorem{cor}[lem]{Corollary}
+\newtheorem{prop}[lem]{Proposition}
+\newtheorem{thm}[lem]{Theorem}
+\theoremstyle{definition}
+\newtheorem{defn}[lem]{Definition}
+\theoremstyle{remark}% texte en roman
+\newtheorem{exmp}[lem]{Example}
+%
+%
+%
+\DeclareMathOperator\Cayley{Cayl}
+\DeclareMathOperator\Sch{Sch}
+\DeclareMathOperator\stab{Stab}
+%
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand*{\field}[1]{\mathbf{#1}}
+\newcommand*{\Z}{\field{Z}}
+\newcommand{\setst}[2]{\{#1\ |\ #2\}}
+%
+%
+\title{Property FW and wreath products of groups: a~simple approach using Schreier graphs}
+\author{Paul-Henry Leemann, Grégoire Schneeberger}
+\date{\today \quad \currenttime}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\begin{abstract}
+The group property FW stands in-between the celebrated Kazdhan's property (T) and Serre's property FA. Among many characterizations, it might be defined using the number of ends of Schreier graphs.
+Using this, we characterize which show that a finitely generated wreath product $G\wr_XH$ has property FW if and only if both $G$ and $H$ have property FW and $X$ is finite.
+\end{abstract}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\input{Introduction.tex}
+\input{Definitions.tex}
+\input{Proof.tex}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\bibliography{biblio.bib}
+\bibliographystyle{plain}
+%
+%
+%
+%
+%
+\enddocument

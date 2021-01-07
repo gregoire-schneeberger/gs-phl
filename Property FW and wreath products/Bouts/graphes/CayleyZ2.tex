@@ -1,4 +1,9 @@
 \begin{tikzpicture}
+%\foreach \i in {0,...,4}
+%{
+%	\draw[thick, blue,dotted] (0.5,-\i)--(1,-\i) ;
+%	\draw[thick, blue,dotted] (0.5,-\i)--(1,-\i) ;	
+%}
 \foreach \i in {1,...,25}
 {
         \pgfmathtruncatemacro{\y}{(\i - 1) / 5} ;
@@ -7,13 +12,17 @@
         \node[blacknode] (\label) at (1*\x,-1*\y) {} ;
 }
 \foreach \i in {1,...,5}{
-\foreach \j in {0,...,3}{
-	\pgfmathtruncatemacro{\x}{1+5*(\i-1)+\j} ;
-	\pgfmathtruncatemacro{\y}{\x+1} ;
-	\draw[thick, blue](\x)--(\y) ;
-	\pgfmathtruncatemacro{\zz}{\i+5*\j} ;
-	\pgfmathtruncatemacro{\t}{\zz+5} ;
-	\draw[thick, red] (\zz)--(\t) ;
-}
+	\draw[thick, blue,dotted] (0.5,-\i+1)--(0.95,-\i+1) ;
+	\draw[thick, blue,dotted] (5.5,-\i+1)--(5.05,-\i+1) ;
+	\draw[thick, red,dotted] (\i,-4.5)--(\i,-4.05) ;
+	\draw[thick, red,dotted] (\i,0.5)--(\i,0.05) ;
+	\foreach \j in {0,...,3}{
+		\pgfmathtruncatemacro{\x}{1+5*(\i-1)+\j} ;
+		\pgfmathtruncatemacro{\y}{\x+1} ;
+		\draw[thick, blue](\x)--(\y) ;
+		\pgfmathtruncatemacro{\zz}{\i+5*\j} ;
+		\pgfmathtruncatemacro{\t}{\zz+5} ;
+		\draw[thick, red] (\zz)--(\t) ;
+	}
 }
 \end{tikzpicture}
