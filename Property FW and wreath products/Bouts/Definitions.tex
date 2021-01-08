@@ -39,7 +39,7 @@ All the results cited in this section are standard and can be found in any good 
 %
 %
 %
-In what follows, we will always assume that a generating sets of groups are \emph{symmetric}, that is we will look at $S\subset G$ such that $s\in S$ if and only if $s^{-1}\in S$.
+In what follows, we will always assume that generating sets of groups are \emph{symmetric}, that is we will look at $S\subset G$ such that $s\in S$ if and only if $s^{-1}\in S$.
 Our graphs will be undirected and we will sometimes identify  graph with its vertex set.
 %
 %
@@ -75,6 +75,7 @@ Observe that the requirement that both $S$ and $T$ are finite is crucial for the
 \caption{A fragment of the Cayley graph of $\Z^2$ with standard generating set.}
 \label{Figure:CayleyOfZ2}
 \end{figure}
+\todo{Où cette figure est-elle utilisée ?}
 %
 %
 
@@ -87,7 +88,7 @@ see \cite{MR1967888} and the references therein, but Definition \ref{Def:Ends} i
 %The interested reader may refer to \cite{MR1967888} and the references therein for an extended treatment of the 
 A locally finite graph (i.e. such that every vertex has finite degree) is finite if and only if it has $0$ ends.
 
-An important fact about the number of ends of a graph, is that it is an invariant of quasi-isometry. In particular, if $G$ is a finitely generated group it is possible to speak about the number of ends of the Schreier graph $\Sch(G,H;S)$ without specifying a particular finite generating set $S$.
+An important fact about the number of ends of a graph, is that it is an invariant of quasi-isometry, see \cite{MR1213151}. In particular, if $G$ is a finitely generated group it is possible to speak about the number of ends of the Schreier graph $\Sch(G,H;S)$ without specifying a particular finite generating set $S$.
 While the number of ends of Cayley graphs of finitely generated groups can only be $0$, $1$, $2$ or infinite (in which case it is uncountable) \cite[Theorem 11.27]{Stallings1971}, Schreier graphs may have any number of ends in $\mathbf N\cup\{\infty\}$, see Figure \ref{Figure:SchreierOfF2} for an example.
 In fact, every regular graph of even degree is isomorphic to a Schreier graph, \cite{MR0450121,MR1358635}.
 
@@ -100,7 +101,7 @@ A finitely generated group $G$ has \emph{property FW} if all its Schreier graphs
 %
 %
 It directly follows from the definition that all finite groups have property FW, but that $\Z$ does not have it.
-In fact, if $G$ is a finitely generated group with an homomorphism onto $\Z$, then it does not have FW. Indeed, in this case $G\cong H\rtimes Z$ for some $H$ and the Schreier graph $\Sch(G,H;S)$ will be isomorphic to a Cayley graph of $\Z\cong G/H$ and hence has $2$ ends.
+In fact, if $G$ is a finitely generated group with an homomorphism onto $\Z$, then it does not have FW. Indeed, in this case $G\cong H\rtimes \Z$ \todo{C'était bien $\Z$ et non $Z$ ici ?} for some $H$ and the Schreier graph $\Sch(G,H;S)$ will be isomorphic to a Cayley graph of $\Z\cong G/H$ and hence has $2$ ends.
 
 Property FW admits many distinct characterizations that allow to define it for groups that are non-necessarily finitely generated and even for topological groups. We refer the reader to \cite{Cornulier2013} for a survey of these characterizations.
 %
