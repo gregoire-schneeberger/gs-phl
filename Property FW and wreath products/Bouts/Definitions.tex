@@ -66,19 +66,17 @@ Observe that the requirement that both $S$ and $T$ are finite is crucial for the
 \label{Figure:CayleyOfZ}
 \end{figure}
 \begin{figure}[htbp]\centering
-\input{graphes/SchreierF2.tex}
-\caption{A fragment of a Schreier graph (with $4$ ends) of the free group $F_2=\langle \textcolor{red}{x^{\pm1}},\textcolor{blue}{y^{\pm1}}\rangle$.}
-\label{Figure:SchreierOfF2}
-\end{figure}
-\begin{figure}[htbp]\centering
 \input{graphes/CayleyZ2.tex}
 \caption{A fragment of the Cayley graph of $\Z^2$ with standard generating set.}
 \label{Figure:CayleyOfZ2}
 \end{figure}
-\todo{Où cette figure est-elle utilisée ?}
+\begin{figure}[htbp]\centering
+\input{graphes/SchreierF2.tex}
+\caption{A fragment of a Schreier graph (with $4$ ends) of the free group $F_2=\langle \textcolor{red}{x^{\pm1}},\textcolor{blue}{y^{\pm1}}\rangle$.}
+\label{Figure:SchreierOfF2}
+\end{figure}
 %
 %
-
 Let $\Gamma$ be a graph and $K$ a finite subset of vertices. The graph $\Gamma\setminus K$ is the subgraph of $\Gamma$ obtained by deleting all vertices in $K$ and all edges adjacent to them. This graph is not necessarily connected.
 \begin{defn}\label{Def:Ends}
 Let $\Gamma$ be a graph. The \emph{number of ends} of $\Gamma$ is the supremum, taken over all finite $K$, of the number of infinite connected components of $\Gamma\setminus K$.
@@ -86,11 +84,11 @@ Let $\Gamma$ be a graph. The \emph{number of ends} of $\Gamma$ is the supremum, 
 There exists other characterization of the number of ends in graphs, %notably in terms of equivalence classes of rays,
 see \cite{MR1967888} and the references therein, but Definition \ref{Def:Ends} is the one that best suits our purpose.
 %The interested reader may refer to \cite{MR1967888} and the references therein for an extended treatment of the 
-A locally finite graph (i.e. such that every vertex has finite degree) is finite if and only if it has $0$ ends.
+A locally finite graph (i.e. such that every vertex has finite degree) is finite if and only if it has $0$ ends. The graphs of the Figures~\ref{Figure:CayleyOfZ} and \ref{Figure:CayleyOfZ2} have respectively 2 ends and 1 end. 
 
 An important fact about the number of ends of a graph, is that it is an invariant of quasi-isometry, see \cite{MR1213151}. In particular, if $G$ is a finitely generated group it is possible to speak about the number of ends of the Schreier graph $\Sch(G,H;S)$ without specifying a particular finite generating set $S$.
-While the number of ends of Cayley graphs of finitely generated groups can only be $0$, $1$, $2$ or infinite (in which case it is uncountable) \cite[Theorem 11.27]{Stallings1971}, Schreier graphs may have any number of ends in $\mathbf N\cup\{\infty\}$, see Figure \ref{Figure:SchreierOfF2} for an example.
-In fact, every regular graph of even degree is isomorphic to a Schreier graph, \cite{MR0450121,MR1358635}.
+While the number of ends of Cayley graphs of finitely generated groups can only be $0$, $1$, $2$ or infinite (in which case it is uncountable) \cite[Theorem 11.27]{Stallings1971}, Schreier graphs may have any number of ends in $\mathbf N\cup\{\infty\}$, see Figure~\ref{Figure:SchreierOfF2} for an example of a graph with another number of ends.
+In fact, every regular graph of even degree is isomorphic to a Schreier graph, \cite{MR0450121,MR1358635}. 
 
 We are now finally able to introduce property FW. The following characterization is due to Cornulier \cite{Cornulier2013}.
 %

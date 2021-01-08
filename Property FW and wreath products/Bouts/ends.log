@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.4)  8 JAN 2021 10:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.4)  8 JAN 2021 12:24
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1047,10 +1047,36 @@ Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 19.
  [2] (./graphes/CayleyZ.tex
 ===== Image 'Images/ends-figure0' is up-to-date. ======
-) (./graphes/SchreierF2.tex
-===== Image 'Images/ends-figure1' is up-to-date. ======
 ) (./graphes/CayleyZ2.tex
-===== Image 'Images/ends-figure2' is up-to-date. ======
+\openout3 = `Images/ends-figure1.md5'.
+
+\openout3 = `ends.auxlock'.
+
+
+===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
+n-error -interaction=batchmode -jobname "Images/ends-figure1" "\def\tikzexterna
+lrealjob{ends}\input{ends}"' ========
+runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
+ "Images/ends-figure1" "\def\tikzexternalrealjob{ends}\input{ends}")...executed
+.
+
+\openout3 = `ends.auxlock'.
+
+) (./graphes/SchreierF2.tex
+\openout3 = `Images/ends-figure2.md5'.
+
+\openout3 = `ends.auxlock'.
+
+
+===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
+n-error -interaction=batchmode -jobname "Images/ends-figure2" "\def\tikzexterna
+lrealjob{ends}\input{ends}"' ========
+runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
+ "Images/ends-figure2" "\def\tikzexternalrealjob{ends}\input{ends}")...executed
+.
+
+\openout3 = `ends.auxlock'.
+
 ) [3 <./Images/ends-figure0.pdf> <./Images/ends-figure1.pdf> <./Images/ends-fig
 ure2.pdf>] [4]) (./Proof.tex [5] (./graphes/path_semidirect_ends.tex
 ===== Image 'Images/ends-figure3' is up-to-date. ======
@@ -1069,12 +1095,16 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
 Package rerunfilecheck Info: File `ends.out' has not changed.
 (rerunfilecheck)             Checksum: 239FD741A30AA61B5B5ADAF965BE18EC;852.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
  ) 
 Here is how much of TeX's memory you used:
- 23885 strings out of 492616
- 434686 string characters out of 6129481
- 520020 words of memory out of 5000000
+ 23884 strings out of 492616
+ 434662 string characters out of 6129481
+ 517201 words of memory out of 5000000
  27281 multiletter control sequences out of 15000+600000
  88996 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1105,10 +1135,10 @@ nts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/p
 ublic/lm/lmsy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lm
 sy9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols
 /msbm10.pfb>
-Output written on ends.pdf (10 pages, 408681 bytes).
+Output written on ends.pdf (10 pages, 408523 bytes).
 PDF statistics:
- 356 PDF objects out of 1000 (max. 8388607)
- 296 compressed objects within 3 object streams
- 63 named destinations out of 1000 (max. 500000)
+ 357 PDF objects out of 1000 (max. 8388607)
+ 297 compressed objects within 3 object streams
+ 62 named destinations out of 1000 (max. 500000)
  174 words of extra memory for PDF output out of 10000 (max. 10000000)
 
