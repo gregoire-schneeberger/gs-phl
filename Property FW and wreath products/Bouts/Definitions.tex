@@ -58,17 +58,25 @@ Schreier graphs are generalizations of the well-known \emph{Cayley graphs}, with
 
 If $S$ and $T$ are two generating sets of $G$, the graphs $\Sch(G,H;S)$ and $\Sch(G,H;T)$ need not to be isomorphic. However, if both $S$ and $T$ are finite, then $\Sch(G,H;S)$ and $\Sch(G,H;T)$ are quasi-isometric, see \cite[IV.B.21.iii]{DelaHarpe2000} for a proof and Figure~\ref{Figure:CayleyOfZ} for an example. The only fact we will use about quasi-isometries is that they preserve ``large-scale properties'' of the graph, as for examples the number of ends.
 Observe that the requirement that both $S$ and $T$ are finite is crucial for the existence of a quasi-isometry between the corresponding Schreier graphs. Indeed, for every group  $\Cayley(G;G\setminus\{1\})=\Sch(G,\{1\};G\setminus\{1\})$ is always a complete graph on $\abs{G}$ vertices, in particular  $\Cayley(\Z;\{1\})$ and $\Cayley(\Z;\Z\setminus\{0\})$ are not quasi-isometric.
-
 %
 %
 \begin{figure}[htbp]\centering
 \input{graphes/CayleyZ.tex}
-\caption{Fragments of two Cayley graphs of $\Z$, for the standard generating set $\{\pm1\}$ and for the generating set $\{\textcolor{red}{\pm2},\textcolor{blue}{\pm3}\}$.}
+\caption{Fragments of two Cayley graphs of $\Z$ ($2$ ends), for the standard generating set $\{\pm1\}$ and for the generating set $\{\textcolor{red}{\pm2},\textcolor{blue}{\pm3}\}$.}
 \label{Figure:CayleyOfZ}
 \end{figure}
 \begin{figure}[htbp]\centering
+\begin{subfigure}{0.5\textwidth}
+\centering
 \input{graphes/CayleyZ2.tex}
-\caption{A fragment of the Cayley graph of $\Z^2$ with standard generating set.}
+%\caption{Lorem ipsum}
+\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+\centering
+\scalebox{0.8}{\input{graphes/CayleyF2.tex}}
+%\caption{Lorem ipsum}
+\end{subfigure}
+\caption{Fragments of the Cayley graphs of $\Z^2$ ($1$ end) on the left and of $F_2$ (infinitely many ends) on the right; with standard generating sets.}
 \label{Figure:CayleyOfZ2}
 \end{figure}
 \begin{figure}[htbp]\centering

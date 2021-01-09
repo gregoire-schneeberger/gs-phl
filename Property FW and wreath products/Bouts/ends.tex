@@ -19,6 +19,7 @@
 \usepackage{datetime} %ajoute la date et l'heure
 %
 %
+\usepackage{subcaption}
 \usepackage{tikz}
 \usetikzlibrary{external,graphs}
 \tikzexternalize[prefix=Images/]% On externalise. Les images sont stockées dans le dossier Images
@@ -28,7 +29,6 @@
 \makeatletter %pour ne pas prendre en compte les missingfigures dans l'externalisation
 \renewcommand{\missingfigure}[2][]{\tikzexternaldisable\@missingfigure[#1]{#2}\tikzexternalenable}
 \makeatother
-
 \tikzset{myloop above/.style={loop, out=130, in = 50,min distance =8mm}}
 \tikzset{myloop below/.style={loop, out=-130, in = -50,min distance =8mm}}
 \tikzset{blacknode/.style={shape= circle, fill = black, inner sep = 0pt, outer sep = 0pt, minimum size = 3pt,draw}}

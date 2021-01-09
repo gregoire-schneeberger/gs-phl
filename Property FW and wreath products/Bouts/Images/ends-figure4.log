@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  28 DEC 2020 16:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  9 JAN 2021 20:25
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -771,201 +771,237 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 )) ABD: EveryShipout initializing macros
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
-8.
+3.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
-8.
+3.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-88.
+83.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-88.
+83.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 88.
+(Font)              <12> on input line 83.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 88.
+(Font)              <8> on input line 83.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 88.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 88.
+(Font)              <6> on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 94.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 85.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 85.
+(./Introduction.tex
 
-LaTeX Warning: Citation `Cornulier2013' on page 1 undefined on input line 94.
+LaTeX Warning: Citation `Barnhill2008' on page 1 undefined on input line 23.
+
+
+LaTeX Warning: Citation `Cornulier2013' on page 1 undefined on input line 23.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 94.
+(Font)              <10> on input line 23.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 94.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 94.
+(Font)              <7> on input line 23.
 
-LaTeX Warning: Citation `Cornulier2013' on page 1 undefined on input line 94.
+LaTeX Warning: Citation `Cornulier2013' on page 1 undefined on input line 23.
 
 
-LaTeX Warning: Reference `' on page 1 undefined on input line 97.
-
-
-LaTeX Warning: Citation `Cherix2004' on page 1 undefined on input line 102.
-
-
-LaTeX Warning: Citation `Neuhauser2005a' on page 1 undefined on input line 102.
+LaTeX Warning: Reference `Def:WreathProd' on page 1 undefined on input line 26.
 
 
 
-LaTeX Warning: Citation `Cornulier2011' on page 1 undefined on input line 107.
+LaTeX Warning: Citation `Cherix2004' on page 1 undefined on input line 31.
 
 
-LaTeX Warning: Citation `Cornulier2013' on page 1 undefined on input line 108.
+LaTeX Warning: Citation `Neuhauser2005a' on page 1 undefined on input line 31.
 
 
-LaTeX Warning: Reference `T:Wreath_prop_T' on page 1 undefined on input line 11
-0.
+LaTeX Warning: Citation `Cornulier2011' on page 1 undefined on input line 36.
 
 
-LaTeX Warning: Citation `Cornullier2013' on page 1 undefined on input line 118.
+LaTeX Warning: Citation `Cornulier2013' on page 1 undefined on input line 37.
 
 
-
-LaTeX Warning: Reference `' on page 1 undefined on input line 118.
-
-
-LaTeX Warning: Reference `' on page 1 undefined on input line 118.
+LaTeX Warning: Reference `T:Wreath_prop_T' on page 1 undefined on input line 39
+.
 
 
-LaTeX Warning: Reference `Thm:Main' on page 1 undefined on input line 120.
+LaTeX Warning: Reference `Subsection:FW' on page 1 undefined on input line 47.
 
 
-LaTeX Warning: Reference `T:Wreath_prop_T' on page 1 undefined on input line 12
-0.
+LaTeX Warning: Reference `Thm:Main' on page 2 undefined on input line 49.
 
 
-LaTeX Warning: Reference `Thm:Main' on page 1 undefined on input line 120.
+LaTeX Warning: Reference `T:Wreath_prop_T' on page 2 undefined on input line 49
+.
 
 
-LaTeX Warning: Citation `LS2021' on page 1 undefined on input line 122.
+LaTeX Warning: Reference `Thm:Main' on page 2 undefined on input line 49.
 
 
-LaTeX Warning: Reference `T:Wreath_prop_T' on page 1 undefined on input line 12
-2.
+LaTeX Warning: Citation `LS2021' on page 2 undefined on input line 51.
 
 
-LaTeX Warning: Reference `Thm:Main' on page 1 undefined on input line 122.
+LaTeX Warning: Reference `T:Wreath_prop_T' on page 2 undefined on input line 51
+.
 
 
-LaTeX Warning: Reference `' on page 2 undefined on input line 128.
+LaTeX Warning: Reference `Thm:Main' on page 2 undefined on input line 51.
 
 
-LaTeX Warning: Reference `Thm:Main' on page 2 undefined on input line 128.
+LaTeX Warning: Reference `Section:Proof' on page 2 undefined on input line 57.
 
 
-LaTeX Warning: Reference `Fir:SchreiZ' on page 2 undefined on input line 206.
+LaTeX Warning: Reference `Thm:Main' on page 2 undefined on input line 57.
+
+) (./Definitions.tex
+
+LaTeX Warning: Citation `DelaHarpe2000' on page 2 undefined on input line 59.
+
+
+LaTeX Warning: Reference `Figure:CayleyOfZ' on page 2 undefined on input line 5
+9.
 
 (./graphes/CayleyZ.tex
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-) (./graphes/SchreierF2.tex
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 ) (./graphes/CayleyZ2.tex
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
-)
-
-LaTeX Warning: Reference `Def:Ends' on page 3 undefined on input line 230.
-
-
-LaTeX Warning: Citation `Cornullier2013' on page 4 undefined on input line 246.
-
-
-
-LaTeX Warning: Reference `Thm:Main' on page 4 undefined on input line 307.
-
-
-LaTeX Warning: Reference `Thm:Main' on page 4 undefined on input line 334.
-
-
-LaTeX Warning: Reference `Lemma:Semidirect_ends' on page 4 undefined on input l
-ine 334.
-
-
-LaTeX Warning: Reference `Cor:Wreath_ends' on page 4 undefined on input line 33
-4.
-
-
-LaTeX Warning: Reference `Lem:Wreath_groups_ends' on page 4 undefined on input 
-line 334.
-
-
-LaTeX Warning: Reference `Figure:PathSemiDirect' on page 5 undefined on input l
-ine 367.
-
-(./graphes/path_semidirect_ends.tex
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+) (./graphes/SchreierF2.tex
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 )
 
-LaTeX Warning: Reference `Thm:Main' on page 6 undefined on input line 409.
+LaTeX Warning: Citation `MR1967888' on page 3 undefined on input line 87.
 
 
-LaTeX Warning: Reference `Figure:Leaves' on page 6 undefined on input line 440.
+LaTeX Warning: Reference `Def:Ends' on page 3 undefined on input line 87.
+
+
+LaTeX Warning: Citation `MR1213151' on page 4 undefined on input line 92.
+
+
+LaTeX Warning: Citation `Stallings1971' on page 4 undefined on input line 93.
+
+
+LaTeX Warning: Reference `Figure:CayleyOfZ' on page 4 undefined on input line 9
+3.
+
+
+LaTeX Warning: Reference `Figure:CayleyOfZ2' on page 4 undefined on input line 
+93.
+
+
+LaTeX Warning: Reference `Figure:SchreierOfF2' on page 4 undefined on input lin
+e 94.
+
+
+LaTeX Warning: Citation `MR0450121' on page 4 undefined on input line 96.
+
+
+LaTeX Warning: Citation `MR1358635' on page 4 undefined on input line 96.
+
+
+LaTeX Warning: Citation `Cornulier2013' on page 4 undefined on input line 98.
+
+
+LaTeX Warning: Citation `Cornulier2013' on page 4 undefined on input line 109.
+
+
+LaTeX Warning: Reference `Thm:Main' on page 5 undefined on input line 170.
+
+) (./Proof.tex
+
+LaTeX Warning: Reference `Thm:Main' on page 5 undefined on input line 24.
+
+
+LaTeX Warning: Reference `Lemma:Semidirect_ends' on page 5 undefined on input l
+ine 24.
+
+
+LaTeX Warning: Reference `Cor:Wreath_ends' on page 5 undefined on input line 24
+.
+
+
+LaTeX Warning: Reference `Lem:Wreath_groups_ends' on page 5 undefined on input 
+line 24.
+
+
+LaTeX Warning: Reference `Figure:PathSemiDirect' on page 6 undefined on input l
+ine 60.
+
+(./graphes/path_semidirect_ends.tex
+\openout4 = `Images/ends-figure4.dpth'.
+
+[6
+
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+
+LaTeX Warning: Reference `Lemma:Semidirect_ends' on page 6 undefined on input l
+ine 94.
+
+
+LaTeX Warning: Reference `Thm:Main' on page 6 undefined on input line 108.
+
+
+LaTeX Warning: Reference `Figure:Leaves' on page 7 undefined on input line 139.
 
 
 (./graphes/leaves_structure_schreier.tex
-\openout4 = `Images/ends-figure4.dpth'.
-
-[7
-
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+))
 No file Images/ends-figure4.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 492.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 492.
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 492.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 492.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 122.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 492.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
  ) 
 Here is how much of TeX's memory you used:
- 24194 strings out of 480893
- 442939 string characters out of 5908067
- 712435 words of memory out of 5000000
- 39320 multiletter control sequences out of 15000+600000
- 613232 words of font info for 78 fonts, out of 8000000 for 9000
+ 24080 strings out of 480893
+ 440431 string characters out of 5908067
+ 711067 words of memory out of 5000000
+ 39192 multiletter control sequences out of 15000+600000
+ 623239 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,12n,85p,1037b,978s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
-texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/20
-20/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/2020/texmf-d
+ 70i,12n,85p,1037b,866s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
+cal/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texliv
+e/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2020/texmf-d
 ist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/
 type1/public/lm/lmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publi
-c/lm/lmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr5.p
-fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/loc
-al/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/lm/lmsy7.pfb>
-Output written on Images/ends-figure4.pdf (1 page, 53795 bytes).
+c/lm/lmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy7.
+pfb>
+Output written on Images/ends-figure4.pdf (1 page, 33744 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 60 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,124 @@
+\begin{tikzpicture}[every node/.style=blacknode]
+\useasboundingbox (-2.9,-2.9) rectangle (2.9,2.9);
+\rotatebox{45}{
+\node (0){};
+\foreach \i/\j in {E/right,W/left}{
+\node (\i)[\j = 2cm of 0]{} ;
+\node (\i\i)[\j = 1cm of \i]{} ;
+	\node (\i\i N)[above = 0.5cm of \i\i]{} ;
+		\coordinate[above =0.18cm of \i\i N] (\i\i NN) ;
+		\coordinate[right =0.18cm of \i\i N] (\i\i NE) ;
+		\coordinate[left =0.18cm of \i\i N] (\i\i NW) ;
+	\node (\i\i S)[below = 0.5cm of \i\i]{} ;
+		\coordinate[below =0.18cm of \i\i S] (\i\i SS) ;
+		\coordinate[right =0.18cm of \i\i S] (\i\i SE) ;
+		\coordinate[left =0.18cm of \i\i S] (\i\i SW) ;
+	\node (\i\i\i)[\j = 0.5cm of \i\i]{} ;
+		\coordinate[\j =0.18cm of \i\i\i] (\i\i\i\i) ;
+		\coordinate[above =0.18cm of \i\i\i] (\i\i\i N) ;
+		\coordinate[below =0.18cm of \i\i\i] (\i\i\i S) ;
+\node (\i N)[above = 1cm of \i ]{} ;
+	\node (\i NN)[above = 0.5cm of \i N]{} ;
+		\coordinate[above =0.18cm of \i NN] (\i NNN) ;
+		\coordinate[right =0.18cm of \i NN] (\i NNE) ;
+		\coordinate[left =0.18cm of \i NN] (\i NNW) ;
+	\node (\i NW)[left = 0.5cm of \i N]{} ;
+		\coordinate[above =0.18cm of \i NW] (\i NWN) ;
+		\coordinate[below =0.18cm of \i NW] (\i NWS) ;
+		\coordinate[left =0.18cm of \i NW] (\i NWW) ;
+	\node (\i NE)[right = 0.5cm of \i N]{} ;
+		\coordinate[above =0.18cm of \i NE] (\i NEN) ;
+		\coordinate[below =0.18cm of \i NE] (\i NES) ;
+		\coordinate[right =0.18cm of \i NE] (\i NEE) ;
+\node (\i S)[below = 1cm of \i ]{} ;
+	\node (\i SS)[below = 0.5cm of \i S]{} ;
+		\coordinate[below =0.18cm of \i SS] (\i SSS) ;
+		\coordinate[right =0.18cm of \i SS] (\i SSE) ;
+		\coordinate[left =0.18cm of \i SS] (\i SSW) ;
+	\node (\i SW)[left = 0.5cm of \i S]{} ;
+		\coordinate[above =0.18cm of \i SW] (\i SWN) ;
+		\coordinate[below =0.18cm of \i SW] (\i SWS) ;
+		\coordinate[left =0.18cm of \i SW] (\i SWW) ;
+	\node (\i SE)[right = 0.5cm of \i S]{} ;
+		\coordinate[above =0.18cm of \i SE] (\i SEN) ;
+		\coordinate[below =0.18cm of \i SE] (\i SES) ;
+		\coordinate[right =0.18cm of \i SE] (\i SEE) ;
+\graph[edge={thick,color=blue}]{
+(0)--(\i )--(\i\i)--(\i\i\i)--[densely dotted](\i\i\i\i),
+(\i SWW)--[densely dotted](\i SW)--(\i S)--(\i SE)--[densely dotted](\i SEE),
+(\i NWW)--[densely dotted](\i NW)--(\i N)--(\i NE)--[densely dotted](\i NEE),
+(\i NNW)--[densely dotted](\i NN)--[densely dotted](\i NNE),
+(\i SSW)--[densely dotted](\i SS)--[densely dotted](\i SSE),
+(\i\i NW)--[densely dotted](\i\i N)--[densely dotted](\i\i NE),
+(\i\i SW)--[densely dotted](\i\i S)--[densely dotted](\i\i SE)
+};
+\graph[edge={thick,color=red}]{
+	(\i SSS)--[densely dotted](\i SS)--(\i S)--(\i)--(\i N)--(\i NN)--[densely dotted](\i NNN),
+	(\i\i SS)--[densely dotted](\i\i S)--(\i\i)--(\i\i N)--[densely dotted](\i\i NN),
+	(\i\i\i N)--[densely dotted](\i\i\i)--[densely dotted](\i\i\i S),
+	(\i NES)--[densely dotted](\i NE)--[densely dotted](\i NEN),
+	(\i SES)--[densely dotted](\i SE)--[densely dotted](\i SEN),
+	(\i NWS)--[densely dotted](\i NW)--[densely dotted](\i NWN),
+	(\i SWS)--[densely dotted](\i SW)--[densely dotted](\i SWN)
+};
+}
+\foreach \i/\j in {N/above,S/below}{
+\node (\i)[\j = 2cm of 0]{} ;
+\node (\i\i)[\j = 1cm of \i]{} ;
+	\node (\i\i W)[left = 0.5cm of \i\i]{} ;
+		\coordinate[above =0.18cm of \i\i W] (\i\i WN) ;
+		\coordinate[below =0.18cm of \i\i W] (\i\i WS) ;
+		\coordinate[left =0.18cm of \i\i W] (\i\i WW) ;	
+	\node (\i\i E)[right = 0.5cm of \i\i]{} ;
+		\coordinate[above =0.18cm of \i\i E] (\i\i EN) ;
+		\coordinate[below =0.18cm of \i\i E] (\i\i ES) ;
+		\coordinate[right =0.18cm of \i\i E] (\i\i EE) ;
+	\node (\i\i\i)[\j = 0.5cm of \i\i]{} ;
+		\coordinate[\j =0.18cm of \i\i\i] (\i\i\i\i) ;
+		\coordinate[right =0.18cm of \i\i\i] (\i\i\i E) ;
+		\coordinate[left =0.18cm of \i\i\i] (\i\i\i W) ;
+\node (\i E)[right = 1cm of \i ]{} ;
+	\node (\i EE)[right = 0.5cm of \i E]{} ;
+		\coordinate[above =0.18cm of \i EE] (\i EEN) ;
+		\coordinate[below =0.18cm of \i EE] (\i EES) ;
+		\coordinate[right =0.18cm of \i EE] (\i EEE) ;
+	\node (\i ES)[below = 0.5cm of \i E]{} ;
+		\coordinate[below =0.18cm of \i ES] (\i ESS) ;
+		\coordinate[left =0.18cm of \i ES] (\i ESE) ;
+		\coordinate[right =0.18cm of \i ES] (\i ESW) ;
+	\node (\i EN)[above = 0.5cm of \i E]{} ;
+		\coordinate[above =0.18cm of \i EN] (\i ENN) ;
+		\coordinate[left =0.18cm of \i EN] (\i ENE) ;
+		\coordinate[right =0.18cm of \i EN] (\i ENW) ;
+\node (\i W)[left = 1cm of \i ]{} ;
+	\node (\i WS)[below = 0.5cm of \i W]{} ;
+		\coordinate[below =0.18cm of \i WS] (\i WSS) ;
+		\coordinate[left =0.18cm of \i WS] (\i WSE) ;
+		\coordinate[right =0.18cm of \i WS] (\i WSW) ;
+	\node (\i WN)[above = 0.5cm of \i W]{} ;
+		\coordinate[above =0.18cm of \i WN] (\i WNN) ;
+		\coordinate[left =0.18cm of \i WN] (\i WNE) ;
+		\coordinate[right =0.18cm of \i WN] (\i WNW) ;
+	\node (\i WW)[left = 0.5cm of \i W]{} ;
+		\coordinate[above =0.18cm of \i WW] (\i WWN) ;
+		\coordinate[below =0.18cm of \i WW] (\i WWS) ;
+		\coordinate[left =0.18cm of \i WW] (\i WWW) ;
+\graph[edge={thick,color=red}]{
+	(0)--(\i )--(\i\i)--(\i\i\i)--[densely dotted](\i\i\i\i),
+	(\i ENN)--[densely dotted](\i EN)--(\i E)--(\i ES)--[densely dotted](\i ESS),
+	(\i WNN)--[densely dotted](\i WN)--(\i W)--(\i WS)--[densely dotted](\i WSS),
+	(\i EES)--[densely dotted](\i EE)--[densely dotted](\i EEN),
+	(\i WWS)--[densely dotted](\i WW)--[densely dotted](\i WWN),
+	(\i\i ES)--[densely dotted](\i\i E)--[densely dotted](\i\i EN),
+	(\i\i WS)--[densely dotted](\i\i W)--[densely dotted](\i\i WN)};
+\graph[edge={thick,color=blue}]{
+	(\i WWW)--[densely dotted](\i WW)--(\i W)--(\i)--(\i E)--(\i EE)--[densely dotted](\i EEE),
+	(\i\i WW)--[densely dotted](\i\i W)--(\i\i)--(\i\i E)--[densely dotted](\i\i EE),
+	(\i ENW)--[densely dotted](\i EN)--[densely dotted](\i ENE),
+	(\i ESW)--[densely dotted](\i ES)--[densely dotted](\i ESE),
+	(\i WNW)--[densely dotted](\i WN)--[densely dotted](\i WNE),
+	(\i WSW)--[densely dotted](\i WS)--[densely dotted](\i WSE),
+	(\i\i\i E)--[densely dotted](\i\i\i)--[densely dotted](\i\i\i W)};
+}
+}
+\end{tikzpicture}
