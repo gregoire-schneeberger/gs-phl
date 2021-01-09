@@ -16,7 +16,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Definitions and examples}
 This section contains all the definitions, as well as some useful preliminaries facts and some examples.
-All the results cited in this section are standard and can be found in any good book about geometric group theory, see for example~\cite{DelaHarpe2000}.\todo{Peut-être retravailler l'intro.} 
+All the results cited in this section are standard.
+% and can be found in any good book about geometric group theory, see for example~\cite{DelaHarpe2000}.\todo{Peut-être retravailler l'intro.} 
 %
 %
 %
@@ -84,10 +85,13 @@ Let $\Gamma$ be a graph. The \emph{number of ends} of $\Gamma$ is the supremum, 
 There exists other characterization of the number of ends in graphs, %notably in terms of equivalence classes of rays,
 see \cite{MR1967888} and the references therein, but Definition \ref{Def:Ends} is the one that best suits our purpose.
 %The interested reader may refer to \cite{MR1967888} and the references therein for an extended treatment of the 
-A locally finite graph (i.e. such that every vertex has finite degree) is finite if and only if it has $0$ ends. The graphs of the Figures~\ref{Figure:CayleyOfZ} and \ref{Figure:CayleyOfZ2} have respectively 2 ends and 1 end. 
+A locally finite graph (i.e. such that every vertex has finite degree) is finite if and only if it has $0$ ends.
+%The graphs of the Figures~\ref{Figure:CayleyOfZ} and \ref{Figure:CayleyOfZ2} have respectively 2 ends and 1 end. 
 
 An important fact about the number of ends of a graph, is that it is an invariant of quasi-isometry, see \cite{MR1213151}. In particular, if $G$ is a finitely generated group it is possible to speak about the number of ends of the Schreier graph $\Sch(G,H;S)$ without specifying a particular finite generating set $S$.
-While the number of ends of Cayley graphs of finitely generated groups can only be $0$, $1$, $2$ or infinite (in which case it is uncountable) \cite[Theorem 11.27]{Stallings1971}, Schreier graphs may have any number of ends in $\mathbf N\cup\{\infty\}$, see Figure~\ref{Figure:SchreierOfF2} for an example of a graph with another number of ends.
+By a celebrated result of Stallings \cite{Stallings1971}, the number of ends of a Cayley graph of a finitely generated group can only be $0$, $1$, $2$ or infinite (in which case it is uncountable), see Figures~\ref{Figure:CayleyOfZ} and \ref{Figure:CayleyOfZ2} for examples.
+On the other hand, Schreier graphs may have any number of ends in $\mathbf N\cup\{\infty\}$, see Figure~\ref{Figure:SchreierOfF2} for an example of a graph with $4$ ends.
+%While the number of ends of Cayley graphs of finitely generated groups can only be $0$, $1$, $2$ or infinite (in which case it is uncountable) \cite[Theorem 11.27]{Stallings1971}, Schreier graphs may have any number of ends in $\mathbf N\cup\{\infty\}$, see Figure~\ref{Figure:SchreierOfF2} for an example of a graph with another number of ends.
 In fact, every regular graph of even degree is isomorphic to a Schreier graph, \cite{MR0450121,MR1358635}. 
 
 We are now finally able to introduce property FW. The following characterization is due to Cornulier \cite{Cornulier2013}.
@@ -99,7 +103,7 @@ A finitely generated group $G$ has \emph{property FW} if all its Schreier graphs
 %
 %
 It directly follows from the definition that all finite groups have property FW, but that $\Z$ does not have it.
-In fact, if $G$ is a finitely generated group with an homomorphism onto $\Z$, then it does not have FW. Indeed, in this case $G\cong H\rtimes \Z$ \todo{C'était bien $\Z$ et non $Z$ ici ?} for some $H$ and the Schreier graph $\Sch(G,H;S)$ will be isomorphic to a Cayley graph of $\Z\cong G/H$ and hence has $2$ ends.
+In fact, if $G$ is a finitely generated group with an homomorphism onto $\Z$, then it does not have FW. Indeed, in this case $G\cong H\rtimes \Z$  for some $H$ and the Schreier graph $\Sch(G,H;S)$ will be isomorphic to a Cayley graph of $\Z\cong G/H$ and hence has $2$ ends.
 
 Property FW admits many distinct characterizations that allow to define it for groups that are non-necessarily finitely generated and even for topological groups. We refer the reader to \cite{Cornulier2013} for a survey of these characterizations.
 %
