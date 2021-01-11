@@ -48,13 +48,13 @@ Since $H$ acts transitively on $\Gamma$, so does $G$.
 In fact, the graph of the action $G$ on the vertices of $\Gamma$ is isomorphic to the graph $\Gamma$ with some additional loops for generators in $S\times\{1\}$. As adding loops does not change the number of ends, this Schreier graph has more than one end and therefore $G$ does not have property FW.
 
 Suppose now that both $N$ and $H$ have property FW. We want to show that every Schreier graphs of $G$ has at most one end. If they are all finite, then there is nothing to prove (and $G$ is finite). So let $\Gamma$ be an infinite Schreier graph of $G$ with respect to the generating set $U$. The groups $N$ and $H$ acts on the vertices of $\Gamma$ by restriction of the action of $G$. That is, $n.x = (n,1).x$ and $h.x = (1,h).x$.
-For each vertex $x$ we define $\Gamma_x^H$ (and respectively $\Gamma_x^N$) as the Schreier graph obtained from the action of $H$ (respectively $N$) on the $H$-orbit (respectively $N$-orbit) of $x$. These are subgraphs of $\Gamma$. As $N$ and $H$ have property FW, the graphs $\Gamma_x^H$ and $\Gamma_x^N$ are either finite or one-ended. We want to prove that in this case $\Gamma$ has exactly one end. 
+For each vertex $x$ we define $\Gamma_x^H$ (and respectively $\Gamma_x^N$) as the Schreier graph obtained from the action of $H$ (respectively $N$) on the $H$-orbit (respectively $N$-orbit) of $x$. These are subgraphs of $\Gamma$. As $N$ and $H$ have property FW, the graphs $\Gamma_x^H$ and $\Gamma_x^N$ are either finite or one-ended. We want to prove that in this case $\Gamma$ has exactly one end.
 
 Let $K$ be a finite set of vertices of $\Gamma$.
 If $x$ is in $K$ and $\Gamma_x^H$ is finite, add all vertices of $\Gamma_x^H$ to $K$.
 By doing so for every $x$ in $K$, we obtain a new finite set $K\subset K'$ of vertices of $\Gamma$.
 We will show that $\Gamma\setminus K'$ has only one infinite connected component.
-By definition of $K'$, if $x$ is not in $K'$, then either $\Gamma_x^H$ has one end or $\Gamma_x^H$ does not contains vertices of $K'$. 
+By definition of $K'$, if $x$ is not in $K'$, then either $\Gamma_x^H$ has one end or $\Gamma_x^H$ does not contains vertices of $K'$.
 
 Let $x$ and $y$ be two vertices, each of them lying in some infinite connected component of $\Gamma\setminus K'$.
 We will construct a path from $x$ to $y$ in $\Gamma\setminus K'$ as a concatenation of three smaller paths, see Figure~\ref{Figure:PathSemiDirect}, as follows.
@@ -110,7 +110,7 @@ The following Lemma finishes the proof of Theorem~\ref{Thm:Main}.
 %
 \begin{lem}\label{Lem:Wreath_groups_ends}
 Let $G$ and $H$ be two finitely generated groups with $G$ non-trivial and such that $H$ acts on some set $X$ with finitely many orbits.
-If $G\wr_XH$ has property FW, then 
+If $G\wr_XH$ has property FW, then
 \begin{enumerate}
 \item $G$ has property FW,
 \item $X$ is finite.
@@ -120,7 +120,7 @@ If $G\wr_XH$ has property FW, then
 %
 \begin{proof}
 We will prove the contrapositives. The idea is to construct, for each of the two cases, a Schreier graph of $G\wr_XH$ with more than one end by exhibiting some well-chosen action of $G\wr_XH$.
-We fix some finite generating sets $S$ and $T$ of $G$ and $H$ and let 
+We fix some finite generating sets $S$ and $T$ of $G$ and $H$ and let
 \[
 	U\coloneqq\setst{(\delta_x^s,1_H)}{s \in S} \cup \setst{(\mathbf 1,t)}{t \in T}
 \]
@@ -135,14 +135,14 @@ The group $G$ acting on itself by left multiplications, we have the so-called \e
 \[
 	(\varphi,h). (g,x) \coloneqq (\varphi(h.x)g, h.x).
 \]
-Since both $G\curvearrowright G$ and $H\curvearrowright X'$ are transitive, the action $G\wr_XH\curvearrowright Y$ is also transitive. 
+Since both $G\curvearrowright G$ and $H\curvearrowright X'$ are transitive, the action $G\wr_XH\curvearrowright Y$ is also transitive.
 Therefore, the orbital Schreier graph of $G\wr_XH\curvearrowright Y$ is isomorphic to the Schreier graph $\Gamma\coloneqq\Sch\left(G\wr_XH, \stab((1_G,x_0)\right), U)$. We decompose this graph into leaves of the form $Y_g = \{ g \} \times X'$. There are two types of edges in $\Gamma$, which are coming from the two sets of generators, see Figure~\ref{Figure:Leaves}. The first ones, of the form $(\mathbf 1,t)$, give us on each leaf a copy of the orbital Schreier graph of $H \curvearrowright X'$. Indeed,
 \[
 	(\mathbf 1,t).(g,x) = (g, t.x).
 \]
-The second ones, of the form $(\delta_{x_0}^s,1)$, give us loops everywhere except on vertices of the form $(g,x_0)$. By direct computation, we see that the vertices $(g,x_0)$ and $(sg,x_0)$ connect the leaves $Y_g$ and $Y_{sg}$, 
+The second ones, of the form $(\delta_{x_0}^s,1)$, give us loops everywhere except on vertices of the form $(g,x_0)$. By direct computation, we see that the vertices $(g,x_0)$ and $(sg,x_0)$ connect the leaves $Y_g$ and $Y_{sg}$,
 \[
-	(\delta_{x_0}^s,1).(g,x) = 
+	(\delta_{x_0}^s,1).(g,x) =
 		\begin{cases}
 		(g,x) & \textnormal{if }x \neq x_0, \\
 		(sg, x) & \textnormal{if }x = x_0.
@@ -190,7 +190,7 @@ As above, the action is transitive and the orbital Schreier graph of this action
 %For each vertex $x$ we define $\Gamma_x^H$ as the Schreier graph obtained from the action of $H$ on the $H$-orbit of $x$. Since $G$ acts transitively on the vertices of $\Gamma$, the number of $H$-orbits, and hence of graphs $\Gamma_x^H$, is bounded by $[G:H]$ and hence finite.
 %Moreover, $\Gamma$ is the union of the $\Gamma_x^H$ together with extra-edges coming from generators in $T\setminus S$.
 %\todo[inline]{Idée de la preuve: montrer que si $\Gamma_x^H$ et $\Gamma_y^H$ sont tous les deux infinis, alors dans $\Gamma$ on ne peut pas les déconnecter en enlevant un nombre finis de sommets. Le résultat suit de cela et du fait que les $\Gamma_x^H$ ont au plus $1$ bouts.}
-%%We claim that if $\Gamma_x^H$ and $\Gamma_y^H$ are infinite, they 
+%%We claim that if $\Gamma_x^H$ and $\Gamma_y^H$ are infinite, they
 %%Let $K$ be a finite set of vertices of $\Gamma$. By assumption, we know that for each vertex $x$, the graph  $\Gamma_x^H$ has at most one infinite connected component. We claim
 %
 %Now, suppose that $H$ does not have property FW and let $\Delta=\Sch(H,L;S)$ be a Schreier graph of $H$ with at least two ends.

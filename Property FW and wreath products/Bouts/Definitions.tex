@@ -17,7 +17,7 @@
 \section{Definitions and examples}
 This section contains all the definitions, as well as some useful preliminaries facts and some examples.
 All the results cited in this section are standard.
-% and can be found in any good book about geometric group theory, see for example~\cite{DelaHarpe2000}.\todo{Peut-être retravailler l'intro.} 
+% and can be found in any good book about geometric group theory, see for example~\cite{DelaHarpe2000}.\todo{Peut-être retravailler l'intro.}
 %
 %
 %
@@ -56,7 +56,7 @@ As the notation suggest, these two definitions are the two faces of the same coi
 
 Schreier graphs are generalizations of the well-known \emph{Cayley graphs}, with $\Cayley(G;S)=\Sch(G,\{1\};S)$, see Figures \ref{Figure:CayleyOfZ} and \ref{Figure:CayleyOfZ2} for some examples.
 
-If $S$ and $T$ are two generating sets of $G$, the graphs $\Sch(G,H;S)$ and $\Sch(G,H;T)$ need not to be isomorphic. However, if both $S$ and $T$ are finite, then $\Sch(G,H;S)$ and $\Sch(G,H;T)$ are quasi-isometric, see \cite[IV.B.21.iii]{DelaHarpe2000} for a proof and Figure~\ref{Figure:CayleyOfZ} for an example. The only fact we will use about quasi-isometries is that they preserve ``large-scale properties'' of the graph, as for examples the number of ends.
+If $S$ and $T$ are two generating sets of $G$, the graphs $\Sch(G,H;S)$ and $\Sch(G,H;T)$ need not to be isomorphic. However, if both $S$ and $T$ are finite, then $\Sch(G,H;S)$ and $\Sch(G,H;T)$ are quasi-isometric, see \cite[IV.B.21.iii]{DelaHarpe2000} for a proof and Figure~\ref{Figure:CayleyOfZ} for an example. The only fact we will use about quasi-isometries is that they preserve ``large-scale properties'' of the graph, as for example the number of ends.
 Observe that the requirement that both $S$ and $T$ are finite is crucial for the existence of a quasi-isometry between the corresponding Schreier graphs. Indeed, for every group  $\Cayley(G;G\setminus\{1\})=\Sch(G,\{1\};G\setminus\{1\})$ is always a complete graph on $\abs{G}$ vertices, in particular  $\Cayley(\Z;\{1\})$ and $\Cayley(\Z;\Z\setminus\{0\})$ are not quasi-isometric.
 
 %
@@ -82,7 +82,7 @@ Observe that the requirement that both $S$ and $T$ are finite is crucial for the
 \end{figure}
 \begin{figure}[htbp]\centering
 \input{graphes/SchreierF2.tex}
-\caption{A fragment of a Schreier graph (with $4$ ends) of the free group $F_2=\langle \textcolor{red}{x^{\pm1}},\textcolor{blue}{y^{\pm1}}\rangle$.}
+\caption{A fragment of a Schreier graph ($4$ ends) of the free group $F_2=\langle \textcolor{red}{x^{\pm1}},\textcolor{blue}{y^{\pm1}}\rangle$.}
 \label{Figure:SchreierOfF2}
 \end{figure}
 %
@@ -94,15 +94,15 @@ Let $\Gamma$ be a graph. The \emph{number of ends} of $\Gamma$ is the supremum, 
 \end{defn}
 There exists other characterization of the number of ends in graphs, %notably in terms of equivalence classes of rays,
 see \cite{MR1967888} and the references therein, but Definition \ref{Def:Ends} is the one that best suits our purpose.
-%The interested reader may refer to \cite{MR1967888} and the references therein for an extended treatment of the 
-A locally finite graph (i.e. such that every vertex has finite degree) is finite if and only if it has $0$ ends.
-%The graphs of the Figures~\ref{Figure:CayleyOfZ} and \ref{Figure:CayleyOfZ2} have respectively 2 ends and 1 end. 
+%The interested reader may refer to \cite{MR1967888} and the references therein for an extended treatment of the
+A locally finite graph (i.e. such that every vertex has finite degree) is finite if and only if it has $0$ end.
+%The graphs of the Figures~\ref{Figure:CayleyOfZ} and \ref{Figure:CayleyOfZ2} have respectively 2 ends and 1 end.
 
 An important fact about the number of ends of a graph, is that it is an invariant of quasi-isometry, see \cite{MR1213151}. In particular, if $G$ is a finitely generated group it is possible to speak about the number of ends of the Schreier graph $\Sch(G,H;S)$ without specifying a particular finite generating set $S$.
 By a celebrated result of Stallings \cite{Stallings1971}, the number of ends of a Cayley graph of a finitely generated group can only be $0$, $1$, $2$ or infinite (in which case it is uncountable), see Figures~\ref{Figure:CayleyOfZ} and \ref{Figure:CayleyOfZ2} for some examples.
 On the other hand, Schreier graphs may have any number of ends in $\mathbf N\cup\{\infty\}$, see Figure~\ref{Figure:SchreierOfF2} for an example of a graph with $4$ ends.
 %While the number of ends of Cayley graphs of finitely generated groups can only be $0$, $1$, $2$ or infinite (in which case it is uncountable) \cite[Theorem 11.27]{Stallings1971}, Schreier graphs may have any number of ends in $\mathbf N\cup\{\infty\}$, see Figure~\ref{Figure:SchreierOfF2} for an example of a graph with another number of ends.
-In fact, every regular graph of even degree is isomorphic to a Schreier graph, \cite{MR0450121,MR1358635}. 
+In fact, every regular graph of even degree is isomorphic to a Schreier graph, \cite{MR0450121,MR1358635}.
 
 We are now finally able to introduce property FW. The following characterization is due to Cornulier \cite{Cornulier2013}.
 %
@@ -137,7 +137,7 @@ Property FW admits many distinct characterizations that allow to define it for g
 %
 %
 %
-Let $X$ be a set and $G$ a group. We view 
+Let $X$ be a set and $G$ a group. We view
 $\bigoplus_XG$ as the set of functions from $X$ to $G$ with finite support:
 \[
 	\bigoplus_XG=\setst{\varphi\colon X\to G}{\varphi(x)=1 \textnormal{ for all but finitely many }x}.
@@ -157,8 +157,8 @@ Another (trivial) examples of wreath products are direct products $G\times H$ wh
 
 Let $S$ be a generating set of $G$ and $T$ a generating set of $H$.
 Suppose that $H$ acts transitively on $X$ and let $x\in X$ be any point.
-Finally, let $\delta_x^s$ be the element of $\bigoplus_XG$ defined by $\delta_x^s(x)=s$ and $\delta_x^s(y)=1_G$ if $y\neq x$ and let $\mathbf 1$ be the constant function with value $1$.
-It is then standard that 
+Finally, let $\delta_x^s$ be the element of $\bigoplus_XG$ defined by $\delta_x^s(x)=s$ and $\delta_x^s(y)=1_G$ if $y\neq x$ and let $\mathbf 1$ be the constant function with value $1_G$.
+It is then standard that
 \[
 	\setst{(\delta_x^s,1_H)}{s \in S} \cup \setst{(\mathbf 1,t}{t \in T}
 \]
