@@ -1,0 +1,41 @@
+\begin{tikzpicture}
+\fill[color = gray!20] (-6,-1.5) -- (3,-1.5) --(6,1.7) -- (-3,1.7) --cycle;
+\draw (4.5,1) node {$Y_g$};
+\node[style=blacknode, label= {below:$(g,x_0)$}] (00) at (0,0) {};
+\node[style=blacknode, label={below:$(g,t_1x_0)$}] (10) at (2,0) {};
+\node[style=blacknode, label={below:$(g,t^{-1}_1x_0)$}] (-10) at (-2,0) {};
+\node[style=blacknode, label={left:$(g,t_2x_0)$}] (20) at (-1,1) {};
+\draw(-10) -- (00) -- (10);
+\draw (20) -- (00);
+
+\begin{scope}[shift = {(3,4)}]
+\fill[color = gray!20] (-6,-1.5) -- (3,-1.5) --(6,1.7) -- (-3,1.7) --cycle;
+\draw (4.5,1) node {$Y_{sg}$};
+\node[style=blacknode, label={below:$(sg,x_0)$}] (01) at (0,0) {};
+\node[style=blacknode, label={below:$(sg,t_1x_0)$}] (11) at (2,0) {};
+\node[style=blacknode, label={below:$(sg,t^{-1}_1x_0)$}] (-11) at (-2,0) {};
+\node[style=blacknode, label={left:$(sg,t_2x_0)$}] (21) at (-1,1) {};
+\draw(-11) -- (01) -- (11);
+\draw (21) -- (01);
+\end{scope}
+
+\begin{scope}[shift = {(-3,-4)}]
+\fill[color = gray!20] (-6,-1.5) -- (3,-1.5) --(6,1.7) -- (-3,1.7) --cycle;
+\draw (4.5,1) node {$Y_{s^{-1}g}$};
+\node[style=blacknode, label={below:$(s^{-1}g,x_0)$}] (02) at (0,0) {};
+\node[style=blacknode, label={below:$(s^{-1}g,t_1x_0)$}] (12) at (2,0) {};
+\node[style=blacknode, label={below:$(s^{-1}g,t^{-1}_1x_0)$}] (-12) at (-2,0) {};
+\node[style=blacknode, label={left:$(s^{-1}g,t_2x_0)$}] (22) at (-1,1) {};
+\draw(-12) -- (02) -- (12);
+\draw (22) -- (02);\end{scope}
+\draw [dashed] (02) to [out=45,in=190] (00) to [out=45,in=190] (01);
+\draw [dashed] (10) to [myloop above] (10) ;
+\draw [dashed] (20) to [myloop above] (20) ;
+\draw [dashed] (-10) to [myloop above] (-10) ;
+\draw [dashed] (11) to [myloop above] (11) ;
+\draw [dashed] (21) to [myloop above] (21) ;
+\draw [dashed] (-11) to [myloop above] (-11) ;
+\draw [dashed] (12) to [myloop above] (12) ;
+\draw [dashed] (22) to [myloop above] (22) ;
+\draw [dashed] (-12) to [myloop above] (-12) ;
+\end{tikzpicture}
