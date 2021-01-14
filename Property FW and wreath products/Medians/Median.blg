@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Median.aux
+White space in argument---line 49 of file Median.aux
+ : \citation{MR0476875
+ :                     }
+I'm skipping whatever remains of this command
+The style file: plain.bst
+White space in argument---line 136 of file Median.aux
+ : \citation{MR0476875
+ :                     }
+I'm skipping whatever remains of this command
+Database file #1: biblio.bib
+Warning--I didn't find a database entry for "MR2415834"
+Warning--I didn't find a database entry for "MR2240370"
+Warning--I didn't find a database entry for "MR1432323"
+Warning--I didn't find a database entry for "MR3299841"
+Warning--I didn't find a database entry for "2013arXiv1302.5982C"
+You've used 13 entries,
+            2118 wiz_defined-function locations,
+            611 strings with 6239 characters,
+and the built_in function-call counts, 4490 in all, are:
+= -- 490
+> -- 120
+< -- 4
++ -- 49
+- -- 36
+* -- 256
+:= -- 682
+add.period$ -- 44
+call.type$ -- 13
+change.case$ -- 54
+chr.to.int$ -- 0
+cite$ -- 13
+duplicate$ -- 224
+empty$ -- 369
+format.name$ -- 36
+if$ -- 1000
+int.to.chr$ -- 0
+int.to.str$ -- 13
+missing$ -- 16
+newline$ -- 71
+num.names$ -- 26
+pop$ -- 54
+preamble$ -- 1
+purify$ -- 44
+quote$ -- 0
+skip$ -- 192
+stack$ -- 0
+substring$ -- 334
+swap$ -- 88
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 46
+warning$ -- 0
+while$ -- 45
+width$ -- 15
+write$ -- 151
+(There were 2 error messages)
