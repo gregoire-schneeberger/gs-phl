@@ -5,6 +5,18 @@ H.~J. Bandelt.
 \newblock {Retracts of hypercubes}.
 \newblock {\em J. Graph Theory}, 8(4):501--510, 1984.
 
+\bibitem{MR2405677}
+Hans-J{\"{u}}rgen Bandelt and Victor Chepoi.
+\newblock {Metric graph theory and geometry: a survey}.
+\newblock In {\em Surv. Discret. Comput. Geom.}, volume 453 of {\em Contemp.
+  Math.}, pages 49--86. Amer. Math. Soc., Providence, RI, 2008.
+
+\bibitem{Bekka2008}
+Bachir Bekka, Pierre de~la Harpe, and Alain Valette.
+\newblock {\em {Kazhdan's property ({\{}T{\}})}}, volume~11 of {\em New
+  Mathematical Monographs}.
+\newblock Cambridge University Press, Cambridge, 2008.
+
 \bibitem{MR1213151}
 Stephen~G Brick.
 \newblock {Quasi-isometries and ends of groups}.
@@ -44,6 +56,12 @@ Jonathan~L. Gross.
   graph.
 \newblock {\em J. Combinatorial Theory Ser. B}, 22(3):227--232, 1977.
 
+\bibitem{MR1705337}
+Sandi Klav{\v{z}}ar and Henry~Martyn Mulder.
+\newblock {Median graphs: characterizations, location theory and related
+  structures}.
+\newblock {\em J. Comb. Math. Comb. Comput.}, 30:103--127, 1999.
+
 \bibitem{LS2020}
 Paul-Henry {Leemann} and Gr{\'e}goire {Schneeberger}.
 \newblock {Property {FW} and wreath products of groups: a simple approach using
@@ -65,9 +83,9 @@ Markus Neuhauser.
 \bibitem{MR0476875}
 Jean-Pierre Serre.
 \newblock {\em Arbres, amalgames, {${\SL}_{2}$}}.
-\newblock Société Mathématique de France, Paris, 1977.
-\newblock Avec un sommaire anglais, Rédigé avec la collaboration de Hyman
-  Bass, Astérisque, No. 46.
+\newblock Soci{\'e}t{\'e} Math{\'e}matique de France, Paris, 1977.
+\newblock Avec un sommaire anglais, R{\'e}dig{\'e} avec la collaboration de
+  Hyman Bass, Ast{\'e}risque, No. 46.
 
 \bibitem{Stallings1971}
 John Stallings.
