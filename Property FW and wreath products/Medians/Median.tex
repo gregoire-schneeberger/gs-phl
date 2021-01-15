@@ -52,6 +52,7 @@
 \DeclareMathOperator\stab{Stab}
 \DeclareMathOperator\Ind{Ind}
 \DeclareMathOperator\SL{SL}
+\DeclareMathOperator\Sym{Sym}
 \DeclareMathOperator\diag{diag}
 \DeclareMathOperator\Hom{Hom}
 \DeclareMathOperator\Isom{Isom}
@@ -435,19 +436,6 @@ Finally, it is possible to put an ultradistance on the vertices of $T$ by  $d_\i
 We begin this section by insisting on the fact that when speaking of a property BS, it will always stand for one of the five group properties of Definition~\ref{Def:FHFA}, that is SB, FH, FW, FA or uncountable cofinality.
 Similarly, a structure S will always stand for one of the five structures appearing in Definition~\ref{Def:FHFA}, that is metric space, real Hilbert space, connected median graph, tree or ultrametric space.
 Indeed, we only guarantee the validity of our results in this restricted context, even if there might be considered as good heuristics in a more general setting.
-
-
-We now state two easy but useful lemma.
-%
-%
-\begin{lem}\label{Lemma:Subgroup}
-Let $G$ be a group and let $H$ be a finite index subgroup.
-If $H$ has property BS, then so does~$G$.
-\end{lem}
-\begin{proof}
-Suppose that $G$ does not have BS and let $X$ be a S-space on which $G$ acts with an unbounded orbit $\orbite$.
-Then $H$ acts on $X$ and $\orbite$ is a union of at most $[G:H]$ orbits. This directly implies that $H$ has an unbounded orbit and therefore does not have BS.
-\end{proof}
 %
 %
 \begin{lem}\label{Lemma:Quotient}
@@ -472,9 +460,10 @@ If both $N$ and $H$ have property BS, then $N\rtimes H$ also has property BS.
 \end{enumerate}
 \end{lem}
 \begin{proof}
-Suppose that $G$ has BS and let $X$ be a S-space on which $H$ acts.
-Then $G$ acts on $X$ by $g.x\coloneqq h.x$ where $g=nh$ with $n\in N$ and $h\in H$.
-By assumption, the action of $G$ on $X$ has bounded orbits and so does the action of $H$.
+The first part is Lemma~\ref{Lemma:Quotient}.
+%Suppose that $G$ has BS and let $X$ be a S-space on which $H$ acts.
+%Then $G$ acts on $X$ by $g.x\coloneqq h.x$ where $g=nh$ with $n\in N$ and $h\in H$.
+%By assumption, the action of $G$ on $X$ has bounded orbits and so does the action of $H$.
 
 On the other hand, suppose that $N$ and $H$ have BS and let $X$ be a S-space on which $G$ acts.
 Then both $N$ and $H$ acts on $X$ with bounded orbits.
@@ -559,33 +548,55 @@ This subset is $G\wr_{X} H$ invariant, which gives us the desired action of $G\w
 \end{rem}
 
 
-We now turn our attention to properties that behave well under products. Let us first introduce some definitions.\todo{On peut peut-être se contenter de \emph{compatible with powers}.}
+We now turn our attention to properties that behave well under products. Let us first introduce some definitions.
 %
 %
-\begin{defn}
-%A structure S on metric spaces is \emph{compatible with products} if for any S-spaces $(X,d_X)$ and $(Y,d_Y)$ there exists a distance $d$ on $X\times Y$ such that $(X\times Y,d)$ is a S-space and such that for any $G$ action on $X$ and any $H$ action on $Y$, the canonical action of $G\times H$ on $X\times Y$ preserves $d$ and the S-space structure.
-A structure S on metric spaces is \emph{compatible with products} if there exists a choice of a product metric $d$ such that for any S-spaces $(X,d_X)$ and $(Y,d_Y)$, the cartesian product $(X\times Y,d)$ is a S-space such that for any $G$ action on $X$ and any $H$ action on $Y$, the canonical action of $G\times H$ on $X\times Y$ preserves $d$ and the S-space structure.
-
-Such a structure \emph{preserves unboundedness} if for every S-space $(X,d_X)$, every integer $n$ there is a $d$ as above such that for every unbounded subset $\orbite$ of $X$, the subset $\diag(\orbite)$ of $(X^n,d)$ is unbounded.%\todo{C'est dépendant du choix de $d$. À voir si on peut l'exprimer plus joliment.}
+\begin{defn}\label{Def:Cartesian}
+A structure S on metric spaces has \emph{compatible cartesian powers} if for any S-space $X$ and any integer $n$, the set $X^n$ admits an S-structure, called the \emph{cartesian power of $X$} such that:
+\begin{enumerate}
+\item
+The projections $\pi_i\colon X^n\to X$ preserve the S-structure,
+\item\label{Condidef:1}
+The underlying metric space $(X^n,d)$ is a product metric space, that is its underlying topology is the product topology on $X^n$,
+\item\label{Condidef:2}
+For any unbounded set $E\subset X$, the diagonal $\diag(E)\subset X^n$ is unbounded,
+\item\label{Condidef:3}
+If $G\curvearrowright X$ is an action preserving the S-structure and $1\leq i\leq n$, then the action $G\curvearrowright X^n$ defined by $g.(x_1,\dots,x_n)\coloneqq(x_1,\dots,g.x_i,\dots, x_n)$ preserves the S-structure,
+\item\label{Condidef:4}
+The action by permutation of $\Sym(n)$ on $X^n$ preserves the S-structure.
+\end{enumerate}
+%%A structure S on metric spaces is \emph{compatible with products} if for any S-spaces $(X,d_X)$ and $(Y,d_Y)$ there exists a distance $d$ on $X\times Y$ such that $(X\times Y,d)$ is a S-space and such that for any $G$ action on $X$ and any $H$ action on $Y$, the canonical action of $G\times H$ on $X\times Y$ preserves $d$ and the S-space structure.
+%A structure S on metric spaces is \emph{compatible with products} if there exists a choice of a product metric $d$ such that for any S-spaces $(X,d_X)$ and $(Y,d_Y)$, the cartesian product $(X\times Y,d)$ is a S-space such that for any $G$ action on $X$ and any $H$ action on $Y$, the canonical action of $G\times H$ on $X\times Y$ preserves $d$ and the S-space structure.
+%
+%Such a structure \emph{preserves unboundedness} if for every S-space $(X,d_X)$, every integer $n$ there is a $d$ as above such that for every unbounded subset $\orbite$ of $X$, the subset $\diag(\orbite)$ of $(X^n,d)$ is unbounded.%\todo{C'est dépendant du choix de $d$. À voir si on peut l'exprimer plus joliment.}
 \end{defn}
-\todo[inline]{La définition ci-dessus mériterait d'être réécrite. Surtout en lien avec le lemma suivant. Je vais m'y atteler}
+%\todo[inline]{La définition ci-dessus mériterait d'être réécrite. Surtout en lien avec le lemma suivant. Je vais m'y atteler}
 %\todo[inline]{J'essaie de réécrire cela en terme techniques. Pour le moment ce n'est pas correct, puisqu'il faut décider quelle métrique on mets sur $F(X)\times F(Y)$. À noter que la bonne notion est sans doute de regarder les espaces bornologiques métrisables, i.e. les espaces métriques à équivalence prêt où l'équivalence est d'avoir les mêmes parties bornées. En effet, toutes les distances $d_p=(d_1^p+d_2^p)^{\frac1p}$ sur le produits sont équivalentes.}
 %A category $\mathbf{PMet}$ is \emph{compatible with products} if it has products and they are obvious in the sens of $F(X\times Y)\cong F(X)\times F(Y)$, where $F\colon \mathbf{PMet}\to \mathbf{Met}$ is the faithful functor of Definition~\ref{Def:Categoric}. In this case, if we have a $G$-action $\alpha\colon G\to\Hom(X,X)$ and a $H$-action $\beta\colon H\to\Hom(Y,Y)$ we naturally have a $G$-action $\alpha\times\beta\colon G\times H\to \Hom(X\times Y,X\times Y)$, where $(\alpha\times\beta)_{(g,h)}=\alpha_g\times\beta_h$.}
 %
 %
-Examples of structures that preserve unboundedness include: ultrametric spaces (with $d_\infty=\max\{d_X,d_Y\}$), connected median graphs (with $d_1=d_X+d_Y$), real Hilbert spaces (with $d_2=\sqrt{d_X^2+d_Y^2}$) and metric spaces (with $d_p=(d_X^p+d_Y^p)^{\frac1p}$ for any $p\in[1,\infty]$).
-On the other hand, being a tree is not compatible with products.
+A sufficient condition to have Condition~\ref{Condidef:2} in Definition~\ref{Def:Cartesian} is that the induced metric on $X^n$ generates the bornology product on $X^n$. Observe that Condition~\ref{Condidef:1} does not imply Condition~\ref{Condidef:2}, as if $d$ is a metric on $X^n$, the metric $d'(x,y)=\min\{d(x,y),1\}$ generates the same topology but is bounded.
+
+Examples of structures that have compatible cartesian powers include: ultrametric spaces (with $d_\infty=\max\{d_X,d_Y\}$), connected median graphs (with $d_1=d_X+d_Y$), real Hilbert spaces (with $d_2=\sqrt{d_X^2+d_Y^2}$) and metric spaces (with $d_p=(d_X^p+d_Y^p)^{\frac1p}$ for any $p\in[1,\infty]$).
+On the other hand, trees do not have compatible cartesian powers.
+
+We now are able to describe the comportement of property BS under finite index subgroups.
 %
 %
-\begin{lem}\label{Lemma:Unboundedness}
-Let S be a structure that preserves unboundedness. Then
+\begin{lem}\label{Lemma:Subgroup}
+Let $G$ be a group and let $H$ be a finite index subgroup.
 \begin{enumerate}
-\item If $G$ has property BS, then so does any finite index subgroup of $G$,
-\item If $X$ is finite and $G\wr_XH$ has property BS, then $G$ has property BS.
+\item
+If $H$ has property BS, then so does~$G$,
+\item
+If S has compatible cartesian powers and $G$ has property BS, then $H$ has property BS.
 \end{enumerate}
 \end{lem}
 \begin{proof}
-For the first assertion, suppose that $H\leq G$ is a finite index subgroup of G without property BS.
+Suppose that $G$ does not have BS and let $X$ be a S-space on which $G$ acts with an unbounded orbit $\orbite$.
+Then $H$ acts on $X$ and $\orbite$ is a union of at most $[G:H]$ orbits. This directly implies that $H$ has an unbounded orbit and therefore does not have BS.
+
+On the other hand, suppose that $H\leq G$ is a finite index subgroup of G without property BS.
 Let $\alpha\colon H\curvearrowright X$ be an action of $H$ on a S-space $(X,d_X)$ such that there is an unbounded orbit $\orbite$.
 Similarly to the classical theory of representation of finite groups, we have the induced  action $\Ind_H^G(\alpha)\colon G \curvearrowright X^{G/H}$ on the set $X^{G/H}$. Since $H$ has finite index, $(X^{G/H},d)$ is a S-space. On the other hand, the subgroup $H\leq G$ acts diagonally on $X^{G/H}$, which implies that $\diag(\orbite)$ is contained in a $G$-orbit.
 Since $\diag(\orbite)$ is unbounded, $G$ does not have property BS.
@@ -594,14 +605,22 @@ For readers that are not familiar with representations of finite groups, here is
 Let $(f_i)_{i=1}^n$ be a transversal for $G/H$.
 The natural action of $G$ on $G/H$ gives rise to an action of $G$ on $\{1,\dots,n\}$.
 Hence, for any $g$ in $G$ and $i$ in $\{1,\dots,n\}$ there exists a unique $h_{g,i}$ in $H$ such that $gf_i=f_{g.i}h_{g,i}$. That is, $h_{g,i}=gf_if_{g.i}^{-1}$.
-We then define $g.(x_1,\dots,x_n)\coloneqq(h_{g,g^{-1}.1}.x_{g^{-1}.1},\dots,h_{g,g^{-1}.n}.x_{g^{-1}.n})$. This is indeed an action, which preserves the P-structure\todo{C'est la partie tricky (mais qui marche pour SB, FH, FW, cof$\neq \omega$). À voir si on veut dire qqch dessus} of $X^{G/H}$ and such that every element $h\in H$ acts diagonally by $h.(x_1,\dots,x_n)=(h.x_1,\dots,h.x_n)$.
+We then define $g.(x_1,\dots,x_n)\coloneqq(h_{g,g^{-1}.1}.x_{g^{-1}.1},\dots,h_{g,g^{-1}.n}.x_{g^{-1}.n})$. This is indeed an action, which, by Conditions~\ref{Condidef:3} and \ref{Condidef:4} of Definition~\ref{Def:Cartesian}, preserves the S-structure of $X^{G/H}$.
+Moreover, every element $h\in H$ acts diagonally by $h.(x_1,\dots,x_n)=(h.x_1,\dots,h.x_n)$.
 In particular, this $G$ action has an unbounded orbit.
-
-For the second assertion suppose that $G$ does not have BS and let $(Y,d_Y)$ be a S-space on which $G$ acts with an unbounded orbit $G.y$.
-Then $(Y^X,d)$ is a S-space and we have the \emph{primitive action}\todo{pareil, vérifier que c'est bien une action de S-space} of the wreath product $G\wr_XH$ on $Y^X$:
+\end{proof}
+%
+%
+\begin{lem}\label{Lemma:Unboundedness}
+Let S be a structure that has compatible cartesian powers. If $X$ is finite and $G\wr_XH$ has property BS, then $G$ has property BS.
+\end{lem}
+\begin{proof}
+Suppose that $G$ does not have BS and let $(Y,d_Y)$ be a S-space on which $G$ acts with an unbounded orbit $G.y$.
+Then $(Y^X,d)$ is a S-space and we have the \emph{primitive action} of the wreath product $G\wr_XH$ on $Y^X$:
 \[
 	\bigl((\varphi,h).\psi\bigr)(x)=\varphi(h^{-1}.x)\psi(h^{-1}.x).
 \]
+By Conditions~\ref{Condidef:3} and \ref{Condidef:4} of Definition~\ref{Def:Cartesian}, this action preserves the S-structure.
 The orbit $G.y$ embeds diagonally and hence $\diag(G.y)$ is an unbounded subset of some $G\wr_XH$-orbit, which implies that $G\wr_XH$ does not have property BS.
 \end{proof}
 %
@@ -610,7 +629,7 @@ By combining Corollary~\ref{Cor:Wreath} and Lemmas~\ref{Lemma:XFinite} and~\ref{
 %
 %
 \begin{thm}\label{Thm:Technic}
-Let S be a property that preserves unboundedness and such that BS implies FW.
+Let S be a structure that has compatible cartesian powers and such that BS implies FW.
 Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts. Then the wreath product $G \wr_X H$ has property BS if and only if $G$ and $H$ have property BS and $X$ is finite.
 \end{thm}
 %
