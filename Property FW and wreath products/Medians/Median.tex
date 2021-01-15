@@ -15,6 +15,9 @@
 \usepackage{amsthm}% environnement ams-theorem
 \usepackage[colorlinks,breaklinks,bookmarks,plainpages=false,unicode=true]{hyperref}%
 \usepackage{todonotes} %ajouter des commentaires
+\newcounter{mycomment}
+\newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33},inline]{\textbf{Commentaire [\uppercase{#1}\themycomment]:}~#2}}}
+	
 %\usepackage[disable]{todonotes}%cache les commentaires
 \usepackage{datetime} %ajoute la date et l'heure
 %%
@@ -163,7 +166,7 @@ Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which
 %
 \todo[inline]{Réécrire ce qui suit}
 The above results on property (T), FW and FA were obtained with distinct methods even if the final results share a common flavor.\todo{Retravailler la phrase, plus éventuellement dire un mot sur les différentes méthodes.}
-For countable groups, property (T) is equivalent, by the Delorme-Guichardet's Theorem,\todo{Mettre ref ici ou plus tard} to property FH. Hence, all three of this properties admit a characterization in terms of the existence of a fixed point for some actions.
+For countable groups, property (T) is equivalent, by the Delorme-Guichardet's Theorem,\mycomment[GS]{Ref ajoutée} to property FH, see \cite[Thm. 2.12.4]{Bekka2008}. Hence, all three of this properties admit a characterization in terms of the existence of a fixed point for some actions.
 ... 
 
 \begin{thm}\label{Thm:Main}
@@ -283,7 +286,7 @@ Remind that a metric space $(X,d)$ is \emph{ultrametric} if and only if for any 
 
 For $u$ and $v$ two vertices of a connected\footnote{We will always assume that our connected graphs are non-empty. This is coherent with the definition that a connected graph is a graph with exactly one connected component.} graph $\mathcal G$, we define the total interval $[u,v]$ as the set of vertices that lie on some shortest path between $u$ and $v$.
 A connected graph $\mathcal G$ is \emph{median} if for any three vertices $u$, $v$, $w$, the intersection $[u,v]\cap[v,w]\cap[u,w]$ consists of a unique vertex, denoted $m(u,v,w)$.
-A graph is \emph{median} if each of its connected components is median.
+A graph is \emph{median} if each of its connected components is median. For surveys on median graphs see \cite{MR1705337,MR2405677}.
 
 \todo[inline]{Add refs}
 \begin{defn}\label{Def:FHFA}
@@ -300,6 +303,7 @@ It is said to have
 \emph{uncountable cofinality} if any action on an ultrametric space has bounded orbits.
 \end{itemize}
 \end{defn}
+\mycomment[GS]{Peut être ajouter quelque part que les actions doivent être des iso}
 %
 %
 For countable groups (and more generally for $\sigma$-compact locally compact groups), property FH is equivalent to the celebrated Kazdhan's property (T) by the Delorme-Guichardet theorem, see for example \cite{MR2415834}, but this is not true in general \cite{MR2240370}.
