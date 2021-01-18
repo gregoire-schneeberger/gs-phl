@@ -60,6 +60,7 @@
 \DeclareMathOperator\Isom{Isom}
 \DeclareMathOperator\Aut{Aut}
 \DeclareMathOperator\id{id}
+\DeclareMathOperator\ab{ab}
 %
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \newcommand*{\orbite}{\mathcal O}
@@ -202,7 +203,7 @@ Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ a set on which $H
 A crucial ingredient of our proofs, is that the spaces under consideration admit a natural notion of Cartesian products.
 In particular, some of our results do not work for trees and property FA.
 Nevertheless, we are still able to show that if $G\wr_XH$ has property FA, then $H$ acts on $X$ with finitely many orbits. Combining this with Theorem~\ref{Thm:FACK} we obtain 
-\begin{thm}
+\begin{thm}\label{Thm:FAFiniteOrbits}
 Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts. Suppose that $H$ acts on $X$ without fixed points.
 Then $G\wr_XH$ has property FA if and only if $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G/[G:G]$ is finite and $G$ has cof~$\neq\omega$.
 \end{thm}
@@ -509,7 +510,7 @@ On the other hand, trees do not have compatible cartesian powers
 We conclude this section by a remark on a variation of Definition~\ref{Def:FHFA}.
 One might wonder what happens if in Definition~\ref{Def:FHFA} we replace the requirement of having bounded orbits by having uniformly bounded orbits.
 It turns out that this is rather uninteresting as a group $G$ is trivial if and only if any $G$-action on a metric space (respectively on an Hilbert space, on a connected median graph, on a tree or on an ultrametric space) has uniformly bounded orbits.
-Indeed, if $G$ is non-trivial, then for the action of $G$ on the Hilbert space $l^2(G)$ the orbit of $n\cdot \delta_g$ as diameter $n\sqrt2$.
+Indeed, if $G$ is non-trivial, then for the action of $G$ on the Hilbert space $\ell^2(G)$ the orbit of $n\cdot \delta_g$ as diameter $n\sqrt2$.
 For a tree (and hence also for a connetected median graph), one may look at the tree $T$ obtained by taking a root $r$ on which we glue an infinite ray for each elements of $G$. Then $G$ naturally acts on $T$ by permuting the rays. The orbits for this action are the $\mathcal L_n=\setst{v}{\textnormal{at distance $n$ of }r}$ which have diameter $2n$.
 Finally, it is possible to put an ultradistance on the vertices of $T$ by  $d_\infty(x,y)\coloneqq\max\{d(x,r),d(y,r)\}$ if $x\neq y$. Then the orbits are still the~$\mathcal L_n$, but this time with diameter $n$.
 %
@@ -532,9 +533,10 @@ Finally, it is possible to put an ultradistance on the vertices of $T$ by  $d_\i
 %
 %
 %
-We begin this section by insisting on the fact that when speaking of a property BS, it will always stand for one of the five group properties of Definition~\ref{Def:FHFA}, that is SB, FH, FW, FA or cof~$\neq\omega$.
-Similarly, a structure S will always stand for one of the five structures appearing in Definition~\ref{Def:FHFA}, that is metric space, real Hilbert space, connected median graph, tree or ultrametric space.
-Indeed, we only guarantee the validity of our results in this restricted context, even if there might be considered as good heuristics in a more general setting.
+%We begin this section by insisting on the fact that when speaking of a property BS, it will always stand for one of the five group properties of Definition~\ref{Def:FHFA}, that is SB, FH, FW, FA or cof~$\neq\omega$.
+%Similarly, a structure S will always stand for one of the five structures appearing in Definition~\ref{Def:FHFA}, that is metric space, real Hilbert space, connected median graph, tree or ultrametric space.
+%Indeed, we only guarantee the validity of our results in this restricted context, even if there might be considered as good heuristics in a more general setting.
+We begin this section the following trivial but useful result.
 %
 %
 \begin{lem}\label{Lemma:Quotient}
@@ -618,6 +620,12 @@ The second and third assertions follows of the first assertion combined with Cor
 \end{proof}
 %
 %
+While the statement (and the proof) of Lemma~\ref{Lemma:Cof} is expressed in terms of cof~$\neq\omega$, it is also possible to state it and prove it for a structure S without a priori knowing if BS is stronger than cof~$\neq\omega$.
+The main idea is to find a ``natural'' S-space on which $G=\bigoplus_{i\geq 1}G_i$ acts. For example, for Hilbert spaces, one can take $\bigoplus_{i\geq 1}\ell^2(G_i)$. For connected median graphs, one take the connected component of $\{1_{G_1},1_{G_2},\dots\}$ in $\powerset{\bigsqcup_{i\geq 1} G_i}$.
+For trees, it is possible to put a forest structure on $\powerset{\bigsqcup_{i\geq 1} G_i}$ in the following way.
+For $E\in\powerset{\bigsqcup_{i\geq 1} G_i}$, and for each $i$ such that $E\cap G_j$ is empty for all $j\leq i$, add an edge from $E$ to $E\cup\{g\}$ for each $g\in G_i$. The graph obtained this way is a $G$-invariant subforest of the median graph on $\powerset{\bigsqcup_{i\geq 1} G_i}$.
+%
+%
 \begin{lem}\label{Lemma:XFinite}
 Suppose that BS implies FW.
 Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which $H$ acts.
@@ -637,7 +645,11 @@ That is the action of $G\wr_XH$ on the connected component of~$\mathbf 1$ has an
 \end{proof}
 %
 %
-It follows from Theorems~\ref{Thm:FACK} and \ref{Thm:UncCoun} than in the assumptions of Lemma~\ref{Lemma:XFinite} it is not possible to replace property FW by property FA or by cof~$\neq\omega$.
+Once again, given a suitable S, it is sometimes possible to give a direct proof of Lemma~\ref{Lemma:XFinite}.
+For example, for Hilbert spaces one can take $\bigoplus_X\ell^2(G)$ with $\bigoplus_XG$ acting coordinatewise and $H$ by permutations.
+On the other hand, both the forest structure on $\powerset{\bigsqcup_XG}$ and the ultrametric structure on $\bigoplus_XG$ are in general not invariant under the natural action of $H$ by permutations.
+
+In fact, it follows from Theorems~\ref{Thm:FACK} and \ref{Thm:UncCoun} than in the assumptions of Lemma~\ref{Lemma:XFinite} it is not possible to replace property FW by property FA or by cof~$\neq\omega$.
 %
 %
 \begin{rem}\label{Rem:Actionsb}
@@ -819,10 +831,17 @@ While the fact that being a tree is not compatible with products is an obstacle 
 Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts.
 Then
 \begin{enumerate}
-\item If $G\wr_XH$ has property FA, then $H$ has property FA and $H$ acts on $X$ with finitely many orbits,
+\item If $G\wr_XH$ has property FA, then $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G/[G:G]$ is finite and $G$ has cof~$\neq\omega$,
 \item If both $G$ and $H$ have property FA and $X$ is finite, then $G\wr_XH$ has property~FA.
 \end{enumerate}
 \end{prop}
+\begin{proof}
+The only things that is not a consequence of Corollary~\ref{Cor:Wreath}, Lemma~\ref{Lemma:Cof} and Theorem~\ref{Thm:UncCoun} is the fact that if $G\wr_XH$ has property FA, then the abelianization $G^{\ab}=G/[G,G]$ is finite.
+
+If $G\wr_XH$ has property FA, so does its abelianization $(G\wr_XH)^{\ab}=(G^{\ab})^{X/H}\times H^{\ab}$. Since we already know that $H$ acts on $X$ with finitely many orbits, we conclude that $G^{\ab}$ is an abelian group with property FA.
+But an infinite abelian group either has a quotient which is isomorphic to $\Z$, or a quotient which is an infinite direct sum of non-trivial groups.
+But neither $\Z$, nor an infinite direct sum of non-trivial groups has FA, and hence $G^{\ab}$ is finite.
+\end{proof}
 %
 %
 %On the other hand, the following result on property FA  was obtained by Cornulier and Kar.
@@ -834,15 +853,18 @@ Then
 %\end{thm}
 %
 %
-By Proposition~\ref{Prop:WRFA}, it is possible to get ride of the ``finitely many orbits'' hypothesis in Theorem~\ref{Thm:FACK} to obtain.
-%
-%
-\begin{thm}\label{Thm:FACKPlus}
-Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts without fixed points.
-Then $G\wr_XH$ has property FA if and only if $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G/[G:G]$ is finite and $G$ has cof~$\neq\omega$.
-\end{thm}
+Moreover, by using Lemma~\ref{Lemma:Cof} we can get ride of the ``finitely many orbits'' hypothesis in Theorem~\ref{Thm:FACK} in order to obtain Theorem~\ref{Thm:FAFiniteOrbits}.
+By Proposition~\ref{Prop:WRFA} (more precisely Lemma~\ref{Lemma:Cof}), it is possible to get ride of the ``finitely many orbits'' hypothesis in Theorem~\ref{Thm:FACK} to obtain
+%%
+%%
+%\begin{thm}\label{Thm:FACKPlus}
+%Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts without fixed points.
+%Then $G\wr_XH$ has property FA if and only if $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G/[G:G]$ is finite and $G$ has cof~$\neq\omega$.
+%\end{thm}
+%%
+%%
 
-Observe that, by the characterization of Serre~\cite{MR0476875}, a group $G$ has property FA if and only if it has no morphism onto $\Z$, it has cof~$\neq\omega$ and it is not a non-trivial amalgam. In particular, a finitely generated group $G$ has property FA if and only if $G/[G:G]$ is finite, $G$ has cof~$\neq\omega$ and $G$ is not a non-trivial amalgam.
+Finally, observe that, by the characterization of Serre~\cite{MR0476875}, a group $G$ has property FA if and only if it has no morphism onto $\Z$, it has cof~$\neq\omega$ and it is not a non-trivial amalgam. In particular, a finitely generated group $G$ has property FA if and only if $G/[G:G]$ is finite, $G$ has cof~$\neq\omega$ and $G$ is not a non-trivial amalgam.
 We hence obtain
 %
 %
@@ -851,10 +873,9 @@ Let $G$ and $H$ be two groups with $G$ non-trivial and finitely generated and $X
 If $G\wr_XH$ has property FA, then $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G/[G:G]$ is finite and $G$ has cof~$\neq\omega$.
 \end{prop}
 \begin{proof}
-We already know that $H$ acts with finitely many orbits.
-By Corollary~\ref{Cor:Prod}, the group $G\wr_YH$ has property FA for every $H$-orbit $Y$.
+We already know that $H$ acts with finitely many orbits, which implies that the group $G\wr_YH$ has property FA for every $H$-orbit $Y$.
 Since the result holds if $H$ has no fixed points, we can hence suppose that there is one orbit reduced to a point $x_0$.
-But in this case $G\wr_{\{x_0\}}H\cong G\times H$ and by applying once again Corollary~\ref{Cor:Prod} we obtain that $G$ has property FA. Since $G$ is finitely generated, this implies the desired result.
+But in this case $G\wr_{\{x_0\}}H\cong G\times H$ and $G$ has property FA. Since $G$ is finitely generated, this implies the desired result.
 \end{proof}
 %
 %
