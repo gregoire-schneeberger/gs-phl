@@ -437,7 +437,14 @@ We can now, formally define the groupe property \emph{BS} as: \emph{Every $G$-ac
 %
 %
 In other words, an additional structure on metric spaces, is concrete category over $\mathbf{Met}$. Since $\mathbf{Met}$ itself is concrete, that is we have a faithful functor $F\colon \mathbf{Met}\to\mathbf{Set}$, the category $\mathbf{SMet}$ is also concrete and its objects can be thoughts as set with ``extra structure''.
-
+%
+%
+\begin{rem}
+The only use we will do of category theory is as a language that allows to formally define what is an \emph{additional structure on metric spaces} and to prove things in this general setting.
+A reader unfamiliar with category theory and interested only in one specific structure (as for example Banach spaces), might forget all this general non-sense and only verify that the arguments of Section~\ref{Section:Proof} apply for this structure.
+\end{rem}
+%
+%
 Obvious examples of additional structures on metric spaces include, metric spaces, Hilbert spaces and ultrametric spaces.
 For connected graphs (and hence for connected median graphs and for trees), one look at the category $\mathbf{Graph}$ where objects are connected simple graphs $G=(V,E)$ and where a morphism $f\colon (V,E)\to(V',E')$ is a function between the vertex sets such that if $(x,y)$ is an edge then either $f(x)=f(y)$ or $(f(x),f(y))$ is an edge.
 The functor $F_S\colon\mathbf{Graph}\to\mathbf{Met}$ sends a connected graph to its vertex set together with the graph distance: $d(x,y)$ is the minimum number of edges on a path between $x$ and $y$.
@@ -459,18 +466,21 @@ While we will be able to obtain some results for a general $\mathbf{SMet}$, we w
 %
 %
 \begin{defn}\label{Def:Cartesian}
-A structure S on metric spaces has \emph{compatible cartesian powers} if for any S-space $X$ and any integer $n$, the set $X^n$ admits an S-structure, called the \emph{cartesian power of $X$} such that:
+A structure S on metric spaces has \emph{compatible cartesian powers} if for any S-space $X$ and any integer $n$, there exists an S-object called the \emph{$n$\textsuperscript{th} cartesian power of $X$} and written $X^n$ such that:
 \begin{enumerate}
 \item
-The projections $\pi_i\colon X^n\to X$ are S-homomorphisms,
+$X^n$ is compatible with the cartesian product of sets. That is $F\circ F_S(X^n)$ is the set cartesian power and there exists S-morphisms $\pi_i\colon X^n\to X$ such that $F\circ F_S(\pi_i)$ are the usual set projections.
 \item\label{Condidef:1}
-The underlying metric space $F_S(X^n)$ is a product metric space, that is its underlying topology is the product topology on $X^n$,
+$X^n$ is compatible with the topology. That is, the underlying topology of  $X^n$ is the product topology on $F\circ F_S(X^n)$.
 \item\label{Condidef:2}
-For any unbounded set $E\subset X$, the diagonal $\diag(E)\subset X^n$ is unbounded,
-\item\label{Condidef:3}
-For any S-automorphisms $\varphi\in\Aut_{\mathbf{SMet}}(X)$ the bijective map $\varphi\times\id\times\dots\times\id\colon X^n\to X^n$ is an S-automorphism,
-\item\label{Condidef:4}
-The action by permutation of $\Sym(n)$ on $X^n$ is by S-automorphisms.
+$X^n$ is compatible with the bornology in the sense that if $E\subset X$ is unbounded, the diagonal $\diag(E)\subset X^n$ is unbounded.
+%\item\label{Condidef:3}
+%For any S-automorphisms $\varphi\in\Aut_{\mathbf{SMet}}(X)$ the bijective map $\varphi\times\id\times\dots\times\id\colon X^n\to X^n$ is an S-automorphism,
+%\item\label{Condidef:4}
+%The action by permutation of $\Sym(n)$ on $X^n$ is by S-automorphisms.$
+\item\label{Item:Product}
+$\Aut_{\mathbf{SMet}}(X)^n\rtimes \Sym(n)$ is a subgroup of $\Aut_{\mathbf{SMet}}(X^n)$.
+%Formally, we have a natural injection $F\circ F_S\bigl(\Aut_{\mathbf{SMet}}(X)\bigr)^n\rtimes \Sym(n)\hookrightarrow\Aut_{\mathbf{Set}}(F\circ F_S(X^n))$ has values in $F\bigl(\Aut_{\mathbf{SMet}}(X^n)\bigr)$.
 \end{enumerate}
 %%A structure S on metric spaces is \emph{compatible with products} if for any S-spaces $(X,d_X)$ and $(Y,d_Y)$ there exists a distance $d$ on $X\times Y$ such that $(X\times Y,d)$ is a S-space and such that for any $G$ action on $X$ and any $H$ action on $Y$, the canonical action of $G\times H$ on $X\times Y$ preserves $d$ and the S-space structure.
 %A structure S on metric spaces is \emph{compatible with products} if there exists a choice of a product metric $d$ such that for any S-spaces $(X,d_X)$ and $(Y,d_Y)$, the cartesian product $(X\times Y,d)$ is a S-space such that for any $G$ action on $X$ and any $H$ action on $Y$, the canonical action of $G\times H$ on $X\times Y$ preserves $d$ and the S-space structure.
@@ -482,7 +492,7 @@ The action by permutation of $\Sym(n)$ on $X^n$ is by S-automorphisms.
 %A category $\mathbf{PMet}$ is \emph{compatible with products} if it has products and they are obvious in the sens of $F(X\times Y)\cong F(X)\times F(Y)$, where $F\colon \mathbf{PMet}\to \mathbf{Met}$ is the faithful functor of Definition~\ref{Def:Categoric}. In this case, if we have a $G$-action $\alpha\colon G\to\Hom(X,X)$ and a $H$-action $\beta\colon H\to\Hom(Y,Y)$ we naturally have a $G$-action $\alpha\times\beta\colon G\times H\to \Hom(X\times Y,X\times Y)$, where $(\alpha\times\beta)_{(g,h)}=\alpha_g\times\beta_h$.}
 %
 %
-That is, we want our cartesian power to be compatible with the S-structure, with the topology, with the bornology and with group actions.
+%That is, we want our cartesian power to be compatible with the S-structure, with the topology, with the bornology and with group actions.
 
 %A sufficient condition to have Condition~\ref{Condidef:2} in Definition~\ref{Def:Cartesian} is that the induced metric on $X^n$ generates the bornology product on $X^n$. Observe that Condition~\ref{Condidef:1} does not imply Condition~\ref{Condidef:2}, as if $d$ is a metric on $X^n$, the metric $d'(x,y)=\min\{d(x,y),1\}$ generates the same topology but is bounded.
 
@@ -698,7 +708,7 @@ For readers that are not familiar with representations of finite groups, here is
 Let $(f_i)_{i=1}^n$ be a transversal for $G/H$.
 The natural action of $G$ on $G/H$ gives rise to an action of $G$ on $\{1,\dots,n\}$.
 Hence, for any $g$ in $G$ and $i$ in $\{1,\dots,n\}$ there exists a unique $h_{g,i}$ in $H$ such that $gf_i=f_{g.i}h_{g,i}$. That is, $h_{g,i}=gf_if_{g.i}^{-1}$.
-We then define $g.(x_1,\dots,x_n)\coloneqq(h_{g,g^{-1}.1}.x_{g^{-1}.1},\dots,h_{g,g^{-1}.n}.x_{g^{-1}.n})$. This is indeed an action, which, by Conditions~\ref{Condidef:3} and \ref{Condidef:4} of Definition~\ref{Def:Cartesian}, is by S-automorphisms\todo{check that}, of $X^{G/H}$.
+We then define $g.(x_1,\dots,x_n)\coloneqq(h_{g,g^{-1}.1}.x_{g^{-1}.1},\dots,h_{g,g^{-1}.n}.x_{g^{-1}.n})$. This is indeed an action, which, by Condition~\ref{Item:Product} of Definition~\ref{Def:Cartesian}, is by S-automorphisms\todo{check that}, of $X^{G/H}$.
 Moreover, every element $h\in H$ acts diagonally by $h.(x_1,\dots,x_n)=(h.x_1,\dots,h.x_n)$.
 In particular, this $G$ action has an unbounded orbit.
 \end{proof}
@@ -714,9 +724,9 @@ Let S be a structure that has compatible cartesian powers. If $X$ is finite and 
 Suppose that $G$ does not have BS and let $(Y,d_Y)$ be a S-space on which $G$ acts with an unbounded orbit $G.y$.
 Then $(Y^X,d)$ is a S-space and we have the \emph{primitive action} of the wreath product $G\wr_XH$ on $Y^X$:
 \[
-	\bigl((\varphi,h).\psi\bigr)(x)=\varphi(h^{-1}.x)\psi(h^{-1}.x).
+	\bigl((\varphi,h).\psi\bigr)(x)=\varphi(h^{-1}.x).\psi(h^{-1}.x).
 \]
-By Conditions~\ref{Condidef:3} and \ref{Condidef:4} of Definition~\ref{Def:Cartesian}, this action is by S-automorphisms.\todo{check that}
+By Condition~\ref{Item:Product} of Definition~\ref{Def:Cartesian}, this action is by S-automorphisms.\todo{check that}
 The orbit $G.y$ embeds diagonally and hence $\diag(G.y)$ is an unbounded subset of some $G\wr_XH$-orbit, which implies that $G\wr_XH$ does not have property BS.
 \end{proof}
 %
@@ -834,7 +844,9 @@ Then $G\wr_XH$ has property FA if and only if $H$ has property FA, $H$ acts on $
 
 Observe that, by the characterization of Serre~\cite{MR0476875}, a group $G$ has property FA if and only if it has no morphism onto $\Z$, it has cof~$\neq\omega$ and it is not a non-trivial amalgam. In particular, a finitely generated group $G$ has property FA if and only if $G/[G:G]$ is finite, $G$ has cof~$\neq\omega$ and $G$ is not a non-trivial amalgam.
 We hence obtain
-\begin{prop}
+%
+%
+\begin{prop}\label{Prop:FACKFG}
 Let $G$ and $H$ be two groups with $G$ non-trivial and finitely generated and $X$ a set on which $H$ acts.
 If $G\wr_XH$ has property FA, then $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G/[G:G]$ is finite and $G$ has cof~$\neq\omega$.
 \end{prop}
@@ -844,6 +856,9 @@ By Corollary~\ref{Cor:Prod}, the group $G\wr_YH$ has property FA for every $H$-o
 Since the result holds if $H$ has no fixed points, we can hence suppose that there is one orbit reduced to a point $x_0$.
 But in this case $G\wr_{\{x_0\}}H\cong G\times H$ and by applying once again Corollary~\ref{Cor:Prod} we obtain that $G$ has property FA. Since $G$ is finitely generated, this implies the desired result.
 \end{proof}
+%
+%
+Observe that, due to Corollary~\ref{Cor:Prod}, the converse of Proposition~\ref{Prop:FACKFG} is false in general.
 %
 %
 %
