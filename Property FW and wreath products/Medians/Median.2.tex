@@ -16,7 +16,7 @@
 \usepackage[colorlinks,breaklinks,bookmarks,plainpages=false,unicode=true]{hyperref}%
 \usepackage{todonotes} %ajouter des commentaires
 \newcounter{mycomment}
-\newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33},inline]{\textbf{Commentaire [\uppercase{#1}\themycomment]:}~#2}}}
+\newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33}]{\textbf{Commentaire [\uppercase{#1}\themycomment]:}~#2}}}
 	
 %\usepackage[disable]{todonotes}%cache les commentaires
 \usepackage{datetime} %ajoute la date et l'heure
@@ -63,6 +63,8 @@
 \DeclareMathOperator\ab{ab}
 %
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\gen{\langle}{\rangle}
+
 \newcommand*{\orbite}{\mathcal O}
 \newcommand*{\field}[1]{\mathbf{#1}}
 \newcommand*{\Z}{\field{Z}}
@@ -155,7 +157,8 @@ In this context, the following result on the celebrated Kazdhan's property~(T) w
 %
 %
 \begin{thm}[\cite{Cherix2004,Neuhauser2005a}] \label{T:Wreath_prop_T}
-Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which $H$ acts. The wreath product $G \wr_X H$ has property (T) if and only if $G$ and $H$ have property (T) and $X$ is finite.
+Let $G$ and $H$ be two discrete\mycomment[GS]{C'est démontré pour $G,H$ dénombrables dans les ref}
+ groups with $G$ non-trivial and let $X$ be a set on which $H$ acts. The wreath product $G \wr_X H$ has property (T) if and only if $G$ and $H$ have property (T) and $X$ is finite.
 \end{thm}
 %
 %
@@ -181,17 +184,18 @@ Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which
 \end{thm}
 %
 %
-The above results on property FH, FW and FA were obtained with distinct methods even if the final results share a common flavor.
+The above results on properties FH, FW and FA were obtained with distinct methods even if the final results share a common flavor.
 On the other hand, all three of properties FH, FW and FA can be characterized by the fact that any action on a suitable metric space (respectively Hilbert space, connected median graph and tree) has bounded orbits.
 But more group properties can be characterized in terms of actions with bounded orbits. This is for example the case of the Bergman's property (actions on metric spaces) or of cof~$\neq\omega$ (actions on ultrametric spaces).
 
-By adopting the point of view of actions with bounded orbits, we obtain an unified proof of the following.
+By adopting the point of view of actions with bounded orbits, we obtain an unified proof of the following for general groups.
 %
 %
 \begin{thm}\label{Thm:Main}
 Let $BS$ be any one of the following properties: Bergman's property, FH or FW.
 Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ a set on which $H$ acts. Then the wreath product $G \wr_X H$ has property BS if and only if $G$ and $H$ have property BS and $X$ is finite.
 \end{thm}
+
 %
 %
 With a little twist, we also obtain a similar result for groups with cof~$\neq\omega$:
@@ -227,7 +231,7 @@ The authors are thankful to A. Valette for comments on a previous version of thi
 %
 %\todo[inline]{J'ai mis en commentaire la partie sur les actions essentielles ne sachant pas comment l'introduire. Je pense que si on veut la garder, le mieux est de la mettre un peu en apparté soit à la fin de l'intro soit à la fin de l'article. Cela permet de garder quelque chose de simple et d'auto-contenu pour le reste.}
 
-%An action of a group on a CAT(0) cube complex is \emph{essential} if all the orbits of vertices are unbounded and the action is transitive on the set of hyperplanes.
+%An action of a group on a CAT(0) cube complex is \emph{essential} if all the orbits of vertices are unbounded and the action is transitive on the set of hyperplanes.
 %\begin{cor}
 %Let $G,H$ be two discrete groups and $X$ a set on which $H$ acts transitively. If there exists an essential action of $G$ or $H$ on a CAT(0) cube complex  or if $X$ is infinite, then there exists an essential action of $G \wr_X H$ on a CAT(0) cube complex. 
 %\end{cor}
@@ -286,9 +290,9 @@ Let $G$ and $H$ be groups and $X$ be a set on which $H$ acts.
 The \emph{(retricted) wreath product} $G\wr_XH$ is the group $(\bigoplus_XG)\rtimes H$.
 \end{defn}
 A prominent  source of examples of wreath products are the ones of the form $G\wr_HH$, where $H$ acts on itself by left multiplication.
-They are sometimes called \emph{standard wreath products} or simply \emph{wreaths products}, while general $G\wr_XH$ are sometimes called \emph{permutational wreath products}.
-The probably most well-kwon examples of wreath product is the so called \emph{lamplighter group} $(\Z/2\Z)\wr_\Z\Z$.
-Another (trivial) examples of wreath products are direct products $G\times H$ which correspond to wreath products over a singleton $G\wr_{\{*\}}H$.
+They are sometimes called \emph{standard wreath products} or simply \emph{wreath products}, while general $G\wr_XH$ are sometimes called \emph{permutational wreath products}.
+The probably most well-known example of wreath product is the so called \emph{lamplighter group} $(\Z/2\Z)\wr_\Z\Z$.
+Another (trivial) example of wreath products is direct products $G\times H$ which correspond to wreath products over a singleton $G\wr_{\{*\}}H$.
 
 The following decomposition directly follows from the definition and we will use it in the rest of the article without mentioning it.
 %It directly follows from the definition of the wreath product that we have
@@ -314,13 +318,8 @@ The following decomposition directly follows from the definition and we will use
 %
 %
 %
-Remind that a metric space $(X,d)$ is \emph{ultrametric} if and only if for any $x$, $y$ and $z$ in $X$ we have $d(x,y)\leq\max\{d(x,z),d(z,y)\}$.
-
-For $u$ and $v$ two vertices of a connected\footnote{We will always assume that our connected graphs are non-empty. This is coherent with the definition that a connected graph is a graph with exactly one connected component.} graph $\mathcal G$, we define the total interval $[u,v]$ as the set of vertices that lie on some shortest path between $u$ and $v$.
-A connected graph $\mathcal G$ is \emph{median} if for any three vertices $u$, $v$, $w$, the intersection $[u,v]\cap[v,w]\cap[u,w]$ consists of a unique vertex, denoted $m(u,v,w)$.
-A graph is \emph{median} if each of its connected components is median. For surveys on median graphs see \cite{MR1705337,MR2405677}.\todo{Maybe add refs with respect to FW.}
-
-\todo[inline]{Add refs}
+Remind that a metric space $(X,d)$ is \emph{ultrametric} if and only if for any $x$, $y$ and $z$ in $X$ we have $d(x,y)\leq\max\{d(x,z),d(z,y)\}$. We will define various properties for actions on metric spaces.
+% 
 \begin{defn}\label{Def:FHFA}
 Let $G$ be a group.
 It is said to have
@@ -339,16 +338,24 @@ In the above, \emph{actions} are supposed to preserve the structure. In particul
 \end{defn}
 %
 %
-For countable groups (and more generally for $\sigma$-compact locally compact groups), property FH is equivalent to the celebrated Kazdhan's property (T) by the Delorme-Guichardet theorem, see for example \cite{MR2415834}, but this is not true in general \cite{MR2240370}.
-\todo[inline]{Maybe expand a little more.}
+For countable groups (and more generally for $\sigma$-compact locally compact groups), property FH is equivalent to the celebrated Kazdhan's property (T) by the Delorme-Guichardet theorem, see for example \cite{MR2415834}, but this is not true in general. Indeed in \cite{MR2240370}, Cornulier constructs an uncountable group with property SB which, as we will see just below, implies property FW, but a group with property (T) is finitely generated.
+
 The names\todo{Give refs} FH, FW and FA come from the fact that these properties admit a description in terms of existence of a Fixed point for actions on Hilbert spaces, on spaces with Walls and on trees (\emph{Arbres} in french).
 On the other hand, SB stands for Strongly Bounded and is also called the \emph{Bergman's property}.
 Finally, a group has cof~$\neq\omega$ (that is \emph{not countable cofinality}) if and only if it cannot be written has a countable increasing union of proper subgroups, see Lemma~\ref{Lemma:CofSub}.
 
-We have the following strict implications between the properties of Definition~\ref{Def:FHFA} \cite{MR1432323,MR0476875 ,MR3299841,2013arXiv1302.5982C}
+\mycomment[GS]{A voir si tu veux y mettre ou non. Au pire ça sera pour ma thèse}We have the following implications between the properties of Definition~\ref{Def:FHFA} \cite{MR1432323,MR0476875 ,MR3299841,2013arXiv1302.5982C}
 \begin{equation}\tag{\dag}\label{EQ:Implications}
 	\textnormal{SB}\implies \textnormal{FH}\implies \textnormal{FW}\implies \textnormal{FA}\implies\textnormal{cof~$\neq\omega$}.
 \end{equation}
+These implications are strict. Indeed, a infinte finitely generated group with property (T), e.g. $\SL_3(\Z)$, has property FW and the action on itself seen as a metric space has unbouded orbits; the group $\SL_2(\Z[\sqrt{2}])$ has property FW but not FH see \cite[Example 6.A.8]{Cornulier2013} ; the group $G = \gen{a,b,c  | a^2=b^2=c^2=(ab)^2=(ac)^2=(bc)^2=1}$ has property FA but not property FW see\cite[Example 5.B.8]{Cornulier2013} ;  $\Z$ has cof~$\neq\omega$ as the union of $n\Z$ and the action by translations on itself seen as a tree has unbounded orbits.
+%
+
+For $u$ and $v$ two vertices of a connected\footnote{We will always assume that our connected graphs are non-empty. This is coherent with the definition that a connected graph is a graph with exactly one connected component.} graph $\mathcal G$, we define the total interval $[u,v]$ as the set of vertices that lie on some shortest path between $u$ and $v$.
+A connected graph $\mathcal G$ is \emph{median} if for any three vertices $u$, $v$, $w$, the intersection $[u,v]\cap[v,w]\cap[u,w]$ consists of a unique vertex, denoted $m(u,v,w)$.
+A graph is \emph{median} if each of its connected components is median. For surveys on median graphs see \cite{MR2405677,Cornulier2013, MR1705337}.\todo{Maybe add refs with respect to FW.}
+\mycomment[GS]{Ok avec Cornulier en ref ?}
+
 
 Trees are the simplest examples of median graphs and a simple verification shows that if $X$ and $Y$ are both (connected) median graphs, then their cartesian product is also a (connected) median graph.
 On the other hand, the following example will be fundamental for us.
@@ -388,16 +395,16 @@ Let $G$ be a group. Then the following are equivalent:
 \begin{proof}
 It is clear that the first item implies the second.
 
-Suppose that $(X,d)$ is a ultrametric space on which $G$ acts with an unbounded orbit and let $x_0$ be an element of $X$. For any $n\in \N$ let $H_n$ be the subset of $G$ defined by
+Suppose that $(X,d)$ is an ultrametric space on which $G$ acts with an unbounded orbit and let $x_0$ be an element of $X$. For any $n\in \N$ let $H_n$ be the subset of $G$ defined by
 \[
 	H_n\coloneqq\setst{g\in G}{d(x_0,h.x_0)\leq n}.
 \]
-It is clear that $G$ is the increasing union of the (countably many) $H_n$.
-On the other hand, the $H_n$ are subgroups of $G$. Indeed, $H_n$ is trivially closed under taking the inverse, and it is also closed under taking products since $d(x_0,gh.x_0)\leq\max\{d(x_0,g.x_0),d(g.x_0,gh.x_0)\}=\max\{d(x_0,g.x_0),d(x_0,h.x_0)\}$.
+It is clear that $G$ is the increasing union of (countably many) $H_n$.
+On the other hand, the $H_n$ are subgroups of $G$. Indeed, $H_n$ is trivially closed under taking the inverse, and under taking products since $d(x_0,gh.x_0)\leq\max\{d(x_0,g.x_0),d(g.x_0,gh.x_0)\}=\max\{d(x_0,g.x_0),d(x_0,h.x_0)\}$.
 
 Finally, suppose that $G=\bigcup_{n\in \N}H_n$ where the $H_n$ form an increasing sequence of proper subgroups. It is always possible to suppose that $H_1=\{1\}$.
 Define $d$ on $G$ by $d(g,h)\coloneqq\min\setst{n}{g^{-1}h\in H_n}$.
-One easily verify that $d$ is a $G$-invariant ultrametric. Moreover, the orbit of $1$ contains all of $G$ and is hence unbounded.
+One easily verifies that $d$ is a $G$-invariant ultrametric. Moreover, the orbit of $1$ contains all of $G$ and is hence unbounded.
 \end{proof}
 %
 %
@@ -429,7 +436,7 @@ Finally, it is possible to define other properties in the spirit of Definition~\
 %
 %
 \begin{defn}\label{Def:Categoric}
-An \emph{additional structure on metric spaces} is, a category $\mathbf{SMet}$ together with a faithful functor $F_{S}\colon \mathbf{SMet}\to \mathbf{Met}$, where $\mathbf{Met}$ is the category of metric spaces with short maps.
+An \emph{additional structure on metric spaces} is a category $\mathbf{SMet}$ together with a faithful functor $F_{S}\colon \mathbf{SMet}\to \mathbf{Met}$, where $\mathbf{Met}$ is the category of metric spaces with short maps.
 The objects of $\mathbf{SMet}$ are called \emph{S-spaces}.
 A \emph{$G$-action on a S-space} $X$ is simply an homomorphism $\alpha\colon G\to\Aut_{\mathbf{SMet}}(X)$. It has \emph{bounded orbits} if $F_S\circ \alpha\colon G\to \Aut_{\mathbf{Met}}(X)$ has bounded orbits.
 
@@ -437,7 +444,7 @@ We can now, formally define the groupe property \emph{BS} as: \emph{Every $G$-ac
 \end{defn}
 %
 %
-In other words, an additional structure on metric spaces, is concrete category over $\mathbf{Met}$. Since $\mathbf{Met}$ itself is concrete, that is we have a faithful functor $F\colon \mathbf{Met}\to\mathbf{Set}$, the category $\mathbf{SMet}$ is also concrete and its objects can be thoughts as set with ``extra structure''.
+In other words, an additional structure on metric spaces, is a concrete category over $\mathbf{Met}$. Since $\mathbf{Met}$ itself is concrete, that is we have a faithful functor $F\colon \mathbf{Met}\to\mathbf{Set}$, the category $\mathbf{SMet}$ is also concrete and its objects can be thoughts as set with ``extra structure''.
 %
 %
 \begin{rem}
@@ -447,7 +454,7 @@ A reader unfamiliar with category theory and interested only in one specific str
 %
 %
 Obvious examples of additional structures on metric spaces include, metric spaces, Hilbert spaces and ultrametric spaces.
-For connected graphs (and hence for connected median graphs and for trees), one look at the category $\mathbf{Graph}$ where objects are connected simple graphs $G=(V,E)$ and where a morphism $f\colon (V,E)\to(V',E')$ is a function between the vertex sets such that if $(x,y)$ is an edge then either $f(x)=f(y)$ or $(f(x),f(y))$ is an edge.
+For connected graphs (and hence for connected median graphs and for trees), one looks at the category $\mathbf{Graph}$ where objects are connected simple graphs $G=(V,E)$ and where a morphism $f\colon (V,E)\to(V',E')$ is a function between the vertex sets such that if $(x,y)$ is an edge then either $f(x)=f(y)$ or $(f(x),f(y))$ is an edge.
 The functor $F_S\colon\mathbf{Graph}\to\mathbf{Met}$ sends a connected graph to its vertex set together with the graph distance: $d(x,y)$ is the minimum number of edges on a path between $x$ and $y$.
 
 
@@ -467,7 +474,7 @@ While we will be able to obtain some results for a general $\mathbf{SMet}$, we w
 %
 %
 \begin{defn}\label{Def:Cartesian}
-A structure S on metric spaces has \emph{compatible cartesian powers} if for any S-space $X$ and any integer $n$, there exists an S-object called the \emph{$n$\textsuperscript{th} cartesian power of $X$} and written $X^n$ such that:
+A structure S on metric spaces has \emph{compatible cartesian powers} if for any S-space $X$ and any integer $n$, there exists a S-object called the \emph{$n$\textsuperscript{th} cartesian power of $X$} and written $X^n$ such that:
 \begin{enumerate}
 \item
 $X^n$ is compatible with the cartesian product of sets. That is $F\circ F_S(X^n)$ is the set cartesian power and there exists S-morphisms $\pi_i\colon X^n\to X$ such that $F\circ F_S(\pi_i)$ are the usual set projections.
@@ -499,7 +506,7 @@ $\Aut_{\mathbf{SMet}}(X)^n\rtimes \Sym(n)$ is a subgroup of $\Aut_{\mathbf{SMet}
 
 For (ultra)metric spaces, the categorical product (corresponding to the metric $d_\infty=\max\{d_X,d_Y\}$) works fine, but any product metric $d_p=(d_X^p+d_Y^p)^{\frac1p}$ for $p\in[1,\infty]$ works as well.
 For Hilbert spaces, we take the usual cartesian product (which is also the categorial product), which corresponds to the metric $d_2=\sqrt{d_X^2+d_Y^2}$.
-For connected median graph, the usual cartesian product (which is not the categorical product!\footnote{The categorial product in $\mathbf{Graph}$ is the strong product.}) with $d_1=d_X+d_Y$ does the job.
+For connected median graphs, the usual cartesian product (which is not the categorical product!\footnote{The categorial product in $\mathbf{Graph}$ is the strong product.}) with $d_1=d_X+d_Y$ does the job.
 On the other hand, trees do not have compatible cartesian powers
 
 
@@ -510,8 +517,8 @@ On the other hand, trees do not have compatible cartesian powers
 We conclude this section by a remark on a variation of Definition~\ref{Def:FHFA}.
 One might wonder what happens if in Definition~\ref{Def:FHFA} we replace the requirement of having bounded orbits by having uniformly bounded orbits.
 It turns out that this is rather uninteresting as a group $G$ is trivial if and only if any $G$-action on a metric space (respectively on an Hilbert space, on a connected median graph, on a tree or on an ultrametric space) has uniformly bounded orbits.
-Indeed, if $G$ is non-trivial, then for the action of $G$ on the Hilbert space $\ell^2(G)$ the orbit of $n\cdot \delta_g$ as diameter $n\sqrt2$.
-For a tree (and hence also for a connetected median graph), one may look at the tree $T$ obtained by taking a root $r$ on which we glue an infinite ray for each elements of $G$. Then $G$ naturally acts on $T$ by permuting the rays. The orbits for this action are the $\mathcal L_n=\setst{v}{\textnormal{at distance $n$ of }r}$ which have diameter $2n$.
+Indeed, if $G$ is non-trivial, then for the action of $G$ on the Hilbert space $\ell^2(G)$ the orbit of $n\cdot \delta_g$ has diameter $n\sqrt2$.
+For a tree (and hence also for a connetected median graph), one may look at the tree $T$ obtained by taking a root $r$ on which we glue an infinite ray for each elements of $G$. Then $G$ naturally acts on $T$ by permuting the rays. The orbits for this action are the $\mathcal L_n=\setst{v}{d(v,r)=n}$ which have diameter $2n$.
 Finally, it is possible to put an ultradistance on the vertices of $T$ by  $d_\infty(x,y)\coloneqq\max\{d(x,r),d(y,r)\}$ if $x\neq y$. Then the orbits are still the~$\mathcal L_n$, but this time with diameter $n$.
 %
 %
@@ -536,7 +543,7 @@ Finally, it is possible to put an ultradistance on the vertices of $T$ by  $d_\i
 %We begin this section by insisting on the fact that when speaking of a property BS, it will always stand for one of the five group properties of Definition~\ref{Def:FHFA}, that is SB, FH, FW, FA or cof~$\neq\omega$.
 %Similarly, a structure S will always stand for one of the five structures appearing in Definition~\ref{Def:FHFA}, that is metric space, real Hilbert space, connected median graph, tree or ultrametric space.
 %Indeed, we only guarantee the validity of our results in this restricted context, even if there might be considered as good heuristics in a more general setting.
-We begin this section the following trivial but useful result.
+We begin this section with the following trivial but useful result.
 %
 %
 \begin{lem}\label{Lemma:Quotient}
@@ -621,7 +628,7 @@ The second and third assertions follows of the first assertion combined with Cor
 %
 %
 While the statement (and the proof) of Lemma~\ref{Lemma:Cof} is expressed in terms of cof~$\neq\omega$, it is also possible to state it and prove it for a structure S without a priori knowing if BS is stronger than cof~$\neq\omega$.
-The main idea is to find a ``natural'' S-space on which $G=\bigoplus_{i\geq 1}G_i$ acts. For example, for Hilbert spaces, one can take $\bigoplus_{i\geq 1}\ell^2(G_i)$. For connected median graphs, one take the connected component of $\{1_{G_1},1_{G_2},\dots\}$ in $\powerset{\bigsqcup_{i\geq 1} G_i}$.
+The main idea is to find a ``natural'' S-space on which $G=\bigoplus_{i\geq 1}G_i$ acts. For example, for Hilbert spaces, one can take $\bigoplus_{i\geq 1}\ell^2(G_i)$. For connected median graphs, one takes the connected component of $\{1_{G_1},1_{G_2},\dots\}$ in $\powerset{\bigsqcup_{i\geq 1} G_i}$.
 For trees, it is possible to put a forest structure on $\powerset{\bigsqcup_{i\geq 1} G_i}$ in the following way.
 For $E\in\powerset{\bigsqcup_{i\geq 1} G_i}$, and for each $i$ such that $E\cap G_j$ is empty for all $j\leq i$, add an edge from $E$ to $E\cup\{g\}$ for each $g\in G_i$. The graph obtained this way is a $G$-invariant subforest of the median graph on $\powerset{\bigsqcup_{i\geq 1} G_i}$.
 %
@@ -719,7 +726,7 @@ Since $\diag(\orbite)$ is unbounded, $G$ does not have property BS.
 For readers that are not familiar with representations of finite groups, here is the above argument in more details.
 Let $(f_i)_{i=1}^n$ be a transversal for $G/H$.
 The natural action of $G$ on $G/H$ gives rise to an action of $G$ on $\{1,\dots,n\}$.
-Hence, for any $g$ in $G$ and $i$ in $\{1,\dots,n\}$ there exists a unique $h_{g,i}$ in $H$ such that $gf_i=f_{g.i}h_{g,i}$. That is, $h_{g,i}=gf_if_{g.i}^{-1}$.
+Hence, for any $g$ in $G$ and $i$ in $\{1,\dots,n\}$ there exists a unique $h_{g,i}$ in $H$ such that $gf_i=f_{g.i}h_{g,i}$. That is, $h_{g,i}=f_{g.i}^{-1}gf_i$.
 We then define $g.(x_1,\dots,x_n)\coloneqq(h_{g,g^{-1}.1}.x_{g^{-1}.1},\dots,h_{g,g^{-1}.n}.x_{g^{-1}.n})$. This is indeed an action, which, by Condition~\ref{Item:Product} of Definition~\ref{Def:Cartesian}, is by S-automorphisms\todo{check that}, of $X^{G/H}$.
 Moreover, every element $h\in H$ acts diagonally by $h.(x_1,\dots,x_n)=(h.x_1,\dots,h.x_n)$.
 In particular, this $G$ action has an unbounded orbit.
