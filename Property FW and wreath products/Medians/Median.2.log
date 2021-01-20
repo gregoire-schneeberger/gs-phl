@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.11)  20 JAN 2021 12:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.11)  20 JAN 2021 17:09
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1011,7 +1011,37 @@ Overfull \hbox (4.74918pt too wide) in paragraph at lines 665--666
 he proof of Lemma [][]3.6[][]. 
  []
 
-[9] [10] [11] (./Median.2.bbl [12]) [13] (./Definitions.Old.tex
+[9]
+Overfull \hbox (13.71983pt too wide) in paragraph at lines 781--781
+[][][]\T1/lmr/bx/n/9 Commentaire 
+ []
+
+
+Overfull \hbox (10.21017pt too wide) in paragraph at lines 781--781
+\T1/lmr/bx/n/9 [GS6]: \T1/lmr/m/n/9 C'était 
+ []
+
+
+Overfull \hbox (13.71983pt too wide) in paragraph at lines 781--781
+[][][]\T1/lmr/bx/n/9 Commentaire 
+ []
+
+
+Overfull \hbox (10.21017pt too wide) in paragraph at lines 781--781
+\T1/lmr/bx/n/9 [GS6]: \T1/lmr/m/n/9 C'était 
+ []
+
+[10]
+Overfull \hbox (13.71983pt too wide) in paragraph at lines 835--835
+[][][]\T1/lmr/bx/n/9 Commentaire 
+ []
+
+
+Overfull \hbox (13.71983pt too wide) in paragraph at lines 835--835
+[][][]\T1/lmr/bx/n/9 Commentaire 
+ []
+
+[11] (./Median.2.bbl [12]) [13] (./Definitions.Old.tex
 
 LaTeX Warning: Reference `Figure:CayleyOfZ' on page 14 undefined on input line 
 57.
@@ -1095,10 +1125,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 962.
  ) 
 Here is how much of TeX's memory you used:
- 23378 strings out of 480608
- 413393 string characters out of 5903630
- 685375 words of memory out of 5000000
- 38609 multiletter control sequences out of 15000+600000
+ 23398 strings out of 480608
+ 413807 string characters out of 5903630
+ 689511 words of memory out of 5000000
+ 38625 multiletter control sequences out of 15000+600000
  631894 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,12n,83p,1022b,1076s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1134,10 +1164,10 @@ nts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/p
 ublic/lm/lmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lm
 sy9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols
 /msbm10.pfb>
-Output written on Median.2.pdf (24 pages, 569859 bytes).
+Output written on Median.2.pdf (24 pages, 572552 bytes).
 PDF statistics:
- 623 PDF objects out of 1000 (max. 8388607)
- 545 compressed objects within 6 object streams
- 178 named destinations out of 1000 (max. 500000)
+ 629 PDF objects out of 1000 (max. 8388607)
+ 551 compressed objects within 6 object streams
+ 182 named destinations out of 1000 (max. 500000)
  189 words of extra memory for PDF output out of 10000 (max. 10000000)
 
