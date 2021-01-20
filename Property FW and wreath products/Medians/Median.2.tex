@@ -16,7 +16,7 @@
 \usepackage[colorlinks,breaklinks,bookmarks,plainpages=false,unicode=true]{hyperref}%
 \usepackage{todonotes} %ajouter des commentaires
 \newcounter{mycomment}
-\newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33}]{\textbf{Commentaire [\uppercase{#1}\themycomment]:}~#2}}}
+\newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33},size=\small]{\textbf{Commentaire [\uppercase{#1}\themycomment]:}~#2}}}
 	
 %\usepackage[disable]{todonotes}%cache les commentaires
 \usepackage{datetime} %ajoute la date et l'heure
@@ -381,7 +381,7 @@ Be careful that the action of $G$ on $\powerset{X}$ may exchange the connected c
 In fact, the connected component of $E\subset X$ is stabilized by $G$ if and only if $E$ is \emph{commensurated} by~$G$, that is if for every $g\in G$ the set $E\Delta gE$ is finite.
 For example, both $\powersetf{X}$ and $\powersetcof{X}$ are always preserved by the action of $G$.
 
-On the other hand, we will also use the following result on groups with cof~$\neq\omega$:
+On the other hand, we will also use the following result on groups with \mycomment{which have not} cof~$\neq\omega$:
 %
 %
 \begin{lem}\label{Lemma:CofSub}
@@ -622,7 +622,9 @@ So let $G\coloneqq \bigoplus_{i\geq 1}G_i$ and for each $i$, choose $g_i\neq 1$ 
 Let $d_\infty(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$ be the $G$-invariant ultrametric of Example~\ref{Exmpl:Ultra}.
 Then for every integer $n$, the orbit $G.1_G$ contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $1_G$ for $d_\infty$.
 In particular, an infinite direct sum of non-trivial groups does not have cof~$\neq\omega$, nor does it have BS.
-
+%
+\mycomment[GS]{So let $G\coloneqq \bigoplus_{i\geq 1}G_i$. We define $H_j = \setst{g \in G}{g(i) = 1 \, \forall i>j}$. It is clear that $H_j \neq G$ and $G = \cup_j H_j$. Then $G$ does not have cof~$\neq\omega$ nor BS.}
+%
 The second and third assertions follows of the first assertion combined with Corollary~\ref{Cor:Prod}. 
 \end{proof}
 %
