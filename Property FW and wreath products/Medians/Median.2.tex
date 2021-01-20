@@ -157,8 +157,7 @@ In this context, the following result on the celebrated Kazdhan's property~(T) w
 %
 %
 \begin{thm}[\cite{Cherix2004,Neuhauser2005a}] \label{T:Wreath_prop_T}
-Let $G$ and $H$ be two discrete\mycomment[GS]{C'est démontré pour $G,H$ dénombrables dans les ref}
- groups with $G$ non-trivial and let $X$ be a set on which $H$ acts. The wreath product $G \wr_X H$ has property (T) if and only if $G$ and $H$ have property (T) and $X$ is finite.
+Let $G$ and $H$ be two discrete groups with $G$ non-trivial and let $X$ be a set on which $H$ acts. The wreath product $G \wr_X H$ has property (T) if and only if $G$ and $H$ have property (T) and $X$ is finite.
 \end{thm}
 %
 %
@@ -289,6 +288,15 @@ This leads to the following standard definition
 Let $G$ and $H$ be groups and $X$ be a set on which $H$ acts.
 The \emph{(retricted) wreath product} $G\wr_XH$ is the group $(\bigoplus_XG)\rtimes H$.
 \end{defn}
+For $g$ in $G$ and $x$ in $X$, we define the useful functions $\delta_x^g$ as \mycomment[GS]{On les utilise dans les dernières preuves.}
+
+\begin{equation*}
+\delta_x^g (y) = 
+\begin{cases}
+g & y = x \\
+1 & y \neq x
+\end{cases}.
+\end{equation*}
 A prominent  source of examples of wreath products are the ones of the form $G\wr_HH$, where $H$ acts on itself by left multiplication.
 They are sometimes called \emph{standard wreath products} or simply \emph{wreath products}, while general $G\wr_XH$ are sometimes called \emph{permutational wreath products}.
 The probably most well-known example of wreath product is the so called \emph{lamplighter group} $(\Z/2\Z)\wr_\Z\Z$.
@@ -344,11 +352,11 @@ The names\todo{Give refs} FH, FW and FA come from the fact that these properties
 On the other hand, SB stands for Strongly Bounded and is also called the \emph{Bergman's property}.
 Finally, a group has cof~$\neq\omega$ (that is \emph{not countable cofinality}) if and only if it cannot be written has a countable increasing union of proper subgroups, see Lemma~\ref{Lemma:CofSub}.
 
-\mycomment[GS]{A voir si tu veux y mettre ou non. Au pire ça sera pour ma thèse}We have the following implications between the properties of Definition~\ref{Def:FHFA} \cite{MR1432323,MR0476875 ,MR3299841,2013arXiv1302.5982C}
+We have the following implications between the properties of Definition~\ref{Def:FHFA} \cite{MR1432323,MR0476875 ,MR3299841,2013arXiv1302.5982C}
 \begin{equation}\tag{\dag}\label{EQ:Implications}
 	\textnormal{SB}\implies \textnormal{FH}\implies \textnormal{FW}\implies \textnormal{FA}\implies\textnormal{cof~$\neq\omega$}.
 \end{equation}
-These implications are strict. Indeed, a infinte finitely generated group with property (T), e.g. $\SL_3(\Z)$, has property FW and the action on itself seen as a metric space has unbouded orbits; the group $\SL_2(\Z[\sqrt{2}])$ has property FW but not FH see \cite[Example 6.A.8]{Cornulier2013} ; the group $G = \gen{a,b,c  | a^2=b^2=c^2=(ab)^2=(ac)^2=(bc)^2=1}$ has property FA but not property FW see\cite[Example 5.B.8]{Cornulier2013} ;  $\Z$ has cof~$\neq\omega$ as the union of $n\Z$ and the action by translations on itself seen as a tree has unbounded orbits.
+These implications are strict. Indeed, a infinte finitely generated group with property (T), e.g. $\SL_3(\Z)$, has property FW and the action on itself seen as a metric space has unbouded orbits; the group $\SL_2(\Z[\sqrt{2}])$ has property FW but not FH see \cite[Example 6.A.8]{Cornulier2013} ; the group $G = \gen{a,b,c  | a^2=b^2=c^2=(ab)^2=(ac)^2=(bc)^2=1}$ has property FA but not property FW see\cite[Example 5.B.8]{Cornulier2013} ;  $\Z$ has cof~$\neq\omega$ as the union of $n\Z$ and the action by translations on itself seen as a tree has unbounded orbits.\mycomment[GS]{A voir si tu veux y mettre ou non. Au pire ça sera pour ma thèse}
 %
 
 For $u$ and $v$ two vertices of a connected\footnote{We will always assume that our connected graphs are non-empty. This is coherent with the definition that a connected graph is a graph with exactly one connected component.} graph $\mathcal G$, we define the total interval $[u,v]$ as the set of vertices that lie on some shortest path between $u$ and $v$.
@@ -623,7 +631,7 @@ Let $d_\infty(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$ be the $G$-invariant ul
 Then for every integer $n$, the orbit $G.1_G$ contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $1_G$ for $d_\infty$.
 In particular, an infinite direct sum of non-trivial groups does not have cof~$\neq\omega$, nor does it have BS.
 %
-\mycomment[GS]{So let $G\coloneqq \bigoplus_{i\geq 1}G_i$. We define $H_j = \setst{g \in G}{g(i) = 1 \, \forall i>j}$. It is clear that $H_j \neq G$ and $G = \cup_j H_j$. Then $G$ does not have cof~$\neq\omega$ nor BS.}
+%\mycomment[GS]{So let $G\coloneqq \bigoplus_{i\geq 1}G_i$. We define $H_j = \setst{g \in G}{g(i) = 1 \, \forall i>j}$. It is clear that $H_j \neq G$ and $G = \cup_j H_j$. Then $G$ does not have cof~$\neq\omega$ nor BS.}
 %
 The second and third assertions follows of the first assertion combined with Corollary~\ref{Cor:Prod}. 
 \end{proof}
@@ -771,15 +779,14 @@ Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ a set on which $H
 \begin{proof}
 By Corollary~\ref{Cor:Wreath} and Lemma~\ref{Lemma:Cof} we already know that if $G \wr_X H$ has cof~$\neq\omega$, then $H$ has cof~$\neq\omega$ and it acts on $X$ with finitely many orbits.
 We will now prove that if $G \wr_X H$ has cof~$\neq\omega$ so does $G$.
-Let us suppose that $G$ has countable cofinality. Then there exists an ultrametric $d$ on $G$ such that the action of $G$ on itself by left multiplication has an unbounded orbit.
+Let us suppose that $G$ has countable cofinality. By Lemma~\ref{Lemma:CofSub}, there exists an ultrametric $d$ on $G$ such that the action of $G$ on itself by left multiplication has an unbounded orbit.
 But then we have the primitive action of the wreath product $G\wr_XH$ on $G^X\cong\prod_XG$,
 %\[
 %	\bigl((\varphi,h).\psi\bigr)(x)=\varphi(h^{-1}.x)\psi(h^{-1}.x),
 %\]
 which preserves $\bigoplus_XG$.
 It is easy to check that the map $d_\infty\colon\bigoplus_XG\times\bigoplus_XG\to\mathbf R$ defined by $d_\infty(\psi_1,\psi_2)\coloneqq\max\setst{d\bigl(\psi_1(x),\psi_2(x)\bigr)}{x\in X}$ is a $G\wr_XH$-invariant ultrametric.
-Finally, let $h\in G$ be an element of unbounded $G$-orbit for $d$ and let $x_0$ be any element of $X$.
-Then for any $g$ in $G$ we have $(\delta_{x_0}^g,1).\delta_{x_0}^h=\delta_{x_0}^{gh}$ and hence $d_\infty(\delta_{x_0}^h,\delta_{x_0}^{gh})=d(h,gh)$ is unbounded.
+Finally, let $h\in G$ be an element of unbounded $G$-orbit for $d$ and let $x_0$ be any element of $X$. Then for any $g$ in $G$ we have $(\delta_{x_0}^g,1).\delta_{x_0}^h=\delta_{x_0}^{gh}$ and hence $d_\infty(\delta_{x_0}^h,\delta_{x_0}^{gh})=d(h,gh)$ is unbounded.
 
 Suppose now that both $G$ and $H$ have cof~$\neq\omega$ and that $H$ acts on $X$ with finitely many orbits. We want to prove that $G\wr_XH$ has cof~$\neq\omega$.
 Since $H$ acts on $X$ with finitely many orbit, by Corollary~\ref{Cor:Prod} it is enough to show that $G\wr_YH$ has cof~$\neq\omega$ when $Y$ is one $H$-orbit.
@@ -812,7 +819,7 @@ Since $H$ acts on $X$ with finitely many orbit, by Corollary~\ref{Cor:Prod} it i
 Let $(Z,d)$ be an ultrametric space on which $G\wr_YH$ acts.
 Then $H$ and all the $G_y$ act on $Z$ with bounded orbits.
 Fix an element $y_0$ of $Y$ and let $z$ be an element of $Z$.
-Then $H.z$ has finite diameter $D_1$ while $G_{y_0}$ has finite diameter $D_2$.
+Then $H.z$ has finite diameter $D_1$ while $G_{y_0}.z$ has finite diameter $D_2$.
 For any $y\in Y$, there exists $h\in H$ such that $y=h.y_0$.
 We have
 \begin{align*}
@@ -832,7 +839,7 @@ That is, the diameter of $G\wr_YH.z$ is itself bounded by $\max\{D_1,D_2\}$, whi
 \end{proof}
 %
 %
-While the fact that being a tree is not compatible with products is an obstacle to our methods, we still have the following weak version of Theorem~\ref{Thm:Technic} for property FA.
+While the fact that being a tree is not compatible with products \mycomment[GS]{on a enlevé la définition de ça il me semble, c'est compatible with power ?} is an obstacle to our methods, we still have the following weak version of Theorem~\ref{Thm:Technic} for property FA.
 %Finally, while the fact that being a tree is not compatible with products is an obstacle to our methods, we still have the following weak version of Theorem~\ref{Thm:Technic} for property FA.
 %
 %
@@ -863,7 +870,8 @@ But neither $\Z$, nor an infinite direct sum of non-trivial groups has FA, and h
 %
 %
 Moreover, by using Lemma~\ref{Lemma:Cof} we can get ride of the ``finitely many orbits'' hypothesis in Theorem~\ref{Thm:FACK} in order to obtain Theorem~\ref{Thm:FAFiniteOrbits}.
-By Proposition~\ref{Prop:WRFA} (more precisely Lemma~\ref{Lemma:Cof}), it is possible to get ride of the ``finitely many orbits'' hypothesis in Theorem~\ref{Thm:FACK} to obtain
+By Proposition~\ref{Prop:WRFA} (more precisely Lemma~\ref{Lemma:Cof}), it is possible to get ride of the ``finitely many orbits'' hypothesis in Theorem~\ref{Thm:FACK} to obtain \mycomment[GS]{Il manque la suite}
+
 %%
 %%
 %\begin{thm}\label{Thm:FACKPlus}
@@ -874,8 +882,7 @@ By Proposition~\ref{Prop:WRFA} (more precisely Lemma~\ref{Lemma:Cof}), it is pos
 %%
 
 Finally, observe that, by the characterization of Serre~\cite{MR0476875}, a group $G$ has property FA if and only if it has no morphism onto $\Z$, it has cof~$\neq\omega$ and it is not a non-trivial amalgam. In particular, a finitely generated group $G$ has property FA if and only if $G/[G:G]$ is finite, $G$ has cof~$\neq\omega$ and $G$ is not a non-trivial amalgam.
-We hence obtain
-%
+We hence obtain %
 %
 \begin{prop}\label{Prop:FACKFG}
 Let $G$ and $H$ be two groups with $G$ non-trivial and finitely generated and $X$ a set on which $H$ acts.
