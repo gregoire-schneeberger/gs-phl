@@ -99,7 +99,7 @@ A locally finite graph (i.e. such that every vertex has finite degree) is finite
 %The graphs of the Figures~\ref{Figure:CayleyOfZ} and \ref{Figure:CayleyOfZ2} have respectively 2 ends and 1 end.
 
 An important fact about the number of ends of a graph, is that it is an invariant of quasi-isometry, see \cite{MR1213151}. In particular, if $G$ is a finitely generated group it is possible to speak about the number of ends of the Schreier graph $\Sch(G,H;S)$ without specifying a particular finite generating set $S$.
-By a celebrated result of Stallings \cite{Stallings1971}, the number of ends of a Cayley graph of a finitely generated group can only be $0$, $1$, $2$ or infinite (in which case it is uncountable), see Figures~\ref{Figure:CayleyOfZ} and \ref{Figure:CayleyOfZ2} for some examples.
+By a celebrated result of Hopf \cite{MR10267}, the number of ends of a Cayley graph of a finitely generated group can only be $0$, $1$, $2$ or infinite (in which case it is uncountable), see Figures~\ref{Figure:CayleyOfZ} and \ref{Figure:CayleyOfZ2} for some examples.
 On the other hand, Schreier graphs may have any number of ends in $\mathbf N\cup\{\infty\}$, see Figure~\ref{Figure:SchreierOfF2} for an example of a graph with $4$ ends.
 %While the number of ends of Cayley graphs of finitely generated groups can only be $0$, $1$, $2$ or infinite (in which case it is uncountable) \cite[Theorem 11.27]{Stallings1971}, Schreier graphs may have any number of ends in $\mathbf N\cup\{\infty\}$, see Figure~\ref{Figure:SchreierOfF2} for an example of a graph with another number of ends.
 In fact, every regular graph of even degree is isomorphic to a Schreier graph, \cite{MR0450121,MR1358635}.
@@ -163,12 +163,18 @@ It is then standard that
 	\setst{(\delta_x^s,1_H)}{s \in S} \cup \setst{(\mathbf 1,t}{t \in T}
 \]
 is a generating set for $G\wr_XH$.
+A similar construction shows that if $G$ and $H$ are finitely generated and $H$ acts on $X$ with finitely many orbits, then $G\wr_XH$ is finitely generated.
 
-On the other hand, it follows from the definition of the wreath product that we have
+On the other hand, if $G\wr_XH$ is finitely generated, then its quotient $H$ is also finitely generated.
+It follows from the definition of the wreath product 
+that
 \[
-	G\wr_XH\cong\bigoplus_{Y\textnormal{ is an $H$-orbit}}\bigl(G\wr_YH\bigr).
+	G\wr_XH\cong(\bigoplus_{Y\in X/H}L_Y)\rtimes H\qquad\textnormal{with}\qquad L_Y\cong\bigoplus_{y\in Y}G_y,
 \]
-We hence obtain
+where $X/H$ is the set of $H$-orbits.
+The important fact for us is that $H$ fixes the decomposition into $L_Y$ factors: for all $Y$ we have $H.L_Y=L_Y$.
+We hence obtain that if $G\wr_XH$ is finitely generated, then $H$ acts on $X$ with finitely many orbit.
+Finally\todo{Prendre un système de gen de $G\wr_XH$ et en extraire un système de gen de $G$...}
 %
 %
 \begin{lem}

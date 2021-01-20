@@ -44,6 +44,12 @@ Jonathan~L. Gross.
   graph.
 \newblock {\em J. Combinatorial Theory Ser. B}, 22(3):227--232, 1977.
 
+\bibitem{MR10267}
+Heinz Hopf.
+\newblock Enden offener {R}\"{a}ume und unendliche diskontinuierliche
+  {G}ruppen.
+\newblock {\em Comment. Math. Helv.}, 16:81--100, 1944.
+
 \bibitem{LS2021}
 Paul-Henry Leemann and Gr{\'e}goire Schneeberger.
 \newblock Groups acting with bounded orbits and wreath products.
@@ -60,12 +66,5 @@ Alexander Lubotzky.
 Markus Neuhauser.
 \newblock Relative property ({T}) and related properties of wreath products.
 \newblock {\em Math. Z.}, 251(1):167--177, 2005.
-
-\bibitem{Stallings1971}
-John Stallings.
-\newblock {\em Group theory and three-dimensional manifolds}.
-\newblock Yale University Press, New Haven, Conn.-London, 1971.
-\newblock A James K. Whittemore Lecture in Mathematics given at Yale
-  University, 1969, Yale Mathematical Monographs, 4.
 
 \end{thebibliography}
