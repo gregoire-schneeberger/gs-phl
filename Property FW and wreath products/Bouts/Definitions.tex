@@ -156,30 +156,37 @@ In particular, the group $(\Z/2\Z)\wr_\Z\Z$ has become well-known under the name
 Another (trivial) examples of wreath products are direct products $G\times H$ which corresponds to wreath products over a singleton $G\wr_{\{*\}}H$.
 
 Let $S$ be a generating set of $G$ and $T$ a generating set of $H$.
-Suppose that $H$ acts transitively on $X$ and let $x\in X$ be any point.
+Let $\{x_i\}_{i\in I}$ be a choice of a representative in each $H$-orbit.
 Finally, let $\delta_x^s$ be the element of $\bigoplus_XG$ defined by $\delta_x^s(x)=s$ and $\delta_x^s(y)=1_G$ if $y\neq x$ and let $\mathbf 1$ be the constant function with value $1_G$.
 It is then standard that
 \[
-	\setst{(\delta_x^s,1_H)}{s \in S} \cup \setst{(\mathbf 1,t}{t \in T}
+	\setst{(\delta_{x_i}^s,1_H)}{s \in S,i\in I} \cup \setst{(\mathbf 1,t)}{t \in T}
 \]
 is a generating set for $G\wr_XH$.
-A similar construction shows that if $G$ and $H$ are finitely generated and $H$ acts on $X$ with finitely many orbits, then $G\wr_XH$ is finitely generated.
 
-On the other hand, if $G\wr_XH$ is finitely generated, then its quotient $H$ is also finitely generated.
-It follows from the definition of the wreath product 
-that
-\[
-	G\wr_XH\cong(\bigoplus_{Y\in X/H}L_Y)\rtimes H\qquad\textnormal{with}\qquad L_Y\cong\bigoplus_{y\in Y}G_y,
-\]
-where $X/H$ is the set of $H$-orbits.
-The important fact for us is that $H$ fixes the decomposition into $L_Y$ factors: for all $Y$ we have $H.L_Y=L_Y$.
-We hence obtain that if $G\wr_XH$ is finitely generated, then $H$ acts on $X$ with finitely many orbit.
-Finally\todo{Prendre un système de gen de $G\wr_XH$ et en extraire un système de gen de $G$...}
+On the other hand, if $\setst{(\varphi_i,h_i)}{i\in I}$ is a generating set of $G\wr_XH$, then $\setst{h_i}{i\in I}$ is a generating set of $H$ while $\setst{\varphi_i(x)}{i\in I,x\in X}$ is a generating set of $G$.
+Observe that since the $\varphi_i$ take only finitely many values, if $I$ is finite, so is $\setst{\varphi_i(x)}{i\in I,x\in X}$.
+We hence recover the following characterization of the finite generation of $G\wr_XH$.
+
+%On the other hand, if $G\wr_XH$ is finitely generated, then its quotient $H$ is also finitely generated.
+%It follows from the definition of the wreath product 
+%that
+%\[
+%	G\wr_XH\cong(\bigoplus_{Y\in X/H}L_Y)\rtimes H\qquad\textnormal{with}\qquad L_Y\cong\bigoplus_{y\in Y}G_y,
+%\]
+%where $X/H$ is the set of $H$-orbits.
+%The important fact for us is that $H$ fixes the decomposition into $L_Y$ factors: for all $Y$ we have $H.L_Y=L_Y$.
+%We hence obtain that if $G\wr_XH$ is finitely generated, then $H$ acts on $X$ with finitely many orbit.
+%Finally\todo{Prendre un système de gen de $G\wr_XH$ et en extraire un système de gen de $G$...}
 %
 %
 \begin{lem}
 The group $G\wr_XH$ is finitely generated if and only if both $G$ and $H$ are finitely generated and $H$ acts on $X$ with finitely many orbits.
 \end{lem}
+\begin{proof}
+%The only implication that does not directly follows of the discussion above is that if $G\wr_XH$ is finitely generated, then $H$ acts on $X$ with finitely many orbits.
+If $G\wr_XH$ is finitely generated, so is its abelianization $(G\wr_XH)^{\ab}\cong (\bigoplus_{X/H}G^{\ab})\times H^{\ab}$, which implies that the orbit set $X/H$ is finite. The other implications directly follows from the above discussion on generating sets.
+\end{proof}
 %
 %
 Using the above lemma, we could reformulate Theorem~\ref{Thm:Main} in the following way:

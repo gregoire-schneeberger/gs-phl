@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  12 JAN 2021 11:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  21 JAN 2021 11:15
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -391,23 +391,23 @@ File: l3backend-pdfmode.def 2020-08-07 L3 backend support: PDF mode
 (./ends.aux)
 \openout1 = `ends.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 57
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 58
 .
  (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -430,7 +430,7 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 \Gin@req@width=\dimen167
 )
 \AtBeginShipoutBox=\box49
-Package hyperref Info: Link coloring OFF on input line 57.
+Package hyperref Info: Link coloring OFF on input line 58.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -444,9 +444,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count276
 )
-LaTeX Info: Redefining \ref on input line 57.
-LaTeX Info: Redefining \pageref on input line 57.
-LaTeX Info: Redefining \nameref on input line 57.
+LaTeX Info: Redefining \ref on input line 58.
+LaTeX Info: Redefining \pageref on input line 58.
+LaTeX Info: Redefining \nameref on input line 58.
  (./ends.out) (./ends.out)
 \@outlinefile=\write3
 \openout3 = `ends.out'.
@@ -476,147 +476,148 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 6
-9.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
+0.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 6
-9.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
+0.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-69.
+70.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-69.
+70.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 69.
+(Font)              <12> on input line 70.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 69.
+(Font)              <8> on input line 70.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 69.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 69.
+(Font)              <6> on input line 70.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 69.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 6
-9.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
+0.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 69.
+(Font)              <5> on input line 70.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 71.
+(Font)              <9> on input line 72.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 94.
+(Font)              <10> on input line 95.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 94.
+(Font)              <7> on input line 95.
  [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 <CayleyOfZ.pdf, id=95, 305.01352pt x 46.37827pt>
 File: CayleyOfZ.pdf Graphic file (type pdf)
 <use CayleyOfZ.pdf>
-Package pdftex.def Info: CayleyOfZ.pdf  used on input line 197.
+Package pdftex.def Info: CayleyOfZ.pdf  used on input line 198.
 (pdftex.def)             Requested size: 305.01276pt x 46.37814pt.
 <CayleyOfZ2.pdf, id=96, 143.06349pt x 143.06349pt>
 File: CayleyOfZ2.pdf Graphic file (type pdf)
 <use CayleyOfZ2.pdf>
-Package pdftex.def Info: CayleyOfZ2.pdf  used on input line 209.
+Package pdftex.def Info: CayleyOfZ2.pdf  used on input line 210.
 (pdftex.def)             Requested size: 143.06313pt x 143.06313pt.
 <CayleyOfF2.pdf, id=97, 165.02553pt x 165.02553pt>
 File: CayleyOfF2.pdf Graphic file (type pdf)
 <use CayleyOfF2.pdf>
-Package pdftex.def Info: CayleyOfF2.pdf  used on input line 216.
+Package pdftex.def Info: CayleyOfF2.pdf  used on input line 217.
 (pdftex.def)             Requested size: 165.02512pt x 165.02512pt.
 <SchreierOfF2.pdf, id=98, 162.75003pt x 62.02673pt>
 File: SchreierOfF2.pdf Graphic file (type pdf)
 <use SchreierOfF2.pdf>
-Package pdftex.def Info: SchreierOfF2.pdf  used on input line 227.
+Package pdftex.def Info: SchreierOfF2.pdf  used on input line 228.
 (pdftex.def)             Requested size: 162.74962pt x 62.02657pt.
  [3 <./CayleyOfZ.pdf> <./CayleyOfZ2.pdf> <./CayleyOfF2.pdf> <./SchreierOfF2.pdf
 >] [4] [5]
-<SemiDirect.pdf, id=151, 227.62239pt x 170.7168pt>
+<SemiDirect.pdf, id=152, 227.62239pt x 170.7168pt>
 File: SemiDirect.pdf Graphic file (type pdf)
 <use SemiDirect.pdf>
-Package pdftex.def Info: SemiDirect.pdf  used on input line 385.
+Package pdftex.def Info: SemiDirect.pdf  used on input line 387.
 (pdftex.def)             Requested size: 227.62183pt x 170.71637pt.
  [6 <./SemiDirect.pdf>]
-<Leaves.pdf, id=182, 391.22562pt x 261.76494pt>
+<Leaves.pdf, id=183, 391.22562pt x 261.76494pt>
 File: Leaves.pdf Graphic file (type pdf)
 <use Leaves.pdf>
-Package pdftex.def Info: Leaves.pdf  used on input line 472.
+Package pdftex.def Info: Leaves.pdf  used on input line 474.
 (pdftex.def)             Requested size: 391.22466pt x 261.76428pt.
  [7] [8 <./Leaves.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 579.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 580.
  [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 579.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 580.
  (./ends.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 579.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 579.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 580.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 580.
 Package rerunfilecheck Info: File `ends.out' has not changed.
 (rerunfilecheck)             Checksum: 35836A657E5144CBF1D414FED3FCE4F5;317.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 579.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 580.
  ) 
 Here is how much of TeX's memory you used:
- 9815 strings out of 480893
- 148968 string characters out of 5908067
- 430005 words of memory out of 5000000
- 25162 multiletter control sequences out of 15000+600000
+ 9817 strings out of 480893
+ 148961 string characters out of 5908067
+ 430012 words of memory out of 5000000
+ 25164 multiletter control sequences out of 15000+600000
  621185 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,11n,47p,594b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
-texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/20
-20/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2020/texmf-d
-ist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/
-dvips/lm/lm-ts1.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-m
-athit.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx10.pfb>
+texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
+20/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2020/texmf-d
+ist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2020/texmf-dist/fonts/
+enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/l
+m-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx10.pfb>
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/loca
 l/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/2
 020/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2020/texmf-d
 ist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/
 type1/public/lm/lmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
-ic/lm/lmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi7
-.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/
-local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2020/tex
-mf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2020/texmf-dist/fon
-ts/type1/public/lm/lmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pub
-lic/lm/lmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr7.
-pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2020/texmf
--dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2020/texmf-dist/fonts
-/type1/public/lm/lmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pub
-lic/lm/lmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy
-7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ends.pdf (9 pages, 409493 bytes).
+ic/lm/lmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi6
+.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/
+local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2020/texmf-dist/fon
+ts/type1/public/lm/lmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
+blic/lm/lmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr6
+.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2020/texmf-
+dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2020/texmf-dist/fonts
+/type1/public/lm/lmri8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
+ic/lm/lmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy
+5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on ends.pdf (9 pages, 412559 bytes).
 PDF statistics:
- 328 PDF objects out of 1000 (max. 8388607)
- 284 compressed objects within 3 object streams
+ 332 PDF objects out of 1000 (max. 8388607)
+ 287 compressed objects within 3 object streams
  56 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

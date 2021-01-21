@@ -34,6 +34,7 @@
 \DeclareMathOperator\Cayley{Cayl}
 \DeclareMathOperator\Sch{Sch}
 \DeclareMathOperator\stab{Stab}
+\DeclareMathOperator\ab{ab}
 %
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \newcommand*{\field}[1]{\mathbf{#1}}
@@ -131,7 +132,7 @@ The next section contains all the definitions as well as some examples, while Se
 %
 %
 \paragraph{Acknowledgment}
-The authors are thankful to A. Valette and T. Nagnibeda for comments on a previous version of this note, and to the Swiss National Fund for Scientific Research for its support
+The authors are thankful to A. Genevois, T. Nagnibeda and A. Valette for helpful comments on a previous version of this note, and to the Swiss National Fund for Scientific Research for its support.
 %
 %
 %
@@ -239,7 +240,7 @@ There exists other characterization of the number of ends in graphs, see \cite{M
 A locally finite graph (i.e. such that every vertex has finite degree) is finite if and only if it has $0$ ends.
 
 An important fact about the number of ends of a graph, is that it is an invariant of quasi-isometry, see \cite{MR1213151}. In particular, if $G$ is a finitely generated group it is possible to speak about the number of ends of the Schreier graph $\Sch(G,H;S)$ without specifying a particular finite generating set $S$.
-By a celebrated result of Hopf \cite{MR2864562}, the number of ends of a Cayley graph of a finitely generated group can only be $0$, $1$, $2$ or infinite (in which case it is uncountable), see Figures~\ref{Figure:CayleyOfZ} and \ref{Figure:CayleyOfZ2} for some examples.
+By a celebrated result of Hopf \cite{MR10267}, the number of ends of a Cayley graph of a finitely generated group can only be $0$, $1$, $2$ or infinite (in which case it is uncountable), see Figures~\ref{Figure:CayleyOfZ} and \ref{Figure:CayleyOfZ2} for some examples.
 On the other hand, Schreier graphs may have any number of ends in $\mathbf N\cup\{\infty\}$, see Figure~\ref{Figure:SchreierOfF2} for an example of a graph with $4$ ends.
 In fact, every regular graph of even degree is isomorphic to a Schreier graph, \cite{MR0450121,MR1358635}. 
 
@@ -295,24 +296,25 @@ In particular, the group $(\Z/2\Z)\wr_\Z\Z$ has become well-known under the name
 Another (trivial) examples of wreath products are direct products $G\times H$ which corresponds to wreath products over a singleton $G\wr_{\{*\}}H$.
 
 Let $S$ be a generating set of $G$ and $T$ a generating set of $H$.
-Suppose that $H$ acts transitively on $X$ and let $x\in X$ be any point.
-Finally, let $\delta_x^s$ be the element of $\bigoplus_XG$ defined by $\delta_x^s(x)=s$ and $\delta_x^s(y)=1_G$ if $y\neq x$ and let $\mathbf 1$ be the constant function with value $1$.
-It is then standard that 
+Let $\{x_i\}_{i\in I}$ be a choice of a representative in each $H$-orbit.
+Finally, let $\delta_x^s$ be the element of $\bigoplus_XG$ defined by $\delta_x^s(x)=s$ and $\delta_x^s(y)=1_G$ if $y\neq x$ and let $\mathbf 1$ be the constant function with value $1_G$.
+It is then standard that
 \[
-	\setst{(\delta_x^s,1_H)}{s \in S} \cup \setst{(\mathbf 1,t}{t \in T}
+	\setst{(\delta_{x_i}^s,1_H)}{s \in S,i\in I} \cup \setst{(\mathbf 1,t)}{t \in T}
 \]
 is a generating set for $G\wr_XH$.
 
-On the other hand, it follows from the definition of the wreath product that we have
-\[
-	G\wr_XH\cong\bigoplus_{Y\textnormal{ is an $H$-orbit}}\bigl(G\wr_YH\bigr).
-\]
-We hence obtain
+On the other hand, if $\setst{(\varphi_i,h_i)}{i\in I}$ is a generating set of $G\wr_XH$, then $\setst{h_i}{i\in I}$ is a generating set of $H$ while $\setst{\varphi_i(x)}{i\in I,x\in X}$ is a generating set of $G$.
+Observe that since the $\varphi_i$ take only finitely many values, if $I$ is finite, so is $\setst{\varphi_i(x)}{i\in I,x\in X}$.
+We hence recover the following characterization of the finite generation of $G\wr_XH$.
 %
 %
 \begin{lem}
 The group $G\wr_XH$ is finitely generated if and only if both $G$ and $H$ are finitely generated and $H$ acts on $X$ with finitely many orbits.
 \end{lem}
+\begin{proof}
+If $G\wr_XH$ is finitely generated, so is its abelianization $(G\wr_XH)^{\ab}\cong (\bigoplus_{X/H}G^{\ab})\times H^{\ab}$, which implies that the orbit set $X/H$ is finite. The other implications directly follows from the above discussion on generating sets.
+\end{proof}
 %
 %
 Using the above lemma, we could reformulate Theorem~\ref{Thm:Main} in the following way:
@@ -545,6 +547,12 @@ Jonathan~L. Gross.
 \newblock Every connected regular graph of even degree is a {S}chreier coset
   graph.
 \newblock {\em J. Combinatorial Theory Ser. B}, 22(3):227--232, 1977.
+
+\bibitem{MR10267}
+Heinz Hopf.
+\newblock Enden offener {R}\"{a}ume und unendliche diskontinuierliche
+  {G}ruppen.
+\newblock {\em Comment. Math. Helv.}, 16:81--100, 1944.
 
 \bibitem{LS2021}
 Paul-Henry Leemann and Gr{\'e}goire Schneeberger.
