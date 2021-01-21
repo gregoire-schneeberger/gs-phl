@@ -17,6 +17,11 @@ Bachir Bekka, Pierre de~la Harpe, and Alain Valette.
   Mathematical Monographs}.
 \newblock Cambridge University Press, Cambridge, 2008.
 
+\bibitem{MR2671183}
+Indira Chatterji, Cornelia Dru\c{t}u, and Fr\'{e}d\'{e}ric Haglund.
+\newblock Kazhdan and {H}aagerup properties from the median viewpoint.
+\newblock {\em Adv. Math.}, 225(2):882--921, 2010.
+
 \bibitem{Cherix2004}
 Pierre-Alain Cherix, Florian Martin, and Alain Valette.
 \newblock Spaces with measured walls, the {H}aagerup property and property
@@ -28,10 +33,25 @@ Yves {Cornulier}.
 \newblock {Group actions with commensurated subsets, wallings and cubings}.
 \newblock {\em arXiv e-prints}, page arXiv:1302.5982, February 2013.
 
+\bibitem{MR3299841}
+Yves Cornulier.
+\newblock Irreducible lattices, invariant means, and commensurating actions.
+\newblock {\em Math. Z.}, 279(1-2):1--26, 2015.
+
 \bibitem{Cornulier2011}
 Yves Cornulier and Aditi Kar.
 \newblock On property ({FA}) for wreath products.
 \newblock {\em J. Group Theory}, 14(1):165--174, 2011.
+
+\bibitem{MR2240370}
+Yves de~Cornulier.
+\newblock Strongly bounded groups and infinite powers of finite groups.
+\newblock {\em Comm. Algebra}, 34(7):2337--2345, 2006.
+
+\bibitem{2017arXiv170500834G}
+Anthony {Genevois}.
+\newblock {Lamplighter groups, median spaces, and a-T-menability}.
+\newblock {\em arXiv e-prints}, page arXiv:1705.00834, May 2017.
 
 \bibitem{MR1705337}
 Sandi Klav{\v{z}}ar and Henry~Martyn Mulder.
@@ -45,10 +65,20 @@ Paul-Henry {Leemann} and Gr{\'e}goire {Schneeberger}.
   Schreier graphs}.
 \newblock {\em arXiv e-prints}, page arXiv:2101.03817, January 2021.
 
+\bibitem{MR3465847}
+Ashot Minasyan.
+\newblock New examples of groups acting on real trees.
+\newblock {\em J. Topol.}, 9(1):192--214, 2016.
+
 \bibitem{Neuhauser2005a}
 Markus Neuhauser.
 \newblock Relative property ({T}) and related properties of wreath products.
 \newblock {\em Math. Z.}, 251(1):167--177, 2005.
+
+\bibitem{MR1432323}
+Graham Niblo and Lawrence Reeves.
+\newblock Groups acting on {${\rm CAT}(0)$} cube complexes.
+\newblock {\em Geom. Topol.}, 1:approx. 7 pp.\, 1997.
 
 \bibitem{MR0476875}
 Jean-Pierre Serre.
