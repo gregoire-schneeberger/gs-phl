@@ -1,6 +1,6 @@
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+\usepackage[T1]{fontenc}      
 \usepackage[english]{babel} %utilisation du package français
 %
 %
@@ -17,7 +17,7 @@
 \usepackage{todonotes} %ajouter des commentaires
 \newcounter{mycomment}
 \newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33},size=\small]{\textbf{Commentaire [\uppercase{#1}\themycomment]:}~#2}}}
-
+	
 %\usepackage[disable]{todonotes}%cache les commentaires
 \usepackage{datetime} %ajoute la date et l'heure
 %%
@@ -64,7 +64,6 @@
 %
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \DeclarePairedDelimiter\gen{\langle}{\rangle}
-
 \newcommand*{\orbite}{\mathcal O}
 \newcommand*{\field}[1]{\mathbf{#1}}
 \newcommand*{\Z}{\field{Z}}
@@ -183,10 +182,7 @@ Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which
 \end{thm}
 %
 %
-Since the publication of Theorem~\ref{Thm:PropFW}, Y. Stalder let us know (private communication) that the arguments of \cite{LS2020} can be adapted to spaces with walls in order to replace the finite generation hypothesis of Theorem~\ref{Thm:PropFW} by the fact that all three of $G$, $H$ and $G\wr_XH$ are at most countable.
-On the other hand, A. Genevois\todo{finir la phrase et mettre une référence} that $G\wr_HH$ has property FW if and only if $G$ has property FW and $H$ is finite.
-
-The above results on property FH, FW and FA were obtained with distinct methods even if the final results share a common flavor.
+The above results on properties FH, FW and FA were obtained with distinct methods even if the final results share a common flavor.
 On the other hand, all three of properties FH, FW and FA can be characterized by the fact that any action on a suitable metric space (respectively Hilbert space, connected median graph and tree) has bounded orbits.
 But more group properties can be characterized in terms of actions with bounded orbits. This is for example the case of the Bergman's property (actions on metric spaces) or of cof~$\neq\omega$ (actions on ultrametric spaces).
 
@@ -208,7 +204,7 @@ Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ a set on which $H
 %
 A crucial ingredient of our proofs, is that the spaces under consideration admit a natural notion of Cartesian products.
 In particular, some of our results do not work for trees and property FA.
-Nevertheless, we are still able to show that if $G\wr_XH$ has property FA, then $H$ acts on $X$ with finitely many orbits. Combining this with Theorem~\ref{Thm:FACK} we obtain
+Nevertheless, we are still able to show that if $G\wr_XH$ has property FA, then $H$ acts on $X$ with finitely many orbits. Combining this with Theorem~\ref{Thm:FACK} we obtain 
 \begin{thm}\label{Thm:FAFiniteOrbits}
 Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts. Suppose that $H$ acts on $X$ without fixed points.
 Then $G\wr_XH$ has property FA if and only if $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G/[G:G]$ is finite and $G$ has cof~$\neq\omega$.
@@ -235,7 +231,7 @@ The authors are thankful to A. Valette for comments on a previous version of thi
 
 %An action of a group on a CAT(0) cube complex is \emph{essential} if all the orbits of vertices are unbounded and the action is transitive on the set of hyperplanes.
 %\begin{cor}
-%Let $G,H$ be two discrete groups and $X$ a set on which $H$ acts transitively. If there exists an essential action of $G$ or $H$ on a CAT(0) cube complex  or if $X$ is infinite, then there exists an essential action of $G \wr_X H$ on a CAT(0) cube complex.
+%Let $G,H$ be two discrete groups and $X$ a set on which $H$ acts transitively. If there exists an essential action of $G$ or $H$ on a CAT(0) cube complex  or if $X$ is infinite, then there exists an essential action of $G \wr_X H$ on a CAT(0) cube complex. 
 %\end{cor}
 %
 %
@@ -294,7 +290,7 @@ The \emph{(retricted) wreath product} $G\wr_XH$ is the group $(\bigoplus_XG)\rti
 For $g$ in $G$ and $x$ in $X$, we define the useful functions $\delta_x^g$ as \mycomment[GS]{On les utilise dans les dernières preuves.}
 
 \begin{equation*}
-\delta_x^g (y) =
+\delta_x^g (y) = 
 \begin{cases}
 g & y = x \\
 1 & y \neq x
@@ -305,11 +301,11 @@ They are sometimes called \emph{standard wreath products} or simply \emph{wreath
 The probably most well-known example of wreath product is the so called \emph{lamplighter group} $(\Z/2\Z)\wr_\Z\Z$.
 Another (trivial) example of wreath products is direct products $G\times H$ which correspond to wreath products over a singleton $G\wr_{\{*\}}H$.
 
-%The following decomposition directly follows from the definition and we will use it in the rest of the article without mentioning it.
-%%It directly follows from the definition of the wreath product that we have
-%\[
-%	G\wr_XH\cong\bigoplus_{Y\textnormal{ is an $H$-orbit}}\bigl(G\wr_YH\bigr).
-%\]
+The following decomposition directly follows from the definition and we will use it in the rest of the article without mentioning it.
+%It directly follows from the definition of the wreath product that we have
+\[
+	G\wr_XH\cong\bigoplus_{Y\textnormal{ is an $H$-orbit}}\bigl(G\wr_YH\bigr).
+\]
 %
 %
 %
@@ -330,7 +326,7 @@ Another (trivial) example of wreath products is direct products $G\times H$ whic
 %
 %
 Remind that a metric space $(X,d)$ is \emph{ultrametric} if and only if for any $x$, $y$ and $z$ in $X$ we have $d(x,y)\leq\max\{d(x,z),d(z,y)\}$. We will define various properties for actions on metric spaces.
-%
+% 
 \begin{defn}\label{Def:FHFA}
 Let $G$ be a group.
 It is said to have
@@ -392,7 +388,7 @@ Be careful that the action of $G$ on $\powerset{X}$ may exchange the connected c
 In fact, the connected component of $E\subset X$ is stabilized by $G$ if and only if $E$ is \emph{commensurated} by~$G$, that is if for every $g\in G$ the set $E\Delta gE$ is finite.
 For example, both $\powersetf{X}$ and $\powersetcof{X}$ are always preserved by the action of $G$.
 
-The following characterization of groups which have not cof~$\neq\omega$ is well-known and we include a proof only for the sake of complexity.
+On the other hand, we will also use the following result on groups with \mycomment{which have not} cof~$\neq\omega$:
 %
 %
 \begin{lem}\label{Lemma:CofSub}
@@ -400,7 +396,7 @@ Let $G$ be a group. Then the following are equivalent:
 \begin{enumerate}
 \item There exists a $G$-invariant (for the action by left multiplication) ultrametric $d$ on $G$ such that $G\curvearrowright G$ has an unbounded orbit,
 \item There exists an ultrametric space $X$ on which $G$ acts with an unbounded orbit,
-\item $G$ does not have cof~$\neq\omega$, that is it can be written as a countable increasing union of proper subgroups.
+\item $G$ can be written as a countable increasing union of proper subgroups.
 \end{enumerate}
 \end{lem}
 \begin{proof}
@@ -460,7 +456,7 @@ In other words, an additional structure on metric spaces, is a concrete category
 %
 \begin{rem}
 The only use we will do of category theory is as a language that allows to formally define what is an \emph{additional structure on metric spaces} and to prove things in this general setting.
-A reader unfamiliar with category theory and interested only in one specific structure (as for example Banach spaces), might forget all this general non-sense and only verify that the arguments of Section~\ref{Section:Proof} apply for this specific structure.
+A reader unfamiliar with category theory and interested only in one specific structure (as for example Banach spaces), might forget all this general non-sense and only verify that the arguments of Section~\ref{Section:Proof} apply for this structure.
 \end{rem}
 %
 %
@@ -479,7 +475,7 @@ The functor $F_S\colon\mathbf{Graph}\to\mathbf{Met}$ sends a connected graph to 
 %\end{rem}
 %
 %
-An example of an uninteresting property BS is given by taking $\mathbf{SMet}$ to be the metric spaces of bounded diameter (together with short maps). Indeed, in this case, any group has BS.
+An example of an uninteresting property BS is given by taking $\mathbf{SMet}$ to be the metric spaces of bounded diameter. Indeed, in this case, any group has BS.
 
 While we will be able to obtain some results for a general $\mathbf{SMet}$, we will sometimes need to restrict ourself to structure with a suitable notion of cartesian product.
 %
@@ -492,7 +488,7 @@ $X^n$ is compatible with the cartesian product of sets. That is $F\circ F_S(X^n)
 \item\label{Condidef:1}
 $X^n$ is compatible with the topology. That is, the underlying topology of  $X^n$ is the product topology on $F\circ F_S(X^n)$.
 \item\label{Condidef:2}
-$X^n$ is compatible with the bornology. That is, the underlying bornology of $X^n$ is the product bornology.\footnote{In practice, we will only need that if $E\subset X$ is unbounded, then the diagonal $\diag(E)\subset X^n$ is unbounded.}
+$X^n$ is compatible with the bornology in the sense that if $E\subset X$ is unbounded, the diagonal $\diag(E)\subset X^n$ is unbounded.
 %\item\label{Condidef:3}
 %For any S-automorphisms $\varphi\in\Aut_{\mathbf{SMet}}(X)$ the bijective map $\varphi\times\id\times\dots\times\id\colon X^n\to X^n$ is an S-automorphism,
 %\item\label{Condidef:4}
@@ -515,10 +511,10 @@ $\Aut_{\mathbf{SMet}}(X)^n\rtimes \Sym(n)$ is a subgroup of $\Aut_{\mathbf{SMet}
 
 %A sufficient condition to have Condition~\ref{Condidef:2} in Definition~\ref{Def:Cartesian} is that the induced metric on $X^n$ generates the bornology product on $X^n$. Observe that Condition~\ref{Condidef:1} does not imply Condition~\ref{Condidef:2}, as if $d$ is a metric on $X^n$, the metric $d'(x,y)=\min\{d(x,y),1\}$ generates the same topology but is bounded.
 
-For (ultra)metric spaces, the categorical product (corresponding to the metric $d_\infty=\max\{d_X,d_Y\}$) works fine, but any product metric of the form $d_p=(d_X^p+d_Y^p)^{\frac1p}$ for $p\in[1,\infty]$ works as well.
+For (ultra)metric spaces, the categorical product (corresponding to the metric $d_\infty=\max\{d_X,d_Y\}$) works fine, but any product metric $d_p=(d_X^p+d_Y^p)^{\frac1p}$ for $p\in[1,\infty]$ works as well.
 For Hilbert spaces, we take the usual cartesian product (which is also the categorial product), which corresponds to the metric $d_2=\sqrt{d_X^2+d_Y^2}$.
-For connected median graph, the usual cartesian product (which is not the categorical product!\footnote{The categorial product in $\mathbf{Graph}$ is the strong product.}) with $d_1=d_X+d_Y$ does the job.
-On the other hand, trees do not have compatible cartesian powers.
+For connected median graphs, the usual cartesian product (which is not the categorical product!\footnote{The categorial product in $\mathbf{Graph}$ is the strong product.}) with $d_1=d_X+d_Y$ does the job.
+On the other hand, trees do not have compatible cartesian powers
 
 
 %Examples of structures that have compatible cartesian powers (and even cartesian products) include: ultrametric spaces (with $d_\infty=\max\{d_X,d_Y\}$), connected median graphs (with $d_1=d_X+d_Y$), real Hilbert spaces (with $d_2=\sqrt{d_X^2+d_Y^2}$) and metric spaces (with $d_p=(d_X^p+d_Y^p)^{\frac1p}$ for any $p\in[1,\infty]$).
@@ -602,7 +598,7 @@ By iterating Lemma~\ref{Lemma:Semidirect}, we obtain
 %
 %
 \begin{cor}\label{Cor:Wreath}
-Let $G$ and $H$ be two groups and $X$ a set on which $H$ acts. Then,
+Let $G$ and $H$ be two groups and $X$ a set on which $H$ acts with finitely many orbits. Then,
 \begin{enumerate}
 \item
 If $G\wr_X H$ has property BS, then so does $H$,
@@ -616,8 +612,7 @@ If both $G$ and $H$ have property BS and $X$ is finite, then $G\wr_X H$ has prop
 %Let $(G_i)_{i\geq 1}$ be non-trivial groups and let $G\coloneqq\bigoplus_{i\geq 1} G_i$ be their direct sum.
 %Then $d_\infty(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$ is an ultra-distance on $G$ which is $G$-invariant for the action of $G$ on itself by left multiplication.
 %\end{exmp}
-On the other hand, we have the following result on infinite direct sums.
-It is of course possible to prove it using the characterization of cof~$\neq\omega$ in terms of subgroups. However, we find enlightening to prove it using the characterization in terms of actions on ultrametric spaces.
+On the other hand, we have the following result on infinite direct sums
 %
 %
 \begin{lem}\label{Lemma:Cof}
@@ -634,21 +629,10 @@ So let $G\coloneqq \bigoplus_{i\geq 1}G_i$ and for each $i$, choose $g_i\neq 1$ 
 Let $d_\infty(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$ be the $G$-invariant ultrametric of Example~\ref{Exmpl:Ultra}.
 Then for every integer $n$, the orbit $G.1_G$ contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $1_G$ for $d_\infty$.
 In particular, an infinite direct sum of non-trivial groups does not have cof~$\neq\omega$, nor does it have BS.
+%
 %\mycomment[GS]{So let $G\coloneqq \bigoplus_{i\geq 1}G_i$. We define $H_j = \setst{g \in G}{g(i) = 1 \, \forall i>j}$. It is clear that $H_j \neq G$ and $G = \cup_j H_j$. Then $G$ does not have cof~$\neq\omega$ nor BS.}
-The second assertion follows of the first assertion combined with Corollary~\ref{Cor:Prod}.
-
-The last assertion is a simple variation on the first.
-Indeed, we have
-\[
-	G\wr_XH\cong(\bigoplus_{Y\in X/H}L_Y)\rtimes H\qquad\textnormal{with}\qquad L_Y\cong\bigoplus_{y\in Y}G_y,
-\]
-where $X/H$ is the set of $H$-orbits.
-The important fact for us is that $H$ fixes the decomposition into $L_Y$ factors: for all $Y$ we have $H.L_Y=L_Y$.
-Up to regrouping some of the $L_Y$ together we hence have $G\wr_XH\cong\bigl(\bigoplus_{i\geq 1}L_i\bigr)\rtimes H$ with $H.L_i=L_i$ for all $i$.
-Now, we have an ultradistance $d_\infty$ on $L\coloneqq\bigoplus_{i\geq 1}L_i$ as above and we can put the discrete distance $d$ on $H$.
-Then $d_\infty'=\max\{d_\infty,d\}$ is an ultradistance on $\bigl(\bigoplus_{i\geq 1}L_i\bigr)\rtimes H$, which is $\bigl(\bigoplus_{i\geq 1}L_i\bigr)\rtimes H$-invariant (for the action by left multiplication).
-From a practical point of view, we have $d'_\infty\bigl((f,h),(g,h')\bigr)\coloneqq\max\setst{i}{f(i)\neq g(i)}$ if $f\neq g$ and $d'_\infty\bigl((f,h),(f,h')=1$ if $h\neq h'$
-Since the action of $L$ on itself has an unbouded orbit for $d_\infty$, the action of $\bigl(\bigoplus_{i\geq 1}L_i\bigr)\rtimes H$ on itself has an unbounded orbit for $d'_\infty$.
+%
+The second and third assertions follows of the first assertion combined with Corollary~\ref{Cor:Prod}. 
 \end{proof}
 %
 %
@@ -751,8 +735,8 @@ Since $\diag(\orbite)$ is unbounded, $G$ does not have property BS.
 For readers that are not familiar with representations of finite groups, here is the above argument in more details.
 Let $(f_i)_{i=1}^n$ be a transversal for $G/H$.
 The natural action of $G$ on $G/H$ gives rise to an action of $G$ on $\{1,\dots,n\}$.
-Hence, for any $g$ in $G$ and $i$ in $\{1,\dots,n\}$ there exists a unique $h_{g,i}$ in $H$ such that $gf_i=f_{g.i}h_{g,i}$. That is, $h_{g,i}=gf_if_{g.i}^{-1}$.
-We then define $g.(x_1,\dots,x_n)\coloneqq(h_{g,g^{-1}.1}.x_{g^{-1}.1},\dots,h_{g,g^{-1}.n}.x_{g^{-1}.n})$. This is indeed an action, which, by Condition~\ref{Item:Product} of Definition~\ref{Def:Cartesian}, is by S-automorphisms of $X^{G/H}$.
+Hence, for any $g$ in $G$ and $i$ in $\{1,\dots,n\}$ there exists a unique $h_{g,i}$ in $H$ such that $gf_i=f_{g.i}h_{g,i}$. That is, $h_{g,i}=f_{g.i}^{-1}gf_i$.
+We then define $g.(x_1,\dots,x_n)\coloneqq(h_{g,g^{-1}.1}.x_{g^{-1}.1},\dots,h_{g,g^{-1}.n}.x_{g^{-1}.n})$. This is indeed an action, which, by Condition~\ref{Item:Product} of Definition~\ref{Def:Cartesian}, is by S-automorphisms\todo{check that}, of $X^{G/H}$.
 Moreover, every element $h\in H$ acts diagonally by $h.(x_1,\dots,x_n)=(h.x_1,\dots,h.x_n)$.
 In particular, this $G$ action has an unbounded orbit.
 \end{proof}
@@ -770,7 +754,7 @@ Then $(Y^X,d)$ is a S-space and we have the \emph{primitive action} of the wreat
 \[
 	\bigl((\varphi,h).\psi\bigr)(x)=\varphi(h^{-1}.x).\psi(h^{-1}.x).
 \]
-By Condition~\ref{Item:Product} of Definition~\ref{Def:Cartesian}, this action is by S-automorphisms.
+By Condition~\ref{Item:Product} of Definition~\ref{Def:Cartesian}, this action is by S-automorphisms.\todo{check that}
 The orbit $G.y$ embeds diagonally and hence $\diag(G.y)$ is an unbounded subset of some $G\wr_XH$-orbit, which implies that $G\wr_XH$ does not have property BS.
 \end{proof}
 %
@@ -785,7 +769,7 @@ Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ ac
 %
 %
 We now proceed to prove Theorem~\ref{Thm:UncCoun}.
-As for Lemma~\ref{Lemma:Cof}, it is also possible to prove it using the characterization of cof~$\neq\omega$ in terms of subgroups, but we will only give a proof using the characterization in terms of actions on ultrametric spaces.
+It is of course possible to prove it using the characterization of cof~$\neq\omega$ in terms of subgroups. However, we find enlightening to prove it using the characterization in terms of actions on ultrametric spaces.
 %
 %
 \begin{thm}
@@ -804,38 +788,23 @@ It is easy to check that the map $d_\infty\colon\bigoplus_XG\times\bigoplus_XG\t
 Finally, let $h\in G$ be an element of unbounded $G$-orbit for $d$ and let $x_0$ be any element of $X$. Then for any $g$ in $G$ we have $(\delta_{x_0}^g,1).\delta_{x_0}^h=\delta_{x_0}^{gh}$ and hence $d_\infty(\delta_{x_0}^h,\delta_{x_0}^{gh})=d(h,gh)$ is unbounded.
 
 Suppose now that both $G$ and $H$ have cof~$\neq\omega$ and that $H$ acts on $X$ with finitely many orbits. We want to prove that $G\wr_XH$ has cof~$\neq\omega$.
-%Since $H$ acts on $X$ with finitely many orbit, by Corollary~\ref{Cor:Prod} it is enough to show that $G\wr_YH$ has cof~$\neq\omega$ when $Y$ is one $H$-orbit.
-%%Let $(Z,d)$ be an ultrametric space on which $G\wr_YH$ acts.
-%%Then $H$ and all the $G_y$ act on $Z$ with bounded orbits.
-%%For every $z\in Z$ and $(\varphi,h)$ in $G\wr_YH$ we have
-%%\begin{align*}
-%%	d\bigl(z,(\varphi,h).z\bigr)&\leq\max\{d\bigl(z,(\varphi,1).z\bigr),d\bigl((\varphi,1).z,(\varphi,h).z\bigr)\}\\
-%%	&=\max\{d\bigl(z,(\varphi,1).z\bigr),d\bigl(z,(1,h).z\bigr)\}.
-%%\end{align*}
-%%That is, the $G\wr_YH$-orbit of $z$ is bounded as soon as both the $H$-orbit and the $\bigoplus_YG$-orbit of $z$ are bounded.
-%%By hypothesis, the $H$-orbits are bounded. It hence remain to show that the $\bigoplus_YG$-orbits are also bounded.
-%%
-%%%It is clear that $\bigoplus_YG.z$ is bounded as soon as the $G_y.z$
-%%%We have $d\bigl(z,(\varphi,1).z\bigr)\leq\max\setst{d\bigl(z,(\delta_y^{\varphi(y)},1).z\bigr)}{y\in Y}$.
-%%%Since $H$ acts transitively on $Y$, for every $y_0,y$ in $Y$ there exists $h\in H$ sending $y_0$ onto $y$. In particular for any $g$ in $G$ we have $(\delta_{y}^g,1)=(1,h)(\delta_{y_0}^g,1)(1,h^{-1})$.
-%%%This implies that $d(z,(\delta_{y}^g,1).z)=d\bigl((1,h^{-1}).z,(\delta_{y_0}^g,1).((1,h^{-1}).z)\bigr)$.
-%%
-%%We know that for $y_0$ in $Y$ the orbit $G_{y_0}.z$ is bounded of diameter $D_1$ and that $H.z$ is bounded of diameter $D_2$. Now, for any $y\in Y$, there exists $h\in H$ such that $y=h.y_0$.
-%%We have
-%%\begin{align*}
-%%	d\bigl((\delta_{y_0}^g,h^{-1}).z,z\bigr)&\leq\max\{d\bigl((\delta_{y_0}^g,1).z,z\bigr),d\bigl((\delta_{y_0}^g,h^{-1}).z,(\delta_{y_0}^g,1).z\bigr)\}\\
-%%	&=\max\{d\bigl((\delta_{y_0}^g,1).z,z\bigr),d\bigl((1,h^{-1}).z,z\bigr)\}\\
-%%	&\leq \max\{D_1,D_2\},
-%%\end{align*}
-%%which implies that $G_y.z=G_{h.y_0}.z=hG_{y_0}h^{-1}.z$ has the same diameter as $G_{y_0}h^{-1}.z$, which is bounded by $\max\{D_1,D_2\}$.
-%%Finally, the diameter of $\bigoplus_YG.z$ is bounded by the supremum of the diameters of the $G_y.z$, and hence bounded by $\max\{D_1,D_2\}$, which finishes the proof.
-%%
-%%
+Since $H$ acts on $X$ with finitely many orbit, by Corollary~\ref{Cor:Prod} it is enough to show that $G\wr_YH$ has cof~$\neq\omega$ when $Y$ is one $H$-orbit.
 %Let $(Z,d)$ be an ultrametric space on which $G\wr_YH$ acts.
 %Then $H$ and all the $G_y$ act on $Z$ with bounded orbits.
-%Fix an element $y_0$ of $Y$ and let $z$ be an element of $Z$.
-%Then $H.z$ has finite diameter $D_1$ while $G_{y_0}$ has finite diameter $D_2$.
-%For any $y\in Y$, there exists $h\in H$ such that $y=h.y_0$.
+%For every $z\in Z$ and $(\varphi,h)$ in $G\wr_YH$ we have 
+%\begin{align*}
+%	d\bigl(z,(\varphi,h).z\bigr)&\leq\max\{d\bigl(z,(\varphi,1).z\bigr),d\bigl((\varphi,1).z,(\varphi,h).z\bigr)\}\\
+%	&=\max\{d\bigl(z,(\varphi,1).z\bigr),d\bigl(z,(1,h).z\bigr)\}.
+%\end{align*}
+%That is, the $G\wr_YH$-orbit of $z$ is bounded as soon as both the $H$-orbit and the $\bigoplus_YG$-orbit of $z$ are bounded.
+%By hypothesis, the $H$-orbits are bounded. It hence remain to show that the $\bigoplus_YG$-orbits are also bounded.
+%
+%%It is clear that $\bigoplus_YG.z$ is bounded as soon as the $G_y.z$
+%%We have $d\bigl(z,(\varphi,1).z\bigr)\leq\max\setst{d\bigl(z,(\delta_y^{\varphi(y)},1).z\bigr)}{y\in Y}$.
+%%Since $H$ acts transitively on $Y$, for every $y_0,y$ in $Y$ there exists $h\in H$ sending $y_0$ onto $y$. In particular for any $g$ in $G$ we have $(\delta_{y}^g,1)=(1,h)(\delta_{y_0}^g,1)(1,h^{-1})$.
+%%This implies that $d(z,(\delta_{y}^g,1).z)=d\bigl((1,h^{-1}).z,(\delta_{y_0}^g,1).((1,h^{-1}).z)\bigr)$.
+%
+%We know that for $y_0$ in $Y$ the orbit $G_{y_0}.z$ is bounded of diameter $D_1$ and that $H.z$ is bounded of diameter $D_2$. Now, for any $y\in Y$, there exists $h\in H$ such that $y=h.y_0$.
 %We have
 %\begin{align*}
 %	d\bigl((\delta_{y_0}^g,h^{-1}).z,z\bigr)&\leq\max\{d\bigl((\delta_{y_0}^g,1).z,z\bigr),d\bigl((\delta_{y_0}^g,h^{-1}).z,(\delta_{y_0}^g,1).z\bigr)\}\\
@@ -843,38 +812,29 @@ Suppose now that both $G$ and $H$ have cof~$\neq\omega$ and that $H$ acts on $X$
 %	&\leq \max\{D_1,D_2\},
 %\end{align*}
 %which implies that $G_y.z=G_{h.y_0}.z=hG_{y_0}h^{-1}.z$ has the same diameter as $G_{y_0}h^{-1}.z$, which is bounded by $\max\{D_1,D_2\}$.
-%On the other hand, the diameter of $\bigoplus_YG.z$ is bounded by the supremum of the diameters of the $G_y.z$, and hence also bounded by $\max\{D_1,D_2\}$.
-%Finally, for $(\varphi,h)$ in $G\wr_YH$ we have
-%\begin{align*}
-%	d\bigl(z,(\varphi,h).z\bigr)&\leq\max\{d\bigl(z,(\varphi,1).z\bigr),d\bigl((\varphi,1).z,(\varphi,h).z\bigr)\}\\
-%	&=\max\{d\bigl(z,(\varphi,1).z\bigr),d\bigl(z,(1,h).z\bigr)\}\\
-%	&\leq\max\{\max\{D_1,D_2\},D_1\}.
-%\end{align*}
-%That is, the diameter of $G\wr_YH.z$ is itself bounded by $\max\{D_1,D_2\}$, which finishes the proof.
-
-Let $(Y,d)$ be an ultrametric space on which $G\wr_XH$ acts.
-Then $H$ and all the $G_x$ act on $Y$ with bounded orbits.
-Let $\mathcal O_1,\dots,\mathcal O_n$ be the $H$-orbits on $X$ and for each $1\leq i\leq n$ choose an element $x_i$ in $\mathcal O_i$.
-Let $y$ be any element of $Y$.
-Then $H.y$ has finite diameter $D_0$ while $G_{x_i}.y$ has finite diameter $D_i$.
-For any $x\in X$, there exists $1\leq i\leq n$ and $h\in H$ such that $x=h.x_i$.
+%Finally, the diameter of $\bigoplus_YG.z$ is bounded by the supremum of the diameters of the $G_y.z$, and hence bounded by $\max\{D_1,D_2\}$, which finishes the proof.
+%
+%
+Let $(Z,d)$ be an ultrametric space on which $G\wr_YH$ acts.
+Then $H$ and all the $G_y$ act on $Z$ with bounded orbits.
+Fix an element $y_0$ of $Y$ and let $z$ be an element of $Z$.
+Then $H.z$ has finite diameter $D_1$ while $G_{y_0}.z$ has finite diameter $D_2$.
+For any $y\in Y$, there exists $h\in H$ such that $y=h.y_0$.
 We have
 \begin{align*}
-	d\bigl((\delta_{x_i}^g,h^{-1}).y,y\bigr)&\leq\max\{d\bigl((\delta_{x_i}^g,h^{-1}).y,(\delta_{x_i}^g,1).y\bigr),d\bigl((\delta_{x_i}^g,1).y,y\bigr)\}\\
-	&=\max\{d\bigl((1,h^{-1}).y,y\bigr),d\bigl((\delta_{x_i}^g,1).y,y\bigr)\}\\
-	&\leq \max\{D_0,D_i\},
+	d\bigl((\delta_{y_0}^g,h^{-1}).z,z\bigr)&\leq\max\{d\bigl((\delta_{y_0}^g,1).z,z\bigr),d\bigl((\delta_{y_0}^g,h^{-1}).z,(\delta_{y_0}^g,1).z\bigr)\}\\
+	&=\max\{d\bigl((\delta_{y_0}^g,1).z,z\bigr),d\bigl((1,h^{-1}).z,z\bigr)\}\\
+	&\leq \max\{D_1,D_2\},
 \end{align*}
-which implies that the diameter of $G_{x_i}h^{-1}.y$ is bounded by $\max\{D_0,D_i\}$.
-But $G_{x_i}h^{-1}.y$ has the same diameter as $hG_{x_i}h^{-1}.y=G_{h.x_i}.y=G_x.y$.
-
-On the other hand, the diameter of $\bigoplus_XG.y$ is bounded by the supremum of the diameters of the $G_x.y$, and hence bounded by $\max\{D_0,D_1,\dots,D_n\}$.
-Finally, for $(\varphi,h)$ in $G\wr_YH$ we have
+which implies that $G_y.z=G_{h.y_0}.z=hG_{y_0}h^{-1}.z$ has the same diameter as $G_{y_0}h^{-1}.z$, which is bounded by $\max\{D_1,D_2\}$.
+On the other hand, the diameter of $\bigoplus_YG.z$ is bounded by the supremum of the diameters of the $G_y.z$, and hence also bounded by $\max\{D_1,D_2\}$.
+Finally, for $(\varphi,h)$ in $G\wr_YH$ we have 
 \begin{align*}
-	d\bigl(y,(\varphi,h).y\bigr)&\leq\max\{d\bigl(y,(\varphi,1).y\bigr),d\bigl((\varphi,1).y,(\varphi,h).y\bigr)\}\\
-	&=\max\{d\bigl(y,(\varphi,1).y\bigr),d\bigl(y,(1,h).y\bigr)\}\\
-	&\leq\max\{\max\{D_0,D_1,\dots,D_n\},D_0\}.
+	d\bigl(z,(\varphi,h).z\bigr)&\leq\max\{d\bigl(z,(\varphi,1).z\bigr),d\bigl((\varphi,1).z,(\varphi,h).z\bigr)\}\\
+	&=\max\{d\bigl(z,(\varphi,1).z\bigr),d\bigl(z,(1,h).z\bigr)\}\\
+	&\leq\max\{\max\{D_1,D_2\},D_1\}.
 \end{align*}
-That is, the diameter of $G\wr_YH.z$ is itself bounded by $\max\{D_0,D_1,\dots,D_n\}$, which finishes the proof.
+That is, the diameter of $G\wr_YH.z$ is itself bounded by $\max\{D_1,D_2\}$, which finishes the proof.
 \end{proof}
 %
 %
@@ -995,11 +955,11 @@ By \cite{Cornulier2013}, this is the case for property FW. A crude idea would be
 %
 %
 %
-%\clearpage
-%\appendix
-%Vieux trucs pour les avoirs sous la main. À enlever de la version finale.
-%\input{Definitions.Old.tex}
-%\input{Proofs.Old.tex}
+\clearpage
+\appendix
+Vieux trucs pour les avoirs sous la main. À enlever de la version finale.
+\input{Definitions.Old.tex}
+\input{Proofs.Old.tex}
 %
 %
 %

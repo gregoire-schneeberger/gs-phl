@@ -17,11 +17,6 @@ Bachir Bekka, Pierre de~la Harpe, and Alain Valette.
   Mathematical Monographs}.
 \newblock Cambridge University Press, Cambridge, 2008.
 
-\bibitem{MR1213151}
-Stephen~G Brick.
-\newblock {Quasi-isometries and ends of groups}.
-\newblock {\em J. Pure Appl. Algebr.}, 86(1):23--33, 1993.
-
 \bibitem{Cherix2004}
 Pierre-Alain Cherix, Florian Martin, and Alain Valette.
 \newblock Spaces with measured walls, the {H}aagerup property and property
@@ -38,24 +33,6 @@ Yves Cornulier and Aditi Kar.
 \newblock On property ({FA}) for wreath products.
 \newblock {\em J. Group Theory}, 14(1):165--174, 2011.
 
-\bibitem{DelaHarpe2000}
-Pierre de~la Harpe.
-\newblock {\em Topics in geometric group theory}.
-\newblock Chicago Lectures in Mathematics. University of Chicago Press,
-  Chicago, IL, 2000.
-
-\bibitem{MR1967888}
-Reinhard Diestel and Daniela K\"{u}hn.
-\newblock Graph-theoretical versus topological ends of graphs.
-\newblock {\em J. Combin. Theory Ser. B}, 87(1):197--206, 2003.
-\newblock Dedicated to Crispin St. J. A. Nash-Williams.
-
-\bibitem{MR0450121}
-Jonathan~L. Gross.
-\newblock Every connected regular graph of even degree is a {S}chreier coset
-  graph.
-\newblock {\em J. Combinatorial Theory Ser. B}, 22(3):227--232, 1977.
-
 \bibitem{MR1705337}
 Sandi Klav{\v{z}}ar and Henry~Martyn Mulder.
 \newblock {Median graphs: characterizations, location theory and related
@@ -68,13 +45,6 @@ Paul-Henry {Leemann} and Gr{\'e}goire {Schneeberger}.
   Schreier graphs}.
 \newblock {\em arXiv e-prints}, page arXiv:2101.03817, January 2021.
 
-\bibitem{MR1358635}
-Alexander Lubotzky.
-\newblock Cayley graphs: eigenvalues, expanders and random walks.
-\newblock In {\em Surveys in combinatorics, 1995 ({S}tirling)}, volume 218 of
-  {\em London Math. Soc. Lecture Note Ser.}, pages 155--189. Cambridge Univ.
-  Press, Cambridge, 1995.
-
 \bibitem{Neuhauser2005a}
 Markus Neuhauser.
 \newblock Relative property ({T}) and related properties of wreath products.
@@ -86,12 +56,5 @@ Jean-Pierre Serre.
 \newblock Soci{\'e}t{\'e} Math{\'e}matique de France, Paris, 1977.
 \newblock Avec un sommaire anglais, R{\'e}dig{\'e} avec la collaboration de
   Hyman Bass, Ast{\'e}risque, No. 46.
-
-\bibitem{Stallings1971}
-John Stallings.
-\newblock {\em Group theory and three-dimensional manifolds}.
-\newblock Yale University Press, New Haven, Conn.-London, 1971.
-\newblock A James K. Whittemore Lecture in Mathematics given at Yale
-  University, 1969, Yale Mathematical Monographs, 4.
 
 \end{thebibliography}

@@ -1,6 +1,6 @@
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+\usepackage[T1]{fontenc}      
 \usepackage[english]{babel} %utilisation du package français
 %
 %
@@ -16,8 +16,8 @@
 \usepackage[colorlinks,breaklinks,bookmarks,plainpages=false,unicode=true]{hyperref}%
 \usepackage{todonotes} %ajouter des commentaires
 \newcounter{mycomment}
-\newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33},size=\small]{\textbf{Commentaire [\uppercase{#1}\themycomment]:}~#2}}}
-
+\newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33},inline]{\textbf{Commentaire [\uppercase{#1}\themycomment]:}~#2}}}
+	
 %\usepackage[disable]{todonotes}%cache les commentaires
 \usepackage{datetime} %ajoute la date et l'heure
 %%
@@ -64,7 +64,6 @@
 %
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \DeclarePairedDelimiter\gen{\langle}{\rangle}
-
 \newcommand*{\orbite}{\mathcal O}
 \newcommand*{\field}[1]{\mathbf{#1}}
 \newcommand*{\Z}{\field{Z}}
@@ -157,7 +156,7 @@ In this context, the following result on the celebrated Kazdhan's property~(T) w
 %
 %
 \begin{thm}[\cite{Cherix2004,Neuhauser2005a}] \label{T:Wreath_prop_T}
-Let $G$ and $H$ be two discrete groups with $G$ non-trivial and let $X$ be a set on which $H$ acts. The wreath product $G \wr_X H$ has property (T) if and only if $G$ and $H$ have property (T) and $X$ is finite.
+Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which $H$ acts. The wreath product $G \wr_X H$ has property (T) if and only if $G$ and $H$ have property (T) and $X$ is finite.
 \end{thm}
 %
 %
@@ -184,20 +183,19 @@ Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which
 %
 %
 Since the publication of Theorem~\ref{Thm:PropFW}, Y. Stalder let us know (private communication) that the arguments of \cite{LS2020} can be adapted to spaces with walls in order to replace the finite generation hypothesis of Theorem~\ref{Thm:PropFW} by the fact that all three of $G$, $H$ and $G\wr_XH$ are at most countable.
-On the other hand, A. Genevois published a new version of \cite{2017arXiv170500834G} to make explicit the fact that his ``diadem product'' construction implies that $G\wr_HH$ has property FW if and only if $G$ has property FW and $H$ is finite.
+On the other hand, A. Genevois\todo{finir la phrase et mettre une référence} that $G\wr_HH$ has property FW if and only if $G$ has property FW and $H$ is finite.
 
 The above results on property FH, FW and FA were obtained with distinct methods even if the final results share a common flavor.
 On the other hand, all three of properties FH, FW and FA can be characterized by the fact that any action on a suitable metric space (respectively Hilbert space, connected median graph and tree) has bounded orbits.
 But more group properties can be characterized in terms of actions with bounded orbits. This is for example the case of the Bergman's property (actions on metric spaces) or of cof~$\neq\omega$ (actions on ultrametric spaces).
 
-By adopting the point of view of actions with bounded orbits, we obtain an unified proof of the following for general groups.
+By adopting the point of view of actions with bounded orbits, we obtain an unified proof of the following.
 %
 %
 \begin{thm}\label{Thm:Main}
 Let $BS$ be any one of the following properties: Bergman's property, FH or FW.
 Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ a set on which $H$ acts. Then the wreath product $G \wr_X H$ has property BS if and only if $G$ and $H$ have property BS and $X$ is finite.
 \end{thm}
-
 %
 %
 With a little twist, we also obtain a similar result for groups with cof~$\neq\omega$:
@@ -208,7 +206,7 @@ Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ a set on which $H
 %
 A crucial ingredient of our proofs, is that the spaces under consideration admit a natural notion of Cartesian products.
 In particular, some of our results do not work for trees and property FA.
-Nevertheless, we are still able to show that if $G\wr_XH$ has property FA, then $H$ acts on $X$ with finitely many orbits. Combining this with Theorem~\ref{Thm:FACK} we obtain
+Nevertheless, we are still able to show that if $G\wr_XH$ has property FA, then $H$ acts on $X$ with finitely many orbits. Combining this with Theorem~\ref{Thm:FACK} we obtain 
 \begin{thm}\label{Thm:FAFiniteOrbits}
 Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts. Suppose that $H$ acts on $X$ without fixed points.
 Then $G\wr_XH$ has property FA if and only if $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G/[G:G]$ is finite and $G$ has cof~$\neq\omega$.
@@ -233,9 +231,9 @@ The authors are thankful to A. Valette for comments on a previous version of thi
 %
 %\todo[inline]{J'ai mis en commentaire la partie sur les actions essentielles ne sachant pas comment l'introduire. Je pense que si on veut la garder, le mieux est de la mettre un peu en apparté soit à la fin de l'intro soit à la fin de l'article. Cela permet de garder quelque chose de simple et d'auto-contenu pour le reste.}
 
-%An action of a group on a CAT(0) cube complex is \emph{essential} if all the orbits of vertices are unbounded and the action is transitive on the set of hyperplanes.
+%An action of a group on a CAT(0) cube complex is \emph{essential} if all the orbits of vertices are unbounded and the action is transitive on the set of hyperplanes.
 %\begin{cor}
-%Let $G,H$ be two discrete groups and $X$ a set on which $H$ acts transitively. If there exists an essential action of $G$ or $H$ on a CAT(0) cube complex  or if $X$ is infinite, then there exists an essential action of $G \wr_X H$ on a CAT(0) cube complex.
+%Let $G,H$ be two discrete groups and $X$ a set on which $H$ acts transitively. If there exists an essential action of $G$ or $H$ on a CAT(0) cube complex  or if $X$ is infinite, then there exists an essential action of $G \wr_X H$ on a CAT(0) cube complex. 
 %\end{cor}
 %
 %
@@ -291,18 +289,10 @@ This leads to the following standard definition
 Let $G$ and $H$ be groups and $X$ be a set on which $H$ acts.
 The \emph{(retricted) wreath product} $G\wr_XH$ is the group $(\bigoplus_XG)\rtimes H$.
 \end{defn}
-For $g$ in $G$ and $x$ in $X$, we define the following analogs of Kronecker's delta functions
-\begin{equation*}
-\delta_x^g (y) \coloneqq
-\begin{cases}
-g & y = x \\
-1 & y \neq x.
-\end{cases}
-\end{equation*}
 A prominent  source of examples of wreath products are the ones of the form $G\wr_HH$, where $H$ acts on itself by left multiplication.
-They are sometimes called \emph{standard wreath products} or simply \emph{wreath products}, while general $G\wr_XH$ are sometimes called \emph{permutational wreath products}.
-The probably most well-known example of wreath product is the so called \emph{lamplighter group} $(\Z/2\Z)\wr_\Z\Z$.
-Another (trivial) example of wreath products is direct products $G\times H$ which correspond to wreath products over a singleton $G\wr_{\{*\}}H$.
+They are sometimes called \emph{standard wreath products} or simply \emph{wreaths products}, while general $G\wr_XH$ are sometimes called \emph{permutational wreath products}.
+The probably most well-kwon examples of wreath product is the so called \emph{lamplighter group} $(\Z/2\Z)\wr_\Z\Z$.
+Another (trivial) examples of wreath products are direct products $G\times H$ which correspond to wreath products over a singleton $G\wr_{\{*\}}H$.
 
 %The following decomposition directly follows from the definition and we will use it in the rest of the article without mentioning it.
 %%It directly follows from the definition of the wreath product that we have
@@ -328,8 +318,13 @@ Another (trivial) example of wreath products is direct products $G\times H$ whic
 %
 %
 %
-Remind that a metric space $(X,d)$ is \emph{ultrametric} if and only if for any $x$, $y$ and $z$ in $X$ we have $d(x,y)\leq\max\{d(x,z),d(z,y)\}$. We will define various properties for actions on metric spaces.
-%
+Remind that a metric space $(X,d)$ is \emph{ultrametric} if and only if for any $x$, $y$ and $z$ in $X$ we have $d(x,y)\leq\max\{d(x,z),d(z,y)\}$.
+
+For $u$ and $v$ two vertices of a connected\footnote{We will always assume that our connected graphs are non-empty. This is coherent with the definition that a connected graph is a graph with exactly one connected component.} graph $\mathcal G$, we define the total interval $[u,v]$ as the set of vertices that lie on some shortest path between $u$ and $v$.
+A connected graph $\mathcal G$ is \emph{median} if for any three vertices $u$, $v$, $w$, the intersection $[u,v]\cap[v,w]\cap[u,w]$ consists of a unique vertex, denoted $m(u,v,w)$.
+A graph is \emph{median} if each of its connected components is median. For surveys on median graphs see \cite{MR1705337,MR2405677}.\todo{Maybe add refs with respect to FW.}
+
+\todo[inline]{Add refs}
 \begin{defn}\label{Def:FHFA}
 Let $G$ be a group.
 It is said to have
@@ -348,24 +343,16 @@ In the above, \emph{actions} are supposed to preserve the structure. In particul
 \end{defn}
 %
 %
-For countable groups (and more generally for $\sigma$-compact locally compact groups), property FH is equivalent to the celebrated Kazdhan's property (T) by the Delorme-Guichardet theorem, see for example \cite{MR2415834}, but this is not true in general. Indeed in \cite{MR2240370}, Cornulier constructs an uncountable group with property SB which, as we will see just below, implies property FW, but a group with property (T) is finitely generated.
-
+For countable groups (and more generally for $\sigma$-compact locally compact groups), property FH is equivalent to the celebrated Kazdhan's property (T) by the Delorme-Guichardet theorem, see for example \cite{MR2415834}, but this is not true in general \cite{MR2240370}.
+\todo[inline]{Maybe expand a little more.}
 The names\todo{Give refs} FH, FW and FA come from the fact that these properties admit a description in terms of existence of a Fixed point for actions on Hilbert spaces, on spaces with Walls and on trees (\emph{Arbres} in french).
 On the other hand, SB stands for Strongly Bounded and is also called the \emph{Bergman's property}.
-Finally, a group has cof~$\neq\omega$ (does not have \emph{countable cofinality}) if and only if it cannot be written has a countable increasing union of proper subgroups, see Lemma~\ref{Lemma:CofSub}.
+Finally, a group has cof~$\neq\omega$ (that is \emph{not countable cofinality}) if and only if it cannot be written has a countable increasing union of proper subgroups, see Lemma~\ref{Lemma:CofSub}.
 
-We have the following implications between the properties of Definition~\ref{Def:FHFA} \cite{MR1432323,MR0476875 ,MR3299841,2013arXiv1302.5982C}
+We have the following strict implications between the properties of Definition~\ref{Def:FHFA} \cite{MR1432323,MR0476875 ,MR3299841,2013arXiv1302.5982C}
 \begin{equation}\tag{\dag}\label{EQ:Implications}
 	\textnormal{SB}\implies \textnormal{FH}\implies \textnormal{FW}\implies \textnormal{FA}\implies\textnormal{cof~$\neq\omega$}.
 \end{equation}
-These implications are strict. Indeed, an infinite finitely generated group with property (T), e.g. $\SL_3(\Z)$, has property FH and the action on its Cayley graph has unbounded orbits; the group $\SL_2(\Z[\sqrt{2}])$ has property FW but not FH see \cite[Example 6.A.8]{Cornulier2013}; the group $G = \gen{a,b,c  | a^2=b^2=c^2=(ab)^2=(ac)^2=(bc)^2=1}$ has property FA but not property FW see \cite[Example 5.B.8]{Cornulier2013};  $\Z$ has cof~$\neq\omega$ as the union of $n\Z$ while it acts by translations and with unbounded orbits on the infinite $2$-regular tree.\mycomment[GS]{A voir si tu veux y mettre ou non. Au pire ça sera pour ma thèse}
-%
-
-For $u$ and $v$ two vertices of a connected\footnote{We will always assume that our connected graphs are non-empty. This is coherent with the definition that a connected graph is a graph with exactly one connected component.} graph $\mathcal G$, we define the total interval $[u,v]$ as the set of vertices that lie on some shortest path between $u$ and $v$.
-A connected graph $\mathcal G$ is \emph{median} if for any three vertices $u$, $v$, $w$, the intersection $[u,v]\cap[v,w]\cap[u,w]$ consists of a unique vertex, denoted $m(u,v,w)$.
-A graph is \emph{median} if each of its connected components is median. For surveys on median graphs see \cite{MR2405677,Cornulier2013, MR1705337}.\todo{Maybe add refs with respect to FW.}
-\mycomment[GS]{Ok avec Cornulier en ref ?}
-
 
 Trees are the simplest examples of median graphs and a simple verification shows that if $X$ and $Y$ are both (connected) median graphs, then their cartesian product is also a (connected) median graph.
 On the other hand, the following example will be fundamental for us.
@@ -391,7 +378,7 @@ Be careful that the action of $G$ on $\powerset{X}$ may exchange the connected c
 In fact, the connected component of $E\subset X$ is stabilized by $G$ if and only if $E$ is \emph{commensurated} by~$G$, that is if for every $g\in G$ the set $E\Delta gE$ is finite.
 For example, both $\powersetf{X}$ and $\powersetcof{X}$ are always preserved by the action of $G$.
 
-The following characterization of groups which have not cof~$\neq\omega$ is well-known and we include a proof only for the sake of complexity.
+The following characterization of groups with cof~$\neq\omega$ is well-known and we include a proof only for the sake of complexity.
 %
 %
 \begin{lem}\label{Lemma:CofSub}
@@ -405,16 +392,16 @@ Let $G$ be a group. Then the following are equivalent:
 \begin{proof}
 It is clear that the first item implies the second.
 
-Suppose that $(X,d)$ is an ultrametric space on which $G$ acts with an unbounded orbit and let $x_0$ be an element of $X$. For any $n\in \N$ let $H_n$ be the subset of $G$ defined by
+Suppose that $(X,d)$ is a ultrametric space on which $G$ acts with an unbounded orbit and let $x_0$ be an element of $X$. For any $n\in \N$ let $H_n$ be the subset of $G$ defined by
 \[
 	H_n\coloneqq\setst{g\in G}{d(x_0,h.x_0)\leq n}.
 \]
-It is clear that $G$ is the increasing union of (countably many) $H_n$.
-On the other hand, the $H_n$ are subgroups of $G$. Indeed, $H_n$ is trivially closed under taking the inverse, and under taking products since $d(x_0,gh.x_0)\leq\max\{d(x_0,g.x_0),d(g.x_0,gh.x_0)\}=\max\{d(x_0,g.x_0),d(x_0,h.x_0)\}$.
+It is clear that $G$ is the increasing union of the (countably many) $H_n$.
+On the other hand, the $H_n$ are subgroups of $G$. Indeed, $H_n$ is trivially closed under taking the inverse, and it is also closed under taking products since $d(x_0,gh.x_0)\leq\max\{d(x_0,g.x_0),d(g.x_0,gh.x_0)\}=\max\{d(x_0,g.x_0),d(x_0,h.x_0)\}$.
 
 Finally, suppose that $G=\bigcup_{n\in \N}H_n$ where the $H_n$ form an increasing sequence of proper subgroups. It is always possible to suppose that $H_1=\{1\}$.
 Define $d$ on $G$ by $d(g,h)\coloneqq\min\setst{n}{g^{-1}h\in H_n}$.
-One easily verifies that $d$ is a $G$-invariant ultrametric. Moreover, the orbit of $1$ contains all of $G$ and is hence unbounded.
+One easily verify that $d$ is a $G$-invariant ultrametric. Moreover, the orbit of $1$ contains all of $G$ and is hence unbounded.
 \end{proof}
 %
 %
@@ -446,7 +433,7 @@ Finally, it is possible to define other properties in the spirit of Definition~\
 %
 %
 \begin{defn}\label{Def:Categoric}
-An \emph{additional structure on metric spaces} is a category $\mathbf{SMet}$ together with a faithful functor $F_{S}\colon \mathbf{SMet}\to \mathbf{Met}$, where $\mathbf{Met}$ is the category of metric spaces with short maps.
+An \emph{additional structure on metric spaces} is, a category $\mathbf{SMet}$ together with a faithful functor $F_{S}\colon \mathbf{SMet}\to \mathbf{Met}$, where $\mathbf{Met}$ is the category of metric spaces with short maps.
 The objects of $\mathbf{SMet}$ are called \emph{S-spaces}.
 A \emph{$G$-action on a S-space} $X$ is simply an homomorphism $\alpha\colon G\to\Aut_{\mathbf{SMet}}(X)$. It has \emph{bounded orbits} if $F_S\circ \alpha\colon G\to \Aut_{\mathbf{Met}}(X)$ has bounded orbits.
 
@@ -454,7 +441,7 @@ We can now, formally define the groupe property \emph{BS} as: \emph{Every $G$-ac
 \end{defn}
 %
 %
-In other words, an additional structure on metric spaces, is a concrete category over $\mathbf{Met}$. Since $\mathbf{Met}$ itself is concrete, that is we have a faithful functor $F\colon \mathbf{Met}\to\mathbf{Set}$, the category $\mathbf{SMet}$ is also concrete and its objects can be thoughts as set with ``extra structure''.
+In other words, an additional structure on metric spaces, is concrete category over $\mathbf{Met}$. Since $\mathbf{Met}$ itself is concrete, that is we have a faithful functor $F\colon \mathbf{Met}\to\mathbf{Set}$, the category $\mathbf{SMet}$ is also concrete and its objects can be thoughts as sets with ``extra structure''.
 %
 %
 \begin{rem}
@@ -464,7 +451,7 @@ A reader unfamiliar with category theory and interested only in one specific str
 %
 %
 Obvious examples of additional structures on metric spaces include, metric spaces, Hilbert spaces and ultrametric spaces.
-For connected graphs (and hence for connected median graphs and for trees), one looks at the category $\mathbf{Graph}$ where objects are connected simple graphs $G=(V,E)$ and where a morphism $f\colon (V,E)\to(V',E')$ is a function between the vertex sets such that if $(x,y)$ is an edge then either $f(x)=f(y)$ or $(f(x),f(y))$ is an edge.
+For connected graphs (and hence for connected median graphs and for trees), one look at the category $\mathbf{Graph}$ where objects are connected simple graphs $G=(V,E)$ and where a morphism $f\colon (V,E)\to(V',E')$ is a function between the vertex sets such that if $(x,y)$ is an edge then either $f(x)=f(y)$ or $(f(x),f(y))$ is an edge.
 The functor $F_S\colon\mathbf{Graph}\to\mathbf{Met}$ sends a connected graph to its vertex set together with the graph distance: $d(x,y)$ is the minimum number of edges on a path between $x$ and $y$.
 
 
@@ -484,7 +471,7 @@ While we will be able to obtain some results for a general $\mathbf{SMet}$, we w
 %
 %
 \begin{defn}\label{Def:Cartesian}
-A structure S on metric spaces has \emph{compatible cartesian powers} if for any S-space $X$ and any integer $n$, there exists a S-object called the \emph{$n$\textsuperscript{th} cartesian power of $X$} and written $X^n$ such that:
+A structure S on metric spaces has \emph{compatible cartesian powers} if for any S-space $X$ and any integer $n$, there exists an S-object called the \emph{$n$\textsuperscript{th} cartesian power of $X$} and written $X^n$ such that:
 \begin{enumerate}
 \item
 $X^n$ is compatible with the cartesian product of sets. That is $F\circ F_S(X^n)$ is the set cartesian power and there exists S-morphisms $\pi_i\colon X^n\to X$ such that $F\circ F_S(\pi_i)$ are the usual set projections.
@@ -527,8 +514,8 @@ On the other hand, trees do not have compatible cartesian powers.
 We conclude this section by a remark on a variation of Definition~\ref{Def:FHFA}.
 One might wonder what happens if in Definition~\ref{Def:FHFA} we replace the requirement of having bounded orbits by having uniformly bounded orbits.
 It turns out that this is rather uninteresting as a group $G$ is trivial if and only if any $G$-action on a metric space (respectively on an Hilbert space, on a connected median graph, on a tree or on an ultrametric space) has uniformly bounded orbits.
-Indeed, if $G$ is non-trivial, then for the action of $G$ on the Hilbert space $\ell^2(G)$ the orbit of $n\cdot \delta_g$ has diameter $n\sqrt2$.
-For a tree (and hence also for a connetected median graph), one may look at the tree $T$ obtained by taking a root $r$ on which we glue an infinite ray for each elements of $G$. Then $G$ naturally acts on $T$ by permuting the rays. The orbits for this action are the $\mathcal L_n=\setst{v}{d(v,r)=n}$ which have diameter $2n$.
+Indeed, if $G$ is non-trivial, then for the action of $G$ on the Hilbert space $\ell^2(G)$ the orbit of $n\cdot \delta_g$ as diameter $n\sqrt2$.
+For a tree (and hence also for a connetected median graph), one may look at the tree $T$ obtained by taking a root $r$ on which we glue an infinite ray for each elements of $G$. Then $G$ naturally acts on $T$ by permuting the rays. The orbits for this action are the $\mathcal L_n=\setst{v}{\textnormal{at distance $n$ of }r}$ which have diameter $2n$.
 Finally, it is possible to put an ultradistance on the vertices of $T$ by  $d_\infty(x,y)\coloneqq\max\{d(x,r),d(y,r)\}$ if $x\neq y$. Then the orbits are still the~$\mathcal L_n$, but this time with diameter $n$.
 %
 %
@@ -633,8 +620,8 @@ So let $G\coloneqq \bigoplus_{i\geq 1}G_i$ and for each $i$, choose $g_i\neq 1$ 
 Let $d_\infty(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$ be the $G$-invariant ultrametric of Example~\ref{Exmpl:Ultra}.
 Then for every integer $n$, the orbit $G.1_G$ contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $1_G$ for $d_\infty$.
 In particular, an infinite direct sum of non-trivial groups does not have cof~$\neq\omega$, nor does it have BS.
-%\mycomment[GS]{So let $G\coloneqq \bigoplus_{i\geq 1}G_i$. We define $H_j = \setst{g \in G}{g(i) = 1 \, \forall i>j}$. It is clear that $H_j \neq G$ and $G = \cup_j H_j$. Then $G$ does not have cof~$\neq\omega$ nor BS.}
-The second assertion follows of the first assertion combined with Corollary~\ref{Cor:Prod}.
+
+The second assertion follows of the first assertion combined with Corollary~\ref{Cor:Prod}. 
 
 The last assertion is a simple variation on the first.
 Indeed, we have
@@ -652,7 +639,7 @@ Since the action of $L$ on itself has an unbouded orbit for $d_\infty$, the acti
 %
 %
 While the statement (and the proof) of Lemma~\ref{Lemma:Cof} is expressed in terms of cof~$\neq\omega$, it is also possible to state it and prove it for a structure S without a priori knowing if BS is stronger than cof~$\neq\omega$.
-The main idea is to find a ``natural'' S-space on which $G=\bigoplus_{i\geq 1}G_i$ acts. For example, for Hilbert spaces, one can take $\bigoplus_{i\geq 1}\ell^2(G_i)$. For connected median graphs, one takes the connected component of $\{1_{G_1},1_{G_2},\dots\}$ in $\powerset{\bigsqcup_{i\geq 1} G_i}$.
+The main idea is to find a ``natural'' S-space on which $G=\bigoplus_{i\geq 1}G_i$ acts. For example, for Hilbert spaces, one can take $\bigoplus_{i\geq 1}\ell^2(G_i)$. For connected median graphs, one take the connected component of $\{1_{G_1},1_{G_2},\dots\}$ in $\powerset{\bigsqcup_{i\geq 1} G_i}$.
 For trees, it is possible to put a forest structure on $\powerset{\bigsqcup_{i\geq 1} G_i}$ in the following way.
 For $E\in\powerset{\bigsqcup_{i\geq 1} G_i}$, and for each $i$ such that $E\cap G_j$ is empty for all $j\leq i$, add an edge from $E$ to $E\cup\{g\}$ for each $g\in G_i$. The graph obtained this way is a $G$-invariant subforest of the median graph on $\powerset{\bigsqcup_{i\geq 1} G_i}$.
 %
@@ -751,7 +738,7 @@ For readers that are not familiar with representations of finite groups, here is
 Let $(f_i)_{i=1}^n$ be a transversal for $G/H$.
 The natural action of $G$ on $G/H$ gives rise to an action of $G$ on $\{1,\dots,n\}$.
 Hence, for any $g$ in $G$ and $i$ in $\{1,\dots,n\}$ there exists a unique $h_{g,i}$ in $H$ such that $gf_i=f_{g.i}h_{g,i}$. That is, $h_{g,i}=gf_if_{g.i}^{-1}$.
-We then define $g.(x_1,\dots,x_n)\coloneqq(h_{g,g^{-1}.1}.x_{g^{-1}.1},\dots,h_{g,g^{-1}.n}.x_{g^{-1}.n})$. This is indeed an action, which, by Condition~\ref{Item:Product} of Definition~\ref{Def:Cartesian}, is by S-automorphisms of $X^{G/H}$.
+We then define $g.(x_1,\dots,x_n)\coloneqq(h_{g,g^{-1}.1}.x_{g^{-1}.1},\dots,h_{g,g^{-1}.n}.x_{g^{-1}.n})$. This is indeed an action, which, by Condition~\ref{Item:Product} of Definition~\ref{Def:Cartesian}, is by S-automorphisms, of $X^{G/H}$.
 Moreover, every element $h\in H$ acts diagonally by $h.(x_1,\dots,x_n)=(h.x_1,\dots,h.x_n)$.
 In particular, this $G$ action has an unbounded orbit.
 \end{proof}
@@ -793,20 +780,21 @@ Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ a set on which $H
 \begin{proof}
 By Corollary~\ref{Cor:Wreath} and Lemma~\ref{Lemma:Cof} we already know that if $G \wr_X H$ has cof~$\neq\omega$, then $H$ has cof~$\neq\omega$ and it acts on $X$ with finitely many orbits.
 We will now prove that if $G \wr_X H$ has cof~$\neq\omega$ so does $G$.
-Let us suppose that $G$ has countable cofinality. By Lemma~\ref{Lemma:CofSub}, there exists an ultrametric $d$ on $G$ such that the action of $G$ on itself by left multiplication has an unbounded orbit.
+Let us suppose that $G$ has countable cofinality. Then there exists an ultrametric $d$ on $G$ such that the action of $G$ on itself by left multiplication has an unbounded orbit.
 But then we have the primitive action of the wreath product $G\wr_XH$ on $G^X\cong\prod_XG$,
 %\[
 %	\bigl((\varphi,h).\psi\bigr)(x)=\varphi(h^{-1}.x)\psi(h^{-1}.x),
 %\]
 which preserves $\bigoplus_XG$.
 It is easy to check that the map $d_\infty\colon\bigoplus_XG\times\bigoplus_XG\to\mathbf R$ defined by $d_\infty(\psi_1,\psi_2)\coloneqq\max\setst{d\bigl(\psi_1(x),\psi_2(x)\bigr)}{x\in X}$ is a $G\wr_XH$-invariant ultrametric.
-Finally, let $h\in G$ be an element of unbounded $G$-orbit for $d$ and let $x_0$ be any element of $X$. Then for any $g$ in $G$ we have $(\delta_{x_0}^g,1).\delta_{x_0}^h=\delta_{x_0}^{gh}$ and hence $d_\infty(\delta_{x_0}^h,\delta_{x_0}^{gh})=d(h,gh)$ is unbounded.
+Finally, let $h\in G$ be an element of unbounded $G$-orbit for $d$ and let $x_0$ be any element of $X$.
+Then for any $g$ in $G$ we have $(\delta_{x_0}^g,1).\delta_{x_0}^h=\delta_{x_0}^{gh}$ and hence $d_\infty(\delta_{x_0}^h,\delta_{x_0}^{gh})=d(h,gh)$ is unbounded.
 
 Suppose now that both $G$ and $H$ have cof~$\neq\omega$ and that $H$ acts on $X$ with finitely many orbits. We want to prove that $G\wr_XH$ has cof~$\neq\omega$.
 %Since $H$ acts on $X$ with finitely many orbit, by Corollary~\ref{Cor:Prod} it is enough to show that $G\wr_YH$ has cof~$\neq\omega$ when $Y$ is one $H$-orbit.
 %%Let $(Z,d)$ be an ultrametric space on which $G\wr_YH$ acts.
 %%Then $H$ and all the $G_y$ act on $Z$ with bounded orbits.
-%%For every $z\in Z$ and $(\varphi,h)$ in $G\wr_YH$ we have
+%%For every $z\in Z$ and $(\varphi,h)$ in $G\wr_YH$ we have 
 %%\begin{align*}
 %%	d\bigl(z,(\varphi,h).z\bigr)&\leq\max\{d\bigl(z,(\varphi,1).z\bigr),d\bigl((\varphi,1).z,(\varphi,h).z\bigr)\}\\
 %%	&=\max\{d\bigl(z,(\varphi,1).z\bigr),d\bigl(z,(1,h).z\bigr)\}.
@@ -843,7 +831,7 @@ Suppose now that both $G$ and $H$ have cof~$\neq\omega$ and that $H$ acts on $X$
 %\end{align*}
 %which implies that $G_y.z=G_{h.y_0}.z=hG_{y_0}h^{-1}.z$ has the same diameter as $G_{y_0}h^{-1}.z$, which is bounded by $\max\{D_1,D_2\}$.
 %On the other hand, the diameter of $\bigoplus_YG.z$ is bounded by the supremum of the diameters of the $G_y.z$, and hence also bounded by $\max\{D_1,D_2\}$.
-%Finally, for $(\varphi,h)$ in $G\wr_YH$ we have
+%Finally, for $(\varphi,h)$ in $G\wr_YH$ we have 
 %\begin{align*}
 %	d\bigl(z,(\varphi,h).z\bigr)&\leq\max\{d\bigl(z,(\varphi,1).z\bigr),d\bigl((\varphi,1).z,(\varphi,h).z\bigr)\}\\
 %	&=\max\{d\bigl(z,(\varphi,1).z\bigr),d\bigl(z,(1,h).z\bigr)\}\\
@@ -867,7 +855,7 @@ which implies that the diameter of $G_{x_i}h^{-1}.y$ is bounded by $\max\{D_0,D_
 But $G_{x_i}h^{-1}.y$ has the same diameter as $hG_{x_i}h^{-1}.y=G_{h.x_i}.y=G_x.y$.
 
 On the other hand, the diameter of $\bigoplus_XG.y$ is bounded by the supremum of the diameters of the $G_x.y$, and hence bounded by $\max\{D_0,D_1,\dots,D_n\}$.
-Finally, for $(\varphi,h)$ in $G\wr_YH$ we have
+Finally, for $(\varphi,h)$ in $G\wr_YH$ we have 
 \begin{align*}
 	d\bigl(y,(\varphi,h).y\bigr)&\leq\max\{d\bigl(y,(\varphi,1).y\bigr),d\bigl((\varphi,1).y,(\varphi,h).y\bigr)\}\\
 	&=\max\{d\bigl(y,(\varphi,1).y\bigr),d\bigl(y,(1,h).y\bigr)\}\\
@@ -877,7 +865,7 @@ That is, the diameter of $G\wr_YH.z$ is itself bounded by $\max\{D_0,D_1,\dots,D
 \end{proof}
 %
 %
-While the fact that being a tree is not compatible with powers is an obstacle to our methods, we still have the following weak version of Theorem~\ref{Thm:Technic} for property FA.
+While the fact that being a tree is not compatible with products is an obstacle to our methods, we still have the following weak version of Theorem~\ref{Thm:Technic} for property FA.
 %Finally, while the fact that being a tree is not compatible with products is an obstacle to our methods, we still have the following weak version of Theorem~\ref{Thm:Technic} for property FA.
 %
 %
@@ -908,11 +896,7 @@ But neither $\Z$, nor an infinite direct sum of non-trivial groups has FA, and h
 %
 %
 Moreover, by using Lemma~\ref{Lemma:Cof} we can get ride of the ``finitely many orbits'' hypothesis in Theorem~\ref{Thm:FACK} in order to obtain Theorem~\ref{Thm:FAFiniteOrbits}.
-%By Proposition~\ref{Prop:WRFA} (more precisely Lemma~\ref{Lemma:Cof}), it is possible to get ride of the ``finitely many orbits'' hypothesis in Theorem~\ref{Thm:FACK} to obtain Theorem~\ref{Thm:FAFiniteOrbits}.
-\mycomment[GS]{Il manque la suite}
-\todo{C'était surtout en trop, la phrase précédante est suffisante.}
-\todo[inline]{J'ai enlevé la fin qui était redondante.}
-
+By Proposition~\ref{Prop:WRFA} (more precisely Lemma~\ref{Lemma:Cof}), it is possible to get ride of the ``finitely many orbits'' hypothesis in Theorem~\ref{Thm:FACK} to obtain
 %%
 %%
 %\begin{thm}\label{Thm:FACKPlus}
@@ -922,21 +906,22 @@ Moreover, by using Lemma~\ref{Lemma:Cof} we can get ride of the ``finitely many 
 %%
 %%
 
-%Finally, observe that, by the characterization of Serre~\cite{MR0476875}, a group $G$ has property FA if and only if it has no morphism onto $\Z$, it has cof~$\neq\omega$ and it is not a non-trivial amalgam. In particular, a finitely generated group $G$ has property FA if and only if $G/[G:G]$ is finite, $G$ has cof~$\neq\omega$ and $G$ is not a non-trivial amalgam.
-%We hence obtain %
-%%
-%\begin{prop}\label{Prop:FACKFG}
-%Let $G$ and $H$ be two groups with $G$ non-trivial and finitely generated and $X$ a set on which $H$ acts.
-%If $G\wr_XH$ has property FA, then $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G/[G:G]$ is finite and $G$ has cof~$\neq\omega$.
-%\end{prop}
-%\begin{proof}
-%We already know that $H$ acts with finitely many orbits, which implies that the group $G\wr_YH$ has property FA for every $H$-orbit $Y$.
-%Since the result holds if $H$ has no fixed points, we can hence suppose that there is one orbit reduced to a point $x_0$.
-%But in this case $G\wr_{\{x_0\}}H\cong G\times H$ and $G$ has property FA. Since $G$ is finitely generated, this implies the desired result.
-%\end{proof}
-%%
-%%
-%Observe that, due to Corollary~\ref{Cor:Prod}, the converse of Proposition~\ref{Prop:FACKFG} is false in general.
+Finally, observe that, by the characterization of Serre~\cite{MR0476875}, a group $G$ has property FA if and only if it has no morphism onto $\Z$, it has cof~$\neq\omega$ and it is not a non-trivial amalgam. In particular, a finitely generated group $G$ has property FA if and only if $G/[G:G]$ is finite, $G$ has cof~$\neq\omega$ and $G$ is not a non-trivial amalgam.
+We hence obtain
+%
+%
+\begin{prop}\label{Prop:FACKFG}
+Let $G$ and $H$ be two groups with $G$ non-trivial and finitely generated and $X$ a set on which $H$ acts.
+If $G\wr_XH$ has property FA, then $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G/[G:G]$ is finite and $G$ has cof~$\neq\omega$.
+\end{prop}
+\begin{proof}
+We already know that $H$ acts with finitely many orbits, which implies that the group $G\wr_YH$ has property FA for every $H$-orbit $Y$.
+Since the result holds if $H$ has no fixed points, we can hence suppose that there is one orbit reduced to a point $x_0$.
+But in this case $G\wr_{\{x_0\}}H\cong G\times H$ and $G$ has property FA. Since $G$ is finitely generated, this implies the desired result.
+\end{proof}
+%
+%
+Observe that, due to Corollary~\ref{Cor:Prod}, the converse of Proposition~\ref{Prop:FACKFG} is false in general.
 %
 %
 %
@@ -997,6 +982,11 @@ By \cite{Cornulier2013}, this is the case for property FW. A crude idea would be
 %
 %
 %
+%\clearpage
+%\appendix
+%Vieux trucs pour les avoirs sous la main. À enlever de la version finale.
+%\input{Definitions.Old.tex}
+%\input{Proofs.Old.tex}
 %
 %
 %

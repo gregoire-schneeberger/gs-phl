@@ -1,60 +1,56 @@
 This is BibTeX, Version 0.99d (TeX Live 2020)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Median.aux
-White space in argument---line 59 of file Median.aux
+White space in argument---line 58 of file Median.aux
  : \citation{MR0476875
  :                     }
 I'm skipping whatever remains of this command
 The style file: plain.bst
-White space in argument---line 174 of file Median.aux
- : \citation{MR0476875
- :                     }
-I'm skipping whatever remains of this command
 Database file #1: biblio.bib
 Warning--I didn't find a database entry for "MR2415834"
 Warning--I didn't find a database entry for "MR2240370"
 Warning--I didn't find a database entry for "MR1432323"
 Warning--I didn't find a database entry for "MR3299841"
 Warning--I didn't find a database entry for "2013arXiv1302.5982C"
-You've used 16 entries,
+You've used 10 entries,
             2118 wiz_defined-function locations,
-            637 strings with 6809 characters,
-and the built_in function-call counts, 5564 in all, are:
-= -- 598
-> -- 164
-< -- 7
-+ -- 66
-- -- 50
-* -- 333
-:= -- 851
-add.period$ -- 54
-call.type$ -- 16
-change.case$ -- 69
+            587 strings with 5746 characters,
+and the built_in function-call counts, 3747 in all, are:
+= -- 405
+> -- 116
+< -- 5
++ -- 46
+- -- 36
+* -- 220
+:= -- 557
+add.period$ -- 32
+call.type$ -- 10
+change.case$ -- 46
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 271
-empty$ -- 457
-format.name$ -- 50
-if$ -- 1232
+cite$ -- 10
+duplicate$ -- 189
+empty$ -- 292
+format.name$ -- 36
+if$ -- 839
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 20
-newline$ -- 86
-num.names$ -- 32
-pop$ -- 73
+int.to.str$ -- 10
+missing$ -- 12
+newline$ -- 54
+num.names$ -- 20
+pop$ -- 48
 preamble$ -- 1
-purify$ -- 57
+purify$ -- 38
 quote$ -- 0
-skip$ -- 222
+skip$ -- 170
 stack$ -- 0
-substring$ -- 398
-swap$ -- 102
-text.length$ -- 7
+substring$ -- 267
+swap$ -- 85
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 56
+type$ -- 36
 warning$ -- 0
-while$ -- 56
-width$ -- 18
-write$ -- 186
-(There were 2 error messages)
+while$ -- 35
+width$ -- 12
+write$ -- 115
+(There was 1 error message)
