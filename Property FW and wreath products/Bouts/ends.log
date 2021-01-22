@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  21 JAN 2021 11:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.11)  22 JAN 2021 12:28
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -6,20 +6,20 @@ entering extended mode
 **ends.tex
 (./ends.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-08-07>
+L3 programming layer <2020-03-06>
 (/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
 (/usr/local/texlive/2020/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
-\c@part=\count168
-\c@section=\count169
-\c@subsection=\count170
-\c@subsubsection=\count171
-\c@paragraph=\count172
-\c@subparagraph=\count173
-\c@figure=\count174
-\c@table=\count175
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
@@ -33,21 +33,23 @@ Package: inputenc 2018/08/11 v1.3c Input encoding file
 Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
 )
 (/usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2020/07/13 3.47 The Babel package
+Package: babel 2020/03/22 3.42 The Babel package
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/03/22 3.42 Babel switching mechanism
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2020/07/13 3.47 Babel common definitions
-\babel@savecnt=\count176
+File: babel.def 2020/03/22 3.42 Babel common definitions
+\babel@savecnt=\count175
 \U@D=\dimen135
-\l@babelnohyphens=\language86
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
+\bbl@dirlevel=\count176
 )
-\bbl@dirlevel=\count177
-
-(/usr/local/texlive/2020/texmf-dist/tex/generic/babel-english/english.ldf
-Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: \l@canadian = using hyphenrules for english
 (babel)             (\language0) on input line 102.
 Package babel Info: \l@australian = using hyphenrules for ukenglish
@@ -102,15 +104,15 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count178
-\calc@Bcount=\count179
+\calc@Acount=\count177
+\calc@Bcount=\count178
 \calc@Adimen=\dimen136
 \calc@Bdimen=\dimen137
 \calc@Askip=\skip49
 \calc@Bskip=\skip50
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count180
+\calc@Ccount=\count179
 \calc@Cskip=\skip51
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mhsetup.sty
@@ -136,13 +138,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count181
+\inf@bad=\count180
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count182
-\leftroot@=\count183
+\uproot@=\count181
+\leftroot@=\count182
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count184
-\DOTSCASE@=\count185
+\classnum@=\count183
+\DOTSCASE@=\count184
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
@@ -151,15 +153,15 @@ LaTeX Info: Redefining \cdots on input line 610.
 \big@size=\dimen140
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count186
-\c@MaxMatrixCols=\count187
+\macc@depth=\count185
+\c@MaxMatrixCols=\count186
 \dotsspace@=\muskip16
-\c@parentequation=\count188
-\dspbrk@lvl=\count189
+\c@parentequation=\count187
+\dspbrk@lvl=\count188
 \tag@help=\toks19
-\row@=\count190
-\column@=\count191
-\maxfields@=\count192
+\row@=\count189
+\column@=\count190
+\maxfields@=\count191
 \andhelp@=\toks20
 \eqnshift@=\dimen141
 \alignsep@=\dimen142
@@ -178,7 +180,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
-\g_MT_multlinerow_int=\count193
+\g_MT_multlinerow_int=\count192
 \l_MT_multwidth_dim=\dimen147
 \origjot=\skip55
 \l_MT_shortvdotswithinadjustabove_dim=\dimen148
@@ -202,7 +204,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2020/05/29 v2.20.6
+Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks23
 \thm@bodyfont=\toks24
 \thm@headfont=\toks25
@@ -214,7 +216,7 @@ Package: amsthm 2020/05/29 v2.20.6
 \dth@everypar=\toks28
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
@@ -222,8 +224,8 @@ Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
-(/usr/local/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
 )
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
@@ -255,11 +257,11 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
 \@linkdim=\dimen155
-\Hy@linkcounter=\count194
-\Hy@pagecounter=\count195
+\Hy@linkcounter=\count193
+\Hy@pagecounter=\count194
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
@@ -269,32 +271,32 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count196
-Package hyperref Info: Option `colorlinks' set `true' on input line 4338.
-Package hyperref Info: Option `breaklinks' set `true' on input line 4338.
-Package hyperref Info: Option `bookmarks' set `true' on input line 4338.
-Package hyperref Info: Option `plainpages' set `false' on input line 4338.
-Package hyperref Info: Option `unicode' set `true' on input line 4338.
+\Hy@SavedSpaceFactor=\count195
+Package hyperref Info: Option `colorlinks' set `true' on input line 4421.
+Package hyperref Info: Option `breaklinks' set `true' on input line 4421.
+Package hyperref Info: Option `bookmarks' set `true' on input line 4421.
+Package hyperref Info: Option `plainpages' set `false' on input line 4421.
+Package hyperref Info: Option `unicode' set `true' on input line 4421.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2020-05-15 v7.00e Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2020/01/14 v7.00d Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4464.
-Package hyperref Info: Link nesting OFF on input line 4469.
-Package hyperref Info: Hyper index ON on input line 4472.
-Package hyperref Info: Plain pages OFF on input line 4479.
-Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count197
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count196
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5076.
+LaTeX Info: Redefining \url on input line 5159.
 \XeTeXLinkMargin=\dimen156
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/bitset/bitset.sty
@@ -304,37 +306,37 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count198
+\Fld@menulength=\count197
 \Field@Width=\dimen157
 \Fld@charsize=\dimen158
-Package hyperref Info: Hyper figures OFF on input line 6347.
-Package hyperref Info: Link nesting OFF on input line 6352.
-Package hyperref Info: Hyper index ON on input line 6355.
-Package hyperref Info: backreferencing OFF on input line 6362.
-Package hyperref Info: Link coloring ON on input line 6365.
-Package hyperref Info: Link coloring with OCG OFF on input line 6372.
-Package hyperref Info: PDF/A mode OFF on input line 6377.
-LaTeX Info: Redefining \ref on input line 6417.
-LaTeX Info: Redefining \pageref on input line 6421.
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring ON on input line 6448.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/atbegshi/atbegshi.sty
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
-\Hy@abspage=\count199
-\c@Item=\count266
-\c@Hfootnote=\count267
+\Hy@abspage=\count198
+\c@Item=\count199
+\c@Hfootnote=\count266
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
+File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/atveryend/atveryend.sty
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
 )
-\Fld@listcount=\count268
-\c@bookmark@seq@number=\count269
+\Fld@listcount=\count267
+\c@bookmark@seq@number=\count268
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
@@ -361,7 +363,7 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@toks=\toks29
 \XKV@tempa@toks=\toks30
 )
-\XKV@depth=\count270
+\XKV@depth=\count269
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/local/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -448,14 +450,14 @@ ode.tex
 \pgf@yd=\dimen172
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count271
-\c@pgf@countb=\count272
-\c@pgf@countc=\count273
-\c@pgf@countd=\count274
+\c@pgf@counta=\count270
+\c@pgf@countb=\count271
+\c@pgf@countc=\count272
+\c@pgf@countd=\count273
 \t@pgf@toka=\toks35
 \t@pgf@tokb=\toks36
 \t@pgf@tokc=\toks37
-\pgf@sys@id@count=\count275
+\pgf@sys@id@count=\count274
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
@@ -473,8 +475,8 @@ File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
 File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfsyssoftpath@smallbuffer@items=\count276
-\pgfsyssoftpath@bigbuffer@items=\count277
+\pgfsyssoftpath@smallbuffer@items=\count275
+\pgfsyssoftpath@bigbuffer@items=\count276
 )
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
@@ -487,7 +489,7 @@ Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen173
-\pgfmath@count=\count278
+\pgfmath@count=\count277
 \pgfmath@box=\box49
 \pgfmath@toks=\toks38
 \pgfmath@stack@operand=\toks39
@@ -512,7 +514,7 @@ code.tex)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
 erarithmetics.code.tex)))
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count279
+\c@pgfmathroundto@lastzeros=\count278
 )) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
@@ -550,7 +552,7 @@ File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgfpic=\box50
 \pgf@hbox=\box51
 \pgf@layerbox@main=\box52
-\pgf@picture@serial@count=\count280
+\pgf@picture@serial@count=\count279
 )
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
@@ -585,8 +587,8 @@ File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 e.tex
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@max=\dimen197
-\pgf@sys@shading@range@num=\count281
-\pgf@shadingcount=\count282
+\pgf@sys@shading@range@num=\count280
+\pgf@shadingcount=\count281
 )
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
@@ -653,7 +655,7 @@ Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count283
+\pgf@plot@mark@count=\count282
 \pgfplotmarksize=\dimen258
 )
 \tikz@lastx=\dimen259
@@ -668,19 +670,19 @@ File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \tikz@figbox@bg=\box56
 \tikz@tempbox=\box57
 \tikz@tempbox@bg=\box58
-\tikztreelevel=\count284
-\tikznumberofchildren=\count285
-\tikznumberofcurrentchild=\count286
-\tikz@fig@count=\count287
+\tikztreelevel=\count283
+\tikznumberofchildren=\count284
+\tikznumberofcurrentchild=\count285
+\tikz@fig@count=\count286
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count288
-\pgfmatrixcurrentcolumn=\count289
-\pgf@matrix@numberofcolumns=\count290
+\pgfmatrixcurrentrow=\count287
+\pgfmatrixcurrentcolumn=\count288
+\pgf@matrix@numberofcolumns=\count289
 )
-\tikz@expandcount=\count291
+\tikz@expandcount=\count290
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
@@ -702,14 +704,14 @@ File: tikzlibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 .code.tex
 File: pgflibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
-\c@@todonotes@numberoftodonotes=\count292
+\c@@todonotes@numberoftodonotes=\count291
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/datetime/datetime.sty
 Package: datetime 2015/03/20 v2.60 Date Time Package
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/07/15 v2.5i e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count293
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count292
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/fmtcount/fmtcount.sty
 Package: fmtcount 2020/01/30 v3.07
@@ -719,42 +721,42 @@ Package: fcprefix 2012/09/28
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
 Package: fcnumparser 2017/06/15
-\fc@digit@counter=\count294
+\fc@digit@counter=\count293
 ))
-\c@padzeroesN=\count295
-\fc@tmpcatcode=\count296
+\c@padzeroesN=\count294
+\fc@tmpcatcode=\count295
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
 )
-\@DT@modctr=\count297
-\@ordinalctr=\count298
-\@orgargctr=\count299
-\@strctr=\count300
-\@tmpstrctr=\count301
-\@DT@loopN=\count302
-\@DT@X=\count303
+\@DT@modctr=\count296
+\@ordinalctr=\count297
+\@orgargctr=\count298
+\@strctr=\count299
+\@tmpstrctr=\count300
+\@DT@loopN=\count301
+\@DT@X=\count302
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/datetime/datetime-defaults.sty
 Package: datetime-defaults 2013/09/10
 )
-\@day=\count304
-\@month=\count305
-\@year=\count306
-\c@HOUR=\count307
-\c@HOURXII=\count308
-\c@MINUTE=\count309
-\c@TOHOUR=\count310
-\c@TOMINUTE=\count311
-\c@SECOND=\count312
-\currenthour=\count313
-\currentminute=\count314
-\currentsecond=\count315
+\@day=\count303
+\@month=\count304
+\@year=\count305
+\c@HOUR=\count306
+\c@HOURXII=\count307
+\c@MINUTE=\count308
+\c@TOHOUR=\count309
+\c@TOMINUTE=\count310
+\c@SECOND=\count311
+\currenthour=\count312
+\currentminute=\count313
+\currentsecond=\count314
 Package datetime Info: No datetime.cfg file found, using default settings on in
 put line 308.
-\@dtctr=\count316
-\dayofyear=\count317
-\dayofweek=\count318
+\@dtctr=\count315
+\dayofyear=\count316
+\dayofweek=\count317
 LaTeX Info: Redefining \today on input line 736.
 \dt@a=\toks43
 \dt@b=\toks44
@@ -763,10 +765,10 @@ LaTeX Info: Redefining \today on input line 736.
 Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2020/05/30 v3.4k Customizing captions (AR)
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2020/07/20 v1.12b caption3 kernel (AR)
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
 \captionmargin=\dimen267
 \captionmargin@=\dimen268
@@ -777,12 +779,12 @@ Package caption3 Info: TeX engine: e-TeX on input line 61.
 \caption@hangindent=\dimen273
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count319
-\c@continuedfloat=\count320
+\c@caption@flags=\count318
+\c@continuedfloat=\count319
 Package caption Info: hyperref package is loaded.
 )
-\c@subfigure=\count321
-\c@subtable=\count322
+\c@subfigure=\count320
+\c@subtable=\count321
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzl
 ibraryexternal.code.tex
@@ -791,16 +793,16 @@ s/tikzexternalshared.code.tex))
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/graphs/tikzlibrarygraphs.code.tex
 File: tikzlibrarygraphs.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\tikz@lib@auto@number=\count323
-\tikz@qnode@count=\count324
+\tikz@lib@auto@number=\count322
+\tikz@qnode@count=\count323
 )
 \openout3 = `ends.auxlock'.
 
-\c@lem=\count325
+\c@lem=\count324
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-08-07 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count326
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count325
 \l__pdf_internal_box=\box59
 )
 (./ends.aux)
@@ -842,7 +844,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count327
+\c@section@level=\count326
 )
 LaTeX Info: Redefining \ref on input line 72.
 LaTeX Info: Redefining \pageref on input line 72.
@@ -854,16 +856,16 @@ LaTeX Info: Redefining \nameref on input line 72.
 
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count328
+\scratchcounter=\count327
 \scratchdimen=\dimen274
 \scratchbox=\box61
-\nofMPsegments=\count329
-\nofMParguments=\count330
+\nofMPsegments=\count328
+\nofMParguments=\count329
 \everyMPshowfont=\toks45
-\MPscratchCnt=\count331
+\MPscratchCnt=\count330
 \MPscratchDim=\dimen275
-\MPnumerator=\count332
-\makeMPintoPDFobject=\count333
+\MPnumerator=\count331
+\makeMPintoPDFobject=\count332
 \everyMPtoPDFconversion=\toks46
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -929,6 +931,8 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 23.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 23.
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 25.
  [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./Def
@@ -944,9 +948,9 @@ initions.tex [2] (./graphes/CayleyZ.tex
 ure2.pdf> <./Images/ends-figure3.pdf>] [4]) (./Proof.tex [5]
 (./graphes/path_semidirect_ends.tex
 ===== Image 'Images/ends-figure4' is up-to-date. ======
-) [6 <./Images/ends-figure4.pdf>] (./graphes/leaves_structure_schreier.tex
+) [6 <./Images/ends-figure4.pdf>] [7] (./graphes/leaves_structure_schreier.tex
 ===== Image 'Images/ends-figure5' is up-to-date. ======
-) [7]) (./ends.bbl [8 <./Images/ends-figure5.pdf>]) [9]
+) [8 <./Images/ends-figure5.pdf>]) (./ends.bbl [9]) [10]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
  (./ends.aux)
@@ -954,16 +958,20 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 123.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
 Package rerunfilecheck Info: File `ends.out' has not changed.
 (rerunfilecheck)             Checksum: 239FD741A30AA61B5B5ADAF965BE18EC;852.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 123.
  ) 
 Here is how much of TeX's memory you used:
- 25263 strings out of 480893
- 461275 string characters out of 5908067
- 742890 words of memory out of 5000000
- 40294 multiletter control sequences out of 15000+600000
- 620444 words of font info for 84 fonts, out of 8000000 for 9000
+ 25233 strings out of 480608
+ 461387 string characters out of 5903630
+ 741324 words of memory out of 5000000
+ 40537 multiletter control sequences out of 15000+600000
+ 617694 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,9n,100p,1009b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,9n,100p,1009b,1041s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
 texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
 20/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2020/texmf-d
@@ -991,10 +999,10 @@ ublic/lm/lmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lm
 sy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></u
 sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 >
-Output written on ends.pdf (9 pages, 411229 bytes).
+Output written on ends.pdf (10 pages, 415489 bytes).
 PDF statistics:
- 354 PDF objects out of 1000 (max. 8388607)
- 293 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
+ 365 PDF objects out of 1000 (max. 8388607)
+ 302 compressed objects within 4 object streams
+ 63 named destinations out of 1000 (max. 500000)
  179 words of extra memory for PDF output out of 10000 (max. 10000000)
 

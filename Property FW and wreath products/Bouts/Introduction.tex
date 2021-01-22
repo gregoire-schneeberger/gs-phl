@@ -20,9 +20,9 @@
 %
 %
 %
-Property FW is a group property that is (for discrete groups) a weakening of the celebrated Kazdhan's property (T). It was introduced by Barnhill and Chatterji in \cite{Barnhill2008} and studied extensively by Cornulier in \cite{Cornulier2013}. It is a fixed point property for actions on wall spaces and hence stands between property FH (fixed points on Hilbert spaces, equivalent to property (T) for discrete groups) and property FA (fixed points on \emph{arbres}\footnote{\emph{Arbres} is the french word for trees.}), see \cite{Cornulier2013} for more details.
+Property FW is a group property that is (for discrete groups) a weakening of the celebrated Kazdhan's property (T). It was introduced by Barnhill and Chatterji in \cite{Barnhill2008}. It is a fixed point property for actions on wall spaces or, equivalently, on CAT(0) cube complexes. So its stands between property FH (fixed points on Hilbert spaces, equivalent to property (T) for discrete groups) and property FA (fixed points on \emph{arbres}\footnote{\emph{Arbres} is the french word for trees.}). It is known that all these properties are different, see  \cite{Cornulier2013} for examples of groups which distinguish them.
 
-When working with group properties, it is natural to ask if they are stable under ``natural'' group operations. For example, one may wonder when a property is stable by subgroups, quotients, direct products or semi-direct products.
+When working with group properties, it is natural to ask if they are stable under ``natural'' group operations. For example, one may wonder when a property is stable by subgroups, quotients, direct products or semi-direct products. \todo{Est ce que c'est écrit quelques part les preuves pour cela ? Si oui citer si non les écrires pour être complet}
 A slightly less common operation, but still of great use in geometric group theory, is the wreath product, see Definition~\ref{Def:WreathProd}.
 
 In the context of properties defined by fixed points of actions, the first result concerning wreath products was due to Cherix, Martin and Valette and latter refined by Neuhauser and concerns property (T).
@@ -33,10 +33,7 @@ Let $G,H$ be two discrete groups with $G$ non-trivial and $X$ a set on which $H$
 \end{thm}
 %
 %
-A somewhat similar result for property FA was obtained by Cornulier and Kar in \cite{Cornulier2011}.
-Cornulier also proved in \cite{Cornulier2013} that if $G\wr_XH$ has property FW (and $G$ is non trivial), then $X$ is finite.
-
-The aim of this note is to give an elementary proof of the analogous of Theorem~\ref{T:Wreath_prop_T} for property FW:
+The aim of this note is to give an elementary proof of analogous of Theorem~\ref{T:Wreath_prop_T} for property FW:
 %
 %
 \begin{thm}\label{Thm:Main}
@@ -45,10 +42,15 @@ Let $G,H$ be two finitely generated groups with $G$ non-trivial and $X$ a set on
 %
 %
 Our proof will rely on a characterization of property FW via ends of Schreier graphs, see Subsection \ref{Subsection:FW} for the relevant definitions.
+Note that Cornulier also proved in \cite{Cornulier2013} that if $G\wr_XH$ has property FW (and $G$ is non trivial), then $X$ is finite.
+
+Corulier and Kar studied the question of stabitilty of this product for property FA in \cite{Cornulier2011}. They proved a similar result for actions of $H$ on $X$ with finitely many orbits and without fixed point, but the condition that $G$ has property FA is remplaced by $G$ has finite abelization and can not be expressed as an union of properly increasing sequence of subgroups. \todo{Peut être mettre une phrase qui explique en quoi c'est différent de FA}
+
+%A somewhat similar result for property FA was obtained by Cornulier and Kar in \cite{Cornulier2011}.
 
 At this point, the curious reader might have two questions. First, is it possible to extend Theorem \ref{Thm:Main} beyond the realms of finitely generated groups and of actions with finitely many orbits? And secondly, is there a link between Theorems \ref{T:Wreath_prop_T} and \ref{Thm:Main}?
 In both cases, the answer is yes.
-This is the subject of the forthcoming and more technical \cite{LS2021}, which gives an unified proof of Theorems \ref{T:Wreath_prop_T} and \ref{Thm:Main} as well as of similar results for the Bergman's property and more.
+This is the subject of the forthcoming and more technical paper \cite{LS2021}, which gives an unified proof of Theorems \ref{T:Wreath_prop_T} and \ref{Thm:Main} as well as of similar results for the Bergman's property and more.
 %
 %
 %
