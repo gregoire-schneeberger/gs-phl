@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.11)  22 JAN 2021 11:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.11)  22 JAN 2021 12:28
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -950,7 +950,7 @@ ure2.pdf> <./Images/ends-figure3.pdf>] [4]) (./Proof.tex [5]
 ===== Image 'Images/ends-figure4' is up-to-date. ======
 ) [6 <./Images/ends-figure4.pdf>] [7] (./graphes/leaves_structure_schreier.tex
 ===== Image 'Images/ends-figure5' is up-to-date. ======
-) [8 <./Images/ends-figure5.pdf>]) (./ends.bbl) [9]
+) [8 <./Images/ends-figure5.pdf>]) (./ends.bbl [9]) [10]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
  (./ends.aux)
@@ -965,13 +965,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 123.
  ) 
 Here is how much of TeX's memory you used:
- 25218 strings out of 480608
- 461111 string characters out of 5903630
- 741177 words of memory out of 5000000
- 40527 multiletter control sequences out of 15000+600000
+ 25233 strings out of 480608
+ 461387 string characters out of 5903630
+ 741324 words of memory out of 5000000
+ 40537 multiletter control sequences out of 15000+600000
  617694 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,9n,100p,1009b,807s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,9n,100p,1009b,1041s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
 texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
 20/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2020/texmf-d
@@ -999,10 +999,10 @@ ublic/lm/lmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lm
 sy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></u
 sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 >
-Output written on ends.pdf (9 pages, 412671 bytes).
+Output written on ends.pdf (10 pages, 415489 bytes).
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
- 294 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
+ 365 PDF objects out of 1000 (max. 8388607)
+ 302 compressed objects within 4 object streams
+ 63 named destinations out of 1000 (max. 500000)
  179 words of extra memory for PDF output out of 10000 (max. 10000000)
 
