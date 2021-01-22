@@ -62,6 +62,7 @@
 \DeclareMathOperator\Aut{Aut}
 \DeclareMathOperator\id{id}
 \DeclareMathOperator\ab{ab}
+\DeclareMathOperator\diam{diam}
 %
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \DeclarePairedDelimiter\gen{\langle}{\rangle}
@@ -365,7 +366,7 @@ The names\todo{Give refs} FH, FW and FA come from the fact that these properties
 On the other hand, SB stands for Strongly Bounded and is also called the \emph{Bergman's property}.
 Finally, a group has cof~$\neq\omega$ (does not have \emph{countable cofinality}) if and only if it cannot be written has a countable increasing union of proper subgroups, see Lemma~\ref{Lemma:CofSub}.
 
-We have the following strict implications between the properties of Definition~\ref{Def:FHFA} \cite{MR1432323,MR0476875,MR3299841,Cornulier2013}
+We have the following strict implications between the properties of Definition~\ref{Def:FHFA} %\cite{MR1432323,MR0476875,MR3299841,Cornulier2013}
 \begin{equation}\tag{\dag}\label{EQ:Implications}
 	\textnormal{SB}\implies \textnormal{FH}\implies \textnormal{FW}\implies \textnormal{FA}\implies\textnormal{cof~$\neq\omega$}.
 \end{equation}
@@ -506,12 +507,12 @@ While we will be able to obtain some results for a general $\mathbf{SMet}$, we w
 %
 %
 \begin{defn}\label{Def:Cartesian}
-A structure S on metric spaces has \emph{compatible cartesian powers} if for any S-space $X$ and any integer $n$, there exists a S-object called the \emph{$n$\textsuperscript{th} cartesian power of $X$} and written $X^n$ such that:
+A structure S on metric spaces has \emph{compatible cartesian powers} if for any S-space $X$ and any integer $n$, there exists a S-object called the \emph{$n$\textsuperscript{th} cartesian power of $X$} and written $X^n$ such that:\PH{J'ai enlevé des conditions pour ne garder que les nécessaires.}
 \begin{enumerate}
 \item
-$X^n$ is compatible with the cartesian product of sets. That is $F\circ F_S(X^n)$ is the set cartesian power and there exists S-morphisms $\pi_i\colon X^n\to X$ such that $F\circ F_S(\pi_i)$ are the usual set projections.
-\item\label{Condidef:1}
-$X^n$ is compatible with the topology. That is, the underlying topology of  $X^n$ is the product topology on $F\circ F_S(X^n)$.
+$X^n$ is compatible with the cartesian product of sets. That is $F\circ F_S(X^n)$ is the set cartesian power. %and there exists S-morphisms $\pi_i\colon X^n\to X$ such that $F\circ F_S(\pi_i)$ are the usual set projections.
+%\item\label{Condidef:1}
+%$X^n$ is compatible with the topology. That is, the underlying topology of  $X^n$ is the product topology on $F\circ F_S(X^n)$.
 \item\label{Condidef:2}
 $X^n$ is compatible with the bornology. That is, the underlying bornology of $X^n$ is the product bornology.\footnote{In practice, we will only need that if $E\subset X$ is unbounded, then the diagonal $\diag(E)\subset X^n$ is unbounded.}
 %\item\label{Condidef:3}
@@ -969,6 +970,18 @@ Moreover, by using Lemma~\ref{Lemma:Cof} we can get ride of the ``finitely many 
 %
 %
 %
+\begin{rem}
+As the attentive reader might have remarked, we are more interested in bornological spaces that in metric spaces. 
+In fact, the only place where we need more structure that an abstract bornology is Lemma~\ref{Lemma:Semidirect} where we need that if $H$ is a subgroup of $G$ and $B$ is a bounded subset of $X$, then the $\{h.B\}_{h\in H}$ are in some sense ``uniformly bounded''.
+This holds as soon as we have a suitable notion of diameter which is $G$-invariant.
+The standard example consists of metric spaces and action by isometries.
+However, it is possible to define a meaningful notion of diameter for more general spaces. Let $X$ be a \emph{quasipseudometric space}, that is we have a map $d\colon X\times X\to\mathbf R_{\geq0}$ satisfying the triangle inequality and such that $d(x,x)=0$ for all $x$.
+We then define the \emph{diameter} of a subset $Y\leq X$ as $\diam(Y)\coloneqq\sup\setst{d(x,y)}{x,y\in Y}$.
+By saying that bounded subsets are subsets with finite diameter, we obtain a bornology on $(X,d)$.
+
+Let $\mathbf{QPMet}$ be the category of quasipseudometric spaces together with short maps.
+It is possible to replace $\mathbf{Met}$ by $\mathbf{QPMet}$ in Definition~\ref{Def:Categoric} and what follows, without changing the statements and the proofs.
+\end{rem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%    Subsection : On group extensions    %%%%%%%%%%%%%%%%%
