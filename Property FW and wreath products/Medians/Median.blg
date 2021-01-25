@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Median.aux
 The style file: plain.bst
 Database file #1: biblio.bib
-You've used 16 entries,
+You've used 15 entries,
             2118 wiz_defined-function locations,
-            623 strings with 6408 characters,
-and the built_in function-call counts, 5922 in all, are:
-= -- 644
-> -- 175
+            616 strings with 6278 characters,
+and the built_in function-call counts, 5544 in all, are:
+= -- 606
+> -- 162
 < -- 6
-+ -- 70
-- -- 54
-* -- 358
-:= -- 883
-add.period$ -- 50
-call.type$ -- 16
-change.case$ -- 73
++ -- 65
+- -- 50
+* -- 329
+:= -- 822
+add.period$ -- 47
+call.type$ -- 15
+change.case$ -- 68
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 288
-empty$ -- 468
-format.name$ -- 54
-if$ -- 1317
+cite$ -- 15
+duplicate$ -- 277
+empty$ -- 435
+format.name$ -- 50
+if$ -- 1238
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 18
-newline$ -- 84
-num.names$ -- 32
-pop$ -- 66
+int.to.str$ -- 15
+missing$ -- 17
+newline$ -- 79
+num.names$ -- 30
+pop$ -- 63
 preamble$ -- 1
-purify$ -- 59
+purify$ -- 55
 quote$ -- 0
-skip$ -- 260
+skip$ -- 252
 stack$ -- 0
-substring$ -- 468
-swap$ -- 124
+substring$ -- 421
+swap$ -- 123
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 60
+type$ -- 56
 warning$ -- 0
-while$ -- 57
-width$ -- 18
-write$ -- 181
+while$ -- 54
+width$ -- 17
+write$ -- 170
