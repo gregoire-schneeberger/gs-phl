@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  26 JAN 2021 22:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  26 JAN 2021 22:54
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -905,43 +905,109 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 108.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 109.
+
+Overfull \hbox (13.71983pt too wide) in paragraph at lines 109--109
+[][][]\T1/lmr/bx/n/9 Commentaire 
+ []
+
+
+Overfull \hbox (5.58052pt too wide) in paragraph at lines 109--109
+\T1/lmr/bx/n/9 [GS1]: \T1/lmr/m/n/9 Ajout 
+ []
+
+
+Overfull \hbox (13.71983pt too wide) in paragraph at lines 109--109
+[][][]\T1/lmr/bx/n/9 Commentaire 
+ []
+
+
+Overfull \hbox (5.58052pt too wide) in paragraph at lines 109--109
+\T1/lmr/bx/n/9 [GS1]: \T1/lmr/m/n/9 Ajout 
+ []
+
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 110.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 131.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 131.
- [1
+[1
 
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
- [4]
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2] [3] [4]
 
 LaTeX Warning: Marginpar on page 5 moved.
 
 [5] [6] [7] [8] [9]
-Overfull \hbox (4.74918pt too wide) in paragraph at lines 719--720
+Overfull \hbox (13.71983pt too wide) in paragraph at lines 705--705
+[][][]\T1/lmr/bx/n/9 Commentaire 
+ []
+
+
+Overfull \hbox (19.09225pt too wide) in paragraph at lines 705--705
+\T1/lmr/bx/n/9 [GS2]: \T1/lmr/m/n/9 Pourquoi 
+ []
+
+
+Overfull \hbox (13.71983pt too wide) in paragraph at lines 705--705
+[][][]\T1/lmr/bx/n/9 Commentaire 
+ []
+
+
+Overfull \hbox (19.09225pt too wide) in paragraph at lines 705--705
+\T1/lmr/bx/n/9 [GS2]: \T1/lmr/m/n/9 Pourquoi 
+ []
+
+
+Overfull \hbox (4.74918pt too wide) in paragraph at lines 718--719
 \T1/lmr/m/n/10 that we used the prim-i-tive ac-tion of the wreath prod-uct in t
 he proof of Lemma [][]3.6[][]. 
  []
 
-[10] [11] [12] (./Median.bbl [13]
+[10]
+Overfull \hbox (13.71983pt too wide) in paragraph at lines 784--784
+[][][]\T1/lmr/bx/n/9 Commentaire 
+ []
+
+
+Overfull \hbox (13.71983pt too wide) in paragraph at lines 784--784
+[][][]\T1/lmr/bx/n/9 Commentaire 
+ []
+
+
+Overfull \hbox (8.02365pt too wide) in paragraph at lines 781--788
+\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 h[]:x[]; [] ; h[]:x[]\OT1/lmr/m/n/10 )$\T1/lm
+r/m/n/10 . This is in-deed an ac-tion by S-automorphisms
+ []
+
+[11]
+Overfull \hbox (13.71983pt too wide) in paragraph at lines 900--900
+[][][]\T1/lmr/bx/n/9 Commentaire 
+ []
+
+
+Overfull \hbox (13.71983pt too wide) in paragraph at lines 900--900
+[][][]\T1/lmr/bx/n/9 Commentaire 
+ []
+
+[12] (./Median.bbl [13]
 Underfull \hbox (badness 1466) in paragraph at lines 52--55
 []\T1/lmr/m/n/10 Anthony Genevois.  Lamp-lighter groups, me-dian spaces, and a-
 T-
  []
 
 ) [14]
-Overfull \hbox (1.30492pt too wide) in paragraph at lines 1087--1087
+Overfull \hbox (1.30492pt too wide) in paragraph at lines 1086--1086
 \T1/lmr/m/n/9 topologiques 
  []
 
 
-Overfull \hbox (1.30492pt too wide) in paragraph at lines 1087--1087
+Overfull \hbox (1.30492pt too wide) in paragraph at lines 1086--1086
 \T1/lmr/m/n/9 topologiques 
  []
 
 
-Overfull \hbox (1.42859pt too wide) in paragraph at lines 1121--1125
+Overfull \hbox (1.42859pt too wide) in paragraph at lines 1120--1124
 []\T1/lmr/m/n/10 In prac-tice, a lot of ex-am-ples of con-crete cat-e-gories ov
 er $[]$ fac-tor throught
  []
@@ -949,11 +1015,11 @@ er $[]$ fac-tor throught
 [15
 
 ] [16] [17] [18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1279.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1279.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1278.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1278.
  (./Median.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1279.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1279.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1278.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1278.
 
 Package rerunfilecheck Info: File `Median.out' has not changed.
 (rerunfilecheck)             Checksum: 293BD11351D203487823535EA30A1695;1251.
@@ -961,13 +1027,13 @@ Package rerunfilecheck Info: File `Median.out' has not changed.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1279.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1278.
  ) 
 Here is how much of TeX's memory you used:
- 23373 strings out of 480893
- 413082 string characters out of 5908067
- 685347 words of memory out of 5000000
- 38368 multiletter control sequences out of 15000+600000
+ 23406 strings out of 480893
+ 413743 string characters out of 5908067
+ 692493 words of memory out of 5000000
+ 38394 multiletter control sequences out of 15000+600000
  630380 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,12n,83p,1020b,1137s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1000,14 +1066,15 @@ ype1/public/lm/lmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/
 lm/lmri10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmri7.p
 fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/l
 ocal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texliv
-e/2020/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2020/texm
-f-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2020/texmf-dist/font
-s/type1/public/lm/lmsy9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pub
-lic/amsfonts/symbols/msbm10.pfb>
-Output written on Median.pdf (18 pages, 512655 bytes).
+e/2020/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2020/texm
+f-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2020/texmf-dist/font
+s/type1/public/lm/lmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pub
+lic/lm/lmsy9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfont
+s/symbols/msbm10.pfb>
+Output written on Median.pdf (18 pages, 522910 bytes).
 PDF statistics:
- 514 PDF objects out of 1000 (max. 8388607)
- 445 compressed objects within 5 object streams
- 141 named destinations out of 1000 (max. 500000)
+ 529 PDF objects out of 1000 (max. 8388607)
+ 459 compressed objects within 5 object streams
+ 148 named destinations out of 1000 (max. 500000)
  165 words of extra memory for PDF output out of 10000 (max. 10000000)
 
