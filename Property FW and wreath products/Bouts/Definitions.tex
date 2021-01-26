@@ -55,9 +55,9 @@ Observe that with the above definition, a Schreier graph may have loops as well 
 If $X$ is a set with a left action $G\curvearrowright X$ and $S$ is a symmetric generating set for $G$, the corresponding (left) \emph{orbital graph} $\Sch_{\mathcal O}(G,X;S)$ is the graph with vertex set $X$ and with an edge between $x$ and $y$ for every $s$ in $S$ such that $s.x=y$.
 As the notation suggests, these two definitions are two faces of the same coin. Indeed, we have $\Sch(G,H;S)=\Sch_{\mathcal O}(G,G/H;S)$ for the  action by left multiplication of $G$ on $G/H$, while   for every $x\in X$, the graph $\Sch(G,\stab_G(x);S)$ is equal to the connected component of $x$ in $\Sch_{\mathcal O}(G,X;S)$.
 
-Schreier graphs are generalizations of the well-known \emph{Cayley graphs}, with $\Cayley(G;S)=\Sch(G,\{1\};S)$, see Figures \ref{Figure:CayleyOfZ} and \ref{Figure:CayleyOfZ2} for some examples.
+Schreier graphs are generalizations of the well-known \emph{Cayley graphs}, with $\Cayley(G;S)=\Sch(G,\{1\};S)$, see Figures~\ref{Figure:CayleyOfZ} and~\ref{Figure:CayleyOfZ2} for some examples.
 
-If $S$ and $T$ are two generating sets of $G$, the graphs $\Sch(G,H;S)$ and $\Sch(G,H;T)$ does not need to be isomorphic. However, if both $S$ and $T$ are finite, then $\Sch(G,H;S)$ and $\Sch(G,H;T)$ are quasi-isometric, see \cite[IV.B.21.iii]{DelaHarpe2000} for a proof and Figure~\ref{Figure:CayleyOfZ} for an example. The only fact we will use about quasi-isometries is that they preserve ``large-scale properties'' of the graph, as for example the number of ends.
+If $S$ and $T$ are two generating sets of $G$, the graphs $\Sch(G,H;S)$ and $\Sch(G,H;T)$ does not need to be isomorphic. However, if both $S$ and $T$ are finite, then $\Sch(G,H;S)$ and $\Sch(G,H;T)$ are quasi-isometric, see~\cite[IV.B.21.iii]{DelaHarpe2000} for a proof and Figure~\ref{Figure:CayleyOfZ} for an example. The only fact we will use about quasi-isometries is that they preserve ``large-scale properties'' of the graph, as for example the number of ends.
 Observe that the requirement that both $S$ and $T$ are finite is crucial for the existence of a quasi-isometry between the corresponding Schreier graphs. Indeed, for every group  $\Cayley(G;G\setminus\{1\})=\Sch(G,\{1\};G\setminus\{1\})$ is always a complete graph on $\abs{G}$ vertices, in particular  $\Cayley(\Z;\{1\})$ and $\Cayley(\Z;\Z\setminus\{0\})$ are not quasi-isometric.
 
 %
@@ -94,18 +94,18 @@ Let $\Gamma$ be a graph and $K$ a finite subset of vertices. The graph $\Gamma\s
 Let $\Gamma$ be a graph. The \emph{number of ends} of $\Gamma$ is the supremum, taken over all finite $K$, of the number of infinite connected components of $\Gamma\setminus K$.
 \end{defn}
 There exists other characterizations of the number of ends in graphs, %notably in terms of equivalence classes of rays,
-see \cite{MR1967888} and the references therein, but Definition \ref{Def:Ends} is the one that best suits our purpose.
-%The interested reader may refer to \cite{MR1967888} and the references therein for an extended treatment of the
+see~\cite{MR1967888} and the references therein, but Definition~\ref{Def:Ends} is the one that best suits our purpose.
+%The interested reader may refer to~\cite{MR1967888} and the references therein for an extended treatment of the
 A locally finite graph (i.e. such that every vertex has finite degree) is finite if and only if it has $0$ end.
-%The graphs of the Figures~\ref{Figure:CayleyOfZ} and \ref{Figure:CayleyOfZ2} have respectively 2 ends and 1 end.
+%The graphs of the Figures~\ref{Figure:CayleyOfZ} and~\ref{Figure:CayleyOfZ2} have respectively 2 ends and 1 end.
 
-An important fact about the number of ends of a graph, is that it is an invariant of quasi-isometry, see \cite{MR1213151}. In particular, if $G$ is a finitely generated group it is possible to speak about the number of ends of the Schreier graph $\Sch(G,H;S)$ without specifying a particular finite generating set $S$.
-By a celebrated result of Hopf \cite{MR10267}, the number of ends of a Cayley graph of a finitely generated group can only be $0$, $1$, $2$ or infinite (in which case it is uncountable), see Figures~\ref{Figure:CayleyOfZ} and \ref{Figure:CayleyOfZ2} for some examples.
+An important fact about the number of ends of a graph, is that it is an invariant of quasi-isometry, see~\cite{MR1213151}. In particular, if $G$ is a finitely generated group it is possible to speak about the number of ends of the Schreier graph $\Sch(G,H;S)$ without specifying a particular finite generating set $S$.
+By a celebrated result of Hopf~\cite{MR10267}, the number of ends of a Cayley graph of a finitely generated group can only be $0$, $1$, $2$ or infinite (in which case it is uncountable), see Figures~\ref{Figure:CayleyOfZ} and~\ref{Figure:CayleyOfZ2} for some examples.
 On the other hand, Schreier graphs may have any number of ends in $\mathbf N\cup\{\infty\}$, see Figure~\ref{Figure:SchreierOfF2} for an example of a graph with $4$ ends.
-%While the number of ends of Cayley graphs of finitely generated groups can only be $0$, $1$, $2$ or infinite (in which case it is uncountable) \cite[Theorem 11.27]{Stallings1971}, Schreier graphs may have any number of ends in $\mathbf N\cup\{\infty\}$, see Figure~\ref{Figure:SchreierOfF2} for an example of a graph with another number of ends.
-In fact, every regular graph of even degree is isomorphic to a Schreier graph, \cite{MR0450121,MR1358635}.
+%While the number of ends of Cayley graphs of finitely generated groups can only be $0$, $1$, $2$ or infinite (in which case it is uncountable)~\cite[Theorem 11.27]{Stallings1971}, Schreier graphs may have any number of ends in $\mathbf N\cup\{\infty\}$, see Figure~\ref{Figure:SchreierOfF2} for an example of a graph with another number of ends.
+In fact, every regular graph of even degree is isomorphic to a Schreier graph,~\cite{MR0450121,MR1358635}.
 
-We are now finally able to introduce property FW. Instead of giving the original definition in terms of actions on wall spaces, we will use an equivalent one for finitely generated groups due to Cornulier \cite{Cornulier2013}.
+We are now finally able to introduce property FW. Instead of giving the original definition in terms of actions on wall spaces, we will use an equivalent one for finitely generated groups, which essentially follows from~\cite{MR1347406}, see~\cite{Cornulier2013} for a direct proof.
 %
 %
 \begin{defn}
@@ -116,7 +116,7 @@ A finitely generated group $G$ has \emph{property FW} if all its Schreier graphs
 It directly follows from the definition that all finite groups have property FW, but that $\Z$ does not have it.
 In fact, if $G$ is a finitely generated group with an homomorphism onto $\Z$, then it does not have FW. Indeed, in this case $G\cong H\rtimes \Z$  for some $H$ and the Schreier graph $\Sch(G,H;S)$ is isomorphic to a Cayley graph of $\Z\cong G/H$ and hence has $2$ ends.
 
-Property FW admits many distinct characterizations that allow to define it for groups that are non-necessarily finitely generated and even for topological groups. We refer the reader to \cite{Cornulier2013} for a survey of these characterizations.
+Property FW admits many distinct characterizations that allow to define it for groups that are non-necessarily finitely generated and even for topological groups. We refer the reader to~\cite{Cornulier2013} for a survey of these characterizations.
 %
 %
 %
