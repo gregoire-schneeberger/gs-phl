@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  26 JAN 2021 17:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  26 JAN 2021 22:50
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -768,34 +768,47 @@ File: l3backend-pdfmode.def 2020-08-07 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count321
 \l__pdf_internal_box=\box59
 )
-(./Median.aux)
+(./Median.aux
+
+LaTeX Warning: Label `Def:Categoric' multiply defined.
+
+
+LaTeX Warning: Label `Def:Cartesian' multiply defined.
+
+
+LaTeX Warning: Label `Condidef:2' multiply defined.
+
+
+LaTeX Warning: Label `Item:Product' multiply defined.
+
+)
 \openout1 = `Median.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 93
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 96
 .
  (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \AtBeginShipoutBox=\box60
-Package hyperref Info: Link coloring ON on input line 93.
+Package hyperref Info: Link coloring ON on input line 96.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -809,9 +822,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count322
 )
-LaTeX Info: Redefining \ref on input line 93.
-LaTeX Info: Redefining \pageref on input line 93.
-LaTeX Info: Redefining \nameref on input line 93.
+LaTeX Info: Redefining \ref on input line 96.
+LaTeX Info: Redefining \pageref on input line 96.
+LaTeX Info: Redefining \nameref on input line 96.
  (./Median.out) (./Median.out)
 \@outlinefile=\write4
 \openout4 = `Median.out'.
@@ -841,121 +854,72 @@ e
 ))
 ABD: EveryShipout initializing macros
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-05.
+08.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-05.
+08.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-105.
+108.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-105.
+108.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 105.
+(Font)              <12> on input line 108.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 105.
+(Font)              <8> on input line 108.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 105.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 105
+(Font)              <6> on input line 108.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 108
 .
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 105
+LaTeX Font Info:    Trying to load font information for U+msb on input line 108
 .
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-05.
+08.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 105.
+(Font)              <5> on input line 108.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 106.
+ine 109.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 107.
+(Font)              <9> on input line 110.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 128.
+(Font)              <10> on input line 131.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 128.
+(Font)              <7> on input line 131.
  [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4]
-Overfull \hbox (13.71983pt too wide) in paragraph at lines 381--381
-[][][]\T1/lmr/bx/n/9 Commentaire 
- []
-
-
-Overfull \hbox (19.09225pt too wide) in paragraph at lines 381--381
-\T1/lmr/bx/n/9 [GS1]: \T1/lmr/m/n/9 Pourquoi 
- []
-
-
-Overfull \hbox (13.71983pt too wide) in paragraph at lines 381--381
-[][][]\T1/lmr/bx/n/9 Commentaire 
- []
-
-
-Overfull \hbox (19.09225pt too wide) in paragraph at lines 381--381
-\T1/lmr/bx/n/9 [GS1]: \T1/lmr/m/n/9 Pourquoi 
- []
-
-
-Overfull \hbox (13.71983pt too wide) in paragraph at lines 383--383
-[][][]\T1/lmr/bx/n/9 Commentaire 
- []
-
-
-Overfull \hbox (13.71983pt too wide) in paragraph at lines 383--383
-[][][]\T1/lmr/bx/n/9 Commentaire 
- []
-
 
 LaTeX Warning: Marginpar on page 5 moved.
 
-[5]
-Overfull \hbox (13.71983pt too wide) in paragraph at lines 421--421
-[][][]\T1/lmr/bx/n/9 Commentaire 
- []
-
-
-Overfull \hbox (13.71983pt too wide) in paragraph at lines 421--421
-[][][]\T1/lmr/bx/n/9 Commentaire 
- []
-
-[6] [7] [8]
-Overfull \hbox (3.94458pt too wide) in paragraph at lines 655--655
-\T1/lmr/m/n/10 l'explication 
- []
-
-
-Overfull \hbox (3.94458pt too wide) in paragraph at lines 655--655
-\T1/lmr/m/n/10 l'explication 
- []
-
-[9]
-Overfull \hbox (4.74918pt too wide) in paragraph at lines 711--712
+[5] [6] [7] [8] [9]
+Overfull \hbox (4.74918pt too wide) in paragraph at lines 719--720
 \T1/lmr/m/n/10 that we used the prim-i-tive ac-tion of the wreath prod-uct in t
 he proof of Lemma [][]3.6[][]. 
  []
@@ -967,62 +931,83 @@ T-
  []
 
 ) [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1041.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1041.
+Overfull \hbox (1.30492pt too wide) in paragraph at lines 1087--1087
+\T1/lmr/m/n/9 topologiques 
+ []
+
+
+Overfull \hbox (1.30492pt too wide) in paragraph at lines 1087--1087
+\T1/lmr/m/n/9 topologiques 
+ []
+
+
+Overfull \hbox (1.42859pt too wide) in paragraph at lines 1121--1125
+[]\T1/lmr/m/n/10 In prac-tice, a lot of ex-am-ples of con-crete cat-e-gories ov
+er $[]$ fac-tor throught
+ []
+
+[15
+
+] [16] [17] [18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1279.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1279.
  (./Median.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1041.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1041.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1279.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1279.
 
 Package rerunfilecheck Info: File `Median.out' has not changed.
-(rerunfilecheck)             Checksum: 62C4389DF2682D3D99A86C67CD9321FC;951.
+(rerunfilecheck)             Checksum: 293BD11351D203487823535EA30A1695;1251.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1041.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1279.
  ) 
 Here is how much of TeX's memory you used:
- 23315 strings out of 480893
- 412252 string characters out of 5908067
- 682310 words of memory out of 5000000
- 38342 multiletter control sequences out of 15000+600000
+ 23373 strings out of 480893
+ 413082 string characters out of 5908067
+ 685347 words of memory out of 5000000
+ 38368 multiletter control sequences out of 15000+600000
  630380 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,83p,1020b,1083s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
-cal/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
-20/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2020/texmf-d
-ist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/
-dvips/lm/lm-ts1.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-m
-athex.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx10.pfb>
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/loca
-l/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/2
-020/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2020/texmf-d
-ist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/t
-ype1/public/lm/lmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publi
-c/lm/lmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi5
-.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/
-local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2020/tex
-mf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2020/texmf-dist/fon
-ts/type1/public/lm/lmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
-blic/lm/lmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr
-17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2020/texm
-f-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts
-/type1/public/lm/lmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publi
-c/lm/lmri10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmri7
-.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texl
-ive/2020/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2020/te
-xmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2020/texmf-dist/fo
-nts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/p
-ublic/amsfonts/symbols/msbm10.pfb>
-Output written on Median.pdf (14 pages, 492346 bytes).
+ 68i,12n,83p,1020b,1137s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{lem.3.17} has been referenced but does not exist,
+ replaced by a fixed one
+
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/loca
+l/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2020
+/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2020/texmf-dis
+t/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dv
+ips/lm/lm-ts1.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mat
+hex.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></
+usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/
+texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/202
+0/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2020/texmf-dis
+t/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/typ
+e1/public/lm/lmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/
+lm/lmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi5.p
+fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/lo
+cal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2020/texmf
+-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2020/texmf-dist/fonts
+/type1/public/lm/lmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
+ic/lm/lmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr17
+.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2020/texmf-
+dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/t
+ype1/public/lm/lmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/
+lm/lmri10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmri7.p
+fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texliv
+e/2020/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2020/texm
+f-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2020/texmf-dist/font
+s/type1/public/lm/lmsy9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pub
+lic/amsfonts/symbols/msbm10.pfb>
+Output written on Median.pdf (18 pages, 512655 bytes).
 PDF statistics:
- 448 PDF objects out of 1000 (max. 8388607)
- 384 compressed objects within 4 object streams
- 109 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 514 PDF objects out of 1000 (max. 8388607)
+ 445 compressed objects within 5 object streams
+ 141 named destinations out of 1000 (max. 500000)
+ 165 words of extra memory for PDF output out of 10000 (max. 10000000)
 

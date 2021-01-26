@@ -57,6 +57,7 @@
 \DeclareMathOperator\SL{SL}
 \DeclareMathOperator\Sym{Sym}
 \DeclareMathOperator\diag{diag}
+%\DeclareMathOperator\diameter{diam}
 \DeclareMathOperator\Hom{Hom}
 \DeclareMathOperator\Isom{Isom}
 \DeclareMathOperator\Aut{Aut}
@@ -67,10 +68,12 @@
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \DeclarePairedDelimiter\gen{\langle}{\rangle}
 
+\newcommand*{\B}{\mathcal B}
 \newcommand*{\orbite}{\mathcal O}
 \newcommand*{\field}[1]{\mathbf{#1}}
 \newcommand*{\Z}{\field{Z}}
 \newcommand*{\N}{\field{N}}
+\newcommand*{\R}{\field{R}}
 \newcommand{\setst}[2]{\{#1\ |\ #2\}}
 \newcommand*{\powerset}[1]{\mathcal P(#1)}
 \newcommand*{\powersetf}[1]{\mathcal P_{\textnormal{f}}(#1)}
@@ -104,7 +107,7 @@
 %
 \begin{abstract}
 If S is a structure over metric spaces, we say that a group G has property BS if any action on a S-space has bounded orbits. Examples of such structures include metric spaces, Hilbert spaces, CAT(0) cube complexes\todo{Ajout CCC car intêret des gens pour ça}, connected median graphs, trees or ultra-metric spaces.
-They correspond respectively to Bergman's property, property FH (which, for countable groups, is equivalent to the celebrated Kazdhan's property (T)), property FW, property FA and cof~$\neq\omega$.
+They correspond respectively to Bergman's property, property FH (which, for countable groups, is equivalent to the celebrated Kazdhan's property (T)), property FW (both for CAT(0) cube complexes and for connected median graphs), property FA and cof~$\neq\omega$.
 
 Our main result is that for a large class of structures S, the wreath product $G\wr_XH$ has property BS if and only if both $G$ and $H$ have property BS and $X$ is finite. On one hand, this encompasses in a general setting previously known results for properties FH and FW. On the other hand, this also apply to the Bergman property.
 Finally, we also obtain that $G\wr_XH$ has cof~$\neq\omega$ if and only if both $G$ and $H$ have cof~$\neq\omega$ and $H$ acts on $X$ with finitely many orbits.
@@ -125,7 +128,7 @@ Finally, we also obtain that $G\wr_XH$ has cof~$\neq\omega$ if and only if both 
 %
 %
 \todo[inline]{Question 1 : que peut-on dire des groupes topologiques ? Les mêmes preuves doivent marcher mutatis mutandis. Ça serait bien de regarder cela avant publications (éventuellement avant de mettre sur arXiv).}
-\todo[inline]{Question 2 : que peut-on dire de la propriété F$\mathbf R$ (n.b, F$\mathbf R$ est strictement plus forte que FA) ? Et des autres dérivés du type F$\Lambda$ ? À priori ni plus ni moins que FA. Mais on peut au moins en parler vite fait quelque part.}
+\todo[inline]{Question 2 : que peut-on dire de la propriété F$\R$ (n.b, F$\R$ est strictement plus forte que FA) ? Et des autres dérivés du type F$\Lambda$ ? À priori ni plus ni moins que FA. Mais on peut au moins en parler vite fait quelque part.}
 \todo[inline]{Question 3 : que peut-on dire des extensions $1\to N\to G\to H$ ? Cf sous-section~\ref{Subsection:Extension}.}
 %
 %
@@ -376,11 +379,13 @@ Finally, the implication $\textnormal{FH}\implies \textnormal{FW}$ follows from 
 
 %These implications are strict.
 On the other hand, here are some examples for the strictness of the implications of \eqref{EQ:Implications}.
-An infinite finitely generated group with property (T), e.g. $\SL_3(\Z)$, has property FH while its action on its Cayley graph is transitive and hence has unbounded orbits.
+An infinite finitely generated group with property (T), e.g. $\SL_3(\Z)$, has property FH, but it does not have property SB since its action on its Cayley graph is transitive and hence has an unbounded orbit.
 The group $\SL_2(\Z[\sqrt{2}])$ has property FW but not FH, see \cite{MR3299841}.
-If $G$ is a non-trivial finite group and $H$ is an infinite finitely generated group with property FW, then every finite index subgroup of $H$ has property FW, Lemma~\ref{Lemma:Subgroup}, \mycomment[GS]{Pourquoi a-t-on besoin des sous-groupes d'indices finis ?}and hence FA, which implies that $G\wr_HH$ has property FA by \cite{Cornulier2011}, but does not have property FW by Theorem~\ref{Thm:Main}.
+If $G$ is a non-trivial finite group and $H$ is an infinite group with property FA, then $G\wr_HH$ has property FA by Theorem~\ref{Thm:FAFiniteOrbits}, but does not have property FW by Theorem~\ref{Thm:Main}.\PH{J'ai simplifié l'exemple.}
+% infinite finitely generated group with property FW, then every finite index subgroup of $H$ has property FW, Lemma~\ref{Lemma:Subgroup}, \mycomment[GS]{Pourquoi a-t-on besoin des sous-groupes d'indices finis ?}and hence FA, which implies that $G\wr_HH$ has property FA by \cite{Cornulier2011}, but does not have property FW by Theorem~\ref{Thm:Main}.
 %The group $G = \gen{a,b,c  | a^2=b^2=c^2=(ab)^2=(ac)^2=(bc)^2=1}$ has property FA but not property FW see \cite[Example 5.B.8]{Cornulier2013};  
-Finally, $\Z$ has cof~$\neq\omega$ as any finitely generated group \mycomment[GS]{Evident que t.f -> cof~$\neq\omega$  ?}, while it acts by translations and with unbounded orbits on the infinite $2$-regular tree.
+Finally, $\Z$ has cof~$\neq\omega$,\PH{J'ai enlevé le blabla sur les groupes de type fini et l'ai mis plus loin.} %as any finitely generated group,\mycomment[GS]{Evident que t.f -> cof~$\neq\omega$  ?}\PH{Avec la def en terme d'union, oui (une union croissante contiendra tous les générateurs à partit d'un certain rang fini). }
+ while it acts by translations and with unbounded orbits on the infinite $2$-regular tree.
 \paragraph{More on median graphs}
 %We now come back to median graphs.
 Trees are the simplest examples of median graphs and a simple verification shows that if $X$ and $Y$ are both (connected) median graphs, then their cartesian product is also a (connected) median graph.
@@ -409,16 +414,17 @@ For example, both $\powersetf{X}$ and $\powersetcof{X}$ are always preserved by 
 
 \paragraph{Groups with cof~$\neq\omega$}
 The following characterization of groups which have not cof~$\neq\omega$ is well-known and we include a proof only for the sake of complexity.
+It implies in particular that a countable group has cof~$\neq\omega$ if and only if it is finitely generated.\PH{J'ai ajouté cette phrase.}
 %
 %
 \begin{lem}\label{Lemma:CofSub}
 Let $G$ be a group. Then the following are equivalent:
 \begin{enumerate}
-\item $G$ can be written as a countable increasing union of proper subgroups.
+\item $G$ can be written as a countable increasing union of proper subgroups,
 \item $G$ does not have cof~$\neq\omega$, i.e. there exists an ultrametric space $X$ on which $G$ acts with an unbounded orbit,
-\item There exists a $G$-invariant (for the action by left multiplication) ultrametric $d$ on $G$ such that $G\curvearrowright G$ has an unbounded orbit,
+\item There exists a $G$-invariant (for the action by left multiplication) ultrametric $d$ on $G$ such that $G\curvearrowright G$ has an unbounded orbit.
 \end{enumerate}
-\mycomment[GS]{J'ai changé l'ordre des items pour avoir que la condition de ne pas avoir cof~$\neq\omega$ correspond à la def + ajouté que l'orbite doit être non bornée dans la preuve.}
+%\mycomment[GS]{J'ai changé l'ordre des items pour avoir que la condition de ne pas avoir cof~$\neq\omega$ correspond à la def + ajouté que l'orbite doit être non bornée dans la preuve.}
 \end{lem}
 \begin{proof}
 It is clear that the third item implies the second.
@@ -427,10 +433,10 @@ Suppose that $(X,d)$ is an ultrametric space on which $G$ acts with an unbounded
 \[
 	H_n\coloneqq\setst{g\in G}{d(x_0,g.x_0)\leq n}.
 \]
-It is clear that $G$ is the increasing union of (countably many) $H_n$.
+It is clear that $G$ is the increasing union of the (countably many) $H_n$.
 On the other hand, the $H_n$ are subgroups of $G$. Indeed, $H_n$ is trivially closed under taking the inverse, and is also closed under taking products since $d(x_0,gh.x_0)\leq\max\{d(x_0,g.x_0),d(g.x_0,gh.x_0)\}=\max\{d(x_0,g.x_0),d(x_0,h.x_0)\}$. As $G.x_0$ is unbounded, they are proper subgroups.
 
-Finally, suppose that $G=\bigcup_{n\in \N}H_n$ where the $H_n$ form an increasing sequence of proper subgroups. It is always possible to suppose that $H_1=\{1\}$.
+Finally, suppose that $G=\bigcup_{n\in \N}H_n$ where the $H_n$ form an increasing sequence of proper subgroups. It is always possible to suppose that $H_0=\{1\}$.
 Define $d$ on $G$ by $d(g,h)\coloneqq\min\setst{n}{g^{-1}h\in H_n}$.
 One easily verifies that $d$ is a $G$-invariant ultrametric. Moreover, the orbit of $1$ contains all of $G$ and is hence unbounded.
 \end{proof}
@@ -495,7 +501,7 @@ The functor $F_S\colon\mathbf{Graph}\to\mathbf{Met}$ sends a connected graph to 
 %While we guarantee the validity of the results of Section~\ref{Section:Proof} only in this restricted context, they should be considered as good heuristics of the general case and the curious reader might want to verify them for its preferred property.
 %Similarly, when speaking of BS, we will always assume that BS is one of the property appearing in \eqref{EQ:Implications}.
 %
-%Restricting ourself to properties BS appearing in \eqref{EQ:Implications} is also justified by the fact that we are not aware of any other\todo{rajouter F$\mathbf R$ quelque part} ``interesting'' property BS distinct from the ones of \eqref{EQ:Implications}.
+%Restricting ourself to properties BS appearing in \eqref{EQ:Implications} is also justified by the fact that we are not aware of any other\todo{rajouter F$\R$ quelque part} ``interesting'' property BS distinct from the ones of \eqref{EQ:Implications}.
 %\end{rem}
 %
 %
@@ -652,7 +658,9 @@ Suppose that BS implies cof~$\neq\omega$. Then
 \end{enumerate}
 \end{lem}
 \begin{proof}
-By Corollary~\ref{Cor:Prod}, it is enough to prove the first assertion for countable direct sums of groups. Indeed, if $X$ is uncountable, there exists a countable subset $Y \subset X$ and $Z \subset X$ such that $X = Y \sqcup Z$. We can decompose the direct sum as $\bigoplus_XG = \left(\bigoplus_{y \in Y}G_y\right) \times \left(\bigoplus_{z \in Z}G_z\right)$ and then, by Corollary~\ref{Cor:Prod}, if $\bigoplus_{y \in Y}G_y$ does not have cof~$\neq\omega$, then so does $\bigoplus_XG$. \todo{Ajout de l'explication de pourquoi on peut se retreindre au cas dénombrable}
+By Corollary~\ref{Cor:Prod}, it is enough to prove the first assertion for countable direct sums of groups. Indeed, if $X$ is infinite, there exists a countable subset $Y \subset X$. Let $Z \coloneqq X\setminus Y$, thus we have $X = Y \sqcup Z$. We can decompose the direct sum as $\bigoplus_XG = (\bigoplus_YG) \times (\bigoplus_ZG)$
+%$\bigoplus_XG = \left(\bigoplus_{y \in Y}G_y\right) \times \left(\bigoplus_{z \in Z}G_z\right)$ 
+and then, by Corollary~\ref{Cor:Prod}, if $\bigoplus_YG$ does not have cof~$\neq\omega$, then neither does $\bigoplus_XG$.\PH{Remplacé $\bigoplus_YG_y$ par $\bigoplus_YG$ pour être cohérent dans les notations, mais ok sinon.} %\todo{Ajout de l'explication de pourquoi on peut se restreindre au cas dénombrable}
 So let $G\coloneqq \bigoplus_{i\geq 1}G_i$ and for each $i$, choose $g_i\neq 1$ in $G_i$.
 Let $d_\infty(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$ be the $G$-invariant ultrametric of Example~\ref{Exmpl:Ultra}.
 Then for every integer $n$, the orbit $G.1_G$ contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $1_G$ for $d_\infty$ if the $g_i$ are not equal to $1$.
@@ -823,7 +831,7 @@ But then we have the primitive action of the wreath product $G\wr_XH$ on $G^X\co
 %	\bigl((\varphi,h).\psi\bigr)(x)=\varphi(h^{-1}.x)\psi(h^{-1}.x),
 %\]
 which preserves $\bigoplus_XG$.
-It is easy to check that the map $d_\infty\colon\bigoplus_XG\times\bigoplus_XG\to\mathbf R$ defined by $d_\infty(\psi_1,\psi_2)\coloneqq\max\setst{d\bigl(\psi_1(x),\psi_2(x)\bigr)}{x\in X}$ is a $G\wr_XH$-invariant ultrametric.
+It is easy to check that the map $d_\infty\colon\bigoplus_XG\times\bigoplus_XG\to\R$ defined by $d_\infty(\psi_1,\psi_2)\coloneqq\max\setst{d\bigl(\psi_1(x),\psi_2(x)\bigr)}{x\in X}$ is a $G\wr_XH$-invariant ultrametric.
 Finally, let $h\in G$ be an element of unbounded $G$-orbit for $d$ and let $x_0$ be any element of $X$. Then for any $g$ in $G$ we have $(\delta_{x_0}^g,1).\delta_{x_0}^h=\delta_{x_0}^{gh}$ and hence $d_\infty(\delta_{x_0}^h,\delta_{x_0}^{gh})=d(h,gh)$ is unbounded.
 
 Suppose now that both $G$ and $H$ have cof~$\neq\omega$ and that $H$ acts on $X$ with finitely many orbits. We want to prove that $G\wr_XH$ has cof~$\neq\omega$.
@@ -976,7 +984,7 @@ Moreover, by using Lemma~\ref{Lemma:Cof} we can get ride of the ``finitely many 
 %In fact, the only place where we need more structure that an abstract bornology is Lemma~\ref{Lemma:Semidirect} where we need that if $H$ is a subgroup of $G$ and $B$ is a bounded subset of $X$, then the $\{h.B\}_{h\in H}$ are in some sense ``uniformly bounded''.
 %This holds as soon as we have a suitable notion of diameter which is $G$-invariant.
 %The standard example consists of metric spaces and action by isometries.
-%However, it is possible to define a meaningful notion of diameter for more general spaces. Let $X$ be a \emph{quasipseudometric space}, that is we have a map $d\colon X\times X\to\mathbf R_{\geq0}$ satisfying the triangle inequality and such that $d(x,x)=0$ for all $x$.
+%However, it is possible to define a meaningful notion of diameter for more general spaces. Let $X$ be a \emph{quasipseudometric space}, that is we have a map $d\colon X\times X\to\R_{\geq0}$ satisfying the triangle inequality and such that $d(x,x)=0$ for all $x$.
 %We then define the \emph{diameter} of a subset $Y\leq X$ as $\diam(Y)\coloneqq\sup\setst{d(x,y)}{x,y\in Y}$.
 %By saying that bounded subsets are subsets with finite diameter, we obtain a bornology on $(X,d)$.
 %
@@ -1038,4 +1046,234 @@ By \cite{Cornulier2013}, this is the case for property FW. A crude idea would be
 %
 %
 %
-\enddocument
+\clearpage
+\subsection{Groups acting with bounded orbits on S-spaces}
+It is possible to define other properties in the spirit of Definition~\ref{Def:FHFA}.
+In order to give a uniform treatment of all of them, we will use the notion of bornological spaces and the language of category theory.
+A reader unfamiliar with category theory or bornological spaces and interested only in one specific structure (as for example Banach spaces and groups acting with bounded orbits on them), might forget all this general considerations and only verify that the arguments of Section~\ref{Section:Proof} apply for their favorite structure.
+
+%
+%
+%\begin{rem}
+%The only use we will do of category theory is as a language that allows us to formally define what is an \emph{additional structure on bornological spaces} and to prove things in this general setting.
+%A reader unfamiliar with category theory or bornological spaces and interested only in one specific structure (as for example Banach spaces), might forget all this general considerations and only verify that the arguments of Section~\ref{Section:Proof} apply for their favorite structure.
+%\end{rem}
+%
+%
+%
+%
+First of all, we recall the notion of a bornological space.
+%
+%
+\begin{defn}
+A \emph{bornological space} is a set $X$ endowed with a \emph{bornology} $\B$. That is, $\B$ is a collection of subsets of $X$ such that
+\begin{enumerate}
+\item $\B$ covers $X$ (i.e. $X =\bigcup_{B\in \B}B)$,
+\item $\B$ is stable under inclusion (if $B\in \B$ and $A\subset B$, then $A\in\B$),
+\item $\B$ is stable under finite unions.
+\end{enumerate}
+\end{defn}
+%
+%
+It follows from the definition that for any bornological space $(X,\B)$, all finite subsets of $X$ are bounded.
+%
+%
+\begin{exmp}\label{Ex:Bornological}
+\begin{enumerate}
+\item The collection of all finite subsets of $X$ is always a bornology. This is the weaker bornology on $X$.
+\item If $\kappa$ is an infinite cardinal, then the collection of all subsets of $X$ of cardinality at most $\kappa$ is a bornology on $X$.
+\item A \emph{quasipseudometric space} is a set $X$ endowed with a map $d\colon X\times X\to\R_{\geq 0}$ such that $d(x,x)=0$ for all $x$ and $d(x,z)\leq d(x,y)+d(y,z)$. That is, $d$ is a metric except that it is not necessarily symmetric and that two distinct points may have $0$ distance.
+%It is then possible to define the diameter of a subset $Y$ of $X$ as $\diam(Y)\coloneqq\sup\setst{d(x,y)}{x,y\in Y}$.
+The collection of all subsets of $X$ of finite diameter is a bornology on $X$. We say that this bornology is induced by $d$.\PH{Ajouter (?!) un truc sur les espaces topologiques vectoriels.}
+\end{enumerate}
+\end{exmp}
+%
+%
+A map $\varphi\colon(X_1,\B_1)\to(X_2,\B_2)$ is \emph{bounded} if the image of a bounded subset is bounded.
+An \emph{isomorphism} between two bornological space is a bijective map $\varphi$ such that both $\varphi$ and $\varphi^{-1}$ are bounded.
+
+Bornological spaces together with bounded maps form a category $\mathbf{Born}$.
+It is thus possible to speak of additional structures on bornological spaces, which are simply concrete categories over $\mathbf{Born}$:
+%\begin{defn}
+%Let S be an ``additional structure on metric spaces''.\todo{J'ai changé ``property'' to ``structure''.}
+%Then BS is the group property: \emph{Every $G$-action on a S-space has bounded orbits}, where a $G$-action is supposed to ``preserve the S-structure''.
+%\end{defn}
+%%
+%%
+%\todo[inline]{À voir ce que l'on veut vraiment dire, mais je pense que la formulation correct est la suivante. Soit S une \emph{structure} sur les espaces métriques, alors $G$ a la propriété BS ssi... Ici, \emph{structure} est à prendre au sens catégorique de : Une catégorie $\mathbf{SMet}$ munie d'un foncteur fidèle $F\colon \mathbf{SMet}\to \mathbf{Met}$ où $\mathbf{Met}$ est la catégorie des espaces métriques. En particulier, une $G$-action sur un $S$-espace $X$ ``préservant la S-structure'' est simplement un homomorphisme de $G$ dans $\Hom(X,X)$.
+%
+%Le problème avec cette définition catégorique, c'est qu'ensuite lorsque l'on regardera le produit on voudra parler de produit cartésien et non pas de produits catégorique (pour les graphes c'est le produit tensoriel). Du coup il vaut peut-être mieux ne rien dire.
+%Néanmoins, je mets la définition correcte ci-dessous.}
+%
+%
+\begin{defn}\label{Def:Categoric}
+A \emph{concrete category over $\mathbf{Born}$} is a category $\mathbf{SBorn}$ together with a faithful functor $F_{S}\colon \mathbf{SBorn}\to \mathbf{Born}$.
+The objects of $\mathbf{SBorn}$ are called \emph{S-spaces}.
+A \emph{$G$-action on a S-space} $X$ is simply an homomorphism $\alpha\colon G\to\Aut_{\mathbf{SBorn}}(X)$. It has \emph{bounded orbits} if $F_S\circ \alpha\colon G\to \Aut_{\mathbf{Born}}(X)$ has bounded orbits.
+\end{defn}
+%
+%
+We will sometimes called the pair $(\mathbf{SBorn},F_S)$ a structure and denote it by~$S$.
+
+%In other words, an additional structure on metric spaces, is a concrete category over $\mathbf{Born}$.
+Since $\mathbf{Born}$ itself is concrete, that is we have a faithful functor $F\colon \mathbf{Born}\to\mathbf{Set}$, the category $\mathbf{SBorn}$ is also concrete and its objects can be thoughts as sets with ``extra structure''.
+
+In practice, a lot of examples of concrete categories over $\mathbf{Born}$ factor throught the category $\mathbf{Met}$ of metric space with short maps.
+Obvious examples of concrete categories over $\mathbf{Met}$ include, metric spaces, Hilbert spaces and ultrametric spaces.
+For connected graphs (and hence for connected median graphs and for trees), one looks at the category $\mathbf{Graph}$ where objects are connected simple graphs $G=(V,E)$ and where a morphism $f\colon (V,E)\to(V',E')$ is a function between the vertex sets such that if $(x,y)$ is an edge then either $f(x)=f(y)$ or $(f(x),f(y))$ is an edge.
+The functor $F_S\colon\mathbf{Graph}\to\mathbf{Met}$ sends a connected graph to its vertex set together with the graph distance: $d(x,y)$ is the minimum number of edges on a path between $x$ and $y$.
+
+We can now, formally define the groupe property \emph{BS} as: 
+%
+\begin{defn}
+A group $G$ has property \emph{BS} if every $G$-action on a S-space has bounded orbits.
+\end{defn}
+
+
+
+
+%\begin{rem}
+%In order to avoid technicalities, we will neither precise what exactly is an \emph{additional structure on metric spaces} nor what does it means to \emph{preserve the S-structure}.
+%In particular, in the following, when speaking about a structure S we will always implicitly assume that S is in $\{$metric space, real Hilbert space, connected median graph, tree, ultrametric space$\}$.
+%While we guarantee the validity of the results of Section~\ref{Section:Proof} only in this restricted context, they should be considered as good heuristics of the general case and the curious reader might want to verify them for its preferred property.
+%Similarly, when speaking of BS, we will always assume that BS is one of the property appearing in \eqref{EQ:Implications}.
+%
+%Restricting ourself to properties BS appearing in \eqref{EQ:Implications} is also justified by the fact that we are not aware of any other\todo{rajouter F$\R$ quelque part} ``interesting'' property BS distinct from the ones of \eqref{EQ:Implications}.
+%\end{rem}
+%
+%
+All the properties of Definition~\ref{Def:FHFA} are of the form BS.
+Examples of other interesting properties include looking at $\mathbf{R}$-trees or at (some specific subclass of) Banach spaces.
+The property F$\mathbf{R}$ of having bounded actions on $\mathbf{R}$-trees is known to be strictly stronger than FA \cite{MR3465847}. Theorem~\ref{Thm:FAFiniteOrbits} holds whenever property FA is replaced by property F$\mathbf{R}$, with a similar proof.
+On the other hand, the property of having bounded orbits for action on Banach spaces satisfy the analog of Theorem~\ref{Thm:Main}, see Theorem~\ref{Thm:Technic}.
+
+An example of an uninteresting property BS is given by taking $\mathbf{SBorn}$ to be the metric spaces of bounded diameter (together with short maps). Indeed, in this case, any group has BS.
+A slightly less trivial examples consists at looking at $\mathbf{Born}$ itself.
+Indeed, using the finite-subsets bornology it is easy to prove that a group $G$ is finite if and only if any action of $G$ on a bornological space has bounded orbits.
+
+While we will be able to obtain some results for a general $\mathbf{SBorn}$, we will sometimes need to restrict ourself to $\mathbf{SBorn}$ satisfying additional conditions.
+%to structure with a suitable notion of cartesian product or with a suitable notion of uniform boundedness.
+%
+%
+\begin{defn}
+A bornological space $(X,\B)$ is \emph{uniform} if for any bounded $A$, any $x$ in $A$ and any collection of bounded maps $\setst{f_i\colon X\to X}{i\in I}$, the set $\bigcup_{i\in I}f_i(A)$ is bounded if $\setst{f_i(x)}{i\in I}$ is bounded.
+\end{defn}
+%
+%
+The category $\mathbf{Born}_U$ of uniform bornological spaces, together with bounded maps, is a (full) subcategory of $\mathbf{Born}$, and hence also a concrete category over $\mathbf{Born}$ (for the identity functor).
+%
+%
+\begin{defn}
+A concrete category $(\mathbf{SBorn},F_S)$ over $\mathbf{Born}$ is \emph{uniform} if $F_S$ has values in $\mathbf{Born}_U$.
+\end{defn}
+%
+%
+All the bornological spaces of Example~\ref{Ex:Bornological} are uniform.
+For the first two examples, this is simply a question of cardinality.
+On the other hand, if $(X,d)$ is a quasipseudo-metric space, then $\diam(\bigcup_{i\in I}f_i(A))$ is bounded above by $2\diam(A)+\diam(\setst{f_i(x)}{i\in I})$. 
+Since the finite-subsets bornology is uniform, we obtain
+%
+%
+\begin{lem}
+A group $G$ is finite if and only if every $G$ action on a uniform bornological space has bounded orbits.
+\end{lem}
+%
+%
+On the other hand, there exists a non-uniform bornology on $\R^2$.
+Indeed, let $\B$ be the weakest bornology on $\R^2$ containing all the finite subsets as well as the line $\setst{(x,0)}{x\in \R}$ and all the lines $\setst{(r,y)}{y\in R}$ for $r\in \R$.
+Then the line $A=\setst{(0,y)}{y\in \R}$ is bounded, the translations $f_r\colon(x,y)\mapsto(x+r,y)$ are isomophisms and $\R^2=\bigcup_{r\in \R}f_r(A)$ is unbounded while $\setst{f_r(0,0)}{r\in \R}=\setst{(x,0)}{x\in \R}$ is bounded.
+
+We now turn our attention on cartesian powers.
+If $(X_1,\B_1)$ and $(X_2,\B_2)$ are two bornological spaces, then their \emph{cartesian product} is the set $X_1\times X_2$ together with the strongest bornology $\B$ making the canonical projections $\pi_i\colon X_1\times X_2\to X_i$ bounded.
+This is the categorial product in $\mathbf{Born}$.
+%
+%
+\begin{defn}\label{Def:Cartesian}
+A concrete category $(\mathbf{SBorn},F_S)$ over $\mathbf{Born}$ has \emph{cartesian powers} (compatible with the bornology) if for any S-space $X$ and any integer $n$, there exists a S-object called the \emph{$n$\textsuperscript{th} cartesian power of $X$} and written $X^n$ such that:
+\begin{enumerate}
+%\item
+%$F_S(X^n)$ is compatible with the cartesian product of sets. That is $F\circ F_S(X^n)$ is the set cartesian power. %and there exists S-morphisms $\pi_i\colon X^n\to X$ such that $F\circ F_S(\pi_i)$ are the usual set projections.
+%\item\label{Condidef:1}
+%$X^n$ is compatible with the topology. That is, the underlying topology of  $X^n$ is the product topology on $F\circ F_S(X^n)$.
+\item\label{Condidef:2}
+$X^n$ is compatible with the bornology. That is, $F_S(X^n)\cong (F_S(X))^n$.\footnote{In practice, we will only need that if $E\subset X$ is unbounded, then the diagonal $\diag(E)\subset X^n$ is unbounded.}\todo{Remove the footnote?}
+%\item\label{Condidef:3}
+%For any S-automorphisms $\varphi\in\Aut_{\mathbf{SMet}}(X)$ the bijective map $\varphi\times\id\times\dots\times\id\colon X^n\to X^n$ is an S-automorphism,
+%\item\label{Condidef:4}
+%The action by permutation of $\Sym(n)$ on $X^n$ is by S-automorphisms.$
+\item\label{Item:Product}
+$\Aut_{\mathbf{SBorn}}(X)^n\rtimes \Sym(n)$ is a subgroup of $\Aut_{\mathbf{SBorn}}(X^n)$.
+%Formally, we have a natural injection $F\circ F_S\bigl(\Aut_{\mathbf{SMet}}(X)\bigr)^n\rtimes \Sym(n)\hookrightarrow\Aut_{\mathbf{Set}}(F\circ F_S(X^n))$ has values in $F\bigl(\Aut_{\mathbf{SMet}}(X^n)\bigr)$.
+\end{enumerate}
+%%A structure S on metric spaces is \emph{compatible with products} if for any S-spaces $(X,d_X)$ and $(Y,d_Y)$ there exists a distance $d$ on $X\times Y$ such that $(X\times Y,d)$ is a S-space and such that for any $G$ action on $X$ and any $H$ action on $Y$, the canonical action of $G\times H$ on $X\times Y$ preserves $d$ and the S-space structure.
+%A structure S on metric spaces is \emph{compatible with products} if there exists a choice of a product metric $d$ such that for any S-spaces $(X,d_X)$ and $(Y,d_Y)$, the cartesian product $(X\times Y,d)$ is a S-space such that for any $G$ action on $X$ and any $H$ action on $Y$, the canonical action of $G\times H$ on $X\times Y$ preserves $d$ and the S-space structure.
+%
+%Such a structure \emph{preserves unboundedness} if for every S-space $(X,d_X)$, every integer $n$ there is a $d$ as above such that for every unbounded subset $\orbite$ of $X$, the subset $\diag(\orbite)$ of $(X^n,d)$ is unbounded.%\todo{C'est dépendant du choix de $d$. À voir si on peut l'exprimer plus joliment.}
+\end{defn}
+%\todo[inline]{La définition ci-dessus mériterait d'être réécrite. Surtout en lien avec le lemma suivant. Je vais m'y atteler}
+%\todo[inline]{J'essaie de réécrire cela en terme techniques. Pour le moment ce n'est pas correct, puisqu'il faut décider quelle métrique on mets sur $F(X)\times F(Y)$. À noter que la bonne notion est sans doute de regarder les espaces bornologiques métrisables, i.e. les espaces métriques à équivalence prêt où l'équivalence est d'avoir les mêmes parties bornées. En effet, toutes les distances $d_p=(d_1^p+d_2^p)^{\frac1p}$ sur le produits sont équivalentes.}
+%A category $\mathbf{PMet}$ is \emph{compatible with products} if it has products and they are obvious in the sens of $F(X\times Y)\cong F(X)\times F(Y)$, where $F\colon \mathbf{PMet}\to \mathbf{Met}$ is the faithful functor of Definition~\ref{Def:Categoric}. In this case, if we have a $G$-action $\alpha\colon G\to\Hom(X,X)$ and a $H$-action $\beta\colon H\to\Hom(Y,Y)$ we naturally have a $G$-action $\alpha\times\beta\colon G\times H\to \Hom(X\times Y,X\times Y)$, where $(\alpha\times\beta)_{(g,h)}=\alpha_g\times\beta_h$.}
+%
+%
+%That is, we want our cartesian power to be compatible with the S-structure, with the topology, with the bornology and with group actions.
+
+%A sufficient condition to have Condition~\ref{Condidef:2} in Definition~\ref{Def:Cartesian} is that the induced metric on $X^n$ generates the bornology product on $X^n$. Observe that Condition~\ref{Condidef:1} does not imply Condition~\ref{Condidef:2}, as if $d$ is a metric on $X^n$, the metric $d'(x,y)=\min\{d(x,y),1\}$ generates the same topology but is bounded.
+Uniform bornological spaces have cartesian powers as shown by the following
+%
+%
+\begin{lem}
+If $(X_1,\B_1)$ and $(X_2,\B_2)$ are uniform bornological spaces, then their cartesian product is uniform.
+\end{lem}
+\todo[inline]{Add a proof}
+%
+%
+For (ultra)metric spaces, the categorical product (corresponding to the metric $d_\infty=\max\{d_X,d_Y\}$) works fine, but any product metric of the form $d_p=(d_X^p+d_Y^p)^{\frac1p}$ for $p\in[1,\infty]$ works as well.
+For Hilbert spaces, we take the usual cartesian product (which is also the categorial product), which corresponds to the metric $d_2=\sqrt{d_X^2+d_Y^2}$.
+For connected median graphs, the usual cartesian product (which is not the categorical product!\footnote{The categorial product in $\mathbf{Graph}$ is the strong product.}) with $d_1=d_X+d_Y$ works well.
+On the other hand, trees do not have compatible cartesian powers.
+\todo[inline]{On peut ajouter quelque part que comme $\mathbf{Born}_U$ est uniforme et a des puissances cartésienne, le Théorème \ref{Thm:Technic} nous donne une preuve très compliquée que $G\wr_XH$ est fini ssi $G$, $H$ et $X$ sont tous les trois finis !}
+
+%Examples of structures that have compatible cartesian powers (and even cartesian products) include: ultrametric spaces (with $d_\infty=\max\{d_X,d_Y\}$), connected median graphs (with $d_1=d_X+d_Y$), real Hilbert spaces (with $d_2=\sqrt{d_X^2+d_Y^2}$) and metric spaces (with $d_p=(d_X^p+d_Y^p)^{\frac1p}$ for any $p\in[1,\infty]$).
+%On the other hand, trees do not have compatible cartesian powers.
+
+
+We conclude this section by a remark on a variation of Definition~\ref{Def:FHFA}.
+One might wonder what happens if in Definition~\ref{Def:FHFA} we replace the requirement of having bounded orbits by having uniformly bounded orbits.
+It turns out that this is rather uninteresting as a group $G$ is trivial if and only if any $G$-action on a metric space (respectively on an Hilbert space, on a connected median graph, on a tree or on an ultrametric space) has uniformly bounded orbits.
+Indeed, if $G$ is non-trivial, then for the action of $G$ on the Hilbert space $\ell^2(G)$ the orbit of $n\cdot \delta_g$ has diameter $n\sqrt2$.
+For a tree (and hence also for a connetected median graph), one may look at the tree $T$ obtained by taking a root $r$ on which we glue an infinite ray for each elements of $G$. Then $G$ naturally acts on $T$ by permuting the rays. The orbits for this action are the $\mathcal L_n=\setst{v}{d(v,r)=n}$ which have diameter $2n$.
+Finally, it is possible to put an ultradistance on the vertices of $T$ by  $d_\infty(x,y)\coloneqq\max\{d(x,r),d(y,r)\}$ if $x\neq y$. Then the orbits are still the~$\mathcal L_n$, but this time with diameter $n$.
+
+
+\todo[inline]{Je mets ci-dessous la version remaniée du lemme 3.2}
+We also have the following lemma on semi-direct products.
+Remind that metric spaces (and structure on them) are uniform.
+%
+%
+\begin{lem}
+Suppose that $S$ is uniform.
+Let $G$ be a group and let $H$ and $K$ be two subgroups of $G$ such that $G=HK$.
+If both $H$ and $K$ have property BS, so does $G$.
+\end{lem}
+\begin{proof}
+Let $x$ be any element of $X$.
+Then $G.x=HK.x=\bigcup_{h\in H}h.Kx$.
+The set $Kx$ is bounded, for every $h\in H$ the map $h\colon x\mapsto h.x$ is bounded and $\setst{h.x}{h\in H}=H.x$ is bounded. Since S is uniform, we conclude that $G.x$ is bounded.
+\end{proof}
+%
+%
+\todo[inline]{On peut peut-être trafiquer ce qui est écrit dessus pour gérer les extensions, mais là je vais me coucher.}
+%
+%
+\begin{cor}
+Let $N\rtimes H$ be a semidirect product. Then
+\begin{enumerate}
+\item
+If $N\rtimes H$ has property BS, then so does $H$.
+\item
+Suppose that $S$ is uniform.
+If both $N$ and $H$ have property BS, then $N\rtimes H$ also has property BS.
+\end{enumerate}
+\end{cor}
+\todo[inline]{Il faut rajouter l'hypothèse ``S uniform'' au théorème \ref{Thm:Technic}.}
+\end{document}
