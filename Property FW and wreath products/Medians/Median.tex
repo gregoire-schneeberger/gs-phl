@@ -108,8 +108,9 @@
 %
 %
 \begin{abstract}
-If S is a structure over metric spaces, we say that a group G has property BS if any action on a S-space has bounded orbits. Examples of such structures include metric spaces, Hilbert spaces, CAT(0) cube complexes\mycomment[GS]{Ajout CCC car intêret des gens pour ça}, connected median graphs, trees or ultra-metric spaces.
-They correspond respectively to Bergman's property, property FH (which, for countable groups, is equivalent to the celebrated Kazdhan's property (T)), property FW (both for CAT(0) cube complexes and for connected median graphs), property FA and cof~$\neq\omega$.
+If S is a structure over metric spaces, we say that a group G has property BS if any action on a S-space has bounded orbits. Examples of such structures include metric spaces, Hilbert spaces, CAT(0) cube complexes, %\mycomment[GS]{Ajout CCC car intêret des gens pour ça}
+ connected median graphs, trees or ultra-metric spaces.
+They correspond respectively to Bergman's property, property FH (which, for countable groups, is equivalent to the celebrated Kazdhan's property (T)), property FW (both for CAT(0) cube complexes and for connected median graphs)\PH{rajouté la précision, car il n'y a pas une correspondance 1-1 sinon}, property FA and cof~$\neq\omega$.
 
 Our main result is that for a large class of structures S, the wreath product $G\wr_XH$ has property BS if and only if both $G$ and $H$ have property BS and $X$ is finite. On one hand, this encompasses in a general setting previously known results for properties FH and FW. On the other hand, this also apply to the Bergman property.
 Finally, we also obtain that $G\wr_XH$ has cof~$\neq\omega$ if and only if both $G$ and $H$ have cof~$\neq\omega$ and $H$ acts on $X$ with finitely many orbits.
@@ -704,7 +705,7 @@ Let $\mathbf 1\coloneqq\bigcup_{x\in X} 1_{G}$ be the subset of $\powerset{\bigs
 Since every element of $\bigoplus_XG$ has only a finite number of non-trivial coordinates, the action of $G\wr_XH$ preserves the connected components of $\mathbf 1$ (and in fact every connected component of $\powerset{\bigsqcup_XG}$).
 
 Let $I=\{i_1,i_2,\dots\}$ be a countable subset of $X$ and for every $i\in I$, choose a non-trivial $g_i\in G_{i}$.
-Then the orbit of the vertex $\mathbf 1$ contains the point $\{g_{i_1},\dots, g_{i_n}\}\cup\bigl(\bigcup_{j>n} 1_{G_{i_j}}\bigr)\cup\bigl(\bigcup_{x\notin I} 1_{G_{x}}\bigr)$ which is at distance \mycomment[GS]{Pourquoi pas distance $n$ ?}$2n$ of~$\mathbf 1$.
+Then the orbit of the vertex $\mathbf 1$ contains the point $\{g_{i_1},\dots, g_{i_n}\}\cup\bigl(\bigcup_{j>n} 1_{G_{i_j}}\bigr)\cup\bigl(\bigcup_{x\notin I} 1_{G_{x}}\bigr)$ which is at distance $2n$ of~$\mathbf 1$.
 Therefore the action of $G\wr_XH$ on the connected component of~$\mathbf 1$ has an unbounded orbit and then $G\wr_XH$ does not have property FW.
 \end{proof}
 %
@@ -783,7 +784,7 @@ Since $\diag(\orbite)$ is unbounded, $G$ does not have property BS.
 For readers that are not familiar with representations of finite groups, here is the above argument in more details.
 Let $(f_i)_{i=1}^n$ be a transversal for $G/H$.
 The natural action of $G$ on $G/H$ gives rise to an action of $G$ on $\{1,\dots,n\}$.
-Hence, for any $g$ in $G$ and $i$ in $\{1,\dots,n\}$ there exists a unique $h_{g,i}$ in $H$ such that $gf_i=f_{g.i}h_{g,i}$. That is, $h_{g,i}=f_{g.i}^{-1}gf_i$. \mycomment[GS]{Ok $h_{g,i}=f_{g.i}^{-1}gf_i$ plutôt ?}
+Hence, for any $g$ in $G$ and $i$ in $\{1,\dots,n\}$ there exists a unique $h_{g,i}$ in $H$ such that $gf_i=f_{g.i}h_{g,i}$. That is, $h_{g,i}=f_{g.i}^{-1}gf_i$.\mycomment[GS]{Ok $h_{g,i}=f_{g.i}^{-1}gf_i$ plutôt ?}\PH{Oui}
 We then define $g.(x_1,\dots,x_n)\coloneqq(h_{g,g^{-1}.1}.x_{g^{-1}.1},\dots,h_{g,g^{-1}.n}.x_{g^{-1}.n})$. This is indeed an action by S-automorphisms on $X^{G/H}$ by Condition~\ref{Item:Product} of Definition~\ref{Def:Cartesian}.
 Moreover, every element $h\in H$ acts diagonally by $h.(x_1,\dots,x_n)=(h.x_1,\dots,h.x_n)$.
 In particular, this $G$ action has an unbounded orbit.
@@ -1228,16 +1229,42 @@ If $(X_1,\B_1)$ and $(X_2,\B_2)$ are uniform bornological spaces, then their car
 \end{lem}
 %
 \begin{proof}
-We will denote by $\B$ the product bornology on $X_1 \times X_2$. We denote by $\pi_j$ the projections on $X_j$. 
+%We will denote by $\B$ the product bornology on $X_1 \times X_2$.
+We denote by $\pi_j$ the projections on $X_j$, $j=1,2$. 
 
-Let $A$ be an element of $\B$, $x$ an element of $A$ and $\setst{\varphi_i : X_1 \times X_2 \rightarrow X_1 \times X_2}{i \in I}$ a collection of bounded maps indexed by a set $I$. As the $X_j$ are uniform, we have 
+Let $A$ be a bounded subset of $X_1\times X_2$, $(x_1,x_2)$ an element of $A$ and $\setst{\varphi_i : X_1 \times X_2 \rightarrow X_1 \times X_2}{i \in I}$ a collection of bounded maps indexed by a set $I$.
+Define
 \begin{align*}
-\setst{\varphi_i(x)}{i \in I} \in \B &\Rightarrow \pi_j\left(\setst{\varphi_i(x)}{i \in I}\right) \in \B_j  \\
-& \Rightarrow \bigcup_{i \in I} \pi_j(\varphi_i(A)) \in \B_j \\
-&\Rightarrow \bigcup_{i \in I} \phi_i(A) \in \B 
+\psi_{1,i}\colon X_1&\to X_1&\psi_{2,i}\colon X_2&\to X_2\\
+x&\mapsto\pi_1(\varphi_i(x,x_2))&x&\mapsto\pi_2(\varphi_i(x_1,x)).
 \end{align*}
+We claim that the maps $\psi_{1,i}$ and $\psi_{2,i}$ are bounded.
+Indeed, let $C$ be a bounded subset of $X_1$. Then $C\times\{x_2\}$ is bounded, which implies that $\varphi_i(C\times\{x_2\})$ is bounded and finally that $\psi_{1,i}(C)=\pi_1(\varphi_i(C\times\{x_2\}))$ is bounded.
+
+Suppose now that for every $x\in A$ the subsets $\setst{\varphi_i(x)}{i \in I}$ of $X_1\times X_2$ is bounded.
+Then for $j=1,2$ their projections are bounded. In particular for every $y\in\pi_1(A)$ and $z\in\pi_2(A)$, the set
+\[\setst{\psi_{1,i}(y)}{i\in I}=\pi_1(\setst{\varphi_i(y,x_2)}{i \in I})\]
+is bounded.
+As $X_1$ is uniform, we have that
+\begin{align*}
+\bigcup_{i\in I}\psi_{1,i}(\pi_1(A))&=\bigcup_{i\in I}\pi_{1}\circ\varphi_i(\pi_1(A)\times\{x_2\})\\
+&=\pi_1\Bigl(\bigcup_{i\in I}\varphi_i(\pi_1(A)\times\{x_2\})\Bigr).
+\end{align*}
+We have just proved that the set $\bigcup_{i\in I}\varphi_i(\pi_1(A)\times\{x_2\})$ is bounded.
+Similarly, the set $\bigcup_{i\in I}\varphi_i(\{x_1\}\times \pi_2(A))$ is bounded.
+\todo[inline]{Je n'arrive pas à finir la preuve. En effet, on est obligé de passer par les $\psi_{1,i}$ ou un artifice du genre pour avoir des applications bornées de $X_1$ dans $X_1$. Par contre en faisant cela on n'arrive uniquement à conclure le truc ci-dessus qui n'est largement pas suffisant.}
+%\[
+%\pi_j\Bigl(\bigcup_{i \in I}\varphi_i(A)\Bigr)=\bigcup_{i \in I} \pi_j(\varphi_i(A)) \in \B_j,
+%\]
+%which imply that $\bigcup_{i \in I}\varphi_i(A)$ is in $\B$.
+%\begin{align*}
+%\setst{\varphi_i(x)}{i \in I} \in \B &\Rightarrow \pi_j\left(\setst{\varphi_i(x)}{i \in I}\right) \in \B_j  \\
+%& \Rightarrow \bigcup_{i \in I} \pi_j(\varphi_i(A)) \in \B_j \\
+%&\Rightarrow \bigcup_{i \in I} \phi_i(A) \in \B 
+%\end{align*}
 \end{proof}
-\GS{Une preuve ? il y a sûrement plus simple car je suis assez mauvais avec ce genre de trucs....}
+\GS{Une preuve ?}
+\PH{J'avais la même chose en tête. Problème : $\pi_j\circ\varphi_i$ ne sont pas des applications bornées de $X_j$, du coup cela ne marche pas...}
 %
 %
 For (ultra)metric spaces, the categorical product (corresponding to the metric $d_\infty=\max\{d_X,d_Y\}$) works fine, but any product metric of the form $d_p=(d_X^p+d_Y^p)^{\frac1p}$ for $p\in[1,\infty]$ works as well.
