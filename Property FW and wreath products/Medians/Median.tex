@@ -18,6 +18,7 @@
 \newcounter{mycomment}
 \newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33},size=\small]{\textbf{Commentaire [\uppercase{#1}\themycomment]:}~#2}}}
 \newcommand{\PH}[1]{\todo[color={blue!33},size=small]{#1}}
+\newcommand{\GS}[1]{\mycomment[GS]{#1}}
 
 %\usepackage[disable]{todonotes}%cache les commentaires
 \usepackage{datetime} %ajoute la date et l'heure
@@ -69,6 +70,7 @@
 \DeclarePairedDelimiter\gen{\langle}{\rangle}
 
 \newcommand*{\B}{\mathcal B}
+\renewcommand*{\O}{\mathcal O}
 \newcommand*{\orbite}{\mathcal O}
 \newcommand*{\field}[1]{\mathbf{#1}}
 \newcommand*{\Z}{\field{Z}}
@@ -381,10 +383,10 @@ Finally, the implication $\textnormal{FH}\implies \textnormal{FW}$ follows from 
 On the other hand, here are some examples for the strictness of the implications of \eqref{EQ:Implications}.
 An infinite finitely generated group with property (T), e.g. $\SL_3(\Z)$, has property FH, but it does not have property SB since its action on its Cayley graph is transitive and hence has an unbounded orbit.
 The group $\SL_2(\Z[\sqrt{2}])$ has property FW but not FH, see \cite{MR3299841}.
-If $G$ is a non-trivial finite group and $H$ is an infinite group with property FA, then $G\wr_HH$ has property FA by Theorem~\ref{Thm:FAFiniteOrbits}, but does not have property FW by Theorem~\ref{Thm:Main}.\PH{J'ai simplifié l'exemple.}
+If $G$ is a non-trivial finite group and $H$ is an infinite group with property FA, then $G\wr_HH$ has property FA by Theorem~\ref{Thm:FAFiniteOrbits}, but does not have property FW by Theorem~\ref{Thm:Main}.
 % infinite finitely generated group with property FW, then every finite index subgroup of $H$ has property FW, Lemma~\ref{Lemma:Subgroup}, \mycomment[GS]{Pourquoi a-t-on besoin des sous-groupes d'indices finis ?}and hence FA, which implies that $G\wr_HH$ has property FA by \cite{Cornulier2011}, but does not have property FW by Theorem~\ref{Thm:Main}.
 %The group $G = \gen{a,b,c  | a^2=b^2=c^2=(ab)^2=(ac)^2=(bc)^2=1}$ has property FA but not property FW see \cite[Example 5.B.8]{Cornulier2013};
-Finally, $\Z$ has cof~$\neq\omega$,\PH{J'ai enlevé le blabla sur les groupes de type fini et l'ai mis plus loin.} %as any finitely generated group,\mycomment[GS]{Evident que t.f -> cof~$\neq\omega$  ?}\PH{Avec la def en terme d'union, oui (une union croissante contiendra tous les générateurs à partit d'un certain rang fini). }
+Finally, $\Z$ has cof~$\neq\omega$, %as any finitely generated group,\mycomment[GS]{Evident que t.f -> cof~$\neq\omega$  ?}\PH{Avec la def en terme d'union, oui (une union croissante contiendra tous les générateurs à partit d'un certain rang fini). }
  while it acts by translations and with unbounded orbits on the infinite $2$-regular tree.
 \paragraph{More on median graphs}
 %We now come back to median graphs.
@@ -414,7 +416,7 @@ For example, both $\powersetf{X}$ and $\powersetcof{X}$ are always preserved by 
 
 \paragraph{Groups with cof~$\neq\omega$}
 The following characterization of groups which have not cof~$\neq\omega$ is well-known and we include a proof only for the sake of complexity.
-It implies in particular that a countable group has cof~$\neq\omega$ if and only if it is finitely generated.\PH{J'ai ajouté cette phrase.}
+It implies in particular that a countable group has cof~$\neq\omega$ if and only if it is finitely generated.%\PH{J'ai ajouté cette phrase.}
 %
 %
 \begin{lem}\label{Lemma:CofSub}
@@ -660,7 +662,7 @@ Suppose that BS implies cof~$\neq\omega$. Then
 \begin{proof}
 By Corollary~\ref{Cor:Prod}, it is enough to prove the first assertion for countable direct sums of groups. Indeed, if $X$ is infinite, there exists a countable subset $Y \subset X$. Let $Z \coloneqq X\setminus Y$, thus we have $X = Y \sqcup Z$. We can decompose the direct sum as $\bigoplus_XG = (\bigoplus_YG) \times (\bigoplus_ZG)$
 %$\bigoplus_XG = \left(\bigoplus_{y \in Y}G_y\right) \times \left(\bigoplus_{z \in Z}G_z\right)$
-and then, by Corollary~\ref{Cor:Prod}, if $\bigoplus_YG$ does not have cof~$\neq\omega$, then neither does $\bigoplus_XG$.\PH{Remplacé $\bigoplus_YG_y$ par $\bigoplus_YG$ pour être cohérent dans les notations, mais ok sinon.} %\todo{Ajout de l'explication de pourquoi on peut se restreindre au cas dénombrable}
+and then, by Corollary~\ref{Cor:Prod}, if $\bigoplus_YG$ does not have cof~$\neq\omega$, then neither does $\bigoplus_XG$.%\PH{Remplacé $\bigoplus_YG_y$ par $\bigoplus_YG$ pour être cohérent dans les notations, mais ok sinon.} %\todo{Ajout de l'explication de pourquoi on peut se restreindre au cas dénombrable}
 So let $G\coloneqq \bigoplus_{i\geq 1}G_i$ and for each $i$, choose $g_i\neq 1$ in $G_i$.
 Let $d_\infty(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$ be the $G$-invariant ultrametric of Example~\ref{Exmpl:Ultra}.
 Then for every integer $n$, the orbit $G.1_G$ contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $1_G$ for $d_\infty$ if the $g_i$ are not equal to $1$.
@@ -1084,6 +1086,7 @@ It follows from the definition that for any bornological space $(X,\B)$, all fin
 \item A \emph{quasipseudometric space} is a set $X$ endowed with a map $d\colon X\times X\to\R_{\geq 0}$ such that $d(x,x)=0$ for all $x$ and $d(x,z)\leq d(x,y)+d(y,z)$. That is, $d$ is a metric except that it is not necessarily symmetric and that two distinct points may have $0$ distance.
 %It is then possible to define the diameter of a subset $Y$ of $X$ as $\diam(Y)\coloneqq\sup\setst{d(x,y)}{x,y\in Y}$.
 The collection of all subsets of $X$ of finite diameter is a bornology on $X$. We say that this bornology is induced by $d$.\PH{Ajouter (?!) un truc sur les espaces topologiques vectoriels.}
+\item If $X$ is a topological vector space on an uncuntable valued field, the set of $B \subset X$ such that for every open subset $\O \subset X$ there exist $r>0$ such that $B \subset r \O$ forms a bornology on $X$. \GS{Ajout exemple top vect space}
 \end{enumerate}
 \end{exmp}
 %
@@ -1155,7 +1158,7 @@ While we will be able to obtain some results for a general $\mathbf{SBorn}$, we 
 %
 %
 \begin{defn}
-A bornological space $(X,\B)$ is \emph{uniform} if for any bounded $A$, any $x$ in $A$ and any collection of bounded maps $\setst{f_i\colon X\to X}{i\in I}$, the set $\bigcup_{i\in I}f_i(A)$ is bounded if $\setst{f_i(x)}{i\in I}$ is bounded.
+A bornological space $(X,\B)$ is \emph{uniform} if for any bounded set $A$ in $\B$, any $x$ in $A$ and any collection of bounded maps $\setst{f_i\colon X\to X}{i\in I}$, the set $\bigcup_{i\in I}f_i(A)$ is bounded if the set $\setst{f_i(x)}{i\in I}$ is bounded.
 \end{defn}
 %
 %
@@ -1168,7 +1171,7 @@ A concrete category $(\mathbf{SBorn},F_S)$ over $\mathbf{Born}$ is \emph{uniform
 %
 %
 All the bornological spaces of Example~\ref{Ex:Bornological} are uniform.
-For the first two examples, this is simply a question of cardinality.
+For the first two examples, this is simply a question of cardinality. \GS{Checker pour esp vect topo et peut être en parler aussi ici}
 On the other hand, if $(X,d)$ is a quasipseudo-metric space, then $\diam(\bigcup_{i\in I}f_i(A))$ is bounded above by $2\diam(A)+\diam(\setst{f_i(x)}{i\in I})$.
 Since the finite-subsets bornology is uniform, we obtain
 %
@@ -1223,7 +1226,18 @@ Uniform bornological spaces have cartesian powers as shown by the following
 \begin{lem}
 If $(X_1,\B_1)$ and $(X_2,\B_2)$ are uniform bornological spaces, then their cartesian product is uniform.
 \end{lem}
-\todo[inline]{Add a proof}
+%
+\begin{proof}
+We will denote by $\B$ the product bornology on $X_1 \times X_2$. We denote by $\pi_j$ the projections on $X_j$. 
+
+Let $A$ be an element of $\B$, $x$ an element of $A$ and $\setst{\varphi_i : X_1 \times X_2 \rightarrow X_1 \times X_2}{i \in I}$ a collection of bounded maps indexed by a set $I$. As the $X_j$ are uniform, we have 
+\begin{align*}
+\setst{\varphi_i(x)}{i \in I} \in \B &\Rightarrow \pi_j\left(\setst{\varphi_i(x)}{i \in I}\right) \in \B_j  \\
+& \Rightarrow \bigcup_{i \in I} \pi_j(\varphi_i(A)) \in \B_j \\
+&\Rightarrow \bigcup_{i \in I} \phi_i(A) \in \B 
+\end{align*}
+\end{proof}
+\GS{Une preuve ? il y a sûrement plus simple car je suis assez mauvais avec ce genre de trucs....}
 %
 %
 For (ultra)metric spaces, the categorical product (corresponding to the metric $d_\infty=\max\{d_X,d_Y\}$) works fine, but any product metric of the form $d_p=(d_X^p+d_Y^p)^{\frac1p}$ for $p\in[1,\infty]$ works as well.
