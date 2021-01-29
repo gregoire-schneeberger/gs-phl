@@ -502,7 +502,7 @@ On the other hand, trees do not have cartesian powers.
 %
 \begin{rem}
 In view of Definition~\ref{Def:PropBS} and \ref{Def:Cartesian}, the reader might ask why we are working in $\mathbf{QPMet}$ instead of $\mathbf{Born}$ the category of bornological spaces together with bounded maps.
-The reason behind this is the forthcoming Lemma~\ref{Lemma:Semidirect}, which fails for general bornological spaces.\PH{Je pense qu'on peut en rester là et ne pas parler de l'exemple $\{$bornés$\}=\{$finis$\}$.}
+The reason behind this is the forthcoming Lemma~\ref{Lemma:InterProd} and its corollaries, which fail for general bornological spaces.\PH{Je pense qu'on peut en rester là et ne pas parler de l'exemple $\{$bornés$\}=\{$finis$\}$.}
 \end{rem}
 %
 %
@@ -559,7 +559,7 @@ Let $y$ be an element of $G.x$. There exists $a\in A$ such that $y$ belongs to $
 \end{proof}
 %
 %
-By combining Lemmas~\ref{Lemma:Quotient} and~\ref{Lemma:InterProd}, we obtain the following three corollaries on direct, semi-direct and wreath products.
+By combining Lemmas~\ref{Lemma:Quotient} and~\ref{Lemma:InterProd}, we obtain the following three corollaries on direct, semi-direct and wreath products.\PH{J'ai mis trois corollaires disctinct car cela me semblait moins indigeste. Tu trouveras dans le fichier TeX la version avec un seul gros corollaire.}
 %\PH{J'ai tout mis en un corollaire, mais on peut choisir de séparer, ou de ne pas tout dire comme certains points sont redondants. Les ``anciens résultats sont dans le fichier TeX''}
 %
 %
@@ -588,7 +588,7 @@ Let $G$ and $H$ be two groups. Then $G\times H$ has property \BS{} if and only i
 \end{cor}
 %
 %
-\begin{lem}\label{Lemma:Semidirect}
+\begin{cor}\label{Cor:Semidirect}
 Let $N\rtimes H$ be a semidirect product. Then
 \begin{enumerate}
 \item
@@ -596,7 +596,7 @@ If $N\rtimes H$ has property \BS, then so has $H$.
 \item
 If both $N$ and $H$ have property \BS, then $N\rtimes H$ also has property \BS.
 \end{enumerate}
-\end{lem}
+\end{cor}
 %\begin{proof}
 %The first part is Lemma~\ref{Lemma:Quotient}.
 %

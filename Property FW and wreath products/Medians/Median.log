@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  29 JAN 2021 21:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  29 JAN 2021 21:09
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -908,9 +908,9 @@ prod-uct (cor-re-spond-
  []
 
 [7]
-Overfull \hbox (5.34999pt too wide) in paragraph at lines 504--506
+Overfull \hbox (2.57224pt too wide) in paragraph at lines 504--506
 \T1/lmr/m/n/10 gether with bounded maps. The rea-son be-hind this is the forth-
-com-ing Lemma [][]3.4[][],
+com-ing Lemma [][]3.2[][]
  []
 
 
@@ -945,10 +945,10 @@ Package rerunfilecheck Info: File `Median.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 856.
  ) 
 Here is how much of TeX's memory you used:
- 23237 strings out of 480893
- 410808 string characters out of 5908067
- 676838 words of memory out of 5000000
- 38274 multiletter control sequences out of 15000+600000
+ 23246 strings out of 480893
+ 411002 string characters out of 5908067
+ 679985 words of memory out of 5000000
+ 38282 multiletter control sequences out of 15000+600000
  633326 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,12n,83p,1020b,1060s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -980,10 +980,10 @@ ic/lm/lmri7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy1
 /local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texl
 ive/2020/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2020/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Median.pdf (14 pages, 478678 bytes).
+Output written on Median.pdf (14 pages, 479243 bytes).
 PDF statistics:
- 429 PDF objects out of 1000 (max. 8388607)
- 367 compressed objects within 4 object streams
- 98 named destinations out of 1000 (max. 500000)
+ 430 PDF objects out of 1000 (max. 8388607)
+ 368 compressed objects within 4 object streams
+ 99 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
