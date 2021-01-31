@@ -343,6 +343,10 @@ An infinite finitely generated group with property (T), e.g. $\SL_3(\Z)$, has pr
 The group $\SL_2(\Z[\sqrt{2}])$ has property FW but not FH, see \cite{MR3299841}.
 If $G$ is a non-trivial finite group and $H$ is an infinite group with property FA, then $G\wr_HH$ has property FA by Theorem~\ref{Thm:FAFiniteOrbits}, but does not have property FW by Theorem~\ref{Thm:Main}.
 Finally, $\Z$ has cof~$\neq\omega$, while it acts by translations and with unbounded orbits on the infinite $2$-regular tree.
+
+It is possible to consider relative version of the properties appearing in Definition~\ref{Def:FHFA}.\PH{J'ai mis cela ici, mais on peut y bouger dans la prochaine sous-section.}
+If $G$ is a group, $H$ a subgroup of $G$ and BS the property of Definition~\ref{Def:FHFA} defined by ``every action on S-spaces is bounded'', we say that the pair $(G,H)$ has \emph{relative property BS} if for every $G$ action on a S-space, the $H$ orbits are bounded.
+A group $G$ has property BS if and only if for every subgroup $H$ the pair $(G,H)$ has relative property BS, if and only if fo every overgroup $L$ the pair $(L,G)$ has relative property BS.
 %
 %
 %
@@ -463,11 +467,12 @@ Hilbert spaces, Banach spaces and more generally (semi-) normed spaces are also 
 For connected graphs (and hence for connected median graphs and for trees), one looks at the category $\mathbf{Graph}$ where objects are connected simple graphs $G=(V,E)$ and where a morphism $f\colon (V,E)\to(V',E')$ is a function between the vertex sets such that if $(x,y)$ is an edge then either $f(x)=f(y)$ or $(f(x),f(y))$ is an edge.
 The functor $F_{\mathbf S}\colon\mathbf{Graph}\to\mathbf{Met}$ sends a connected graph to its vertex set together with the graph distance: $d(x,y)$ is the minimum number of edges on a path between $x$ and $y$.
 
-We can now, formally define the groupe property \BS{} as:
+We can now, formally define the group property \BS{} as:
 %
 \begin{defn}\label{Def:PropBS}
 Let $(\mathbf S,F_{\mathbf S})$ be a qp-metric structure.
 A group $G$ has \emph{property \BS} if every $G$-action on a $\mathbf S$-space has bounded orbits.
+A pair $(G,H)$ of a group and a subgroup has \emph{relative property \BS} if for every $G$-action on a $\mathbf S$-space, the $H$ orbits are bounded.
 \end{defn}
 %
 %
@@ -478,11 +483,29 @@ On the other hand, the property of having bounded orbits for action on Banach sp
 
 An example of an uninteresting property \BS{} is given by taking $\mathbf{S}$ to be category of metric spaces of bounded diameter (together with short maps). Indeed, in this case, any group has \BS.
 
+The category $\mathbf{QPMet}$ has the advantage (over $\mathbf{Met}$) of behaving more nicely with respects to categorical constructions.
+However, we have\PH{Ajouté cette phrase, le lemme et la preuve. C'est utilisé implicitement dans la preuve de Prop~\ref{Prop:Extension}.}
+%
+%
+\begin{lem}
+A group $G$ has the Bergman's Property if and only if any $G$ action on a quasipseudo-metric space has bounded orbits.
+\end{lem}
+\begin{proof}
+One direction is trivial.
+
+For the other direction, let $(X,d)$ be a quasipseudo-metric space on which $G$ acts by isometries.
+Let $d'(x,y)\coloneqq\frac12(d(x,y)+s(y,x)$ be the symmetrization of $d$.
+Then the action of $G$ on $X$ is by $d'$-isometries and a subset $Y\subset X$ is bounded for $d$ if and only if it is bounded for $d'$.
+Finally, let $\tilde X\coloneqq X/\sim$ be the quotient of $X$ for the relation $x\sim y$ if $d'(x,y)=0$ and let $\tilde d$ be the quotient of $d'$.
+Then $(\tilde X,\tilde d)$ is a metric space, the action of $G$ passes to the quotient and $G.x$ is $d'$ bounded (hence $d$ bounded) if and only if $G.[x]$ is $\tilde d$ bounded.
+\end{proof}
+%
+%
 While we will be able to obtain some results for a general qp-metric structure~$\mathbf{S}$, we will sometimes need to restrict ourself to structure with a suitable notion of cartesian product.
 %
 %
 \begin{defn}\label{Def:Cartesian}
-A qp-metric structure $(\mathbf S,F_{\mathbf S})$ has \emph{cartesian powers} if for any $\mathbf S$-space $X$ and any integer $n$, there exists a $\mathbf S$-object, called the \emph{$n$\textsuperscript{th} cartesian power of $X$} and written $X^n$, such that:
+A qp-metric structure $(\mathbf S,F_{\mathbf S})$ has \emph{bounded cartesian powers} if for any $\mathbf S$-space $X$ and any integer $n$, there exists a $\mathbf S$-object, called the \emph{$n$\textsuperscript{th} cartesian power of $X$} and written $X^n$, such that:
 \begin{enumerate}
 \item
 $X^n$ is compatible with the cartesian product of sets. That is $F\circ F_{\mathbf S}(X^n)$ is the set cartesian power.
@@ -497,7 +520,7 @@ $\Aut_{\mathbf{S}}(X)^n\rtimes \Sym(n)$ is a subgroup of $\Aut_{\mathbf{S}}(X^n)
 For (quasipseudo-/ultra-) metric spaces, the categorical product (corresponding to the metric $d_\infty=\max\{d_X,d_Y\}$) works fine, but any product metric of the form $d_p=(d_X^p+d_Y^p)^{\frac1p}$ for $p\in[1,\infty]$ works as well.
 For Hilbert and Banach spaces, we take the usual cartesian product (which is also the categorial product), which corresponds to the metric $d_2=\sqrt{d_X^2+d_Y^2}$.
 For connected median graphs, the usual cartesian product (which is not the categorical product!\footnote{The categorial product in $\mathbf{Graph}$ is the strong product.}) with $d_1=d_X+d_Y$ works well.
-On the other hand, trees do not have cartesian powers.
+On the other hand, trees do not have bounded cartesian powers.
 %
 %
 \begin{rem}
@@ -549,13 +572,13 @@ We have $H\cong G/N$. If $H$ acts on some $\mathbf{S}$-space $X$ with an unbound
 %
 \begin{lem}\label{Lemma:InterProd}
 Let $G$ be a group and $A$ an $B$ be two subgroups such that $G=AB$.
-If both $A$ and $B$ have property \BS, so has $G$.
+If both $(G,A)$ and $(G,B)$ have relative property \BS, then $G$ has property \BS.
 \end{lem}
 \begin{proof}
 Let $X$ be a $\mathbf{S}$-space and $x$ be an element of $X$.
 Let $D_1$ be the diameter of $B.x$ and $D_2$ the diameter of $A.x$. By assumption, they both are finite.
-Moreover, since $A$ acts by isometries, all the $a.Bx$ have diameter $D_1$.
-Let $y$ be an element of $G.x$. There exists $a\in A$ such that $y$ belongs to $a.Bx$. Since $1$ belongs to $B$, $y$ is at distance at most $D_1$ of $a.x$ and hence at distance at most $D_1+D_2$ of~$x$.
+Since $A$ acts by isometries, all the $a.Bx$ have diameter $D_1$.
+Let $y$ be an element of $G.x$. There exists $a\in A$ such that $y$ belongs to $a.Bx$. Since $1$ belongs to $B$, $y$ is at distance at most $D_1$ of $a.x$. Altogether we have that the diameter of $G.x$ is bounded above by $2D_1+D_2$.
 \end{proof}
 %
 %
@@ -628,6 +651,28 @@ If both $G$ and $H$ have property \BS{} and $X$ is finite, then $G\wr_X H$ has p
 \end{cor}
 %
 %
+When $\mathbf{S}$ has a suitable notion of quotients (by a group of isometries), it is possible to obtain a strong version of Lemmas~\ref{Lemma:Quotient} and~\ref{Lemma:InterProd}.
+Here is the corresponding result for Bergman's property.\PH{Je n'ai pas mis l'énoncé général, car dans les classes d'espaces qui nous intéressent, seul $(\mathbf{QP})\mathbf{Met}$ est stable par quotient.}
+%
+%
+\begin{prop}\label{Prop:Extension}
+Let $1\to N\to G\to H\to 1$ be a group extension.
+Then $G$ has the Bergman's property if and only if $H$ has the Bergman's property and the pair $(G,N)$ has the relative Bergman's property.
+\end{prop}
+\begin{proof}
+One direction is simply Lemma~\ref{Lemma:Quotient} and the definition of relative Bergman's property.
+
+On the other hand, let $X$ be a quasipseudo-metric space on which $G$ acts by isometries and let $x$ be an element of $X$.
+Let $\setst{g_i}{i\in I}$ a transversal for $N$, that is $H\cong\{g_iN\}$.
+By assumption, $N.x$ is bounded of diameter $D_1$ and for any $i\in I$ the subset $g_iN.x$ of $X$ has also diameter $D_1$.
+Since $N$ is a subgroup of isometries of $X$, the map $d'\colon X/N\times X/N\to\R$ defined by $d'([x],[y])\coloneqq\inf\setst{d(x',y')}{x'\in N.x,y'\in N.y}$ is the quotient quasipseudo-distance\PH{En général, pour $X/\sim$, $d'$ ne satisfait pas l'inégalité triangulaire, mais c'est vrai pour $X/N$. Est-ce qu'il faut expliciter ?} on $X/N$.
+The quotient action of $H\cong G/N$ on $X/N$ is by isometries and the diameter of $H.xN$ is bounded, say by $D_2$.
+In particular, for any $i$ and $j$ in $I$, the distance between the subsets $g_iN.x$ and $g_jN.x$ of $X$ is bounded by $D_2$.
+Since this distance is an infimum, there exists actual elements of $g_iN.x$ and $g_jN.x$ at distance less than $D_2+1$.
+Altogether, we obtain that the diameter of $G.x$ is bounded by $2D_1+D_2+1$.
+\end{proof}
+%
+
 On the other hand, we have the following result on infinite direct sums.
 %
 %
@@ -719,7 +764,7 @@ Let $G$ be a group and let $H$ be a finite index subgroup.
 \item
 If $H$ has property \BS, then so has~$G$,
 \item
-If $\mathbf{S}$ has cartesian powers and $G$ has property \BS, then $H$ has property \BS.
+If $\mathbf{S}$ has bounded cartesian powers and $G$ has property \BS, then $H$ has property \BS.
 \end{enumerate}
 \end{lem}
 \begin{proof}
@@ -745,7 +790,7 @@ We now prove one last lemma that will be necessary fo the proof of Theorem~\ref{
 %
 %
 \begin{lem}\label{Lemma:Unboundedness}
-Suppose that $\mathbf{S}$ has cartesian powers. If $X$ is finite and $G\wr_XH$ has property \BS, then $G$ has property \BS.
+Suppose that $\mathbf{S}$ has bounded cartesian powers. If $X$ is finite and $G\wr_XH$ has property \BS, then $G$ has property \BS.
 \end{lem}
 \begin{proof}
 Suppose that $G$ does not have \BS{} and let $(Y,d_Y)$ be a $\mathbf S$-space on which $G$ acts with an unbounded orbit $G.y$.
@@ -762,7 +807,7 @@ By combining Corollary~\ref{Cor:Wreath} and Lemmas~\ref{Lemma:XFinite} and~\ref{
 %
 %
 \begin{thm}\label{Thm:Technic}
-Suppose that $\mathbf{S}$ has cartesian powers and is such that \BS{} implies FW.
+Suppose that $\mathbf{S}$ has bounded cartesian powers and is such that \BS{} implies FW.
 Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which $H$ acts. Then the wreath product $G \wr_X H$ has property \BS{} if and only if $G$ and $H$ have property \BS{} and $X$ is finite.
 \end{thm}
 %
