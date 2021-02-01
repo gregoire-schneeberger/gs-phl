@@ -294,7 +294,7 @@ Other (trivial) examples of wreath products are direct products $G\times H$ whic
 %
 %
 %
-Remind that a metric space $(X,d)$ is \emph{ultrametric} if and only if for any $x$, $y$ and $z$ in $X$ we have $d(x,y)\leq\max\{d(x,z),d(z,y)\}$. 
+Remind that a metric space $(X,d)$ is \emph{ultrametric} if $d$ satisfies the strong triangular inequality: $d(x,y)\leq\max\{d(x,z),d(z,y)\}$ for any $x$, $y$ and $z$ in $X$. 
 
 For $u$ and $v$ two vertices of a connected\footnote{We will always assume that our connected graphs are non-empty. This is coherent with the definition that a connected graph is a graph with exactly one connected component.} graph $\mathcal G$, we define the total interval $[u,v]$ as the set of vertices that lie on some shortest path between $u$ and $v$.
 A connected graph $\mathcal G$ is \emph{median} if for any three vertices $u$, $v$, $w$, the intersection $[u,v]\cap[v,w]\cap[u,w]$ consists of a unique vertex, denoted $m(u,v,w)$.
@@ -440,8 +440,9 @@ A \emph{quasipseudo-metric space} is a set $X$ with a map $d\colon X\times X\to 
 \end{defn}
 %
 %
-If moreover $d(x,y)=d(y,x)$ and $d(x,y)\neq 0$ for $x\neq y$, the map $d$ is a \emph{distance} and $(X,d)$) is a metric space.
-A \emph{morphism} (or \emph{short map}) between two quasipseudo-metric spaces $(X_1,d_1)$ and $(X_2,d_2)$ is a map $f\colon X_1\to X_2$ such that $d_2(f(x),f(y))\leq d_1(x,y)$.
+If moreover $d(x,y)=d(y,x)$ and $d(x,y)\neq 0$ for $x\neq y$, the map $d$ is a \emph{distance} and $(X,d)$ is a metric space.
+On the other hand, a \emph{ultra-quasipseudo-metric space} is a quasipseudo-metric space $(X,d)$ such that $d$ satisfies the strong triangular inequality.
+A \emph{morphism} (or \emph{short map}) between two quasipseudo-metric spaces $(X_1,d_1)$ and $(X_2,d_2)$ is a distance non-increasing map $f\colon X_1\to X_2$, that is $d_2(f(x),f(y))\leq d_1(x,y)$ for any $x$ and $y$ in $X_1$.
 If $f$ is bijective and distance preserving, then it is an \emph{isomorphism} (or \emph{isometry}).
 Quasipseudo-metric spaces with short maps form a category $\mathbf{QPMet}$ of which the category of metric spaces (with short maps) $\mathbf{Met}$ is a full subcategory.
 
@@ -488,7 +489,7 @@ However, we have\PH{Ajouté cette phrase, le lemme et la preuve. C'est utilisé 
 %
 %
 \begin{lem}
-A group $G$ has the Bergman's Property if and only if any $G$ action on a quasipseudo-metric space has bounded orbits.
+A group $G$ has the Bergman's Property (respectively cof~$\neq\omega$) if and only if any $G$ action on a quasipseudo-metric (respectively ultra-quasipseudo-metric) space has bounded orbits.
 \end{lem}
 \begin{proof}
 One direction is trivial.
@@ -498,6 +499,7 @@ Let $d'(x,y)\coloneqq\frac12(d(x,y)+s(y,x)$ be the symmetrization of $d$.
 Then the action of $G$ on $X$ is by $d'$-isometries and a subset $Y\subset X$ is bounded for $d$ if and only if it is bounded for $d'$.
 Finally, let $\tilde X\coloneqq X/\sim$ be the quotient of $X$ for the relation $x\sim y$ if $d'(x,y)=0$ and let $\tilde d$ be the quotient of $d'$.
 Then $(\tilde X,\tilde d)$ is a metric space, the action of $G$ passes to the quotient and $G.x$ is $d'$ bounded (hence $d$ bounded) if and only if $G.[x]$ is $\tilde d$ bounded.
+Finally, if $d$ satisfies the strong triangular inequality, then so does $d'$ and $\tilde d$.
 \end{proof}
 %
 %
@@ -505,7 +507,7 @@ While we will be able to obtain some results for a general qp-metric structure~$
 %
 %
 \begin{defn}\label{Def:Cartesian}
-A qp-metric structure $(\mathbf S,F_{\mathbf S})$ has \emph{bounded cartesian powers} if for any $\mathbf S$-space $X$ and any integer $n$, there exists a $\mathbf S$-object, called the \emph{$n$\textsuperscript{th} cartesian power of $X$} and written $X^n$, such that:
+A qp-metric structure $(\mathbf S,F_{\mathbf S})$ has \emph{cartesian powers} if for any $\mathbf S$-space $X$ and any integer $n$, there exists a $\mathbf S$-object, called the \emph{$n$\textsuperscript{th} cartesian power of $X$} and written $X^n$, such that:
 \begin{enumerate}
 \item
 $X^n$ is compatible with the cartesian product of sets. That is $F\circ F_{\mathbf S}(X^n)$ is the set cartesian power.
@@ -520,7 +522,7 @@ $\Aut_{\mathbf{S}}(X)^n\rtimes \Sym(n)$ is a subgroup of $\Aut_{\mathbf{S}}(X^n)
 For (quasipseudo-/ultra-) metric spaces, the categorical product (corresponding to the metric $d_\infty=\max\{d_X,d_Y\}$) works fine, but any product metric of the form $d_p=(d_X^p+d_Y^p)^{\frac1p}$ for $p\in[1,\infty]$ works as well.
 For Hilbert and Banach spaces, we take the usual cartesian product (which is also the categorial product), which corresponds to the metric $d_2=\sqrt{d_X^2+d_Y^2}$.
 For connected median graphs, the usual cartesian product (which is not the categorical product!\footnote{The categorial product in $\mathbf{Graph}$ is the strong product.}) with $d_1=d_X+d_Y$ works well.
-On the other hand, trees do not have bounded cartesian powers.
+On the other hand, trees do not have cartesian powers.
 %
 %
 \begin{rem}
@@ -652,28 +654,33 @@ If both $G$ and $H$ have property \BS{} and $X$ is finite, then $G\wr_X H$ has p
 %
 %
 When $\mathbf{S}$ has a suitable notion of quotients (by a group of isometries), it is possible to obtain a strong version of Lemmas~\ref{Lemma:Quotient} and~\ref{Lemma:InterProd}.
-Here is the corresponding result for Bergman's property.\PH{Je n'ai pas mis l'énoncé général, car dans les classes d'espaces qui nous intéressent, seul $(\mathbf{QP})\mathbf{Met}$ est stable par quotient.}
+Here is the corresponding result for Bergman's property and cof~$\neq\omega$.\PH{Je n'ai pas mis l'énoncé général, car les autres espaces qui nous intéressent ne sont pas stable par quotients.}
 %
 %
 \begin{prop}\label{Prop:Extension}
+Let \BS{} be either the Bergman's property, or the property cof~$\neq\omega$.
 Let $1\to N\to G\to H\to 1$ be a group extension.
-Then $G$ has the Bergman's property if and only if $H$ has the Bergman's property and the pair $(G,N)$ has the relative Bergman's property.
+Then $G$ has property \BS{} if and only if $H$ has property \BS{} and the pair $(G,N)$ has the relative \BS{} property.
 \end{prop}
 \begin{proof}
 One direction is simply Lemma~\ref{Lemma:Quotient} and the definition of relative Bergman's property.
 
-On the other hand, let $X$ be a quasipseudo-metric space on which $G$ acts by isometries and let $x$ be an element of $X$.
+On the other hand, let $(X,d)$ be a quasipseudo-metric space on which $G$ acts by isometries and let $x$ be an element of $X$.
 Let $\setst{g_i}{i\in I}$ a transversal for $N$, that is $H\cong\{g_iN\}$.
 By assumption, $N.x$ is bounded of diameter $D_1$ and for any $i\in I$ the subset $g_iN.x$ of $X$ has also diameter $D_1$.
 Since $N$ is a subgroup of isometries of $X$, the map $d'\colon X/N\times X/N\to\R$ defined by $d'([x],[y])\coloneqq\inf\setst{d(x',y')}{x'\in N.x,y'\in N.y}$ is the quotient quasipseudo-distance\PH{En général, pour $X/\sim$, $d'$ ne satisfait pas l'inégalité triangulaire, mais c'est vrai pour $X/N$. Est-ce qu'il faut expliciter ?} on $X/N$.
+Moreover, if $d$ satisfied the strong triangle inequality, then so does $d'$.
 The quotient action of $H\cong G/N$ on $X/N$ is by isometries and the diameter of $H.xN$ is bounded, say by $D_2$.
 In particular, for any $i$ and $j$ in $I$, the distance between the subsets $g_iN.x$ and $g_jN.x$ of $X$ is bounded by $D_2$.
 Since this distance is an infimum, there exists actual elements of $g_iN.x$ and $g_jN.x$ at distance less than $D_2+1$.
 Altogether, we obtain that the diameter of $G.x$ is bounded by $2D_1+D_2+1$.
 \end{proof}
 %
+%
+Since the square graph, which is not median, is a quotient of the $2$-regular infinite tree by a subgroup of isometries, the proof of Proposition~\ref{Prop:Extension} does not carry over for properties FW and FA.
+However, the statement of Proposition~\ref{Prop:Extension} (stability under extension) remains true for this properties by \cite{Cornulier2013} and \cite{MR0476875}.\PH{Ce serait peut-être bien de regarder ce que l'on connait pour la propriété FH; n.b. (T) est stable par extensions.}
 
-On the other hand, we have the following result on infinite direct sums.
+We now state a result on infinite direct sums.
 %
 %
 \begin{lem}\label{Lemma:Cof}
@@ -764,7 +771,7 @@ Let $G$ be a group and let $H$ be a finite index subgroup.
 \item
 If $H$ has property \BS, then so has~$G$,
 \item
-If $\mathbf{S}$ has bounded cartesian powers and $G$ has property \BS, then $H$ has property \BS.
+If $\mathbf{S}$ has cartesian powers and $G$ has property \BS, then $H$ has property \BS.
 \end{enumerate}
 \end{lem}
 \begin{proof}
@@ -790,7 +797,7 @@ We now prove one last lemma that will be necessary fo the proof of Theorem~\ref{
 %
 %
 \begin{lem}\label{Lemma:Unboundedness}
-Suppose that $\mathbf{S}$ has bounded cartesian powers. If $X$ is finite and $G\wr_XH$ has property \BS, then $G$ has property \BS.
+Suppose that $\mathbf{S}$ has cartesian powers. If $X$ is finite and $G\wr_XH$ has property \BS, then $G$ has property \BS.
 \end{lem}
 \begin{proof}
 Suppose that $G$ does not have \BS{} and let $(Y,d_Y)$ be a $\mathbf S$-space on which $G$ acts with an unbounded orbit $G.y$.
@@ -807,7 +814,7 @@ By combining Corollary~\ref{Cor:Wreath} and Lemmas~\ref{Lemma:XFinite} and~\ref{
 %
 %
 \begin{thm}\label{Thm:Technic}
-Suppose that $\mathbf{S}$ has bounded cartesian powers and is such that \BS{} implies FW.
+Suppose that $\mathbf{S}$ has cartesian powers and is such that \BS{} implies FW.
 Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which $H$ acts. Then the wreath product $G \wr_X H$ has property \BS{} if and only if $G$ and $H$ have property \BS{} and $X$ is finite.
 \end{thm}
 %
@@ -869,9 +876,10 @@ Then
 \begin{proof}
 The only things that is not a consequence of Corollary~\ref{Cor:Wreath}, Lemma~\ref{Lemma:Cof} and Theorem~\ref{Thm:UncCoun} is the fact that if $G\wr_XH$ has property FA, then the abelianization $G^{\ab}=G/[G,G]$ is finite.
 
-If $G\wr_XH$ has property FA, so does its abelianization $(G\wr_XH)^{\ab}=(G^{\ab})^{X/H}\times H^{\ab}$. Since we already know that $H$ acts on $X$ with finitely many orbits, we conclude that $G^{\ab}$ is an abelian group with property FA.
-An infinite abelian group either has a quotient which is isomorphic to $\Z$, or a quotient which is an infinite direct sum of non-trivial groups.
-But neither $\Z$, nor an infinite direct sum of non-trivial groups has FA, and hence $G^{\ab}$ is finite.
+If $G\wr_XH$ has property FA, so does its abelianization $(G\wr_XH)^{\ab}=(G^{\ab})^{X/H}\times H^{\ab}$. Since we already know that $H$ acts on $X$ with finitely many orbits, we conclude that $G^{\ab}$ is an abelian group with property FA. % and hence finite.
+The group $G^{\ab}$ is torsion, otherwise it would have a quotient isomorphic to $\Z$ which implies that $G^{\ab}$ does not have FA.
+Since $G^{\ab}$ is abelian and torsion, by a result of Kaplansky we have $G\cong\bigoplus_{i\in I}H_i$ where each $H_i$ is a $p_i$-group for some prime $p_i$.
+Either this direct sum is infinite, in which case $G^{\ab}$ does not have property FA, or $G^{\ab}$ has a quotient which is an infinite abelian $p$-group. But this is not possible as infinite abelian $p$-groups do not have cof~$\neq\omega$.
 \end{proof}
 %
 %
