@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  1 FEB 2021 12:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  2 FEB 2021 11:17
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -896,25 +896,20 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 147.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 147.
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 151.
  [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 307.
  [4] [5] [6]
-Overfull \hbox (1.59827pt too wide) in paragraph at lines 492--493
-\T1/lmr/m/it/10 and only if any $\OML/lmm/m/it/10 G$ \T1/lmr/m/it/10 ac-tion on
- a quasipseudo-metric (re-spec-tively ultra-quasipseudo-
- []
-
 [7]
-Overfull \hbox (1.11214pt too wide) in paragraph at lines 522--528
+Overfull \hbox (1.11214pt too wide) in paragraph at lines 523--529
 []\T1/lmr/m/n/10 For (quasipseudo-/ultra-) met-ric spaces, the cat-e-gor-i-cal 
 prod-uct (cor-re-spond-
  []
 
 
-Overfull \hbox (2.57224pt too wide) in paragraph at lines 529--531
+Overfull \hbox (2.57224pt too wide) in paragraph at lines 530--532
 \T1/lmr/m/n/10 gether with bounded maps. The rea-son be-hind this is the forth-
 com-ing Lemma [][]3.2[][]
  []
@@ -922,50 +917,47 @@ com-ing Lemma [][]3.2[][]
 
 LaTeX Warning: Marginpar on page 8 moved.
 
-[8] [9]
-Overfull \hbox (4.91545pt too wide) in paragraph at lines 666--667
-[]\T1/lmr/m/n/10 One di-rec-tion is sim-ply Lemma [][]3.1[][] and the def-i-ni-
-tion of rel-a-tive Bergman's
- []
-
-
-LaTeX Warning: Marginpar on page 10 moved.
-
-[10]
-Overfull \hbox (4.74918pt too wide) in paragraph at lines 754--755
+[8] [9] [10] [11]
+Overfull \hbox (4.74918pt too wide) in paragraph at lines 757--758
 \T1/lmr/m/n/10 that we used the prim-i-tive ac-tion of the wreath prod-uct in t
 he proof of Lemma [][]3.8[][]. 
  []
 
-[11]
-Overfull \hbox (8.02365pt too wide) in paragraph at lines 786--793
+
+Overfull \hbox (8.02365pt too wide) in paragraph at lines 789--796
 \OT1/lmr/m/n/10 (\OML/lmm/m/it/10 h[]:x[]; [] ; h[]:x[]\OT1/lmr/m/n/10 )$\T1/lm
 r/m/n/10 . This is in-deed an ac-tion by S-automorphisms
  []
 
-[12] [13] (./Median.bbl [14]
-Underfull \hbox (badness 1466) in paragraph at lines 52--55
+[12] [13] [14]
+Underfull \hbox (badness 1466) in paragraph at lines 953--956
 []\T1/lmr/m/n/10 Anthony Genevois.  Lamp-lighter groups, me-dian spaces, and a-
 T-
  []
 
-) [15] [16
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 1009--1013
+
+ []
+
+[16
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 918.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 918.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1029.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1029.
  (./Median.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 918.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 918.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1029.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1029.
+
 Package rerunfilecheck Info: File `Median.out' has not changed.
 (rerunfilecheck)             Checksum: B79A42BFFDC43B9280C8CDD5FF01A8C3;1093.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 918.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1029.
  ) 
 Here is how much of TeX's memory you used:
- 23310 strings out of 480893
- 412312 string characters out of 5908067
- 691391 words of memory out of 5000000
- 38334 multiletter control sequences out of 15000+600000
+ 23313 strings out of 480893
+ 412411 string characters out of 5908067
+ 689502 words of memory out of 5000000
+ 38339 multiletter control sequences out of 15000+600000
  633326 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,12n,83p,1020b,1062s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -998,10 +990,10 @@ ic/lm/lmri7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy1
 ive/2020/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2020/te
 xmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2020/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Median.pdf (16 pages, 496955 bytes).
+Output written on Median.pdf (16 pages, 498104 bytes).
 PDF statistics:
- 470 PDF objects out of 1000 (max. 8388607)
- 403 compressed objects within 5 object streams
- 111 named destinations out of 1000 (max. 500000)
+ 475 PDF objects out of 1000 (max. 8388607)
+ 408 compressed objects within 5 object streams
+ 112 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
