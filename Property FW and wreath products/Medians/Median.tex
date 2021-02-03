@@ -1007,9 +1007,27 @@ Jean-Pierre Serre.
 Some of the properties that are of interest for us have been historically defined via the existence of a fixed point for some action. More generally, we say that a group $G$ has \emph{property F$\mathbf S$} if any $G$ action on a $\mathbf S$-space has a fixed point.
 
 Since our actions are by isometries, property F$\mathbf S$ implies property \BS. The other implication holds as soon as we have a suitable notion of the center of a (non-empty) bounded subset $X$.
-This is for example the case for (real or complex) Hilbert spaces \cite[Lemma 2.2.7]{Bekka2008}. On the other hand, property FA is usually defined as ``any action without inversion on a tree as a fixed point'', which is equivalent to ``any action on a tree either fixes a point or fixes the middle of an edge''. It is easy exercise to prove that if an action of a group on a tree has one bounded orbit, then it fixes a point or the middle of an edge.
+For a large class of metric spaces, this is provided by the following result of Bruhat and Tits:
+%
+%
+\begin{prop}\label{Proposition:Mediane}
+Let $(X,d)$ be a complete metric space such that the following two conditions are satisfied:
+\begin{enumerate}
+\item For all $x$ and $y$ in $X$, there exists a unique $m\in X$ (the middle of $[x,y]$) such that $d(x,m)=d(y,m)=\frac12d(x,y)$;
+\item For all $x$, $y$ and $z$ in $X$, if $m$ is the middle of $[y,z]$ we have the median's inequality  $2d(x,m)^2+\frac12d(y,z)^2\leq d(x,y)^2+d(x,z)^2$.
+\end{enumerate}
+Then if $G$ is a group acting by isometries on $X$ with a bounded orbit, it has a fixed point.
+\end{prop}
+%
+%
+Exemples of complete metric spaces satisfying Proposition~\ref{Proposition:Mediane} include Hilbert spaces, Bruhat-Tits Buildings, Hadamard spaces (i.e. complete CAT(0) spaces), trees and $\R$-trees, with the caveat that for ($\R$-)trees, the fixed point is either a vertex or the middle of an edge.
+See~\cite[Chapter 3.b]{MR1023471} and the references therein for more on this subject.
+On the other hand, \cite[Lemma 2.2.7]{Bekka2008} gives a simple proof of the existence of a center for bounded subsets of Hilbert spaces, and more generally of reflexive Banach spaces.
+%This is for example the case for (real or complex) Hilbert spaces \cite[Lemma 2.2.7]{Bekka2008} as well as for reflexive Banach spaces (the proof of \cite[Lemma 2.2.7]{Bekka2008} applies mutatis mutandis)\PH{Vérifier}. On the other hand, property FA is usually defined as ``any action without inversion on a tree as a fixed point'', which is equivalent to ``any action on a tree either fixes a point or fixes the middle of an edge''. It is easy exercise to prove that if an action of a group on a tree has one bounded orbit, then it fixes a point or the middle of an edges.
+
 For action on (ultra)-metric spaces or on connected median graphs, F$\mathbf S$ is stricly stronger than \BS. Indeed, this trivially follows from the action by rotation of $C_4$ on the square graph.
 However,  by \cite{MR1663779, Cornulier2013} if a group $G$ acts on a connected median graph with a bounded orbit, then it has a finite orbit.\\[3ex]
+
 
 \todo[inline]{Un autre truc qu'on peut décider d'ajouter (juste après le lemme~\ref{Lemma:BergQPMet}) ou pas}
 On the other hand, the following result is perhaps more surprising.
@@ -1025,5 +1043,6 @@ For the other direction, we will use the following characterization property SB 
 
 Suppose that any $G$ action on a connected graph has bounded orbits. Then $G$ has property FW and hence cof~$\neq\omega$. On the other hand, for every generating set $T$, the group $G$ acts transitively on $\Cayley(G;T)$, which implies that the latter is bounded. By the above characterization, we obtain that $G$ has property SB.
 \end{proof}
+
 
 \end{document}
