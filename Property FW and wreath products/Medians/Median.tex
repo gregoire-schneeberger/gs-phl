@@ -304,7 +304,8 @@ A graph is \emph{median} if each of its connected component is median. For more 
 %
 %
 \paragraph{Some group properties}
-We now remind the definition of various properties for actions on metric spaces.\PH{Peut-être mettre une phrase avec les réf de première fois où ça été étudié. Soit avant la déf, soit dans le paragraphe après} \GS{On a mis déjà pas mal de références à mon avis...}
+We now remind the definition of various properties for actions on metric spaces.
+%\PH{Peut-être mettre une phrase avec les réf de première fois où ça été étudié. Soit avant la déf, soit dans le paragraphe après} \GS{On a mis déjà pas mal de références à mon avis...}
 %
 %
 \begin{defn}\label{Def:FHFA}
@@ -507,15 +508,15 @@ Finally, if $d$ satisfies the strong triangular inequality, then so does $d'$ an
 On the other hand, the following result is perhaps more surprising.
 %
 %
-\begin{lem}\GS{Ajouté ici}
+\begin{lem}%\GS{Ajouté ici}
 A group $G$ has property SB if and only if any $G$ action on a connected graph has bounded orbits.
 \end{lem}
 \begin{proof}
 The left-to-right implication is clear.
 
-For the other direction, we will use the following characterization property SB due to Cornulier \cite{MR2240370}. A group $G$ has property SB if and only if it has cof~$\neq\omega$ and for every generating set $T$ of $G$ the Calyey graph $\Cayley(G;T)$ is bounded.
+For the other direction, we will use the following characterization of property SB due to Cornulier \cite{MR2240370}. A group $G$ has property SB if and only if it has cof~$\neq\omega$ and for every generating set $T$ of $G$ the Calyey graph $\Cayley(G;T)$ is bounded.
 
-Suppose that any $G$ action on a connected graph has bounded orbits. Then $G$ has property FW and hence cof~$\neq\omega$. On the other hand, for every generating set $T$, the group $G$ acts transitively on $\Cayley(G;T)$, which implies that the latter is bounded. By the above characterization, we obtain that $G$ has property SB.
+Suppose that any $G$ action on a connected graph has bounded orbits. Then $G$ has property FW and hence cof~$\neq\omega$. On the other hand, for every generating set $T$, the group $G$ acts transitively on $\Cayley(G;T)$, which implies that the latter is bounded. By the above characterization, we obtain that $G$ has property~SB.
 \end{proof}
 
 While we will be able to obtain some results for a general qp-metric structure~$\mathbf{S}$, we will sometimes need to restrict ourselves to structures with a suitable notion of cartesian product.
@@ -573,7 +574,7 @@ Then if $G$ is a group acting by isometries on $X$ with a bounded orbit, it has 
 \end{prop}
 %
 %
-Exemples of complete metric spaces satisfying Proposition~\ref{Proposition:Mediane} include Hilbert spaces, Bruhat-Tits Buildings, Hadamard spaces (i.e. complete CAT(0) spaces), trees and $\R$-trees, with the caveat that for ($\R$-)trees, the fixed point is either a vertex or the middle of an edge.
+Exemples of complete metric spaces satisfying Proposition~\ref{Proposition:Mediane} include among others: Hilbert spaces, Bruhat-Tits Buildings, Hadamard spaces (i.e. complete CAT(0) spaces), trees and $\R$-trees; with the caveat that for ($\R$-)trees, the fixed point is either a vertex or the middle of an edge.
 See~\cite[Chapter 3.b]{MR1023471} and the references therein for more on this subject.
 On the other hand, \cite[Lemma 2.2.7]{Bekka2008} gives a simple proof of the existence of a center for bounded subsets of Hilbert spaces, and more generally of reflexive Banach spaces.
 %This is for example the case for (real or complex) Hilbert spaces \cite[Lemma 2.2.7]{Bekka2008} as well as for reflexive Banach spaces (the proof of \cite[Lemma 2.2.7]{Bekka2008} applies mutatis mutandis)\PH{Vérifier}. On the other hand, property FA is usually defined as ``any action without inversion on a tree as a fixed point'', which is equivalent to ``any action on a tree either fixes a point or fixes the middle of an edge''. It is easy exercise to prove that if an action of a group on a tree has one bounded orbit, then it fixes a point or the middle of an edges.
@@ -617,24 +618,28 @@ We have $H\cong G/N$. If $H$ acts on some $\mathbf{S}$-space $X$ with an unbound
 %
 \begin{lem}\label{Lemma:InterProd}
 Let $G$ be a group and $A$ an $B$ be two subgroups such that $G=AB$.
-If both $(G,A)$ and $(G,B)$ have relative property \BS, then $G$ has property \BS.\GS{Pourquoi utiliser rel prop \BS et pas directement $A,B$ possèdent \BS?}
+If both $(G,A)$ and $(G,B)$ have relative property \BS, then $G$ has property \BS.
+%\GS{Pourquoi utiliser rel prop \BS et pas directement $A,B$ possèdent \BS?}
 \end{lem}
 \begin{proof}
-Let $X$ be a $\mathbf{S}$-space and $x$ be an element of $X$.
-Let $D_1$ be the diameter of $B.x$ and $D_2$ the diameter of $A.x$. By assumption, they both are finite.
-Since $A$ acts by isometries, all the $a.Bx$ have diameter $D_1$.
-Let $y$ be an element of $G.x$. There exists $a\in A$ such that $y$ belongs to $a.Bx$. Since $1$ belongs to $B$, $y$ is at distance at most $D_1$ of $a.x$. Altogether we have that the diameter of $G.x$ is bounded above by $2D_1+D_2$. \end{proof}
-%
-\begin{lem}\label{Lemma:InterProd}
-Let $G$ be a group and $A$ an $B$ be two subgroups such that $G=AB$.
-If both $A$ and $B$ have property \BS, then $G$ has property \BS.\GS{Pourquoi utiliser rel prop \BS et pas directement $A,B$ possèdent \BS?}
-\end{lem}
-\begin{proof}
-Let $X$ be a $\mathbf{S}$-space and $x$ be an element of $X$.
+Let $X$ be a $\mathbf{S}$-space on which $G$ acts and let $x$ be an element of $X$.
 Let $D_1$ be the diameter of $A.x$ and $D_2$ the diameter of $B.x$. By assumption, they both are finite.
 Since $A$ acts by isometries, all the $a.Bx$ have diameter $D_2$.
-Let $y$ be an element of $G.x$. There exists $a \in A$ and $b \in B$ such that $y = ab.x$ and then $d(x,y) \leq d(x, a.x) + d(a.x, ab.x) \leq D_1 + D_2$.  Therefor, the diameter of $G.x$ is finite.
+Let $y$ be an element of $G.x$. There exists $a\in A$ such that $y$ belongs to $a.Bx$. Since $1$ belongs to $B$, $y$ is at distance at most $D_2$ of $a.x$ and hence at distance at most $D_1+D_2$ of $x$.
+Therefore, the diameter of $G.x$ is finite.
+%Altogether we have that the diameter of $G.x$ is bounded above by $2D_1+D_2$.
 \end{proof}
+%
+%\begin{lem}\label{Lemma:InterProd}
+%Let $G$ be a group and $A$ an $B$ be two subgroups such that $G=AB$.
+%If both $A$ and $B$ have property \BS, then $G$ has property \BS.\GS{Pourquoi utiliser rel prop \BS et pas directement $A,B$ possèdent \BS?}
+%\end{lem}
+%\begin{proof}
+%Let $X$ be a $\mathbf{S}$-space and $x$ be an element of $X$.
+%Let $D_1$ be the diameter of $A.x$ and $D_2$ the diameter of $B.x$. By assumption, they both are finite.
+%Since $A$ acts by isometries, all the $a.Bx$ have diameter $D_2$.
+%Let $y$ be an element of $G.x$. There exists $a \in A$ and $b \in B$ such that $y = ab.x$ and then $d(x,y) \leq d(x, a.x) + d(a.x, ab.x) \leq D_1 + D_2$.  Therefor, the diameter of $G.x$ is finite.
+%\end{proof}
 %
 %
 By combining Lemmas~\ref{Lemma:Quotient} and~\ref{Lemma:InterProd}, we obtain the following three corollaries on direct, semi-direct and wreath products.%\PH{J'ai mis trois corollaires disctinct car cela me semblait moins indigeste. Tu trouveras dans le fichier TeX la version avec un seul gros corollaire.}
@@ -716,7 +721,7 @@ Let $1\to N\to G\to H\to 1$ be a group extension.
 Then $G$ has property \BS{} if and only if $H$ has property \BS{} and the pair $(G,N)$ has the relative \BS{} property.
 \end{prop}
 \begin{proof}
-One direction is simply Lemma~\ref{Lemma:Quotient} and the definition of relative property SB.
+One direction is simply Lemma~\ref{Lemma:Quotient} and the definition of relative property~SB.
 
 On the other hand, let $(X,d)$ be a quasipseudo-metric space on which $G$ acts by isometries and let $x$ be an element of $X$.
 Let $\setst{g_i}{i\in I}$ a transversal for $N$, that is $H\cong\{g_iN\}$.
@@ -726,7 +731,8 @@ Moreover, if $d$ satisfied the strong triangle inequality, then so does $d'$.
 The quotient action of $H\cong G/N$ on $X/N$ is by isometries and the diameter of $H.xN$ is bounded, say by $D_2$.
 In particular, for any $i$ and $j$ in $I$, the distance between the subsets $g_iN.x$ and $g_jN.x$ of $X$ is bounded by $D_2$.
 Since this distance is an infimum, there exists actual elements of $g_iN.x$ and $g_jN.x$ at distance less than $D_2+1$.
-Altogether, we obtain that the diameter of $G.x$ is bounded by $2D_1+D_2+1$.
+Altogether, we obtain that any $y$ in $G.x$ is at distance at most $D_1+D_2+1$ of $x$.
+Hence, the orbit $G.x$ is bounded.% by $2D_1+D_2+1$.
 \end{proof}
 %
 %
