@@ -1,0 +1,29 @@
+\begin{tikzpicture}[node distance=1.14cm,every node/.style=blacknode]
+\useasboundingbox (-3.1,-1.55) rectangle (7.62,0.08);
+\node (0){} ;
+\coordinate[left =0.5cm of 0] (a) ;
+\node (1)[right of=0]{} ;
+\node (2)[right of=1]{} ;
+\node (3)[right of=2]{} ;
+\node (4)[right of=3]{} ;
+\coordinate[right =0.5cm of 4] (b) ;
+\graph[edge={thick}]{(a)--[dotted](0)--(1)--(2)--(3)--(4)--[dotted](b)} ;
+
+\begin{scope}[yshift=-1cm]
+\node (0){} ;
+%\coordinate[left =0.5cm of 0] (a) ;
+\coordinate[left =1cm of 0] (-1) ;
+\coordinate[left =2cm of 0] (-2) ;
+\coordinate[left =3cm of 0] (-3) ;
+\node (1)[right of=0]{} ;
+\node (2)[right of=1]{} ;
+\node (3)[right of=2]{} ;
+\node (4)[right of=3]{} ;
+%\coordinate[right =0.5cm of 4] (b) ;
+\coordinate[right =1cm of 4] (5) ;
+\coordinate[right =2cm of 4] (6) ;
+\coordinate[right =3cm of 4] (7) ;
+\graph[edge={thick}]{(-2)--[bend left,red,dotted](0)--[bend left,red](2)--[bend left,red](4)--[bend left,red,dotted](6), (-1)--[bend left,red,dotted](1)--[bend left,red](3)--[bend left,red,dotted](5) } ;
+\graph[edge={thick}]{(-3)--[bend right,blue,dotted](0)--[bend right,blue](3)--[bend right,blue,dotted](6), (-2)--[bend right,blue,dotted](1)--[bend right,blue](4)--[bend right,blue,dotted](7),(-1)--[bend right,blue,dotted](2)--[bend right,blue,dotted](5)} ;
+\end{scope}
+\end{tikzpicture}
