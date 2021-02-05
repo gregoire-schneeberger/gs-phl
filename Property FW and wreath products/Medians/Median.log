@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  5 FEB 2021 13:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  5 FEB 2021 14:12
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -913,112 +913,56 @@ com-ing Lemma [][]3.2[][]
  []
 
 [8]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 550.
-
-Overfull \hbox (13.71983pt too wide) in paragraph at lines 550--550
-[][][]\T1/lmr/bx/n/9 Commentaire 
- []
-
-
-Overfull \hbox (13.71983pt too wide) in paragraph at lines 550--550
-[][][]\T1/lmr/bx/n/9 Commentaire 
- []
-
-
-Overfull \hbox (13.71983pt too wide) in paragraph at lines 559--559
-[][][]\T1/lmr/bx/n/9 Commentaire 
- []
-
-
-Overfull \hbox (9.695pt too wide) in paragraph at lines 559--559
-\T1/lmr/bx/n/9 [GS2]: \T1/lmr/m/n/9 Ajouté 
- []
-
-
-Overfull \hbox (13.71983pt too wide) in paragraph at lines 559--559
-[][][]\T1/lmr/bx/n/9 Commentaire 
- []
-
-
-Overfull \hbox (9.695pt too wide) in paragraph at lines 559--559
-\T1/lmr/bx/n/9 [GS2]: \T1/lmr/m/n/9 Ajouté 
- []
-
-
-LaTeX Warning: Marginpar on page 9 moved.
-
-
-LaTeX Warning: Marginpar on page 9 moved.
-
-
-LaTeX Warning: Citation `MR1023471' on page 9 undefined on input line 578.
-
-
-Overfull \hbox (3.166pt too wide) in paragraph at lines 577--581
+Overfull \hbox (3.166pt too wide) in paragraph at lines 578--582
 []\T1/lmr/m/n/10 Exemples of com-plete met-ric spaces sat-is-fy-ing Propo-si-ti
 on [][]2.13[][] in-clude among
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--584
+Underfull \hbox (badness 10000) in paragraph at lines 583--585
 
  []
 
 [9]
-Overfull \hbox (13.71983pt too wide) in paragraph at lines 729--729
-[][][]\T1/lmr/bx/n/9 Commentaire 
- []
-
-
-Overfull \hbox (13.71983pt too wide) in paragraph at lines 729--729
-[][][]\T1/lmr/bx/n/9 Commentaire 
- []
-
-[10] [11] [12]
-Overfull \hbox (4.74918pt too wide) in paragraph at lines 815--816
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 731.
+ [10] [11] [12]
+Overfull \hbox (4.74918pt too wide) in paragraph at lines 818--819
 \T1/lmr/m/n/10 that we used the prim-i-tive ac-tion of the wreath prod-uct in t
 he proof of Lemma [][]3.8[][]. 
  []
 
 
-Overfull \hbox (8.02365pt too wide) in paragraph at lines 847--854
+Overfull \hbox (8.02365pt too wide) in paragraph at lines 850--857
 \OT1/lmr/m/n/10 (\OML/lmm/m/it/10 h[]:x[]; [] ; h[]:x[]\OT1/lmr/m/n/10 )$\T1/lm
 r/m/n/10 . This is in-deed an ac-tion by S-automorphisms
  []
 
 [13] [14] [15]
-Underfull \hbox (badness 1466) in paragraph at lines 1011--1014
+Underfull \hbox (badness 1466) in paragraph at lines 1021--1024
 []\T1/lmr/m/n/10 Anthony Genevois.  Lamp-lighter groups, me-dian spaces, and a-
 T-
  []
 
 [16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1063.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1063.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1073.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1073.
  (./Median.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1063.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1063.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1073.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1073.
 
 Package rerunfilecheck Info: File `Median.out' has not changed.
 (rerunfilecheck)             Checksum: B79A42BFFDC43B9280C8CDD5FF01A8C3;1093.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1063.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1073.
  ) 
 Here is how much of TeX's memory you used:
- 23253 strings out of 480893
- 410983 string characters out of 5908067
- 677968 words of memory out of 5000000
- 38280 multiletter control sequences out of 15000+600000
+ 23223 strings out of 480893
+ 410364 string characters out of 5908067
+ 674559 words of memory out of 5000000
+ 38255 multiletter control sequences out of 15000+600000
  633326 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,83p,1020b,1064s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,12n,83p,1020b,1038s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
 cal/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
 20/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2020/texmf-d
@@ -1047,10 +991,10 @@ ic/lm/lmri7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy1
 /local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texl
 ive/2020/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2020/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Median.pdf (16 pages, 494165 bytes).
+Output written on Median.pdf (16 pages, 489592 bytes).
 PDF statistics:
- 468 PDF objects out of 1000 (max. 8388607)
- 403 compressed objects within 5 object streams
- 111 named destinations out of 1000 (max. 500000)
+ 461 PDF objects out of 1000 (max. 8388607)
+ 397 compressed objects within 4 object streams
+ 106 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

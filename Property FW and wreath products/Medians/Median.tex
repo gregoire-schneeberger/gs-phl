@@ -547,7 +547,8 @@ The reason behind this is the forthcoming Lemma~\ref{Lemma:InterProd} and its co
 \end{rem}
 %
 %
-We conclude this section by a remark\PH{Peut-être à enlever de l'article, non ? Mais à garder pour ta thèse ?}\GS{A voir, de manière générale j'aime assez quand on traite les questions qui apparaissent raisonnablement... A toi de voir !} on a variation of Definition~\ref{Def:FHFA}.
+We conclude this section by a remark %\PH{Peut-être à enlever de l'article, non ? Mais à garder pour ta thèse ?}\GS{A voir, de manière générale j'aime assez quand on traite les questions qui apparaissent raisonnablement... A toi de voir !}
+on a variation of Definition~\ref{Def:FHFA}.
 One might wonder what happens if in Definition~\ref{Def:FHFA} we replace the requirement of having bounded orbits by having uniformly bounded orbits.
 It turns out that this is rather uninteresting, as a group $G$ is trivial if and only if any $G$-action on a metric space (respectively on an Hilbert space, on a connected median graph, on a tree or on an ultrametric space) has uniformly bounded orbits.
 Indeed, if $G$ is non-trivial, then, for the action of $G$ on the Hilbert space $\ell^2(G)$ the orbit of $n\cdot \delta_g$ has diameter $n\sqrt2$.
@@ -556,7 +557,7 @@ Finally, it is possible to put an ultradistance on the vertices of $T$ by  $d_\i
 %
 %
 %
-\GS{Ajouté ici?}
+%\GS{Ajouté ici?}
 \paragraph{Groups acting with fixed point on \texorpdfstring{$\mathbf S$}{\textbf{S}}-spaces}%\PH{J'ai mis cela ici, à voir si on en fait quelque chose.}
 Some of the properties that are of interest for us have been historically defined via the existence of a fixed point for some action. More generally, we say that a group $G$ has \emph{property F$\mathbf S$} if any $G$ action on a $\mathbf S$-space has a fixed point.
 
@@ -724,9 +725,11 @@ Then $G$ has property \BS{} if and only if $H$ has property \BS{} and the pair $
 One direction is simply Lemma~\ref{Lemma:Quotient} and the definition of relative property~SB.
 
 On the other hand, let $(X,d)$ be a quasipseudo-metric space on which $G$ acts by isometries and let $x$ be an element of $X$.
-Let $\setst{g_i}{i\in I}$ a transversal for $N$, that is $H\cong\{g_iN\}$.
+Let $\setst{g_i}{i\in I}$ be a transversal for $N$, that is $H\cong\{g_iN\}$.
 By assumption, $N.x$ is bounded of diameter $D_1$ and for any $i\in I$ the subset $g_iN.x$ of $X$ has also diameter $D_1$.
-Since $N$ is a subgroup of isometries of $X$, the map $d'\colon X/N\times X/N\to\R$ defined by $d'([x],[y])\coloneqq\inf\setst{d(x',y')}{x'\in N.x,y'\in N.y}$ is the quotient quasipseudo-distance on $X/N$. The triangle inequality stays not true in general for a quotient of $X$, but we leave it to the reader to verifiy that it is true in this case. \GS{Une remarque comme ça ?}%\PH{En général, pour $X/\sim$, $d'$ ne satisfait pas l'inégalité triangulaire, mais c'est vrai pour $X/N$. Est-ce qu'il faut expliciter ?}
+Since $N$ is a subgroup of isometries of $X$, the map $d'\colon X/N\times X/N\to\R$ defined by $d'([x],[y])\coloneqq\inf\setst{d(x',y')}{x'\in N.x,y'\in N.y}$ is the quotient quasipseudo-distance on $X/N$.
+Indeed, while the map $d'$ might not satisfies the triangle inequality for a generic quotient $X/\sim$, this is the case if the quotient is by a subgroup of isometries; details are let to the reader.\PH{J'ai mis ça (ton texte en commentaire). À voir celui qui rend mieux en anglais.}
+%The triangle inequality stays not true in general for a quotient of $X$, but we leave it to the reader to verify that it is true in this case. \GS{Une remarque comme ça ?}%\PH{En général, pour $X/\sim$, $d'$ ne satisfait pas l'inégalité triangulaire, mais c'est vrai pour $X/N$. Est-ce qu'il faut expliciter ?}
 Moreover, if $d$ satisfied the strong triangle inequality, then so does $d'$.
 The quotient action of $H\cong G/N$ on $X/N$ is by isometries and the diameter of $H.xN$ is bounded, say by $D_2$.
 In particular, for any $i$ and $j$ in $I$, the distance between the subsets $g_iN.x$ and $g_jN.x$ of $X$ is bounded by $D_2$.
@@ -923,7 +926,7 @@ That is, the diameter of $G\wr_YH.z$ is itself bounded by $\max\{D_0,D_1,\dots,D
 \end{proof}
 %
 %
-While the fact that being a tree is not compatible with powers is an obstacle to our methods, we still have the following weak version of Theorem~\ref{Thm:Technic} for property FA.
+While the fact that trees do not have cartesian powers is an obstacle to our methods, we still have the following weak version of Theorem~\ref{Thm:Technic} for property FA.
 %
 %
 \begin{prop}\label{Prop:WRFA}
@@ -1006,6 +1009,13 @@ Yves Cornulier and Aditi Kar.
 Yves de~Cornulier.
 \newblock Strongly bounded groups and infinite powers of finite groups.
 \newblock {\em Comm. Algebra}, 34(7):2337--2345, 2006.
+
+\bibitem{MR1023471}
+Pierre de~la Harpe and Alain Valette.
+\newblock La propri\'{e}t\'{e} {$(T)$} de {K}azhdan pour les groupes localement
+  compacts (avec un appendice de {M}arc {B}urger).
+\newblock {\em Ast\'{e}risque}, (175):158, 1989.
+\newblock With an appendix by M. Burger.
 
 \bibitem{2017arXiv170500834G}
 Anthony {Genevois}.
