@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  6 FEB 2021 14:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.11)  6 FEB 2021 18:37
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -768,7 +768,11 @@ File: l3backend-pdfmode.def 2020-08-07 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count321
 \l__pdf_internal_box=\box59
 )
-(./Median.aux)
+(./Median.aux
+
+LaTeX Warning: Label `Prop:WRFA' multiply defined.
+
+)
 \openout1 = `Median.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
@@ -930,22 +934,28 @@ Underfull \hbox (badness 1466) in paragraph at lines 1033--1036
 T-
  []
 
-[16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1085.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1085.
+[16] [17
+
+] [18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1168.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1168.
  (./Median.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1085.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1085.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1168.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1168.
 
 Package rerunfilecheck Info: File `Median.out' has not changed.
 (rerunfilecheck)             Checksum: B79A42BFFDC43B9280C8CDD5FF01A8C3;1093.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1085.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1168.
  ) 
 Here is how much of TeX's memory you used:
- 23116 strings out of 480893
- 407905 string characters out of 5908067
- 671412 words of memory out of 5000000
- 38149 multiletter control sequences out of 15000+600000
+ 23130 strings out of 480893
+ 408013 string characters out of 5908067
+ 671533 words of memory out of 5000000
+ 38153 multiletter control sequences out of 15000+600000
  633326 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,12n,83p,1020b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -977,10 +987,10 @@ ic/lm/lmri7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy1
 /local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texl
 ive/2020/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2020/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Median.pdf (16 pages, 488205 bytes).
+Output written on Median.pdf (18 pages, 494472 bytes).
 PDF statistics:
- 459 PDF objects out of 1000 (max. 8388607)
- 395 compressed objects within 4 object streams
- 105 named destinations out of 1000 (max. 500000)
+ 491 PDF objects out of 1000 (max. 8388607)
+ 424 compressed objects within 5 object streams
+ 115 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

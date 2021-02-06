@@ -47,7 +47,7 @@
 \DeclareMathOperator\Sym{Sym}
 \DeclareMathOperator\diag{diag}
 %\DeclareMathOperator\diameter{diam}
-%\DeclareMathOperator\Hom{Hom}
+\DeclareMathOperator\Hom{Hom}
 %\DeclareMathOperator\Isom{Isom}
 \DeclareMathOperator\Aut{Aut}
 %\DeclareMathOperator\id{id}
@@ -938,7 +938,7 @@ That is, the diameter of $G\wr_YH.z$ is itself bounded by $\max\{D_0,D_1,\dots,D
 \end{proof}
 %
 %
-While the fact that trees do not have cartesian powers is an obstacle to our methods, we still have the following weak version of Theorem~\ref{Thm:Technic} for property FA.
+While the fact that trees do not have cartesian powers is an obstacle to our methods, we still have the following weak version of Theorem~\ref{Thm:Technic} for property~FA.
 %
 %
 \begin{prop}\label{Prop:WRFA}
@@ -1072,6 +1072,89 @@ Jean-Pierre Serre.
   Hyman Bass, Ast{\'e}risque, No. 46.
 
 \end{thebibliography}
+
+
+\clearpage
+%
+%
+%
+%
+While the fact that trees do not have cartesian powers is an obstacle to our methods, we still have a weak version of Theorem~\ref{Thm:Technic} for property FA.
+Before stating it, remind that by \cite{MR0476875} a group $G$ has property FA if and only if it satisfies the following three conditions
+\begin{enumerate}
+\item $G$ has cof~$\neq\omega$,
+\item $G$ has no quotient isomorphic to $\Z$,
+\item $G$ is not a non-trivial amalgam.
+\end{enumerate}
+%
+%
+In this context, the following result on surjections onto $\Z$ will be helpful.
+%
+%
+\begin{lem}\label{Lemma:Sujrect}
+The group $G\wr_XH$ has no quotient isomorphic to $\Z$ if and only if both $G$ and $H$ have no quotient isomorphic to $\Z$.
+\end{lem}
+\begin{proof}
+First, observe that $A\times B$ has no quotient isomorphic to $\Z$ if and only if both $A$ and $B$ have no quotient isomorphic to $\Z$.
+Indeed, one direction simply follows from the fact that both $A$ and $B$ are quotients of $A\times B$.
+On the other hand, if we have a non trivial $f\colon A\times B\to\Z$, then the restrictions of $f$ to $A$ and $B$ give us $f_A\colon A\to\Z$ and  $f_B\colon B\to\Z$ that cannot both be trivial.
+
+Secondly, if $A$ is an abelian group, then $\Hom(\bigoplus_XA,\Z)\cong\prod_X\Hom(A,\Z)$.
+
+Finally, a group $A$ has a quotient isomorphic to $\Z$ if and only if its abelianization $A^{\ab}$ has a quotient isomorphic to $\Z$.
+
+Altogether, the group $G\wr_XH$ has no quotient isomorphic to $\Z$ if and only if $(\bigoplus_{X/H}G^{\ab})\times H^{\ab}$ has no quotient isomorphic to $\Z$, if and only if $\bigoplus_{X/H}G^{\ab}$ and $H$ have no quotient isomorphic to $\Z$.
+But $\bigoplus_{X/H}G^{\ab}$ has no quotient isomorphic to $\Z$ if and only if $G^{\ab}$ has no quotient isomorphic to $\Z$, if and only if $G$ has no quotient isomorphic to $\Z$.
+%
+%In particular, $\bigoplus_XG$ has a quotient isomorphic to $\Z$ if and only if $G$ has a quotient isomorphic to $\Z$.
+%On the other hand, a group $A$ has a quotient isomorphic to $\Z$ if and only if its abelianization $A^{\ab}$ has a quotient isomorphic to $\Z$.
+%Hence, the desired result on wreath products follows from the analogous result on semidirect product which itself follows from the above result on direct products.
+%
+%Altogether, $G\wr_XH$ has no quotient isomorphic to $\Z$ if and only if $N^{\ab}\times H^{\ab}$ has no quotient isomorphic to $\Z$.
+%
+%It hence remains to prove that $N\rtimes H$ has no quotient isomorphic to $\Z$ if and only if both $N$ and $H$ have no quotient isomorphic to $\Z$.
+%
+%Since $(N\rtimes H)^{\ab}=N^{\ab}\times H^{\ab}$ it remains to show that 
+\end{proof}
+%
+%
+By Theorem~\ref{Thm:UncCoun}, Corollary~\ref{Cor:Wreath} and Lemmas~\ref{Lemma:Cof} and \ref{Lemma:Sujrect} we finally obtain
+%
+%
+\begin{prop}\label{Prop:WRFA}
+Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts.
+Then
+\begin{enumerate}
+\item If $G\wr_XH$ has property FA, then $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G$ has no quotient isomorphic to $\Z$  and $G$ has cof~$\neq\omega$,
+\item If both $G$ and $H$ have property FA and $X$ is finite, then $G\wr_XH$ has property~FA.
+\end{enumerate}
+\end{prop}
+%
+%
+In \cite{Cornulier2011} Cornulier and Kar announced a characterization of property FA for wreath products. In particular, they proved
+%
+%
+\begin{prop}[\cite{Cornulier2011}]\label{Prop:CorKar}
+Let $G$ and $H$ be two groups and let $X$ be a set on which $H$ acts.
+Suppose that $H$ has property FA, $H$ acts on $X$ with finitely many orbits and without fixed points, $G$ has no quotients isomorphic to $\Z$ and $G$ has cof~$\neq\omega$.
+Then $G\wr_XH$ has property FA.
+\end{prop}
+%
+%
+Together with Proposition~\ref{Prop:WRFA}, this implies Theorem~\ref{Thm:FAFiniteOrbits}.
+
+The authors of \cite{Cornulier2011} also claimed that if $H$ acts on $X$ with finitely many orbits and without fixed points and $G\wr_XH$ has property FA then $G$ has finite abelianization:
+
+``\textit{Moreover, the abelianization of $G\wr_XH$ is given by $\bigoplus_Y(G^{\ab})\times H^{\ab}$, where $Y$ denotes the orbit set $H\setminus X$. Hence the abelianization of $G$ is also finite.}''
+
+While this is true for countable $G$, this is false in general as demonstrated by $\R\wr_{C_2}C_2$.
+Nevertheless, their proof of Proposition~\ref{Prop:CorKar} used only the fact that $G$ has no quotients isomorphic to $\Z$, and not the stronger fact that $G$ has finite abelianization.
+%
+%
+%\begin{thm}\label{Thm:FAFiniteOrbits}
+%Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts. Suppose that $H$ acts on $X$ without fixed points.
+%Then $G\wr_XH$ has property FA if and only if $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G$ has no quotients isomorphic to $\Z$ and $G$ has cof~$\neq\omega$.
+%\end{thm}
 %
 %
 %
