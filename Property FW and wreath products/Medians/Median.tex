@@ -1147,7 +1147,7 @@ The authors of \cite{Cornulier2011} also claimed that if $H$ acts on $X$ with fi
 
 ``\textit{Moreover, the abelianization of $G\wr_XH$ is given by $\bigoplus_Y(G^{\ab})\times H^{\ab}$, where $Y$ denotes the orbit set $H\setminus X$. Hence the abelianization of $G$ is also finite.}''
 
-While this is true for countable $G$, this is false in general as demonstrated by $\R\wr_{C_2}C_2$.
+While this is true for countable $G$ (by Theorem~\ref{Thm:FAFiniteOrbits} and Lemma~\ref{Lemma:Abelian}) this is false in general as demonstrated by $G\wr_{C_2}C_2$, with $G$ an infinite abelian group with property FA (for example $G=\R$).
 Nevertheless, their proof of Proposition~\ref{Prop:CorKar} used only the fact that $G$ has no quotients isomorphic to $\Z$, and not the stronger fact that $G$ has finite abelianization.
 %
 %
@@ -1155,6 +1155,33 @@ Nevertheless, their proof of Proposition~\ref{Prop:CorKar} used only the fact th
 %Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts. Suppose that $H$ acts on $X$ without fixed points.
 %Then $G\wr_XH$ has property FA if and only if $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G$ has no quotients isomorphic to $\Z$ and $G$ has cof~$\neq\omega$.
 %\end{thm}
+\begin{lem}\label{Lemma:Abelian}
+Let $G$ be a group with cof~$\neq\omega$ and that does not surject to $\Z$. Then the torsion subgroup of $G^{\ab}$ is finite.
+
+If moreover $G^{\ab}$ is a most countable, then $G^{\ab}$ is torsion and therefore finite.
+\end{lem}
+%
+%
+\begin{proof}
+We have that $G^{\ab}$ itself has cof~$\neq\omega$ and that it does not surject to $\Z$.
+Since $G^{\ab}$ is abelian, it is a direct sum of a torsion abelian group $T$ and of a torsion-free abelian group $A$.
+Both of them have cof~$\neq\omega$ and do not surject onto $\Z$.
+The subgroup $T$ is finite by Lemma~\ref{Lemma:Torsion}.
+
+On the other hand, if $A$ is at most countable, then by cof~$\neq\omega$ it is finitely generated and hence isomorphic to some $\Z^n$. By hypothesis, we have that $n=0$ and $A$ is trivial.
+\end{proof}
+%
+%
+\begin{lem}\label{Lemma:Torsion}
+An abelian torsion group with cof~$\neq\omega$ is finite.
+\end{lem}
+\begin{proof}
+By a result of Kaplansky,\PH{Mettre ref ?} a torsion abelian group is isomorphic to a direct sum $\bigoplus_{i\in I}H_i$ where $H_i$ is an abelian $p_i$-group ($p_i$ prime).
+By the cof~$\neq\omega$ hypothesis, $I$ is finite and each $H_i$ has cof~$\neq\omega$.
+It is therefore enough to show that any abelian $p$-group $H$ with cof~$\neq\omega$ is finite.
+Such an $H$ is necessary of bounded exponent, as otherwise it would be the increasing reunion of the proper subgroups $K_n\coloneqq\setst{g\in H}{o(g)\leq p^n}$.
+But any abelian $p$-group of finite exponent is isomorphic to a direct sum of cyclic groups.\PH{Mettre ref ? Prüfer and Baer} By cof~$\neq\omega$, this direct sum is finite and so is $H$.
+\end{proof}
 %
 %
 %
