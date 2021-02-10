@@ -156,7 +156,7 @@ The corresponding result for property FA is a little more convoluted and was obt
 %
 \begin{thm}[\cite{Cornulier2011}]\label{Thm:FACK}
 Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which $H$ acts with finitely many orbits and without fixed points.
-Then $G\wr_XH$ has property FA if and only if $H$ has property FA, $G/[G:G]$ is finite and $G$ has cof~$\neq\omega$.
+Then $G\wr_XH$ has property FA if and only if $H$ has property FA, $G$ has no quotient isomorphic to $\Z$\PH{Changé la formulation pour suivre Serre} and $G$ has cof~$\neq\omega$.
 \end{thm}
 %
 %
@@ -195,7 +195,7 @@ In particular, some of our results do not work for trees and property FA.
 Nevertheless, we are still able to show that if $G\wr_XH$ has property FA, then $H$ acts on $X$ with finitely many orbits. Combining this with Theorem~\ref{Thm:FACK} we obtain
 \begin{thm}\label{Thm:FAFiniteOrbits}
 Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts. Suppose that $H$ acts on $X$ without fixed points.
-Then $G\wr_XH$ has property FA if and only if $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G/[G:G]$ is finite and $G$ has cof~$\neq\omega$.
+Then $G\wr_XH$ has property FA if and only if $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G$ has no quotient isomorphic to $\Z$\PH{Changé la formulation pour suivre Serre} and $G$ has cof~$\neq\omega$.
 \end{thm}
 %
 %
@@ -939,24 +939,50 @@ That is, the diameter of $G\wr_YH.z$ is itself bounded by $\max\{D_0,D_1,\dots,D
 %
 %
 While the fact that trees do not have cartesian powers is an obstacle to our methods, we still have the following weak version of Theorem~\ref{Thm:Technic} for property~FA.
+Before stating it, remind that by \cite{MR0476875} a group $G$ has property FA if and only if it satisfies the following three conditions
+\begin{enumerate}
+\item $G$ has cof~$\neq\omega$,
+\item $G$ has no quotient isomorphic to $\Z$,
+\item $G$ is not a non-trivial amalgam.
+\end{enumerate}
+%
+%
+We already know, by Theorem~\ref{Thm:UncCoun}, the behavior of cof~$\neq\omega$ under wreath products.
+On the other hand, let $Z^n$ be the integer lattice of dimension $n$, that is $Z^n$ is the Cayley graph of $\Z^n$ for the standard generating set.
+Then every infinite subgroup of $\Aut(Z^n)$ projects onto $\Z$. Hence, we obtain that a group $G$ has no quotient isomorphic to $\Z$ if and only if every $G$ action on $Z$ has bounded orbits, if and only if every $G$ action on $Z^n$ has bounded orbits.
+We hence obtain
+%
+%
+\begin{lem}\label{Lemma:Z}
+Suppose that $H$ acts on $X$ with finitely many orbits. 
+Then the group $G\wr_XH$ has no quotient isomorphic to $\Z$ if and only if both $G$ and $H$ have no quotient isomorphic to $\Z$.
+\end{lem}
+\begin{proof}
+Remind that a group $K$ has no quotient isomorphic to $\Z$ if and only if $K^{\ab}$ has no quotient isomorphic to $\Z$.
+The desired result then follows from $(G\wr_XH)^{\ab}\cong \bigoplus_{X/H}(G^{\ab})\times H^{\ab}$ and Corollary~\ref{Cor:Prod}.
+\end{proof}
+%
+%
+By Corollary~\ref{Cor:Wreath}, Theorem~\ref{Thm:UncCoun} and Lemma~\ref{Lemma:Z}, we directly obtain the following partial version of Theorem~\ref{Thm:FACK}.
 %
 %
 \begin{prop}\label{Prop:WRFA}
 Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts.
 Then
 \begin{enumerate}
-\item If $G\wr_XH$ has property FA, then $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G/[G:G]$ is finite and $G$ has cof~$\neq\omega$,
+\item If $G\wr_XH$ has property FA, then $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G$ has no quotient isomorphic to $\Z$\PH{Changé la formulation pour suivre Serre} and $G$ has cof~$\neq\omega$,
+\item If both $G$ and $H$ have no quotient isomorphic to $\Z$, have cof~$\neq\omega$ and $H$ acts on $X$ with finitely many orbits, then $G\wr_XH$ has no quotient isomorphic to $\Z$ and has cof~$\neq\omega$,\PH{Rajouté ce point, à voir ce que l'on veut laisser}
 \item If both $G$ and $H$ have property FA and $X$ is finite, then $G\wr_XH$ has property~FA.
 \end{enumerate}
 \end{prop}
-\begin{proof}
-The only things that is not a consequence of Corollary~\ref{Cor:Wreath}, Lemma~\ref{Lemma:Cof} and Theorem~\ref{Thm:UncCoun} is the fact that if $G\wr_XH$ has property FA, then the abelianization $G^{\ab}=G/[G,G]$ is finite.
-
-If $G\wr_XH$ has property FA, so does its abelianization $(G\wr_XH)^{\ab}=(G^{\ab})^{X/H}\times H^{\ab}$. Since we already know that $H$ acts on $X$ with finitely many orbits, we conclude that $G^{\ab}$ is an abelian group with property FA and hence finite.
-%The group $G^{\ab}$ is torsion, otherwise it would have a quotient isomorphic to $\Z$ which implies that $G^{\ab}$ does not have FA.
-%Since $G^{\ab}$ is abelian and torsion, by a result of Kaplansky we have $G\cong\bigoplus_{i\in I}H_i$ where each $H_i$ is a $p_i$-group for some prime $p_i$.
-%Either this direct sum is infinite, in which case $G^{\ab}$ does not have property FA, or $G^{\ab}$ has a quotient which is an infinite abelian $p$-group. But this is not possible as infinite abelian $p$-groups do not have cof~$\neq\omega$.
-\end{proof}
+%\begin{proof}
+%The only things that is not a consequence of Corollary~\ref{Cor:Wreath}, Lemma~\ref{Lemma:Cof} and Theorem~\ref{Thm:UncCoun} is the fact that if $G\wr_XH$ has property FA, then the abelianization $G^{\ab}=G/[G,G]$ is finite.
+%
+%If $G\wr_XH$ has property FA, so does its abelianization $(G\wr_XH)^{\ab}=(G^{\ab})^{X/H}\times H^{\ab}$. Since we already know that $H$ acts on $X$ with finitely many orbits, we conclude that $G^{\ab}$ is an abelian group with property FA and hence finite.
+%%The group $G^{\ab}$ is torsion, otherwise it would have a quotient isomorphic to $\Z$ which implies that $G^{\ab}$ does not have FA.
+%%Since $G^{\ab}$ is abelian and torsion, by a result of Kaplansky we have $G\cong\bigoplus_{i\in I}H_i$ where each $H_i$ is a $p_i$-group for some prime $p_i$.
+%%Either this direct sum is infinite, in which case $G^{\ab}$ does not have property FA, or $G^{\ab}$ has a quotient which is an infinite abelian $p$-group. But this is not possible as infinite abelian $p$-groups do not have cof~$\neq\omega$.
+%\end{proof}
 %
 %
 Moreover, by using Lemma~\ref{Lemma:Cof} we can get ride of the ``finitely many orbits'' hypothesis in Theorem~\ref{Thm:FACK} in order to obtain Theorem~\ref{Thm:FAFiniteOrbits}.
@@ -1074,114 +1100,122 @@ Jean-Pierre Serre.
 \end{thebibliography}
 
 
-\clearpage
+%\clearpage
+%%
+%%
+%%
+%%
+%While the fact that trees do not have cartesian powers is an obstacle to our methods, we still have a weak version of Theorem~\ref{Thm:Technic} for property FA.
+%Before stating it, remind that by \cite{MR0476875} a group $G$ has property FA if and only if it satisfies the following three conditions
+%\begin{enumerate}
+%\item $G$ has cof~$\neq\omega$,
+%\item $G$ has no quotient isomorphic to $\Z$,
+%\item $G$ is not a non-trivial amalgam.
+%\end{enumerate}
+%%
+%%
+%In this context, the following result on surjections onto $\Z$ will be helpful.
+%%
+%%
+%\begin{lem}\label{Lemma:Sujrect}
+%The group $G\wr_XH$ has no quotient isomorphic to $\Z$ if and only if both $G$ and $H$ have no quotient isomorphic to $\Z$.
+%\end{lem}
+%\begin{proof}
+%First, observe that $A\times B$ has no quotient isomorphic to $\Z$ if and only if both $A$ and $B$ have no quotient isomorphic to $\Z$.
+%Indeed, one direction simply follows from the fact that both $A$ and $B$ are quotients of $A\times B$.
+%On the other hand, if we have a non trivial $f\colon A\times B\to\Z$, then the restrictions of $f$ to $A$ and $B$ give us $f_A\colon A\to\Z$ and  $f_B\colon B\to\Z$ that cannot both be trivial.
 %
+%Secondly, if $A$ is an abelian group, then $\Hom(\bigoplus_XA,\Z)\cong\prod_X\Hom(A,\Z)$.
 %
+%Finally, a group $A$ has a quotient isomorphic to $\Z$ if and only if its abelianization $A^{\ab}$ has a quotient isomorphic to $\Z$.
 %
+%Altogether, the group $G\wr_XH$ has no quotient isomorphic to $\Z$ if and only if $(\bigoplus_{X/H}G^{\ab})\times H^{\ab}$ has no quotient isomorphic to $\Z$, if and only if $\bigoplus_{X/H}G^{\ab}$ and $H$ have no quotient isomorphic to $\Z$.
+%But $\bigoplus_{X/H}G^{\ab}$ has no quotient isomorphic to $\Z$ if and only if $G^{\ab}$ has no quotient isomorphic to $\Z$, if and only if $G$ has no quotient isomorphic to $\Z$.
+%%
+%%In particular, $\bigoplus_XG$ has a quotient isomorphic to $\Z$ if and only if $G$ has a quotient isomorphic to $\Z$.
+%%On the other hand, a group $A$ has a quotient isomorphic to $\Z$ if and only if its abelianization $A^{\ab}$ has a quotient isomorphic to $\Z$.
+%%Hence, the desired result on wreath products follows from the analogous result on semidirect product which itself follows from the above result on direct products.
+%%
+%%Altogether, $G\wr_XH$ has no quotient isomorphic to $\Z$ if and only if $N^{\ab}\times H^{\ab}$ has no quotient isomorphic to $\Z$.
+%%
+%%It hence remains to prove that $N\rtimes H$ has no quotient isomorphic to $\Z$ if and only if both $N$ and $H$ have no quotient isomorphic to $\Z$.
+%%
+%%Since $(N\rtimes H)^{\ab}=N^{\ab}\times H^{\ab}$ it remains to show that 
+%\end{proof}
+%%
+%%
+%By Theorem~\ref{Thm:UncCoun}, Corollary~\ref{Cor:Wreath} and Lemmas~\ref{Lemma:Cof} and \ref{Lemma:Sujrect} we finally obtain
+%%
+%%
+%\begin{prop}\label{Prop:WRFA}
+%Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts.
+%Then
+%\begin{enumerate}
+%\item If $G\wr_XH$ has property FA, then $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G$ has no quotient isomorphic to $\Z$  and $G$ has cof~$\neq\omega$,
+%\item If both $G$ and $H$ have property FA and $X$ is finite, then $G\wr_XH$ has property~FA.
+%\end{enumerate}
+%\end{prop}
+%%
+%%
+%In \cite{Cornulier2011} Cornulier and Kar announced a characterization of property FA for wreath products. In particular, they proved
+%%
+%%
+%\begin{prop}[\cite{Cornulier2011}]\label{Prop:CorKar}
+%Let $G$ and $H$ be two groups and let $X$ be a set on which $H$ acts.
+%Suppose that $H$ has property FA, $H$ acts on $X$ with finitely many orbits and without fixed points, $G$ has no quotients isomorphic to $\Z$ and $G$ has cof~$\neq\omega$.
+%Then $G\wr_XH$ has property FA.
+%\end{prop}
+%%
+%%
+%Together with Proposition~\ref{Prop:WRFA}, this implies Theorem~\ref{Thm:FAFiniteOrbits}.
 %
-While the fact that trees do not have cartesian powers is an obstacle to our methods, we still have a weak version of Theorem~\ref{Thm:Technic} for property FA.
-Before stating it, remind that by \cite{MR0476875} a group $G$ has property FA if and only if it satisfies the following three conditions
-\begin{enumerate}
-\item $G$ has cof~$\neq\omega$,
-\item $G$ has no quotient isomorphic to $\Z$,
-\item $G$ is not a non-trivial amalgam.
-\end{enumerate}
+%The authors of \cite{Cornulier2011} also claimed that if $H$ acts on $X$ with finitely many orbits and without fixed points and $G\wr_XH$ has property FA then $G$ has finite abelianization:
 %
+%``\textit{Moreover, the abelianization of $G\wr_XH$ is given by $\bigoplus_Y(G^{\ab})\times H^{\ab}$, where $Y$ denotes the orbit set $H\setminus X$. Hence the abelianization of $G$ is also finite.}''
 %
-In this context, the following result on surjections onto $\Z$ will be helpful.
+%While this is true for countable $G$ (by Theorem~\ref{Thm:FAFiniteOrbits} and Lemma~\ref{Lemma:Abelian}) this is false in general as demonstrated by $G\wr_{C_2}C_2$, with $G$ an infinite abelian group with property FA (for example $G=\R$).
+%Nevertheless, their proof of Proposition~\ref{Prop:CorKar} used only the fact that $G$ has no quotients isomorphic to $\Z$, and not the stronger fact that $G$ has finite abelianization.
+%%
+%%
+%%\begin{thm}\label{Thm:FAFiniteOrbits}
+%%Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts. Suppose that $H$ acts on $X$ without fixed points.
+%%Then $G\wr_XH$ has property FA if and only if $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G$ has no quotients isomorphic to $\Z$ and $G$ has cof~$\neq\omega$.
+%%\end{thm}
+%\begin{lem}\label{Lemma:Abelian}
+%Let $G$ be a group with cof~$\neq\omega$ and that does not surject to $\Z$. Then the torsion subgroup of $G^{\ab}$ is finite.
 %
+%If moreover $G^{\ab}$ is a most countable, then $G^{\ab}$ is torsion and therefore finite.
+%\end{lem}
+%%
+%%
+%\begin{proof}
+%We have that $G^{\ab}$ itself has cof~$\neq\omega$ and that it does not surject to $\Z$.
+%Since $G^{\ab}$ is abelian, it is a direct sum of a torsion abelian group $T$ and of a torsion-free abelian group $A$.
+%Both of them have cof~$\neq\omega$ and do not surject onto $\Z$.
+%The subgroup $T$ is finite by Lemma~\ref{Lemma:Torsion}.
 %
-\begin{lem}\label{Lemma:Sujrect}
-The group $G\wr_XH$ has no quotient isomorphic to $\Z$ if and only if both $G$ and $H$ have no quotient isomorphic to $\Z$.
-\end{lem}
-\begin{proof}
-First, observe that $A\times B$ has no quotient isomorphic to $\Z$ if and only if both $A$ and $B$ have no quotient isomorphic to $\Z$.
-Indeed, one direction simply follows from the fact that both $A$ and $B$ are quotients of $A\times B$.
-On the other hand, if we have a non trivial $f\colon A\times B\to\Z$, then the restrictions of $f$ to $A$ and $B$ give us $f_A\colon A\to\Z$ and  $f_B\colon B\to\Z$ that cannot both be trivial.
-
-Secondly, if $A$ is an abelian group, then $\Hom(\bigoplus_XA,\Z)\cong\prod_X\Hom(A,\Z)$.
-
-Finally, a group $A$ has a quotient isomorphic to $\Z$ if and only if its abelianization $A^{\ab}$ has a quotient isomorphic to $\Z$.
-
-Altogether, the group $G\wr_XH$ has no quotient isomorphic to $\Z$ if and only if $(\bigoplus_{X/H}G^{\ab})\times H^{\ab}$ has no quotient isomorphic to $\Z$, if and only if $\bigoplus_{X/H}G^{\ab}$ and $H$ have no quotient isomorphic to $\Z$.
-But $\bigoplus_{X/H}G^{\ab}$ has no quotient isomorphic to $\Z$ if and only if $G^{\ab}$ has no quotient isomorphic to $\Z$, if and only if $G$ has no quotient isomorphic to $\Z$.
-%
-%In particular, $\bigoplus_XG$ has a quotient isomorphic to $\Z$ if and only if $G$ has a quotient isomorphic to $\Z$.
-%On the other hand, a group $A$ has a quotient isomorphic to $\Z$ if and only if its abelianization $A^{\ab}$ has a quotient isomorphic to $\Z$.
-%Hence, the desired result on wreath products follows from the analogous result on semidirect product which itself follows from the above result on direct products.
-%
-%Altogether, $G\wr_XH$ has no quotient isomorphic to $\Z$ if and only if $N^{\ab}\times H^{\ab}$ has no quotient isomorphic to $\Z$.
-%
-%It hence remains to prove that $N\rtimes H$ has no quotient isomorphic to $\Z$ if and only if both $N$ and $H$ have no quotient isomorphic to $\Z$.
-%
-%Since $(N\rtimes H)^{\ab}=N^{\ab}\times H^{\ab}$ it remains to show that 
-\end{proof}
-%
-%
-By Theorem~\ref{Thm:UncCoun}, Corollary~\ref{Cor:Wreath} and Lemmas~\ref{Lemma:Cof} and \ref{Lemma:Sujrect} we finally obtain
-%
-%
-\begin{prop}\label{Prop:WRFA}
-Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts.
-Then
-\begin{enumerate}
-\item If $G\wr_XH$ has property FA, then $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G$ has no quotient isomorphic to $\Z$  and $G$ has cof~$\neq\omega$,
-\item If both $G$ and $H$ have property FA and $X$ is finite, then $G\wr_XH$ has property~FA.
-\end{enumerate}
-\end{prop}
-%
-%
-In \cite{Cornulier2011} Cornulier and Kar announced a characterization of property FA for wreath products. In particular, they proved
-%
-%
-\begin{prop}[\cite{Cornulier2011}]\label{Prop:CorKar}
-Let $G$ and $H$ be two groups and let $X$ be a set on which $H$ acts.
-Suppose that $H$ has property FA, $H$ acts on $X$ with finitely many orbits and without fixed points, $G$ has no quotients isomorphic to $\Z$ and $G$ has cof~$\neq\omega$.
-Then $G\wr_XH$ has property FA.
-\end{prop}
-%
-%
-Together with Proposition~\ref{Prop:WRFA}, this implies Theorem~\ref{Thm:FAFiniteOrbits}.
-
-The authors of \cite{Cornulier2011} also claimed that if $H$ acts on $X$ with finitely many orbits and without fixed points and $G\wr_XH$ has property FA then $G$ has finite abelianization:
-
-``\textit{Moreover, the abelianization of $G\wr_XH$ is given by $\bigoplus_Y(G^{\ab})\times H^{\ab}$, where $Y$ denotes the orbit set $H\setminus X$. Hence the abelianization of $G$ is also finite.}''
-
-While this is true for countable $G$ (by Theorem~\ref{Thm:FAFiniteOrbits} and Lemma~\ref{Lemma:Abelian}) this is false in general as demonstrated by $G\wr_{C_2}C_2$, with $G$ an infinite abelian group with property FA (for example $G=\R$).
-Nevertheless, their proof of Proposition~\ref{Prop:CorKar} used only the fact that $G$ has no quotients isomorphic to $\Z$, and not the stronger fact that $G$ has finite abelianization.
-%
-%
-%\begin{thm}\label{Thm:FAFiniteOrbits}
-%Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts. Suppose that $H$ acts on $X$ without fixed points.
-%Then $G\wr_XH$ has property FA if and only if $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G$ has no quotients isomorphic to $\Z$ and $G$ has cof~$\neq\omega$.
-%\end{thm}
-\begin{lem}\label{Lemma:Abelian}
-Let $G$ be a group with cof~$\neq\omega$ and that does not surject to $\Z$. Then the torsion subgroup of $G^{\ab}$ is finite.
-
-If moreover $G^{\ab}$ is a most countable, then $G^{\ab}$ is torsion and therefore finite.
-\end{lem}
-%
-%
-\begin{proof}
-We have that $G^{\ab}$ itself has cof~$\neq\omega$ and that it does not surject to $\Z$.
-Since $G^{\ab}$ is abelian, it is a direct sum of a torsion abelian group $T$ and of a torsion-free abelian group $A$.
-Both of them have cof~$\neq\omega$ and do not surject onto $\Z$.
-The subgroup $T$ is finite by Lemma~\ref{Lemma:Torsion}.
-
-On the other hand, if $A$ is at most countable, then by cof~$\neq\omega$ it is finitely generated and hence isomorphic to some $\Z^n$. By hypothesis, we have that $n=0$ and $A$ is trivial.
-\end{proof}
-%
-%
-\begin{lem}\label{Lemma:Torsion}
-An abelian torsion group with cof~$\neq\omega$ is finite.
-\end{lem}
-\begin{proof}
-By a result of Kaplansky,\PH{Mettre ref ?} a torsion abelian group is isomorphic to a direct sum $\bigoplus_{i\in I}H_i$ where $H_i$ is an abelian $p_i$-group ($p_i$ prime).
-By the cof~$\neq\omega$ hypothesis, $I$ is finite and each $H_i$ has cof~$\neq\omega$.
-It is therefore enough to show that any abelian $p$-group $H$ with cof~$\neq\omega$ is finite.
-Such an $H$ is necessary of bounded exponent, as otherwise it would be the increasing reunion of the proper subgroups $K_n\coloneqq\setst{g\in H}{o(g)\leq p^n}$.
-But any abelian $p$-group of finite exponent is isomorphic to a direct sum of cyclic groups.\PH{Mettre ref ? Prüfer and Baer} By cof~$\neq\omega$, this direct sum is finite and so is $H$.
-\end{proof}
+%On the other hand, if $A$ is at most countable, then by cof~$\neq\omega$ it is finitely generated and hence isomorphic to some $\Z^n$. By hypothesis, we have that $n=0$ and $A$ is trivial.
+%\end{proof}
+%%
+%%
+%\begin{lem}\label{Lemma:Torsion}
+%An abelian torsion group with cof~$\neq\omega$ is finite.
+%\end{lem}
+%\begin{proof}
+%By a result of Kaplansky,\PH{Mettre ref ?} a torsion abelian group is isomorphic to a direct sum $\bigoplus_{i\in I}H_i$ where $H_i$ is an abelian $p_i$-group ($p_i$ prime).
+%By the cof~$\neq\omega$ hypothesis, $I$ is finite and each $H_i$ has cof~$\neq\omega$.
+%It is therefore enough to show that any abelian $p$-group $H$ with cof~$\neq\omega$ is finite.
+%Such an $H$ is necessary of bounded exponent, as otherwise it would be the increasing reunion of the proper subgroups $K_n\coloneqq\setst{g\in H}{o(g)\leq p^n}$.
+%But any abelian $p$-group of finite exponent is isomorphic to a direct sum of cyclic groups.\PH{Mettre ref ? Prüfer and Baer} By cof~$\neq\omega$, this direct sum is finite and so is $H$.
+%\end{proof}
+%%
+%%
+%\begin{lem}\label{Lemma:TorsionFree}?
+%A torsion-free abelian with cof~$\neq\omega$ is either finite, or it has a quotient isomorphic to $\Z$.
+%\end{lem}
+%\begin{proof}
+%Let $A$ be a torsion-free abelian group with cof~$\neq\omega$ and with no quotient isomorphic to $\Z$.
+%\end{proof}
 %
 %
 %
