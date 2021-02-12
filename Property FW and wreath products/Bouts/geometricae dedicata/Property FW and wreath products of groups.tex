@@ -1,87 +1,32 @@
-%%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% This is a general template file for the LaTeX package SVJour3
-% for Springer journals.          Springer Heidelberg 2010/09/16
-%
-% Copy it to a new file with a new name and use it as the basis
-% for your article. Delete % signs as needed.
-%
-% This template includes a few options for different layouts and
-% content for various journals. Please consult a previous issue of
-% your journal as needed.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% First comes an example EPS file -- just ignore it and
-% proceed on the \documentclass line
-% your LaTeX will extract the file if required
-\begin{filecontents*}{example.eps}
-%!PS-Adobe-3.0 EPSF-3.0
-%%BoundingBox: 19 19 221 221
-%%CreationDate: Mon Sep 29 1997
-%%Creator: programmed by hand (JK)
-%%EndComments
-gsave
-newpath
-  20 20 moveto
-  20 220 lineto
-  220 220 lineto
-  220 20 lineto
-closepath
-2 setlinewidth
-gsave
-  .4 setgray fill
-grestore
-stroke
-grestore
-\end{filecontents*}
-%
-\RequirePackage{fix-cm}
-%
-%\documentclass{svjour3}                     % onecolumn (standard format)
-\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
-%\documentclass[smallextended]{svjour3}       % onecolumn (second format)
-%\documentclass[twocolumn]{svjour3}          % twocolumn
-%
-\smartqed  % flush right qed marks, e.g. at end of proof
-%
+\documentclass[smallcondensed,nospthms,english]{svjour3}     % onecolumn (ditto)
+\smartqed
 \usepackage{graphicx}
-%
-% \usepackage{mathptmx}      % use Times fonts if available on your TeX system
-%
-% insert here the call for the packages your document requires
-%\usepackage{latexsym}
-% etc.
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}      
-\usepackage[english]{babel} %utilisation du package français
+\usepackage{mathptmx}
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}      
+%\usepackage[english]{babel}
+%\usepackage{textcomp}
 %
 %
 %
-\usepackage{textcomp}% améliore certains symboles de bases
-\usepackage{lmodern}% remplace la police ComputerModern par LatinModern (+ mieux bien)
-%
-%
-%
-\usepackage{mathtools}% compléments à amsmath
-\usepackage{amssymb,amsfonts}% symboles mathématiques supplémentaires
-\usepackage{amsthm}% environnement ams-theorem
-\usepackage{hyperref}%
+\usepackage{mathtools}
+\usepackage{amssymb,amsfonts}
+\usepackage{amsthm}
+\usepackage{hyperref}
 %
 %
 \usepackage{subcaption}
 \usepackage{xcolor}
 %
 \newtheorem{lem}{Lemma}[section]
-%\newtheorem{conjecture}[lem]{Conjecture}
+\newtheorem{conjecture}[lem]{Conjecture}
 \newtheorem{cor}[lem]{Corollary}
 \newtheorem{prop}[lem]{Proposition}
 \newtheorem{thm}[lem]{Theorem}
 \theoremstyle{definition}
 \newtheorem{defn}[lem]{Definition}
-\theoremstyle{remark}% texte en roman
+\theoremstyle{remark}
 \newtheorem{exmp}[lem]{Example}
-%
 %
 %
 \DeclareMathOperator\Cayley{Cayl}
@@ -94,54 +39,43 @@ grestore
 \newcommand*{\Z}{\field{Z}}
 \newcommand{\setst}[2]{\{#1\ |\ #2\}}
 
-%
-% please place your own definitions here and don't use \def but
-% \newcommand{}{}
-%
-% Insert the name of "your journal" with
-% \journalname{myjournal}
+\journalname{Geometriae Dedicata}
 %
 \begin{document}
 
-\title{Property FW and wreath products of groups: a~simple approach using Schreier graphs%\thanks{Grants or other notes
-%about the article that should go on the front page should be
-%placed here. General acknowledgments should be placed at the end of the article.}
+\title{Property FW and wreath products of groups: a~simple approach using Schreier graphs\thanks{Supported by grant 200021\textunderscore188578 of the Swiss National Fund for Scientific Research.}
 }
-%\subtitle{Do you have a subtitle?\\ If so, write it here}
-
-%\titlerunning{Short form of title}        % if too long for running head
-
-\author{Paul-Henry Leemann\thanks{Supported by grant 200021\textunderscore188578 of the Swiss National Fund for Scientific Research.} \and Grégoire Schneeberger %etc.
+\author{Paul-Henry Leemann \and Grégoire Schneeberger* %etc.
 }
-
-%\authorrunning{Short form of author list} % if too long for running head
 
 \institute{Paul-Henry Leemann \at
-             Université de Neuchâtel 
-              \email{Paul-Henry.Leemann@unine.ch }           %  \\
-%             \emph{Present address:} of F. Author  %  if needed
+             	Université de Neuchâtel, Institut de Mathématiques, Rue Emile-Argand 11, 2000 Neuchâtel, Suisse \\
+              \email{Paul-Henry.Leemann@unine.ch } 
            \and
            Grégoire Schneeberger \at
-           Université de Genève 
+           Université de Genève, Section de mathématiques, Rue du Conseil-Général 7-9, 1205 Genève, Suisse \\
            \email{Gregoire.Schneeberger@unige.ch} 
 }
 
 \date{Received: date / Accepted: date}
-% The correct dates will be entered by the editor
-
 
 \maketitle
 
 \begin{abstract}
 The group property FW stands in-between the celebrated Kazdhan's property (T) and Serre's property FA. Among many characterizations, it might be defined, for finitely generated groups, as having all Schreier graphs one-ended.
 Using this, we show that a finitely generated wreath product $G\wr_XH$ has property FW if and only if both $G$ and $H$ have property FW and $X$ is finite.
-\keywords{First keyword \and Second keyword \and More}
-% \PACS{PACS code1 \and PACS code2 \and more}
-% \subclass{MSC code1 \and MSC code2 \and more}
+\keywords{Wreath Products \and Property FW \and Schreier graphs \and Ends}
+\subclass{20E22 \and 20F65}
+\medskip
+\noindent {\bf Data availability } Data sharing not applicable to this article as no datasets were generated or analysed during the current study.
 \end{abstract}
 
 \section{Introduction}
-\label{intro}
+%
+%
+%
+%
+%
 Property FW is a group property that is (for discrete groups) a weakening of the celebrated Kazdhan's property (T). It was introduced by Barnhill and Chatterji in \cite{Barnhill2008}. It is a fixed point property for actions on wall spaces or, equivalently, on CAT(0) cube complexes. Therefore it stands between property FH (fixed points on Hilbert spaces, equivalent to property (T) for discrete groups) and property FA (fixed points on \emph{arbres}\footnote{\emph{Arbres} is the french word for trees.}). It is known that all these properties are different, see  \cite{Cornulier2013} for examples of groups which distinguish them.
 
 When working with group properties, it is natural to ask if they are stable under ``natural'' group operations. One such operation, of great use in geometric group theory, is the wreath product, which generalizes the direct product of two groups, see Definition~\ref{Def:WreathProd}.
@@ -176,6 +110,16 @@ This is the subject of the forthcoming and more technical paper \cite{LS2021}, w
 %
 \paragraph{Organization of the paper}
 The next section contains all the definitions as well as some examples, while Section \ref{Section:Proof} is devoted to the proof of Theorem~\ref{Thm:Main} and some related results.
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%    Section : Definitions and examples    %%%%%%%%%%%%%%%%
@@ -539,74 +483,14 @@ We have the imprimitive action of $G\wr_XH$ on $G/K\times X$, which restricts to
 \]
 As above, the action is transitive and the orbital Schreier graph of this action is isomorphic to a Schreier graph $\Gamma$ of $G\wr_XH$. We decompose this graph into leaves in the same way. Now we look at the subgraph made up of vertices $(g,x_0)$ and edges $(\delta_{x_0}^s,1)$ and we remark that it is isomorphic to the Schreier graph $\Sch(G,K,S)$ which has more than one end. Then $\Gamma$ has also more than one end, which finishes the proof.
 \end{proof}
-%\section{Section title}
-%\label{sec:1}
-%Text with citations \cite{RefB} and \cite{RefJ}.
-%\subsection{Subsection title}
-%\label{sec:2}
-%as required. Don't forget to give each section
-%and subsection a unique label (see Sect.~\ref{sec:1}).
-%\paragraph{Paragraph headings} Use paragraph headings as needed.
-%\begin{equation}
-%a^2+b^2=c^2
-%\end{equation}
-%
-%% For one-column wide figures use
-%\begin{figure}
-%% Use the relevant command to insert your figure file.
-%% For example, with the graphicx package use
-%  \includegraphics{example.eps}
-%% figure caption is below the figure
-%\caption{Please write your figure caption here}
-%\label{fig:1}       % Give a unique label
-%\end{figure}
-%%
-%% For two-column wide figures use
-%\begin{figure*}
-%% Use the relevant command to insert your figure file.
-%% For example, with the graphicx package use
-%  \includegraphics[width=0.75\textwidth]{example.eps}
-%% figure caption is below the figure
-%\caption{Please write your figure caption here}
-%\label{fig:2}       % Give a unique label
-%\end{figure*}
-%%
-%% For tables use
-%\begin{table}
-%% table caption is above the table
-%\caption{Please write your table caption here}
-%\label{tab:1}       % Give a unique label
-%% For LaTeX tables use
-%\begin{tabular}{lll}
-%\hline\noalign{\smallskip}
-%first & second & third  \\
-%\noalign{\smallskip}\hline\noalign{\smallskip}
-%number & number & number \\
-%number & number & number \\
-%\noalign{\smallskip}\hline
-%\end{tabular}
-%\end{table}
 
 
 \begin{acknowledgements}
 The authors are thankful to A. Genevois, T. Nagnibeda and A. Valette for helpful comments on a previous version of this note, and to the Swiss National Fund for Scientific Research for its support.
 \end{acknowledgements}
-
-
-% Authors must disclose all relationships or interests that 
-% could have direct or potential influence or impart bias on 
-% the work: 
-%
-% \section*{Conflict of interest}
-%
-% The authors declare that they have no conflict of interest.
-
-
-% BibTeX users please use one of
-%\bibliographystyle{spbasic}      % basic style, author-year citations
-%\bibliographystyle{spmpsci}      % mathematics and physical sciences
-%\bibliographystyle{spphys}       % APS-like style for physics
-%\bibliography{}   % name your BibTeX data base
+%\begin{data}
+%Data sharing not applicable to this article as no datasets were generated or analysedduring the current study. 
+%\end{data}
 
 % Non-BibTeX users please use
 \begin{thebibliography}{10}
@@ -647,7 +531,6 @@ Pierre de~la Harpe.
 Reinhard Diestel and Daniela K\"{u}hn.
 \newblock Graph-theoretical versus topological ends of graphs.
 \newblock {\em J. Combin. Theory Ser. B}, 87(1):197--206, 2003.
-\newblock Dedicated to Crispin St. J. A. Nash-Williams.
 
 \bibitem{MR0450121}
 Jonathan~L. Gross.
@@ -684,18 +567,4 @@ Michah Sageev.
 \newblock {\em Proc. London Math. Soc. (3)}, 71(3):585--617, 1995.
 
 \end{thebibliography}
-%
-% and use \bibitem to create references. Consult the Instructions
-% for authors for reference list style.
-%
-%\bibitem{RefJ}
-%% Format for Journal Reference
-%Author, Article title, Journal, Volume, page numbers (year)
-%% Format for books
-%\bibitem{RefB}
-%Author, Book title, page numbers. Publisher, place (year)
-%% etc
-
 \end{document}
-% end of file template.tex
-
