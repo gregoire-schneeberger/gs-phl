@@ -141,7 +141,7 @@ Finally, we also obtain that $G\wr_XH$ has cof~$\neq\omega$ if and only if both 
 %
 %
 %
-When working with group properties, it is natural to ask if they are stable under ``natural'' group operations. One such operation, of great use in geometric group theory, is the wreath product, which stands between the direct product and semi-direct product of groups, see Section~\ref{Section:Def} for all the relevant definitions. 
+When working with group properties, it is natural to ask if they are stable under ``natural'' group operations. One such operation, of great use in geometric group theory, is the wreath product, which stands between the direct product and semi-direct product of groups, see Section~\ref{Section:Def} for all the relevant definitions.
 
 A $\mathbf{S}$-space is a metric space with an ``additional structure'' and we will said that a group $G$ has \emph{property \BS{}} if every action by isometries which preserve the $\mathbf{structure}$ on a $\mathbf{S}$-space has bounded orbits, see Definitions~\ref{Def:Categoric} and ~\ref{Def:PropBS} for formal statements. We note that having one bounded orbit implies that all the orbits are. \GS{Ajout definition informelle de S et BS}
 
@@ -153,7 +153,7 @@ Let $G$ and $H$ be two discrete groups with $G$ non-trivial and let $X$ be a set
 \end{thm}
 %
 %
-For countable groups (and more generally for $\sigma$-compact locally-compact topological groups), property (T) is equivalent, by the Delorme-Guichardet's Theorem, to property FH (every action on Hilbert space has bounded orbits), see \cite[Thm. 2.12.4]{Bekka2008}. Hence, Theorem~\ref{T:Wreath_prop_T} can also be viewed, for countable groups, as a result on property FH. 
+For countable groups (and more generally for $\sigma$-compact locally-compact topological groups), property (T) is equivalent, by the Delorme-Guichardet's Theorem, to property FH (every action on Hilbert space has bounded orbits), see \cite[Thm. 2.12.4]{Bekka2008}. Hence, Theorem~\ref{T:Wreath_prop_T} can also be viewed, for countable groups, as a result on property FH.
 
 The corresponding result for property FA (every action on tree has bounded orbits) is a little more convoluted and was obtained a few years later by Cornulier and Kar.
 %
@@ -266,7 +266,7 @@ by $(h.\varphi)(x)=\varphi(h^{-1}.x)$.
 This leads to the following standard definition
 \begin{defn}\label{Def:WreathProd}
 Let $G$ and $H$ be groups and $X$ be a set on which $H$ acts.
-The \emph{(retricted \footnote{There exists an unrestricted version of this product where the direct sum is remplaced by a direct product}) wreath product} $G\wr_XH$ is the group $(\bigoplus_XG)\rtimes H$.
+The \emph{(retricted \footnote{There exists an unrestricted version of this product where the direct sum is remplaced by a direct product.}) wreath product} $G\wr_XH$ is the group $(\bigoplus_XG)\rtimes H$.
 \end{defn}
 For $g$ in $G$ and $x$ in $X$, we define the following analogs of Kronecker's delta functions
 \begin{equation*}
@@ -295,20 +295,79 @@ Other (trivial) examples of wreath products are direct products $G\times H$ whic
 %%%%%%%%%%%%%%    Subsection : Actions with bounded orbits    %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Actions with bounded orbits}
+\subsection{Classical actions with bounded orbits} \GS{Réorganisation de cette section}
 %
 %
 %
-Recall that a metric space $(X,d)$ is \emph{ultrametric} if $d$ satisfies the strong triangular inequality: $d(x,y)\leq\max\{d(x,z),d(z,y)\}$ for any $x$, $y$ and $z$ in $X$. 
+We will discuss some classical group properties which are defined by actions with bounded orbits on various metric spaces.
 
+\paragraph{Median graphs}
 For $u$ and $v$ two vertices of a connected\footnote{We will always assume that our connected graphs are non-empty. This is coherent with the definition that a connected graph is a graph with exactly one connected component.} graph $\mathcal G$, we define the total interval $[u,v]$ as the set of vertices that lie on some shortest path between $u$ and $v$.
-A connected graph $\mathcal G$ is \emph{median} if for any three vertices $u$, $v$, $w$, the intersection $[u,v]\cap[v,w]\cap[u,w]$ consists of a unique vertex, denoted $m(u,v,w)$.
-A graph is \emph{median} if each of its connected components is median. For more on median graphs and spaces see \cite{MR2405677,MR2671183,MR1705337}.
+A connected graph $\mathcal G$ is \emph{median} if for any three vertices $u$, $v$, $w$, the intersection $[u,v]\cap[v,w]\cap[u,w]$ consists of a unique vertex, denoted $m(u,v,w)$. A graph is \emph{median} if each of its connected components is median. For more on median graphs and spaces see \cite{MR2405677,MR2671183,MR1705337}. If $X$ and $Y$ are both (connected) median graphs, then their cartesian product is also a (connected) median graph. Trees are the simplest examples of such graphs. The ensuing example is important for the following.
+%
+%
+\begin{exmp}\label{Ex:MainMedian}
+Let $X$ be a set and let  $\powerset{X}=2^X$ be the set of all subsets of~$X$.
+Define a graph structure on $\powerset{X}$ by putting an edge between $E$ and $F$ if and only if $\#(E\Delta F)=1$, where $\Delta$ is the symmetric difference.
+Therefore, the distance between two subsets $E$ and $F$ is $E\Delta F$ and
+the connected component of $E$ is the set of all subsets $F$ with $E\Delta F$ finite.
+For $E$ and $F$ in the same connected component, $[E,F]$ consists of all subsets of $X$ that both contain $E\cap F$ and are contained in $E\cup F$.
+In particular, $\powerset{X}$ is a median graph, with $m(D,E,F)$ being the set of all elements belonging to at least two of $D$, $E$ and $F$. In other words, $m(D,E,F)=(D\cap E)\cup(D\cap F)\cup(E\cap F)$.
+\end{exmp}
+%
+%
+%We denote by $\powersetf{X}$, respectively $\powersetcof{X}$ the set of all finite, respectively cofinite, subsets of $X$.
+%They are connected components of $\powerset{X}$, which coincide if and only if $X$ is finite.
+%More generally,
+%Connected components of $\powerset{X}$ are hypercubes and it turns out that every connected median graph is a retract of a connected component of some $\powerset{X}$, see \cite{Bandelt1984}.
+
+These graphs will be fundamental for us due to the following fact.
+Any action of a group $G$ on a set $X$ naturally extends to an action of $G$ on $\powerset{X}$ by graph homomorphisms: $g.\{x_1,\dots,x_n\}=\{g.x_1,\dots,g.x_n\}$.
+Note that the action of $G$ on $\powerset{X}$ may exchange the connected components.
+In fact, the connected component of $E\subset X$ is stabilized by $G$ if and only if $E$ is \emph{commensurated} by~$G$, that is if for every $g\in G$ the set $E\Delta gE$ is finite.
+%For example, both $\powersetf{X}$ and $\powersetcof{X}$ are always preserved by the action of $G$.
 %
 %
 %
 %
-\paragraph{Some group properties}
+\paragraph{Uncountable cofinality}
+Recall that a metric space $(X,d)$ is \emph{ultrametric} if $d$ satisfies the strong triangular inequality: $d(x,y)\leq\max\{d(x,z),d(z,y)\}$ for any $x$, $y$ and $z$ in $X$. A group $G$ has \emph{uncountable cofinality}, or cof~$\neq\omega$, if every action on ultrametric spaces has bounded orbits. The following characterization of groups without cof~$\neq\omega$ is well-known and we include a proof only for the sake of completeness.
+It implies in particular that a countable group has cof~$\neq\omega$ if and only if it is finitely generated.
+%
+%
+\begin{lem}\label{Lemma:CofSub}
+Let $G$ be a group. Then the following are equivalent:
+\begin{enumerate}
+\item $G$ can be written as a countable increasing union of proper subgroups,
+\item $G$ does not have cof~$\neq\omega$, i.e. there exists an ultrametric space $X$ on which $G$ acts with an unbounded orbit,
+\item There exists a $G$-invariant (for the action by left multiplication) ultrametric $d$ on $G$ such that $G\curvearrowright G$ has an unbounded orbit.
+\end{enumerate}
+\end{lem}
+\begin{proof}
+It is clear that the third item implies the second.
+
+Suppose that $(X,d)$ is an ultrametric space on which $G$ acts with an unbounded orbit and let $x_0$ be an element of $X$ such that $G.x_0$ is unbounded. For any $n\in \N$ let $H_n$ be the subset of $G$ defined by
+\[
+	H_n\coloneqq\setst{g\in G}{d(x_0,g.x_0)\leq n}.
+\]
+It is clear that $G$ is the increasing union of the (countably many) $H_n$.
+On the other hand, the $H_n$ are subgroups of $G$. Indeed, $H_n$ is trivially closed under taking the inverse, and is also closed under taking products since $d(x_0,gh.x_0)\leq\max\{d(x_0,g.x_0),d(g.x_0,gh.x_0)\}=\max\{d(x_0,g.x_0),d(x_0,h.x_0)\}$. As $G.x_0$ is unbounded, they are proper subgroups.
+
+Finally, suppose that $G=\bigcup_{n\in \N}H_n$ where the $H_n$ form an increasing sequence of proper subgroups. It is always possible to suppose that $H_0=\{1\}$.
+Define $d$ on $G$ by $d(g,h)\coloneqq\min\setst{n}{g^{-1}h\in H_n}$.
+One easily verifies that $d$ is a $G$-invariant ultrametric. Moreover, the orbit of $1$ contains all of $G$ and is hence unbounded.
+\end{proof}
+%
+%
+A slight variation of the above lemma gives us
+\begin{exmp}\label{Exmpl:Ultra}
+Let $(G_i)_{i\geq 1}$ be non-trivial groups and let $G\coloneqq\bigoplus_{i\geq 1} G_i$ be their direct sum.
+Then $d_\infty(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$ is an ultrametric on $G$ which is $G$-invariant for the action of $G$ on itself by left multiplication.
+\end{exmp}
+%
+%
+%
+\paragraph{Group properties}
 We now discuss the bounded orbits properties introduced above for actions on various classes of metric spaces.
 %\PH{Peut-être mettre une phrase avec les réf de première fois où ça été étudié. Soit avant la déf, soit dans le paragraphe après} \GS{On a mis déjà pas mal de références à mon avis...}
 %
@@ -332,7 +391,7 @@ In the above, \emph{actions} are supposed to preserve the structure. In particul
 %
 %
 The names \FB, FH, FW and FA come from the fact that these properties admit a description in terms of (and were fist studied in the context of) the existence of a Fixed point for actions on reflexive Banach spaces, on Hilbert spaces, on spaces with Walls (or equivalently on CAT(0) cube complexes) and on trees (\emph{Arbres} in french).
-Finally, a group has cof~$\neq\omega$ (does not have \emph{countable cofinality}) if and only if it cannot be written as a countable increasing union of proper subgroups, see Lemma~\ref{Lemma:CofSub}.
+%Finally, a group has cof~$\neq\omega$ (does not have \emph{countable cofinality}) if and only if it cannot be written as a countable increasing union of proper subgroups, see Lemma~\ref{Lemma:CofSub}.
 
 For countable groups (and more generally for $\sigma$-compact locally compact groups), property FH is equivalent to the celebrated Kazhdan's property (T) by the Delorme-Guichardet theorem, but this is not true in general. Indeed in \cite{MR2240370}, Cornulier constructed an uncountable discrete group $G$ with Bergman property which, as we will see just below, implies property FW. Such a group cannot have property (T) as, for discrete groups, it implies finite generation.
 \GS{Ajouter Banach}
@@ -341,7 +400,7 @@ For countable groups (and more generally for $\sigma$-compact locally compact gr
 %There are strong links between the properties of Definition~\ref{Def:FHFA} %\cite{MR1432323,MR0476875,MR3299841,Cornulier2013}
 \begin{prop}\PH{2 possibilités: 1) Comme avant. 2) Proposition, mais sans le tag, et en disant que c'est une compile de résultats connus. Comme tu préfères}
 %\GS{J'ai formulé cela comme une proposition pour que cela ressorte plus, à voir ce que tu préfères}
-The properties of Definition~\ref{Def:FHFA} are linked as follows:
+There are the following implications between the properties of Definition~\ref{Def:FHFA}:
 \begin{equation}\tag{\dag}\label{EQ:Implications}
 	\textnormal{Bergman property}\implies\textnormal{\FB}\implies \textnormal{FH}\implies \textnormal{FW}\implies \textnormal{FA}\implies\textnormal{cof~$\neq\omega$}.
 \end{equation}
@@ -376,70 +435,6 @@ Finally, $\Z$ has cof~$\neq\omega$, while it acts by translations and with unbou
 It is possible to consider relative versions of the properties appearing in Definition~\ref{Def:FHFA}. \GS{pas besoin d'expliquer BS comme introduit plus haut} %\PH{J'ai mis cela ici, mais on peut y bouger dans la prochaine sous-section.}
 If $G$ is a group, $H$ a subgroup of $G$ and \BS{} one of the property of Definition~\ref{Def:FHFA} defined by ``every action on $\mathbf{S}$-spaces is bounded'', we say that the pair $(G,H)$ has \emph{relative property \BS} if for every $G$ action on a $\mathbf{S}$-space, the $H$ orbits are bounded.
 A group $G$ has property \BS{} if and only if for every subgroup $H$ the pair $(G,H)$ has relative property \BS{}, and if and only if for every overgroup $L$ the pair $(L,G)$ has relative property \BS.
-%
-%
-%
-%
-\paragraph{Median graphs}
-It is important to recall that if $X$ and $Y$ are both (connected) median graphs, then their cartesian product is also a (connected) median graph. Trees are the simplest examples of such graphs. The ensuing example is important for the following.
-%
-%
-\begin{exmp}\label{Ex:MainMedian}
-Let $X$ be a set and let  $\powerset{X}=2^X$ be the set of all subsets of~$X$.
-Define a graph structure on $\powerset{X}$ by putting an edge between $E$ and $F$ if and only if $\#(E\Delta F)=1$, where $\Delta$ is the symmetric difference.
-Therefore, the distance between two subsets $E$ and $F$ is $E\Delta F$ and
-the connected component of $E$ is the set of all subsets $F$ with $E\Delta F$ finite.
-For $E$ and $F$ in the same connected component, $[E,F]$ consists of all subsets of $X$ that both contain $E\cap F$ and are contained in $E\cup F$.
-In particular, $\powerset{X}$ is a median graph, with $m(D,E,F)$ being the set of all elements belonging to at least two of $D$, $E$ and $F$. In other words, $m(D,E,F)=(D\cap E)\cup(D\cap F)\cup(E\cap F)$.
-\end{exmp}
-%
-%
-%We denote by $\powersetf{X}$, respectively $\powersetcof{X}$ the set of all finite, respectively cofinite, subsets of $X$.
-%They are connected components of $\powerset{X}$, which coincide if and only if $X$ is finite.
-%More generally, 
-%Connected components of $\powerset{X}$ are hypercubes and it turns out that every connected median graph is a retract of a connected component of some $\powerset{X}$, see \cite{Bandelt1984}.
-
-These graphs will be fundamental for us due to the following fact.
-Any action of a group $G$ on a set $X$ naturally extends to an action of $G$ on $\powerset{X}$ by graph homomorphisms: $g.\{x_1,\dots,x_n\}=\{g.x_1,\dots,g.x_n\}$.
-Note that the action of $G$ on $\powerset{X}$ may exchange the connected components.
-In fact, the connected component of $E\subset X$ is stabilized by $G$ if and only if $E$ is \emph{commensurated} by~$G$, that is if for every $g\in G$ the set $E\Delta gE$ is finite.
-%For example, both $\powersetf{X}$ and $\powersetcof{X}$ are always preserved by the action of $G$.
-
-\paragraph{Groups with cof~$\neq\omega$}
-The following characterization of groups without cof~$\neq\omega$ is well-known and we include a proof only for the sake of completeness.
-It implies in particular that a countable group has cof~$\neq\omega$ if and only if it is finitely generated.
-%
-%
-\begin{lem}\label{Lemma:CofSub}
-Let $G$ be a group. Then the following are equivalent:
-\begin{enumerate}
-\item $G$ can be written as a countable increasing union of proper subgroups,
-\item $G$ does not have cof~$\neq\omega$, i.e. there exists an ultrametric space $X$ on which $G$ acts with an unbounded orbit,
-\item There exists a $G$-invariant (for the action by left multiplication) ultrametric $d$ on $G$ such that $G\curvearrowright G$ has an unbounded orbit.
-\end{enumerate}
-\end{lem}
-\begin{proof}
-It is clear that the third item implies the second.
-
-Suppose that $(X,d)$ is an ultrametric space on which $G$ acts with an unbounded orbit and let $x_0$ be an element of $X$ such that $G.x_0$ is unbounded. For any $n\in \N$ let $H_n$ be the subset of $G$ defined by
-\[
-	H_n\coloneqq\setst{g\in G}{d(x_0,g.x_0)\leq n}.
-\]
-It is clear that $G$ is the increasing union of the (countably many) $H_n$.
-On the other hand, the $H_n$ are subgroups of $G$. Indeed, $H_n$ is trivially closed under taking the inverse, and is also closed under taking products since $d(x_0,gh.x_0)\leq\max\{d(x_0,g.x_0),d(g.x_0,gh.x_0)\}=\max\{d(x_0,g.x_0),d(x_0,h.x_0)\}$. As $G.x_0$ is unbounded, they are proper subgroups.
-
-Finally, suppose that $G=\bigcup_{n\in \N}H_n$ where the $H_n$ form an increasing sequence of proper subgroups. It is always possible to suppose that $H_0=\{1\}$.
-Define $d$ on $G$ by $d(g,h)\coloneqq\min\setst{n}{g^{-1}h\in H_n}$.
-One easily verifies that $d$ is a $G$-invariant ultrametric. Moreover, the orbit of $1$ contains all of $G$ and is hence unbounded.
-\end{proof}
-%
-%
-A slight variation of the above lemma gives us
-\begin{exmp}\label{Exmpl:Ultra}
-Let $(G_i)_{i\geq 1}$ be non-trivial groups and let $G\coloneqq\bigoplus_{i\geq 1} G_i$ be their direct sum.
-Then $d_\infty(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$ is an ultrametric on $G$ which is $G$-invariant for the action of $G$ on itself by left multiplication.
-\end{exmp}
-%
 %
 %
 %
@@ -493,7 +488,7 @@ Since $\mathbf{QPMet}$ itself is concrete, that is we have a faithful functor $F
 In practice, a lot of examples of concrete categories over $\mathbf{QPMet}$ factor through the category $\mathbf{Met}$.
 Obvious examples of concrete categories over $\mathbf{Met}$ include metric spaces and ultrametric spaces (with short maps).
 Hilbert spaces, Banach spaces and more generally (semi-) normed spaces are also concrete over $\mathbf{Met}$ if we restrict ourself to morphisms that do not increase the distance (that is such that $\langle f(x)\mid f(y)\rangle\leq\langle x\mid y\rangle$, respectively $\|f(x)\|\leq\| x\|$). In particular, for us isomorphisms of Hilbert and Banach spaces will always be isometries.
- 
+
 For connected graphs (and hence for connected median graphs and for trees), one looks at the category $\mathbf{Graph}$ where objects are connected simple graphs $G=(V,E)$ and where a morphism $f\colon (V,E)\to(V',E')$ is a function between the vertex sets such that if $(x,y)$ is an edge then either $f(x)=f(y)$ or $(f(x),f(y))$ is an edge.
 The functor $F_{\mathbf S}\colon\mathbf{Graph}\to\mathbf{Met}$ sends a connected graph to its vertex set together with the graph distance: $d(x,y)$ is the minimum number of edges on a path between $x$ and $y$.
 We can hence identify $\mathbf{Graph}$ with the full subcategory of $\mathbf{Met}$ consisting of metric spaces $(X,d)$ such that $d$ has values in~$\N$.
@@ -686,7 +681,7 @@ By combining Lemmas~\ref{Lemma:Quotient} and~\ref{Lemma:InterProd}, we obtain th
 %\begin{enumerate}
 %\item
 %$G\times H$ has property \BS{} if and only if both $G$ and $H$ have property \BS,
-%\item 
+%\item
 %If $G\rtimes H$ has property \BS, then so has $H$,
 %\item
 %If both $N$ and $H$ have property \BS, then $N\rtimes H$ also has property \BS,
@@ -982,7 +977,7 @@ We hence obtain
 %
 %
 \begin{lem}\label{Lemma:Z}
-Suppose that $H$ acts on $X$ with finitely many orbits. 
+Suppose that $H$ acts on $X$ with finitely many orbits.
 Then the group $G\wr_XH$ has no quotient isomorphic to $\Z$ if and only if both $G$ and $H$ have no quotient isomorphic to $\Z$.
 \end{lem}
 \begin{proof}
@@ -1168,7 +1163,7 @@ Jean-Pierre Serre.
 %%
 %%It hence remains to prove that $N\rtimes H$ has no quotient isomorphic to $\Z$ if and only if both $N$ and $H$ have no quotient isomorphic to $\Z$.
 %%
-%%Since $(N\rtimes H)^{\ab}=N^{\ab}\times H^{\ab}$ it remains to show that 
+%%Since $(N\rtimes H)^{\ab}=N^{\ab}\times H^{\ab}$ it remains to show that
 %\end{proof}
 %%
 %%
