@@ -392,9 +392,9 @@ In the above, \emph{actions} are supposed to preserve the structure. In particul
 %
 %
 The names \FB, FH, FW and FA come from the fact that these properties admit a description in terms of (and were fist studied in the context of) the existence of a Fixed point for actions on reflexive Banach spaces, on Hilbert spaces, on spaces with Walls (or equivalently on CAT(0) cube complexes) and on trees (\emph{Arbres} in french).
-%Finally, a group has cof~$\neq\omega$ (does not have \emph{countable cofinality}) if and only if it cannot be written as a countable increasing union of proper subgroups, see Lemma~\ref{Lemma:CofSub}.
+For a survey on property \FB, see \cite{MR3382026} and the references therein.\PH{ajouté cette ref qui fait ref à monod etc et est plus complète}
 
-For countable groups (and more generally for $\sigma$-compact locally compact groups), property FH is equivalent to the celebrated Kazhdan's property (T) by the Delorme-Guichardet theorem, but this is not true in general. Indeed in \cite{MR2240370}, Cornulier constructed an uncountable discrete group $G$ with Bergman's property which, as we will see just below, implies property FW. Such a group cannot have property (T) as, for discrete groups, it implies finite generation.
+For countable groups (and more generally for $\sigma$-compact locally compact groups), property FH is equivalent to the celebrated Kazhdan's property (T) by the Delorme-Guichardet theorem, but this is not true in general. Indeed in \cite{MR2240370}, Cornulier constructed an uncountable discrete group $G$ with Bergman's property which, as we will see just below, implies property FH. Such a group cannot have property (T) as, for discrete groups, it implies finite generation.
 
 A classical result of the Bass-Serre theory of groups acting on trees \cite{MR0476875},\PH{ajouté ce §} is that a group $G$ has property FA if and only if it satisfies the following three conditions: $G$ has cof~$\neq\omega$, $G$ has no quotient isomorphic to $\Z$ and $G$ is not a non-trivial amalgam.
 In view of this characterization, Theorem~\ref{Thm:FACK} says that property FA almost behave well under wreath products.
@@ -402,7 +402,7 @@ In view of this characterization, Theorem~\ref{Thm:FACK} says that property FA a
 
 
 %There are strong links between the properties of Definition~\ref{Def:FHFA} %\cite{MR1432323,MR0476875,MR3299841,Cornulier2013}
-\begin{prop}\PH{2 possibilités: 1) Comme avant. 2) Proposition, en disant que c'est une compile de résultats connus. Comme tu préfères}
+\begin{prop}\PH{Ok en proposition, c'est très bien comme cela}
 %\GS{J'ai formulé cela comme une proposition pour que cela ressorte plus, à voir ce que tu préfères}
 There are the following implications between the properties of Definition~\ref{Def:FHFA}:
 \begin{equation}\tag{\dag}\label{EQ:Implications}
@@ -416,8 +416,9 @@ The implication $\textnormal{FA}\implies\textnormal{cof~}\neq\omega$ is due to S
 Finally, the implication $\textnormal{FH}\implies \textnormal{FW}$ follows from the fact that a group $G$ has property FW if and only if any action on a real Hilbert space which preserves integral points has bounded orbits \cite{Cornulier2013}.
 
 On the other hand, here are some examples for the strictness of the implications of \eqref{EQ:Implications}.
-Hyperbolic group with property FH do not have property \FB, see \cite{MR2316269} and the references therein.\PH{Ajouté}
-%An infinite finitely generated group with property (T), e.g. $\SL_3(\Z)$, has property FH, but it does not have Bergman's property since its action on its Cayley graph is transitive and hence has an unbounded orbit.
+%Hyperbolic group with property FH do not have property \FB, see \cite{MR2316269} and the references therein.\PH{Ajouté}
+Countable groups with property \FB{} are finite by \cite{MR2137870}, while infinite finitely generated groups with property (T), e.g. $\SL_3(\Z)$, have property FH.\PH{C'est sans doute l'example le plus simple.}
+%but it does not have Bergman's property since its action on its Cayley graph is transitive and hence has an unbounded orbit.
 The group $\SL_2(\Z[\sqrt{2}])$ has property FW but not FH, see \cite{MR3299841}.
 If $G$ is a non-trivial finite group and $H$ is an infinite group with property FA, then $G\wr_HH$ has property FA by Theorem~\ref{Thm:FAFiniteOrbits}, but does not have property FW by Theorem~\ref{Thm:Main}.
 Finally, $\Z$ has cof~$\neq\omega$, while it acts by translations and with unbounded orbits on the infinite $2$-regular tree.
@@ -1041,16 +1042,6 @@ One implication is trivial, as finite abelian groups do not projects onto $\Z$. 
 %\bibliographystyle{plain}
 \begin{thebibliography}{10}
 
-\bibitem{MR2316269}
-Uri Bader, Alex Furman, Tsachik Gelander, and Nicolas Monod.
-\newblock Property ({T}) and rigidity for actions on {B}anach spaces.
-\newblock {\em Acta Math.}, 198(1):57--105, 2007.
-
-\bibitem{Bandelt1984}
-Hans-J{\"{u}}rgen Bandelt.
-\newblock Retracts of hypercubes.
-\newblock {\em J. Graph Theory}, 8(4):501--510, 1984.
-
 \bibitem{MR2405677}
 Hans-J{\"{u}}rgen Bandelt and Victor Chepoi.
 \newblock {Metric graph theory and geometry: a survey}.
@@ -1062,6 +1053,12 @@ Bachir Bekka, Pierre de~la Harpe, and Alain Valette.
 \newblock {\em Kazhdan's property ({T})}, volume~11 of {\em New Mathematical
   Monographs}.
 \newblock Cambridge University Press, Cambridge, 2008.
+
+\bibitem{MR2137870}
+Nathanial Brown and Erik Guentner.
+\newblock Uniform embeddings of bounded geometry spaces into reflexive {B}anach
+  space.
+\newblock {\em Proc. Amer. Math. Soc.}, 133(7):2045--2050, 2005.
 
 \bibitem{MR2671183}
 Indira Chatterji, Cornelia Dru\c{t}u, and Fr\'{e}d\'{e}ric Haglund.
@@ -1135,6 +1132,12 @@ Ashot Minasyan.
 Markus Neuhauser.
 \newblock Relative property ({T}) and related properties of wreath products.
 \newblock {\em Math. Z.}, 251(1):167--177, 2005.
+
+\bibitem{MR3382026}
+Piotr~W. Nowak.
+\newblock Group actions on {B}anach spaces.
+\newblock In {\em Handbook of group actions. {V}ol. {II}}, volume~32 of {\em
+  Adv. Lect. Math. (ALM)}, pages 121--149. Int. Press, Somerville, MA, 2015.
 
 \bibitem{MR0476875}
 Jean-Pierre Serre.
