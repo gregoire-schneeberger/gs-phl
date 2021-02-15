@@ -98,8 +98,9 @@
 %
 %
 \begin{abstract}
-If $\mathbf{S}$ is a structure over (a concrete category over)\GS{ajout Category}\PH{concrete, not concert :-), ajout over pour ne pas confondre concrete over metric avec concrete (= concrete over set)} metric spaces, we say that a group G has property \BS{} if any action on a $\mathbf S$-space has bounded orbits. Examples of such structures include metric spaces, Hilbert spaces, CAT(0) cube complexes, connected median graphs, trees or ultra-metric spaces.
-The corresponding properties \BS{} are respectively Bergman's property, property FH (which, for countable groups, is equivalent to the celebrated Kazhdan's property (T)), property FW (both for CAT(0) cube complexes and for connected median graphs), property FA and uncuntable cofinality (cof~$\neq\omega$).
+If $\mathbf{S}$ is a structure over (a concrete category over) \GS{Ajout des espaces de Banach + \FB}%\GS{ajout Category}\PH{concrete, not concert :-), ajout over pour ne pas confondre concrete over metric avec concrete (= concrete over set)} 
+metric spaces, we say that a group G has property \BS{} if any action on a $\mathbf S$-space has bounded orbits. Examples of such structures include metric spaces, reflexive Banach spaces, Hilbert spaces, CAT(0) cube complexes, connected median graphs, trees or ultra-metric spaces.
+The corresponding properties \BS{} are respectively Bergman's property, property \FB, property FH (which, for countable groups, is equivalent to the celebrated Kazhdan's property (T)), property FW (both for CAT(0) cube complexes and for connected median graphs), property FA and uncuntable cofinality (cof~$\neq\omega$).
 
 Our main result is that for a large class of structures $\mathbf{S}$, the wreath product $G\wr_XH$ has property \BS{} if and only if both $G$ and $H$ have property \BS{} and $X$ is finite. On one hand, this encompasses in a general setting previously known results for properties FH and FW. On the other hand, this also applies to the Bergman's property.
 Finally, we also obtain that $G\wr_XH$ has cof~$\neq\omega$ if and only if both $G$ and $H$ have cof~$\neq\omega$ and $H$ acts on $X$ with finitely many orbits.
@@ -145,7 +146,7 @@ When working with group properties, it is natural to ask if they are stable unde
 
 A $\mathbf{S}$-space is a metric space with an ``additional structure'' and we will said that a group $G$ has \emph{property \BS{}} if every action by isometries which preserve the $\mathbf{structure}$ on a $\mathbf{S}$-space has bounded orbits, see Definitions~\ref{Def:Categoric} and ~\ref{Def:PropBS} for formal statements. We note that having one bounded orbit implies that all the orbits are bounded.
 
-In the context of properties defined by actions with bounded orbits, the first result concerning wreath products, due to Cherix, Martin and Valette and later refined by Neuhauser, concerns Kazhdan's property (T).\PH{Ok de pas definir ! Rajouté Kazhdan's pour que ce soit clair}
+In the context of properties defined by actions with bounded orbits, the first result concerning wreath products, due to Cherix, Martin and Valette and later refined by Neuhauser, concerns Kazhdan's property (T).%\PH{Ok de pas definir ! Rajouté Kazhdan's pour que ce soit clair}
 %
 %
 \begin{thm}[\cite{Cherix2004,Neuhauser2005a}] \label{T:Wreath_prop_T}
@@ -162,8 +163,8 @@ The corresponding result for property FA (every action on tree has bounded orbit
 Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which $H$ acts with finitely many orbits and without fixed points.
 Then $G\wr_XH$ has property FA if and only if $H$ has property FA, $G$ has no quotient isomorphic to $\Z$ and can not be written as a countable increasing union of proper subgroups.
 \end{thm}
-\GS{Ajouter commentaire sur la différence avec $G$ possède FA ?}
-\PH{C'est maintenant mis après la def 2.5}
+%\GS{Ajouter commentaire sur la différence avec $G$ possède FA ?}
+%\PH{C'est maintenant mis après la def 2.5}
 %
 %
 Finally, in a recent note, the authors proved an analogous of Theorem~\ref{T:Wreath_prop_T} for property FW (every action on wall spaces has bounded orbits):
@@ -184,7 +185,7 @@ But more group properties can be characterized in terms of actions with bounded 
 By adopting the point of view of actions with bounded orbits, we obtain a unified proof of the following result; see also Theorem~\ref{Thm:Technic} for the general (and more technical) statement.
 %
 %
-\begin{mainthm}\label{Thm:Main}\PH{Rajouté \FB{} (en disant avant ce que c'est)}
+\begin{mainthm}\label{Thm:Main}
 Let \BS{} be any one of the following properties: Bergman's property, property \FB, property FH or property FW.
 Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which $H$ acts. Then the wreath product $G \wr_X H$ has property \BS{} if and only if $G$ and $H$ have property \BS{} and $X$ is finite.
 \end{mainthm}
@@ -368,7 +369,7 @@ Then $d_\infty(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$ is an ultrametric on $
 %
 %
 %
-\paragraph{Some classical group properties}\PH{Ajouté ``some classical''}
+\paragraph{Some classical group properties}%\PH{Ajouté ``some classical''}
 We now discuss the bounded orbits properties introduced above for actions on various classes of metric spaces.
 %\PH{Peut-être mettre une phrase avec les réf de première fois où ça été étudié. Soit avant la déf, soit dans le paragraphe après} \GS{On a mis déjà pas mal de références à mon avis...}
 %
@@ -378,7 +379,7 @@ Let $G$ be a group.
 It is said to have
 \begin{itemize}
 \item\emph{Bergman's property} if any action on a metric space has bounded orbits,
-\item\emph{property \FB} if any action on a reflexive real Banach space has bounded orbits,\PH{ajouté \FB{} ici, dans la description qui suit et dans l'intro}
+\item\emph{property \FB} if any action on a reflexive real Banach space has bounded orbits,%\PH{ajouté \FB{} ici, dans la description qui suit et dans l'intro}
 \item \emph{property FH} if any action on a real Hilbert space has bounded orbits,
 \item
 \emph{property FW} if any action on a connected median graph has bounded orbits,
@@ -392,17 +393,17 @@ In the above, \emph{actions} are supposed to preserve the structure. In particul
 %
 %
 The names \FB, FH, FW and FA come from the fact that these properties admit a description in terms of (and were fist studied in the context of) the existence of a Fixed point for actions on reflexive Banach spaces, on Hilbert spaces, on spaces with Walls (or equivalently on CAT(0) cube complexes) and on trees (\emph{Arbres} in french).
-For a survey on property \FB, see \cite{MR3382026} and the references therein.\PH{ajouté cette ref qui fait ref à monod etc et est plus complète}
+For a survey on property \FB, see \cite{MR3382026} and the references therein. %\PH{ajouté cette ref qui fait ref à monod etc et est plus complète}
 
 For countable groups (and more generally for $\sigma$-compact locally compact groups), property FH is equivalent to the celebrated Kazhdan's property (T) by the Delorme-Guichardet theorem, but this is not true in general. Indeed in \cite{MR2240370}, Cornulier constructed an uncountable discrete group $G$ with Bergman's property which, as we will see just below, implies property FH. Such a group cannot have property (T) as, for discrete groups, it implies finite generation.
 
-A classical result of the Bass-Serre theory of groups acting on trees \cite{MR0476875},\PH{ajouté ce §} is that a group $G$ has property FA if and only if it satisfies the following three conditions: $G$ has cof~$\neq\omega$, $G$ has no quotient isomorphic to $\Z$ and $G$ is not a non-trivial amalgam.
+A classical result of the Bass-Serre theory of groups acting on trees \cite{MR0476875}, is that a group $G$ has property FA if and only if it satisfies the following three conditions: $G$ has cof~$\neq\omega$, $G$ has no quotient isomorphic to $\Z$ and $G$ is not a non-trivial amalgam.
 In view of this characterization, Theorem~\ref{Thm:FACK} says that property FA almost behave well under wreath products.
 
 
 
 %There are strong links between the properties of Definition~\ref{Def:FHFA} %\cite{MR1432323,MR0476875,MR3299841,Cornulier2013}
-\begin{prop}\PH{Ok en proposition, c'est très bien comme cela}
+\begin{prop}%\PH{Ok en proposition, c'est très bien comme cela}
 %\GS{J'ai formulé cela comme une proposition pour que cela ressorte plus, à voir ce que tu préfères}
 There are the following implications between the properties of Definition~\ref{Def:FHFA}:
 \begin{equation}\tag{\dag}\label{EQ:Implications}
@@ -417,7 +418,7 @@ Finally, the implication $\textnormal{FH}\implies \textnormal{FW}$ follows from 
 
 On the other hand, here are some examples for the strictness of the implications of \eqref{EQ:Implications}.
 %Hyperbolic group with property FH do not have property \FB, see \cite{MR2316269} and the references therein.\PH{Ajouté}
-Countable groups with property \FB{} are finite by \cite{MR2137870}, while infinite finitely generated groups with property (T), e.g. $\SL_3(\Z)$, have property FH.\PH{C'est sans doute l'example le plus simple.}
+Countable groups with property \FB{} are finite by \cite{MR2137870}, while infinite finitely generated groups with property (T), e.g. $\SL_3(\Z)$, have property FH.%\PH{C'est sans doute l'example le plus simple.}
 %but it does not have Bergman's property since its action on its Cayley graph is transitive and hence has an unbounded orbit.
 The group $\SL_2(\Z[\sqrt{2}])$ has property FW but not FH, see \cite{MR3299841}.
 If $G$ is a non-trivial finite group and $H$ is an infinite group with property FA, then $G\wr_HH$ has property FA by Theorem~\ref{Thm:FAFiniteOrbits}, but does not have property FW by Theorem~\ref{Thm:Main}.
@@ -440,7 +441,7 @@ Finally, $\Z$ has cof~$\neq\omega$, while it acts by translations and with unbou
 
 It is possible to consider relative versions of the properties appearing in Definition~\ref{Def:FHFA}.
 If $G$ is a group and $H$ a subgroup of $G$% and \BS{} one of the property of Definition~\ref{Def:FHFA} defined by ``every action on $\mathbf{S}$-spaces is bounded''
-, we say that the pair $(G,H)$ has \emph{relative property \BS} if for every $G$ action on a $\mathbf{S}$-space, the $H$ orbits are bounded.\PH{enlevé le rappel de \BS}
+, we say that the pair $(G,H)$ has \emph{relative property \BS} if for every $G$ action on a $\mathbf{S}$-space, the $H$ orbits are bounded.
 A group $G$ has property \BS{} if and only if for every subgroup $H$ the pair $(G,H)$ has relative property \BS{}, and if and only if for every overgroup $L$ the pair $(L,G)$ has relative property \BS.
 %
 %
@@ -459,7 +460,7 @@ A group $G$ has property \BS{} if and only if for every subgroup $H$ the pair $(
 \subsection{Groups acting with bounded orbits on \texorpdfstring{$\mathbf S$}{\textbf{S}}-spaces}
 It is possible to define other properties in the spirit of Definition~\ref{Def:FHFA} for any ``additional structure on metric spaces''.
 In order to give a uniform treatment of all of them, we will use the notion of quasipseudo-metric spaces and the language of category theory.
-A reader not familiar with category theory and interested only in one specific structure\PH{enlevé la phrase sur les Banachs} %(as for example Banach spaces and groups acting with bounded orbits on them)\GS{Ajouter cet exemple, cf Monod, dans la section 2.2},
+A reader not familiar with category theory and interested only in one specific structure%\PH{enlevé la phrase sur les Banachs} %(as for example Banach spaces and groups acting with bounded orbits on them)\GS{Ajouter cet exemple, cf Monod, dans la section 2.2},
 may forget all these general considerations and only verify that the arguments of Section~\ref{Section:Proof} apply for their favorite structure.
 %
 %
@@ -512,9 +513,9 @@ A pair $(G,H)$ of a group and a subgroup has \emph{relative property \BS} if for
 %
 All the properties of Definition~\ref{Def:FHFA} are of the form \BS.
 Examples of other interesting properties include $\mathbf{R}$-trees (also called \emph{real trees}) or (some specific subclass of) Banach spaces.
-The property F$\mathbf{R}$ of having bounded actions on $\mathbf{R}$-trees is known to be strictly stronger than FA \cite{MR3465847}. Theorem~\ref{Thm:FAFiniteOrbits} holds whenever property FA is replaced by property F$\mathbf{R}$, with a similar proof.\PH{Enlevé la phrase sur les Banachs, puisque c'est maintenant dans le thm principal}
-We also have
-\begin{exmp}\PH{Ajouté l'exemple ici}
+The property F$\mathbf{R}$ of having bounded actions on $\mathbf{R}$-trees is known to be strictly stronger than FA \cite{MR3465847}. Theorem~\ref{Thm:FAFiniteOrbits} holds whenever property FA is replaced by property F$\mathbf{R}$, with a similar proof. %\PH{Enlevé la phrase sur les Banachs, puisque c'est maintenant dans le thm principal}
+We also have \GS{Manque la suite ?}
+\begin{exmp}\PH{Ajouté l'exemple ici}\GS{On doit peut être un peu introduire cet exemple qui semble un peu tomber du ciel...}
 Let $Z^n$ be the integer lattice of dimension $n$, that is $Z^n$ is the Cayley graph of $\Z^n$ for the standard generating set.
 Then every infinite subgroup of $\Aut(Z^n)$ projects onto $\Z$. Hence, we obtain that a group $G$ has no quotient isomorphic to $\Z$ if and only if every $G$ action on $Z$ has bounded orbits, if and only if every $G$ action on $Z^n$ has bounded orbits. Let us denote by B$\Z$ this property.
 
@@ -977,7 +978,7 @@ That is, the diameter of $G\wr_YH.z$ is itself bounded by $\max\{D_0,D_1,\dots,D
 \end{proof}
 %
 %
-While\PH{J'ai réécrit tout ce qui suit} the fact that trees do not have cartesian powers is an obstacle to our methods, we still have a weak version of Theorem~\ref{Thm:Technic} for property~FA.
+While the fact that trees do not have cartesian powers is an obstacle to our methods, we still have a weak version of Theorem~\ref{Thm:Technic} for property~FA.
 %Before stating it, remind that by \cite{MR0476875} a group $G$ has property FA if and only if it satisfies the following three conditions
 %\begin{enumerate}
 %\item $G$ has cof~$\neq\omega$,
@@ -1007,8 +1008,8 @@ By Corollary~\ref{Cor:Wreath}, Theorem~\ref{Thm:UncCoun} and Lemma~\ref{Lemma:Z}
 Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts.
 Then
 \begin{enumerate}
-\item If $G\wr_XH$ has property FA, then $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G$ has no quotient isomorphic to $\Z$\PH{Changé la formulation pour suivre Serre} and $G$ has cof~$\neq\omega$,
-\item If both $G$ and $H$ have no quotient isomorphic to $\Z$, have cof~$\neq\omega$ and $H$ acts on $X$ with finitely many orbits, then $G\wr_XH$ has no quotient isomorphic to $\Z$ and has cof~$\neq\omega$,\PH{Rajouté ce point, à voir ce que l'on veut laisser}
+\item If $G\wr_XH$ has property FA, then $H$ has property FA, $H$ acts on $X$ with finitely many orbits, $G$ has no quotient isomorphic to $\Z$ and $G$ has cof~$\neq\omega$,
+\item If both $G$ and $H$ have no quotient isomorphic to $\Z$, have cof~$\neq\omega$ and $H$ acts on $X$ with finitely many orbits, then $G\wr_XH$ has no quotient isomorphic to $\Z$ and has cof~$\neq\omega$,
 \item If both $G$ and $H$ have property FA and $X$ is finite, then $G\wr_XH$ has property~FA.
 \end{enumerate}
 \end{prop}
@@ -1024,7 +1025,8 @@ Then
 %
 Moreover, by using Lemma~\ref{Lemma:Cof} we can get ride of the ``finitely many orbits'' hypothesis in Theorem~\ref{Thm:FACK} in order to obtain Theorem~\ref{Thm:FAFiniteOrbits}.
 
-Observe\PH{Rajouté ce dernier §. À voir si on le laisse, le change un peu ou l'enlève.} that our statement of Theorem~\ref{Thm:FACK} differs of the original statement of \cite{Cornulier2011}.
+Observe%\PH{Rajouté ce dernier §. À voir si on le laisse, le change un peu ou l'enlève.} 
+that our statement of Theorem~\ref{Thm:FACK} differs of the original statement of \cite{Cornulier2011}.
 Indeed, where we ask $G$ to have cof~$\neq\omega$ and no quotient isomorphic to $\Z$, the authors of \cite{Cornulier2011} ask $G$ to have cof~$\neq\omega$ and finite abelianization.
 However, these two sets of conditions are equivalent.
 One implication is trivial, as finite abelian groups do not projects onto $\Z$. The other implication follows, for countable abelian groups, from the structure theorem of finitely generated abelian groups. For the general case, Y. Cornulier kindly reminded us that any infinite abelian group as a countable quotient.
