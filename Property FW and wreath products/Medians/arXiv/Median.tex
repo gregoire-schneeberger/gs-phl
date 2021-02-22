@@ -13,14 +13,13 @@
 \usepackage{mathtools}% compléments à amsmath
 \usepackage{amssymb,amsfonts}% symboles mathématiques supplémentaires
 \usepackage{amsthm}% environnement ams-theorem
-%\usepackage{hyperref}%
-\usepackage[colorlinks,breaklinks,bookmarks,plainpages=false,unicode=true]{hyperref}%
-\usepackage{todonotes} %ajouter des commentaires
-\newcounter{mycomment}
-\newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33},size=\small]{\textbf{Commentaire [\uppercase{#1}\themycomment]:}~#2}}}
-\newcommand{\PH}[1]{\todo[color={blue!33},size=small]{\textbf{PH :} #1}}
-\newcommand{\PHInline}[1]{\todo[color={blue!33},size=small,inline]{\textbf{PH :} #1}}
-\newcommand{\GS}[1]{\mycomment[GS]{#1}}
+\usepackage{hyperref}%
+%\usepackage[colorlinks,breaklinks,bookmarks,plainpages=false,unicode=true]{hyperref}%
+%\usepackage{todonotes} %ajouter des commentaires
+%\newcounter{mycomment}
+%\newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33},size=\small]{\textbf{Commentaire [\uppercase{#1}\themycomment]:}~#2}}}
+%\newcommand{\PH}[1]{\todo[color={blue!33},size=small]{#1}}
+%\newcommand{\GS}[1]{\mycomment[GS]{#1}}
 %
 %
 %
@@ -97,7 +96,6 @@ The corresponding properties \BS{} are respectively Bergman's property, property
 Our main result is that for a large class of structures $\mathbf{S}$, the wreath product $G\wr_XH$ has property \BS{} if and only if both $G$ and $H$ have property \BS{} and $X$ is finite. On one hand, this encompasses in a general setting previously known results for properties FH and FW. On the other hand, this also applies to the Bergman's property.
 Finally, we also obtain that $G\wr_XH$ has cof~$\neq\omega$ if and only if both $G$ and $H$ have cof~$\neq\omega$ and $H$ acts on $X$ with finitely many orbits.
 \end{abstract}
-\PHInline{J'ai commencé à regarder pour les groupes topologiques. Pour le moment je ne m'occupe que de la section 3 (les preuves) afin de voir si cela marche.}
 %
 %
 %
@@ -625,7 +623,7 @@ Let $G$ be a group and $H$ be a quotient.
 If $G$ has property \BS, then so has $H$.
 \end{lem}
 \begin{proof}
-We have $H\cong G/N$. If $H$ acts continuously\PH{J'ai réécrit la preuve} on some $\mathbf{S}$-space $X$ with an unbounded orbit, then the $G\twoheadrightarrow H$ gives us a continuous $G$ action on $X$, with the same orbits as the $H$ action.
+We have $H\cong G/N$. If $H$ acts on some $\mathbf{S}$-space $X$ with an unbounded orbit, then the $G$ action on $X$ defined by $g.x\coloneqq gN.x$ has also an unbounded orbit.
 \end{proof}
 %
 %
@@ -634,8 +632,7 @@ Let $G$ be a group and $A$ an $B$ be two subgroups such that $G=AB$.
 If both $(G,A)$ and $(G,B)$ have relative property \BS, then $G$ has property \BS.
 \end{lem}
 \begin{proof}
-Let $X$ be a $\mathbf{S}$-space on which $G$ acts continuously and let $x$ be an element of $X$.
-Then the restrictions of the $G$ action to $A$ and to $B$ are continuous.\PH{J'ai ajouté cette phrase}
+Let $X$ be a $\mathbf{S}$-space on which $G$ acts and let $x$ be an element of $X$.
 Let $D_1$ be the diameter of $A.x$ and $D_2$ the diameter of $B.x$. By assumption, they both are finite.
 Since $A$ acts by isometries, all the $a.Bx$ have diameter $D_2$.
 Let $y$ be an element of $G.x$. There exists $a\in A$ such that $y$ belongs to $a.Bx$. Since $1$ belongs to $B$, $y$ is at distance at most $D_2$ of $a.x$ and hence at distance at most $D_1+D_2$ of $x$.
@@ -685,7 +682,7 @@ Then $G$ has property \BS{} if and only if $H$ has property \BS{} and the pair $
 \begin{proof}
 One direction is simply Lemma~\ref{Lemma:Quotient} and the definition of relative property~\BS.
 
-On the other hand\PH{Il faut vérifier que si l'action de $G$ sur $X$ est continue, alors l'action de $G/N$ sur $X/N$ est continue.}, let $(X,d)$ be a quasipseudo-metric space on which $G$ acts by isometries and let $x$ be an element of $X$.
+On the other hand, let $(X,d)$ be a quasipseudo-metric space on which $G$ acts by isometries and let $x$ be an element of $X$.
 Let $\setst{g_i}{i\in I}$ be a transversal for $N$, that is $H\cong\{g_iN\}$.
 By assumption, $N.x$ is bounded of diameter $D_1$ and for any $i\in I$ the subset $g_iN.x$ of $X$ has also diameter $D_1$.
 Since $N$ is a subgroup of isometries of $X$, the map $d'\colon X/N\times X/N\to\R$ defined by $d'([x],[y])\coloneqq\inf\setst{d(x',y')}{x'\in N.x,y'\in N.y}$ is the quotient quasipseudo-distance on $X/N$.
@@ -701,10 +698,9 @@ Hence, the orbit $G.x$ is bounded.
 %
 Since the square graph, which is not median, is a quotient of the $2$-regular infinite tree by a subgroup of isometries, the proof of Proposition~\ref{Prop:Extension} does not carry over for properties FW and FA.
 Similarly, the quotient of $\R$ by the action of $\Z/2\Z$ given by $x\mapsto-x$ is not an Hilbert space and hence the proof of Proposition~\ref{Prop:Extension} does not apply to property FH.
-However, the statement of Proposition~\ref{Prop:Extension} (stability under extension) remains true for properties FH\PH{Quid de \FB ? Même preuve que pour FH ?}, FW and FA.
+However, the statement of Proposition~\ref{Prop:Extension} (stability under extension) remains true for properties FH, FW and FA.
 For property FH this is an exercice using the fixed-point definition, for property FW and FA, see \cite{Cornulier2013} and \cite{MR0476875}.
 
-\PHInline{Je me suis arrêté ici dans ma relecture.}
 We now state a result on infinite direct sums.
 %
 %

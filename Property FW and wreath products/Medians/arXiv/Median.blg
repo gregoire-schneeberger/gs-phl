@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Median.aux
+The style file: plain.bst
+Database file #1: biblio.bib
+Warning--there's a number but no volume in MR1023471
+You've used 18 entries,
+            2118 wiz_defined-function locations,
+            641 strings with 7068 characters,
+and the built_in function-call counts, 6620 in all, are:
+= -- 720
+> -- 195
+< -- 8
++ -- 78
+- -- 60
+* -- 405
+:= -- 989
+add.period$ -- 58
+call.type$ -- 18
+change.case$ -- 82
+chr.to.int$ -- 0
+cite$ -- 19
+duplicate$ -- 324
+empty$ -- 527
+format.name$ -- 60
+if$ -- 1473
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 20
+newline$ -- 95
+num.names$ -- 36
+pop$ -- 75
+preamble$ -- 1
+purify$ -- 66
+quote$ -- 0
+skip$ -- 284
+stack$ -- 0
+substring$ -- 502
+swap$ -- 137
+text.length$ -- 8
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 68
+warning$ -- 1
+while$ -- 66
+width$ -- 20
+write$ -- 207
+(There was 1 warning)
