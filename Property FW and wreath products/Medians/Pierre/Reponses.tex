@@ -1,0 +1,123 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel} %utilisation du package français
+%
+%
+%
+\usepackage{textcomp}% améliore certains symboles de bases
+\usepackage{lmodern}% remplace la police ComputerModern par LatinModern (+ mieux bien)
+%
+%
+%
+\usepackage{mathtools}% compléments à amsmath
+\usepackage{amssymb,amsfonts}% symboles mathématiques supplémentaires
+\usepackage{amsthm}% environnement ams-theorem
+%\usepackage{hyperref}%
+\usepackage[colorlinks,breaklinks,bookmarks,plainpages=false,unicode=true]{hyperref}%
+\usepackage{todonotes} %ajouter des commentaires
+\newcounter{mycomment}
+\newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33},size=\small]{\textbf{Commentaire [\uppercase{#1}\themycomment]:}~#2}}}
+\newcommand{\PH}[1]{\todo[color={blue!33},size=small]{\textbf{PH :} #1}}
+\newcommand{\PHInline}[1]{\todo[color={blue!33},size=small,inline]{\textbf{PH :} #1}}
+\newcommand{\GS}[1]{\mycomment[GS]{#1}}
+%
+%
+%
+%\usepackage{datetime} %ajoute la date et l'heure
+%
+%
+%
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{cor}[lem]{Corollary}
+\newtheorem{prop}[lem]{Proposition}
+\newtheorem{thm}[lem]{Theorem}
+\newtheorem{mainthm}{Theorem}
+\renewcommand{\themainthm}{\Alph{mainthm}}
+\theoremstyle{definition}
+\newtheorem{defn}[lem]{Definition}
+\newtheorem{rem}[lem]{Remark}
+\newtheorem{exmp}[lem]{Example}
+%
+%
+%
+\DeclareMathOperator\Cayley{Cayl}
+\DeclareMathOperator\Ind{Ind}
+\DeclareMathOperator\SL{SL}
+\DeclareMathOperator\Sym{Sym}
+\DeclareMathOperator\diag{diag}
+\DeclareMathOperator\Hom{Hom}
+\DeclareMathOperator\Aut{Aut}
+\DeclareMathOperator\ab{ab}
+\DeclareMathOperator\diam{diam}
+%
+%
+\newcommand*{\FB}{(FB\textsubscript{r})}
+\newcommand*{\orbite}{\mathcal O}
+\newcommand*{\field}[1]{\mathbf{#1}}
+\newcommand*{\Z}{\field{Z}}
+\newcommand*{\N}{\field{N}}
+\newcommand*{\R}{\field{R}}
+\newcommand*{\BS}{B$\mathbf{S}$}
+\newcommand{\setst}[2]{\{#1\ |\ #2\}}
+\newcommand*{\powerset}[1]{\mathcal P(#1)}
+\newcommand*{\powersetf}[1]{\mathcal P_{\textnormal{f}}(#1)}
+\newcommand*{\powersetcof}[1]{\mathcal P_{\textnormal{cof}}(#1)}
+%
+%
+\title{Réponses}
+\author{Paul-Henry Leemann, Grégoire Schneeberger}
+\date{\today}
+%
+%
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+Encore un grand merci pour tes remarques attentives et pertinentes.
+
+\begin{itemize}
+\item
+\textit{Pourquoi ``Property (T)?? avec parenthèses, et ``Property FH'' sans ?}\\
+L'idée était que ``FH'' est le raccourci de ``Fixed point on Hilbert'', alors que ``(T)'' représente ``la représentation Triviale est isolée (d'où les parenthèses)''. Ceci dit, c'est peut-être plus lisible de mettre des parenthèses partout ; c'est le cas maintenant.
+\item
+\textit{Theorem 1.1. Pourquoi voulez-vous que $G\neq\{1\}$ ? Si $G = \{1\}$, alors $G\wr_XH = H^{(X)}$ a (T) ssi $H$ a $(T)$ et $X$  est fini.}\\
+Sauf erreur, comme $G\wr_XH=(\bigoplus_X G)\rtimes H)$, si $G = \{1\}$ alors $G\wr_XH=H$, d'où l'importance de l'hypothèse. Par contre, il est vrai que si $H=\{1\}$ on a $G\wr_XH=G^{(X)}$ et qu'il n'est donc pas nécessaire de supposer $H$ non trivial.
+\item
+\textit{Theorem 1.2. Ce n’est pas exactement la formulation de [8], où Cornulier et Kar écrivent (leur Theorem 1.1) que $H$ (leur $A$) a un abélianisé fini.}\\
+Effectivement. Comme tu l'as justement deviné, les deux formulations sont équivalentes. Nous discutons cela dans le dernier paragraphe du texte. Nous avons choisi de ne pas suivre la formulation de Cornulier et Kar, afin d'expliciter le lien avec la propriété (FH) (qui est généralement énoncée comme étant équivalente à la formulation de [8] + pas produit amalgamé).
+\item
+\textit{La notation $cof\neq\omega$ pour une propriété de groupe ne me plaît pas.}\\
+Tu as raison, cela nuit sans doute à la lisibilité et la notation ``uncountable cofinality'' est sans doute meilleure.
+\item
+\textit{Un peu plus bas quand vous écrivez $g.\{x_1,...,x_n\} = \{g.x_1,...,g.x_n\}$, cela semble indiquer que tout élément de $\mathcal P(X)$ est fini --- ce qui n’est justement pas le cas.}\\
+Remplacé par : $g.Y=\setst{g.y}{y\in Y}$ for $Y\subset X$.
+\item
+\textit{Juste avant le Lemma 2.3. Si ces caractérisations sont well-known, vous devriez pouvoir indiquer une référence.}\\
+C'est fait: \cite{MR2240370}
+\item
+\textit{Definition 2.5. Il faudrait au moins dire “isometric action” au lieu de “action”, six fois ici et beaucoup d’autres fois plus bas (Lemma 2.11, 2.12, ...). Est-ce que ça suffit à chaque fois ?}\\
+Cela ne suffit pas, notamment dans le cas des arbres (si on prend la réalisation géométrique). En effet, l'arbre 2-régulier a $\mathbf Z\rtimes(\Z/2\Z)$ comme groupe d'isomorphismes (translations et symétrie), alors que sa réalisation géométrique $\mathbf R$ a $\mathbf R\rtimes(\Z/2\Z)$ comme group d'isométries. C'est pour cela que parler d'actions par isométries n'est pas forcément pertinent.
+\end{itemize}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\end{document}
