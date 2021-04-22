@@ -12,6 +12,11 @@ Bachir Bekka, Pierre de~la Harpe, and Alain Valette.
   Monographs}.
 \newblock Cambridge University Press, Cambridge, 2008.
 
+\bibitem{MR2978328}
+Marc Bourdon.
+\newblock Un th\'{e}or\`eme de point fixe sur les espaces {$L^p$}.
+\newblock {\em Publ. Mat.}, 56(2):375--392, 2012.
+
 \bibitem{MR2137870}
 Nathanial Brown and Erik Guentner.
 \newblock Uniform embeddings of bounded geometry spaces into reflexive {B}anach
@@ -58,8 +63,8 @@ Pierre de~la Harpe and Alain Valette.
 
 \bibitem{2017arXiv170500834G}
 Anthony {Genevois}.
-\newblock {Lamplighter groups, median spaces, and a-T-menability}.
-\newblock {\em arXiv e-prints}, page arXiv:1705.00834, May 2017.
+\newblock {L}amplighter groups, median spaces, and {H}ilbertian geometry.
+\newblock {\em arXiv e-prints}, page arXiv:1705.00834, January 2021.
 
 \bibitem{MR1663779}
 V.~Gerasimov.
@@ -103,5 +108,11 @@ Jean-Pierre Serre.
 \newblock Soci{\'e}t{\'e} Math{\'e}matique de France, Paris, 1977.
 \newblock Avec un sommaire anglais, R{\'e}dig{\'e} avec la collaboration de
   Hyman Bass, Ast{\'e}risque, No. 46.
+
+\bibitem{MR4119107}
+Romain Tessera and Alain Valette.
+\newblock Locally compact groups with every isometric action bounded or proper.
+\newblock {\em J. Topol. Anal.}, 12(2):267--292, 2020.
+\newblock With an appendix by Corina Ciobotaru.
 
 \end{thebibliography}

@@ -85,7 +85,12 @@
 %
 %
 %
+Bonjour Pierre,
 Encore un grand merci pour tes remarques attentives et pertinentes.
+Si nous avons tenu compte de toutes tes remarques, nous te répondons si après que sur les points qui méritent explications. Dans les autres cas, les corrections suggérées ont directement été incorporées dans le texte.
+
+Le plus gros changement est une perte de généralité pour gagner en lisibilité. En effet, comme tu le faisais remarquer, nous n'avions pas d'exemples concret venant motiver cette généralité. Exit donc les espaces \emph{quasi-pseudométriques}\footnote{le quasi correspond en effet à la perte de la symétrie} et les \emph{catégories au-dessus de} pour ne garder que les espaces pseudo-métriques et leurs sous-catégories.
+Comme dit par ailleurs, nous pensons qu'il est intéressant de ne pas se restreindre aux sous-catégories pleines, car cela ne simplifierait pas le texte et on perdrait la réalisation géométrique des graphes.
 
 \begin{itemize}
 \item
@@ -107,9 +112,38 @@ Remplacé par : $g.Y=\setst{g.y}{y\in Y}$ for $Y\subset X$.
 \textit{Juste avant le Lemma 2.3. Si ces caractérisations sont well-known, vous devriez pouvoir indiquer une référence.}\\
 C'est fait: \cite{MR2240370}
 \item
-\textit{Definition 2.5. Il faudrait au moins dire “isometric action” au lieu de “action”, six fois ici et beaucoup d’autres fois plus bas (Lemma 2.11, 2.12, ...). Est-ce que ça suffit à chaque fois ?}\\
+\textit{
+Definition 2.5. Il faudrait au moins dire “isometric action” au lieu de “action”, six fois ici et beaucoup d’autres fois plus bas (Lemma 2.11, 2.12, ...). Est-ce que ça suffit à chaque fois ?}\\
 Cela ne suffit pas, notamment dans le cas des arbres (si on prend la réalisation géométrique). En effet, l'arbre 2-régulier a $\mathbf Z\rtimes(\Z/2\Z)$ comme groupe d'isomorphismes (translations et symétrie), alors que sa réalisation géométrique $\mathbf R$ a $\mathbf R\rtimes(\Z/2\Z)$ comme group d'isométries. C'est pour cela que parler d'actions par isométries n'est pas forcément pertinent.
+\item\textit{Avez-vous pensé à la propriété (FHypC)}\\
+Nous n'avons pas pensé à (FHyp$_{\mathbf{C}}$), et nous ne connaissions pas l'article de Bourdon pour $L^p$. On mentionne maintenant après la définition 2.8 ces deux propriétés.
+\item
+\textit{Example 2.10. Ce n’est pas vrai que tout sous-groupe infini de $\Aut(Z^n)$ se projette sur $\Z$ !}\\
+Cela dépend de ce qu'on entend par $\Aut(Z^n)$. Dans notre cas, on regarde les automorphismes de graphe $\Aut_{\mathbf{Graph}}(Z^n)=\Z^n\rtimes F$ où $F$ est fini. Si $\SL(n,\Z)$ préserve le volume, il ne préserve pas les distances. On a clarifié l'énoncé, tout en ne gardant que l'exemple avec $Z$ afin de simplifier sa compréhension.
+\item
+\textit{4 lignes avant Lemma 2.11 : “only the trivial group has BS” ! “only finite
+groupa have BS” ???}\\
+%Non, seulement le groupe trivial. En effet, si $G$ n'est pas trivial, alors on regarde $G$ comme un espace métrique étendu avec $d(x,y)=\infty$ si $x\neq y$. $G$ agit transitivement dessus, et l'orbite et non-bornée par définition.
+Rajouté la phrase: ``Indeed, one can put the extended metric $d(x,y)=\infty$ if $x\neq y$ on $G$ and the action by left multiplication of $G$ on $(G,d)$ is transitive and with an unbounded orbit as soon as $G$ is non trivial.''
+\item
+\textit{Lemma 2.11. L’énoncé est à peu près contenu dans la Remark 2.8 de \cite{MR2240370}, qui se contente de “it is easy to observe”. Est-ce qu’il n’apparaît pas plus explicitement ailleurs ? ce serait bizarre ...}\\
+Au vu de la référence, tu dois parler du lemme 2.3 (caractérisation de uncountable cofinality).
+Dans ce cas, on fait maintenant une référence explicite à \cite{MR2240370}, et il est clair qu'on ne prétend pas de primauté sur ce résultat. C'est fort possible que l'énoncé existe plus explicitement ailleurs, mais nous ne l'avons pas trouvé, malgré avoir cherché. Ce qui est sûr, c'est que Cornulier se contente de cette remarque.
+\item
+\textit{Definition 2.13. Encore faut-il sans doute préciser que $X^n$ est un produit au sens catégorique dans $\mathbf S$, ce qui ne me semble pas impliqué par votre formulation.}\\
+Contrairement à ce que l'on pourrait penser, on n'a pas besoin que ce soit le produit catégorique. C'est des fois le cas, mais des fois ce n'est pas le cas. En particulier, la catégorie des graphes médians ne possède pas de produit catégorique, c'est maintenant explicité dans le texte.
+En effet, soit $P_1$ le chemin de longueur $1$. On montre facilement que si le produit catégorique de $P_1$ avec lui-même existe \textbf{et} est supporté sur le produit cartésien des sommets, alors c'est le produit fort (le carré avec les diagonales), qui n'est pas médian. En faisant un peu plus attention, on arrive à montrer que le produit catégorique de $P_1$ avec lui-même n'existe pas dans la catégorie des graphes médians.
+\item
+\textit{A propos des lignes qui suivent la Remark 2.14. On peut aussi définir la propriété de G d’avoir des orbites bornées pour toute action isométrique en termes de fonctions longueurs. Voir par exemple le début de [TeVa–20].}\\
+Merci de la référence. Elle est maintenant incorporée dans le texte.
+\item\textit{Je me suis amusé à chercher d’autre sens de PMet, voici ce que j’ai trouvé}\\
+On retiendra le premier sens alors (Preparing Mathematicians to Educate Teachers) ! Nous ne connaissions pas ce site sur les acronymes. On essayera de s'en souvenir la prochaine fois.
 \end{itemize}
+%
+%
+%
+\bibliography{../biblio.bib}
+\bibliographystyle{plain}
 %
 %
 %

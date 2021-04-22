@@ -661,7 +661,7 @@ Let $G$ be a group and $H$ be a quotient.
 If $G$ has property \BS, then so has $H$.
 \end{lem}
 \begin{proof}
-We have $H\cong G/N$. If $H$ acts on some $\mathbf{S}$-space $X$ with an unbounded orbit, then the homomorphism $G\twoheadrightarrow H$ gives us a $G$ action on $X$, with the same orbits as the $H$ action.
+We have $H\cong G/N$. If $H$ acts continuously\PH{J'ai réécrit la preuve} on some $\mathbf{S}$-space $X$ with an unbounded orbit, then the $G\twoheadrightarrow H$ gives us a continuous $G$ action on $X$, with the same orbits as the $H$ action.
 \end{proof}
 %
 %
@@ -670,9 +670,8 @@ Let $G$ be a group and $A$ an $B$ be two subgroups such that $G=AB$.
 If both $(G,A)$ and $(G,B)$ have relative property \BS, then $G$ has property \BS.
 \end{lem}
 \begin{proof}
-Let $X$ be a $\mathbf{S}$-space on which $G$ acts and let $x$ be an element of $X$.
-Then the action of $G$ on $X$ restricts to actions on $A$ and $B$.
-%Then the restrictions of the $G$ action to $A$ and to $B$ are continuous.\PH{J'ai ajouté cette phrase}
+Let $X$ be a $\mathbf{S}$-space on which $G$ acts continuously and let $x$ be an element of $X$.
+Then the restrictions of the $G$ action to $A$ and to $B$ are continuous.\PH{J'ai ajouté cette phrase}
 Let $D_1$ be the diameter of $A.x$ and $D_2$ the diameter of $B.x$. By assumption, they both are finite.
 Since $A$ acts by isometries, all the $a.Bx$ have diameter $D_2$.
 Let $y$ be an element of $G.x$. There exists $a\in A$ such that $y$ belongs to $a.Bx$. Since $1$ belongs to $B$, $y$ is at distance at most $D_2$ of $a.x$ and hence at distance at most $D_1+D_2$ of $x$.
@@ -689,9 +688,7 @@ Let $G$ and $H$ be two groups. Then $G\times H$ has property \BS{} if and only i
 %
 %
 \begin{cor}\label{Cor:Semidirect}
-Let $N\rtimes H$ be a 
-%topological\PH{Ajouté ``topological''. Ça signifie que l'action de $H$ sur $N$ est continue. On a besoin de cela pour que produit semidirect interne et externe coincide et soient des groupes topologiques}
-semidirect product. Then
+Let $N\rtimes H$ be a topological\PH{Ajouté ``topological''. Ça signifie que l'action de $H$ sur $N$ est continue. On a besoin de cela pour que produit semidirect interne et externe coincide et soient des groupes topologiques} semidirect product. Then
 \begin{enumerate}
 \item
 If $N\rtimes H$ has property \BS, then so has $H$.
@@ -702,8 +699,7 @@ If both $N$ and $H$ have property \BS, then $N\rtimes H$ also has property \BS.
 %
 %
 \begin{cor}\label{Cor:Wreath}
-Let $G$ and $H$ be two groups and $X$ a set on which $H$ acts. %\PH{Il faut vérifier qu'on a bien un group top…}
-Then,
+Let $G$ and $H$ be two groups and $X$ a set on which $H$ acts\PH{Il faut vérifier qu'on a bien un group top…}. Then,
 \begin{enumerate}
 \item
 If $G\wr_X H$ has property \BS, then so has $H$,
@@ -725,17 +721,13 @@ Then $G$ has property \BS{} if and only if $H$ has property \BS{} and the pair $
 \begin{proof}
 One direction is simply Lemma~\ref{Lemma:Quotient} and the definition of relative property~\BS.
 
-On the other hand, let $(X,d)$ be a pseudo-metric space on which $G$ acts 
-%continuously\PH{Ajouté «continuous»}
-by isometries and let $x$ be an element of $X$.
+On the other hand, let $(X,d)$ be a pseudo-metric space on which $G$ acts continuously\PH{Ajouté «continuous»} by isometries and let $x$ be an element of $X$.
 Let $\setst{g_i}{i\in I}$ be a transversal for $N$, that is $H\cong\{g_iN\}$.
 By assumption, $N.x$ is bounded of diameter $D_1$ and for any $i\in I$ the subset $g_iN.x$ of $X$ has also diameter $D_1$.
 Since $N$ is a subgroup of isometries of $X$, the map $d'\colon X/N\times X/N\to\R$ defined by $d'([x],[y])\coloneqq\inf\setst{d(x',y')}{x'\in N.x,y'\in N.y}$ is the quotient pseudo-distance on $X/N$.
 Indeed, while the map $d'$ might not satisfies the triangle inequality for a generic quotient $X/\sim$, this is the case if the quotient is by a subgroup of isometries; details are left to the reader.
 Moreover, if $d$ satisfies the strong triangle inequality, then so does $d'$.
-The quotient action of $H\cong G/N$ on $X/N$ is 
-%continuous,\PH{Ajouté «continuous»}
-by isometries and the diameter of $H.xN$ is bounded, say by $D_2$.
+The quotient action of $H\cong G/N$ on $X/N$ is continuous,\PH{Ajouté «continuous»} by isometries and the diameter of $H.xN$ is bounded, say by $D_2$.
 In particular, for any $i$ and $j$ in $I$, the distance between the subsets $g_iN.x$ and $g_jN.x$ of $X$ is bounded by $D_2$.
 Since this distance is an infimum, there exists actual elements of $g_iN.x$ and $g_jN.x$ at distance less than $D_2+1$.
 Altogether, we obtain that any $y$ in $G.x$ is at distance at most $D_1+D_2+1$ of~$x$.
@@ -746,9 +738,10 @@ Hence, the orbit $G.x$ is bounded.
 Since the square graph, which is not median, is a quotient of the $2$-regular infinite tree by a subgroup of isometries, the proof of Proposition~\ref{Prop:Extension} does not carry over for properties (FW) and (FA).
 Similarly, the quotient of $\R$ by the action of $\Z/2\Z$ given by $x\mapsto-x$ is not a Banach space and hence the proof of Proposition~\ref{Prop:Extension} does not apply to properties (FH) and \FB.
 However, the statement of Proposition~\ref{Prop:Extension} (stability under extension) remains true for properties (FH), \FB, (FW) and (FA).
-For properties (FH) and \FB, this follows from the fixed-point definition and the fact that a non-empty closed subset of an Hilbert space (respectively of a reflexive Banach space) is an Hilbert space (respectively a reflexive Banach space) itself.
+For properties (FH) and \FB, this follows from the fixed-point definition and the fact that a non-empty closed subset of an Hilbert space (respectively of a reflexive Banach space) is an Hilbert space (respectively a reflexive Banach space) itself.\PH{Rajouté le passage sur \FB.}
 For property (FW) and (FA), see \cite{Cornulier2013} and \cite{MR0476875}.
 
+\PHInline{Je me suis arrêté ici dans ma relecture.}
 We now state a result on infinite direct sums.
 %
 %

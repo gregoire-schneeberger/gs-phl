@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.26)  19 APR 2021 16:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.26)  22 APR 2021 15:16
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -859,83 +859,61 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 140.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 140.
- [1
+
+Overfull \hbox (2.02724pt too wide) in paragraph at lines 151--152
+\T1/lmr/m/n/10 The-o-rem, to prop-erty (FH) (ev-ery ac-tion on affine real Hilb
+ert space has bounded
+ []
+
+[1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (0.24998pt too wide) in paragraph at lines 152--155
+Overfull \hbox (0.24998pt too wide) in paragraph at lines 153--156
 []\T1/lmr/m/n/10 The cor-re-spond-ing re-sult for prop-erty (FA) (ev-ery ac-tio
 n on tree has bounded
  []
 
 [2] [3] [4] [5]
-Overfull \hbox (1.94493pt too wide) in paragraph at lines 410--410
+Overfull \hbox (1.94493pt too wide) in paragraph at lines 413--413
 []\T1/lmr/m/n/10 uncountable
  []
 
 [6] [7] [8]
-Overfull \hbox (4.66597pt too wide) in paragraph at lines 547--548
+Overfull \hbox (4.66597pt too wide) in paragraph at lines 561--562
 []\T1/lmr/m/n/10 For the other di-rec-tion, we will use the fol-low-ing char-ac
 -ter-i-za-tion of Bergman's
  []
 
-
-Overfull \hbox (1.11214pt too wide) in paragraph at lines 568--574
-[]\T1/lmr/m/n/10 For (quasipseudo-/ultra-) met-ric spaces, the cat-e-gor-i-cal 
-prod-uct (cor-re-spond-
- []
-
 [9]
-Overfull \hbox (2.57224pt too wide) in paragraph at lines 575--577
+Overfull \hbox (2.57224pt too wide) in paragraph at lines 591--593
 \T1/lmr/m/n/10 gether with bounded maps. The rea-son be-hind this is the forth-
 com-ing Lemma [][]3.2[][]
  []
 
 
-Overfull \hbox (3.166pt too wide) in paragraph at lines 600--603
+Overfull \hbox (3.166pt too wide) in paragraph at lines 616--619
 []\T1/lmr/m/n/10 Exemples of com-plete met-ric spaces sat-is-fy-ing Propo-si-ti
-on [][]2.15[][] in-clude among
+on [][]2.14[][] in-clude among
  []
 
-[10]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 648.
-
-Overfull \hbox (1.30492pt too wide) in paragraph at lines 675--675
-\T1/lmr/m/n/9 topologiques[]  
- []
-
-
-Overfull \hbox (1.30492pt too wide) in paragraph at lines 675--675
-\T1/lmr/m/n/9 topologiques[]  
- []
-
-
-LaTeX Warning: Marginpar on page 11 moved.
-
-[11] [12] [13]
-Overfull \hbox (4.74918pt too wide) in paragraph at lines 801--802
+[10] [11] [12] [13]
+Overfull \hbox (4.74918pt too wide) in paragraph at lines 824--825
 \T1/lmr/m/n/10 that we used the prim-i-tive ac-tion of the wreath prod-uct in t
 he proof of Lemma [][]3.8[][]. 
  []
 
-[14] [15] [16]
-Underfull \hbox (badness 1466) in paragraph at lines 1015--1018
-[]\T1/lmr/m/n/10 Anthony Genevois.  Lamp-lighter groups, me-dian spaces, and a-
-T-
- []
-
-[17] [18] (./Median.aux)
+[14] [15] [16] (./Median.bbl [17]) [18] (./Median.aux)
 Package rerunfilecheck Info: File `Median.out' has not changed.
 (rerunfilecheck)             Checksum: 52047AE703A90113477466EECA9BF0EC;1146.
  ) 
 Here is how much of TeX's memory you used:
- 22978 strings out of 479023
- 428834 string characters out of 5859397
- 751280 words of memory out of 5000000
- 39868 multiletter control sequences out of 15000+600000
+ 22852 strings out of 479023
+ 425962 string characters out of 5859397
+ 729950 words of memory out of 5000000
+ 39745 multiletter control sequences out of 15000+600000
  505936 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 127i,20n,130p,591b,1112s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 127i,20n,130p,596b,1112s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
 cal/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
 20/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2020/texmf-d
@@ -965,10 +943,10 @@ ic/lm/lmri7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy1
 ive/2020/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2020/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/202
 0/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Median.pdf (18 pages, 511923 bytes).
+Output written on Median.pdf (18 pages, 503646 bytes).
 PDF statistics:
- 498 PDF objects out of 1000 (max. 8388607)
- 430 compressed objects within 5 object streams
- 119 named destinations out of 1000 (max. 500000)
+ 493 PDF objects out of 1000 (max. 8388607)
+ 425 compressed objects within 5 object streams
+ 113 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

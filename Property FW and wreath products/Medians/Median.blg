@@ -4,45 +4,45 @@ The top-level auxiliary file: Median.aux
 The style file: plain.bst
 Database file #1: biblio.bib
 Warning--there's a number but no volume in MR1023471
-You've used 18 entries,
+You've used 20 entries,
             2118 wiz_defined-function locations,
-            641 strings with 7068 characters,
-and the built_in function-call counts, 6620 in all, are:
-= -- 720
-> -- 195
+            657 strings with 7366 characters,
+and the built_in function-call counts, 7259 in all, are:
+= -- 789
+> -- 215
 < -- 8
-+ -- 78
-- -- 60
-* -- 405
-:= -- 989
-add.period$ -- 58
-call.type$ -- 18
-change.case$ -- 82
++ -- 86
+- -- 66
+* -- 453
+:= -- 1095
+add.period$ -- 65
+call.type$ -- 20
+change.case$ -- 91
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 324
-empty$ -- 527
-format.name$ -- 60
-if$ -- 1473
+cite$ -- 21
+duplicate$ -- 346
+empty$ -- 581
+format.name$ -- 66
+if$ -- 1604
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 20
-newline$ -- 95
-num.names$ -- 36
-pop$ -- 75
+int.to.str$ -- 20
+missing$ -- 22
+newline$ -- 106
+num.names$ -- 40
+pop$ -- 79
 preamble$ -- 1
-purify$ -- 66
+purify$ -- 73
 quote$ -- 0
-skip$ -- 284
+skip$ -- 299
 stack$ -- 0
-substring$ -- 502
-swap$ -- 137
+substring$ -- 562
+swap$ -- 139
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 68
+type$ -- 76
 warning$ -- 1
-while$ -- 66
-width$ -- 20
-write$ -- 207
+while$ -- 74
+width$ -- 22
+write$ -- 231
 (There was 1 warning)

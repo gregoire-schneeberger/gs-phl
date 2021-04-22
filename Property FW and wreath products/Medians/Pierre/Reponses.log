@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.26)  19 APR 2021 14:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.26)  22 APR 2021 15:11
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -827,59 +827,56 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 92.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 92.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 92.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
-2.
+7.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 95.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 95.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 95.
+) [1
 
-
-LaTeX Warning: Citation `MR2240370' on page 1 undefined on input line 108.
-
-[1
-
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] (./Reponses.aux)
-
-LaTeX Warning: There were undefined references.
-
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./
+Reponses.bbl)
+[3] (./Reponses.aux)
 Package rerunfilecheck Info: File `Reponses.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 21559 strings out of 479023
- 390009 string characters out of 5859397
- 690608 words of memory out of 5000000
- 38600 multiletter control sequences out of 15000+600000
- 453932 words of font info for 68 fonts, out of 8000000 for 9000
+ 21581 strings out of 479023
+ 390246 string characters out of 5859397
+ 692639 words of memory out of 5000000
+ 38611 multiletter control sequences out of 15000+600000
+ 468901 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,6n,130p,440b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
-texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2020/t
+ 128i,8n,130p,483b,421s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
+texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2020/t
 exmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2020/texmf-dist/
 fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/
 dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/l
 m-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx10.pfb>
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/loca
-l/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2020/texmf-
-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/
-type1/public/lm/lmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publi
-c/lm/lmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr7.p
-fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Reponses.pdf (2 pages, 166803 bytes).
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/loca
+l/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2020/texmf-
+dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts
+/type1/public/lm/lmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
+ic/lm/lmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr12
+.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/
+local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texliv
+e/2020/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2020/texmf
+-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/
+type1/public/lm/lmri10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
+ic/lm/lmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfont
+s/symbols/msbm10.pfb>
+Output written on Reponses.pdf (3 pages, 261553 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
+ 131 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
