@@ -56,12 +56,10 @@
 \newcommand*{\FB}{(FB\textsubscript{r})}
 \newcommand*{\orbite}{\mathcal O}
 \newcommand*{\field}[1]{\mathbf{#1}}
-\newcommand*{\category}[1]{\mathbf{#1}}
-\newcommand*{\PMet}{\category{PMet}}
 \newcommand*{\Z}{\field{Z}}
 \newcommand*{\N}{\field{N}}
 \newcommand*{\R}{\field{R}}
-\newcommand*{\BS}{(B$\category{S}$)}
+\newcommand*{\BS}{(B$\mathbf{S}$)}
 \newcommand{\setst}[2]{\{#1\ |\ #2\}}
 \newcommand*{\powerset}[1]{\mathcal P(#1)}
 \newcommand*{\powersetf}[1]{\mathcal P_{\textnormal{f}}(#1)}
@@ -94,10 +92,10 @@
 %
 %
 \begin{abstract}
-If $\category{S}$ is subcategory of metric spaces, we say that a group G has property \BS{} if any action on a $\category S$-space has bounded orbits. Examples of such subcategories include metric spaces, affine real Hilbert spaces, CAT(0) cube complexes, connected median graphs, trees or ultra-metric spaces.
+If $\mathbf{S}$ is subcategory of metric spaces, we say that a group G has property \BS{} if any action on a $\mathbf S$-space has bounded orbits. Examples of such subcategories include metric spaces, affine real Hilbert spaces, CAT(0) cube complexes, connected median graphs, trees or ultra-metric spaces.
 The corresponding properties \BS{} are respectively Bergman's property, property~(FH) (which, for countable groups, is equivalent to the celebrated Kazhdan's property~(T)), property~(FW) (both for CAT(0) cube complexes and for connected median graphs), property~(FA) and uncountable cofinality.
 
-Our main result is that for many\PH{``a large class of''$\to$``many''} subcategories $\category{S}$, the wreath product $G\wr_XH$ has property \BS{} if and only if both $G$ and $H$ have property \BS{} and $X$ is finite. On one hand, this encompasses in a general setting previously known results for properties (FH) and (FW). On the other hand, this also applies to the Bergman's property.
+Our main result is that for many\PH{``a large class of''$\to$``many''} subcategories $\mathbf{S}$, the wreath product $G\wr_XH$ has property \BS{} if and only if both $G$ and $H$ have property \BS{} and $X$ is finite. On one hand, this encompasses in a general setting previously known results for properties (FH) and (FW). On the other hand, this also applies to the Bergman's property.
 Finally, we also obtain that $G\wr_XH$ has uncountable cofinality if and only if both $G$ and $H$ have uncountable cofinality and $H$ acts on $X$ with finitely many orbits.
 \end{abstract}
 %
@@ -139,7 +137,7 @@ Finally, we also obtain that $G\wr_XH$ has uncountable cofinality if and only if
 %
 When working with group properties, it is natural to ask if they are stable under ``natural'' group operations. One such operation, of great use in geometric group theory, is the wreath product, see Section~\ref{Section:Def} for all the relevant definitions.
 
-A $\category{S}$-space is a metric space with an ``additional structure'' and we will said that a group $G$ has \emph{property \BS{}} if every action by isometries which preserve the structure on a $\category{S}$-space has bounded orbits. Formally, this means that $\category{S}$ is a subcategory of the category of (pseudo-) metric spaces, and that the actions are by $\category{S}$-automorphisms.
+A $\mathbf{S}$-space is a metric space with an ``additional structure'' and we will said that a group $G$ has \emph{property \BS{}} if every action by isometries which preserve the structure on a $\mathbf{S}$-space has bounded orbits. Formally, this means that $\mathbf{S}$ is a subcategory of the category of (pseudo-) metric spaces, and that the actions are by $\mathbf{S}$-automorphisms.
 We note that having one bounded orbit implies that all the orbits are bounded.
 
 In the context of properties defined by actions with bounded orbits, the first result concerning wreath products, due to Cherix, Martin and Valette and later refined by Neuhauser, concerns Kazhdan's property~(T).
@@ -169,8 +167,8 @@ Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which
 \end{thm}
 %
 %
-Y. Stalder has let us know (private communication) that the arguments of \cite{LS2020} can be adapted to replace the finite generation hypothesis of Theorem~\ref{Thm:PropFW} by the condition that all three of $G$, $H$ and $G\wr_XH$ are at most countable.
-In particular, Theorem~\ref{Thm:PropFW} covers the result of A. Genevois published in \cite{2017arXiv170500834G}.\PH{Il faudrait sans doute réécrire le §.}
+Since the publication of Theorem~\ref{Thm:PropFW}, Y. Stalder has let us know (private communication) that the arguments of \cite{LS2020} can be adapted to replace the finite generation hypothesis of Theorem~\ref{Thm:PropFW} by the condition that all three of $G$, $H$ and $G\wr_XH$ are at most countable.
+In particular, Theorem~\ref{Thm:PropFW} covers the result of A. Genevois published in \cite{2017arXiv170500834G}.
 
 The above results on properties (FH), (FW) and (FA) were obtained with distinct methods even if the final results have a common flavor.
 In the same time, all three properties (FH), (FW) and (FA) can be characterized by the fact that any isometric action on a suitable metric space (respectively affine real Hilbert space, connected median graph and tree) has bounded orbits, see Definition~\ref{Def:FHFA}.
@@ -192,11 +190,11 @@ Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which
 %
 %
 A crucial ingredient of our proofs is that the spaces under consideration admit a natural notion of Cartesian product.
-In particular, some of our results do not work for trees and property~(FA), neither for real trees and the corresponding property~(F$\category R$).
+In particular, some of our results do not work for trees and property~(FA), neither for real trees and the corresponding property~(F$\mathbf R$).
 Nevertheless, we are still able to show that if $G\wr_XH$ has property~(FA), then $H$ acts on $X$ with finitely many orbits. Combining this with Theorem~\ref{Thm:FACK} we obtain
 \begin{mainthm}\label{Thm:FAFiniteOrbits}
 Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts. Suppose that $H$ acts on $X$ without fixed points.
-Then $G\wr_XH$ has property~(FA) (respectively has property~(F$\category R$)) if and only if $H$ has property~(FA) (respectively has property~(F$\category R$)), $H$ acts on $X$ with finitely many orbits, $G$ has no quotient isomorphic to $\Z$ and can not be written as a countable increasing union of proper subgroups.
+Then $G\wr_XH$ has property~(FA) (respectively has property~(F$\mathbf R$)) if and only if $H$ has property~(FA) (respectively has property~(F$\mathbf R$)), $H$ acts on $X$ with finitely many orbits, $G$ has no quotient isomorphic to $\Z$ and can not be written as a countable increasing union of proper subgroups.
 \end{mainthm}
 %
 %
@@ -374,7 +372,7 @@ It is said to have
 \item
 \emph{property~(FW)} if any action by graph isomorphisms on a connected median graph has bounded orbits,
 \item
-\emph{Property (F$\category{R}$)} if any isometric action on a metric space on a real tree has bounded orbits,
+\emph{Property (F$\mathbf{R}$)} if any isometric action on a metric space on a real tree has bounded orbits,
 \item
 \emph{property~(FA)} if any action by graph isomorphisms on a tree has bounded orbits,
 \item
@@ -384,12 +382,12 @@ It is said to have
 %
 %
 In the above, we insisted on the fact that actions are supposed to preserve the structure of the metric space under consideration, or in other words to be by automorphisms of the considered category. This is sometimes automatic, as for example any isometry of a real Banach or Hilbert space is affine by the Mazur-Ulam theorem.
-However, for graphs this is not the case; a $2$-regular tree has automorphism group $\Z\rtimes(\Z/2\Z)$, while the automorphism group of its geometric realization (the line $\category R$) is $\R\rtimes(\Z/2\Z)$. In other words, an isometry of a graph is not necessarily a graph isomorphism.
+However, for graphs this is not the case; a $2$-regular tree has automorphism group $\Z\rtimes(\Z/2\Z)$, while the automorphism group of its geometric realization (the line $\mathbf R$) is $\R\rtimes(\Z/2\Z)$. In other words, an isometry of a graph is not necessarily a graph isomorphism.
 In the following, we will often do a slight abuse of notation and simply speak of a \emph{group action} on a space $X$, without always specifying by which kinds of maps the group acts, which should always be clear from the context. 
 
 %
 %
-The names \FB, (FH), (FW),  (F$\category{R}$) and (FA) come from the fact that these properties admit a description in terms of (and were fist studied in the context of) the existence of a Fixed point for actions on reflexive Banach spaces, on Hilbert spaces, on spaces with Walls (or equivalently on CAT(0) cube complexes), on real trees and on trees (\emph{Arbres} in french), see Proposition~\ref{Proposition:Mediane} and the discussion above it.
+The names \FB, (FH), (FW),  (F$\mathbf{R}$) and (FA) come from the fact that these properties admit a description in terms of (and were fist studied in the context of) the existence of a Fixed point for actions on reflexive Banach spaces, on Hilbert spaces, on spaces with Walls (or equivalently on CAT(0) cube complexes), on real trees and on trees (\emph{Arbres} in french), see Proposition~\ref{Proposition:Mediane} and the discussion above it.
 
 The Bergman's property can also be characterized via length function, see for example the beginning of \cite{MR4119107}.
 
@@ -408,17 +406,17 @@ There are the following implications between the properties of Definition~\ref{D
 %\begin{tikzcd}[arrows=Rightarrow]
 %\textnormal{(FH)} \arrow[d]& \textnormal{\FB} \arrow[l]& \textnormal{Bergman's property}\arrow[l] \\%
 %\textnormal{(FW)} \arrow[r]& \textnormal{(FA)} \arrow[r]& \textnormal{uncountable cofinality}\\
-%&\textnormal{(F$\category{R}$)}\arrow[u]&
+%&\textnormal{(F$\mathbf{R}$)}\arrow[u]&
 %\end{tikzcd}
 \begin{tikzcd}[arrows=Rightarrow]
 \parbox{4.5em}{\textnormal{Bergman's property}}\arrow[r]	&\textnormal{\FB} \arrow[r]	&\textnormal{(FH)} \arrow[r]	&\textnormal{(FW)}\arrow[d] &\\%
-&&\textnormal{(F$\category{R}$)}\arrow[r]& \textnormal{(FA)} \arrow[r]& \parbox{5em}{\textnormal{uncountable cofinality}}
+&&\textnormal{(F$\mathbf{R}$)}\arrow[r]& \textnormal{(FA)} \arrow[r]& \parbox{5em}{\textnormal{uncountable cofinality}}
 \end{tikzcd}
 \end{equation}
 Moreover, except maybe for the implication $[\textnormal{Bergman's property}\implies\textnormal{\FB}]$, all implications are strict.%\PH{Je ne sais pas montrer (si c'est vrai) que ``\FB{} n'implique pas Bergman'' !?!}
 \end{prop}
 \begin{proof}
-The implications $[\textnormal{Bergman's property}\implies \textnormal{\FB}\implies\textnormal{(FH)}]$ and $[\textnormal{(FW)}\implies \textnormal{(FA)}\Longleftarrow\textnormal{(F$\category{R}$)}]$ trivially follow from the fact that Hilbert spaces are reflexive Banach spaces, which are themselves metric spaces and that trees are both real trees and connected median graphs.
+The implications $[\textnormal{Bergman's property}\implies \textnormal{\FB}\implies\textnormal{(FH)}]$ and $[\textnormal{(FW)}\implies \textnormal{(FA)}\Longleftarrow\textnormal{(F$\mathbf{R}$)}]$ trivially follow from the fact that Hilbert spaces are reflexive Banach spaces, which are themselves metric spaces and that trees are both real trees and connected median graphs.
 The implication $[\textnormal{(FA)}\implies\textnormal{uncountable cofinality}]$ is due to Serre \cite{MR0476875}: if $G$ is an increasing union of subgroups $G_i$, then $\bigsqcup G/G_i$ admits a tree structure by joining any $gG_i\in G/G_i$ to $gG_{i+1}\in G/G_{i+1}$. The action of $G$ by multiplication on $\bigsqcup G/G_i$ is by graph isomorphisms and with unbounded orbits.
 Finally, the implication $[\textnormal{(FH)}\implies \textnormal{(FW)}]$ follows from the fact that a group $G$ has property~(FW) if and only if any affine action on a real Hilbert space which preserves integral points has bounded orbits \cite{Cornulier2013}.
 
@@ -427,12 +425,12 @@ Countable groups with property \FB{} are finite by \cite{MR2137870}, while infin
 The group $\SL_2(\Z[\sqrt{2}])$ has property~(FW) but not (FA), see \cite{MR3299841}.
 If $G$ is a non-trivial finite group and $H$ is an infinite group with property~(FA), then $G\wr_HH$ has property~(FA) by Theorem~\ref{Thm:FAFiniteOrbits}, but does not have property~(FW) by Theorem~\ref{Thm:Main}.
 The group $\Z$ has uncountable cofinality, while it acts by translations and with unbounded orbits on the infinite $2$-regular tree.
-Finally, Minasyan constructed examples of groups with (FA) but without (F$\category R$) in \cite{MR3465847}.
+Finally, Minasyan constructed examples of groups with (FA) but without (F$\mathbf R$) in \cite{MR3465847}.
 \end{proof}
 %
 %
 It is possible to consider relative versions of the properties appearing in Definition~\ref{Def:FHFA}.
-If $G$ is a group and $H$ a subgroup of $G$, we say that the pair $(G,H)$ has \emph{relative property \BS} if for every $G$ action on a $\category{S}$-space, the $H$ orbits are bounded.
+If $G$ is a group and $H$ a subgroup of $G$, we say that the pair $(G,H)$ has \emph{relative property \BS} if for every $G$ action on a $\mathbf{S}$-space, the $H$ orbits are bounded.
 A group $G$ has property \BS{} if and only if for every subgroup $H$ the pair $(G,H)$ has relative property \BS{}, and if and only if for every overgroup $L$ the pair $(L,G)$ has relative property \BS.
 %
 %
@@ -448,13 +446,13 @@ A group $G$ has property \BS{} if and only if for every subgroup $H$ the pair $(
 %%%%%%%%%%%    Groups acting with bounded orbits on S-spaces    %%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Groups acting with bounded orbits on \texorpdfstring{$\category S$}{\textbf{S}}-spaces}
+\subsection{Groups acting with bounded orbits on \texorpdfstring{$\mathbf S$}{\textbf{S}}-spaces}
 It is possible to define other properties in the spirit of Definition~\ref{Def:FHFA} for any ``subclass of metric spaces'', or more precisely for any subcategory of pseudo-metric spaces.
 %In order to give a uniform treatment of all of them, we will use the notion of pseudo-metric spaces and the language of category theory.
 A reader not familiar with category theory and interested only in one specific subclass of metric spaces may forget all these general considerations and only verify that the arguments of Section~\ref{Section:Proof} apply for their subclass.
 %
 %
-\begin{defn}\label{Def:Distance}
+\begin{defn}
 A \emph{pseudo-metric space} is a set $X$ with a map $d\colon X\times X\to \R_{\geq0}$, called a \emph{pseudo-distance}, such that
 \begin{enumerate}
 \item $d(x,x)=0$ for all $x\in X$,
@@ -468,51 +466,51 @@ If moreover $d(x,y)\neq 0$ for $x\neq y$, the map $d$ is a \emph{distance} and $
 On the other hand, an \emph{ultra-pseudo-metric space} is a pseudo-metric space $(X,d)$ such that $d$ satisfies the strong triangular inequality.
 A \emph{morphism} (or \emph{short map}) between two pseudo-metric spaces $(X_1,d_1)$ and $(X_2,d_2)$ is a distance non-increasing map $f\colon X_1\to X_2$, that is $d_2(f(x),f(y))\leq d_1(x,y)$ for any $x$ and $y$ in $X_1$.
 If $f$ is bijective and distance preserving, then it is an \emph{isomorphism} (or \emph{isometry}).
-Pseudo-metric spaces with short maps form a category $\PMet$, of which the category of metric spaces (with short maps) $\category{Met}$ is a full subcategory.
+Pseudo-metric spaces with short maps form a category $\mathbf{PMet}$, of which the category of metric spaces (with short maps) $\mathbf{Met}$ is a full subcategory.
 
 If $(X,d)$ is a pseudo-metric space, we have a natural notion of the  \emph{diameter} of a subset $Y\subset X$ with value in $[0,\infty]$, defined by $\diam(Y)\coloneqq\sup\setst{d(x,y)}{x,y\in Y}$, and we say that $Y$ is \emph{bounded} if it has finite diameter.
 %
 %
 
 %\begin{defn}\label{Def:Categoric}
-Remind that a \emph{subcategory of $\PMet$}, is a category $\category S$ whose objects are pseudo-metric spaces, and whose morphisms are short maps.
-The subcategory $\category{S}$ is \emph{full} if given two $\category{S}$-objects $X$ and $Y$, any short map from $X$ to $Y$ is a $\category{S}$-morphism.
-A \emph{$G$-action on a $\category S$-space} $X$ is simply a group homomorphism $\alpha\colon G\to\Aut_{\category{S}}(X)$.
-%It has \emph{bounded orbits} if $F_{\category S}\circ \alpha\colon G\to \Aut_{\category{QPMet}}(X)$ has bounded orbits.
+Remind that a \emph{subcategory of $\mathbf{PMet}$}, is a category $\mathbf S$ whose objects are pseudo-metric spaces, and whose morphisms are short maps.
+The subcategory $\mathbf{S}$ is \emph{full} if given two $\mathbf{S}$-objects $X$ and $Y$, any short map from $X$ to $Y$ is a $\mathbf{S}$-morphism.
+A \emph{$G$-action on a $\mathbf S$-space} $X$ is simply a group homomorphism $\alpha\colon G\to\Aut_{\mathbf{S}}(X)$.
+%It has \emph{bounded orbits} if $F_{\mathbf S}\circ \alpha\colon G\to \Aut_{\mathbf{QPMet}}(X)$ has bounded orbits.
 %\end{defn}
 %
 %
-%In practice, we will often simply write $\category{S}$  for the pair $(\category{S},F_{\category{S}})$.
-%Since $\PMet$ itself is concrete, that is we have a faithful functor $F\colon \category{QPMet}\to\category{Set}$, the category $\category{S}$ is also concrete (via $F\circ F_S$) and its objects can be thoughts as sets with ``extra structure''.
+%In practice, we will often simply write $\mathbf{S}$  for the pair $(\mathbf{S},F_{\mathbf{S}})$.
+%Since $\mathbf{PMet}$ itself is concrete, that is we have a faithful functor $F\colon \mathbf{QPMet}\to\mathbf{Set}$, the category $\mathbf{S}$ is also concrete (via $F\circ F_S$) and its objects can be thoughts as sets with ``extra structure''.
 
-In practice, a lot of examples of (full) subcategories of $\PMet$ are already subcategories of $\category{Met}$.
-Obvious examples of full subcategories of $\category{Met}$ include metric spaces and ultrametric spaces (with short maps).
-Affine real Hilbert spaces, real Banach spaces and more generally normed spaces are also full subcategories of $\category{Met}$ if we restrict ourself to morphisms that do not increase the distance (that is such that  $\|f(x)\|\leq\| x\|$). In particular, for us isomorphisms of Hilbert and Banach spaces will always be affine isometries.
+In practice, a lot of examples of (full) subcategories of $\mathbf{PMet}$ are already subcategories of $\mathbf{Met}$.
+Obvious examples of full subcategories of $\mathbf{Met}$ include metric spaces and ultrametric spaces (with short maps).
+Affine real Hilbert spaces, real Banach spaces and more generally normed spaces are also full subcategories of $\mathbf{Met}$ if we restrict ourself to morphisms that do not increase the distance (that is such that  $\|f(x)\|\leq\| x\|$). In particular, for us isomorphisms of Hilbert and Banach spaces will always be affine isometries.
 
-For connected graphs (and hence for its full subcategories of connected median graphs and of trees), one look at the category $\category{Graph}$ where objects are connected simple graphs $G=(V,E)$ and where a morphism $f\colon (V,E)\to(V',E')$ is a function between the vertex sets such that if $(x,y)$ is an edge then either $f(x)=f(y)$ or $(f(x),f(y))$ is an edge.
-There is two natural ways to see $\category{Graph}$ as a subcategory of $\category{Met}$.
+For connected graphs (and hence for its full subcategories of connected median graphs and of trees), one look at the category $\mathbf{Graph}$ where objects are connected simple graphs $G=(V,E)$ and where a morphism $f\colon (V,E)\to(V',E')$ is a function between the vertex sets such that if $(x,y)$ is an edge then either $f(x)=f(y)$ or $(f(x),f(y))$ is an edge.
+There is two natural ways to see $\mathbf{Graph}$ as a subcategory of $\mathbf{Met}$.
 The first one consist to look at the vertex set $V$ endowed with the shortest-path metric: $d(v,w)$ is the minimal number of edges on a path between $v$ and $w$.
 The second one, consists at looking at the so called geometric realization of $(V,E)$, where each edge is seen as an isometric copy of the segment $[0,1]$.
-%Neither of this embedding $\category{Graph}\hookrightarrow\category{Met}$ is full.
-As observed in the discussion after Definition~\ref{Def:FHFA}, the geometric realization of a graph gives an embedding $\category{Graph}\hookrightarrow\category{Met}$ which is not full.
-%Observe that the geometric realization of a graph gives an embedding $\category{Graph}\hookrightarrow\category{Met}$ which is not full.
+%Neither of this embedding $\mathbf{Graph}\hookrightarrow\mathbf{Met}$ is full.
+As observed in the discussion after Definition~\ref{Def:FHFA}, the geometric realization of a graph gives an embedding $\mathbf{Graph}\hookrightarrow\mathbf{Met}$ which is not full.
+%Observe that the geometric realization of a graph gives an embedding $\mathbf{Graph}\hookrightarrow\mathbf{Met}$ which is not full.
 %%Indeed, on one hand if $P_n$ is the graph path of length $2$, then there is exactly four surjective graph homomorphisms from $P_2$ to $P_1$ (choosing where goes the first extremity, and which edge to collapse), but six surjective short maps from the vertex set of $P_2$ to the vertex set of $P_1$ (the two extremities are allowed to have the same image).
-%Indeed, the $2$-regular tree $T$ has automorphism group $\Aut_{\category{Graph}}(T)=\Z\rtimes(\Z/2\Z)$ (translations and a symmetry), while its geometric realization is $\R$ with automorphism group $\Aut_{\category{Met}}(\R)=\R\rtimes(\Z/2\Z)$.
-Nevertheless, for our purpose, the choice of the above two embeddings $\category{Graph}\hookrightarrow\category{Met}$ will make no difference.
+%Indeed, the $2$-regular tree $T$ has automorphism group $\Aut_{\mathbf{Graph}}(T)=\Z\rtimes(\Z/2\Z)$ (translations and a symmetry), while its geometric realization is $\R$ with automorphism group $\Aut_{\mathbf{Met}}(\R)=\R\rtimes(\Z/2\Z)$.
+Nevertheless, for our purpose, the choice of the above two embeddings $\mathbf{Graph}\hookrightarrow\mathbf{Met}$ will make no difference.
 
 
 We can now formally define the group property \BS{} as:
 %
 \begin{defn}\label{Def:PropBS}
-Let $\category S$ be a subcategory of $\PMet$.
-A group $G$ has \emph{property} \BS{} if every $G$-action by $\category S$-automorphisms on a $\category S$-space has bounded orbits.
-A pair $(G,H)$ of a group and a subgroup has \emph{relative property} \BS{} if for every $G$-action by $\category S$-automorphisms on a $\category S$-space, the $H$ orbits are bounded.
+Let $\mathbf S$ be a subcategory of $\mathbf{PMet}$.
+A group $G$ has \emph{property \BS} if every $G$-action by $\mathbf S$-automorphisms on a $\mathbf S$-space has bounded orbits.
+A pair $(G,H)$ of a group and a subgroup has \emph{relative property \BS} if for every $G$-action by $\mathbf S$-automorphisms on a $\mathbf S$-space, the $H$ orbits are bounded.
 \end{defn}
 %
 %
 All the properties of Definition~\ref{Def:FHFA} are of the form \BS.
 %Examples of other interesting subcategories include (some specific subclass of) Banach spaces as well as real or complex hyperbolic spaces, see \cite[Definition 6.22]{MR1023471}.
-Another example of property of the form \BS{} can be found in \cite[Definition 6.22]{MR1023471}: a group has property~(FHyp$_{\category C}$) if any action on a complex or real hyperbolic space has a bounded orbit. This property is implied by property~(FH), but does not imply property~(FA) \cite[Corollary 6.23 and Example 6.24]{MR1023471}.
+Another example of property of the form \BS{} can be found in \cite[Definition 6.22]{MR1023471}: a group has property~(FHyp$_{\mathbf C}$) if any action on a complex or real hyperbolic space has a bounded orbit. This property is implied by property~(FH), but does not imply property~(FA) \cite[Corollary 6.23 and Example 6.24]{MR1023471}.
 One can also want to look at the category of all Banach spaces (the corresponding property \BS{} hence stands between the Bergman's property and property \FB), or the category of $L^p$-spaces \cite{MR2978328} (in this case \BS{} is between \FB{} and (FH)).
 
 Another interesting example of a property of the form \BS{} is the fact to have no quotient isomorphic to $\Z$, see Example~\ref{Exmp:BZ}.
@@ -521,20 +519,20 @@ The main interest for us of this example is that property~(FA) is the conjonctio
 %
 \begin{exmp}\label{Exmp:BZ}
 %Let $Z^n$ be the Cayley graph of $\Z^n$ for the standard generating set.
-%Then $\Aut_{\category{Graph}}(Z^n)=\Z^n\rtimes D_{2n}$ projects onto $\Z$. Hence, we obtain that a group $G$ has no quotient isomorphic to $\Z$ if and only if every $G$ action on $Z$ has bounded orbits, if and only if every $G$ action on $Z^n$ has bounded orbits. Let us denote by (B$\Z$) this property.
+%Then $\Aut_{\mathbf{Graph}}(Z^n)=\Z^n\rtimes D_{2n}$ projects onto $\Z$. Hence, we obtain that a group $G$ has no quotient isomorphic to $\Z$ if and only if every $G$ action on $Z$ has bounded orbits, if and only if every $G$ action on $Z^n$ has bounded orbits. Let us denote by (B$\Z$) this property.
 Let $Z$ be the Cayley graph of $\Z$ for the standard generating set.
-Then $\Aut_{\category{Graph}}(Z)=\Z\rtimes (\Z/2\Z)$ is the infinite dihedral group and every of its infinite subgroup projects onto $\Z$. Hence, we obtain that a group $G$ has no quotient isomorphic to $\Z$ if and only if every $G$ action on $Z$ has bounded orbits. Let us denote by (B$\Z$) this property.
+Then $\Aut_{\mathbf{Graph}}(Z)=\Z\rtimes (\Z/2\Z)$ is the infinite dihedral group and every of its infinite subgroup projects onto $\Z$. Hence, we obtain that a group $G$ has no quotient isomorphic to $\Z$ if and only if every $G$ action on $Z$ has bounded orbits. Let us denote by (B$\Z$) this property.
 
-It follows from Bass-Serre theory that (FA) implies (B$\Z$). This implication is strict as demonstrated by $\category Q$.
-In fact, the counterexample $\category Q$ shows that (B$\Z$) does not imply uncountable cofinality, while $\Z$ demonstrate that uncountable cofinality does not implies (B$\Z$).
+It follows from Bass-Serre theory that (FA) implies (B$\Z$). This implication is strict as demonstrated by $\mathbf Q$.
+In fact, the counterexample $\mathbf Q$ shows that (B$\Z$) does not imply uncountable cofinality, while $\Z$ demonstrate that uncountable cofinality does not implies (B$\Z$).
 \end{exmp}
 %
 %
-An example of an uninteresting property \BS{} is given by taking $\category{S}$ to be the category of metric spaces of bounded diameter (together with short maps), in which case any group has \BS.
-On the opposite, if $\category{S}$ is the category of extended pseudo-metric spaces ($d$ takes values in $\R_+\cup\{\infty\})$, only the trivial group has \BS.
+An example of an uninteresting property \BS{} is given by taking $\mathbf{S}$ to be the category of metric spaces of bounded diameter (together with short maps)in which case any group has \BS.
+On the opposite, if $\mathbf{S}$ is the category of extended pseudo-metric spaces ($d$ takes values in $\R_+\cup\{\infty\})$, only the trivial group has \BS.
 Indeed, one can put the extended metric $d(x,y)=\infty$ if $x\neq y$ on $G$ and then the action by left multiplication of $G$ on $(G,d)$ is transitive and with an unbounded orbit as soon as $G$ is non trivial.
 
-The category $\PMet$ has the advantage (over $\category{Met}$) of behaving more nicely with respects to categorical constructions and to quotients.
+The category $\mathbf{PMet}$ has the advantage (over $\mathbf{Met}$) of behaving more nicely with respects to categorical constructions and to quotients.
 However, we have
 %
 %
@@ -565,49 +563,43 @@ For the other direction, we will use the following characterization of Bergman's
 Suppose that any $G$ action on a connected graph has bounded orbits. Then $G$ has property~(FW) and hence has uncountable cofinality. On the other hand, for every generating set $T$, the group $G$ acts transitively on $\Cayley(G;T)$, which implies that the latter is bounded. By the above characterization, we obtain that $G$ has Bergman's property.
 \end{proof}
 
-While we will be able to obtain some results for a general subcategory of $\PMet$, we will sometimes need to restrict ourselves to subcategories with a suitable notion of Cartesian product.
+While we will be able to obtain some results for a general subcategory of $\mathbf{PMet}$, we will sometimes need to restrict ourselves to subcategories with a suitable notion of Cartesian product.
 %
 %
 \begin{defn}\label{Def:Cartesian}
-A subcategory $\category{S}$ of $\PMet$ has \emph{unbounded Cartesian powers} if for any $\category S$-space $X$ and any integer $n$, there exists a $\category S$-object, called the \emph{$n$\textsuperscript{th} Cartesian power of $X$} and written $X^n$, such that:
+A subcategory $\mathbf{S}$ of $\mathbf{PMet}$ has \emph{unbounded Cartesian powers} if for any $\mathbf S$-space $X$ and any integer $n$, there exists a $\mathbf S$-object, called the \emph{$n$\textsuperscript{th} Cartesian power of $X$} and written $X^n$, such that:
 \begin{enumerate}
 \item
 As a set, $X^n$ is the $n$\textsuperscript{th} Cartesian power of $X$, 
 \item\label{Item:Product}
-$\Aut_{\category{S}}(X)^n\rtimes \Sym(n)$ is a subgroup of $\Aut_{\category{S}}(X^n)$,
+$\Aut_{\mathbf{S}}(X)^n\rtimes \Sym(n)$ is a subgroup of $\Aut_{\mathbf{S}}(X^n)$,
 \item\label{Condidef:2}
 If $E\subset X$ is unbounded, then the diagonal $\diag(E)\subset X^n$ is unbounded.
 \end{enumerate}
 \end{defn}
 %
 %
-A good heuristic is that your favorite subcategory of $\PMet$ would have \emph{unbounded Cartesian powers} in the above sense if and only if it already has a classical operation which is called \emph{Cartesian product}. 
+A good heuristic is that your favorite subcategory of $\mathbf{PMet}$ would have \emph{unbounded Cartesian powers} in the above sense if and only if it already has a classical operation which is called \emph{Cartesian product}. 
 
 For (pseudo-/ultra-) metric spaces, the categorical product (corresponding to the metric $d_\infty=\max\{d_X,d_Y\}$) works fine, but any product metric of the form $d_p=(d_X^p+d_Y^p)^{\frac1p}$ for $p\in[1,\infty]$ works as well.
 For Hilbert and Banach spaces, we take the usual Cartesian product (which is also the categorial product), which corresponds to the metric $d_2=\sqrt{d_X^2+d_Y^2}$.
-For connected median graphs, the usual Cartesian product (which is not the categorical product!\footnote{The categorial product in $\category{Graph}$ is the strong product, while the category of median graphs does not have categorial products.}) with $d_1=d_X+d_Y$ works well.
+For connected median graphs, the usual Cartesian product (which is not the categorical product!\footnote{The categorial product in $\mathbf{Graph}$ is the strong product, while the category of median graphs does not have categorial products.}) with $d_1=d_X+d_Y$ works well.
 On the other hand, trees do not have Cartesian powers.
 %
 %
-\subsection{Variations and generalizations}
-%\begin{rem}
-%In view of Definition~\ref{Def:PropBS} and \ref{Def:Cartesian}, the reader might ask why we are working in $\PMet$ instead of $\category{Born}$, the category of bornological spaces together with bounded maps.
-%The reason behind this is the forthcoming Lemma~\ref{Lemma:InterProd} and its corollaries, which fail for general bornological spaces.
-%\end{rem}
-\PHInline{J'ai totalement réécrit cette sous-section. Tu me diras ce que tu en penses.}
-This subsection is devoted to variations and generalizations of property \BS. It is intended as a note for the interested reader, and can be skipped without any harm.\PH{Réécrire l'intro}
+\begin{rem}
+In view of Definition~\ref{Def:PropBS} and \ref{Def:Cartesian}, the reader might ask why we are working in $\mathbf{PMet}$ instead of $\mathbf{Born}$, the category of bornological spaces together with bounded maps.
+The reason behind this is the forthcoming Lemma~\ref{Lemma:InterProd} and its corollaries, which fail for general bornological spaces.
+\end{rem}
+%
+%
+%
+%
+%
+\paragraph{Groups acting with fixed point on \texorpdfstring{$\mathbf S$}{\textbf{S}}-spaces}
+Some of the properties that are of interest for us have been historically defined via the existence of a fixed point for some action. More generally, we say that a group $G$ has \emph{property~(F$\mathbf S$)} if any $G$ action on a $\mathbf S$-space has a fixed point.
 
-First of all, observe that a group $G$ has property \BS{} if and only any $G$ action on a $\category S$ space has at least one bounded orbit.
-One implication is trivial and the other is a direct application of the triangle inequality.\PH{Rajouté ce~§. On garde ?}
-%
-%
-%
-%
-%
-\paragraph{Groups acting with fixed point on \texorpdfstring{$\category S$}{\textbf{S}}-spaces}
-Some of the properties that are of interest for us have been historically defined via the existence of a fixed point for some action. More generally, we say that a group $G$ has \emph{property~(F$\category S$)} if any $G$ action on a $\category S$-space has a fixed point.
-
-Since our actions are by isometries, property~(F$\category S$) implies property \BS. The other implication holds as soon as we have a suitable notion of the center of a (non-empty) bounded subset $X$.
+Since our actions are by isometries, property~(F$\mathbf S$) implies property \BS. The other implication holds as soon as we have a suitable notion of the center of a (non-empty) bounded subset $X$.
 For a large class of metric spaces, this is provided by the following result of Bruhat and Tits:
 %
 %
@@ -625,93 +617,21 @@ Exemples of complete metric spaces satisfying Proposition~\ref{Proposition:Media
 See~\cite[Chapter 3.b]{MR1023471} and the references therein for more on this subject.
 On the other hand, \cite[Lemma 2.2.7]{Bekka2008} gives a simple proof of the existence of a center for bounded subsets of Hilbert spaces, and more generally of reflexive Banach spaces.
 
-For action on (ultra)-metric spaces or on connected median graphs, (F$\category S$) is strictly stronger than \BS. Indeed, this trivially follows from the action by rotation of $C_4$ on the square graph.
+For action on (ultra)-metric spaces or on connected median graphs, (F$\mathbf S$) is strictly stronger than \BS. Indeed, this trivially follows from the action by rotation of $C_4$ on the square graph.
 However,  by \cite{Cornulier2013,MR1663779} if a group $G$ acts on a connected median graph with a bounded orbit, then it has a finite orbit.
 %
 %
 %
 %
 %
-\paragraph{Actions with uniformly bounded orbits}
-%\begin{rem}
-%We conclude this section by a remark on a variation of Definition~\ref{Def:FHFA}.
+\begin{rem}
+We conclude this section by a remark on a variation of Definition~\ref{Def:FHFA}.
 One might wonder what happens if in Definition~\ref{Def:FHFA} we replace the requirement of having bounded orbits by having uniformly bounded orbits.
 It turns out that this is rather uninteresting, as a group $G$ is trivial if and only if any $G$-action on a metric space (respectively on an Hilbert space, on a connected median graph, on a tree or on an ultrametric space) has uniformly bounded orbits.
 Indeed, if $G$ is non-trivial, then, for the action of $G$ on the Hilbert space $\ell^2(G)$ the orbit of $n\cdot \delta_g$ has diameter $n\sqrt2$.
 For a tree (and hence also for a connected median graph), one may look at the tree $T$ obtained by taking a root $r$ on which we glue an infinite ray for each element of $G$. Then $G$ naturally acts on $T$ by permuting the rays. The orbits for this action are the $\mathcal L_n=\setst{v}{d(v,r)=n}$ which have diameter $2n$.
 Finally, it is possible to put an ultradistance on the vertices of $T$ by  $d_\infty(x,y)\coloneqq\max\{d(x,r),d(y,r)\}$ if $x\neq y$. Then the orbits are still the~$\mathcal L_n$, but this time with diameter $n$.
-%
-%
-%
-\paragraph{Generalizations}
-In the above, we defined property \BS{} for $\category{S}$ a subcategory of $\PMet$.
-It is possible to generalize this definition to more general categories.
-However, we are not aware of any example of the existence of a group property arising in this general context that is not equivalent to a property \BS{} in the sense of Definition~\ref{Def:PropBS}.
-
-On one hand, we can replace $\PMet$ with a more general category.
-For example, one can look at the category $\category{M}$ of sets $X$ endowed with a ``distance function'' $d\colon X\times X\to\R_{\geq 0}$ satisfying the triangle inequality. That is, $d$ is a pseudo-distance, except that is is not necessary symmetric and $d(x,x)$ may be greater than $0$.
-All the statements and the proofs remain true for $\category{S}$ a subcategory of $\category{M}$.
-
-On the other hand, we can define property \BS{} for any category $\category{S}$ over $\PMet$, that is for any category~$\category{S}$ endowed with a faithful functor $F\colon\category{S}\to \PMet$. Such a couple $(\category{S},F\colon\category{S}\to \PMet)$ is sometimes called a \emph{structure over $\PMet$}, and $F$ is said to be \emph{forgetful}.
-In this context, we need to be careful to define unbounded Cartesian powers (Definition~\ref{Def:Cartesian}) using $F$, but appart for that all the statement and the proofs remained unchanged.
-An example of such an $\category{S}$ that cannot be expressed as a subcategory of $\PMet$ is the category of edge-labeled graphs, where the morphisms are graph morphisms that induce a permutation on the set of labels.
-However, in this case, the property \BS{} is equivalent to the Bergman's property.
-
-One can also combine the above two examples and look at couples $(\category{S},F\colon\category{S}\to \category{M})$, with $F$ faithful.
-
-Finally, in view of Definition~\ref{Def:PropBS} and \ref{Def:Cartesian}, the reader might ask why we are working in $\PMet$ or $\category{M}$ instead of $\category{Born}$, the category of bornological spaces together with bounded maps.
-The reason behind this is the forthcoming Lemma~\ref{Lemma:InterProd} and its corollaries, which fail for general bornological spaces.
-In fact, all the statements and the proofs remain true for a general $(\category{S},F\colon\category{S}\to \category{Born})$ as soon as $\category{S}$ satisfies Lemma~\ref{Lemma:InterProd}.
-Here is an example of such an $\category{S}$. Take $\kappa$ to be an infinite cardinal and let $\category{S_\kappa}$ be the subcategory of $\category{Born}$ where a subset $E$ of a $\category{S_\kappa}$-space is bounded if and only if $\lvert E\rvert<\kappa$.
-%\end{rem}
-%
-%
-%
-%\begin{rem}
-%In view of Definition~\ref{Def:PropBS} and \ref{Def:Cartesian}, the reader might ask why we are working in $\PMet$ instead of $\category{Born}$, the category of bornological spaces together with bounded maps.
-%The reason behind this is the forthcoming Lemma~\ref{Lemma:InterProd} and its corollaries, which fail for general bornological spaces.
-%\end{rem}
-%%
-%%
-%%
-%%
-%%
-%\paragraph{Groups acting with fixed point on \texorpdfstring{$\category S$}{\textbf{S}}-spaces}
-%Some of the properties that are of interest for us have been historically defined via the existence of a fixed point for some action. More generally, we say that a group $G$ has \emph{property~(F$\category S$)} if any $G$ action on a $\category S$-space has a fixed point.
-%
-%Since our actions are by isometries, property~(F$\category S$) implies property \BS. The other implication holds as soon as we have a suitable notion of the center of a (non-empty) bounded subset $X$.
-%For a large class of metric spaces, this is provided by the following result of Bruhat and Tits:
-%%
-%%
-%\begin{prop}[{\cite[Chapter 3.b]{MR1023471}}]\label{Proposition:Mediane}
-%Let $(X,d)$ be a complete metric space such that the following two conditions are satisfied:
-%\begin{enumerate}
-%\item For all $x$ and $y$ in $X$, there exists a unique $m\in X$ (the middle of $[x,y]$) such that $d(x,m)=d(y,m)=\frac12d(x,y)$;
-%\item For all $x$, $y$ and $z$ in $X$, if $m$ is the middle of $[y,z]$ we have the median's inequality  $2d(x,m)^2+\frac12d(y,z)^2\leq d(x,y)^2+d(x,z)^2$.
-%\end{enumerate}
-%Then if $G$ is a group acting by isometries on $X$ with a bounded orbit, it has a fixed point.
-%\end{prop}
-%%
-%%
-%Exemples of complete metric spaces satisfying Proposition~\ref{Proposition:Mediane} include among others: Hilbert spaces, Bruhat-Tits Buildings, Hadamard spaces (i.e. complete CAT(0) spaces), trees and $\R$-trees; with the caveat that for ($\R$-)trees, the fixed point is either a vertex or the middle of an edge.
-%See~\cite[Chapter 3.b]{MR1023471} and the references therein for more on this subject.
-%On the other hand, \cite[Lemma 2.2.7]{Bekka2008} gives a simple proof of the existence of a center for bounded subsets of Hilbert spaces, and more generally of reflexive Banach spaces.
-%
-%For action on (ultra)-metric spaces or on connected median graphs, (F$\category S$) is strictly stronger than \BS. Indeed, this trivially follows from the action by rotation of $C_4$ on the square graph.
-%However,  by \cite{Cornulier2013,MR1663779} if a group $G$ acts on a connected median graph with a bounded orbit, then it has a finite orbit.
-%%
-%%
-%%
-%%
-%%
-%\begin{rem}
-%We conclude this section by a remark on a variation of Definition~\ref{Def:FHFA}.
-%One might wonder what happens if in Definition~\ref{Def:FHFA} we replace the requirement of having bounded orbits by having uniformly bounded orbits.
-%It turns out that this is rather uninteresting, as a group $G$ is trivial if and only if any $G$-action on a metric space (respectively on an Hilbert space, on a connected median graph, on a tree or on an ultrametric space) has uniformly bounded orbits.
-%Indeed, if $G$ is non-trivial, then, for the action of $G$ on the Hilbert space $\ell^2(G)$ the orbit of $n\cdot \delta_g$ has diameter $n\sqrt2$.
-%For a tree (and hence also for a connected median graph), one may look at the tree $T$ obtained by taking a root $r$ on which we glue an infinite ray for each element of $G$. Then $G$ naturally acts on $T$ by permuting the rays. The orbits for this action are the $\mathcal L_n=\setst{v}{d(v,r)=n}$ which have diameter $2n$.
-%Finally, it is possible to put an ultradistance on the vertices of $T$ by  $d_\infty(x,y)\coloneqq\max\{d(x,r),d(y,r)\}$ if $x\neq y$. Then the orbits are still the~$\mathcal L_n$, but this time with diameter $n$.
-%\end{rem}
+\end{rem}
 %
 %
 %
@@ -1047,7 +967,7 @@ One implication is trivial, as finite Abelian groups do not project onto $\Z$. T
 %
 %
 %
-\bibliography{../biblio.bib}
+\bibliography{biblio.bib}
 \bibliographystyle{plain}
 %
 %

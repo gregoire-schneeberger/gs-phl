@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.26)  17 MAY 2021 17:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.26)  17 MAY 2021 17:30
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**Median.tex
-(./Median.tex
+**MedianTop.tex
+(./MedianTop.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
 (/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
@@ -738,8 +738,8 @@ File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count307
 \l__pdf_internal_box=\box61
 )
-(./Median.aux)
-\openout1 = `Median.aux'.
+(./MedianTop.aux)
+\openout1 = `MedianTop.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
 LaTeX Font Info:    ... okay on input line 84.
@@ -776,9 +776,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 84.
 LaTeX Info: Redefining \pageref on input line 84.
 LaTeX Info: Redefining \nameref on input line 84.
- (./Median.out) (./Median.out)
+ (./MedianTop.out) (./MedianTop.out)
 \@outlinefile=\write4
-\openout4 = `Median.out'.
+\openout4 = `MedianTop.out'.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -913,63 +913,73 @@ Overfull \hbox (0.2086pt too wide) in paragraph at lines 660--661
 x/n/10 S \OMS/lmsy/m/n/10 !
  []
 
-[11] [12] [13] [14]
-Overfull \hbox (4.74918pt too wide) in paragraph at lines 904--905
+[11]
+Overfull \hbox (1.30492pt too wide) in paragraph at lines 771--771
+\T1/lmr/m/n/9 topologiques[]  
+ []
+
+
+Overfull \hbox (1.30492pt too wide) in paragraph at lines 771--771
+\T1/lmr/m/n/9 topologiques[]  
+ []
+
+
+LaTeX Warning: Marginpar on page 12 moved.
+
+[12] [13] [14]
+Overfull \hbox (4.74918pt too wide) in paragraph at lines 897--898
 \T1/lmr/m/n/10 that we used the prim-i-tive ac-tion of the wreath prod-uct in t
 he proof of Lemma [][]3.8[][]. 
  []
 
-[15] [16] (./Median.bbl [17] [18]) [19] (./Median.aux)
+[15] [16] (./MedianTop.bbl [17] [18]) [19] (./MedianTop.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: File `Median.out' has not changed.
+Package rerunfilecheck Info: File `MedianTop.out' has not changed.
 (rerunfilecheck)             Checksum: DF3138750C49DBBE7B3F2D04C78ADC9B;1359.
  ) 
 Here is how much of TeX's memory you used:
- 22968 strings out of 479023
- 428444 string characters out of 5859397
- 738721 words of memory out of 5000000
- 39853 multiletter control sequences out of 15000+600000
+ 23030 strings out of 479023
+ 429863 string characters out of 5859397
+ 765267 words of memory out of 5000000
+ 39908 multiletter control sequences out of 15000+600000
  505936 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 127i,20n,130p,596b,1136s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{AMS.6} has been referenced but does not exist, re
-placed by a fixed one
-
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/loca
-l/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2020
-/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2020/texmf-dis
-t/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/d
-vips/lm/lm-ec.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mat
-hex.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></
-usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/
-texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/202
-0/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2020/texmf-dis
-t/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/typ
-e1/public/lm/lmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/
-lm/lmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi5.p
-fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive
-/2020/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2020/texmf
--dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts
-/type1/public/lm/lmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
-ic/lm/lmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr5.
-pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2020/texmf-d
-ist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/ty
-pe1/public/lm/lmri10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public
-/lm/lmri7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy10.
-pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texliv
-e/2020/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2020/texm
-f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2020/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Median.pdf (19 pages, 512838 bytes).
+ 127i,20n,130p,599b,1136s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
+cal/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
+20/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2020/texmf-d
+ist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc
+/dvips/lm/lm-ec.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-m
+athex.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx10.pfb>
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/loca
+l/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2020/texmf-d
+ist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/t
+ype1/public/lm/lmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publi
+c/lm/lmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi5
+.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/
+local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2020/texmf-dist/fon
+ts/type1/public/lm/lmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
+blic/lm/lmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr
+5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/
+local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texliv
+e/2020/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2020/texmf
+-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/
+type1/public/lm/lmri10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
+ic/lm/lmri7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy1
+0.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/202
+0/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on MedianTop.pdf (19 pages, 520386 bytes).
 PDF statistics:
- 511 PDF objects out of 1000 (max. 8388607)
- 442 compressed objects within 5 object streams
- 121 named destinations out of 1000 (max. 500000)
+ 519 PDF objects out of 1000 (max. 8388607)
+ 450 compressed objects within 5 object streams
+ 128 named destinations out of 1000 (max. 500000)
  165 words of extra memory for PDF output out of 10000 (max. 10000000)
 
