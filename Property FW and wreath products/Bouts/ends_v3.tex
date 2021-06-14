@@ -1,0 +1,202 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}      
+\usepackage[english]{babel} %utilisation du package français
+%
+%
+%
+\usepackage{textcomp}% améliore certains symboles de bases
+\usepackage{lmodern}% remplace la police ComputerModern par LatinModern (+ mieux bien)
+%
+%
+%
+\usepackage{mathtools}% compléments à amsmath
+\usepackage{amssymb,amsfonts}% symboles mathématiques supplémentaires
+\usepackage{amsthm}% environnement ams-theorem
+\usepackage[colorlinks,breaklinks,bookmarks,plainpages=false,unicode=true]{hyperref}%
+\usepackage{todonotes} %ajouter des commentaires
+%\usepackage[disable]{todonotes}%cache les commentaires
+\usepackage{datetime} %ajoute la date et l'heure
+%
+%
+\newcounter{mycomment}
+\newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33},size=\small]{\textbf{[\uppercase{#1}\themycomment]:}~#2}}}
+\newcommand{\PH}[1]{\todo[color={blue!33},size=small]{\textbf{PH :} #1}}
+\newcommand{\PHInline}[1]{\todo[color={blue!33},size=small,inline]{\textbf{PH :} #1}}
+\newcommand{\GS}[1]{\mycomment[GS]{#1}}
+%
+\usepackage{subcaption}
+\usepackage{tikz}
+\usetikzlibrary{external,graphs}
+\tikzexternalize[prefix=Images/]% On externalise. Les images sont stockées dans le dossier Images
+\makeatletter %pour ne pas prendre en compte les todo dans l'externalisation
+\renewcommand{\todo}[2][]{\tikzexternaldisable\@todo[#1]{#2}\tikzexternalenable}
+\makeatother
+\makeatletter %pour ne pas prendre en compte les missingfigures dans l'externalisation
+\renewcommand{\missingfigure}[2][]{\tikzexternaldisable\@missingfigure[#1]{#2}\tikzexternalenable}
+\makeatother
+\tikzset{myloop above/.style={loop, out=130, in = 50,min distance =8mm}}
+\tikzset{myloop below/.style={loop, out=-130, in = -50,min distance =8mm}}
+\tikzset{blacknode/.style={shape= circle, fill = black, inner sep = 0pt, outer sep = 0pt, minimum size = 3pt,draw}}
+%
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{conjecture}[lem]{Conjecture}
+\newtheorem{cor}[lem]{Corollary}
+\newtheorem{prop}[lem]{Proposition}
+\newtheorem{thm}[lem]{Theorem}
+\theoremstyle{definition}
+\newtheorem{defn}[lem]{Definition}
+\theoremstyle{remark}% texte en roman
+\newtheorem{exmp}[lem]{Example}
+%
+%
+%
+\DeclareMathOperator\Cayley{Cayl}
+\DeclareMathOperator\Sch{Sch}
+\DeclareMathOperator\stab{Stab}
+\DeclareMathOperator\ab{ab}
+%
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand*{\field}[1]{\mathbf{#1}}
+\newcommand*{\Z}{\field{Z}}
+\newcommand{\setst}[2]{\{#1\ |\ #2\}}
+%
+%
+\title{Property FW and wreath products of groups: a~simple approach using Schreier graphs}
+\author{Paul-Henry Leemann, Grégoire Schneeberger}
+\date{\today \quad \currenttime}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\begin{abstract}
+The group property FW stands in-between the celebrated Kazdhan's property (T) and Serre's property FA. Among many characterizations, it might be defined, for finitely generated groups, as having all Schreier graphs one-ended.
+Yves Cornullier proved that a finitely generated wreath product $G\wr_XH$ has property FW if and only if both $G$ and $H$ have property FW and $X$ is finite. In this paper, we will present a more explicit combinatorial elementary proof using Schreier graphs. \GS{Ajouté que c'est déjà dans Cornullier}
+\end{abstract}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\input{Introduction_v3.tex}
+\input{Definitions_v3.tex}
+\input{Proof_v3.tex}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\begin{thebibliography}{10}
+
+\bibitem{Barnhill2008}
+Angela Barnhill and Indira Chatterji.
+\newblock Property ({T}) versus property {FW}.
+\newblock {\em Enseign. Math. (2)}, 54(1-2):16--18, 2008.
+
+\bibitem{MR1213151}
+Stephen~G Brick.
+\newblock {Quasi-isometries and ends of groups}.
+\newblock {\em J. Pure Appl. Algebr.}, 86(1):23--33, 1993.
+
+\bibitem{Cherix2004}
+Pierre-Alain Cherix, Florian Martin, and Alain Valette.
+\newblock Spaces with measured walls, the {H}aagerup property and property
+  ({T}).
+\newblock {\em Ergodic Theory Dynam. Systems}, 24(6):1895--1908, 2004.
+
+\bibitem{Cornulier2013}
+Yves {Cornulier}.
+\newblock {Group actions with commensurated subsets, wallings and cubings}.
+\newblock {\em arXiv e-prints}, page arXiv:1302.5982, February 2013.
+
+\bibitem{Cornulier2011}
+Yves Cornulier and Aditi Kar.
+\newblock On property ({FA}) for wreath products.
+\newblock {\em J. Group Theory}, 14(1):165--174, 2011.
+
+\bibitem{DelaHarpe2000}
+Pierre de~la Harpe.
+\newblock {\em Topics in geometric group theory}.
+\newblock Chicago Lectures in Mathematics. University of Chicago Press,
+  Chicago, IL, 2000.
+
+\bibitem{MR1967888}
+Reinhard Diestel and Daniela K\"{u}hn.
+\newblock Graph-theoretical versus topological ends of graphs.
+\newblock {\em J. Combin. Theory Ser. B}, 87(1):197--206, 2003.
+
+\bibitem{MR0450121}
+Jonathan~L. Gross.
+\newblock Every connected regular graph of even degree is a {S}chreier coset
+  graph.
+\newblock {\em J. Combinatorial Theory Ser. B}, 22(3):227--232, 1977.
+
+\bibitem{MR10267}
+Heinz Hopf.
+\newblock Enden offener {R}\"{a}ume und unendliche diskontinuierliche
+  {G}ruppen.
+\newblock {\em Comment. Math. Helv.}, 16:81--100, 1944.
+
+\bibitem{LS2021}
+Paul-Henry Leemann and Gr{\'e}goire Schneeberger.
+\newblock Groups acting with bounded orbits and wreath products.
+\newblock In preparation.
+
+\bibitem{MR1358635}
+Alexander Lubotzky.
+\newblock Cayley graphs: eigenvalues, expanders and random walks.
+\newblock In {\em Surveys in combinatorics, 1995 ({S}tirling)}, volume 218 of
+  {\em London Math. Soc. Lecture Note Ser.}, pages 155--189. Cambridge Univ.
+  Press, Cambridge, 1995.
+
+\bibitem{Neuhauser2005a}
+Markus Neuhauser.
+\newblock Relative property ({T}) and related properties of wreath products.
+\newblock {\em Math. Z.}, 251(1):167--177, 2005.
+
+\bibitem{MR1347406}
+Michah Sageev.
+\newblock Ends of group pairs and non-positively curved cube complexes.
+\newblock {\em Proc. London Math. Soc. (3)}, 71(3):585--617, 1995.
+
+\end{thebibliography}
+
+%
+%
+%
+%
+%
+\enddocument
