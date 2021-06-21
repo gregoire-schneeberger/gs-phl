@@ -1,22 +1,27 @@
-\documentclass[smallcondensed,nospthms,english]{svjour3}     % onecolumn (ditto)
-\smartqed
-\usepackage{graphicx}
-\usepackage{mathptmx}
-%\usepackage[utf8]{inputenc}
-%\usepackage[T1]{fontenc}      
-%\usepackage[english]{babel}
-%\usepackage{textcomp}
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}      
+\usepackage[english]{babel}
 %
+%
+\usepackage{textcomp}
+\usepackage{lmodern}
 %
 %
 \usepackage{mathtools}
 \usepackage{amssymb,amsfonts}
 \usepackage{amsthm}
-\usepackage{hyperref}
+\usepackage[colorlinks,breaklinks,bookmarks,plainpages=false,unicode=true]{hyperref}%
+\usepackage{datetime} %ajoute la date et l'heure
+%
 %
 %
 \usepackage{subcaption}
-\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{external,graphs}
+\tikzset{myloop above/.style={loop, out=130, in = 50,min distance =8mm}}
+\tikzset{myloop below/.style={loop, out=-130, in = -50,min distance =8mm}}
+\tikzset{blacknode/.style={shape= circle, fill = black, inner sep = 0pt, outer sep = 0pt, minimum size = 3pt,draw}}
 %
 \newtheorem{lem}{Lemma}[section]
 \newtheorem{conjecture}[lem]{Conjecture}
@@ -29,6 +34,7 @@
 \newtheorem{exmp}[lem]{Example}
 %
 %
+%
 \DeclareMathOperator\Cayley{Cayl}
 \DeclareMathOperator\Sch{Sch}
 \DeclareMathOperator\stab{Stab}
@@ -38,47 +44,42 @@
 \newcommand*{\field}[1]{\mathbf{#1}}
 \newcommand*{\Z}{\field{Z}}
 \newcommand{\setst}[2]{\{#1\ |\ #2\}}
-
-\journalname{Geometriae Dedicata}
+%
+%
+\title{Property FW and wreath products of groups: a~simple approach using Schreier graphs}
+\author{Paul-Henry Leemann\thanks{Supported by grant 200021\textunderscore188578 of the Swiss National Fund for Scientific Research.}, Grégoire Schneeberger}
+\date{\today}
+%
+%
+%
+%
+%
+%
+%
+%
+%
 %
 \begin{document}
-
-\title{Property FW and wreath products of groups: a~simple approach using Schreier graphs\thanks{Supported by grant 200021\textunderscore188578 of the Swiss National Fund for Scientific Research.}
-}
-\author{Paul-Henry Leemann \and Grégoire Schneeberger* %etc.
-}
-
-\institute{Paul-Henry Leemann \at
-             	Université de Neuchâtel, Institut de Mathématiques, Rue Emile-Argand 11, 2000 Neuchâtel, Suisse \\
-              \email{Paul-Henry.Leemann@unine.ch } 
-           \and
-           Grégoire Schneeberger \at
-           Université de Genève, Section de mathématiques, Rue du Conseil-Général 7-9, 1205 Genève, Suisse \\
-           \email{Gregoire.Schneeberger@unige.ch} 
-}
-
-\date{Received: date / Accepted: date}
-
 \maketitle
-
+%
+%
+%
+%
 \begin{abstract}
 The group property FW stands in-between the celebrated Kazdhan's property (T) and Serre's property FA. Among many characterizations, it might be defined, for finitely generated groups, as having all Schreier graphs one-ended.
-Using this, we show that a finitely generated wreath product $G\wr_XH$ has property FW if and only if both $G$ and $H$ have property FW and $X$ is finite.
-\keywords{Wreath Products \and Property FW \and Schreier graphs \and Ends}
-\subclass{20E22 \and 20F65}
-\medskip
-\noindent {\bf Data availability } Data sharing not applicable to this article as no datasets were generated or analysed during the current study.
-\end{abstract}
 
+It follows from the work of Y. Cornulier that a finitely generated wreath product $G\wr_XH$ has property FW if and only if both $G$ and $H$ have property FW and $X$ is finite.
+The aim of this paper is to give an elementary, direct and explicit proof of this fact using Schreier graphs.
+\end{abstract}
+%
+%
+%
+%
 \section{Introduction}
-%
-%
-%
-%
-%
 Property FW is a group property that is (for discrete groups) a weakening of the celebrated Kazdhan's property (T). It was introduced by Barnhill and Chatterji in \cite{Barnhill2008}. It is a fixed point property for actions on wall spaces or, equivalently, on CAT(0) cube complexes. Therefore it stands between property FH (fixed points on Hilbert spaces, equivalent to property (T) for discrete groups) and property FA (fixed points on \emph{arbres}\footnote{\emph{Arbres} is the french word for trees.}). It is known that all these properties are different, see  \cite{Cornulier2013} for examples of groups which distinguish them.
 
 When working with group properties, it is natural to ask if they are stable under ``natural'' group operations. One such operation, of great use in geometric group theory, is the wreath product, which generalizes the direct product of two groups, see Definition~\ref{Def:WreathProd}.
+
 
 In the context of properties defined by fixed points of actions, the first result concerning wreath products is due to Cherix, Martin and Valette and later refined by Neuhauser and concerns property (T).
 %
@@ -88,7 +89,7 @@ Let $G,H$ be two discrete groups with $G$ non-trivial and $X$ a set on which $H$
 \end{thm}
 %
 %
-The aim of this note is to give an elementary proof of analogous of Theorem~\ref{T:Wreath_prop_T} for property FW:
+In \cite{Cornulier2013} Cornulier studied property FW using \emph{cardinal definite functions} and while not explicitly stated in \cite{Cornulier2013}, the following result can be extracted from his work.
 %
 %
 \begin{thm}\label{Thm:Main}
@@ -96,54 +97,23 @@ Let $G,H$ be two finitely generated groups with $G$ non-trivial and $X$ a set on
 \end{thm}
 %
 %
-Our proof will rely on a characterization of property FW via ends of Schreier graphs, see Subsection \ref{Subsection:FW} for the relevant definitions.
-Note that Cornulier also proved in \cite{Cornulier2013} that if $G\wr_XH$ has property FW (and $G$ is non trivial), then $X$ is finite.
+The aim of this note is to give an explicit and elementary proof of this fact using a characterization of property FW via the number of ends of Schreier graphs, see Subsection \ref{Subsection:FW} for the relevant definitions.
 
-Corulier and Kar studied the question of stability of wreath product for property FA in \cite{Cornulier2011}. They proved a similar result if the action of the group $H$ has finitely many orbits and no fixed point. The condition that $G$ has property FA is replaced by $G$ has finite abelianization and $G$ can not be expressed as a countable union of properly increasing sequence of subgroups.
 
 At this point, the curious reader might have two questions. First, is it possible to extend Theorem \ref{Thm:Main} beyond the realms of finitely generated groups and of actions with finitely many orbits? And secondly, is there a link between Theorems \ref{T:Wreath_prop_T} and \ref{Thm:Main}?
 In both cases, the answer is yes.
-This is the subject of the forthcoming and more technical paper \cite{LS2021}, which gives an unified proof of Theorems \ref{T:Wreath_prop_T} and \ref{Thm:Main} as well as of similar results for the Bergman's property and more.
+
+This is the subject of the more technical paper \cite{LS2021}, which gives an unified proof of Theorems \ref{T:Wreath_prop_T} and \ref{Thm:Main} as well as of similar results for the Bergman's property and more.
 %
-%
-%
-%
+
 \paragraph{Organization of the paper}
 The next section contains all the definitions as well as some examples, while Section \ref{Section:Proof} is devoted to the proof of Theorem~\ref{Thm:Main} and some related results.
 %
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%    Section : Definitions and examples    %%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Definitions and examples}
 
 
 This section contains all the definitions, some standard but useful preliminary results as well as some examples.
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%    Subsection : Ends of Schreier graphs and property FW    %%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Ends of Schreier graphs and property FW}
 \label{Subsection:FW}
 %
@@ -156,7 +126,7 @@ Our graphs will be undirected and we will sometimes identify a graph with its ve
 %
 %
 \begin{defn}
-Let $G$ be a group, $H$ a subgroup of $G$ and $S$ a symmetric generating set. The \emph{(left) Schreier graph} $\Sch(G,H;S)$ is the graph with vertices the left cosets $gH=\setst{gh}{h\in H}$ and for every $\{s,s^{-1}\}\subset S$ an edge between $gH$ and $sgH$.
+Let $G$ be a group, $H$ a subgroup of $G$ and $S$ a symmetric generating set. The \emph{(left) Schreier graph} $\Sch(G,H;S)$ is the graph with vertices the left cosets $gH=\setst{gh}{h\in H}$ and for every $\{s,s^{-1}\}\subset S$ an edge between $gH$ and $sgH$.% for every $s$ in $S$.
 \end{defn}
 %
 %
@@ -214,7 +184,7 @@ Let $\Gamma$ be a graph and $K$ a finite subset of vertices. The graph $\Gamma\s
 \begin{defn}\label{Def:Ends}
 Let $\Gamma$ be a graph. The \emph{number of ends} of $\Gamma$ is the supremum, taken over all finite $K$, of the number of infinite connected components of $\Gamma\setminus K$.
 \end{defn}
-There exists other characterizations of the number of ends in graphs, 
+There exists other characterizations of the number of ends in graphs, %notably in terms of equivalence classes of rays,
 see~\cite{MR1967888} and the references therein, but Definition~\ref{Def:Ends} is the one that best suits our purpose.
 A locally finite graph (i.e. such that every vertex has finite degree) is finite if and only if it has $0$ end.
 
@@ -235,25 +205,8 @@ It directly follows from the definition that all finite groups have property FW,
 In fact, if $G$ is a finitely generated group with an homomorphism onto $\Z$, then it does not have FW. Indeed, in this case $G\cong H\rtimes \Z$  for some $H$ and the Schreier graph $\Sch(G,H;S)$ is isomorphic to a Cayley graph of $\Z\cong G/H$ and hence has $2$ ends.
 
 Property FW admits many distinct characterizations that allow to define it for groups that are non-necessarily finitely generated and even for topological groups. We refer the reader to~\cite{Cornulier2013} for a survey of these characterizations.
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%    Subsection : Wreath products    %%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Wreath products}
-%
-%
-%
 %
 %
 Let $X$ be a set and $G$ a group. We view
@@ -286,8 +239,8 @@ is a generating set for $G\wr_XH$.
 On the other hand, if $\setst{(\varphi_i,h_i)}{i\in I}$ is a generating set of $G\wr_XH$, then $\setst{h_i}{i\in I}$ is a generating set of $H$ while $\setst{\varphi_i(x)}{i\in I,x\in X}$ is a generating set of $G$.
 Observe that since the $\varphi_i$ take only finitely many values, if $I$ is finite, so is $\setst{\varphi_i(x)}{i\in I,x\in X}$.
 We hence recover the following characterization of the finite generation of $G\wr_XH$.
-%
-%
+
+
 \begin{lem}
 The group $G\wr_XH$ is finitely generated if and only if both $G$ and $H$ are finitely generated and $H$ acts on $X$ with finitely many orbits.
 \end{lem}
@@ -302,33 +255,24 @@ Using the above lemma, we could reformulate Theorem~\ref{Thm:Main} in the follow
 \begin{prop}
 Let $G$, $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts. Suppose that all three of $G$, $H$ and $G\wr_XH$ are finitely generated. Then the wreath product $G\wr_XH$ has property FW if and only if $G$ and $H$ have property FW and $X$ is finite.
 \end{prop}
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%    Section : Proof of the main result    %%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
 \section{Proof of the main result}
 \label{Section:Proof}
 %
-%
-%
-%
-%
+
 This section is devoted to the proof of Theorem~\ref{Thm:Main}. This proof is split into two parts: Lemma \ref{Lemma:Semidirect_ends} and its Corollary \ref{Cor:Wreath_ends}, and Lemma \ref{Lem:Wreath_groups_ends}.
 
 We begin by an easy result on quotients.
-%
-%
 \begin{lem}\label{Lem:Quotien}
 Let $G$ be a finitely generated group and $H$ a quotient of $G$. If $G$ has FW, then so does $H$.
 \end{lem}
@@ -361,6 +305,7 @@ The first part is Lemma~\ref{Lem:Quotien}.
 For the second part, let $S$, respectively $T$, denotes a finite generating set of $N$, respectively $H$.
 Then the group $G\coloneqq N\rtimes H$ is finitely generated by $U=(S\times\{1\}) \cup(\{1\}\times T)$.
 
+
 Suppose that both $N$ and $H$ have property FW. We want to show that every Schreier graphs of $G$ has at most one end. If they are all finite, then there is nothing to prove (and $G$ is finite). So let $\Gamma$ be an infinite Schreier graph of $G$ with respect to the generating set $U$. The groups $N$ and $H$ act on the vertices of $\Gamma$ by restriction of the action of $G$. That is, $n.x = (n,1).x$ and $h.x = (1,h).x$.
 For each vertex $x$ we define $\Gamma_x^H$ (and respectively $\Gamma_x^N$) as the Schreier graph obtained from the action of $H$ (respectively $N$) on the $H$-orbit (respectively $N$-orbit) of $x$. These are subgraphs of $\Gamma$. As $N$ and $H$ have property FW, the graphs $\Gamma_x^H$ and $\Gamma_x^N$ are either finite or one-ended. We want to prove that in this case $\Gamma$ has exactly one end.
 
@@ -381,6 +326,7 @@ In order to finish the proof, it remains to exhibit elements $z$ and $z'$ and th
 \caption{The path between $x$ and $y$.}
 \label{Figure:PathSemiDirect}
 \end{figure}
+
 %
 %
 
@@ -468,6 +414,7 @@ The second ones, of the form $(\delta_{x_0}^s,1)$, give us loops everywhere exce
 \caption{The leaf structure of the orbital Schreier graph of $G\wr_XH \curvearrowright Y$. Plain edges correspond to generators of the form $(\mathbf 1,t)$ while dotted edges correspond to generators of the form $(\delta_{x_0}^s,1)$.}
 \label{Figure:Leaves}
 \end{figure}
+
 %
 %
 
@@ -482,17 +429,11 @@ We have the imprimitive action of $G\wr_XH$ on $G/K\times X$, which restricts to
 	(\varphi,h).(gK,x) = (\varphi(h.x) gK, h.x).
 \]
 As above, the action is transitive and the orbital Schreier graph of this action is isomorphic to a Schreier graph $\Gamma$ of $G\wr_XH$. We decompose this graph into leaves in the same way. Now we look at the subgraph made up of vertices $(g,x_0)$ and edges $(\delta_{x_0}^s,1)$ and we remark that it is isomorphic to the Schreier graph $\Sch(G,K,S)$ which has more than one end. Then $\Gamma$ has also more than one end, which finishes the proof.
-\end{proof}
-
-
-\begin{acknowledgements}
+\end{proof}%
+%
+\paragraph{Acknowledgment}
 The authors are thankful to A. Genevois, T. Nagnibeda and A. Valette for helpful comments on a previous version of this note, and to the Swiss National Fund for Scientific Research for its support.
-\end{acknowledgements}
-%\begin{data}
-%Data sharing not applicable to this article as no datasets were generated or analysedduring the current study. 
-%\end{data}
 
-% Non-BibTeX users please use
 \begin{thebibliography}{10}
 
 \bibitem{Barnhill2008}
@@ -546,8 +487,8 @@ Heinz Hopf.
 
 \bibitem{LS2021}
 Paul-Henry Leemann and Gr{\'e}goire Schneeberger.
-\newblock Groups acting with bounded orbits and wreath products.
-\newblock In preparation.
+\newblock Wreath products of groups acting with bounded orbits.
+\newblock {\em arXiv e-prints}, page arXiv:2102.08001, February 2021.
 
 \bibitem{MR1358635}
 Alexander Lubotzky.
@@ -567,4 +508,10 @@ Michah Sageev.
 \newblock {\em Proc. London Math. Soc. (3)}, 71(3):585--617, 1995.
 
 \end{thebibliography}
-\end{document}
+
+%
+%
+%
+%
+%
+\enddocument
