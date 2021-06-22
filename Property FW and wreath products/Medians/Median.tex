@@ -153,7 +153,7 @@ When working with group properties, it is natural to ask if they are stable unde
 One such operation, of great use in geometric group theory, is the wreath product, see Section~\ref{Section:Def} for all the relevant definitions.
 
 A \CatS-space is a metric space with an ``additional structure'' and we will say that a group $G$ has \emph{property~\BS} if every action by isometries which preserve the structure on a \CatS-space has bounded orbits.
-Formally, this means that \CatS{} is a subcategory of the category of (pseudo-) metric spaces, and that the actions are by \CatS-automorphisms.
+Formally, this means that \CatS{} is a subcategory of the category of metric spaces, and that the actions are by \CatS-automorphisms.
 We note that having one bounded orbit implies that all the orbits are bounded.
 
 In the context of properties defined by actions with bounded orbits, the first result concerning wreath products, due to Cherix, Martin and Valette and later refined by Neuhauser, concerns Kazhdan's property~(T).
@@ -177,6 +177,12 @@ Then $G\wr_XH$ has property~\FA{} if and only if $H$ has property~\FA, $G$ has n
 \end{thm}
 %
 %
+Observe that our statement of Theorem~\ref{Thm:FACK} differs of the original statement of~\cite{Cornulier2011}.
+Indeed, where we ask $G$ to have uncountable cofinality and no quotient isomorphic to $\Z$, the authors of~\cite{Cornulier2011} ask $G$ to have uncountable cofinality and finite abelianization.
+However, these two sets of conditions are equivalent.
+One implication is trivial, as finite Abelian groups do not project onto $\Z$. The other implication follows for countable Abelian groups from the structure theorem of finitely generated Abelian groups.
+For the general case, Y. Cornulier kindly reminded us that any infinite Abelian group has a countable quotient; the conclusion hence follows from the countable case.
+
 Finally, we have an analogous of Theorem~\ref{T:Wreath_prop_T} for property~\FW{} (every action on wall spaces has bounded orbits):
 %
 %
@@ -383,12 +389,13 @@ One easily verifies that $d$ is a $G$-invariant ultrametric. Moreover, the orbit
 \end{proof}
 %
 %
-The above lemma gives us the following example, which we will use in Lemma~\ref{Lemma:Cof} to characterize which direct sums have uncountable cofinality.\PH{Ajouté la justification de l'exemple.}
+%The above lemma gives us the following example, which we will use in Lemma~\ref{Lemma:Cof} to characterize which direct sums have uncountable cofinality.\PH{Ajouté la justification de l'exemple.}
 %
 %
-\begin{exmp}\label{Exmpl:Ultra}
-Let $(G_i)_{i\geq 1}$ be non-trivial groups and let $G\coloneqq\bigoplus_{i\geq 1} G_i$ be their direct sum.
-Then $d_\infty(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$ is an ultrametric on $G$ which is $G$-invariant for the action of $G$ on itself by left multiplication.\end{exmp}
+%\begin{exmp}\label{Exmpl:Ultra}
+%Let $(G_i)_{i\geq 1}$ be non-trivial groups and let $G\coloneqq\bigoplus_{i\geq 1} G_i$ be their direct sum.
+%Then $d_\infty(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$ is an ultrametric on $G$ which is $G$-invariant for the action of $G$ on itself by left multiplication.
+%\end{exmp}
 %
 %
 %
@@ -408,7 +415,7 @@ It is said to have
 \item
 \emph{property~\FW} if any action by graph isomorphisms on a connected median graph has bounded orbits,
 \item
-\emph{Property \FR} if any isometric action on a metric space on a real tree has bounded orbits,
+\emph{property \FR} if any isometric action on a metric space on a real tree has bounded orbits,
 \item
 \emph{property~\FA} if any action by graph isomorphisms on a tree has bounded orbits,
 \item
@@ -553,11 +560,14 @@ We can now formally define the group property~\BS{} as:
 %
 \begin{defn}\label{Def:PropBS}
 Let $\category S$ be a subcategory of $\PMet$.
-A group $G$ has \emph{property} \BS{} if every $G$ action by $\category S$-automorphisms on a $\category S$-space has bounded orbits.
+A group $G$ has \emph{property} \BS{} if every $G$ action by \CatS-automorphisms on a $\category S$-space has all its orbits bounded.
 A pair $(G,H)$ of a group and a subgroup has \emph{relative property} \BS{} if for every $G$ action by $\category S$-automorphisms on a $\category S$-space, the $H$-orbits are bounded.
 \end{defn}
 %
 %
+Observe that a group $G$ has property~\BS{} if and only any $G$ action on a \CatS-space has at least one bounded orbit.
+%One implication is trivial and the other is a direct application of the triangle inequality.
+
 All the properties of Definition~\ref{Def:FHFA} are of the form \BS.
 %Examples of other interesting subcategories include (some specific subclass of) Banach spaces as well as real or complex hyperbolic spaces, see~\cite[Definition 6.22]{MR1023471}.
 Another example of property of the form \BS{} can be found in~\cite[Definition 6.22]{MR1023471}: a group has property (FHyp$_{\field{C}}$) if any action on a complex or real hyperbolic space has bounded orbits.
@@ -649,12 +659,8 @@ On the other hand, trees do not have Cartesian powers.
 %In view of Definition~\ref{Def:PropBS} and~\ref{Def:Cartesian}, the reader might ask why we are working in $\PMet$ instead of $\category{Born}$, the category of bornological spaces together with bounded maps.
 %The reason behind this is the forthcoming Lemma~\ref{Lemma:InterProd} and its corollaries, which fail for general bornological spaces.
 %\end{rem}
-\PHInline{J'ai totalement réécrit cette sous-section. Tu me diras ce que tu en penses.}
 This subsection is devoted to variations and generalizations of property~\BS.
-It is intended as a note for the interested reader, and can be skipped without any harm.\PH{Est-ce que l'intro te va ? Ou as-tu une meilleure idée ?}
-
-As noted in the introduction, a group $G$ has property~\BS{} if and only any $G$ action on a \CatS-space has at least one bounded orbit.
-One implication is trivial and the other is a direct application of the triangle inequality.\PH{Rajouté ce~§. On garde ?}
+It is intended as a note for the interested reader, and can be skipped without any harm.
 %
 %
 %
@@ -922,7 +928,8 @@ One direction of the first assertion is simply Corollary~\ref{Cor:Prod}.
 For the other direction, if $\bigoplus_{x\in X}G_x$ has property~\BS{} then all its quotients, and hence all the $G_x$, have property~\BS.
 On the other hand, if $X$ is infinite, there exists a countable subset $Y \subset X$. Let $Z \coloneqq X\setminus Y$, thus we have $X = Y \sqcup Z$. We can decompose the direct sum as $\bigoplus_XG = (\bigoplus_YG) \times (\bigoplus_ZG)$ and then, by Corollary~\ref{Cor:Prod}, if $\bigoplus_YG$ does not have uncountable cofinality, then neither does $\bigoplus_XG$.
 So let $G\coloneqq \bigoplus_{i\geq 1}G_i$ and for each $i$, choose $g_i\neq 1$ in $G_i$.
-Let $d_\infty(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$ be the $G$-invariant ultrametric of Example~\ref{Exmpl:Ultra}.
+Let $d_\infty(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$. %be the $G$-invariant ultrametric of Example~\ref{Exmpl:Ultra}.
+This is a $G$-invariant ultra-metric for the action by left multiplication of $G$ on itself.
 Then for every integer $n$, the orbit $G.1_G$ contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $1_G$ for $d_\infty$ if the $g_i$ are not equal to $1$.
 In particular, an infinite direct sum of non-trivial groups does not have uncountable cofinality, nor does it have \BS.
 
@@ -1111,11 +1118,11 @@ Then
 %
 Moreover, by using Lemma~\ref{Lemma:Cof} we can get ride of the \emph{finitely many orbits} hypothesis in Theorem~\ref{Thm:FACK} in order to obtain Theorem~\ref{Thm:FAFiniteOrbits}.
 
-Observe that our statement of Theorem~\ref{Thm:FACK} differs of the original statement of~\cite{Cornulier2011}.
-Indeed, where we ask $G$ to have uncountable cofinality and no quotient isomorphic to $\Z$, the authors of~\cite{Cornulier2011} ask $G$ to have uncountable cofinality and finite abelianization.
-However, these two sets of conditions are equivalent.
-One implication is trivial, as finite Abelian groups do not project onto $\Z$. The other implication follows for countable Abelian groups from the structure theorem of finitely generated Abelian groups.
-For the general case, Y. Cornulier kindly reminded us that any infinite Abelian group has a countable quotient; the conclusion hence follows from the countable case.
+%Observe that our statement of Theorem~\ref{Thm:FACK} differs of the original statement of~\cite{Cornulier2011}.
+%Indeed, where we ask $G$ to have uncountable cofinality and no quotient isomorphic to $\Z$, the authors of~\cite{Cornulier2011} ask $G$ to have uncountable cofinality and finite abelianization.
+%However, these two sets of conditions are equivalent.
+%One implication is trivial, as finite Abelian groups do not project onto $\Z$. The other implication follows for countable Abelian groups from the structure theorem of finitely generated Abelian groups.
+%For the general case, Y. Cornulier kindly reminded us that any infinite Abelian group has a countable quotient; the conclusion hence follows from the countable case.
 %
 %
 %
