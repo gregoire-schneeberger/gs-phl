@@ -1,4 +1,7 @@
 \documentclass[a4paper]{article}
+\textwidth=125 mm
+\textheight=195 mm
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel} %utilisation du package français
@@ -17,12 +20,12 @@
 %\usepackage{hyperref}%
 \usepackage[colorlinks,breaklinks,bookmarks,plainpages=false,unicode=true]{hyperref}%
 \usepackage{tikz-cd}
-\usepackage{todonotes} %ajouter des commentaires
-\newcounter{mycomment}
-\newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33},size=\small]{\textbf{Commentaire [\uppercase{#1}\themycomment]:}~#2}}}
-\newcommand{\PH}[1]{\todo[color={blue!33},size=small]{\textbf{PH :} #1}}
-\newcommand{\PHInline}[1]{\todo[color={blue!33},size=small,inline]{\textbf{PH :} #1}}
-\newcommand{\GS}[1]{\mycomment[GS]{#1}}
+%\usepackage{todonotes} %ajouter des commentaires
+%\newcounter{mycomment}
+%\newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33},size=\small]{\textbf{Commentaire [\uppercase{#1}\themycomment]:}~#2}}}
+%\newcommand{\PH}[1]{\todo[color={blue!33},size=small]{\textbf{PH :} #1}}
+%\newcommand{\PHInline}[1]{\todo[color={blue!33},size=small,inline]{\textbf{PH :} #1}}
+%\newcommand{\GS}[1]{\mycomment[GS]{#1}}
 %
 %
 %
@@ -77,8 +80,11 @@
 %
 %
 \title{Wreath products of groups acting with bounded orbits}
-\author{Paul-Henry Leemann\thanks{Supported by grant 200021\textunderscore188578 of the Swiss National Fund for Scientific Research.}, Grégoire Schneeberger}
-\date{\today}
+\author{Paul-Henry Leemann\thanks{Supported by grant 200021\textunderscore188578 of the Swiss National Fund for Scientific Research.} $^{,1}$, Grégoire Schneeberger$^2$}
+\date{%
+{\small $^1$Institut de Math\'ematiques, Universit\'e de Neuch\^atel, Rue Emile-Argand 11, 2000~Neuch\^atel, Switzerland, \texttt{paul-henry.leemann@unine.ch}}\\%
+{\small $^2$Section de math\'ematiques, Universit\'e de Gen\`eve, 7-9, rue du Conseil G\'en\'eral, 1205~Gen\`eve, Switzerland, \texttt{gregoire.schneeberger@unige.ch}}\\[2ex]%
+\today}
 %
 %
 %
@@ -171,14 +177,14 @@ Hence, Theorem~\ref{T:Wreath_prop_T} can also be viewed, for countable groups, a
 The corresponding result for property~\FA{} (every action on a tree has bounded orbits) is a little more convoluted and was obtained a few years later by Cornulier and Kar.
 %
 %
-\begin{thm}[\cite{Cornulier2011}]\label{Thm:FACK}
+\begin{thm}[\cite{MR2764930}]\label{Thm:FACK}
 Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which $H$ acts with finitely many orbits and without fixed points.
 Then $G\wr_XH$ has property~\FA{} if and only if $H$ has property~\FA, $G$ has no quotient isomorphic to $\Z$ and can not be written as a countable increasing union of proper subgroups.
 \end{thm}
 %
 %
-Observe that our statement of Theorem~\ref{Thm:FACK} differs of the original statement of~\cite{Cornulier2011}.
-Indeed, where we ask $G$ to have uncountable cofinality and no quotient isomorphic to $\Z$, the authors of~\cite{Cornulier2011} ask $G$ to have uncountable cofinality and finite abelianization.
+Observe that our statement of Theorem~\ref{Thm:FACK} differs of the original statement of~\cite{MR2764930}.
+Indeed, where we ask $G$ to have uncountable cofinality and no quotient isomorphic to $\Z$, the authors of~\cite{MR2764930} ask $G$ to have uncountable cofinality and finite abelianization.
 However, these two sets of conditions are equivalent.
 One implication is trivial, as finite Abelian groups do not project onto $\Z$. The other implication follows for countable Abelian groups from the structure theorem of finitely generated Abelian groups.
 For the general case, Y. Cornulier kindly reminded us that any infinite Abelian group has a countable quotient; the conclusion hence follows from the countable case.
@@ -1130,8 +1136,8 @@ Then
 %
 Moreover, by using Lemma~\ref{Lemma:Cof} we can get ride of the \emph{finitely many orbits} hypothesis in Theorem~\ref{Thm:FACK} in order to obtain Theorem~\ref{Thm:FAFiniteOrbits}.
 
-%Observe that our statement of Theorem~\ref{Thm:FACK} differs of the original statement of~\cite{Cornulier2011}.
-%Indeed, where we ask $G$ to have uncountable cofinality and no quotient isomorphic to $\Z$, the authors of~\cite{Cornulier2011} ask $G$ to have uncountable cofinality and finite abelianization.
+%Observe that our statement of Theorem~\ref{Thm:FACK} differs of the original statement of~\cite{MR2764930}.
+%Indeed, where we ask $G$ to have uncountable cofinality and no quotient isomorphic to $\Z$, the authors of~\cite{MR2764930} ask $G$ to have uncountable cofinality and finite abelianization.
 %However, these two sets of conditions are equivalent.
 %One implication is trivial, as finite Abelian groups do not project onto $\Z$. The other implication follows for countable Abelian groups from the structure theorem of finitely generated Abelian groups.
 %For the general case, Y. Cornulier kindly reminded us that any infinite Abelian group has a countable quotient; the conclusion hence follows from the countable case.
