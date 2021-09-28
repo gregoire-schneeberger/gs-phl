@@ -16,7 +16,7 @@
 \coordinate[right =0.5cm of 14] (1b) ;
 \graph[edge={thick,color=blue}]{(0a)--[dotted](00)--(01)--(02)--(03)--(04)--[dotted](0b)} ;
 \graph[edge={thick,color=blue}]{(1a)--[dotted](10)--(11)--(12)--(13)--(14)--[dotted](1b)} ;
-\graph[edge={thick,color=red}]{(02)--(12)} ;
+\graph[edge={thick,color=red}]{(02)--[bend left](12)--[bend left](02)} ;
 \foreach \i in {0,1,3,4}{
 \draw [thick,color=red] (0\i) to [myloop below] (0\i) ;
 \draw [thick,color=red] (1\i) to [myloop above] (1\i) ;
