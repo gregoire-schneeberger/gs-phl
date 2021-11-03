@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.26)  28 SEP 2021 17:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.26)  3 NOV 2021 20:55
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -914,35 +914,35 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 <CayleyOfZ.pdf, id=95, 305.01352pt x 46.37827pt>
 File: CayleyOfZ.pdf Graphic file (type pdf)
 <use CayleyOfZ.pdf>
-Package pdftex.def Info: CayleyOfZ.pdf  used on input line 146.
+Package pdftex.def Info: CayleyOfZ.pdf  used on input line 164.
 (pdftex.def)             Requested size: 305.01276pt x 46.37814pt.
 <CayleyOfZ2.pdf, id=96, 143.06349pt x 143.06349pt>
 File: CayleyOfZ2.pdf Graphic file (type pdf)
 <use CayleyOfZ2.pdf>
-Package pdftex.def Info: CayleyOfZ2.pdf  used on input line 158.
+Package pdftex.def Info: CayleyOfZ2.pdf  used on input line 176.
 (pdftex.def)             Requested size: 143.06313pt x 143.06313pt.
 <CayleyOfF2.pdf, id=97, 165.02553pt x 165.02553pt>
 File: CayleyOfF2.pdf Graphic file (type pdf)
 <use CayleyOfF2.pdf>
-Package pdftex.def Info: CayleyOfF2.pdf  used on input line 165.
+Package pdftex.def Info: CayleyOfF2.pdf  used on input line 183.
 (pdftex.def)             Requested size: 165.02512pt x 165.02512pt.
 <SchreierOfF2.pdf, id=98, 162.75003pt x 62.02673pt>
 File: SchreierOfF2.pdf Graphic file (type pdf)
 <use SchreierOfF2.pdf>
-Package pdftex.def Info: SchreierOfF2.pdf  used on input line 176.
+Package pdftex.def Info: SchreierOfF2.pdf  used on input line 194.
 (pdftex.def)             Requested size: 162.74962pt x 62.02657pt.
  [3 <./CayleyOfZ.pdf> <./CayleyOfZ2.pdf> <./CayleyOfF2.pdf> <./SchreierOfF2.pdf
 >] [4] [5]
-<SemiDirect.pdf, id=155, 227.62239pt x 170.7168pt>
+<SemiDirect.pdf, id=157, 227.62239pt x 170.7168pt>
 File: SemiDirect.pdf Graphic file (type pdf)
 <use SemiDirect.pdf>
-Package pdftex.def Info: SemiDirect.pdf  used on input line 325.
+Package pdftex.def Info: SemiDirect.pdf  used on input line 350.
 (pdftex.def)             Requested size: 227.62183pt x 170.71637pt.
  [6 <./SemiDirect.pdf>] [7]
-<Leaves.pdf, id=198, 391.22562pt x 261.76494pt>
+<Leaves.pdf, id=201, 391.22562pt x 261.76494pt>
 File: Leaves.pdf Graphic file (type pdf)
 <use Leaves.pdf>
-Package pdftex.def Info: Leaves.pdf  used on input line 413.
+Package pdftex.def Info: Leaves.pdf  used on input line 472.
 (pdftex.def)             Requested size: 391.22466pt x 261.76428pt.
  [8 <./Leaves.pdf>] [9]
 (./Property FW and wreath products of groups_new.aux)
@@ -951,9 +951,9 @@ ew".out' has not changed.
 (rerunfilecheck)             Checksum: 239FD741A30AA61B5B5ADAF965BE18EC;852.
  ) 
 Here is how much of TeX's memory you used:
- 24571 strings out of 479023
- 452395 string characters out of 5859397
- 778468 words of memory out of 5000000
+ 24570 strings out of 479023
+ 452389 string characters out of 5859397
+ 777525 words of memory out of 5000000
  41515 multiletter control sequences out of 15000+600000
  489527 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -986,10 +986,10 @@ ic/lm/lmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy
 /local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texl
 ive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 Output written on "Property FW and wreath products of groups_new.pdf" (9 pages,
- 416626 bytes).
+ 417566 bytes).
 PDF statistics:
- 337 PDF objects out of 1000 (max. 8388607)
- 292 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
+ 341 PDF objects out of 1000 (max. 8388607)
+ 296 compressed objects within 3 object streams
+ 57 named destinations out of 1000 (max. 500000)
  83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

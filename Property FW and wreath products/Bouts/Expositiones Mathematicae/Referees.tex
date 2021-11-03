@@ -1,0 +1,162 @@
+\documentclass[english,a4paper]{article}
+%
+%
+%
+%%% encodage + typo
+\usepackage[T1]{fontenc}% encodage 8-bits + lettre accentuée en vectorielle;
+%\usepackage{textcomp}% améliore certains symboles de bases
+%\usepackage{lmodern}% remplace la police ComputerModern par LatinModern (+ mieux bien)
+\usepackage[utf8]{inputenc}% lettres accentuées tapée directement
+%%% babel
+%\usepackage{babel}% pour les césures automatiques, etc.
+%\usepackage{csquotes}% sinon babel pas content
+%
+%
+%
+%%% math
+%\usepackage{amsmath}
+\usepackage{mathtools}% compléments à amsmath
+\usepackage{amssymb}%symboles mathématiques supplémentaires, notamment pour la flèche double
+%\usepackage{amsthm}% environnement ams-theorem
+%
+%
+%
+%%%% graphiques
+%\usepackage{tikz}% TIKZ !!!
+%\usepackage{tikz-cd}% TIKZ Diagrammes commutatifs
+%\usetikzlibrary{graphs}
+%%%
+%%% mynode% style de sommet pour les graphes
+%\tikzset{mynode/.style={shape= circle, fill = white, inner sep = 0pt, outer sep = 0pt, minimum size = 4pt,draw}}
+%%%
+%%%% style d'arêtes pour les graphes
+%\tikzset{DirEdgeStyle/.style={>=stealth,->,thick}}% arêtes orientés (épaisses pour être plus visible)
+%\tikzset{every edge/.append style={thick}}% les arêtes sont épaisses ; plus visible
+%\tikzset{>=stealth}% jolie pointe de flèche
+%
+%
+%
+%% style de théorème
+%% \newtheorem{lemma}{Lemma}[section]
+%% \newtheorem{conjecture}{Conjecture}[section]
+%% \newtheorem{corollary}[lemma]{Corollary}
+%% \newtheorem{proposition}[lemma]{Proposition}
+%% \newtheorem{theorem}[lemma]{Theorem}
+%% \theoremstyle{remark}% texte en roman
+%% \newtheorem{definition}[lemma]{Definition}
+%% \newtheorem{remark}[lemma]{Remark}
+%
+%
+%
+%%% racourcis et nouvelles commandes
+\DeclareMathOperator\Acc{Acc}
+\DeclareMathOperator\Aut{Aut}
+\DeclareMathOperator\Cl{cl} 
+\DeclareMathOperator\Circ{Circ} 
+\DeclareMathOperator\diag{diag}
+\DeclareMathOperator\Id{Id}
+\DeclareMathOperator\id{id}
+\DeclareMathOperator\lcm{lcm}
+\DeclareMathOperator\NR{NR}
+\DeclareMathOperator\rank{rank}
+\DeclareMathOperator\Rist{Rist}
+\DeclareMathOperator\Stab{Stab}
+\DeclareMathOperator\SStab{SStab}
+\DeclareMathOperator\Sub{Sub}
+\DeclareMathOperator\Sym{Sym}
+%
+%
+\newcommand*\abs[1]{\lvert#1\rvert}
+\newcommand*\Autf{\Aut_{\mathrm{f}}}
+\newcommand*\Autfr{\Aut_{\mathrm{fr}}}
+\newcommand*\defi[1]{\textbf{#1}}
+\newcommand*\gen[1]{\langle#1\rangle}
+\newcommand*\GGS{\textrm{GGS}}
+\newcommand*\Grig{{\mathfrak G}}
+\newcommand*\level[1]{\mathcal L_{#1}}
+\newcommand*\N{\mathbf{N}}
+\newcommand*\portrait{{\mathcal P}}
+\newcommand*\presentation[2]{\langle#1\,|\,#2\rangle}
+\newcommand*\restr[2]{{#1}_{\mkern 1mu \vrule height 2ex\mkern2mu {#2}}}
+\newcommand*\setst[2]{\{#1\,|\,#2\}}
+\newcommand*\Subcl{\Sub_{\Cl}}
+\newcommand*{\treesection}[2]{{#1}_{\mkern 1mu \vrule height 2ex\mkern2mu {#2}}}
+%
+%
+%
+%%% hyperliens PDF
+\usepackage[colorlinks,breaklinks,bookmarks,plainpages=false,unicode=true]{hyperref} % PDF hyperliens : coloriés; sur plusieurs lignes; signet; vrai numéro (pas arabe)
+%plainpage=false : les pages sont désignée par leur vrai numéro et non pas par un numéro en chiffre arabe
+%
+%
+%
+%%% titre et autres informations
+\title{``Property FW and wreath products of groups: a simple approach using Schreier graphs'' answer to referee's comments}
+\author{Paul-Henry Leemann, Grégoire Schneeberger}
+%\date{\today}
+%
+%
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+We thank the anonymous reviewer for their careful reading of our manuscript and their insightful comments and suggestions, that we have taken into account.
+
+While we took in account all the referee’s suggestions and remarks, we will not comment below the ones concerning grammatical issues and obvious typos.
+\begin{itemize}
+%
+\item\textit{Definition 2.1: define orbit graphs and then put Cayley and Schreier as examples}\\
+Orbit graphs are now defined before Schreier graph. However, since we are mainly interested in Schreier graph, we kept the definition of orbit graphs in the text, and the definition of Schreier graphs as Definition 2.1.
+%
+\item\textit{P3 figure 3 H=?}\\
+$H=\setst{x^2,y^nxy^{-n},xy^nxy^{-n}x^{-1}}{n\in\mathbf{Z}\setminus\{0\}}$. This has been aded to the caption of the figure, without justification (the computation is a standard exercice). Observe that in the original figure, an edge was missing (the vertical red edges should be a red bigon), this is now corrected.
+%
+\item\textit{P4 line 4 of section 2.2 “componentwise” unclear, isn’t that pointwise?}\\
+Indeed. It has been changed accordingly.
+%
+\item\textit{P5 Proposition 2.6 is a pointless reformulation and the top paragraph of the page could be reworked a bit.}\\
+While Proposition 2.6 is trivially equivalent to Theorem 1.2, we believe that  it is enlightning as it hints the correct general statement for non-necessarily finitely generated groups (in which case the hypothesis ``$H$ acts on $X$ with finitely many orbits is not necessary).
+However, we removed the formal Proposition 2.6 and replaced it with a discussion in the text.
+See the new text.
+
+
+%
+\item\textit{P5 line 2 “is standard” -> “is a direct computation”}\\
+We followed the referee's suggestion. We also removed other occurrences of ``easy'' and ``standard''.
+%
+\item\textit{P5 Proof of Lemma 3.1: give a direct proof.}\\
+Done; see the new text.
+%
+\item\textit{P6 line 9 for $x$ in ...}
+Added: ``for every vertex $x$ of $\Gamma$''.
+%
+\item\textit{P6 line 9 ``In this'' refers to what}\\
+The two sentences have been replaced by the more clear ``As $N$ and $H$ have property FW, the graphs $\Gamma_x^H$ and $\Gamma_x^N$ are either finite or one-ended; and we will prove that this implies that $\Gamma$ has exactly one end.''.
+%
+\item\textit{P6 line 17 ``$K\subset K'$'' should be ``$K'\supset K$''}\\
+We followed the referee suggestion.
+%
+\item\textit{P6 ``A simple computation''}\\
+Changed to ``A direct computation''.
+%
+\item\textit{P7 Corollary 3.3 follows from quotients and from a direct argument without using Lemma 3.2}\\
+Indeed. However, we find more natural to first prove the more general statement on semi-direct products and then to state the result on direct products as a corollary instead of given a direct proof. We nevertheless changed the introductive sentence to Corollary 3.3 to ``We have the following result on direct products that can be obtained as a corollary of Lemma~3.2. It is also possible to give a short proof of it using Lemma~3.1 and a direct argument; details are let to the reader.''
+%
+\item\textit{P7 proof of Lemma 3.5 that X is finite is already a direct argument}\\
+Indeed. We slightly changed the beginning end the end of the proof to reflect this fact. See the new file.
+%
+\item\textit{P8 “Suppose now...” should come before, and again make a direct argument.}\\
+The argument is now direct. See the new file.
+\end{itemize}
+\end{document}
