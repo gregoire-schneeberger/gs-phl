@@ -1,0 +1,267 @@
+\documentclass[english,a4paper]{article}
+%
+%
+%
+%%% encodage + typo
+\usepackage[T1]{fontenc}% encodage 8-bits + lettre accentuée en vectorielle;
+%\usepackage{textcomp}% améliore certains symboles de bases
+%\usepackage{lmodern}% remplace la police ComputerModern par LatinModern (+ mieux bien)
+\usepackage[utf8]{inputenc}% lettres accentuées tapée directement
+%%% babel
+%\usepackage{babel}% pour les césures automatiques, etc.
+%\usepackage{csquotes}% sinon babel pas content
+%
+%
+%
+%%% math
+%\usepackage{amsmath}
+\usepackage{mathtools}% compléments à amsmath
+\usepackage{amssymb}%symboles mathématiques supplémentaires, notamment pour la flèche double
+%\usepackage{amsthm}% environnement ams-theorem
+%
+%
+%
+%%%% graphiques
+%\usepackage{tikz}% TIKZ !!!
+%\usepackage{tikz-cd}% TIKZ Diagrammes commutatifs
+%\usetikzlibrary{graphs}
+%%%
+%%% mynode% style de sommet pour les graphes
+%\tikzset{mynode/.style={shape= circle, fill = white, inner sep = 0pt, outer sep = 0pt, minimum size = 4pt,draw}}
+%%%
+%%%% style d'arêtes pour les graphes
+%\tikzset{DirEdgeStyle/.style={>=stealth,->,thick}}% arêtes orientés (épaisses pour être plus visible)
+%\tikzset{every edge/.append style={thick}}% les arêtes sont épaisses ; plus visible
+%\tikzset{>=stealth}% jolie pointe de flèche
+%
+%
+%
+%% style de théorème
+%% \newtheorem{lemma}{Lemma}[section]
+%% \newtheorem{conjecture}{Conjecture}[section]
+%% \newtheorem{corollary}[lemma]{Corollary}
+%% \newtheorem{proposition}[lemma]{Proposition}
+%% \newtheorem{theorem}[lemma]{Theorem}
+%% \theoremstyle{remark}% texte en roman
+%% \newtheorem{definition}[lemma]{Definition}
+%% \newtheorem{remark}[lemma]{Remark}
+%
+%
+%
+%%% racourcis et nouvelles commandes
+\DeclareMathOperator\Acc{Acc}
+\DeclareMathOperator\Aut{Aut}
+\DeclareMathOperator\Cl{cl} 
+\DeclareMathOperator\Circ{Circ} 
+\DeclareMathOperator\diag{diag}
+\DeclareMathOperator\Id{Id}
+\DeclareMathOperator\id{id}
+\DeclareMathOperator\lcm{lcm}
+\DeclareMathOperator\NR{NR}
+\DeclareMathOperator\rank{rank}
+\DeclareMathOperator\Rist{Rist}
+\DeclareMathOperator\Stab{Stab}
+\DeclareMathOperator\SStab{SStab}
+\DeclareMathOperator\Sub{Sub}
+\DeclareMathOperator\Sym{Sym}
+\DeclareMathOperator\Bij{Bij}
+\DeclareMathOperator\ab{ab}
+%
+%
+\newcommand*\abs[1]{\lvert#1\rvert}
+\newcommand*\Autf{\Aut_{\mathrm{f}}}
+\newcommand*\Autfr{\Aut_{\mathrm{fr}}}
+\newcommand*\defi[1]{\textbf{#1}}
+\newcommand*\gen[1]{\langle#1\rangle}
+\newcommand*\GGS{\textrm{GGS}}
+\newcommand*\Grig{{\mathfrak G}}
+\newcommand*\level[1]{\mathcal L_{#1}}
+\newcommand*\N{\mathbf{N}}
+\newcommand*\portrait{{\mathcal P}}
+\newcommand*\presentation[2]{\langle#1\,|\,#2\rangle}
+\newcommand*\restr[2]{{#1}_{\mkern 1mu \vrule height 2ex\mkern2mu {#2}}}
+\newcommand*\setst[2]{\{#1\,|\,#2\}}
+\newcommand*\Subcl{\Sub_{\Cl}}
+\newcommand*{\treesection}[2]{{#1}_{\mkern 1mu \vrule height 2ex\mkern2mu {#2}}}
+\newcommand*{\BS}{B\textbf{S}}
+\newcommand*{\BZ}{B\textbf{Z}}
+\newcommand*{\FB}{FB\textsubscript{r}}
+\newcommand*{\FH}{FH}
+\newcommand*{\FW}{FW}
+\newcommand*{\FA}{FA}
+\newcommand*{\FR}{F\textbf{R}}
+\newcommand*{\FS}{F\textbf{S}}
+\newcommand*\Z{\mathbf{Z}}
+%
+%
+%
+%%% hyperliens PDF
+\usepackage[colorlinks,breaklinks,bookmarks,plainpages=false,unicode=true]{hyperref} % PDF hyperliens : coloriés; sur plusieurs lignes; signet; vrai numéro (pas arabe)
+%plainpage=false : les pages sont désignée par leur vrai numéro et non pas par un numéro en chiffre arabe
+%
+%
+%
+%%% titre et autres informations
+\title{``Wreath products of groups acting with bounded orbits'' answer to referee's comments}
+\author{Paul-Henry Leemann, Grégoire Schneeberger}
+%\date{\today}
+%
+%
+%
+%
+%
+\begin{document}
+\maketitle
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+We thank the anonymous reviewer for their careful reading of our manuscript and their insightful comments and suggestions, that we have taken into account.
+
+While we took in account all the referee’s suggestions and remarks, we will not comment below the ones concerning grammatical issues and obvious typos.
+\begin{enumerate}
+%
+\setcounter{enumi}{1}
+\item\textit{Theorem B: The result is rather elementary, maybe a proposition instead of a theorem?}\\
+We followed the referee's suggestion.
+%
+\item\textit{Page 4, Median graphs: It could be interesting to mention explicitly the connection with CAT(0) cube complexes (Gerasimov, Chepoi, Roller).}\\
+We added the following ``The class of median graphs was intruduced by Nebesk\'y in 1971 [Neb71] and  Roller [Rol98] and Chepoï [Che00] realized independently that this class can be naturally identified to the class of CAT(0) cube complexes.''
+%
+\item\textit{Page 5, line -4: It is not clear that the sequence is increasing. I guess the sequence $(H_n)_n$ should be replaced with a well-chosen increasing subsequence $(H_{r_n})_n$.
+}\\
+Indeed, the sequence $(H_n)_n$ is only decreasing. We added ``Since they are proper subgroups and $H_n\leq H_{n+1}$, we can extract an increasing subsequence $(H_{r_n})_n$ that still satisfies $G=\bigcup_n H_{r_n}$.''
+%
+\item\textit{ }\\
+
+
+
+
+
+
+%
+\item\textit{Page 7, line 4: Isn’t it already the case for Bergman’s original example Sym(N) (much before Cornulier)?}\\
+Indeed. The reference was changed accordingly.
+%
+\item\textit{Page 7, Proposition 2.5: In my copy of the article, there are TeX problems with the arrows. Is \FH$\implies$\FR{} missing?}\\
+Added the arrow, the sentence ``The implication $[\textnormal{\FH}\implies \textnormal{\FR}]$ follows from the fact that real trees are median metric space, and that such spaces can be embedded into $L^1$-spaces (see for instance [Ver93, Theorem V.2.4]).'' and the proof that the converse implication does not holds (similar to properties \FA{} versus \FW).
+%
+\item\textit{Page 7, line -8: A triangle Coxeter group would be a more explicit example of a group with FA but not FW.}\\
+Such an example as been added after the proof of Proposition 2.5. We choose to not use this example in the proof, as it use the wall structure and not the median graph structure.
+%
+\setcounter{enumi}{11}
+\item\textit{Page 9, line -9: This is not true: the infinite dihedral group does not surject onto Z since it is generated by elements of order two. However, looking at the subcategory {Z} with orientation-preserving isometries, the property BS amounts to not having Z as a quotient.}\\
+Indeed. This has been corrected following the referee's suggestion.
+%
+\item\textit{Page 9, line -6: No need of Bass-Serre theory: Z is a tree, so the implication is obvious.}\\
+This has been corrected following the referee's suggestion.
+%
+\item\textit{}\\
+
+
+
+
+%
+\item\textit{Page 10, Definition 2.11: Is it a good terminology? The subcategory of bounded metric spaces has unbounded Cartesian products...}\\
+It is not! We changed it to ``bornological cartesian product''.
+%
+\item\textit{Page 10, Definition 2.11, item 2: Not clear. Does it mean that the obvious image of $\Aut(X)^n\rtimes\Sym(n)$ in $\Bij(X^n)$ lies in $\Aut_{\mathbf S}(X^n)$ or that $\Aut_{\mathbf S}(X^n)$ contains a subgroup isomorphic to $\Aut(X)^n\rtimes Sym(n)$? The meaning is clear from the proofs, but it should be precise already in the definition.}\\
+This has been clarified to ``the canonical image of $\Aut_{\mathbf S}(X)^n\rtimes \Sym(n)$ in $\Bij(X^n)$ lies in $\Aut_{\mathbf S}(X^n)$''.
+%
+\item\textit{Page 12, line 6: Roller proved the general bounded orbit property much before Cornulier.}\\
+The reference has been updated to [Roll98].
+%
+\item\textit{Page 12, second paragraph: It could be worth mentioning that one recovers a global fixed point in the category of CAT(0) cube complexes.}\\
+Added the precision ``(i.e. complete CAT(0) spaces \emph{and in particular CAT(0) cube complexes which are either finite dimensional or locally finite})''.
+If a CCC is neither finite dimensional nor locally finite, then it is not complete and Proposition 2.12 does not apply.
+We do not know if it is possible to recover a global fixed point in the whole category of CAT(0) cube complexes, but will be happy for any reference on this fact.
+%
+\item\textit{Page 13, Lemma 3.1: The first sentence of the proof is not used, so it can be removed.}\\
+This has been done.
+%
+\item\textit{Page 14, line 19: The notation $H\cong\{giN\}$ is not clear.}\\
+Changed to ``$H\cong\setst{giN}{i\in I}$ with the quotient multiplication''.
+%
+%\item\textit{Page 14, line -14: “there exist”.}\\
+%Done.
+%
+\setcounter{enumi}{21}
+%
+\item\textit{Page 15, Lemma 3.7: The group G is not defined.}\\
+The beginning of the Lemma is now ``Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups.''
+%
+\item\textit{Page 15, lines 13-14: Each $G$ should be replaced with $G_x$.}\\
+Done.
+%
+\item\textit{Page 15, line 15: An enumeration of Y has to be fixed.}\\
+This is now ``So let us fix an enumeration of $Y$ and let $K\coloneqq \bigoplus_{i\geq 1}G_i$''. Observe the use of the new variable $K$ to not conflict with the $G$ of the second part of the lemma.
+%
+\item\textit{}\\
+%
+\item\textit{}\\
+%
+\item\textit{}\\
+
+
+
+
+
+
+
+%
+\item\textit{Page 17: Lemma 3.11 can be seen as a direct corollary of Lemma 3.10(2). Indeed, if $H'$ is the kernel of the action of $H$ on $X$, the pre-image of $H'$ under the quotient map $G\wr_XH\to H$ is a finite-index subgroup that splits as $H'\oplus\bigoplus_XG$. The latter must have BS, but $G$ is a quotient of this group.}\\
+The referee's remark is correct and, depending on personal tastes, one might argue that their proof is shorter and easier.
+However, we purposely tried to give geometric proofs when possible as we think that, in this particular context, they are more enlightening than more abstract algebraic proofs.
+Nevertheless, we adde the following after the proof of Lemma 3.11.\\
+``Observe that it is also possible to derive Lemma~\ref{Lemma:Unboundedness} directly from Lemma~\ref{Lemma:Subgroup} (2), with a more algebraic proof.
+Indeed, using the notation and hypothesis of Lemma~\ref{Lemma:Unboundedness}, let $H'$ be the kernel of the action of $H$ on $X$ and $\pi\colon G\wr_XH\to H$ be the canonical projection. Then $\pi^{-1}(H')\cong \bigoplus_XG\oplus H'$ is a finite index subgroup of $G\wr_XH$ and hence has property~\BS.
+Since $G$ is a quotient of $\bigoplus_XG\oplus H'$ we conclude that it also has property~\BS.''
+%
+\item\textit{}\\
+
+
+
+
+
+
+
+
+
+%
+\item\textit{}\\%Page 19, Lemma 3.13: The assumption of having finitely many orbits can be removed.}\\
+%Indeed. This has been done. The proof was also rewritten (the geometric proof need the finite orbits hypothesis) and now reads
+%``The desired result then follows from $(G\wr_XH)^{\ab}\cong \bigoplus_{X/H}(G^{\ab})\times H^{\ab}$ and the elementary property that a direct sum $\bigoplus_{x\in X}G_X$ has a quotient isomorphic to $\Z$ if and only if at least one of the factor has a quotient isomorphic to $\Z$.''
+
+
+
+
+
+
+\item\textit{Page 19: As written, Theorem C is only proved for \FA.}\\
+The statement of Thm 1.2 and Proposition 3.14 have been rewritten to take in account property \FR. Observe that the proofs remain unchanged (Theorem 1.2 is proved in [Cornulier-Kar] both for \FA{} and \FR).
+%
+\item\textit{Proofs of Lemma 3.7 and Theorem B: You should mention that the proofs using the characterisation in terms of subgroups are actually much shorter. In fact, they are almost exercices.}\\
+The introduction to the proof of Lemma 3.7 now reads ``It is of course possible to prove Lemma~\ref{Lemma:Cof} using the characterization of uncountable cofinality in terms of subgroups\emph{, in which case the proof is a short exercise let to the reader.} However, we find enlightening to prove it using the characterization in terms of actions on ultrametric spaces.'' (the italicized part is new).
+A similar statement is made before the proof of Thm B.
+%
+\item\textit{In all the article: “an S-space” instead of “a S-space”?}\\
+We followed the referee's suggestion.
+%
+\item\textit{}\\
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+\end{document}

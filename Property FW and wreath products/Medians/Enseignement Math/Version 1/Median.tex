@@ -39,7 +39,6 @@
 \newtheorem{thm}[lem]{Theorem}
 \newtheorem{mainthm}{Theorem}
 \renewcommand{\themainthm}{\Alph{mainthm}}
-\newtheorem{mainprop}[mainthm]{Proposition}
 \theoremstyle{definition}
 \newtheorem{defn}[lem]{Definition}
 \newtheorem{rem}[lem]{Remark}
@@ -56,7 +55,6 @@
 \DeclareMathOperator\Aut{Aut}
 \DeclareMathOperator\ab{ab}
 \DeclareMathOperator\diam{diam}
-\DeclareMathOperator\Bij{Bij}
 %
 %
 \newcommand*{\orbite}{\mathcal O}
@@ -110,7 +108,7 @@
 %
 %
 \begin{abstract}
-If \CatS{} is a subcategory of metric spaces, we say that a group G has property~\BS{} if any isometric action on an \CatS-space has bounded orbits.
+If \CatS{} is a subcategory of metric spaces, we say that a group G has property~\BS{} if any isometric action on a \CatS-space has bounded orbits.
 Examples of such subcategories include metric spaces, affine real Hilbert spaces, CAT(0) cube complexes, connected median graphs, trees or ultra-metric spaces. 
 The corresponding properties \BS{} are respectively Bergman's property, property~\FH{}  (which, for countable groups, is equivalent to the celebrated Kazhdan's property (T)), property~\FW{} (both for CAT(0) cube complexes and for connected median graphs), property~\FA{} and uncountable cofinality.
 Historically many of these properties were defined using the existence of fixed points.
@@ -160,7 +158,7 @@ Finally, we also obtain that $G\wr_XH$ has uncountable cofinality if and only if
 When working with group properties, it is natural to ask if they are stable under ``natural'' group operations.
 One such operation, of great use in geometric group theory, is the wreath product, see Section~\ref{Section:Def} for all the relevant definitions.
 
-An \CatS-space is a metric space with an ``additional structure'' and we will say that a group $G$ has \emph{property~\BS} if every action by isometries which preserves the structure on an \CatS-space has bounded orbits.
+A \CatS-space is a metric space with an ``additional structure'' and we will say that a group $G$ has \emph{property~\BS} if every action by isometries which preserve the structure on a \CatS-space has bounded orbits.
 Formally, this means that \CatS{} is a subcategory of the category of metric spaces, and that the actions are by \CatS-automorphisms.
 We note that having one bounded orbit implies that all the orbits are bounded.
 
@@ -181,7 +179,7 @@ The corresponding result for property~\FA{} (every action on a tree has bounded 
 %
 \begin{thm}[\cite{MR2764930}]\label{Thm:FACK}
 Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which $H$ acts with finitely many orbits and without fixed points.
-Then $G\wr_XH$ has property~\FA{} (respectively property \FR) if and only if $H$ has property~\FA{} (respectively property \FR), $G$ has no quotient isomorphic to $\Z$ and can not be written as a countable increasing union of proper subgroups.
+Then $G\wr_XH$ has property~\FA{} if and only if $H$ has property~\FA, $G$ has no quotient isomorphic to $\Z$ and can not be written as a countable increasing union of proper subgroups.
 \end{thm}
 %
 %
@@ -223,10 +221,10 @@ Then the wreath product $G \wr_X H$ has property~\BS{} if and only if $G$ and $H
 %
 %
 With a little twist, we also obtain a similar result for groups with uncountable cofinality:
-\begin{mainprop}\label{Prop:UncCoun}
+\begin{mainthm}\label{Thm:UncCoun}
 Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which $H$ acts.
 Then the wreath product $G \wr_X H$ has uncountable cofinality if and only if $G$ and $H$ have uncountable cofinality and $H$ acts on $X$ with finitely many orbits.
-\end{mainprop}
+\end{mainthm}
 %
 %
 A crucial ingredient of our proofs is that the spaces under consideration admit a natural notion of Cartesian product.
@@ -242,7 +240,7 @@ Then $G\wr_XH$ has property~\FA{} (respectively has property~\FR) if and only if
 %
 %
 %\paragraph{Organization of the paper}
-%The next section contains all the definitions as well as some examples. Section~\ref{Section:Proof} is devoted to the proof of Theorem~\ref{Thm:Main} and Proposition~\ref{Prop:UncCoun} as well as to some related results.
+%The next section contains all the definitions as well as some examples. Section~\ref{Section:Proof} is devoted to the proof of Theorems~\ref{Thm:Main} and~\ref{Thm:UncCoun} as well as to some related results.
 %%
 %
 %
@@ -333,8 +331,8 @@ For $u$ and $v$ two vertices of a connected\footnote{We will always assume that 
 A connected graph $\mathcal G$ is \emph{median} if for any three vertices $u$, $v$, $w$, the intersection $[u,v]\cap[v,w]\cap[u,w]$ consists of a unique vertex, denoted $m(u,v,w)$.
 A graph is \emph{median} if each of its connected components is median. For more on median graphs and spaces see~\cite{MR2405677,MR2671183,MR1705337}.
 If $X$ and $Y$ are both (connected) median graphs, then their Cartesian product is also a (connected) median graph.
-The class of median graphs was intruduced by Nebesk\'y in 1971 \cite{Neb71} and Gerasimov \cite{Ger97,MR1663779},   Roller \cite{Rol98} and Chepoï \cite{Che00} realized independently that this class coincides with the class of $1$-skeleta of CAT(0) cube complexes.
-Trees are the simplest examples of connected median graphs, while the ensuing classical example will be important for Lemma~\ref{Lemma:XFinite}.
+Trees are the simplest examples of such graphs.
+The ensuing classical example will be important for Lemma~\ref{Lemma:XFinite}.
 %
 %
 \begin{exmp}\label{Ex:MainMedian}
@@ -378,10 +376,9 @@ Let $(X,d)$ be an ultrametric space on which $G$ acts with an unbounded orbit~$G
 \[
 	H_n\coloneqq\setst{g\in G}{d(x_0,g.x_0)\leq n}.
 \]
-Then $G$ is the union of the (countably many) $H_n$, which are subgroups of $G$.
-Indeed, $H_n$ is trivially closed under taking the inverse, and is also closed under taking products as we have $d(x_0,gh.x_0)\leq\max\{d(x_0,g.x_0),d(g.x_0,gh.x_0)\}=\max\{d(x_0,g.x_0),d(x_0,h.x_0)\}$.
+Then $G$ is the increasing union of the (countably many) $H_n$, which are subgroups of $G$.
+Indeed, $H_n$ is trivially closed under taking the inverse, and is also closed under taking products since $d(x_0,gh.x_0)\leq\max\{d(x_0,g.x_0),d(g.x_0,gh.x_0)\}=\max\{d(x_0,g.x_0),d(x_0,h.x_0)\}$.
 As $G.x_0$ is unbounded, they are proper subgroups.
-Since they are proper subgroups and $H_n\leq H_{n+1}$, we can extract an increasing subsequence $(H_{r_n})_n$ that still satisfies $G=\bigcup_n H_{r_n}$.
 
 Finally, suppose that $G=\bigcup_{n\in \N}H_n$, where the $H_n$ form an increasing sequence of proper subgroups.
 It is always possible to suppose that $H_0=\{1\}$.
@@ -444,14 +441,14 @@ The Bergman's property can also be characterized via length function, see for ex
 For a survey on property~\FB, see~\cite{MR3382026} and the references therein.
 
 For countable groups (and more generally for $\sigma$-compact locally compact groups), property~\FH{} is equivalent, by the Delorme-Guichardet theorem, to the celebrated Kazhdan's property (T), but this is not true in general.
-Indeed by~\ref{}, symmetric groups over infinite sets are uncountable discrete group with Bergman's property which, as we will see just below, implies property~\FH.
-Such groups cannot have property (T) as, for discrete groups, it implies finite generation.
+Indeed in~\cite{MR2240370}, Cornulier constructed an uncountable discrete group $G$ with Bergman's property which, as we will see just below, implies property~\FH.
+Such a group cannot have property (T) as, for discrete groups, it implies finite generation.
 
 A classical result of the Bass-Serre theory of groups acting on trees~\cite{MR0476875}, is that a group $G$ has property~\FA{} if and only if it satisfies the following three conditions: $G$ has uncountable cofinality, $G$ has no quotient isomorphic to $\Z$ and $G$ is not a non-trivial amalgam.
 In view of this characterization, Theorem~\ref{Thm:FACK} says that property~\FA{} almost behaves well under wreath products.
 %
 %
-\begin{prop}\label{Prop:ImplProp}
+\begin{prop}
 There are the following implications between the properties of Definition~\ref{Def:FHFA}:
 %\begin{equation}\tag{\dag}\label{EQ:Implications}
 \[
@@ -462,7 +459,7 @@ There are the following implications between the properties of Definition~\ref{D
 %&\textnormal{\FR}\arrow[u]&
 %\end{tikzcd}
 \begin{tikzcd}[arrows=Rightarrow]
-\parbox{4.5em}{\textnormal{Bergman's property}}\arrow[r]	&\textnormal{\FB} \arrow[r]	&\textnormal{\FH} \arrow[r]	\arrow[d]&\textnormal{\FW}\arrow[d] &\\%
+\parbox{4.5em}{\textnormal{Bergman's property}}\arrow[r]	&\textnormal{\FB} \arrow[r]	&\textnormal{\FH} \arrow[r]	&\textnormal{\FW}\arrow[d] &\\%
 &&\textnormal{\FR}\arrow[r]& \textnormal{\FA} \arrow[r]& \parbox{5em}{\textnormal{uncountable cofinality}}
 \end{tikzcd}
 %\end{equation}
@@ -472,7 +469,6 @@ Moreover, except maybe for the implication $[\textnormal{Bergman's property}\imp
 \begin{proof}
 The implications $[\textnormal{Bergman's property}\implies \textnormal{\FB}\implies\textnormal{\FH}]$ and $[\textnormal{\FW}\implies \textnormal{\FA}\Longleftarrow\textnormal{\FR}]$ trivially follow from the fact that Hilbert spaces are reflexive Banach spaces, which are themselves metric spaces and that trees are both real trees and connected median graphs.
 The implication $[\textnormal{\FH}\implies \textnormal{\FW}]$ follows from the fact that a group $G$ has property~\FW{} if and only if any affine action on a real Hilbert space which preserves integral points has bounded orbits~\cite{Cornulier2013}.
-The implication $[\textnormal{\FH}\implies \textnormal{\FR}]$ follows from the fact that real trees are median metric space, and that such spaces can be embedded into $L^1$-spaces (see for instance \cite[Theorem V.2.4]{Ver93}).
 Finally, the implication $[\textnormal{\FA}\implies\textnormal{uncountable cofinality}]$ is due to Serre~\cite{MR0476875}: if $G$ is an increasing union of subgroups $G_i$, then $\bigsqcup G/G_i$ admits a tree structure by joining any $gG_i\in G/G_i$ to $gG_{i+1}\in G/G_{i+1}$.
 The action of $G$ by multiplication on $\bigsqcup G/G_i$ is by graph isomorphisms and with unbounded orbits.
 
@@ -480,27 +476,15 @@ The action of $G$ by multiplication on $\bigsqcup G/G_i$ is by graph isomorphism
 We now present some examples demonstrating the strictness of the implications. % of \eqref{EQ:Implications}.
 Countable groups with property~\FB{} are finite by~\cite{MR2137870}, while infinite finitely generated groups with property (T), e.g. $\SL_3(\Z)$, have property~\FH.
 The group $\SL_2(\Z[\sqrt{2}])$ has property~\FW{} but not \FA, see~\cite{MR3299841}.
-If $G$ is a non-trivial finite group and $H$ is an infinite group with property~\FA{} (respectively property~\FR), then $G\wr_HH$ has property~\FA{} (respectively property~\FR) by Theorem~\ref{Thm:FAFiniteOrbits}, but does not have property~\FW{} by Theorem~\ref{Thm:Main}.
+If $G$ is a non-trivial finite group and $H$ is an infinite group with property~\FA, then $G\wr_HH$ has property~\FA{} by Theorem~\ref{Thm:FAFiniteOrbits}, but does not have property~\FW{} by Theorem~\ref{Thm:Main}.
 The group $\Z$ has uncountable cofinality, while it acts by translations and with unbounded orbits on the infinite $2$-regular tree.
 Finally, Minasyan constructed examples of groups with \FA{} but without \FR{} in~\cite{MR3465847}.
 \end{proof}
 %
 %
-The reader familiar with triangles groups $\Delta(m,l,n)=\langle a,b,c\,|\,a^2=b^2=c^2=(ab)^l=(bc)^m=(ca)^n=1\rangle$ with $l,m,n\in\{1,2,\dots\}\cup\{\infty\}$ will be happy to observe that they provide explicit examples of groups with property \FA{} but not property \FW.
-Indeed, if $l$, $m$ and $n$ are all three integers, then $\Delta(m,l,n)$ has property \FA{} by Serre~\cite[Section 6.5, Corollaire 2]{MR0476875}.
-And if $\sigma(l,m,n)\coloneqq\frac1l+\frac1m+\frac1n\leq 1$, then $\Delta(m,l,n)$ is the infinite symmetric group of a tilling of the Euclidean plane (if $\sigma(m,l,n)=1$) or of the hyperbolic plane (if $\sigma(m,l,n)<1$) and hence acts on a space with walls without fixed points.
-
-%At this point it is interesting to ask about the exact relation between property \FR{} and the other properties.
-%On one hand, we have the obvious implication $[\textnormal{Bergman's property}\implies \textnormal{\FR}]$.
-%On the other hand, property \FR{} does not imply property \FW.
-%Indeed, if $G$ is a non-trivial finite group and $H$ is an infinite group with property~\FR, then $G\wr_HH$ has property~\FR{} by Theorem~\ref{Thm:FAFiniteOrbits}, but does not have property~\FW{} by Theorem~\ref{Thm:Main}.
-%It hence remains to understand if property \FR{} is implied by any one of properties \FB, \FH{} or \FW.
-In view of Proposition~\ref{Prop:ImplProp}, two questions remain open: is the implication $[\textnormal{Bergman's property}\implies\textnormal{\FB}]$ strict, and does property \FW{} implies property \FR{}.
-
-
 It is possible to consider relative versions of the properties appearing in Definition~\ref{Def:FHFA}.
 Let \CatS{} be any classes of metric spaces considered in Definition~\ref{Def:FHFA} and let \BS{} be the corresponding group property.
-If $G$ is a group and $H$ a subgroup of $G$, we say that the pair $(G,H)$ has \emph{relative property~\BS} if for every $G$ action on an \CatS-space, the $H$ orbits are bounded.
+If $G$ is a group and $H$ a subgroup of $G$, we say that the pair $(G,H)$ has \emph{relative property~\BS} if for every $G$ action on a \CatS-space, the $H$ orbits are bounded.
 A group $G$ has property~\BS{} if and only if for every subgroup $H$ the pair $(G,H)$ has relative property~\BS{}, and if and only if for every overgroup $L$ the pair $(L,G)$ has relative property~\BS.
 %
 %
@@ -558,9 +542,9 @@ Obvious examples of full subcategories of $\category{Met}$ include metric spaces
 Affine real Hilbert spaces, real Banach spaces and more generally normed vector spaces are also full subcategories of $\category{Met}$ if we restrict ourself to morphisms that do not increase the norm (that is such that  $\|f(x)\|\leq\| x\|$).
 In particular, for us isomorphisms of Hilbert and Banach spaces will always be affine isometries.
 
-For connected graphs (and hence for its full subcategories of connected median graphs and of trees), one looks at the category $\category{Graph}$ where objects are connected simple graphs $G=(V,E)$ and where a morphism $f\colon (V,E)\to(V',E')$ is a function between the vertex sets such that if $(x,y)$ is an edge then either $f(x)=f(y)$ or $(f(x),f(y))$ is an edge.
-There are two natural ways to see $\category{Graph}$ as a subcategory of $\category{Met}$.
-The first one consists to look at the vertex set $V$ endowed with the shortest-path metric: $d(v,w)$ is the minimal number of edges on a path between $v$ and $w$.
+For connected graphs (and hence for its full subcategories of connected median graphs and of trees), one look at the category $\category{Graph}$ where objects are connected simple graphs $G=(V,E)$ and where a morphism $f\colon (V,E)\to(V',E')$ is a function between the vertex sets such that if $(x,y)$ is an edge then either $f(x)=f(y)$ or $(f(x),f(y))$ is an edge.
+There is two natural ways to see $\category{Graph}$ as a subcategory of $\category{Met}$.
+The first one consist to look at the vertex set $V$ endowed with the shortest-path metric: $d(v,w)$ is the minimal number of edges on a path between $v$ and $w$.
 The second one, consists at looking at the so called geometric realization of $(V,E)$, where each edge is seen as an isometric copy of the segment $[0,1]$.
 %Neither of this embedding $\category{Graph}\hookrightarrow\category{Met}$ is full.
 As observed in the discussion after Definition~\ref{Def:FHFA}, the geometric realization of a graph gives an embedding $\category{Graph}\hookrightarrow\category{Met}$ which is not full.
@@ -579,7 +563,7 @@ A pair $(G,H)$ of a group and a subgroup has \emph{relative property} \BS{} if f
 \end{defn}
 %
 %
-Observe that a group $G$ has property~\BS{} if and only any $G$ action on an \CatS-space has at least one bounded orbit.
+Observe that a group $G$ has property~\BS{} if and only any $G$ action on a \CatS-space has at least one bounded orbit.
 %One implication is trivial and the other is a direct application of the triangle inequality.
 
 All the properties of Definition~\ref{Def:FHFA} are of the form \BS.
@@ -595,13 +579,12 @@ The main interest for us of this example is that property~\FA{} is the conjoncti
 \begin{exmp}\label{Exmp:BZ}
 %Let $Z^n$ be the Cayley graph of $\Z^n$ for the standard generating set.
 %Then $\Aut_{\category{Graph}}(Z^n)=\Z^n\rtimes D_{2n}$ projects onto $\Z$. Hence, we obtain that a group $G$ has no quotient isomorphic to $\Z$ if and only if every $G$ action on $Z$ has bounded orbits, if and only if every $G$ action on $Z^n$ has bounded orbits. Let us denote by (B$\Z$) this property.
-Let $Z$ be the $2$-regular tree, or in other words the Cayley graph of $\Z$ for the standard generating set.
-Then $\Aut_{\mathbf{Graph}}(Z)=\Z\rtimes (\Z/2\Z)$ is the infinite dihedral group and its subgroup of orientation preserving isometries is isomorphic to $\Z$.
-Let \textbf{S} be the category with one object $Z$ and with morphisms the orientation preserving isometries.
-Hence, we obtain that a group $G$ has no quotient isomorphic to $\Z$ if and only if every $G$ action on \textbf{S}-space has bounded orbits.
+Let $Z$ be the $2$-regular tree, or in other words the Caley graph of $\Z$ for the standard generating set.
+Then $\Aut_{\mathbf{Graph}}(Z)=\Z\rtimes (\Z/2\Z)$ is the infinite dihedral group and every of its infinite subgroup projects onto $\Z$.
+Hence, we obtain that a group $G$ has no quotient isomorphic to $\Z$ if and only if every $G$ action on $Z$ has bounded orbits.
 Let us denote by \BZ{} this property.
 
-Since $Z$ is a tree, property \FA{} implies property \BZ. This implication is strict as demonstrated by $\field{Q}$.
+It follows from Bass-Serre theory that \FA{} implies \BZ. This implication is strict as demonstrated by $\field{Q}$.
 In fact, the counterexample $\field{Q}$ shows that \BZ{} does not imply uncountable cofinality, while $\Z$ demonstrate that uncountable cofinality does not implies \BZ.
 \end{exmp}
 %
@@ -647,25 +630,25 @@ While we will be able to obtain some results for a general subcategory of $\PMet
 %
 %
 \begin{defn}\label{Def:Cartesian}
-A subcategory \CatS{} of $\PMet$ has \emph{bornological Cartesian powers} if for any $\category S$-space $X$ and any integer $n$, there exists a $\category S$-object, called the \emph{$n$\textsuperscript{th} Cartesian power of $X$} and written $X^n$, such that:
+A subcategory \CatS{} of $\PMet$ has \emph{unbounded Cartesian powers} if for any $\category S$-space $X$ and any integer $n$, there exists a $\category S$-object, called the \emph{$n$\textsuperscript{th} Cartesian power of $X$} and written $X^n$, such that:
 \begin{enumerate}
 \item
 As a set, $X^n$ is the $n$\textsuperscript{th} Cartesian power of $X$,
 \item\label{Item:Product}
-the canonical image of $\Aut_{\CatS}(X)^n\rtimes \Sym(n)$ in $\Bij(X^n)$ lies in $\Aut_{\CatS}(X^n)$,
+$\Aut_{\CatS}(X)^n\rtimes \Sym(n)$ is a subgroup of $\Aut_{\CatS}(X^n)$,
 \item\label{Condidef:2}
 If $E\subset X$ is unbounded, then the diagonal $\diag(E)\subset X^n$ is unbounded.
 \end{enumerate}
 \end{defn}
 %
 %
-A good heuristic is that your favorite subcategory of $\PMet$ would have \emph{bornological Cartesian powers} in the above sense if and only if it already has a classical operation which is called \emph{Cartesian product}.
+A good heuristic is that your favorite subcategory of $\PMet$ would have \emph{unbounded Cartesian powers} in the above sense if and only if it already has a classical operation which is called \emph{Cartesian product}.
 
 For (pseudo-) metric spaces, the categorical product (corresponding to the metric $d_\infty=\max\{d_X,d_Y\}$) works fine, but any product metric of the form $d_p=(d_X^p+d_Y^p)^{\frac1p}$ for $p\in[1,\infty]$ works as well.
 For (pseudo-) ultra-metric spaces, the categorical product $d_\infty$ works fine.
 For Hilbert and (reflexive) Banach spaces, we take the usual Cartesian product (which is also the categorial product), which corresponds to the metric $d_2=\sqrt{d_X^2+d_Y^2}$.
 For connected median graphs, the usual Cartesian product (which is not the categorical product!\footnote{The categorial product in $\category{Graph}$ is the strong product, while the category of median graphs does not have categorial products.}) with $d_1=d_X+d_Y$ works well.
-On the other hand, (real) trees do not have Cartesian powers, even without asking them to respect the bornology.
+On the other hand, (real) trees do not have Cartesian powers.
 %
 %
 \subsection{Variations and generalizations}
@@ -682,7 +665,7 @@ It is intended as a note for the interested reader, and can be skipped without a
 %
 \paragraph{Groups acting with fixed point on \CatS-spaces}
 Some of the properties that are of interest for us have been historically defined via the existence of a fixed point for some action.
-More generally, we say that a group $G$ has \emph{property~\FS} if any $G$ action on an \CatS-space has a fixed point.
+More generally, we say that a group $G$ has \emph{property~\FS} if any $G$ action on a \CatS-space has a fixed point.
 
 Since our actions are by isometries, property~\FS{} implies property~\BS. The other implication holds as soon as we have a suitable notion of the center of a (non-empty) bounded subset $X$.
 For a large class of metric spaces, this is provided by the following result of Bruhat and Tits:
@@ -698,14 +681,14 @@ Then if $G$ is a group acting by isometries on $X$ with a bounded orbit, it has 
 \end{prop}
 %
 %
-Exemples of complete metric spaces satisfying Proposition~\ref{Proposition:Mediane} include among others: Hilbert spaces, Bruhat-Tits Buildings, Hadamard spaces (i.e. complete CAT(0) spaces and in particular CAT(0) cube complexes which are either finite dimensional or locally finite), trees and $\R$-trees; with the caveat that for trees and $\R$-trees, the fixed point is either a vertex or the middle of an edge.
+Exemples of complete metric spaces satisfying Proposition~\ref{Proposition:Mediane} include among others: Hilbert spaces, Bruhat-Tits Buildings, Hadamard spaces (i.e. complete CAT(0) spaces), trees and $\R$-trees; with the caveat that for trees and $\R$-trees, the fixed point is either a vertex or the middle of an edge.
 See~\cite[Chapter 3.b]{MR1023471} and the references therein for more on this subject.
 On the other hand,~\cite[Lemma 2.2.7]{MR2415834} gives a simple proof of the existence of a center for bounded subsets of Hilbert spaces, and more generally of reflexive Banach spaces, but this also directly follows from the Ryll-Nardzewski fixed-point theorem.
 Finally, properties \FS{} and \BS{} are equivalent for the category of separable  uniformly  convex Banach  spaces by the existence of the Chebyshev center of a (nonempty) bounded set.
 
 For action on metric spaces or on connected median graphs, \FS{} is strictly stronger than \BS.
 Indeed, this trivially follows from the action by rotation of $\Z/4\Z$ on the square graph.
-However,  by~\cite{Roll98,MR1663779} if a group $G$ acts on a connected median graph with a bounded orbit, then it has a finite orbit.
+However,  by~\cite{Cornulier2013,MR1663779} if a group $G$ acts on a connected median graph with a bounded orbit, then it has a finite orbit.
 For actions on an ultra-metric spaces \FS{} is strictly stronger than \BS{} since the finite group  $\Z/2\Z$ acts without fixed point on the Cantor space $X\subset[0,1]$ by $x\mapsto 1-x$.
 Property \FS{} is also strictly stronger than \BS{} for \CatS{} the category of all Banach spaces. Indeed, by \cite{MR2656670} any infinite discrete group admits an action without fixed point on some Banach space and hence does not have property \FS, while there exists infinite groups with the Bergmann's property which implies property \BS.
 %
@@ -746,7 +729,7 @@ All the statements and the proofs remain true for \CatS{} a subcategory of $\cat
 
 On the other hand, we can define property~\BS{} for any category \CatS{} over $\PMet$, that is for any category~\CatS{} endowed with a faithful functor $F\colon\CatS\to \PMet$.
 Such a couple $(\CatS,F\colon\CatS\to \PMet)$ is sometimes called a \emph{structure over $\PMet$}, and $F$ is said to be \emph{forgetful}.
-In this context, we need to be careful to define bornological Cartesian powers (Definition~\ref{Def:Cartesian}) using $F$, but appart for that all the statements and all the proofs remained unchanged.
+In this context, we need to be careful to define unbounded Cartesian powers (Definition~\ref{Def:Cartesian}) using $F$, but appart for that all the statements and all the proofs remained unchanged.
 An example of such an \CatS{} that cannot be expressed as a subcategory of $\PMet$ is the category of edge-labeled graphs, where the morphisms are graph morphisms that induce a permutation on the set of labels.
 However, in this case the property~\BS{} is equivalent to the Bergman's property.
 
@@ -825,8 +808,8 @@ A group $G$ has property B$\mathbf{S}_\kappa$ if and only if $\lvert G\rvert<\ka
 %
 %
 %
-Throughout this section, \CatS{} will denote subcategory of \PMet{} and \BS{} the group property~\emph{every action by \CatS-automorphisms on an \CatS-space has bounded orbits}.
-%Heuristically, an \CatS-space is a (quasipseudo-) metric space with an additional structure (as for example an Hilbert space). For a precise definition, see Definition~\ref{Def:PropBS}.
+Throughout this section, \CatS{} will denote subcategory of \PMet{} and \BS{} the group property~\emph{every action by \CatS-automorphisms on a \CatS-space has bounded orbits}.
+%Heuristically, a \CatS-space is a (quasipseudo-) metric space with an additional structure (as for example an Hilbert space). For a precise definition, see Definition~\ref{Def:PropBS}.
 
 We begin this section with two easy but useful results.
 %
@@ -836,7 +819,7 @@ Let $G$ be a group and $H$ be a quotient.
 If $G$ has property~\BS, then so has $H$.
 \end{lem}
 \begin{proof}
-%We have $H\cong G/N$.
+We have $H\cong G/N$.
 If $H$ acts on some \CatS-space $X$ with an unbounded orbit, then the surjection $G\twoheadrightarrow H$ gives us a $G$ action on~$X$, with the same orbits as the $H$ action.
 %If $H$ acts continuously\PH{J'ai réécrit la preuve} on some \CatS-space $X$ with an unbounded orbit, then the surjection $G\twoheadrightarrow H$ gives us a continuous $G$ action on~$X$, with the same orbits as the $H$ action.
 \end{proof}
@@ -847,7 +830,7 @@ Let $G$ be a group and $A$ an $B$ be two subgroups such that $G=AB$.
 If both $(G,A)$ and $(G,B)$ have relative property~\BS, then $G$ has property~\BS.
 \end{lem}
 \begin{proof}
-Let $X$ be an \CatS-space on which $G$ acts %continuously 
+Let $X$ be a \CatS-space on which $G$ acts %continuously 
 and let $x$ be an element of $X$.
 %Then the restrictions of the $G$ action to $A$ and to $B$ are continuous.\PH{J'ai ajouté cette phrase}
 Let $D_1$ be the diameter of $A.x$ and $D_2$ the diameter of $B.x$. By assumption, they both are finite.
@@ -903,7 +886,7 @@ One direction is simply Lemma~\ref{Lemma:Quotient} and the definition of relativ
 
 On the other hand, let $(X,d)$ be a pseudo-metric space on which $G$ acts %continuously\PH{Ajouté «continuous»}
 by isometries and let $x$ be an element of $X$.
-Let $\setst{g_i}{i\in I}$ be a transversal for $N$, that is $H\cong\setst{g_iN}{i\in I}$ with the quotient multiplication.
+Let $\setst{g_i}{i\in I}$ be a transversal for $N$, that is $H\cong\{g_iN\}$.
 By assumption, $N.x$ is bounded of diameter $D_1$ and for any $i\in I$ the subset $g_iN.x$ of $X$ has also diameter $D_1$.
 Since $N$ is a subgroup of isometries of $X$, the map $d'\colon X/N\times X/N\to\R$ defined by $d'([x],[y])\coloneqq\inf\setst{d(x',y')}{x'\in N.x,y'\in N.y}$ is the quotient pseudo-distance on $X/N$.
 Indeed, while the map $d'$ might not satisfies the triangle inequality for a generic quotient $X/\sim$, this is the case if the quotient is by a subgroup of isometries; details are left to the reader.
@@ -911,7 +894,7 @@ Moreover, if $d$ satisfies the strong triangle inequality, then so does $d'$.
 The quotient action of $H\cong G/N$ on $X/N$ is %continuous,\PH{Ajouté «continuous»}
 by isometries and the diameter of $H.xN$ is bounded, say by $D_2$.
 In particular, for any $i$ and $j$ in $I$, the distance between the subsets $g_iN.x$ and $g_jN.x$ of $X$ is bounded by $D_2$.
-Since this distance is an infimum, there exist actual elements of $g_iN.x$ and $g_jN.x$ at distance less than $D_2+1$.
+Since this distance is an infimum, there exists actual elements of $g_iN.x$ and $g_jN.x$ at distance less than $D_2+1$.
 Altogether, we obtain that any $y$ in $G.x$ is at distance at most $D_1+D_2+1$ of~$x$.
 Hence, the orbit $G.x$ is bounded.
 \end{proof}
@@ -929,7 +912,7 @@ We now state a result on infinite direct sums.
 %
 \begin{lem}\label{Lemma:Cof}
 Suppose that \BS{} implies having uncountable cofinality.
-Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups. Then
+Let $(G_x)_{x\in X}$ be non-trivial groups. Then
 \begin{enumerate}
 \item $\bigoplus_{x\in X}G_x$ has property~\BS{} if and only if all the $G_x$ have property~\BS{} and $X$ is finite,
 \item If $G\wr_XH$ has property~\BS, then $H$ acts on $X$ with finitely many orbits.
@@ -937,17 +920,17 @@ Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups. Then
 \end{lem}
 %
 %
-It is of course possible to prove Lemma~\ref{Lemma:Cof} using the characterization of uncountable cofinality in terms of subgroups, in which case the proof is a short exercise let to the reader. However, we find enlightening to prove it using the characterization in terms of actions on ultrametric spaces.
+It is of course possible to prove Lemma~\ref{Lemma:Cof} using the characterization of uncountable cofinality in terms of subgroups. However, we find enlightening to prove it using the characterization in terms of actions on ultrametric spaces.
 %
 %
 \begin{proof}[Proof of Lemma~\ref{Lemma:Cof}.]
 One direction of the first assertion is simply Corollary~\ref{Cor:Prod}.
 For the other direction, if $\bigoplus_{x\in X}G_x$ has property~\BS{} then all its quotients, and hence all the $G_x$, have property~\BS.
-On the other hand, if $X$ is infinite, there exists a countable subset $Y \subset X$. Let $Z \coloneqq X\setminus Y$, thus we have $X = Y \sqcup Z$. We can decompose the direct sum as $\bigoplus_{x\in X}G_x = (\bigoplus_{x\in Y}G_x) \times (\bigoplus{x\in Z}G_x)$ and then, by Corollary~\ref{Cor:Prod}, if $\bigoplus_{x\in Y}G_x$ does not have uncountable cofinality, then neither does $\bigoplus_{x\in X}G_x$.
-So let us fix an enumeration of $Y$ and let $K\coloneqq \bigoplus_{i\geq 1}G_i$ and for each $i$, choose $g_i\neq 1$ in $G_i$.
+On the other hand, if $X$ is infinite, there exists a countable subset $Y \subset X$. Let $Z \coloneqq X\setminus Y$, thus we have $X = Y \sqcup Z$. We can decompose the direct sum as $\bigoplus_XG = (\bigoplus_YG) \times (\bigoplus_ZG)$ and then, by Corollary~\ref{Cor:Prod}, if $\bigoplus_YG$ does not have uncountable cofinality, then neither does $\bigoplus_XG$.
+So let $G\coloneqq \bigoplus_{i\geq 1}G_i$ and for each $i$, choose $g_i\neq 1$ in $G_i$.
 Let $d_\infty(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$. %be the $G$-invariant ultrametric of Example~\ref{Exmpl:Ultra}.
-This is a $K$-invariant ultra-metric for the action by left multiplication of $G$ on itself.
-Then for every integer $n$, the orbit $K.1_K$ contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $1_K$ for $d_\infty$ if the $g_i$ are not equal to $1$.
+This is a $G$-invariant ultra-metric for the action by left multiplication of $G$ on itself.
+Then for every integer $n$, the orbit $G.1_G$ contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $1_G$ for $d_\infty$ if the $g_i$ are not equal to $1$.
 In particular, an infinite direct sum of non-trivial groups does not have uncountable cofinality, nor does it have \BS.
 
 The second assertion is a simple variation on the first.
@@ -992,7 +975,7 @@ Therefore, the action of $G\wr_XH$ on the connected component of~$\mathbf 1$ has
 Once again, given a suitable \CatS, it is sometimes possible to give a direct proof of Lemma~\ref{Lemma:XFinite}.
 For example, for Hilbert spaces one can take $\bigoplus_X\ell^2(G)$ with $\bigoplus_XG$ acting coordinatewise and $H$ by permutations.
 On the other hand, both the forest structure on $\powerset{\bigsqcup_XG}$ and the ultrametric structure on $\bigoplus_XG$ are in general not invariant under the natural action of $H$ by permutations.
-In fact, it follows from Theorem~\ref{Thm:FACK} and Proposition~\ref{Prop:UncCoun} that in the assumptions of Lemma~\ref{Lemma:XFinite} it is not possible to replace property~\FW{} by property~\FA{} or by having uncountable cofinality.
+In fact, it follows from Theorems~\ref{Thm:FACK} and~\ref{Thm:UncCoun} that in the assumptions of Lemma~\ref{Lemma:XFinite} it is not possible to replace property~\FW{} by property~\FA{} or by having uncountable cofinality.
 %
 %
 \begin{rem}\label{Rem:Actionsb}
@@ -1016,16 +999,16 @@ Let $G$ be a group and let $H$ be a finite index subgroup.
 \item
 If $H$ has property~\BS, then so has~$G$,
 \item
-If \CatS{} has bornological Cartesian powers and $G$ has property~\BS, then $H$ has property~\BS.
+If \CatS{} has unbounded Cartesian powers and $G$ has property~\BS, then $H$ has property~\BS.
 \end{enumerate}
 \end{lem}
 \begin{proof}
-Suppose that $G$ does not have \BS{} and let $X$ be an \CatS-space on which $G$ acts with an unbounded orbit $\orbite$.
+Suppose that $G$ does not have \BS{} and let $X$ be a \CatS-space on which $G$ acts with an unbounded orbit $\orbite$.
 Then $H$ acts on $X$ and $\orbite$ is a union of at most $[G:H]$ orbits. This directly implies that $H$ has an unbounded orbit and therefore does not have \BS.
 
 On the other hand, suppose that $H\leq G$ is a finite index subgroup of G without property~\BS.
-Let $\alpha\colon H\curvearrowright X$ be an action of $H$ on an \CatS-space $(X,d_X)$ such that there is an unbounded orbit $\orbite$.
-Similarly to the classical theory of representations of finite groups, we have the induced  action $\Ind_H^G(\alpha)\colon G \curvearrowright X^{G/H}$ on the set $X^{G/H}$. Since $H$ has finite index, $X^{G/H}$ is an \CatS-space and the action is by \CatS-automorphisms. On the other hand, the subgroup $H\leq G$ acts diagonally on $X^{G/H}$, which implies that $\diag(\orbite)$ is contained in a $G$-orbit.
+Let $\alpha\colon H\curvearrowright X$ be an action of $H$ on a \CatS-space $(X,d_X)$ such that there is an unbounded orbit $\orbite$.
+Similarly to the classical theory of representations of finite groups, we have the induced  action $\Ind_H^G(\alpha)\colon G \curvearrowright X^{G/H}$ on the set $X^{G/H}$. Since $H$ has finite index, $X^{G/H}$ is a \CatS-space and the action is by \CatS-automorphisms. On the other hand, the subgroup $H\leq G$ acts diagonally on $X^{G/H}$, which implies that $\diag(\orbite)$ is contained in a $G$-orbit.
 Since $\diag(\orbite)$ is unbounded, $G$ does not have property~\BS.
 
 For readers that are not familiar with representations of finite groups, here is the above argument in more details.
@@ -1042,11 +1025,11 @@ We now prove one last lemma that will be necessary fo the proof of Theorem~\ref{
 %
 %
 \begin{lem}\label{Lemma:Unboundedness}
-Suppose that \CatS{} has bornological Cartesian powers. If $X$ is finite and $G\wr_XH$ has property~\BS, then $G$ has property~\BS.
+Suppose that \CatS{} has unbounded Cartesian powers. If $X$ is finite and $G\wr_XH$ has property~\BS, then $G$ has property~\BS.
 \end{lem}
 \begin{proof}
-Suppose that $G$ does not have \BS{} and let $(Y,d_Y)$ be an \CatS-space on which $G$ acts with an unbounded orbit $G.y$.
-Then $(Y^X,d)$ is an \CatS-space and we have the \emph{primitive action} of the wreath product $G\wr_XH$ on $Y^X$:
+Suppose that $G$ does not have \BS{} and let $(Y,d_Y)$ be a \CatS-space on which $G$ acts with an unbounded orbit $G.y$.
+Then $(Y^X,d)$ is a \CatS-space and we have the \emph{primitive action} of the wreath product $G\wr_XH$ on $Y^X$:
 \[
 	\bigl((\varphi,h).\psi\bigr)(x)=\varphi(h^{-1}.x).\psi(h^{-1}.x).
 \]
@@ -1055,21 +1038,17 @@ The orbit $G.y$ embeds diagonally and hence $\diag(G.y)$ is an unbounded subset 
 \end{proof}
 %
 %
-Observe that it is also possible to derive Lemma~\ref{Lemma:Unboundedness} directly from Lemma~\ref{Lemma:Subgroup} (2), with a more algebraic proof.
-Indeed, using the notation and hypothesis of Lemma~\ref{Lemma:Unboundedness}, let $H'$ be the kernel of the action of $H$ on $X$ and $\pi\colon G\wr_XH\to H$ be the canonical projection. Then $\pi^{-1}(H')\cong \bigoplus_XG\oplus H'$ is a finite index subgroup of $G\wr_XH$ and hence has property~\BS.
-Since $G$ is a quotient of $\bigoplus_XG\oplus H'$ we conclude that it also has property~\BS.
-
 By combining Corollary~\ref{Cor:Wreath} and Lemmas~\ref{Lemma:XFinite} and~\ref{Lemma:Unboundedness} we obtain the following result which implies Theorem~\ref{Thm:Main}.
 %
 %
 \begin{thm}\label{Thm:Technic}
-Suppose that \CatS{} has bornological Cartesian powers and is such that \BS{} implies \FW.
+Suppose that \CatS{} has unbounded Cartesian powers and is such that \BS{} implies \FW.
 Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which $H$ acts. Then the wreath product $G \wr_X H$ has property~\BS{} if and only if $G$ and $H$ have property~\BS{} and $X$ is finite.
 \end{thm}
 %
 %
-We now proceed to prove Proposition~\ref{Prop:UncCoun}.
-As for Lemma~\ref{Lemma:Cof}, it is also possible to prove it using the characterization of uncountable cofinality in terms of subgroups, in which case it is an easy exercise, but we will only give a proof using the characterization in terms of actions on ultrametric spaces.
+We now proceed to prove Theorem~\ref{Thm:UncCoun}.
+As for Lemma~\ref{Lemma:Cof}, it is also possible to prove it using the characterization of uncountable cofinality in terms of subgroups, but we will only give a proof using the characterization in terms of actions on ultrametric spaces.
 
 %For $g$ in $G$ and $x$ in $X$, we define the following analogs of Kronecker's delta functions
 %\begin{equation*}
@@ -1081,7 +1060,7 @@ As for Lemma~\ref{Lemma:Cof}, it is also possible to prove it using the characte
 %\end{equation*}
 %
 %
-\begin{proof}[Proof of Proposition~\ref{Prop:UncCoun}]
+\begin{proof}[Proof of Theorem~\ref{Thm:UncCoun}]
 By Corollary~\ref{Cor:Wreath} and Lemma~\ref{Lemma:Cof} we already know that if $G \wr_X H$ has uncountable cofinality, then $H$ has uncountable cofinality and it acts on $X$ with finitely many orbits.
 We will now prove that if $G \wr_X H$ has uncountable cofinality so does $G$.
 Let us suppose that $G$ has countable cofinality. By Lemma~\ref{Lemma:CofSub}, there exists an ultrametric $d$ on $G$ such that the action of $G$ on itself by left multiplication has an unbounded orbit.
@@ -1126,8 +1105,8 @@ That is, the diameter of $G\wr_YH.z$ is itself bounded by $\max\{D_0,D_1,\dots,D
 \end{proof}
 %
 %
-While the fact that trees do not have (bornological) Cartesian powers is an obstacle to our methods, we still have a weak version of Theorem~\ref{Thm:Technic} for properties~\FA{} and~\FR.
-Before stating it, remind that we already know, by Proposition~\ref{Prop:UncCoun}, the behavior of uncountable cofinality under wreath products.
+While the fact that trees do not have (unbounded) Cartesian powers is an obstacle to our methods, we still have a weak version of Theorem~\ref{Thm:Technic} for property~FA.
+Before stating it, remind that we already know, by Theorem~\ref{Thm:UncCoun}, the behavior of uncountable cofinality under wreath products.
 On the other hand, we have the following result, which also admits a direct algebraic proof.
 %
 %
@@ -1138,20 +1117,19 @@ Then the group $G\wr_XH$ has no quotient isomorphic to $\Z$ if and only if both 
 \begin{proof}
 Remind that a group $K$ has no quotient isomorphic to $\Z$ if and only if $K^{\ab}$ has no quotient isomorphic to $\Z$.
 The desired result then follows from $(G\wr_XH)^{\ab}\cong \bigoplus_{X/H}(G^{\ab})\times H^{\ab}$, Example~\ref{Exmp:BZ} and Corollary~\ref{Cor:Prod}.
-%The desired result then follows from $(G\wr_XH)^{\ab}\cong \bigoplus_{X/H}(G^{\ab})\times H^{\ab}$ and the elementary property that a direct sum $\bigoplus_{x\in X}G_X$ has a quotient isomorphic to $\Z$ if and only if at least one of the factor has a quotient isomorphic to $\Z$.
 \end{proof}
 %
 %
-By Corollary~\ref{Cor:Wreath}, Proposition~\ref{Prop:UncCoun} and Lemma~\ref{Lemma:Z}, we directly obtain the following partial version of Theorem~\ref{Thm:FACK}.
+By Corollary~\ref{Cor:Wreath}, Theorem~\ref{Thm:UncCoun} and Lemma~\ref{Lemma:Z}, we directly obtain the following partial version of Theorem~\ref{Thm:FACK}.
 %
 %
 \begin{prop}\label{Prop:WRFA}
 Let $G$ and $H$ be two groups with $G$ non-trivial and $X$ a set on which $H$ acts.
 Then
 \begin{enumerate}
-\item If $G\wr_XH$ has property~\FA{} (respectively property~\FR), then $H$ has property~\FA{} (respectively property~\FR), $H$ acts on $X$ with finitely many orbits, $G$ has no quotient isomorphic to $\Z$ and $G$ has uncountable cofinality,
+\item If $G\wr_XH$ has property~\FA, then $H$ has property~\FA, $H$ acts on $X$ with finitely many orbits, $G$ has no quotient isomorphic to $\Z$ and $G$ has uncountable cofinality,
 \item If both $G$ and $H$ have no quotient isomorphic to $\Z$, have uncountable cofinality and $H$ acts on $X$ with finitely many orbits, then $G\wr_XH$ has no quotient isomorphic to $\Z$ and has uncountable cofinality,
-\item If both $G$ and $H$ have property~\FA{} (respectively property \FR) and $X$ is finite, then $G\wr_XH$ has property~FA (respectively property \FR).
+\item If both $G$ and $H$ have property~\FA{} and $X$ is finite, then $G\wr_XH$ has property~FA.
 \end{enumerate}
 \end{prop}
 %

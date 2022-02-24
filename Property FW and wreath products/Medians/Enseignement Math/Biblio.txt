@@ -1,0 +1,11 @@
+Bergmann Generating infinite symmetric groups ~2004
+
+[Neb71] L. Nebeský. Median graphs. Commentationes Mathematicae Universitatis Carolinae, 12(2):317–325, 1971
+
+[Roll98]  M. Roller. Pocsets, median algebras and group actions: An extended studyof Dunwoody’s construction and Sageev’s theorem.dissertation, 1998.
+
+[Che00] V. Chepoi.  Graphs of someCAT(0)complexes.Adv. in Appl. Math.,24(2):125–179, 2000.
+
+[Ger 97] N. Gerasimov,Semi-splittings of groups and actions on cubings, Algebra, geometry, analysisand mathematical physics (Russian) (Novosibirsk, 1996), Izdat. Ross. Akad. Nauk Sib. Otd.Inst. Mat., Novosibirsk, 1997, pp. 91–109, 190.
+
+[Ver93] E. R. Verheul,Multimedians in metric and normed spaces, CWI Tract, vol. 91, StichtingMathematisch Centrum voor Wiskunde en Informatica, Amsterdam, 1993.
