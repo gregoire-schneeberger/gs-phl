@@ -20,7 +20,7 @@
 %\usepackage{hyperref}%
 \usepackage[colorlinks,breaklinks,bookmarks,plainpages=false,unicode=true]{hyperref}%
 \usepackage{tikz-cd}
-%\usepackage{todonotes} %ajouter des commentaires
+\usepackage{todonotes} %ajouter des commentaires
 %\newcounter{mycomment}
 %\newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33},size=\small]{\textbf{Commentaire [\uppercase{#1}\themycomment]:}~#2}}}
 %\newcommand{\PH}[1]{\todo[color={blue!33},size=small]{\textbf{PH :} #1}}
@@ -446,7 +446,8 @@ The Bergman's property can also be characterized via length function, see for ex
 For a survey on property~\FB, see~\cite{MR3382026} and the references therein.
 
 For countable groups (and more generally for $\sigma$-compact locally compact groups), property~\FH{} is equivalent, by the Delorme-Guichardet theorem, to the celebrated Kazhdan's property (T), but this is not true in general.
-Indeed by~\ref{}, symmetric groups over infinite sets are uncountable discrete group with Bergman's property which, as we will see just below, implies property~\FH.
+Indeed by~\ref{} \todo{Est ce que c'est la référence du papier de Bergman ici ? Si oui la citation c'est MR2239037}
+, symmetric groups over infinite sets are uncountable discrete group with Bergman's property which, as we will see just below, implies property~\FH.
 Such groups cannot have property (T) as, for discrete groups, it implies finite generation.
 
 A classical result of the Bass-Serre theory of groups acting on trees~\cite{MR0476875}, is that a group $G$ has property~\FA{} if and only if it satisfies the following three conditions: $G$ has uncountable cofinality, $G$ has no quotient isomorphic to $\Z$ and $G$ is not a non-trivial amalgam.
@@ -481,7 +482,7 @@ The action of $G$ by multiplication on $\bigsqcup G/G_i$ is by graph isomorphism
 
 We now present some examples demonstrating the strictness of the implications. % of \eqref{EQ:Implications}.
 Countable groups with property~\FB{} are finite by~\cite{MR2137870}, while infinite finitely generated groups with property (T), e.g. $\SL_3(\Z)$, have property~\FH.
-The group $\SL_2(\Z[\sqrt{2}])$ has property~\FW{} but not \FA, see~\cite{MR3299841}.
+The group $\SL_2(\Z[\sqrt{2}])$ has property~\FW{} but not \FH, \todo{Ok FA -> FH}see~\cite{MR3299841}.
 If $G$ is a non-trivial finite group and $H$ is an infinite group with property~\FA{} (respectively property~\FR), then $G\wr_HH$ has property~\FA{} (respectively property~\FR) by Theorem~\ref{Thm:FAFiniteOrbits}, but does not have property~\FW{} by Theorem~\ref{Thm:Main}.
 The group $\Z$ has uncountable cofinality, while it acts by translations and with unbounded orbits on the infinite $2$-regular tree.
 Finally, Minasyan constructed examples of groups with \FA{} but without \FR{} in~\cite{MR3465847}.
