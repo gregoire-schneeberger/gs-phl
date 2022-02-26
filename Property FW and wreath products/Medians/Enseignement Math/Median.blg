@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Median.aux
+The style file: plain.bst
+Database file #1: biblio.bib
+Warning--I didn't find a database entry for "Roll98"
+Warning--there's a number but no volume in MR1023471
+Warning--empty journal in Rol98
+You've used 26 entries,
+            2118 wiz_defined-function locations,
+            700 strings with 8170 characters,
+and the built_in function-call counts, 9059 in all, are:
+= -- 979
+> -- 263
+< -- 10
++ -- 106
+- -- 80
+* -- 569
+:= -- 1388
+add.period$ -- 85
+call.type$ -- 26
+change.case$ -- 115
+chr.to.int$ -- 0
+cite$ -- 28
+duplicate$ -- 424
+empty$ -- 743
+format.name$ -- 80
+if$ -- 1988
+int.to.chr$ -- 0
+int.to.str$ -- 26
+missing$ -- 29
+newline$ -- 136
+num.names$ -- 52
+pop$ -- 104
+preamble$ -- 1
+purify$ -- 92
+quote$ -- 0
+skip$ -- 349
+stack$ -- 0
+substring$ -- 703
+swap$ -- 153
+text.length$ -- 10
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 98
+warning$ -- 2
+while$ -- 95
+width$ -- 28
+write$ -- 297
+(There were 3 warnings)
