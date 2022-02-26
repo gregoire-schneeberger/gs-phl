@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.26)  25 FEB 2022 13:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.26)  25 FEB 2022 14:25
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -957,35 +957,41 @@ LaTeX Warning: Citation `MR2978328' on page 9 undefined on input line 591.
 
 LaTeX Warning: Citation `MR2240370' on page 10 undefined on input line 650.
 
-[10] [11]
+[10]
+Overfull \hbox (6.81236pt too wide) in paragraph at lines 685--688
+[]\T1/lmr/m/n/10 Our last ax-iom say that \T1/lmr/bx/n/10 S \T1/lmr/m/n/10 has 
+in-fi-nite Carte-sian pow-ers (not nec-es-sar-ily bornolog-
+ []
 
-LaTeX Warning: Citation `MR1023471' on page 12 undefined on input line 727.
+[11]
 
-
-LaTeX Warning: Citation `MR1023471' on page 12 undefined on input line 738.
-
-
-LaTeX Warning: Citation `MR2415834' on page 12 undefined on input line 739.
-
-
-LaTeX Warning: Citation `Roll98' on page 12 undefined on input line 744.
+LaTeX Warning: Citation `MR1023471' on page 12 undefined on input line 747.
 
 
-LaTeX Warning: Citation `MR1663779' on page 12 undefined on input line 744.
+LaTeX Warning: Citation `MR1023471' on page 12 undefined on input line 758.
 
 
-LaTeX Warning: Citation `MR2656670' on page 12 undefined on input line 746.
+LaTeX Warning: Citation `MR2415834' on page 12 undefined on input line 759.
+
+
+LaTeX Warning: Citation `Roll98' on page 12 undefined on input line 764.
+
+
+LaTeX Warning: Citation `MR1663779' on page 12 undefined on input line 764.
+
+
+LaTeX Warning: Citation `MR2656670' on page 12 undefined on input line 766.
 
 [12] [13] [14]
 
-LaTeX Warning: Citation `Cornulier2013' on page 15 undefined on input line 960.
+LaTeX Warning: Citation `Cornulier2013' on page 15 undefined on input line 980.
 
 
 
-LaTeX Warning: Citation `MR0476875' on page 15 undefined on input line 960.
+LaTeX Warning: Citation `MR0476875' on page 15 undefined on input line 980.
 
 [15] [16]
-Overfull \hbox (1.93307pt too wide) in paragraph at lines 1034--1037
+Overfull \hbox (1.93307pt too wide) in paragraph at lines 1054--1057
 \T1/lmr/m/n/10 non-trivial $\OML/lmm/m/it/10 g[] \OMS/lmsy/m/n/10 2 \OML/lmm/m/
 it/10 G[]$\T1/lmr/m/n/10 . Then the or-bit of the ver-tex $\OT1/lmr/bx/n/10 1$ 
 \T1/lmr/m/n/10 con-tains the point $\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 g[]; [] 
@@ -998,13 +1004,16 @@ No file Median.bbl.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `Median.out' has not changed.
 (rerunfilecheck)             Checksum: DF3138750C49DBBE7B3F2D04C78ADC9B;1359.
  ) 
 Here is how much of TeX's memory you used:
- 22249 strings out of 479023
- 412100 string characters out of 5859397
- 714335 words of memory out of 5000000
+ 22253 strings out of 479023
+ 412129 string characters out of 5859397
+ 713335 words of memory out of 5000000
  39182 multiletter control sequences out of 15000+600000
  516601 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1041,10 +1050,10 @@ fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1
 /public/lm/lmtt9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/ams
 fonts/symbols/msam10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb>
-Output written on Median.pdf (20 pages, 541984 bytes).
+Output written on Median.pdf (20 pages, 543981 bytes).
 PDF statistics:
- 446 PDF objects out of 1000 (max. 8388607)
- 390 compressed objects within 4 object streams
- 97 named destinations out of 1000 (max. 500000)
+ 450 PDF objects out of 1000 (max. 8388607)
+ 394 compressed objects within 4 object streams
+ 101 named destinations out of 1000 (max. 500000)
  69 words of extra memory for PDF output out of 10000 (max. 10000000)
 

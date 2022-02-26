@@ -654,11 +654,11 @@ While we will be able to obtain some results for a general subcategory of \PMet,
 %
 %
 \begin{defn}\label{Def:NonTrivialAction}
-A subcategory \CatS{} of \PMet{} has \emph{non-trivial group actions} if for every non-trivial group $G$ there exists an \CatS-space $X$ with at least two elements which admits a non-trivial action of $G$.
+A subcategory \CatS{} of \PMet{} has \emph{non-trivial group actions} if for every non-trivial group $G$ there exists an \CatS-space $X$ and an action $G\curvearrowright X$ by \CatS-automorphisms moving at least one point.
 \end{defn}
 %
 %
-Examples of categories \CatS{} with non-trivial group actions include (pseudo-) metric spaces (with $X$ a Cayley graph of $G$), (reflexive) Banach spaces and Hilbert spaces (with $X=l^2(G)$), connected median graphs and (real) trees ($X$ has one central vertex to which we attach an edge for every $g\in G$).
+Examples of categories \CatS{} with non-trivial group actions include (pseudo-) metric spaces (with $X$ a Cayley graph of $G$ and the natural action by multiplication), (reflexive) Banach spaces and Hilbert spaces (with $X=l^2(G)$ and the permutation action of $G$), connected median graphs and (real) trees ($X$ has one central vertex to which we attach an edge for every $g\in G$ and the action of $G$ by left multiplication).
 %
 %
 \begin{defn}\label{Def:Cartesian}
@@ -667,7 +667,7 @@ A subcategory \CatS{} of \PMet{} has \emph{finite bornological Cartesian powers}
 \item
 As a set, $X^n$ is the $n$\textsuperscript{th} Cartesian power of $X$,
 \item\label{Item:Product}
-the canonical image of $\Aut_{\CatS}(X)^n\rtimes \Sym(n)$ in $\Bij(X^n)$ lies in $\Aut_{\CatS}(X^n)$,
+The canonical image of $\Aut_{\CatS}(X)^n\rtimes \Sym(n)$ in $\Bij(X^n)$ lies in $\Aut_{\CatS}(X^n)$,
 \item\label{Condidef:2}
 If $E\subset X$ is unbounded, then the diagonal $\diag(E)\subset X^n$ is unbounded.
 \end{enumerate}
@@ -682,6 +682,26 @@ For Hilbert and (reflexive) Banach spaces, we take the usual Cartesian product (
 For connected median graphs, the usual Cartesian product (which is not the categorical product!\footnote{The categorial product in $\category{Graph}$ is the strong product, while the category of median graphs does not have categorial products.}) with $d_1=d_X+d_Y$ works well.
 On the other hand, (real) trees do not have Cartesian powers, even without asking them to respect the bornology.
 
+Our last axiom say that \CatS{} has infinite Cartesian powers (not necessarily bornological) and that the product metric does not look likes $d_\infty$.
+%
+%
+\begin{defn}
+A subcategory \CatS{} of \PMet{} has \emph{Cartesian powers} if for any \CatS-space $X$, any element $x$ of $X$ and any cardinal $\kappa$, there exists an \CatS-object, called the \emph{$\kappa$\textsuperscript{th} Cartesian power of $X$} and written $X^{(\kappa)}$, such that:
+\begin{enumerate}
+\item
+As a set, $X^{(\kappa)}$ is contained in $X^{\kappa}$, the $\kappa$\textsuperscript{th} Cartesian power of $X$,
+%\item
+%For each $i\in \kappa$ and $x\in X$, the set $\setst{f\in X^{(\kappa)}}{f(j)=x\textnormal{ if }j\neq i}$ is contained in $X^{(\kappa)}$, and when endowed with the restriction of the metric from $X^{(\kappa)}$ it is an \CatS-space isomorphic to $X$ via $f\mapsto f(i)$,
+\item
+The canonical image of $\Aut_{\CatS}(X)\wr_\kappa \Sym(n)$ in $\Bij(X^\kappa)$ lies in $\Aut_{\CatS}(X^{(\kappa)})$,
+\item
+For any $x\neq y$ elements of $X$ and any sequence $(i_j)_{j\in N}\subset\kappa$ of pairwise distincts indices, the sequences
+\end{enumerate}
+\end{defn}
+%
+%
+While the above definition might seems convoluted, in practice it is often easy to verify.
+Indeed, in most cases when \CatS{} has finite Cartesian products it is for some product metric of the form $d_p((x_1,\dots,x_n),(y_1,\dots,y_n))=()$
 %We now want to extend Definition~\ref{Def:Cartesian} to infinite powers.
 %This is a little bit tricky, as in general the ``natural metric'' we want to put on the product would take infinite values. For example, if $T$ is the graph with two vertex and one edge between them, then the usual Cartesian power $T^\N$ is not connected.
 %The solution consists of looking at the restricted version of Cartesian powers.
