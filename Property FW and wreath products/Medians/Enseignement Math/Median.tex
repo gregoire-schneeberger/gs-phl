@@ -44,6 +44,7 @@
 \theoremstyle{definition}
 \newtheorem{defn}[lem]{Definition}
 \newtheorem{rem}[lem]{Remark}
+\newtheorem{fact}[lem]{Fact}
 \newtheorem{exmp}[lem]{Example}
 %
 %
@@ -1166,7 +1167,7 @@ is in the $G\wr_XH$-orbit of $f_0$. We conclude that this orbit is unbounded and
 %For example, for Hilbert spaces one can take $\bigoplus_X\ell^2(G)$ with $\bigoplus_XG$ acting coordinatewise and $H$ by permutations.
 %On the other hand, both the forest structure on $\powerset{\bigsqcup_XG}$ and the ultrametric structure on $\bigoplus_XG$ are in general not invariant under the natural action of $H$ by permutations.
 
-As a direct corollary, we obtain that if property \BS{} implies property \FW, then the conclusion of Lemma~\ref{Lemma:XFinite} holds even if \CatS{} might not satisfy it's premises.
+As a direct corollary, we obtain that if property \BS{} implies property \BS' for some \CatS' with non-trivial group actions and seperating infinite Cartesian powers (example: \BS'=\FW), then the conclusion of Lemma~\ref{Lemma:XFinite} holds even if \CatS{} might not satisfy it's premises.
 At contrario, it follows from Theorem~\ref{Thm:FACK} and Proposition~\ref{Prop:UncCoun} that Lemma~\ref{Lemma:XFinite} do not holds for property~\FR, property \FA{} or having uncountable cofinality.
 %
 %
@@ -1180,8 +1181,8 @@ At contrario, it follows from Theorem~\ref{Thm:FACK} and Proposition~\ref{Prop:U
 %\end{rem}
 %
 %
-We now turn our attention to properties that behave well under Cartesian products in the sense of Definition~\ref{Def:Cartesian}.
 
+We now turn our attention to properties that behave well under finite Cartesian products in the sense of Definition~\ref{Def:Cartesian}.
 We first describe the comportement of property~\BS{} under finite index subgroups.
 %
 %
@@ -1238,11 +1239,13 @@ By combining Corollary~\ref{Cor:Wreath} and Lemmas~\ref{Lemma:XFinite} and~\ref{
 %
 %
 \begin{thm}\label{Thm:Technic}
-Suppose that \CatS{} has non-trivial group actions finite bornological Cartesian powers and seperating infinite Cartesian powers.
+Suppose that \CatS{} has non-trivial group actions, finite bornological Cartesian powers and seperating infinite Cartesian powers.
 Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which $H$ acts. Then the wreath product $G \wr_X H$ has property~\BS{} if and only if $G$ and $H$ have property~\BS{} and $X$ is finite.
 \end{thm}
 %
 %
+Similarly to Lemma~\ref{Lemma:XFinite}, the conclusion of Theorem~\ref{Thm:Technic} remains true if the hypothesis on \CatS{} are replaced  by ``\CatS{} has finite bornological Cartesian powers and property \BS{} implies property \FW''.
+
 We now proceed to prove Proposition~\ref{Prop:UncCoun}.
 As for Lemma~\ref{Lemma:Cof}, it is also possible to prove it using the characterization of uncountable cofinality in terms of subgroups, in which case it is an easy exercise, but we will only give a proof using the characterization in terms of actions on ultrametric spaces.
 
@@ -1307,13 +1310,16 @@ On the other hand, we have the following result, which also admits a direct alge
 %
 %
 \begin{lem}\label{Lemma:Z}
-Suppose that $H$ acts on $X$ with finitely many orbits.
+%Suppose that $H$ acts on $X$ with finitely many orbits.
 Then the group $G\wr_XH$ has no quotient isomorphic to $\Z$ if and only if both $G$ and $H$ have no quotient isomorphic to $\Z$.
 \end{lem}
 \begin{proof}
-Remind that a group $K$ has no quotient isomorphic to $\Z$ if and only if $K^{\ab}$ has no quotient isomorphic to $\Z$.
-The desired result then follows from $(G\wr_XH)^{\ab}\cong \bigoplus_{X/H}(G^{\ab})\times H^{\ab}$, Example~\ref{Exmp:BZ} and Corollary~\ref{Cor:Prod}.
-%The desired result then follows from $(G\wr_XH)^{\ab}\cong \bigoplus_{X/H}(G^{\ab})\times H^{\ab}$ and the elementary property that a direct sum $\bigoplus_{x\in X}G_X$ has a quotient isomorphic to $\Z$ if and only if at least one of the factor has a quotient isomorphic to $\Z$.
+%Remind that a group $K$ has no quotient isomorphic to $\Z$ if and only if $K^{\ab}$ has no quotient isomorphic to $\Z$.
+%The desired result then follows from $(G\wr_XH)^{\ab}\cong \bigoplus_{X/H}(G^{\ab})\times H^{\ab}$, Example~\ref{Exmp:BZ} and Corollary~\ref{Cor:Prod}.
+The desired result then follows from $(G\wr_XH)^{\ab}\cong \bigoplus_{X/H}(G^{\ab})\times H^{\ab}$ and the claim that a direct sum $\bigoplus_{y\in Y}K_y$ has a quotient isomorphic to $\Z$ if and only if at least one of the factor has a quotient isomorphic to $\Z$.
+Indeed, one direction of the claim is trivial.
+For the other direction, remind that $K$ does not project onto $\Z$ if and only if any action of $K$ by orientation preserving isomorphisms on $Z$ the $2$-regular tree has bounded orbits. But the only possibility for such an action to have bounded orbits is to be trivial.
+If none of the $K_y$ projects onto $\Z$, all their actions on $Z$ are trivial and so is any action of $\bigoplus_{y\in Y}K_y$, which can therefore not project onto $\Z$.
 \end{proof}
 %
 %
