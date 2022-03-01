@@ -13,6 +13,11 @@ Bachir Bekka, Pierre de~la Harpe, and Alain Valette.
   Monographs}.
 \newblock Cambridge University Press, Cambridge, 2008.
 
+\bibitem{MR2239037}
+George~M. Bergman.
+\newblock Generating infinite symmetric groups.
+\newblock {\em Bull. London Math. Soc.}, 38(3):429--440, 2006.
+
 \bibitem{MR2978328}
 Marc Bourdon.
 \newblock Un th\'{e}or\`eme de point fixe sur les espaces {$L^p$}.
@@ -62,9 +67,10 @@ Yves Cornulier and Aditi Kar.
 
 \bibitem{MR1023471}
 Pierre de~la Harpe and Alain Valette.
-\newblock La propri\'{e}t\'{e} {$(T)$} de {K}azhdan pour les groupes localement
-  compacts (avec un appendice de {M}arc {B}urger).
-\newblock {\em Ast\'{e}risque}, (175):158, 1989.
+\newblock {\em La propri\'{e}t\'{e} {$(T)$} de {K}azhdan pour les groupes
+  localement compacts (avec un appendice de {M}arc {B}urger)}.
+\newblock Ast\'{e}risque, No. 175. Soci\'{e}t\'{e} Math\'{e}matique de France,
+  Paris, 1989.
 \newblock With an appendix by M. Burger.
 
 \bibitem{2017arXiv170500834G}
@@ -128,8 +134,9 @@ Piotr~W. Nowak.
 
 \bibitem{Rol98}
 Martin~A. Roller.
-\newblock {Poc Sets, Median Algebras and Group Actions}.
-\newblock jul 1998.
+\newblock {\em Poc Sets, Median Algebras and Group Actions}.
+\newblock PhD thesis, Universität Regensburg, 1998.
+\newblock Habilitation's thesis. Available at http://arxiv.org/abs/1607.07747.
 
 \bibitem{MR0476875}
 Jean-Pierre Serre.
