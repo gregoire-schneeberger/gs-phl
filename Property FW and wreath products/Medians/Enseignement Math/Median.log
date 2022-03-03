@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.26)  3 MAR 2022 14:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.26)  3 MAR 2022 16:37
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -836,10 +836,10 @@ cm-super/sfrm1728.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm
 uper/sfti1000.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-sup
 er/sftt0900.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/zapfding/uz
 dr.pfb>
-Output written on Median.pdf (25 pages, 593428 bytes).
+Output written on Median.pdf (25 pages, 593450 bytes).
 PDF statistics:
- 590 PDF objects out of 1000 (max. 8388607)
- 516 compressed objects within 6 object streams
+ 589 PDF objects out of 1000 (max. 8388607)
+ 515 compressed objects within 6 object streams
  135 named destinations out of 1000 (max. 500000)
  69 words of extra memory for PDF output out of 10000 (max. 10000000)
 
