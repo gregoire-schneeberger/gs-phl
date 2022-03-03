@@ -8,10 +8,11 @@
 %
 %
 %
-\usepackage{textcomp}% améliore certains symboles de bases
-\usepackage{lmodern}% remplace la police ComputerModern par LatinModern (+ mieux bien)
-\usepackage{pifont}
+%\usepackage{textcomp}% améliore certains symboles de bases
+%\usepackage{lmodern}% remplace la police ComputerModern par LatinModern (+ mieux bien)
+\usepackage{pifont}% for cross mark
 \newcommand{\xmark}{\ding{55}}
+\usepackage{multirow}
 %
 %
 %
@@ -21,7 +22,7 @@
 %\usepackage{hyperref}%
 \usepackage[colorlinks,breaklinks,bookmarks,plainpages=false,unicode=true]{hyperref}%
 \usepackage{tikz-cd}
-\usepackage{todonotes} %ajouter des commentaires
+%\usepackage{todonotes} %ajouter des commentaires
 %\newcounter{mycomment}
 %\newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33},size=\small]{\textbf{Commentaire [\uppercase{#1}\themycomment]:}~#2}}}
 %\newcommand{\PH}[1]{\todo[color={blue!33},size=small]{\textbf{PH :} #1}}
@@ -44,7 +45,6 @@
 \theoremstyle{definition}
 \newtheorem{defn}[lem]{Definition}
 \newtheorem{rem}[lem]{Remark}
-\newtheorem{fact}[lem]{Fact}
 \newtheorem{exmp}[lem]{Example}
 %
 %
@@ -52,9 +52,11 @@
 \DeclareMathOperator\Cayley{Cayl}
 \DeclareMathOperator\Ind{Ind}
 \DeclareMathOperator\SL{SL}
+\DeclareMathOperator\GL{GL}
+\DeclareMathOperator\SO{SO}
+\DeclareMathOperator\SU{SU}
 \DeclareMathOperator\Sym{Sym}
 \DeclareMathOperator\diag{diag}
-\DeclareMathOperator\Hom{Hom}
 \DeclareMathOperator\Aut{Aut}
 \DeclareMathOperator\ab{ab}
 \DeclareMathOperator\diam{diam}
@@ -81,8 +83,6 @@
 \newcommand*{\FS}{F\textbf{S}}
 \newcommand{\setst}[2]{\{#1\ |\ #2\}}
 \newcommand*{\powerset}[1]{\mathcal P(#1)}
-\newcommand*{\powersetf}[1]{\mathcal P_{\textnormal{f}}(#1)}
-\newcommand*{\powersetcof}[1]{\mathcal P_{\textnormal{cof}}(#1)}
 %
 %
 \title{Wreath products of groups acting with bounded orbits}
@@ -251,7 +251,8 @@ Then $G\wr_XH$ has property~\FA{} (respectively has property~\FR) if and only if
 %
 %
 \paragraph{Acknowledgment}
-The authors are thankful to P. de la Harpe, A. Genevois and T. Nagnibeda for helpful comments and to the NSF for its support.
+The authors are thankful to P. de la Harpe, A. Genevois, T. Nagnibeda and A. Valette for helpful comments and to the NSF for its support.
+They also gratefully  thank the anonymous referee for their valuable remarks.
 %
 %
 %
@@ -338,7 +339,7 @@ A connected graph $\mathcal G$ is \emph{median} if for any three vertices $u$, $
 A graph is \emph{median} if each of its connected components is median. For more on median graphs and spaces see~\cite{MR2405677,MR2671183,MR1705337}.
 If $X$ and $Y$ are both (connected) median graphs, then their Cartesian product is also a (connected) median graph.
 The class of median graphs was intruduced by Nebesk\'y in 1971 \cite{Neb71} and Gerasimov \cite{Ger97,MR1663779},   Roller \cite{Rol98} and Chepoï \cite{Che00} realized independently that this class coincides with the class of $1$-skeleta of CAT(0) cube complexes.
-Trees are the simplest examples of connected median graphs, while the ensuing classical example will be important for Lemma~\ref{Lemma:XFinite}.
+Trees are the simplest examples of connected median graphs, while the ensuing classical example show that any power set can be endowed with a median graph structure.
 %
 %
 \begin{exmp}\label{Ex:MainMedian}
@@ -351,8 +352,7 @@ In particular, $\powerset{X}$ is a median graph, with $m(D,E,F)$ being the set o
 \end{exmp}
 %
 %
-
-These graphs will be fundamental for us due to the following fact.
+These graphs are useful due to the following fact.
 Any action of a group $G$ on a set $X$ naturally extends to an action of $G$ on $\powerset{X}$ by graph homomorphisms: $g.Y\coloneqq\setst{g.y}{y\in Y}$ for $Y\subset X$.
 Note that the action of $G$ on $\powerset{X}$ may exchange the connected components.
 In fact, the connected component of $E\in \powerset{X}$ is stabilized by $G$ if and only if $E$ is \emph{commensurated} by~$G$, that is if for every $g\in G$ the set $E\Delta gE$ is finite.
@@ -415,23 +415,23 @@ Let $G$ be a group.
 It is said to have
 \begin{itemize}
 \item\emph{Bergman's property} if any isometric action on a metric space has bounded orbits,
-\item\emph{property~\FB} if any action by affine isometries on a reflexive real Banach space has bounded orbits,
-\item \emph{property~\FH} if any action by affine isometries on a real Hilbert space has bounded orbits,
+\item\emph{Property~\FB} if any action by affine isometries on a reflexive real Banach space has bounded orbits,
+\item \emph{Property~\FH} if any action by affine isometries on a real Hilbert space has bounded orbits,
 \item
-\emph{property~\FW} if any action by graph isomorphisms on a connected median graph has bounded orbits,
+\emph{Property~\FW} if any action by graph isomorphisms on a connected median graph has bounded orbits,
 \item
-\emph{property~\FR} if any isometric action on a real tree has bounded orbits,
+\emph{Property~\FR} if any isometric action on a real tree has bounded orbits,
 \item
-\emph{property~\FA} if any action by graph isomorphisms on a tree has bounded orbits,
+\emph{Property~\FA} if any action by graph isomorphisms on a tree has bounded orbits,
 \item
-\emph{uncountable cofinality} if any action by isometries on an ultrametric space has bounded orbits.
+\emph{Uncountable cofinality} if any action by isometries on an ultrametric space has bounded orbits.
 \end{itemize}
 \end{defn}
 %
 %
 In the above, we insisted on the fact that actions are supposed to preserve the structure of the metric space under consideration, or in other words to be by automorphisms of the considered category.
 This is sometimes automatic, as for example any isometry of a real Banach or Hilbert space is affine by the Mazur-Ulam theorem.
-However, for cube complexes, for example, this is not the case; a $2$-regular tree has automorphism group $\Z\rtimes(\Z/2\Z)$, while the automorphism group of its geometric realization (the line $\R$) is $\R\rtimes(\Z/2\Z)$.
+However, for cube complexes, for example, this is not the case; a $2$-regular tree has automorphism group $\Z\rtimes(\Z/2\Z)$, while its isometry group is $\R\rtimes(\Z/2\Z)$.
 In other words, an isometry of a cube complex is not necessarily a cube complex isomorphism.
 See also Example~\ref{Exmp:BZ}.
 
@@ -494,7 +494,7 @@ Finally, Minasyan constructed examples of groups with \FA{} but without \FR{} in
 %
 The reader familiar with triangles groups $\Delta(m,l,n)=\langle a,b,c\,|\,a^2=b^2=c^2=(ab)^l=(bc)^m=(ca)^n=1\rangle$ with $l,m,n\in\{1,2,\dots\}\cup\{\infty\}$ will be happy to observe that they provide explicit examples of groups with property~\FA{} but not property~\FW.
 Indeed, if $l$, $m$ and $n$ are all three integers, then $\Delta(m,l,n)$ has property~\FA{} by Serre~\cite[Section 6.5, Corollaire 2]{MR0476875}.
-And if $\sigma(l,m,n)\coloneqq\frac1l+\frac1m+\frac1n\leq 1$, then $\Delta(m,l,n)$ is the infinite symmetric group of a tilling of the Euclidean plane (if $\sigma(m,l,n)=1$) or of the hyperbolic plane (if $\sigma(m,l,n)<1$) and hence acts on a space with walls without fixed points, which implies that it doesn't have property FW.
+And if $\kappa(l,m,n)\coloneqq\frac1l+\frac1m+\frac1n\leq 1$, then $\Delta(m,l,n)$ is the infinite symmetric group of a tilling of the Euclidean plane (if $\kappa(m,l,n)=1$) or of the hyperbolic plane (if $\kappa(m,l,n)<1$) and hence acts on a space with walls without fixed points, which implies that it doesn't have property FW.
 
 %At this point it is interesting to ask about the exact relation between property~\FR{} and the other properties.
 %On one hand, we have the obvious implication $[\textnormal{Bergman's property}\implies \textnormal{\FR}]$.
@@ -506,7 +506,7 @@ In view of Proposition~\ref{Prop:ImplProp}, two questions remain open: is the im
 
 It is possible to consider relative versions of the properties appearing in Definition~\ref{Def:FHFA}.
 Let \CatS{} be any classes of metric spaces considered in Definition~\ref{Def:FHFA} and let \BS{} be the corresponding group property.
-If $G$ is a group and $H$ a subgroup of $G$, we say that the pair $(G,H)$ has \emph{relative property~\BS} if for every $G$ action on an \CatS-space, the $H$ orbits are bounded.
+If $G$ is a group and $H$ a subgroup of~$G$, we say that the pair $(G,H)$ has \emph{relative property~\BS} if for every $G$ action on an \CatS-space, the $H$ orbits are bounded.
 A group $G$ has property~\BS{} if and only if for every subgroup $H$ the pair $(G,H)$ has relative property~\BS{}, and if and only if for every overgroup $L$ the pair $(L,G)$ has relative property~\BS.
 %
 %
@@ -538,7 +538,7 @@ A \emph{pseudo-metric space} is a set $X$ with a map $d\colon X\times X\to \R_{\
 \end{defn}
 %
 %
-If moreover $d(x,y)\neq 0$ for $x\neq y$, the map $d$ is a \emph{distance} and $(X,d)$ is a metric space.
+If moreover $d(x,y)\neq 0$ for $x\neq y$, the map $d$ is a \emph{distance} and $(X,d)$ is a \emph{metric space}.
 On the other hand, an \emph{ultra-pseudo-metric space} is a pseudo-metric space $(X,d)$ such that $d$ satisfies the strong triangular inequality: $d(x,z)\leq \max\{d(x,y),d(y,z)\}$.
 A \emph{morphism} (or \emph{short map}) between two pseudo-metric spaces $(X_1,d_1)$ and $(X_2,d_2)$ is a distance non-increasing map $f\colon X_1\to X_2$, that is $d_2(f(x),f(y))\leq d_1(x,y)$ for any $x$ and $y$ in $X_1$.
 If $f$ is bijective and distance preserving, then it is an \emph{isomorphism} (or \emph{isometry}).
@@ -561,7 +561,7 @@ A \emph{$G$ action on an \CatS-space} $X$ is simply a group homomorphism $\alpha
 
 In practice, a lot of examples of (full) subcategories of \PMet{} are already subcategories of $\category{Met}$.
 Obvious examples of full subcategories of $\category{Met}$ include metric spaces and ultrametric spaces (with short maps).
-Affine real Hilbert spaces, real Banach spaces and more generally normed vector spaces are also full subcategories of $\category{Met}$ if we restrict ourself to morphisms that do not increase the norm (that is such that  $\|f(x)\|\leq\| x\|$).
+Affine real Hilbert and Banach spaces and more generally normed vector spaces (with affine maps) are also full subcategories of $\category{Met}$ if we restrict ourself to morphisms that do not increase the norm (that is such that  $\|f(x)\|\leq\| x\|$).
 In particular, for us isomorphisms of Hilbert and Banach spaces will always be affine isometries.
 
 For connected graphs (and hence for its full subcategories of connected median graphs and of trees), one looks at the category $\category{Graph}$ where objects are connected simple graphs $G=(V,E)$ and where a morphism $f\colon (V,E)\to(V',E')$ is a function between the vertex sets such that if $(x,y)$ is an edge then either $f(x)=f(y)$ or $(f(x),f(y))$ is an edge.
@@ -590,9 +590,9 @@ Observe that a group $G$ has property~\BS{} if and only any $G$ action on an \Ca
 
 All the properties of Definition~\ref{Def:FHFA} are of the form \BS.
 %Examples of other interesting subcategories include (some specific subclass of) Banach spaces as well as real or complex hyperbolic spaces, see~\cite[Definition 6.22]{MR1023471}.
-Another example of property of the form \BS{} can be found in~\cite[Definition 6.22]{MR1023471}: a group has property (FHyp$_{\field{C}}$) if any action on a complex or real hyperbolic space has bounded orbits.
+Another example of property of the form \BS{} can be found in~\cite[Definition 6.22]{MR1023471}: a group has property (FHyp$_{\field{C}}$) if any action on a real or complex hyperbolic space of finite dimension has bounded orbits.
 This property is implied by property~\FH, but does not imply property~\FA{}~\cite[Corollary 6.23 and Example 6.24]{MR1023471}.
-One can also want to look at the category of all Banach spaces (the corresponding property~\BS{} hence stands between the Bergman's property and property~\FB), or the category of $L^p$-spaces for $p$ fixed~\cite{MR2978328} (if $p\notin\{1,\infty\}$, then \BS{} is implied by \FB).
+One can also want to look at the category of all Banach spaces (the corresponding property~BB hence stands between the Bergman's property and property~\FB), or the category of $L^p$-spaces for $p$ fixed~\cite{MR2978328} (if $p\notin\{1,\infty\}$, then B$L^p$ is implied by \FB).
 
 Another interesting example of a property of the form \BS{} is the fact to have no quotient isomorphic to $\Z$, see Example~\ref{Exmp:BZ}.
 The main interest for us of this example is that property~\FA{} is the conjonction of three properties, two of them (uncountable cofinality and having no quotient isomorphic to $\Z$) still being of the form \BS.
@@ -656,6 +656,7 @@ Details are let to the reader.
 
 While we will be able to obtain some results for a general subcategory of \PMet, we will sometimes need to restrict ourselves to subcategories  satisfying good properties. In particular, we will use three axioms: one on the existence of non-trivial $G$-action, one on the existence of finite Cartesian powers and one on infinite Cartesian powers.
 Our Cartesian powers will need to be in some sense compatible with the bornology, but the conditions for finite and infinite powers will not be the same.
+A summary of which axioms are satisfied by the above mentioned subcategories of \PMet{} can be found in page~\pageref{Table1}.
 %
 %
 \begin{defn}[Axiom (A1)]\label{Def:NonTrivialAction}
@@ -663,7 +664,10 @@ A subcategory \CatS{} of \PMet{} has \emph{non-trivial group actions} if for eve
 \end{defn}
 %
 %
-Examples of categories \CatS{} with non-trivial group actions include (pseudo-) metric spaces (with $X$ a Cayley graph of $G$ and the natural action by multiplication), (reflexive) Banach spaces and Hilbert spaces (with $X=l^2(G)$ and the permutation action of $G$), connected median graphs and (real) trees ($X$ has one central vertex to which we attach an edge for every $g\in G$ and the action of $G$ by left multiplication) and ultrametric spaces ($G$ acting on itself by left-multiplication, with the discrete metric).
+Examples of categories \CatS{} with non-trivial group actions include (ultra-) metric spaces and metric space of finite diameter (with the action by multiplication of $G$ on itself, endowed with the discrete metric), (reflexive) Banach spaces and Hilbert spaces (with $X=l^2(G)$ and the permutation action of $G$), $L^p$ space ($G$ acting by permutation on $l^p(G)$) and finally connected median graphs and (real) trees ($X$ has one central vertex to which we attach an edge for every $g\in G$ and the action of $G$ is by left multiplication).
+On the opposite side, both $Z$ from Example~\ref{Exmp:BZ} and real and complex finite dimensional hyperbolic spaces do not have non-trivial group actions. Indeed, a group acts non-trivially on $Z$ if and only if it projects onto $\Z$.
+For hyperbolic spaces, a group $G$ acts on a hyperbolic space of dimension $n$ if and only if it projects onto a subgroup of  $\SO(n,1)$ or $\SU(n,1)$. In particular, if the action is non-trivial, then $G$ projects onto a non-trivial subgroup of $\GL_n(\C)$, whose all finitely generated subgroups are residually finite.
+We conclude that a finitely generated infinite simple group $G$ does not admit a non-trivial action on a real or complexe hyperbolic space of finite dimension.
 
 Before introducing the axioms about Cartesian powers, let us recall the definition and some properties of the product distances $d_p$.
 %
@@ -679,7 +683,7 @@ and
 d_\infty\colon \prod_{i\in I}X_i\times \prod_{i\in I}X_i&\to \R\\
 \bigl((x_i)_{i\in I},(y_i)_{i\in I}))&\mapsto\sup_{i\in I}d_i(f(i),g(i)),
 \end{align*}
-with the convention that an uncountable sum is infinite.
+with the convention that a sum with uncountably non-zero summands is infinite.
 \end{defn}
 %
 %
@@ -688,7 +692,7 @@ The following definition generalize this comportement to other distances.
 %
 %
 \begin{defn}[Axiom (A2)]\label{Def:Cartesian}
-A subcategory \CatS{} of \PMet{} has \emph{finite bornological Cartesian powers} if for any \CatS-space $X$ and any integer $n$, there exists an \CatS-object, called a \emph{$n$\textsuperscript{th} Cartesian power of $X$} and written $X^n$, such that:
+A subcategory \CatS{} of \PMet{} has \emph{bornological finite Cartesian powers} if for any \CatS-space $X$ and any integer $n$, there exists an \CatS-object, called a \emph{$n$\textsuperscript{th} Cartesian power of $X$} and written $X^n$, such that:
 \begin{enumerate}
 \item
 As a set, $X^n$ is the $n$\textsuperscript{th} Cartesian power of $X$,
@@ -700,26 +704,27 @@ If $E\subset X$ is unbounded, then the diagonal $\diag(E)\subset X^n$ is unbound
 \end{defn}
 %
 %
-A good heuristic is that your favorite subcategory of \PMet{} would have \emph{finite bornological Cartesian powers} in the above sense if and only if it already has a classical operation which is called \emph{Cartesian product}.
+A good heuristic is that your favorite subcategory of \PMet{} would have \emph{bornological finite Cartesian powers} in the above sense if and only if it already has a classical operation which is called \emph{Cartesian product}.
 
-For (pseudo-) metric spaces, the categorical product (corresponding to the metric $d_\infty=\max\{d_X,d_Y\}$) works fine, but any product metric of the form $d_p=(d_X^p+d_Y^p)^{\frac1p}$ for $p\in[1,\infty]$ works as well.
-For (pseudo-) ultra-metric spaces, the categorical product $d_\infty$ works fine.
-For Hilbert and (reflexive) Banach spaces, we take the usual Cartesian product (which is also the categorial product), which corresponds to the metric $d_2=\sqrt{d_X^2+d_Y^2}$.
-For graphs, the usual Cartesian product, which corresponds to $d_1=d_X+d_Y$ works well, but one can also take the strong product (which is the categorial product in \category{Graph}) that is the distance $d_\infty$.
-For connected median graphs, we take the usual Cartesian product.\footnote{The category of median graphs does not have categorial products.}
-On the other hand, (real) trees do not have Cartesian powers, even without asking them to respect the bornology.
+For metric spaces (of finite diameter), the categorical product (corresponding to the metric $d_\infty=\max\{d_X,d_Y\}$) works fine, but any product metric of the form $d_p=(d_X^p+d_Y^p)^{\frac1p}$ for $p\in[1,\infty]$ works as well.
+For ultra-metric spaces, the categorical product $d_\infty$ works fine.
+For $L^p$ spaces (and hence for Hilbert spaces) we take the usual Cartesian product (which is also the categorial product), which corresponds to the metric $d_p$.
+For (reflexive) Banach spaces, any product metric of the form $d_p$ works.
+For connected graphs, the usual Cartesian product, which corresponds to $d_1=d_X+d_Y$ works well, but one can also take the strong product (which is the categorial product in \category{Graph}), that is the distance $d_\infty$.
+For connected median graphs, only the usual Cartesian product with $d_1$ works.\footnote{The category of median graphs does not have categorial products.}
+On the other hand, (real) trees, $Z$ from Example~\ref{Exmp:BZ} and hyperbolic spaces do not have Cartesian powers, even without asking them to respect the bornology.
 
-As the above examples illustrate, there can be multiple non-isomorphic spaces playing the role of a Cartesian power. As our results will not depend on a particular choice of a Cartesian power, we will sometimes make a slight abuse of language and speak of \emph{the} Cartesian power.
+As the above examples illustrate, there can be multiple non-isomorphic spaces playing the role of a bornological Cartesian power. As our results will not depend on a particular choice of a Cartesian power, we will sometimes make a slight abuse of language and speak of \emph{the} Cartesian power.
 
 The situation for infinite products is more complicated. Indeed, if $I$ is infinite then the map $d_p$ is not necessary a distance on $\prod_{i\in I}X_i$ as it can take infinite values.
 The solution consists of looking at the subset of $\prod_{i\in I}X_i$ on which $d_p$ takes finite values.
 Formally we first need to chose for each $i\in I$ a base-point $x_i$ in $X_i$, which gives us an element $f_0\in \prod_{i\in I}X_i$ defined by $f_0(i)=x_i$. We can then define
 \begin{align*}
 	\sideset{}{}\bigoplus_{i \in I}X_i&\coloneqq\setst{f\in I}{f(i)=f_0(i)\textnormal{ for all but finitely many }i}\qquad\textnormal{and}\\
-	\sideset{}{^p}\bigoplus_{i \in I}X_i&\coloneqq\setst{f\in I}{d_p(f,f_0)<\infty}.
+	\sideset{}{^p}\bigoplus_{i \in I}X_i&\coloneqq\setst{f\in I}{\sum_i d_i\bigl(f(i),f_0(i)\bigr)<\infty}.
 \end{align*}
 A priori, the above definitions depend on the choice of the $x_i$. However, since our results will not depend on a particular choice of base-points, we will omit to specify it.
-Moreover, if $\Aut_\CatS(X)$ acts transitively on $X$, then $\bigoplus_{i \in I}^pX_i$ will not depend on the choice of $x\in X$.
+Moreover, if $\Aut_\CatS(X)$ acts transitively on $X$, then $\bigoplus_{i \in I}^pX$ will not depend on the choice of $x\in X$.
 
 It is straightforward to verify that $\bigoplus_{i\in I} X_i\subseteq\bigoplus_{i\in I}^p X_i\subseteq\prod_{i\in I}X_i$ and that the first inclusion is an equality if the $X_i$ are uniformly discrete with an uniform lower bounds on their packing radius.
 Moreover the restriction of the map $d_p$ to $\bigoplus_{i\in I}^p X_i$ is a distance.
@@ -737,12 +742,12 @@ As sets we have the inclusions $\bigoplus_I X\subseteq \bigoplus_I^\CatS X\subse
 %\item
 %For each $i\in I$ and $x\in X$, the set $\setst{f\in X^{(I)}}{f(j)=x\textnormal{ if }j\neq i}$ is contained in $X^{(I)}$, and when endowed with the restriction of the metric from $X^{(I)}$ it is an \CatS-space isomorphic to $X$ via $f\mapsto f(i)$,
 \item
-The canonical image of $\Aut_{\CatS}(X)\wr_I \Sym(n)$ in $\Bij(\prod_I X)$ lies in $\Aut_{\CatS}(\bigoplus_I^\CatS X)$,
+The canonical image of $\Aut_{\CatS}(X)\wr_I \Sym(I)$ in $\Bij(\prod_I X)$ lies in $\Aut_{\CatS}(\bigoplus_I^\CatS X)$,
 \item
-For any $y\neq x_0$, the following set has infinite diameter 
+For any $y$ with $d(y,x_0)>0$, the following set has infinite diameter 
 %$\setst{f\in \bigoplus_I X}{f(x)=x_0 \textnormal{ for all but finitely many } x \textnormal {for which } f(x)=y}$
 \[
-	\setst{f\in \bigoplus_I X}{f(x)=y \textnormal{ for finitely many } x \textnormal{ and otherwise }f(x)=x_0}.
+	\Bigl\{f\in \bigoplus_I X\,\Big|\,f(i)=y \textnormal{ for finitely many } i \textnormal{ and otherwise }f(i)=x_0\Bigr\}.
 \]
 %has infinite diameter.
 \end{enumerate}
@@ -752,7 +757,8 @@ For any $y\neq x_0$, the following set has infinite diameter
 In practice, the above definition is often easy to verify.
 Indeed, in most cases when \CatS{} has finite Cartesian powers (not necessarily bornological) it is for some product metric of the form $d_p$.
 Then the metric space $(\bigoplus^p_IX,d_p)$ will usually be an infinite Cartesian power in \CatS{} and, if $p\neq\infty$, it will be a separating infinite Cartesian power.
-In particular, the following categories have separating infinite  Cartesian powers: (pseudo-) metric spaces, (median) graphs, (reflexive) Banach spaces and Hilbert spaces.
+In particular, the following categories have separating infinite  Cartesian powers: metric spaces, (reflexive) Banach spaces (with $d_p$ for $1<p<\infty$), Hilbert spaces and $L^p$ spaces if $p\neq\infty$, connected (median) graphs.
+On the other hand, (real) trees, hyperbolic spaces, $Z$ from Example~\ref{Exmp:BZ} and spaces of finite diameter do not have a sensible notion of infinite Cartesian powers. Finally, while ultra-metric spaces and $L^\infty$ spaces have infinite Cartesian powers, they are not separating as the diameter of the set appearing in Definition~\ref{Def:InfiniteCartesian} is $d(y,x_0)$.
 %
 %
 %
@@ -834,13 +840,13 @@ All the statements and the proofs remain true for \CatS{} a subcategory of $\cat
 
 On the other hand, we can define property~\BS{} for any category \CatS{} over \PMet, that is for any category~\CatS{} endowed with a faithful functor $F\colon\CatS\to \PMet$.
 Such a couple $(\CatS,F\colon\CatS\to \PMet)$ is sometimes called a \emph{structure over \PMet}, and $F$ is said to be \emph{forgetful}.
-In this context, we need to be careful to define finite bornological Cartesian powers (Definition~\ref{Def:Cartesian}) using $F$, but appart for that all the statements and all the proofs remained unchanged.
+In this context, we need to be careful to define Cartesian powers (Definitions~\ref{Def:Cartesian} and~\ref{Def:InfiniteCartesian}) using $F$, but appart for that all the statements and all the proofs remaine unchanged.
 An example of such an \CatS{} that cannot be expressed as a subcategory of \PMet{} is the category of edge-labeled graphs, where the morphisms are graph morphisms that induce a permutation on the set of labels.
 However, in this case the property~\BS{} is equivalent to the Bergman's property.
 
 One can also combine the above two examples and look at couples $(\CatS,F\colon\CatS\to \category{M})$, with $F$ faithful.
 
-Finally, in view of Definition~\ref{Def:PropBS} and~\ref{Def:Cartesian}, the reader might ask why we are working in \PMet{} or $\category{M}$ instead of $\category{Born}$, the category of bornological spaces together with bounded maps.
+Finally, in view of Definitions~\ref{Def:PropBS}, \ref{Def:Cartesian} and ~\ref{Def:InfiniteCartesian}, the reader might ask why we are working in \PMet{} or $\category{M}$ instead of $\category{Born}$, the category of bornological spaces together with bounded maps.
 The reason behind this is the forthcoming Lemma~\ref{Lemma:InterProd} and its corollaries, which fail for general bornological spaces.
 In fact, all the statements and the proofs remain true for a general $(\CatS,F\colon\CatS\to \category{Born})$ as soon as \CatS{} satisfies Lemma~\ref{Lemma:InterProd}.
 Here is an example of such an \CatS{} which does not appear as a category over \category{M}.
@@ -915,24 +921,25 @@ A group $G$ has property B$\mathbf{S}_\kappa$ if and only if $\lvert G\rvert<\ka
 %
 Throughout this section, \CatS{} will denote subcategory of \PMet{} and \BS{} the group property~\emph{every action by \CatS-automorphisms on an \CatS-space has bounded orbits}.
 %Heuristically, an \CatS-space is a (quasipseudo-) metric space with an additional structure (as for example an Hilbert space). For a precise definition, see Definition~\ref{Def:PropBS}.
-In Subsection~\ref{SubSec:CatS}, we defined $3$ axioms that \CatS{} might satisfy. Axiom (A1) simply state that a non-trivial group acts non-trivially on some \CatS-space. Axioms (A2) and (A3) guarantee the existence of finite and infinite Cartesian powers, which should be compatible in some sense with the bornology. In Table~\ref{Table1} we present a short reminder on whenever these axioms are satisfied for some properties that were mentioned in Sections~\ref{Section:Intro} and~\ref{Section:Def}.
+In Subsection~\ref{SubSec:CatS}, we defined $3$ axioms that \CatS{} might satisfy. Axiom (A1) simply states that a non-trivial group acts non-trivially on some \CatS-space. Axioms (A2) and (A3) guarantee the existence of finite and infinite Cartesian powers, which should be compatible in some sense with the bornology. In Table~\ref{Table1} we present a short reminder on whenever these axioms are satisfied for some subcategories of \PMet{} that were mentioned in Sections~\ref{Section:Intro} and~\ref{Section:Def}.
 \begin{table}
-\begin{tabular}{*{5}{|c}|}
+\begin{tabular}{*{2}{|c}|*{3}{|c}|}
 \hline
-Category \CatS & Group property & (A1) & (A2) & (A3)\\
+\multirow{2}{*}{Category \CatS}&Corresponding&\multicolumn{3}{c|}{satisfies axiom}\\\cline{3-5}
+  &group property & (A1) & (A2) & (A3)\\
 \hline
 \hline
 Metric spaces	&Bergmann's property&\checkmark&\checkmark&\checkmark\\
 \hline
 Banach spaces			&BB			&\checkmark&\checkmark&\checkmark\\
 \hline
-Reflexive Banach spaces	&\FB		&\checkmark&\checkmark&???\\
+Reflexive Banach spaces	&\FB		&\checkmark&\checkmark&\checkmark\\
 \hline
 $L^p$ spaces ($p$ fixed)	&B$L^p$	&\checkmark&\checkmark		  &*\\
 \hline
 Hilbert spaces			&\FH		&\checkmark&\checkmark&\checkmark\\
 \hline
-$\C$ and $\R$ hyperbolic spaces&FHyp$_{\field{C}}$&???&???&???\\
+$\R$ and $\C$ hyperbolic spaces&FHyp$_{\field{C}}$&\xmark&\xmark&\xmark\\
 \hline
 Median graphs			&\FW		&\checkmark&\checkmark&\checkmark\\
 \hline
@@ -942,17 +949,18 @@ Trees					&\FA		&\checkmark&\xmark	  &\xmark\\
 \hline
 Ultrametric spaces	&uncountable cofinality	&\checkmark&\checkmark&\xmark\\
 \hline
-Z$=2$-regular tree with $\Isom^+$	&BZ	&\xmark	&\xmark	&\xmark\\
+Z$=2$-regular tree with $\Isom^+$	&B$\Z$	&\xmark	&\xmark	&\xmark\\
 \hline
-Spaces of finite diameter&BF		&\checkmark&\checkmark&\xmark\\
+Spaces of finite diameter&all groups		&\checkmark&\checkmark&\xmark\\
 \hline
 \end{tabular}
-\caption{Axioms for category \CatS. (A1) = non-trivial group actions (Definition~\ref{Def:NonTrivialAction}), (A2) = bornological finite Cartesian powers (Definition~\ref{Def:Cartesian}), (A3) = separating infinite Cartesian powers (Definition~\ref{Def:InfiniteCartesian}).\\
-*: if and only if $p\neq\infty$.}
+
+\footnotesize{*: if and only if $p\neq\infty$.}
+\caption{Axioms for category \CatS. (A1) = non-trivial group actions (Definition~\ref{Def:NonTrivialAction}), (A2) = bornological finite Cartesian powers (Definition~\ref{Def:Cartesian}), (A3) = separating infinite Cartesian powers (Definition~\ref{Def:InfiniteCartesian}).}
 \label{Table1}
 \end{table}
 
-We now have two easy but useful results.
+We now state two elementary but useful results.
 %
 %
 \begin{lem}\label{Lemma:Quotient}
@@ -1070,9 +1078,9 @@ For the other direction, for any \CatS, if $\bigoplus_{x\in X}G_x$ has property~
 Hence, we have to prove that an infinite direct sum of non-trivial groups does not have uncountable cofinality.
 If $X$ is infinite, there exists a countable subset $Y \subset X$. Let $Z \coloneqq X\setminus Y$, thus we have $X = Y \sqcup Z$. We can decompose the direct sum as $\bigoplus_{x\in X}G_x = (\bigoplus_{x\in Y}G_x) \times (\bigoplus{x\in Z}G_x)$ and then, by Corollary~\ref{Cor:Prod}, if $\bigoplus_{x\in Y}G_x$ does not have uncountable cofinality, then neither does $\bigoplus_{x\in X}G_x$.
 So let us fix an enumeration of $Y$ and let $K\coloneqq \bigoplus_{i\geq 1}G_i$ and for each $i$, choose $g_i\neq 1$ in $G_i$.
-Let $d_\infty(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$. %be the $G$-invariant ultrametric of Example~\ref{Exmpl:Ultra}.
+Let $d_{\max}(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$. %be the $G$-invariant ultrametric of Example~\ref{Exmpl:Ultra}.
 This is a $K$-invariant ultra-metric for the action by left multiplication of $G$ on itself.
-Then for every integer $n$, the orbit $K.1_K$ contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $1_K$ for $d_\infty$ if the $g_i$ are not equal to $1$.
+Then for every integer $n$, the orbit $K.1_K$ contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $1_K$ for $d_{\max}$ if the $g_i$ are not equal to $1$.
 
 The second assertion is a simple variation on the first.
 Indeed, we have
@@ -1082,10 +1090,10 @@ Indeed, we have
 where $X/H$ is the set of $H$-orbits.
 The important fact for us is that $H$ fixes the decomposition into $L_Y$ factors: for all $Y$ we have $H.L_Y=L_Y$.
 Up to regrouping some of the $L_Y$ together we hence have $G\wr_XH\cong\bigl(\bigoplus_{i\geq 1}L_i\bigr)\rtimes H$ with $H.L_i=L_i$ for all $i$.
-Now, we have an ultradistance $d_\infty$ on $L\coloneqq\bigoplus_{i\geq 1}L_i$ as above and we can put the discrete distance $d$ on $H$.
-Then $d_\infty'=\max\{d_\infty,d\}$ is an ultradistance on $\bigl(\bigoplus_{i\geq 1}L_i\bigr)\rtimes H$, which is $\bigl(\bigoplus_{i\geq 1}L_i\bigr)\rtimes H$-invariant (for the action by left multiplication).
-From a practical point of view, we have $d'_\infty\bigl((\varphi,h),(\varphi',h')\bigr)\coloneqq\max\setst{i}{\varphi(i)\neq \varphi'(i)}$ if $\varphi\neq \varphi'$ and $d'_\infty\bigl((\varphi,h),(\varphi,h')=1$ if $h\neq h'$.
-Since the action of $L$ on itself has an unbounded orbit for $d_\infty$, the action of $\bigl(\bigoplus_{i\geq 1}L_i\bigr)\rtimes H$ on itself has an unbounded orbit for $d'_\infty$.
+Now, we have an ultradistance $d_{\max}$ on $L\coloneqq\bigoplus_{i\geq 1}L_i$ as above and we can put the discrete distance $d$ on $H$.
+Then $d_{\max}'\coloneqq\max\{d_{\max},d\}$ is an ultradistance on $\bigl(\bigoplus_{i\geq 1}L_i\bigr)\rtimes H$, which is $\bigl(\bigoplus_{i\geq 1}L_i\bigr)\rtimes H$-invariant (for the action by left multiplication).
+From a practical point of view, we have $d'_\infty\bigl((\varphi,h),(\varphi',h')\bigr)\coloneqq\max\setst{i}{\varphi(i)\neq \varphi'(i)}$ if $\varphi\neq \varphi'$ and $d'_{\max}\bigl((\varphi,h),(\varphi,h')=1$ if $h\neq h'$.
+Since the action of $L$ on itself has an unbounded orbit for $d_{\max}$, the action of $\bigl(\bigoplus_{i\geq 1}L_i\bigr)\rtimes H$ on itself has an unbounded orbit for $d'_{\max}$.
 \end{proof}
 %
 %
@@ -1101,13 +1109,14 @@ Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups. Then
 \end{enumerate}
 \end{cor}
 
-While the statement (and the proof) of Corollary~\ref{Cor:Cof} is expressed in terms of uncountable cofinality, it is also possible to state it and prove it for a subcategory \CatS{} of \PMet{} without a priori knowing if \BS{} is stronger than having uncountable cofinality.
-The main idea is to find a ``natural'' \CatS-space on which $G=\bigoplus_{i\geq 1}G_i$ acts. For example, for Hilbert spaces, one can take $\bigoplus_{i\geq 1}\ell^2(G_i)$. For connected median graphs, one takes the connected component of $\{1_{G_1},1_{G_2},\dots\}$ in $\powerset{\bigsqcup_{i\geq 1} G_i}$.
+While the statement (and the proof) of Corollary~\ref{Cor:Cof}.1 is expressed in terms of uncountable cofinality, it is also possible to state it and prove it for a subcategory \CatS{} of \PMet{} without a priori knowing if \BS{} is stronger than having uncountable cofinality.
+The main idea is to find a ``natural'' \CatS-space on which $G=\bigoplus_{i\geq 1}G_i$ acts. For example, for (reflexive) Banach, Hilbert and $L^p$ spaces, one can take $\bigoplus_{i\geq 1}\ell^p(G_i)$. For connected median graphs, one takes the connected component of $\{1_{G_1},1_{G_2},\dots\}$ in $\powerset{\bigsqcup_{i\geq 1} G_i}$.
 For (real) trees, it is possible to put a forest structure on $\powerset{\bigsqcup_{i\geq 1} G_i}$ in the following way.
 For $E\in\powerset{\bigsqcup_{i\geq 1} G_i}$, and for each $i$ such that $E\cap G_j$ is empty for all $j\leq i$, add an edge from $E$ to $E\cup\{g\}$ for each $g\in G_i$. The graph obtained this way is a $G$-invariant subforest of the median graph on $\powerset{\bigsqcup_{i\geq 1} G_i}$.
+For Corollary~\ref{Cor:Cof}.2 we also need that the corresponding structure is invariant by the action of $H$, which is the case of the above examples, except for the tree structure.
 
 It is also possible to give a proof of Corollary~\ref{Cor:Cof} using axioms similar to (A1)-(A3).
-More precisely, for Corollary~\ref{Cor:Cof}.1 we need the existence of infinite Cartesian products (not necessarily separating) and a strong version of (A1) saying that there exists an universal bound $M$ such that any non-trivial group $G$ acts on some \CatS-space moving a point at distance at least $M$.
+More precisely, for Corollary~\ref{Cor:Cof}.1 we need a weak form of the existence of seperating countable Cartesian products (for morphisms we only ask that $\bigoplus_{i\in\N} \Aut_\CatS(X_i)\subseteq\Aut_\CatS(\bigoplus_{i\in\N} X_i)$) and a strong version of (A1) saying that there exists an universal bound $M$ such that any non-trivial group $G$ acts on some \CatS-space moving a point at distance at least $M$.
 The axiomatization of Corollary~\ref{Cor:Cof}.2 is a little more complex.
 However, since in the following we will use Corollary~\ref{Cor:Cof} only for (real) trees, which do not have Cartesian powers, we will not elaborate on the details and let the proof to the interested reader.
 Instead, we will give an axiomatic proof of the following variation of Corollary~\ref{Cor:Cof}.2.
@@ -1192,7 +1201,7 @@ Let $G$ be a group and let $H$ be a finite index subgroup.
 \item
 If $H$ has property~\BS, then so has~$G$,
 \item
-If \CatS{} has finite bornological Cartesian powers and $G$ has property~\BS, then $H$ has property~\BS.
+If \CatS{} has bornological finite Cartesian powers and $G$ has property~\BS, then $H$ has property~\BS.
 \end{enumerate}
 \end{lem}
 \begin{proof}
@@ -1218,7 +1227,7 @@ We now prove one last lemma that will be necessary fo the proof of Theorem~\ref{
 %
 %
 \begin{lem}\label{Lemma:Unboundedness}
-Suppose that \CatS{} has finite bornological Cartesian powers. If $X$ is finite and $G\wr_XH$ has property~\BS, then $G$ has property~\BS.
+Suppose that \CatS{} has bornological finite Cartesian powers. If $X$ is finite and $G\wr_XH$ has property~\BS, then $G$ has property~\BS.
 \end{lem}
 \begin{proof}
 Suppose that $G$ does not have \BS{} and let $(Y,d_Y)$ be an \CatS-space on which $G$ acts with an unbounded orbit $G.y$.
@@ -1231,7 +1240,7 @@ The orbit $G.y$ embeds diagonally and hence $\diag(G.y)$ is an unbounded subset 
 \end{proof}
 %
 %
-Observe that it is also possible to derive Lemma~\ref{Lemma:Unboundedness} directly from Lemma~\ref{Lemma:Subgroup} (2), with a more algebraic proof.
+It is also possible to derive Lemma~\ref{Lemma:Unboundedness} directly from Lemma~\ref{Lemma:Subgroup}.2, with a more algebraic proof.
 Indeed, using the notation and hypothesis of Lemma~\ref{Lemma:Unboundedness}, let $H'$ be the kernel of the action of $H$ on $X$ and $\pi\colon G\wr_XH\to H$ be the canonical projection. Then $\pi^{-1}(H')\cong \bigoplus_XG\oplus H'$ is a finite index subgroup of $G\wr_XH$ and hence has property~\BS.
 Since $G$ is a quotient of $\bigoplus_XG\oplus H'$ we conclude that it also has property~\BS.
 
@@ -1239,12 +1248,12 @@ By combining Corollary~\ref{Cor:Wreath} and Lemmas~\ref{Lemma:XFinite} and~\ref{
 %
 %
 \begin{thm}\label{Thm:Technic}
-Suppose that \CatS{} has non-trivial group actions, finite bornological Cartesian powers and seperating infinite Cartesian powers.
+Suppose that \CatS{} has non-trivial group actions, bornological finite Cartesian powers and seperating infinite Cartesian powers.
 Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which $H$ acts. Then the wreath product $G \wr_X H$ has property~\BS{} if and only if $G$ and $H$ have property~\BS{} and $X$ is finite.
 \end{thm}
 %
 %
-Similarly to Lemma~\ref{Lemma:XFinite}, the conclusion of Theorem~\ref{Thm:Technic} remains true if the hypothesis on \CatS{} are replaced  by ``\CatS{} has finite bornological Cartesian powers and property \BS{} implies property \FW''.
+Similarly to Lemma~\ref{Lemma:XFinite}, the conclusion of Theorem~\ref{Thm:Technic} remains true if the hypothesis on \CatS{} are replaced  by ``\CatS{} has bornological finite Cartesian powers and property \BS{} implies property \FW''.
 
 We now proceed to prove Proposition~\ref{Prop:UncCoun}.
 As for Lemma~\ref{Lemma:Cof}, it is also possible to prove it using the characterization of uncountable cofinality in terms of subgroups, in which case it is an easy exercise, but we will only give a proof using the characterization in terms of actions on ultrametric spaces.
@@ -1304,21 +1313,21 @@ That is, the diameter of $G\wr_YH.z$ is itself bounded by $\max\{D_0,D_1,\dots,D
 \end{proof}
 %
 %
-While the fact that trees do not have (bornological) Cartesian powers is an obstacle to our methods, we still have a weak version of Theorem~\ref{Thm:Technic} for properties~\FA{} and~\FR.
+While the fact that trees do not have Cartesian powers is an obstacle to our methods, we still have a weak version of Theorem~\ref{Thm:Technic} for properties~\FA{} and~\FR.
 Before stating it, remind that we already know, by Proposition~\ref{Prop:UncCoun}, the behavior of uncountable cofinality under wreath products.
-On the other hand, we have the following result, which also admits a direct algebraic proof.
+On the other hand, we have the following result:
 %
 %
 \begin{lem}\label{Lemma:Z}
 %Suppose that $H$ acts on $X$ with finitely many orbits.
-Then the group $G\wr_XH$ has no quotient isomorphic to $\Z$ if and only if both $G$ and $H$ have no quotient isomorphic to $\Z$.
+The group $G\wr_XH$ has no quotient isomorphic to $\Z$ if and only if both $G$ and $H$ have no quotient isomorphic to $\Z$.
 \end{lem}
 \begin{proof}
 %Remind that a group $K$ has no quotient isomorphic to $\Z$ if and only if $K^{\ab}$ has no quotient isomorphic to $\Z$.
 %The desired result then follows from $(G\wr_XH)^{\ab}\cong \bigoplus_{X/H}(G^{\ab})\times H^{\ab}$, Example~\ref{Exmp:BZ} and Corollary~\ref{Cor:Prod}.
 The desired result then follows from $(G\wr_XH)^{\ab}\cong \bigoplus_{X/H}(G^{\ab})\times H^{\ab}$ and the claim that a direct sum $\bigoplus_{y\in Y}K_y$ has a quotient isomorphic to $\Z$ if and only if at least one of the factor has a quotient isomorphic to $\Z$.
 Indeed, one direction of the claim is trivial.
-For the other direction, remind that $K$ does not project onto $\Z$ if and only if any action of $K$ by orientation preserving isomorphisms on $Z$ the $2$-regular tree has bounded orbits. But the only possibility for such an action to have bounded orbits is to be trivial.
+For the other direction, remind that $K$ does not project onto $\Z$ if and only if any action of $K$ by orientation preserving isomorphisms on $Z$, the $2$-regular tree, has bounded orbits. But the only possibility for such an action to have bounded orbits is to be trivial.
 If none of the $K_y$ projects onto $\Z$, all their actions on $Z$ are trivial and so is any action of $\bigoplus_{y\in Y}K_y$, which can therefore not project onto $\Z$.
 \end{proof}
 %
