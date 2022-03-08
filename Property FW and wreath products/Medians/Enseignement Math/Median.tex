@@ -22,12 +22,12 @@
 %\usepackage{hyperref}%
 \usepackage[colorlinks,breaklinks,bookmarks,plainpages=false,unicode=true]{hyperref}%
 \usepackage{tikz-cd}
-%\usepackage{todonotes} %ajouter des commentaires
-%\newcounter{mycomment}
-%\newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33},size=\small]{\textbf{Commentaire [\uppercase{#1}\themycomment]:}~#2}}}
-%\newcommand{\PH}[1]{\todo[color={blue!33},size=small]{\textbf{PH :} #1}}
-%\newcommand{\PHInline}[1]{\todo[color={blue!33},size=small,inline]{\textbf{PH :} #1}}
-%\newcommand{\GS}[1]{\mycomment[GS]{#1}}
+\usepackage{todonotes} %ajouter des commentaires
+\newcounter{mycomment}
+\newcommand{\mycomment}[2][]{\refstepcounter{mycomment}{\todo[color={green!33},size=\small]{\textbf{Commentaire [\uppercase{#1}\themycomment]:}~#2}}}
+\newcommand{\PH}[1]{\todo[color={blue!33},size=small]{\textbf{PH :} #1}}
+\newcommand{\PHInline}[1]{\todo[color={blue!33},size=small,inline]{\textbf{PH :} #1}}
+\newcommand{\GS}[1]{\mycomment[GS]{#1}}
 %
 %
 %
@@ -115,7 +115,7 @@
 %
 \begin{abstract}
 If \CatS{} is a subcategory of metric spaces, we say that a group G has property~\BS{} if any isometric action on an \CatS-space has bounded orbits.
-Examples of such subcategories include metric spaces, affine real Hilbert spaces, CAT(0) cube complexes, connected median graphs, trees or ultra-metric spaces. 
+Examples of such subcategories include metric spaces, affine real Hilbert spaces, CAT(0) cube complexes, connected median graphs, trees or ultra-metric spaces.
 The corresponding properties \BS{} are respectively Bergman's property, property~\FH{}  (which, for countable groups, is equivalent to the celebrated Kazhdan's property (T)), property~\FW{} (both for CAT(0) cube complexes and for connected median graphs), property~\FA{} and uncountable cofinality.
 Historically many of these properties were defined using the existence of fixed points.
 
@@ -338,7 +338,7 @@ For $u$ and $v$ two vertices of a connected\footnote{We will always assume that 
 A connected graph $\mathcal G$ is \emph{median} if for any three vertices $u$, $v$, $w$, the intersection $[u,v]\cap[v,w]\cap[u,w]$ consists of a unique vertex, denoted $m(u,v,w)$.
 A graph is \emph{median} if each of its connected components is median. For more on median graphs and spaces see~\cite{MR2405677,MR2671183,MR1705337}.
 If $X$ and $Y$ are both (connected) median graphs, then their Cartesian product is also a (connected) median graph.
-The class of median graphs was intruduced by Nebesk\'y in 1971 \cite{Neb71} and Gerasimov \cite{Ger97,MR1663779},   Roller \cite{Rol98} and Chepoï \cite{Che00} realized independently that this class coincides with the class of $1$-skeleta of CAT(0) cube complexes.
+The class of median graphs was intruduced by Nebesk\'y in 1971 \cite{Neb71} and Gerasimov \cite{MR1663779, Ger97},   Roller \cite{Rol98} and Chepoï \cite{Che00} realized independently that this class coincides with the class of $1$-skeleta of CAT(0) cube complexes.
 Trees are the simplest examples of connected median graphs, while the ensuing classical example show that any power set can be endowed with a median graph structure.
 %
 %
@@ -355,7 +355,7 @@ In particular, $\powerset{X}$ is a median graph, with $m(D,E,F)$ being the set o
 These graphs are useful due to the following fact.
 Any action of a group $G$ on a set $X$ naturally extends to an action of $G$ on $\powerset{X}$ by graph homomorphisms: $g.Y\coloneqq\setst{g.y}{y\in Y}$ for $Y\subset X$.
 Note that the action of $G$ on $\powerset{X}$ may exchange the connected components.
-In fact, the connected component of $E\in \powerset{X}$ is stabilized by $G$ if and only if $E$ is \emph{commensurated} by~$G$, that is if for every $g\in G$ the set $E\Delta gE$ is finite.
+In fact, the connected component of $E\in \powerset{X}$ is stabilized by $G$ if and only if $E$ is \emph{commensurated} by~$G$, that is if for every $g\in G$ the set $E\Delta g.E$ is finite.
 %
 %
 %
@@ -414,18 +414,18 @@ We now discuss the bounded orbits properties for actions on various classes of m
 Let $G$ be a group.
 It is said to have
 \begin{itemize}
-\item\emph{Bergman's property} if any isometric action on a metric space has bounded orbits,
+\item\emph{Bergman's property} if  any action by isometries on a metric space has bounded orbits,
 \item\emph{Property~\FB} if any action by affine isometries on a reflexive real Banach space has bounded orbits,
 \item \emph{Property~\FH} if any action by affine isometries on a real Hilbert space has bounded orbits,
 \item
 \emph{Property~\FW} if any action by graph isomorphisms on a connected median graph has bounded orbits,
 \item
-\emph{Property~\FR} if any isometric action on a real tree has bounded orbits,
+\emph{Property~\FR} if any action by isometries on a real tree has bounded orbits,
 \item
 \emph{Property~\FA} if any action by graph isomorphisms on a tree has bounded orbits,
 \item
 \emph{Uncountable cofinality} if any action by isometries on an ultrametric space has bounded orbits.
-\end{itemize}
+\end{itemize} \GS{Rendu cohérent la nomenclature, toujours : "any action by isometries"}
 \end{defn}
 %
 %
@@ -440,7 +440,7 @@ In the following, we will often do a slight abuse of notation and simply speak o
 %
 %
 %\begin{rem}
-The names \FB, \FH, \FW,  \FR{} and \FA{} come from the fact that these properties admit a description in terms of (and were fist studied in the context of) the existence of a Fixed point for actions on reflexive Banach spaces, on Hilbert spaces, on spaces with Walls (or equivalently on CAT(0) cube complexes), on Real trees and on trees (\emph{Arbres} in french).
+The names \FB, \FH, \FW,  \FR{} and \FA{} come from the fact that these properties admit a description in terms of (and were fist studied in the context of) the existence of a Fixed point for actions on reflexive Banach spaces, on Hilbert spaces, on spaces with Walls (or equivalently on CAT(0) cube complexes, see \cite{MR2197811,MR2059193}) \GS{Ajout références liens entre cube et wall spaces}, on Real trees and on trees (\emph{Arbres} in french).
 However this is equivalent with the bounded orbit property, see Proposition~\ref{Proposition:Mediane} and the discussion below~it.
 %\end{rem}
 
@@ -585,14 +585,14 @@ A pair $(G,H)$ of a group and a subgroup has \emph{relative property} \BS{} if f
 \end{defn}
 %
 %
-Observe that a group $G$ has property~\BS{} if and only any $G$ action on an \CatS-space has at least one bounded orbit.
+Observe that a group $G$ has property~\BS{} if and only if any $G$ action on an \CatS-space has at least one bounded orbit.
 %One implication is trivial and the other is a direct application of the triangle inequality.
 
 All the properties of Definition~\ref{Def:FHFA} are of the form \BS.
 %Examples of other interesting subcategories include (some specific subclass of) Banach spaces as well as real or complex hyperbolic spaces, see~\cite[Definition 6.22]{MR1023471}.
 Another example of property of the form \BS{} can be found in~\cite[Definition 6.22]{MR1023471}: a group has property (FHyp$_{\field{C}}$) if any action on a real or complex hyperbolic space of finite dimension has bounded orbits.
 This property is implied by property~\FH, but does not imply property~\FA{}~\cite[Corollary 6.23 and Example 6.24]{MR1023471}.
-One can also want to look at the category of all Banach spaces (the corresponding property~BB hence stands between the Bergman's property and property~\FB), or the category of $L^p$-spaces for $p$ fixed~\cite{MR2978328} (if $p\notin\{1,\infty\}$, then B$L^p$ is implied by \FB).
+One can also want to look at the category of all Banach spaces (the corresponding property~BB hence stands between the Bergman's property and property~\FB)\GS{BB Etudiée quelque part ? red?}, or the category of $L^p$-spaces for $p$ fixed~\cite{MR2978328} (if $p\notin\{1,\infty\}$, then B$L^p$ is implied by \FB).
 
 Another interesting example of a property of the form \BS{} is the fact to have no quotient isomorphic to $\Z$, see Example~\ref{Exmp:BZ}.
 The main interest for us of this example is that property~\FA{} is the conjonction of three properties, two of them (uncountable cofinality and having no quotient isomorphic to $\Z$) still being of the form \BS.
@@ -651,7 +651,7 @@ For the other direction, let $X$ be a metric space. Let $G(X)$ denotes the graph
 \end{proof}
 %
 %
-Observe that an alternative proof of the above Lemma can be easily deduced from the following characterization of Bergman's property due to Cornulier~\cite{MR2240370}: a group $G$ has Bergman's property if and only if it has uncountable cofinality and for every generating set $T$ of $G$ the Calyey graph $\Cayley(G;T)$ is bounded.
+Observe that an alternative proof of the above Lemma can be easily deduced from the following characterization of Bergman's property due to Cornulier~\cite{MR2240370}: a group $G$ has Bergman's property if and only if it has uncountable cofinality and for every generating set $T$ of $G$, the Calyey graph $\Cayley(G;T)$ is bounded.
 Details are let to the reader.
 
 While we will be able to obtain some results for a general subcategory of \PMet, we will sometimes need to restrict ourselves to subcategories  satisfying good properties. In particular, we will use three axioms: one on the existence of non-trivial $G$-action, one on the existence of finite Cartesian powers and one on infinite Cartesian powers.
@@ -681,8 +681,8 @@ d_p\colon \prod_{i\in I}X_i\times \prod_{i\in I}X_i&\to \R\\
 and
 \begin{align*}
 d_\infty\colon \prod_{i\in I}X_i\times \prod_{i\in I}X_i&\to \R\\
-\bigl((x_i)_{i\in I},(y_i)_{i\in I}))&\mapsto\sup_{i\in I}d_i(f(i),g(i)),
-\end{align*}
+\bigl(f,g)&\mapsto\sup_{i\in I}d_i(f(i),g(i)),
+\end{align*}\GS{rendu cohérent, tu préfères $(f,g)$ ou $((x_i),(y_i))$ ?}
 with the convention that a sum with uncountably non-zero summands is infinite.
 \end{defn}
 %
@@ -718,15 +718,23 @@ As the above examples illustrate, there can be multiple non-isomorphic spaces pl
 
 The situation for infinite products is more complicated. Indeed, if $I$ is infinite then the map $d_p$ is not necessary a distance on $\prod_{i\in I}X_i$ as it can take infinite values.
 The solution consists of looking at the subset of $\prod_{i\in I}X_i$ on which $d_p$ takes finite values.
-Formally we first need to chose for each $i\in I$ a base-point $x_i$ in $X_i$, which gives us an element $f_0\in \prod_{i\in I}X_i$ defined by $f_0(i)=x_i$. We can then define
-\begin{align*}
-	\sideset{}{}\bigoplus_{i \in I}X_i&\coloneqq\setst{f\in I}{f(i)=f_0(i)\textnormal{ for all but finitely many }i}\qquad\textnormal{and}\\
-	\sideset{}{^p}\bigoplus_{i \in I}X_i&\coloneqq\setst{f\in I}{\sum_i d_i\bigl(f(i),f_0(i)\bigr)^p<\infty}.
-\end{align*}
+Formally we first need to chose a base-point $x_i$ in $X_i$ for each $i\in I$, which gives us an element $f_0\in \prod_{i\in I}X_i$ defined by $f_0(i)=x_i$. We can then define
+\begin{equation*}
+\sideset{}{}\bigoplus_{i \in I}X_i \coloneqq\setst{f\in I}{f(i)=f_0(i)\textnormal{ for all but finitely many }i}
+\end{equation*}
+and\GS{Changé mise en page}
+\begin{equation*}
+\sideset{}{^p}\bigoplus_{i \in I}X_i \coloneqq\setst{f\in I}{\sum_i d_i\bigl(f(i),f_0(i)\bigr)<\infty}.
+\end{equation*}
+\GS{Pas très clair pour moi pourquoi $p$ apparait dans la définition?}
+%\begin{align*}
+%	\sideset{}{}\bigoplus_{i \in I}X_i&\coloneqq\setst{f\in I}{f(i)=f_0(i)\textnormal{ for all but finitely many }i}\qquad\textnormal{and}\\
+%	\sideset{}{^p}\bigoplus_{i \in I}X_i&\coloneqq\setst{f\in I}{\sum_i d_i\bigl(f(i),f_0(i)\bigr)<\infty}.
+%\end{align*}
 A priori, the above definitions depend on the choice of the $x_i$. However, since our results will not depend on a particular choice of base-points, we will omit to specify it.
 Moreover, if $\Aut_\CatS(X)$ acts transitively on $X$, then $\bigoplus_{i \in I}^pX$ will not depend on the choice of $x\in X$.
 
-It is straightforward to verify that $\bigoplus_{i\in I} X_i\subseteq\bigoplus_{i\in I}^p X_i\subseteq\prod_{i\in I}X_i$ and that the first inclusion is an equality if the $X_i$ are uniformly discrete with an uniform lower bounds on their packing radius.
+It is straightforward to verify that $\bigoplus_{i\in I} X_i\subseteq\bigoplus_{i\in I}^p X_i\subseteq\prod_{i\in I}X_i$ and that the first inclusion is an equality if the $X_i$ are uniformly discrete with an uniform lower bound on their packing radius.
 Moreover the restriction of the map $d_p$ to $\bigoplus_{i\in I}^p X_i$ is a distance.
 While $(\bigoplus_{i\in I} X_i, d_p)$ is a metric space, it is in general not complete even when the $X_i$ are complete, which is why we needed to define $\bigoplus_{i\in I}^p X_i$; this will be important for Banach and Hilbert spaces.
 
@@ -744,7 +752,7 @@ As sets we have the inclusions $\bigoplus_I X\subseteq \bigoplus_I^\CatS X\subse
 \item
 The canonical image of $\Aut_{\CatS}(X)\wr_I \Sym(I)$ in $\Bij(\prod_I X)$ lies in $\Aut_{\CatS}(\bigoplus_I^\CatS X)$,
 \item
-For any $y$ with $d(y,x_0)>0$, the following set has infinite diameter 
+For any $y$ in $X$ with $d(y,x_0)>0$, the following set has infinite diameter
 %$\setst{f\in \bigoplus_I X}{f(x)=x_0 \textnormal{ for all but finitely many } x \textnormal {for which } f(x)=y}$
 \[
 	\Bigl\{f\in \bigoplus_I X\,\Big|\,f(i)=y \textnormal{ for finitely many } i \textnormal{ and otherwise }f(i)=x_0\Bigr\}.
@@ -979,7 +987,7 @@ Let $G$ be a group and $A$ an $B$ be two subgroups such that $G=AB$.
 If both $(G,A)$ and $(G,B)$ have relative property~\BS, then $G$ has property~\BS.
 \end{lem}
 \begin{proof}
-Let $X$ be an \CatS-space on which $G$ acts %continuously 
+Let $X$ be an \CatS-space on which $G$ acts %continuously
 and let $x$ be an element of $X$.
 %Then the restrictions of the $G$ action to $A$ and to $B$ are continuous.\PH{J'ai ajouté cette phrase}
 Let $D_1$ be the diameter of $A.x$ and $D_2$ the diameter of $B.x$. By assumption, they both are finite.
@@ -1059,7 +1067,7 @@ For property~\FW{} and \FA, see~\cite[Proposition 5.B.3]{Cornulier2013} and~\cit
 We now state a result on infinite direct sums.
 %
 %
-\begin{lem}\label{Lemma:Cof}
+\begin{lem}\label{Lemma:Cof} \GS{Ajouter $H$ un groupe quelconque agissant sur $X$ ?}
 %Suppose that \BS{} implies having uncountable cofinality.
 Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups. Then
 \begin{enumerate}
@@ -1069,18 +1077,18 @@ Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups. Then
 \end{lem}
 %
 %
-It is of course possible to prove Lemma~\ref{Lemma:Cof} using the characterization of uncountable cofinality in terms of subgroups, in which case the proof is a short exercise let to the reader. However, we find enlightening to prove it using the characterization in terms of actions on ultrametric spaces.
+It is of course possible to prove Lemma~\ref{Lemma:Cof} using the characterization of uncountable cofinality in terms of subgroups, in which case the proof is a short exercise left to the reader. However, we find enlightening to prove it using the characterization in terms of actions on ultrametric spaces.
 %
 %
 \begin{proof}[Proof of Lemma~\ref{Lemma:Cof}.]
 One direction of the first assertion is simply Corollary~\ref{Cor:Prod} and holds for any property of the form \BS.
 For the other direction, for any \CatS, if $\bigoplus_{x\in X}G_x$ has property~\BS{} then all its quotients, and hence all the $G_x$, have property~\BS.
 Hence, we have to prove that an infinite direct sum of non-trivial groups does not have uncountable cofinality.
-If $X$ is infinite, there exists a countable subset $Y \subset X$. Let $Z \coloneqq X\setminus Y$, thus we have $X = Y \sqcup Z$. We can decompose the direct sum as $\bigoplus_{x\in X}G_x = (\bigoplus_{x\in Y}G_x) \times (\bigoplus{x\in Z}G_x)$ and then, by Corollary~\ref{Cor:Prod}, if $\bigoplus_{x\in Y}G_x$ does not have uncountable cofinality, then neither does $\bigoplus_{x\in X}G_x$.
+If $X$ is infinite, there exists a countable subset $Y \subset X$. Let $Z \coloneqq X\setminus Y$, thus we have $X = Y \sqcup Z$. We can decompose the direct sum as $\bigoplus_{x\in X}G_x = (\bigoplus_{x\in Y}G_x) \times (\bigoplus_{x\in Z}G_x)$ and then, by Corollary~\ref{Cor:Prod}, if $\bigoplus_{x\in Y}G_x$ does not have uncountable cofinality, then neither does $\bigoplus_{x\in X}G_x$.
 So let us fix an enumeration of $Y$ and let $K\coloneqq \bigoplus_{i\geq 1}G_i$ and for each $i$, choose $g_i\neq 1$ in $G_i$.
 Let $d_{\max}(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$. %be the $G$-invariant ultrametric of Example~\ref{Exmpl:Ultra}.
 This is a $K$-invariant ultra-metric for the action by left multiplication of $G$ on itself.
-Then for every integer $n$, the orbit $K.1_K$ contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $1_K$ for $d_{\max}$ if the $g_i$ are not equal to $1$.
+Then for every integer $n$, the orbit $K.1_K$ contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $1_K$ for $d_{\max}$ if the $g_i$ are not equal to $1$.\GS{Expliciter qui est $+1_K$}
 
 The second assertion is a simple variation on the first.
 Indeed, we have
@@ -1102,7 +1110,7 @@ We directly obtain
 %
 \begin{cor}\label{Cor:Cof}
 Suppose that \BS{} implies having uncountable cofinality.
-Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups. Then
+Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups. \GS{Idem remarque ci-dessus pour $H$}Then
 \begin{enumerate}
 \item $\bigoplus_{x\in X}G_x$ has property~\BS{} if and only if all the $G_x$ have property~\BS{} and $X$ is finite,
 \item If $G\wr_XH$ has property~\BS, then $H$ acts on $X$ with finitely many orbits.
@@ -1176,7 +1184,7 @@ is in the $G\wr_XH$-orbit of $f_0$. By axiome (A3) this orbit is unbounded and $
 %For example, for Hilbert spaces one can take $\bigoplus_X\ell^2(G)$ with $\bigoplus_XG$ acting coordinatewise and $H$ by permutations.
 %On the other hand, both the forest structure on $\powerset{\bigsqcup_XG}$ and the ultrametric structure on $\bigoplus_XG$ are in general not invariant under the natural action of $H$ by permutations.
 
-As a direct corollary, we obtain that if property \BS{} implies property \BS' for some \CatS' with non-trivial group actions and seperating infinite Cartesian powers (example: \BS'=\FW), then the conclusion of Lemma~\ref{Lemma:XFinite} holds even if \CatS{} might not satisfy it's premises.
+As a direct corollary, we obtain that if property \BS{} implies property \BS' for some \CatS' with non-trivial group actions and seperating infinite Cartesian powers (example: \BS'=\FW), then the conclusion of Lemma~\ref{Lemma:XFinite} holds even if \CatS{} might not satisfy its premises.
 At contrario, it follows from Theorem~\ref{Thm:FACK} and Proposition~\ref{Prop:UncCoun} that Lemma~\ref{Lemma:XFinite} do not holds for property~\FR, property \FA{} or having uncountable cofinality.
 %
 %
