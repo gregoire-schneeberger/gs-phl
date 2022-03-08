@@ -425,7 +425,8 @@ It is said to have
 \emph{Property~\FA} if any action by graph isomorphisms on a tree has bounded orbits,
 \item
 \emph{Uncountable cofinality} if any action by isometries on an ultrametric space has bounded orbits.
-\end{itemize} \GS{Rendu cohérent la nomenclature, toujours : "any action by isometries"}
+\end{itemize}
+%\GS{Rendu cohérent la nomenclature, toujours : "any action by isometries"}
 \end{defn}
 %
 %
@@ -440,7 +441,9 @@ In the following, we will often do a slight abuse of notation and simply speak o
 %
 %
 %\begin{rem}
-The names \FB, \FH, \FW,  \FR{} and \FA{} come from the fact that these properties admit a description in terms of (and were fist studied in the context of) the existence of a Fixed point for actions on reflexive Banach spaces, on Hilbert spaces, on spaces with Walls (or equivalently on CAT(0) cube complexes, see \cite{MR2197811,MR2059193}) \GS{Ajout références liens entre cube et wall spaces}, on Real trees and on trees (\emph{Arbres} in french).
+The names \FB, \FH, \FW,  \FR{} and \FA{} come from the fact that these properties admit a description in terms of (and were fist studied in the context of) the existence of a Fixed point for actions on reflexive Banach spaces, on Hilbert spaces, on spaces with Walls (or equivalently on CAT(0) cube complexes, see \cite{MR2197811,MR2059193}),
+%\GS{Ajout références liens entre cube et wall spaces}
+ on Real trees and on trees (\emph{Arbres} in french).
 However this is equivalent with the bounded orbit property, see Proposition~\ref{Proposition:Mediane} and the discussion below~it.
 %\end{rem}
 
@@ -682,7 +685,8 @@ and
 \begin{align*}
 d_\infty\colon \prod_{i\in I}X_i\times \prod_{i\in I}X_i&\to \R\\
 \bigl(f,g)&\mapsto\sup_{i\in I}d_i(f(i),g(i)),
-\end{align*}\GS{rendu cohérent, tu préfères $(f,g)$ ou $((x_i),(y_i))$ ?}
+\end{align*}
+%\GS{rendu cohérent, tu préfères $(f,g)$ ou $((x_i),(y_i))$ ?}
 with the convention that a sum with uncountably non-zero summands is infinite.
 \end{defn}
 %
@@ -722,11 +726,11 @@ Formally we first need to chose a base-point $x_i$ in $X_i$ for each $i\in I$, w
 \begin{equation*}
 \sideset{}{}\bigoplus_{i \in I}X_i \coloneqq\setst{f\in I}{f(i)=f_0(i)\textnormal{ for all but finitely many }i}
 \end{equation*}
-and\GS{Changé mise en page}
+and%\GS{Changé mise en page}
 \begin{equation*}
-\sideset{}{^p}\bigoplus_{i \in I}X_i \coloneqq\setst{f\in I}{\sum_i d_i\bigl(f(i),f_0(i)\bigr)<\infty}.
+\sideset{}{^p}\bigoplus_{i \in I}X_i \coloneqq\setst{f\in I}{\sum_i d_i\bigl(f(i),f_0(i)\bigr)^p<\infty}.
 \end{equation*}
-\GS{Pas très clair pour moi pourquoi $p$ apparait dans la définition?}
+%\GS{Pas très clair pour moi pourquoi $p$ apparait dans la définition?}
 %\begin{align*}
 %	\sideset{}{}\bigoplus_{i \in I}X_i&\coloneqq\setst{f\in I}{f(i)=f_0(i)\textnormal{ for all but finitely many }i}\qquad\textnormal{and}\\
 %	\sideset{}{^p}\bigoplus_{i \in I}X_i&\coloneqq\setst{f\in I}{\sum_i d_i\bigl(f(i),f_0(i)\bigr)<\infty}.
@@ -1067,9 +1071,9 @@ For property~\FW{} and \FA, see~\cite[Proposition 5.B.3]{Cornulier2013} and~\cit
 We now state a result on infinite direct sums.
 %
 %
-\begin{lem}\label{Lemma:Cof} \GS{Ajouter $H$ un groupe quelconque agissant sur $X$ ?}
+\begin{lem}\label{Lemma:Cof}%\GS{Ajouter $H$ un groupe quelconque agissant sur $X$ ?}
 %Suppose that \BS{} implies having uncountable cofinality.
-Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups. Then
+Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups and let $H$ be a group acting on $X$. Then
 \begin{enumerate}
 \item $\bigoplus_{x\in X}G_x$ has uncountable cofinality if and only if all the $G_x$ have uncountable cofinality and $X$ is finite,
 \item If $G\wr_XH$ has uncountable cofinality, then $H$ acts on $X$ with finitely many orbits.
@@ -1088,7 +1092,9 @@ If $X$ is infinite, there exists a countable subset $Y \subset X$. Let $Z \colon
 So let us fix an enumeration of $Y$ and let $K\coloneqq \bigoplus_{i\geq 1}G_i$ and for each $i$, choose $g_i\neq 1$ in $G_i$.
 Let $d_{\max}(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$. %be the $G$-invariant ultrametric of Example~\ref{Exmpl:Ultra}.
 This is a $K$-invariant ultra-metric for the action by left multiplication of $G$ on itself.
-Then for every integer $n$, the orbit $K.1_K$ contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $1_K$ for $d_{\max}$ if the $g_i$ are not equal to $1$.\GS{Expliciter qui est $+1_K$}
+%Let $1_K$ be the unity element of $K$.\PH{Ajouté l'explicitation.}
+Then for every integer $n$, the orbit $K.\{1,1,\dots\}$\PH{Plutôt que de déf $1_K$ j'ai opté pour la notation explicite} contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $\{1,1,\dots\}$ for $d_{\max}$ if the $g_i$ are not equal to $1$.
+%\GS{Expliciter qui est $+1_K$}
 
 The second assertion is a simple variation on the first.
 Indeed, we have
@@ -1110,7 +1116,7 @@ We directly obtain
 %
 \begin{cor}\label{Cor:Cof}
 Suppose that \BS{} implies having uncountable cofinality.
-Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups. \GS{Idem remarque ci-dessus pour $H$}Then
+Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups and let $H$ be a group acting on $X$. % \GS{Idem remarque ci-dessus pour $H$}Then
 \begin{enumerate}
 \item $\bigoplus_{x\in X}G_x$ has property~\BS{} if and only if all the $G_x$ have property~\BS{} and $X$ is finite,
 \item If $G\wr_XH$ has property~\BS, then $H$ acts on $X$ with finitely many orbits.
