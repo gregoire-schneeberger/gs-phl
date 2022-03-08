@@ -722,11 +722,11 @@ Formally we first need to chose a base-point $x_i$ in $X_i$ for each $i\in I$, w
 \begin{equation*}
 \sideset{}{}\bigoplus_{i \in I}X_i \coloneqq\setst{f\in I}{f(i)=f_0(i)\textnormal{ for all but finitely many }i} 
 \end{equation*}
-and\GS{Changer mise en page}
+and\GS{Changé mise en page}
 \begin{equation*}
 \sideset{}{^p}\bigoplus_{i \in I}X_i \coloneqq\setst{f\in I}{\sum_i d_i\bigl(f(i),f_0(i)\bigr)<\infty}.
 \end{equation*}
-\GS{Pas très clair pour moi pourquoi $p$ ?}
+\GS{Pas très clair pour moi pourquoi $p$ apparait dans la définition?}
 %\begin{align*}
 %	\sideset{}{}\bigoplus_{i \in I}X_i&\coloneqq\setst{f\in I}{f(i)=f_0(i)\textnormal{ for all but finitely many }i}\qquad\textnormal{and}\\
 %	\sideset{}{^p}\bigoplus_{i \in I}X_i&\coloneqq\setst{f\in I}{\sum_i d_i\bigl(f(i),f_0(i)\bigr)<\infty}.
@@ -1067,7 +1067,7 @@ For property~\FW{} and \FA, see~\cite[Proposition 5.B.3]{Cornulier2013} and~\cit
 We now state a result on infinite direct sums.
 %
 %
-\begin{lem}\label{Lemma:Cof}
+\begin{lem}\label{Lemma:Cof} \GS{Ajouter $H$ un groupe quelconque agissant sur $X$ ?}
 %Suppose that \BS{} implies having uncountable cofinality.
 Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups. Then
 \begin{enumerate}
@@ -1077,18 +1077,18 @@ Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups. Then
 \end{lem}
 %
 %
-It is of course possible to prove Lemma~\ref{Lemma:Cof} using the characterization of uncountable cofinality in terms of subgroups, in which case the proof is a short exercise let to the reader. However, we find enlightening to prove it using the characterization in terms of actions on ultrametric spaces.
+It is of course possible to prove Lemma~\ref{Lemma:Cof} using the characterization of uncountable cofinality in terms of subgroups, in which case the proof is a short exercise left to the reader. However, we find enlightening to prove it using the characterization in terms of actions on ultrametric spaces.
 %
 %
 \begin{proof}[Proof of Lemma~\ref{Lemma:Cof}.]
 One direction of the first assertion is simply Corollary~\ref{Cor:Prod} and holds for any property of the form \BS.
 For the other direction, for any \CatS, if $\bigoplus_{x\in X}G_x$ has property~\BS{} then all its quotients, and hence all the $G_x$, have property~\BS.
 Hence, we have to prove that an infinite direct sum of non-trivial groups does not have uncountable cofinality.
-If $X$ is infinite, there exists a countable subset $Y \subset X$. Let $Z \coloneqq X\setminus Y$, thus we have $X = Y \sqcup Z$. We can decompose the direct sum as $\bigoplus_{x\in X}G_x = (\bigoplus_{x\in Y}G_x) \times (\bigoplus{x\in Z}G_x)$ and then, by Corollary~\ref{Cor:Prod}, if $\bigoplus_{x\in Y}G_x$ does not have uncountable cofinality, then neither does $\bigoplus_{x\in X}G_x$.
+If $X$ is infinite, there exists a countable subset $Y \subset X$. Let $Z \coloneqq X\setminus Y$, thus we have $X = Y \sqcup Z$. We can decompose the direct sum as $\bigoplus_{x\in X}G_x = (\bigoplus_{x\in Y}G_x) \times (\bigoplus_{x\in Z}G_x)$ and then, by Corollary~\ref{Cor:Prod}, if $\bigoplus_{x\in Y}G_x$ does not have uncountable cofinality, then neither does $\bigoplus_{x\in X}G_x$.
 So let us fix an enumeration of $Y$ and let $K\coloneqq \bigoplus_{i\geq 1}G_i$ and for each $i$, choose $g_i\neq 1$ in $G_i$.
 Let $d_{\max}(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$. %be the $G$-invariant ultrametric of Example~\ref{Exmpl:Ultra}.
 This is a $K$-invariant ultra-metric for the action by left multiplication of $G$ on itself.
-Then for every integer $n$, the orbit $K.1_K$ contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $1_K$ for $d_{\max}$ if the $g_i$ are not equal to $1$.
+Then for every integer $n$, the orbit $K.1_K$ contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $1_K$ for $d_{\max}$ if the $g_i$ are not equal to $1$.\GS{Expliciter qui est $+1_K$}
 
 The second assertion is a simple variation on the first.
 Indeed, we have
@@ -1110,7 +1110,7 @@ We directly obtain
 %
 \begin{cor}\label{Cor:Cof}
 Suppose that \BS{} implies having uncountable cofinality.
-Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups. Then
+Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups. \GS{Idem remarque ci-dessus pour $H$}Then
 \begin{enumerate}
 \item $\bigoplus_{x\in X}G_x$ has property~\BS{} if and only if all the $G_x$ have property~\BS{} and $X$ is finite,
 \item If $G\wr_XH$ has property~\BS, then $H$ acts on $X$ with finitely many orbits.
@@ -1184,7 +1184,7 @@ is in the $G\wr_XH$-orbit of $f_0$. By axiome (A3) this orbit is unbounded and $
 %For example, for Hilbert spaces one can take $\bigoplus_X\ell^2(G)$ with $\bigoplus_XG$ acting coordinatewise and $H$ by permutations.
 %On the other hand, both the forest structure on $\powerset{\bigsqcup_XG}$ and the ultrametric structure on $\bigoplus_XG$ are in general not invariant under the natural action of $H$ by permutations.
 
-As a direct corollary, we obtain that if property \BS{} implies property \BS' for some \CatS' with non-trivial group actions and seperating infinite Cartesian powers (example: \BS'=\FW), then the conclusion of Lemma~\ref{Lemma:XFinite} holds even if \CatS{} might not satisfy it's premises.
+As a direct corollary, we obtain that if property \BS{} implies property \BS' for some \CatS' with non-trivial group actions and seperating infinite Cartesian powers (example: \BS'=\FW), then the conclusion of Lemma~\ref{Lemma:XFinite} holds even if \CatS{} might not satisfy its premises.
 At contrario, it follows from Theorem~\ref{Thm:FACK} and Proposition~\ref{Prop:UncCoun} that Lemma~\ref{Lemma:XFinite} do not holds for property~\FR, property \FA{} or having uncountable cofinality.
 %
 %
