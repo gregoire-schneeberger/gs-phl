@@ -34,6 +34,11 @@ Indira Chatterji, Cornelia Dru\c{t}u, and Fr\'{e}d\'{e}ric Haglund.
 \newblock Kazhdan and {H}aagerup properties from the median viewpoint.
 \newblock {\em Adv. Math.}, 225(2):882--921, 2010.
 
+\bibitem{MR2197811}
+Indira Chatterji and Graham Niblo.
+\newblock From wall spaces to {$\rm CAT(0)$} cube complexes.
+\newblock {\em Internat. J. Algebra Comput.}, 15(5-6):875--885, 2005.
+
 \bibitem{Che00}
 Victor Chepoi.
 \newblock Graphs of some {${\rm CAT}(0)$} complexes.
@@ -78,6 +83,13 @@ Anthony Genevois.
 \newblock {L}amplighter groups, median spaces, and {H}ilbertian geometry.
 \newblock {\em arXiv e-prints}, page arXiv:1705.00834, January 2021.
 
+\bibitem{Ger97}
+V.~Gerasimov.
+\newblock Semi-splittings of groups and actions on cubings.
+\newblock In {\em Algebra, geometry, analysis and mathematical physics
+  ({R}ussian) ({N}ovosibirsk, 1996)}, pages 91--109, 190. Izdat. Ross. Akad.
+  Nauk Sib. Otd. Inst. Mat., Novosibirsk, 1997.
+
 \bibitem{MR1663779}
 V.~Gerasimov.
 \newblock Fixed-point-free actions on cubings [translation of {\it {a}lgebra,
@@ -85,13 +97,6 @@ V.~Gerasimov.
   1996)}, 91--109, 190, {I}zdat. {R}oss. {A}kad. {N}auk {S}ibirsk. {O}tdel.
   {I}nst. {M}at., {N}ovosibirsk, 1997; {MR}1624115 (99c:20049)].
 \newblock {\em Siberian Adv. Math.}, 8(3):36--58, 1998.
-
-\bibitem{Ger97}
-V.~N. Gerasimov.
-\newblock Semi-splittings of groups and actions on cubings.
-\newblock In {\em Algebra, geometry, analysis and mathematical physics
-  ({R}ussian) ({N}ovosibirsk, 1996)}, pages 91--109, 190. Izdat. Ross. Akad.
-  Nauk Sib. Otd. Inst. Mat., Novosibirsk, 1997.
 
 \bibitem{MR1705337}
 Sandi Klav\v{z}ar and Henry~Martyn Mulder.
@@ -125,6 +130,11 @@ Lionel Nguyen Van~Th\'{e} and Vladimir~G. Pestov.
 \newblock Fixed point-free isometric actions of topological groups on {B}anach
   spaces.
 \newblock {\em Bull. Belg. Math. Soc. Simon Stevin}, 17(1):29--51, 2010.
+
+\bibitem{MR2059193}
+Bogdan Nica.
+\newblock Cubulating spaces with walls.
+\newblock {\em Algebr. Geom. Topol.}, 4:297--309, 2004.
 
 \bibitem{MR3382026}
 Piotr~W. Nowak.
