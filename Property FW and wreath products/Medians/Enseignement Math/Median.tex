@@ -987,7 +987,7 @@ If $H$ acts on some \CatS-space $X$ with an unbounded orbit, then the surjection
 %
 %
 \begin{lem}\label{Lemma:InterProd}
-Let $G$ be a group and $A$ an $B$ be two subgroups such that $G=AB$.
+Let $G$ be a group and $A$ an $B$ be two subgroups such that $G=AB$.\GS{cf mail pour $G=AB$}
 If both $(G,A)$ and $(G,B)$ have relative property~\BS, then $G$ has property~\BS.
 \end{lem}
 \begin{proof}
@@ -1071,9 +1071,9 @@ For property~\FW{} and \FA, see~\cite[Proposition 5.B.3]{Cornulier2013} and~\cit
 We now state a result on infinite direct sums.
 %
 %
-\begin{lem}\label{Lemma:Cof}%\GS{Ajouter $H$ un groupe quelconque agissant sur $X$ ?}
+\begin{lem}\label{Lemma:Cof}
 %Suppose that \BS{} implies having uncountable cofinality.
-Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups and let $H$ be a group acting on $X$.\PH{Ajouté H...}
+Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups and let $H$ be a group acting on $X$.
  Then
 \begin{enumerate}
 \item $\bigoplus_{x\in X}G_x$ has uncountable cofinality if and only if all the $G_x$ have uncountable cofinality and $X$ is finite,
@@ -1094,7 +1094,7 @@ So let us fix an enumeration of $Y$ and let $K\coloneqq \bigoplus_{i\geq 1}G_i$ 
 Let $d_{\max}(f,g)\coloneqq\max\setst{i}{f(i)\neq g(i)}$. %be the $G$-invariant ultrametric of Example~\ref{Exmpl:Ultra}.
 This is a $K$-invariant ultra-metric for the action by left multiplication of $G$ on itself.
 %Let $1_K$ be the unity element of $K$.\PH{Ajouté l'explicitation.}
-Then for every integer $n$, the orbit $K.\{1,1,\dots\}$\PH{Plutôt que de déf $1_K$ j'ai opté pour la notation explicite} contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $\{1,1,\dots\}$ for $d_{\max}$ if the $g_i$ are not equal to $1$.
+Then for every integer $n$, the orbit $K.\{1,1,\dots\}$ contains $\{g_1,\dots,g_n,1,\dots\}$ which is at distance $n$ of $\{1,1,\dots\}$ for $d_{\max}$ if the $g_i$ are not equal to $1$.
 %\GS{Expliciter qui est $+1_K$}
 
 The second assertion is a simple variation on the first.
@@ -1117,7 +1117,7 @@ We directly obtain
 %
 \begin{cor}\label{Cor:Cof}
 Suppose that \BS{} implies having uncountable cofinality.
-Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups and let $H$ be a group acting on $X$. \PH{Ajouté H...}% \GS{Idem remarque ci-dessus pour $H$}Then
+Let $G$ and $(G_x)_{x\in X}$ be non-trivial groups and let $H$ be a group acting on $X$. %\PH{Ajouté H...}% \GS{Idem remarque ci-dessus pour $H$}Then
 \begin{enumerate}
 \item $\bigoplus_{x\in X}G_x$ has property~\BS{} if and only if all the $G_x$ have property~\BS{} and $X$ is finite,
 \item If $G\wr_XH$ has property~\BS, then $H$ acts on $X$ with finitely many orbits.
@@ -1289,7 +1289,7 @@ We will now prove that if $G \wr_X H$ has uncountable cofinality so does $G$.
 Let us suppose that $G$ has countable cofinality. By Lemma~\ref{Lemma:CofSub}, there exists an ultrametric $d$ on $G$ such that the action of $G$ on itself by left multiplication has an unbounded orbit.
 But then we have the primitive action of the wreath product $G\wr_XH$ on $G^X\cong\prod_XG$, which preserves $\bigoplus_XG$.
 It is easy to check that the map $d_\infty\colon\bigoplus_XG\times\bigoplus_XG\to\R$ defined by $d_\infty(\psi_1,\psi_2)\coloneqq\max\setst{d\bigl(\psi_1(x),\psi_2(x)\bigr)}{x\in X}$ is a $G\wr_XH$-invariant ultrametric.
-Finally, let $h\in G$ be an element of unbounded $G$-orbit for $d$ and let $x_0$ be any element of $X$.
+Finally, let $h\in G$\GS{Je ne suis jamais très fan d'avoir un élément $h$ qui est dans $G$ alors qu'il y a un groupe $H$, peut être l'appeler $g_0$ ?} be an element of unbounded $G$-orbit for $d$ and let $x_0$ be any element of $X$.
 For $g$ in $G$ and $x$ in $X$, we define the following analogs of Kronecker's delta functions
 \begin{equation*}
 \delta_x^g (y) \coloneqq
@@ -1305,7 +1305,7 @@ Suppose now that both $G$ and $H$ have uncountable cofinality and that $H$ acts 
 Let $(Y,d)$ be an ultrametric space on which $G\wr_XH$ acts.
 Then $H$ and all the $G_x$ act on $Y$ with bounded orbits.
 %Let $\mathcal O_1,\dots,\mathcal O_n$ be the $H$-orbits on $X$ and for each $1\leq i\leq n$ choose an element $x_i$ in $\mathcal O_i$.
-Let $H.x_1,\dots, H.x_n$ be the $H$ orbits on~$X$ and let $y$ be any element of $Y$.
+Let $H.x_1,\dots, H.x_n$ be the $H$-orbits on~$X$ and let $y$ be any element of $Y$.
 Then $H.y$ has finite diameter $D_0$ while $G_{x_i}.y$ has finite diameter $D_i$.
 For any $x\in X$, there exists $1\leq i\leq n$ and $h\in H$ such that $x=h.x_i$.
 We have
@@ -1317,8 +1317,8 @@ We have
 which implies that the diameter of $G_{x_i}h^{-1}.y$ is bounded by $\max\{D_0,D_i\}$.
 But $G_{x_i}h^{-1}.y$ has the same diameter as $hG_{x_i}h^{-1}.y=G_{h.x_i}.y=G_x.y$.
 
-On the other hand, the diameter of $\bigoplus_XG.y$ is bounded by the supremum of the diameters of the $G_{x}.y$, and hence bounded by $\max\{D_0,D_1,\dots,D_n\}$.
-Finally, for $(\varphi,h)$ in $G\wr_YH$ we have
+On the other hand, the diameter of $\bigoplus_XG.y$ pour ne pas  is bounded by the supremum of the diameters of the $G_{x}.y$, and hence bounded by $\max\{D_0,D_1,\dots,D_n\}$.
+Finally, for $(\varphi,h)$ in $G\wr_YH$ \GS{$G\wr_XH$ plutôt ?}we have
 \begin{align*}
 	d\bigl(y,(\varphi,h).y\bigr)&\leq\max\{d\bigl(y,(\varphi,1).y\bigr),d\bigl((\varphi,1).y,(\varphi,h).y\bigr)\}\\
 	&=\max\{d\bigl(y,(\varphi,1).y\bigr),d\bigl(y,(1,h).y\bigr)\}\\
