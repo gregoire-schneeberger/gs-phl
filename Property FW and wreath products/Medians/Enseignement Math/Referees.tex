@@ -131,7 +131,7 @@ In practice, this means that the material on pages 11 to 14 (starting at the § 
 Other consequences of the rewriting of the axioms are the following changes in Section 3:
 \begin{itemize}
 \item At the beginning of Section 3, we added\\
-``In Subsection 2.3, we defined 3 axioms that S might satisfy. Axiom (A1) simply states that a non-trivial group acts non-trivially on some S-space. Axioms (A2) and (A3) guarantee the existence of finite and infinite Cartesian powers, which should be compatible in some sense with the bornology. In Table 1 we present a short reminder on whenever these axioms are satisfied for some subcategories of PMet that were mentioned in Sections 1 and 2.''
+``In Subsection 2.3, we defined 3 axioms that S might satisfy. Axiom (A1) simply states that a non-trivial group acts non-trivially on some S-space. Axioms (A2) and (A3) guarantee the existence of finite and infinite Cartesian powers, which should be compatible in some sense with the bornology. Finally, \textbf{S} has bornological Cartesian powers if it satisfy both axioms (A2) and (A3). In Table 1 we present a short reminder on whenever these axioms are satisfied for some subcategories of PMet that were mentioned in Sections 1 and 2.''
 \item There is now Table 1 recapitulating which axioms are satisfied by the categories under consideration.
 \item The discussion after Corollary 3.8 was extended, see Item 25 below.
 \item The proof of Lemma 3.9 has also been slightly modified to work in this general context, but the changes in the proof are conceptually small, and a small discussion has been added after the proof of Lemma 3.9.
@@ -169,7 +169,7 @@ Also added as a discussion after the proof:\\
 ``In view of Proposition~2.5, two questions remain open: is the implication $[\textnormal{Bergman's property}\implies\textnormal{\FB}]$ strict, and does property~\FW{} implies property~\FR?''
 %
 \item\textit{Page 7, line -8: A triangle Coxeter group would be a more explicit example of a group with FA but not FW.}\\
-Such an example as been added after the proof of Proposition 2.5 see below. We choose to not use this example in the proof, as it use the wall structure and not the median graph structure, work only for FA and not for F$\mathbf{R}$ and is -- in our opinion -- less self-contained.
+Such an example as been added after the proof of Proposition 2.5 see below. We choose to not use this example in the proof, as it use the wall structure (that we didn't formally defined) and not the median graph structure, work only for FA and not for F$\mathbf{R}$ and is -- in our opinion -- less self-contained.
 
 The added text about triangle groups:\\
 ``The reader familiar with triangles groups $\Delta(m,l,n)=\langle a,b,c\,|\,a^2=b^2=c^2=(ab)^l=(bc)^m=(ca)^n=1\rangle$ with $l,m,n\in\{1,2,\dots\}\cup\{\infty\}$ will be happy to observe that they provide explicit examples of groups with property~\FA{} but not property~\FW.
@@ -190,7 +190,7 @@ We followed the referee's suggestion. Nevertheless, we kept the reference to Cor
 
 %
 \item\textit{Page 10, Definition 2.11: Is it a good terminology? The subcategory of bounded metric spaces has unbounded Cartesian products...}\\
-It is not! We changed it to ``bornological finite Cartesian power''.
+It is not! We changed it to \emph{axiom (A2)}. We only named the conjunction of (A2) + (A3), as \emph{bornological Cartesian powers}, but not the individual axioms.
 %
 \item\textit{Page 10, Definition 2.11, item 2: Not clear. Does it mean that the obvious image of $\Aut(X)^n\rtimes\Sym(n)$ in $\Bij(X^n)$ lies in $\Aut_{\mathbf S}(X^n)$ or that $\Aut_{\mathbf S}(X^n)$ contains a subgroup isomorphic to $\Aut(X)^n\rtimes Sym(n)$? The meaning is clear from the proofs, but it should be precise already in the definition.}\\
 This has been clarified to ``the canonical image of $\Aut_{\mathbf S}(X)^n\rtimes \Sym(n)$ in $\Bij(X^n)$ lies in $\Aut_{\mathbf S}(X^n)$''.
@@ -237,7 +237,7 @@ For $E\in\mathcal P(\bigsqcup_{i\geq 1} G_i)$, and for each $i$ such that $E\cap
 For Corollary~3.8.2 we also need that the corresponding structure is invariant by the action of $H$, which is the case of the above examples, except for the tree structure.
 
 It is also possible to give a proof of Corollary~3.8.1 using axioms similar to (A1)-(A3).
-More precisely, we need a weak form of the existence of seperating countable Cartesian products (for morphisms we only ask that $\bigoplus_{i\in\N} \Aut_\textbf{S}(X_i)\subseteq\Aut_\textbf{S}(\bigoplus_{i\in\N} X_i)$) and a strong version of (A1) saying that there exists an universal bound $M$ such that any non-trivial group $G$ acts on some \textbf{S}-space moving a point at distance at least $M$.
+More precisely, we need a variation of (A3) for countable Cartesian products (for morphisms we only ask that $\bigoplus_{i\in\N} \Aut_\textbf{S}(X_i)\subseteq\Aut_\textbf{S}(\bigoplus_{i\in\N} X_i)$) and a strong version of (A1) saying that there exists an universal bound $M$ such that any non-trivial group $G$ acts on some \textbf{S}-space moving a point at distance at least $M$.
 The axiomatization of Corollary~3.8.2 is a little more complex.
 However, since in the following we will use Corollary~3.8 only for (real) trees, which do not have Cartesian powers, we will not elaborate on the details and let the proof to the interested reader.
 Instead, we will give an axiomatic proof of the following variation of Corollary~3.8.2.''
@@ -263,10 +263,11 @@ Since $G$ is a quotient of $\bigoplus_XG\oplus H'$ we conclude that it also has 
 %
 \item\textit{Page 17, Theorem 3.12: The implication BS$\implies$FW is a rather artificial assumption. I think you should list the few axioms you are actually using. It seems to me that there are only two: (1) an axiom about products, with possibly infinitely many factors, which could generalise the definition of unbounded Cartesian powers; (2) every non-trivial group $G$ admits a non-trivial action on a space in \textbf{S}.
 If $G\wr_XH$ has BS, then $X$ must be finite by Lemma 3.8 (deduced from (1) and (2)), $H$ must have BS because it is a quotient, and $G$ must have BS because of Lemma 3.11 (which is a corollary of Lemma 3.10, itself obtained from (1)). Conversely, if $X$ is finite and $G$, $H$ have BS, then $G\wr_XH$ virtually splits as a direct sum of finitely many copies of $G$ and a finite-index subgroup of $H$. But stability of BS under direct sum is given by (1).}\\
-See Item 27. More precisely, we wrote axiom (1) as the union of two axioms. The first one asserts the existence of finite Cartesian powers satisfying some compatibility condition with the bornology (diagonal(unbounded subset) is unbounded), the second one asserts the existence of infinite Cartesian powers satisfying another compatibility condition with the bornology (given two elements $x\neq y\in X$, the set $\{f\in X^I\,|\,f(i)\in\{x,y\}, f(i)=x \textnormal{ for all but finitely many i}\}$ is unbounded).
+See Item 27. More precisely, we wrote axiom (1) as the union of two axioms. The first one ---  (A2) in the text --- asserts the existence of finite Cartesian powers satisfying some compatibility condition with the bornology (diagonal(unbounded subset) is unbounded), the second one ---  (A3) in the text --- asserts the existence of infinite Cartesian powers satisfying another compatibility condition with the bornology (given two elements $x\neq y\in X$, the set $\{f\in X^I\,|\,f(i)\in\{x,y\}, f(i)=x \textnormal{ for all but finitely many i}\}$ is unbounded).
+The conjunction of these two axioms is called \emph{having bornological Cartesian powers}.
 
 We also added the following short text after the statement of Theorem 3.12:\\
-``Similarly to Lemma 3.9, the conclusion of Theorem 3.12 remains true if the hypothesis on S are replaced by “S has bornological finite Cartesian powers and property BS implies property FW”.''
+``Similarly to Lemma 3.9, the conclusion of Theorem 3.12 remains true if the hypothesis on S are replaced by “S satisfies (A2) and property BS implies property FW”.''
 %
 \item\textit{Page 19, Lemma 3.13: The assumption of having finitely many orbits can be removed.}\\
 The assertion has been removed and the proof was extended accordingly. The new proof:\\

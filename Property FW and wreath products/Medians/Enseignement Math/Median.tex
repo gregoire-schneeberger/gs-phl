@@ -694,7 +694,7 @@ The following definition generalize this comportement to other distances.
 %
 %
 \begin{defn}[Axiom (A2)]\label{Def:Cartesian}
-A subcategory \CatS{} of \PMet{} has \emph{bornological finite Cartesian powers} if for any \CatS-space $X$ and any integer $n$, there exists an \CatS-object, called a \emph{$n$\textsuperscript{th} Cartesian power of $X$} and written $X^n$, such that:
+A subcategory \CatS{} of \PMet{} satisfies \emph{axiom (A2)} if for any \CatS-space $X$ and any integer $n$, there exists an \CatS-object, called a \emph{$n$\textsuperscript{th} Cartesian power of $X$} and written $X^n$, such that:
 \begin{enumerate}
 \item
 As a set, $X^n$ is the $n$\textsuperscript{th} Cartesian power of $X$,
@@ -706,7 +706,8 @@ If $E\subset X$ is unbounded, then the diagonal $\diag(E)\subset X^n$ is unbound
 \end{defn}
 %
 %
-A good heuristic is that your favorite subcategory of \PMet{} would have \emph{bornological finite Cartesian powers} in the above sense if and only if it already has a classical operation which is called \emph{Cartesian product}.
+A good heuristic is that your favorite subcategory of \PMet{} would satisfies axiom (A2) in the above sense if and only if it already has a classical operation which is called \emph{Cartesian product}.
+An \CatS-object satisfying the first two properties of Definition~\ref{Def:Cartesian} will be called a finite Cartesian power.
 
 For metric spaces (of finite diameter), the categorical product (corresponding to the metric $d_\infty=\max\{d_X,d_Y\}$) works fine, but any product metric of the form $d_p=(d_X^p+d_Y^p)^{\frac1p}$ for $p\in[1,\infty]$ works as well.
 For ultra-metric spaces, the categorical product $d_\infty$ works fine.
@@ -714,9 +715,9 @@ For $L^p$ spaces (and hence for Hilbert spaces) we take the usual Cartesian prod
 For (reflexive) Banach spaces, any product metric of the form $d_p$ works.
 For connected graphs, the usual Cartesian product, which corresponds to $d_1=d_X+d_Y$ works well, but one can also take the strong product (which is the categorial product in \category{Graph}), that is the distance $d_\infty$.
 For connected median graphs, only the usual Cartesian product with $d_1$ works.\footnote{The category of median graphs does not have categorial products.}
-On the other hand, (real) trees, $Z$ from Example~\ref{Exmp:BZ} and hyperbolic spaces do not have Cartesian powers, even without asking them to respect the bornology.
+On the other hand, (real) trees, $Z$ from Example~\ref{Exmp:BZ} and hyperbolic spaces do not have finite Cartesian powers and hence cannot satisfy axiom (A2).
 
-As the above examples illustrate, there can be multiple non-isomorphic spaces playing the role of a bornological Cartesian power. As our results will not depend on a particular choice of a Cartesian power, we will sometimes make a slight abuse of language and speak of \emph{the} Cartesian power.
+As the above examples illustrate, there can be multiple non-isomorphic spaces playing the role of $X^n$. As our results will not depend on a particular choice of a Cartesian power, we will sometimes make a slight abuse of language and speak of \emph{the} Cartesian power $X^n$.
 
 The situation for infinite products is more complicated. Indeed, if $I$ is infinite then the map $d_p$ is not necessary a distance on $\prod_{i\in I}X_i$ as it can take infinite values.
 The solution consists of looking at the subset of $\prod_{i\in I}X_i$ on which $d_p$ takes finite values.
@@ -734,7 +735,7 @@ and%\GS{Changé mise en page}
 %	\sideset{}{^p}\bigoplus_{i \in I}X_i&\coloneqq\setst{f\in I}{\sum_i d_i\bigl(f(i),f_0(i)\bigr)<\infty}.
 %\end{align*}
 A priori, the above definitions depend on the choice of the $x_i$. However, since our results will not depend on a particular choice of base-points, we will omit to specify it.
-Moreover, if $\Aut_\CatS(X)$ acts transitively on $X$, then $\bigoplus_{i \in I}^pX$ will not depend on the choice of $x\in X$. If all the $X_i$ are equal to $\R$ with $x_i =0$, then $\bigoplus_{i \in I}^pX_i$ is the classical Banach space $\ell^p(I)$.
+Moreover, if $\Aut_\CatS(X)$ acts transitively on $X$, then $\bigoplus_{i \in I}^pX$ will not depend on the choice of $x\in X$. If all the $X_i$ are equal to $\R$ with $x_i =0$, then $\bigoplus_{i \in I}^pX_i$ is the classical Banach space $\ell^p(I)$ while $\bigoplus_{i \in I}X_i$ is the (non-complete) sequence space $c_{00}(I)$.
 
 It is straightforward to verify that $\bigoplus_{i\in I} X_i\subseteq\bigoplus_{i\in I}^p X_i\subseteq\prod_{i\in I}X_i$ and that the first inclusion is an equality if the $X_i$ are uniformly discrete with an uniform lower bound on their packing radius.
 Moreover the restriction of the map $d_p$ to $\bigoplus_{i\in I}^p X_i$ is a distance.
@@ -745,7 +746,7 @@ Our last axiom will generalize this comportement.
 %
 %
 \begin{defn}[Axiom (A3)]\label{Def:InfiniteCartesian}
-A subcategory \CatS{} of \PMet{} has \emph{separating infinite Cartesian powers} if for any \CatS-space $X$, any element $x_0$ of $X$ and any infinite set $I$, there exists an \CatS-object, called the \emph{$I$\textsuperscript{th} Cartesian power of $X$} and written $\bigoplus_I ^\CatS X$, such that:
+A subcategory \CatS{} of \PMet{} satisfies \emph{axiom (A3)} if for any \CatS-space $X$, any element $x_0$ of $X$ and any infinite set $I$, there exists an \CatS-object, called the \emph{$I$\textsuperscript{th} Cartesian power of $X$} and written $\bigoplus_I ^\CatS X$, such that:
 \begin{enumerate}
 \item
 As sets we have the inclusions $\bigoplus_I X\subseteq \bigoplus_I^\CatS X\subseteq \prod_I X$,
@@ -764,11 +765,20 @@ For any $y$ in $X$ with $d(y,x_0)>0$, the following set has infinite diameter
 \end{defn}
 %
 %
+An object satisfying the first two items of Definition~\ref{Def:InfiniteCartesian} will be called an infinite Cartesian power.
+
 In practice, the above definition is often easy to verify.
-Indeed, in most cases when \CatS{} has finite Cartesian powers (not necessarily bornological) it is for some product metric of the form $d_p$.
-Then the metric space $(\bigoplus^p_IX,d_p)$ will usually be an infinite Cartesian power in \CatS{} and, if $p\neq\infty$, it will be a separating infinite Cartesian power.
-In particular, the following categories have separating infinite  Cartesian powers: metric spaces, (reflexive) Banach spaces (with $d_p$ for $1<p<\infty$), Hilbert spaces and $L^p$ spaces if $p\neq\infty$, connected (median) graphs.
-On the other hand, (real) trees, hyperbolic spaces, $Z$ from Example~\ref{Exmp:BZ} and spaces of finite diameter do not have a sensible notion of infinite Cartesian powers. Finally, while ultra-metric spaces and $L^\infty$ spaces have infinite Cartesian powers, they are not separating as the diameter of the set appearing in Definition~\ref{Def:InfiniteCartesian} is $d(y,x_0)$.
+Indeed, in most cases when \CatS{} has finite Cartesian powers it is for some product metric of the form $d_p$.
+Then the metric space $(\bigoplus^p_IX,d_p)$ will usually be an infinite Cartesian power in \CatS{} and, if $p\neq\infty$, it will satisfies (A3).
+In particular, (A3) holds in the following categories: metric spaces, (reflexive) Banach spaces (with $d_p$ for $1<p<\infty$), Hilbert spaces and $L^p$ spaces if $p\neq\infty$, connected (median) graphs.
+On the other hand, (real) trees, hyperbolic spaces and $Z$ from Example~\ref{Exmp:BZ} do not have a sensible notion of infinite Cartesian powers. Finally, while ultra-metric spaces, $L^\infty$ spaces and spaces of finite diameter have infinite Cartesian powers (for $d_\infty$), axiom (A3) does not hold as the diameter of the set appearing in Definition~\ref{Def:InfiniteCartesian} is $d(y,x_0)$.
+
+Finally, we introduce one last definition
+%
+%
+\begin{defn}
+A subcategory \CatS{} of \PMet{} has \emph{bornological Cartesian powers} if it satisfies both axiom (A2) and (A3).
+\end{defn}
 %
 %
 %
@@ -929,9 +939,10 @@ A group $G$ has property B$\mathbf{S}_\kappa$ if and only if $\lvert G\rvert<\ka
 %
 %
 %
-Throughout this section, \CatS{} will denote subcategory of \PMet{} and \BS{} the group property~\emph{every action by \CatS-automorphisms on an \CatS-space has bounded orbits}.
+Throughout this section, \CatS{} will denote a subcategory of \PMet{} and \BS{} the group property~\emph{every action by \CatS-automorphisms on an \CatS-space has bounded orbits}.
 %Heuristically, an \CatS-space is a (quasipseudo-) metric space with an additional structure (as for example an Hilbert space). For a precise definition, see Definition~\ref{Def:PropBS}.
-In Subsection~\ref{SubSec:CatS}, we defined $3$ axioms that \CatS{} might satisfy. Axiom (A1) simply states that a non-trivial group acts non-trivially on some \CatS-space. Axioms (A2) and (A3) guarantee the existence of finite and infinite Cartesian powers, which should be compatible in some sense with the bornology. In Table~\ref{Table1} we present a short reminder on whenever these axioms are satisfied for some subcategories of \PMet{} that were mentioned in Sections~\ref{Section:Intro} and~\ref{Section:Def}.
+In Subsection~\ref{SubSec:CatS}, we defined $3$ axioms that \CatS{} might satisfy. Axiom (A1) simply states that a non-trivial group acts non-trivially on some \CatS-space. Axioms (A2) and (A3) guarantee the existence of finite and infinite Cartesian powers, which should be compatible in some sense with the bornology. Finally, \CatS{} has bornological Cartesian powers if it satisfy both axioms (A2) and (A3).
+In Table~\ref{Table1} we present a short reminder on whenever these axioms are satisfied for some subcategories of \PMet{} that were mentioned in Sections~\ref{Section:Intro} and~\ref{Section:Def}.
 \begin{table}
 \begin{tabular}{*{2}{|c}|*{3}{|c}|}
 \hline
@@ -966,7 +977,7 @@ Spaces of finite diameter&hold for all groups		&\checkmark&\checkmark&\xmark\\
 \end{tabular}
 
 \footnotesize{*: if and only if $p\neq\infty$.}
-\caption{Axioms for category \CatS. (A1) = non-trivial group actions (Definition~\ref{Def:NonTrivialAction}), (A2) = bornological finite Cartesian powers (Definition~\ref{Def:Cartesian}), (A3) = separating infinite Cartesian powers (Definition~\ref{Def:InfiniteCartesian}).}
+\caption{Axioms for category \CatS. (A1) = non-trivial group actions (Definition~\ref{Def:NonTrivialAction}), (A2) = Definition~\ref{Def:Cartesian}, (A3) = Definition~\ref{Def:InfiniteCartesian}, bornological Cartesian powers = (A2)+(A3).}
 \label{Table1}
 \end{table}
 
@@ -1129,7 +1140,7 @@ For $E\in\powerset{\bigsqcup_{i\geq 1} G_i}$, and for each $i$ such that $E\cap 
 For Corollary~\ref{Cor:Cof}.2 we also need that the corresponding structure is invariant by the action of $H$, which is the case of the above examples, except for the tree structure.
 
 It is also possible to give a proof of Corollary~\ref{Cor:Cof}.1 using axioms similar to (A1)-(A3).
-More precisely, we need a weak form of the existence of seperating countable Cartesian products (for morphisms we only ask that $\bigoplus_{i\in\N} \Aut_\CatS(X_i)\subseteq\Aut_\CatS(\bigoplus_{i\in\N} X_i)$) and a strong version of (A1) saying that there exists an universal bound $M$ such that any non-trivial group $G$ acts on some \CatS-space moving a point at distance at least $M$.
+More precisely, we need a variation of (A3) for countable Cartesian products (for morphisms we only ask that $\bigoplus_{i\in\N} \Aut_\CatS(X_i)\subseteq\Aut_\CatS(\bigoplus_{i\in\N} X_i)$) and a strong version of (A1) saying that there exists an universal bound $M$ such that any non-trivial group $G$ acts on some \CatS-space moving a point at distance at least $M$.
 The axiomatization of Corollary~\ref{Cor:Cof}.2 is a little more complex.
 However, since in the following we will use Corollary~\ref{Cor:Cof} only for (real) trees, which do not have Cartesian powers, we will not elaborate on the details and let the proof to the interested reader.
 Instead, we will give an axiomatic proof of the following variation of Corollary~\ref{Cor:Cof}.2.
@@ -1154,7 +1165,7 @@ Instead, we will give an axiomatic proof of the following variation of Corollary
 %
 %
 \begin{lem}\label{Lemma:XFinite}
-Suppose that \CatS{} has non-trivial group actions and seperating infinite Cartesian powers.
+Suppose that \CatS{} has non-trivial group actions and satisfies axiom~(A3).
 Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which $H$ acts.
 If $G\wr_XH$ has \BS, then $X$ is finite.
 \end{lem}
@@ -1189,7 +1200,7 @@ is in the $G\wr_XH$-orbit of $f_0$. By axiome (A3) this orbit is unbounded and $
 %For example, for Hilbert spaces one can take $\bigoplus_X\ell^2(G)$ with $\bigoplus_XG$ acting coordinatewise and $H$ by permutations.
 %On the other hand, both the forest structure on $\powerset{\bigsqcup_XG}$ and the ultrametric structure on $\bigoplus_XG$ are in general not invariant under the natural action of $H$ by permutations.
 
-As a direct corollary, we obtain that if property \BS{} implies property \BS' for some \CatS' with non-trivial group actions and seperating infinite Cartesian powers (example: \BS'=\FW), then the conclusion of Lemma~\ref{Lemma:XFinite} holds even if \CatS{} might not satisfy its premises.
+As a direct corollary, we obtain that if property \BS{} implies property \BS' for some \CatS' with non-trivial group actions and (A3) (example: \BS'=\FW), then the conclusion of Lemma~\ref{Lemma:XFinite} holds even if \CatS{} might not satisfy its premises.
 At contrario, it follows from Theorem~\ref{Thm:FACK} and Proposition~\ref{Prop:UncCoun} that Lemma~\ref{Lemma:XFinite} do not holds for property~\FR, property \FA{} or having uncountable cofinality.
 %
 %
@@ -1204,7 +1215,7 @@ At contrario, it follows from Theorem~\ref{Thm:FACK} and Proposition~\ref{Prop:U
 %
 %
 
-We now turn our attention to properties that behave well under finite Cartesian products in the sense of Definition~\ref{Def:Cartesian}.
+We now turn our attention to properties that behave well under finite Cartesian products in the sense of axiom (A2).
 We first describe the comportement of property~\BS{} under finite index subgroups.
 %
 %
@@ -1214,7 +1225,7 @@ Let $G$ be a group and let $H$ be a finite index subgroup.
 \item
 If $H$ has property~\BS, then so has~$G$,
 \item
-If \CatS{} has bornological finite Cartesian powers and $G$ has property~\BS, then $H$ has property~\BS.
+If \CatS{} satisfies (A2) and $G$ has property~\BS, then $H$ has property~\BS.
 \end{enumerate}
 \end{lem}
 \begin{proof}
@@ -1240,7 +1251,7 @@ We now prove one last lemma that will be necessary fo the proof of Theorem~\ref{
 %
 %
 \begin{lem}\label{Lemma:Unboundedness}
-Suppose that \CatS{} has bornological finite Cartesian powers. If $X$ is finite and $G\wr_XH$ has property~\BS, then $G$ has property~\BS.
+Suppose that \CatS{} satisfies (A2). If $X$ is finite and $G\wr_XH$ has property~\BS, then $G$ has property~\BS.
 \end{lem}
 \begin{proof}
 Suppose that $G$ does not have \BS{} and let $(Y,d_Y)$ be an \CatS-space on which $G$ acts with an unbounded orbit $G.y$.
@@ -1261,12 +1272,12 @@ By combining Corollary~\ref{Cor:Wreath} and Lemmas~\ref{Lemma:XFinite} and~\ref{
 %
 %
 \begin{thm}\label{Thm:Technic}
-Suppose that \CatS{} has non-trivial group actions, bornological finite Cartesian powers and seperating infinite Cartesian powers.
+Suppose that \CatS{} has non-trivial group actions and bornological  Cartesian powers.
 Let $G$ and $H$ be two groups with $G$ non-trivial and let $X$ be a set on which $H$ acts. Then the wreath product $G \wr_X H$ has property~\BS{} if and only if $G$ and $H$ have property~\BS{} and $X$ is finite.
 \end{thm}
 %
 %
-Similarly to Lemma~\ref{Lemma:XFinite}, the conclusion of Theorem~\ref{Thm:Technic} remains true if the hypothesis on \CatS{} are replaced  by ``\CatS{} has bornological finite Cartesian powers and property \BS{} implies property \FW''.
+Similarly to Lemma~\ref{Lemma:XFinite}, the conclusion of Theorem~\ref{Thm:Technic} remains true if the hypothesis on \CatS{} are replaced  by ``\CatS{} satisfies (A2) and property \BS{} implies property \FW''.
 
 We now proceed to prove Proposition~\ref{Prop:UncCoun}.
 As for Lemma~\ref{Lemma:Cof}, it is also possible to prove it using the characterization of uncountable cofinality in terms of subgroups, in which case it is an easy exercise, but we will only give a proof using the characterization in terms of actions on ultrametric spaces.
@@ -1338,7 +1349,7 @@ The group $G\wr_XH$ has no quotient isomorphic to $\Z$ if and only if both $G$ a
 \begin{proof}
 %Remind that a group $K$ has no quotient isomorphic to $\Z$ if and only if $K^{\ab}$ has no quotient isomorphic to $\Z$.
 %The desired result then follows from $(G\wr_XH)^{\ab}\cong \bigoplus_{X/H}(G^{\ab})\times H^{\ab}$, Example~\ref{Exmp:BZ} and Corollary~\ref{Cor:Prod}.
-The desired result then follows from $(G\wr_XH)^{\ab}\cong \bigoplus_{X/H}(G^{\ab})\times H^{\ab}$ and the claim that a direct sum $\bigoplus_{y\in Y}K_y$ has a quotient isomorphic to $\Z$ if and only if at least one of the factor has a quotient isomorphic to $\Z$.
+The desired result follows from $(G\wr_XH)^{\ab}\cong \bigoplus_{X/H}(G^{\ab})\times H^{\ab}$ and the claim that a direct sum $\bigoplus_{y\in Y}K_y$ has a quotient isomorphic to $\Z$ if and only if at least one of the factor has a quotient isomorphic to $\Z$.
 Indeed, one direction of the claim is trivial.
 For the other direction, remind that $K$ does not project onto $\Z$ if and only if any action of $K$ by orientation preserving isomorphisms on $Z$, the $2$-regular tree, has bounded orbits. But the only possibility for such an action to have bounded orbits is to be trivial.
 If none of the $K_y$ projects onto $\Z$, all their actions on $Z$ are trivial and so is any action of $\bigoplus_{y\in Y}K_y$, which can therefore not project onto $\Z$.
