@@ -195,7 +195,7 @@ However, these two sets of conditions are equivalent.
 One implication is trivial, as finite Abelian groups do not project onto $\Z$. The other implication follows for countable Abelian groups from the structure theorem of finitely generated Abelian groups.
 For the general case, Y. Cornulier kindly reminded us that any infinite Abelian group has a countable quotient; the conclusion hence follows from the countable case.
 
-Finally, we have an analogous of Theorem~\ref{T:Wreath_prop_T} for property~\FW{} (every action on wall spaces has bounded orbits):
+Finally, we have an analogous of Theorem~\ref{T:Wreath_prop_T} for property~\FW{} (every action on a CAT(0) cube complexe has bounded orbits):
 %
 %
 \begin{thm}[\cite{Cornulier2013,LS2020}]\label{Thm:PropFW}
@@ -338,7 +338,7 @@ For $u$ and $v$ two vertices of a connected\footnote{We will always assume that 
 A connected graph $\mathcal G$ is \emph{median} if for any three vertices $u$, $v$, $w$, the intersection $[u,v]\cap[v,w]\cap[u,w]$ consists of a unique vertex, denoted $m(u,v,w)$.
 A graph is \emph{median} if each of its connected components is median. For more on median graphs and spaces see~\cite{MR2405677,MR2671183,MR1705337}.
 If $X$ and $Y$ are both (connected) median graphs, then their Cartesian product is also a (connected) median graph.
-The class of median graphs was intruduced by Nebesk\'y in 1971 \cite{Neb71} and Gerasimov \cite{MR1663779, Ger97},   Roller \cite{Rol98} and Chepoï \cite{Che00} realized independently that this class coincides with the class of $1$-skeleta of CAT(0) cube complexes.
+The class of median graphs was intruduced by Nebesk\'y in 1971 \cite{Neb71} and Gerasimov \cite{Ger97, MR1663779},   Roller \cite{Rol98} and Chepoï \cite{Che00} realized independently that this class coincides with the class of $1$-skeleta of CAT(0) cube complexes.
 Trees are the simplest examples of connected median graphs, while the ensuing classical example show that any power set can be endowed with a median graph structure.
 %
 %
@@ -441,10 +441,8 @@ In the following, we will often do a slight abuse of notation and simply speak o
 %
 %
 %\begin{rem}
-The names \FB, \FH, \FW,  \FR{} and \FA{} come from the fact that these properties admit a description in terms of (and were fist studied in the context of) the existence of a Fixed point for actions on reflexive Banach spaces, on Hilbert spaces, on spaces with Walls (or equivalently on CAT(0) cube complexes, see \cite{MR2197811,MR2059193}),
-%\GS{Ajout références liens entre cube et wall spaces}
- on Real trees and on trees (\emph{Arbres} in french).
-However this is equivalent with the bounded orbit property, see Proposition~\ref{Proposition:Mediane} and the discussion below~it.
+The names \FB, \FH, \FW,  \FR{} and \FA{} come from the fact that these properties admit a description in terms of (and were fist studied in the context of) the existence of a Fixed point for actions on reflexive Banach spaces, on Hilbert spaces, on spaces with walls (or equivalently on CAT(0) cube complexes, see \cite{MR2197811,MR2059193}), on real trees and on trees (\emph{Arbres} in french).
+However this is equivalent with the bounded orbit property, see Proposition~\ref{Proposition:Mediane} and the discussion below~it. Observe that space with walls admit a natural pseudo-metric on them, which is not necessarily a metric. 
 %\end{rem}
 
 
@@ -595,7 +593,7 @@ All the properties of Definition~\ref{Def:FHFA} are of the form \BS.
 %Examples of other interesting subcategories include (some specific subclass of) Banach spaces as well as real or complex hyperbolic spaces, see~\cite[Definition 6.22]{MR1023471}.
 Another example of property of the form \BS{} can be found in~\cite[Definition 6.22]{MR1023471}: a group has property (FHyp$_{\field{C}}$) if any action on a real or complex hyperbolic space of finite dimension has bounded orbits.
 This property is implied by property~\FH, but does not imply property~\FA{}~\cite[Corollary 6.23 and Example 6.24]{MR1023471}.
-One can also want to look at the category of all Banach spaces (the corresponding property~BB hence stands between the Bergman's property and property~\FB)\GS{BB Etudiée quelque part ? red?}, or the category of $L^p$-spaces for $p$ fixed~\cite{MR2978328} (if $p\notin\{1,\infty\}$, then B$L^p$ is implied by \FB).
+One can also want to look at the category of all Banach spaces (the corresponding property~BB hence stands between the Bergman's property and property~\FB), or the category of $L^p$-spaces for $p$ fixed~\cite{MR2978328} (if $p\notin\{1,\infty\}$, then B$L^p$ is implied by \FB).
 
 Another interesting example of a property of the form \BS{} is the fact to have no quotient isomorphic to $\Z$, see Example~\ref{Exmp:BZ}.
 The main interest for us of this example is that property~\FA{} is the conjonction of three properties, two of them (uncountable cofinality and having no quotient isomorphic to $\Z$) still being of the form \BS.
@@ -667,7 +665,7 @@ A subcategory \CatS{} of \PMet{} has \emph{non-trivial group actions} if for eve
 \end{defn}
 %
 %
-Examples of categories \CatS{} with non-trivial group actions include (ultra-) metric spaces and metric space of finite diameter (with the action by multiplication of $G$ on itself, endowed with the discrete metric), (reflexive) Banach spaces and Hilbert spaces (with $X=l^2(G)$ and the permutation action of $G$), $L^p$ space ($G$ acting by permutation on $l^p(G)$) and finally connected median graphs and (real) trees ($X$ has one central vertex to which we attach an edge for every $g\in G$ and the action of $G$ is by left multiplication).
+Examples of categories \CatS{} with non-trivial group actions include (ultra-) metric spaces and metric space of finite diameter (with the action by multiplication of $G$ on itself, endowed with the discrete metric), (reflexive) Banach spaces and Hilbert spaces (with $X=l^2(G)$ and the permutation action of $G$), $L^p$ space ($G$ acting by permutation on $\ell^p(G)$) and finally connected median graphs and (real) trees ($X$ has one central vertex to which we attach an edge for every $g\in G$ and the action of $G$ is by left multiplication).
 On the opposite side, both $Z$ from Example~\ref{Exmp:BZ} and real and complex finite dimensional hyperbolic spaces do not have non-trivial group actions. Indeed, a group acts non-trivially on $Z$ if and only if it projects onto $\Z$.
 For hyperbolic spaces, a group $G$ acts on a hyperbolic space of dimension $n$ if and only if it projects onto a subgroup of  $\SO(n,1)$ or $\SU(n,1)$. In particular, if the action is non-trivial, then $G$ projects onto a non-trivial subgroup of $\GL_n(\C)$, whose all finitely generated subgroups are residually finite.
 We conclude that a finitely generated infinite simple group $G$ does not admit a non-trivial action on a real or complexe hyperbolic space of finite dimension.
@@ -728,7 +726,7 @@ Formally we first need to chose a base-point $x_i$ in $X_i$ for each $i\in I$, w
 \end{equation*}
 and%\GS{Changé mise en page}
 \begin{equation*}
-\sideset{}{^p}\bigoplus_{i \in I}X_i \coloneqq\setst{f\in I}{\sum_i d_i\bigl(f(i),f_0(i)\bigr)^p<\infty}.
+\sideset{}{^p}\bigoplus_{i \in I}X_i \coloneqq\Bigl\{f\in I\,\Big|\,\sum_i d_i\bigl(f(i),f_0(i)\bigr)^p<\infty\Bigr\}.
 \end{equation*}
 %\GS{Pas très clair pour moi pourquoi $p$ apparait dans la définition?}
 %\begin{align*}
@@ -736,7 +734,7 @@ and%\GS{Changé mise en page}
 %	\sideset{}{^p}\bigoplus_{i \in I}X_i&\coloneqq\setst{f\in I}{\sum_i d_i\bigl(f(i),f_0(i)\bigr)<\infty}.
 %\end{align*}
 A priori, the above definitions depend on the choice of the $x_i$. However, since our results will not depend on a particular choice of base-points, we will omit to specify it.
-Moreover, if $\Aut_\CatS(X)$ acts transitively on $X$, then $\bigoplus_{i \in I}^pX$ will not depend on the choice of $x\in X$.
+Moreover, if $\Aut_\CatS(X)$ acts transitively on $X$, then $\bigoplus_{i \in I}^pX$ will not depend on the choice of $x\in X$. If all the $X_i$ are equal to $\R$ with $x_i =0$, then $\bigoplus_{i \in I}^pX_i$ is the classical Banach space $\ell^p(I)$.
 
 It is straightforward to verify that $\bigoplus_{i\in I} X_i\subseteq\bigoplus_{i\in I}^p X_i\subseteq\prod_{i\in I}X_i$ and that the first inclusion is an equality if the $X_i$ are uniformly discrete with an uniform lower bound on their packing radius.
 Moreover the restriction of the map $d_p$ to $\bigoplus_{i\in I}^p X_i$ is a distance.
@@ -987,7 +985,7 @@ If $H$ acts on some \CatS-space $X$ with an unbounded orbit, then the surjection
 %
 %
 \begin{lem}\label{Lemma:InterProd}
-Let $G$ be a group and $A$ an $B$ be two subgroups such that $G=AB$.\GS{cf mail pour $G=AB$}
+Let $G$ be a group and $A$ an $B$ be two subgroups such that $G=AB$.
 If both $(G,A)$ and $(G,B)$ have relative property~\BS, then $G$ has property~\BS.
 \end{lem}
 \begin{proof}
@@ -1289,7 +1287,7 @@ We will now prove that if $G \wr_X H$ has uncountable cofinality so does $G$.
 Let us suppose that $G$ has countable cofinality. By Lemma~\ref{Lemma:CofSub}, there exists an ultrametric $d$ on $G$ such that the action of $G$ on itself by left multiplication has an unbounded orbit.
 But then we have the primitive action of the wreath product $G\wr_XH$ on $G^X\cong\prod_XG$, which preserves $\bigoplus_XG$.
 It is easy to check that the map $d_\infty\colon\bigoplus_XG\times\bigoplus_XG\to\R$ defined by $d_\infty(\psi_1,\psi_2)\coloneqq\max\setst{d\bigl(\psi_1(x),\psi_2(x)\bigr)}{x\in X}$ is a $G\wr_XH$-invariant ultrametric.
-Finally, let $h\in G$\GS{Je ne suis jamais très fan d'avoir un élément $h$ qui est dans $G$ alors qu'il y a un groupe $H$, peut être l'appeler $g_0$ ?} be an element of unbounded $G$-orbit for $d$ and let $x_0$ be any element of $X$.
+Finally, let $g_0\in G$ be an element of unbounded $G$-orbit for $d$ and let $x_0$ be any element of $X$.
 For $g$ in $G$ and $x$ in $X$, we define the following analogs of Kronecker's delta functions
 \begin{equation*}
 \delta_x^g (y) \coloneqq
@@ -1298,7 +1296,7 @@ g & \textnormal{if }y = x \\
 1 & \textnormal{if } y \neq x.
 \end{cases}
 \end{equation*}
-Then for any $g$ in $G$ we have $(\delta_{x_0}^g,1).\delta_{x_0}^h=\delta_{x_0}^{gh}$ and hence $d_\infty(\delta_{x_0}^h,\delta_{x_0}^{gh})=d(h,gh)$ is unbounded.
+Then we have $(\delta_{x_0}^g,1).\delta_{x_0}^{g_0}=\delta_{x_0}^{gg_0}$ and hence $d_\infty(\delta_{x_0}^{g_0},\delta_{x_0}^{gg_0})=d(g_0,gg_0)$ is unbounded.
 
 Suppose now that both $G$ and $H$ have uncountable cofinality and that $H$ acts on $X$ with finitely many orbits. We want to prove that $G\wr_XH$ has uncountable cofinality.
 
@@ -1317,14 +1315,14 @@ We have
 which implies that the diameter of $G_{x_i}h^{-1}.y$ is bounded by $\max\{D_0,D_i\}$.
 But $G_{x_i}h^{-1}.y$ has the same diameter as $hG_{x_i}h^{-1}.y=G_{h.x_i}.y=G_x.y$.
 
-On the other hand, the diameter of $\bigoplus_XG.y$ pour ne pas  is bounded by the supremum of the diameters of the $G_{x}.y$, and hence bounded by $\max\{D_0,D_1,\dots,D_n\}$.
-Finally, for $(\varphi,h)$ in $G\wr_YH$ \GS{$G\wr_XH$ plutôt ?}we have
+On the other hand, the diameter of $\bigoplus_XG.y$ is bounded by the supremum of the diameters of the $G_{x}.y$, and hence bounded by $\max\{D_0,D_1,\dots,D_n\}$.
+Finally, for $(\varphi,h)$ in $G\wr_X H$ we have
 \begin{align*}
 	d\bigl(y,(\varphi,h).y\bigr)&\leq\max\{d\bigl(y,(\varphi,1).y\bigr),d\bigl((\varphi,1).y,(\varphi,h).y\bigr)\}\\
 	&=\max\{d\bigl(y,(\varphi,1).y\bigr),d\bigl(y,(1,h).y\bigr)\}\\
 	&\leq\max\{\max\{D_0,D_1,\dots,D_n\},D_0\}.
 \end{align*}
-That is, the diameter of $G\wr_YH.z$ is itself bounded by $\max\{D_0,D_1,\dots,D_n\}$, which finishes the proof.
+That is, the diameter of $G\wr_XH.y$ is itself bounded by $\max\{D_0,D_1,\dots,D_n\}$, which finishes the proof.
 \end{proof}
 %
 %
