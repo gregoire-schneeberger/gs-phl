@@ -1,0 +1,172 @@
+\begin{thebibliography}{10}
+
+\bibitem{MR2405677}
+Hans-J\"{u}rgen Bandelt and Victor Chepoi.
+\newblock Metric graph theory and geometry: a survey.
+\newblock In {\em Surveys on discrete and computational geometry}, volume 453
+  of {\em Contemp. Math.}, pages 49--86. Amer. Math. Soc., Providence, RI,
+  2008.
+
+\bibitem{MR2415834}
+Bachir Bekka, Pierre de~la Harpe, and Alain Valette.
+\newblock {\em Kazhdan's property ({T})}, volume~11 of {\em New Mathematical
+  Monographs}.
+\newblock Cambridge University Press, Cambridge, 2008.
+
+\bibitem{MR2239037}
+George~M. Bergman.
+\newblock Generating infinite symmetric groups.
+\newblock {\em Bull. London Math. Soc.}, 38(3):429--440, 2006.
+
+\bibitem{MR2978328}
+Marc Bourdon.
+\newblock Un th\'{e}or\`eme de point fixe sur les espaces {$L^p$}.
+\newblock {\em Publ. Mat.}, 56(2):375--392, 2012.
+
+\bibitem{MR2137870}
+Nathanial Brown and Erik Guentner.
+\newblock Uniform embeddings of bounded geometry spaces into reflexive {B}anach
+  space.
+\newblock {\em Proc. Amer. Math. Soc.}, 133(7):2045--2050, 2005.
+
+\bibitem{MR2671183}
+Indira Chatterji, Cornelia Dru\c{t}u, and Fr\'{e}d\'{e}ric Haglund.
+\newblock Kazhdan and {H}aagerup properties from the median viewpoint.
+\newblock {\em Adv. Math.}, 225(2):882--921, 2010.
+
+\bibitem{MR2197811}
+Indira Chatterji and Graham Niblo.
+\newblock From wall spaces to {$\rm CAT(0)$} cube complexes.
+\newblock {\em Internat. J. Algebra Comput.}, 15(5-6):875--885, 2005.
+
+\bibitem{Che00}
+Victor Chepoi.
+\newblock Graphs of some {${\rm CAT}(0)$} complexes.
+\newblock {\em Adv. in Appl. Math.}, 24(2):125--179, 2000.
+
+\bibitem{MR2106770}
+Pierre-Alain Cherix, Florian Martin, and Alain Valette.
+\newblock Spaces with measured walls, the {H}aagerup property and property
+  ({T}).
+\newblock {\em Ergodic Theory Dynam. Systems}, 24(6):1895--1908, 2004.
+
+\bibitem{MR2240370}
+Yves Cornulier.
+\newblock Strongly bounded groups and infinite powers of finite groups.
+\newblock {\em Comm. Algebra}, 34(7):2337--2345, 2006.
+
+\bibitem{Cornulier2013}
+Yves Cornulier.
+\newblock {Group actions with commensurated subsets, wallings and cubings}.
+\newblock {\em arXiv e-prints}, page arXiv:1302.5982, February 2013.
+
+\bibitem{MR3299841}
+Yves Cornulier.
+\newblock Irreducible lattices, invariant means, and commensurating actions.
+\newblock {\em Math. Z.}, 279(1-2):1--26, 2015.
+
+\bibitem{MR2764930}
+Yves Cornulier and Aditi Kar.
+\newblock On property ({FA}) for wreath products.
+\newblock {\em J. Group Theory}, 14(1):165--174, 2011.
+
+\bibitem{MR1023471}
+Pierre de~la Harpe and Alain Valette.
+\newblock {\em La propri\'{e}t\'{e} {$(T)$} de {K}azhdan pour les groupes
+  localement compacts (avec un appendice de {M}arc {B}urger)}.
+\newblock Ast\'{e}risque, No. 175. Soci\'{e}t\'{e} Math\'{e}matique de France,
+  Paris, 1989.
+\newblock With an appendix by M. Burger.
+
+\bibitem{2017arXiv170500834G}
+Anthony Genevois.
+\newblock {L}amplighter groups, median spaces, and {H}ilbertian geometry.
+\newblock {\em arXiv e-prints}, page arXiv:1705.00834, January 2021.
+
+\bibitem{Ger97}
+V.~Gerasimov.
+\newblock Semi-splittings of groups and actions on cubings.
+\newblock In {\em Algebra, geometry, analysis and mathematical physics
+  ({R}ussian) ({N}ovosibirsk, 1996)}, pages 91--109, 190. Izdat. Ross. Akad.
+  Nauk Sib. Otd. Inst. Mat., Novosibirsk, 1997.
+
+\bibitem{MR1663779}
+V.~Gerasimov.
+\newblock Fixed-point-free actions on cubings [translation of {\it {a}lgebra,
+  geometry, analysis and mathematical physics ({r}ussian) ({n}ovosibirsk,
+  1996)}, 91--109, 190, {I}zdat. {R}oss. {A}kad. {N}auk {S}ibirsk. {O}tdel.
+  {I}nst. {M}at., {N}ovosibirsk, 1997; {MR}1624115 (99c:20049)].
+\newblock {\em Siberian Adv. Math.}, 8(3):36--58, 1998.
+
+\bibitem{MR1705337}
+Sandi Klav\v{z}ar and Henry~Martyn Mulder.
+\newblock Median graphs: characterizations, location theory and related
+  structures.
+\newblock {\em J. Combin. Math. Combin. Comput.}, 30:103--127, 1999.
+
+\bibitem{LS2020}
+Paul-Henry {Leemann} and Gr{\'e}goire {Schneeberger}.
+\newblock {Property FW and wreath products of groups: a simple approach using
+  Schreier graphs}.
+\newblock {\em arXiv e-prints}, page arXiv:2101.03817, January 2021.
+
+\bibitem{MR3465847}
+Ashot Minasyan.
+\newblock New examples of groups acting on real trees.
+\newblock {\em J. Topol.}, 9(1):192--214, 2016.
+
+\bibitem{Neb71}
+Ladislav Nebesk\'{y}.
+\newblock Median graphs.
+\newblock {\em Comment. Math. Univ. Carolinae}, 12:317--325, 1971.
+
+\bibitem{MR2176470}
+Markus Neuhauser.
+\newblock Relative property ({T}) and related properties of wreath products.
+\newblock {\em Math. Z.}, 251(1):167--177, 2005.
+
+\bibitem{MR2656670}
+Lionel Nguyen Van~Th\'{e} and Vladimir~G. Pestov.
+\newblock Fixed point-free isometric actions of topological groups on {B}anach
+  spaces.
+\newblock {\em Bull. Belg. Math. Soc. Simon Stevin}, 17(1):29--51, 2010.
+
+\bibitem{MR2059193}
+Bogdan Nica.
+\newblock Cubulating spaces with walls.
+\newblock {\em Algebr. Geom. Topol.}, 4:297--309, 2004.
+
+\bibitem{MR3382026}
+Piotr~W. Nowak.
+\newblock Group actions on {B}anach spaces.
+\newblock In {\em Handbook of group actions. {V}ol. {II}}, volume~32 of {\em
+  Adv. Lect. Math. (ALM)}, pages 121--149. Int. Press, Somerville, MA, 2015.
+
+\bibitem{Rol98}
+Martin~A. Roller.
+\newblock {\em Poc Sets, Median Algebras and Group Actions}.
+\newblock PhD thesis, Universität Regensburg, 1998.
+\newblock Habilitation's thesis. Available at http://arxiv.org/abs/1607.07747.
+
+\bibitem{MR0476875}
+Jean-Pierre Serre.
+\newblock {\em Arbres, amalgames, {${\rm SL}_{2}$}}.
+\newblock Ast\'{e}risque, No. 46. Soci\'{e}t\'{e} Math\'{e}matique de France,
+  Paris, 1977.
+\newblock Avec un sommaire anglais, R\'{e}dig\'{e} avec la collaboration de
+  Hyman Bass.
+
+\bibitem{MR4119107}
+Romain Tessera and Alain Valette.
+\newblock Locally compact groups with every isometric action bounded or proper.
+\newblock {\em J. Topol. Anal.}, 12(2):267--292, 2020.
+\newblock With an appendix by Corina Ciobotaru.
+
+\bibitem{Ver93}
+E.~R. Verheul.
+\newblock {\em Multimedians in metric and normed spaces}, volume~91 of {\em CWI
+  Tract}.
+\newblock Stichting Mathematisch Centrum, Centrum voor Wiskunde en Informatica,
+  Amsterdam, 1993.
+
+\end{thebibliography}
