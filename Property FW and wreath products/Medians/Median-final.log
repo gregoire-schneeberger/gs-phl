@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.18)  7 MAR 2024 17:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.18)  19 MAR 2024 15:01
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -798,12 +798,11 @@ Overfull \hbox (1.94397pt too wide) in paragraph at lines 475--475
  []
 
 [7] [8] [9] [10] [11] [12] [13] [14] [15]
-Overfull \hbox (15.86925pt too wide) in paragraph at lines 952--983
+Overfull \hbox (12.81444pt too wide) in paragraph at lines 952--983
 [][] 
  []
 
-[16] [17] [18] [19] [20] [21] [22] (./Median-final.bbl [23] [24] [25]) [26]
-(./Median-final.aux)
+[16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] (./Median-final.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
@@ -812,10 +811,10 @@ Package rerunfilecheck Info: File `Median-final.out' has not changed.
 (rerunfilecheck)             Checksum: DF3138750C49DBBE7B3F2D04C78ADC9B;1359.
  ) 
 Here is how much of TeX's memory you used:
- 24080 strings out of 475237
- 454711 string characters out of 5764552
+ 24074 strings out of 475237
+ 454600 string characters out of 5764552
  1939244 words of memory out of 5000000
- 44737 multiletter control sequences out of 15000+600000
+ 44734 multiletter control sequences out of 15000+600000
  583837 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,20n,121p,752b,1156s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -856,7 +855,7 @@ ic/cm-super/sfti0700.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public
 /cm-super/sfti1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/c
 m-super/sftt0900.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/zapfdi
 ng/uzdr.pfb>
-Output written on Median-final.pdf (26 pages, 622987 bytes).
+Output written on Median-final.pdf (26 pages, 623095 bytes).
 PDF statistics:
  640 PDF objects out of 1000 (max. 8388607)
  526 compressed objects within 6 object streams

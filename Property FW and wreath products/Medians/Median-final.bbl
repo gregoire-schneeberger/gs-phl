@@ -51,7 +51,7 @@ Pierre-Alain Cherix, Florian Martin, and Alain Valette.
 \newblock {\em Ergodic Theory Dynam. Systems}, 24(6):1895--1908, 2004.
 
 \bibitem{MR2240370}
-Yves Cornulier.
+Yves de Cornulier.
 \newblock Strongly bounded groups and infinite powers of finite groups.
 \newblock {\em Comm. Algebra}, 34(7):2337--2345, 2006.
 
@@ -70,18 +70,10 @@ Yves Cornulier and Aditi Kar.
 \newblock On property ({FA}) for wreath products.
 \newblock {\em J. Group Theory}, 14(1):165--174, 2011.
 
-\bibitem{MR1023471}
-Pierre de~la Harpe and Alain Valette.
-\newblock {\em La propri\'{e}t\'{e} {$(T)$} de {K}azhdan pour les groupes
-  localement compacts (avec un appendice de {M}arc {B}urger)}.
-\newblock Ast\'{e}risque, No. 175. Soci\'{e}t\'{e} Math\'{e}matique de France,
-  Paris, 1989.
-\newblock With an appendix by M. Burger.
-
 \bibitem{2017arXiv170500834G}
 Anthony Genevois.
 \newblock {L}amplighter groups, median spaces, and {H}ilbertian geometry.
-\newblock {\em arXiv e-prints}, page arXiv:1705.00834, January 2021.
+\newblock {\em Proc. Edinb. Math. Soc. (2)}, 65(2):500--529, 2022.
 
 \bibitem{Ger97}
 V.~Gerasimov.
@@ -97,6 +89,14 @@ V.~Gerasimov.
   1996)}, 91--109, 190, {I}zdat. {R}oss. {A}kad. {N}auk {S}ibirsk. {O}tdel.
   {I}nst. {M}at., {N}ovosibirsk, 1997; {MR}1624115 (99c:20049)].
 \newblock {\em Siberian Adv. Math.}, 8(3):36--58, 1998.
+
+\bibitem{MR1023471}
+Pierre de~la Harpe and Alain Valette.
+\newblock {\em La propri\'{e}t\'{e} {$(T)$} de {K}azhdan pour les groupes
+  localement compacts (avec un appendice de {M}arc {B}urger)}.
+\newblock Ast\'{e}risque, No. 175. Soci\'{e}t\'{e} Math\'{e}matique de France,
+  Paris, 1989.
+\newblock With an appendix by M. Burger.
 
 \bibitem{MR551496}
 Edwin Hewitt and Kenneth~A. Ross.
@@ -117,7 +117,7 @@ Sandi Klav\v{z}ar and Henry~Martyn Mulder.
 Paul-Henry {Leemann} and Gr{\'e}goire {Schneeberger}.
 \newblock {Property FW and wreath products of groups: a simple approach using
   Schreier graphs}.
-\newblock {\em arXiv e-prints}, page arXiv:2101.03817, January 2021.
+\newblock {\em Exp. Math.}, 40(4):1261--1270, 2022.
 
 \bibitem{MR3465847}
 Ashot Minasyan.
